@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Barber's Spa | Barberia en Ciudad de Mexico</title>
+<meta name="description" content="The Barber's Spa en Ciudad de Mexico -- cortes, barba y tratamientos capilares masculinos. 4.7 estrellas. Reserva tu cita online hoy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0d0d0d;
+    --bg2: #161616;
+    --bg3: #1e1e1e;
+    --accent: #c9a96e;
+    --accent2: #8b6f47;
+    --white: #ffffff;
+    --gray: #b0b0b0;
+    --border: #2a2a2a;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--white); overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,13,13,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 70px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--accent); letter-spacing: 1px; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta { background: var(--accent); color: #000; padding: 10px 22px; border-radius: 4px; font-size: 14px; font-weight: 700; text-decoration: none; }
+  .hero { min-height: 100vh; display: flex; align-items: center; background: linear-gradient(135deg, #0d0d0d 0%, #1a0a00 50%, #0d0d0d 100%); padding-top: 70px; }
+  .hero-content { max-width: 1200px; margin: 0 auto; padding: 60px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,169,110,0.15); border: 1px solid rgba(201,169,110,0.3); color: var(--accent); padding: 8px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-bottom: 24px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 58px); line-height: 1.1; margin-bottom: 20px; }
+  .hero h1 span { color: var(--accent); }
+  .hero p { font-size: 18px; line-height: 1.6; color: var(--gray); margin-bottom: 36px; }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary { background: var(--accent); color: #000; padding: 16px 32px; border-radius: 4px; font-size: 16px; font-weight: 700; text-decoration: none; display: inline-block; }
+  .btn-secondary { border: 1px solid var(--border); color: var(--white); padding: 16px 32px; border-radius: 4px; font-size: 16px; font-weight: 600; text-decoration: none; display: inline-block; }
+  .hero-visual { display: flex; flex-direction: column; gap: 20px; }
+  .hero-card { background: var(--bg3); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .hero-stats-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; text-align: center; }
+  .hero-stat .num { font-family: 'Playfair Display', serif; font-size: 36px; color: var(--accent); font-weight: 700; }
+  .hero-stat .label { color: var(--gray); font-size: 12px; }
+  .services { background: var(--bg2); padding: 100px 24px; }
+  .section-label { text-align: center; color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+  .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 44px); margin-bottom: 16px; }
+  .section-sub { text-align: center; color: var(--gray); font-size: 17px; max-width: 540px; margin: 0 auto 60px; line-height: 1.6; }
+  .services-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .service-card { background: var(--bg3); border: 1px solid var(--border); border-radius: 12px; padding: 32px; }
+  .service-card:hover { border-color: var(--accent); }
+  .service-icon { font-size: 36px; margin-bottom: 20px; }
+  .service-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+  .service-card p { color: var(--gray); font-size: 14px; line-height: 1.6; }
+  .about { padding: 100px 24px; background: var(--bg); }
+  .about-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-label { color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+  .about h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3.5vw, 40px); margin-bottom: 24px; }
+  .about p { color: var(--gray); font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
+  .about-features { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+  .feature { display: flex; align-items: flex-start; gap: 12px; }
+  .feature-check { color: var(--accent); font-size: 18px; flex-shrink: 0; }
+  .feature-text { color: var(--gray); font-size: 15px; line-height: 1.5; }
+  .about-visual { background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
+  .about-visual-title { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 24px; color: var(--accent); }
+  .timeline { display: flex; flex-direction: column; gap: 20px; }
+  .timeline-item { display: flex; gap: 16px; align-items: flex-start; }
+  .timeline-dot { width: 12px; height: 12px; background: var(--accent); border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+  .timeline-content strong { font-size: 15px; color: var(--white); }
+  .timeline-content p { font-size: 13px; color: var(--gray); margin-top: 4px; }
+  .testimonials { background: var(--bg2); padding: 100px 24px; }
+  .testimonials-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+  .testimonial-card { background: var(--bg3); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+  .stars { color: var(--accent); font-size: 16px; margin-bottom: 16px; }
+  .testimonial-card blockquote { font-size: 15px; line-height: 1.7; color: var(--gray); margin-bottom: 20px; font-style: italic; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .author-avatar { width: 40px; height: 40px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #000; font-size: 16px; }
+  .author-name { font-weight: 700; font-size: 14px; }
+  .author-role { color: var(--gray); font-size: 12px; }
+  .cta-section { background: linear-gradient(135deg, #8b6f47, #c9a96e); padding: 100px 24px; text-align: center; }
+  .cta-section h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 48px); color: #000; margin-bottom: 20px; }
+  .cta-section p { font-size: 18px; color: rgba(0,0,0,0.7); margin-bottom: 40px; }
+  .btn-dark { background: #000; color: var(--accent); padding: 18px 40px; border-radius: 4px; font-size: 16px; font-weight: 700; text-decoration: none; display: inline-block; }
+  .contact { background: var(--bg); padding: 100px 24px; }
+  .contact-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+  .contact h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3.5vw, 36px); margin-bottom: 24px; }
+  .contact p { color: var(--gray); font-size: 15px; line-height: 1.7; margin-bottom: 32px; }
+  .contact-info { display: flex; flex-direction: column; gap: 20px; }
+  .contact-item { display: flex; align-items: flex-start; gap: 14px; }
+  .contact-item-icon { font-size: 22px; flex-shrink: 0; }
+  .contact-item strong { font-size: 14px; display: block; margin-bottom: 4px; }
+  .contact-item span { font-size: 14px; color: var(--gray); }
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .contact-form input, .contact-form textarea { background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; color: var(--white); font-size: 15px; font-family: 'Inter', sans-serif; outline: none; }
+  .contact-form input::placeholder, .contact-form textarea::placeholder { color: #555; }
+  .contact-form textarea { resize: vertical; min-height: 120px; }
+  .contact-form button { background: var(--accent); color: #000; border: none; padding: 16px; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; }
+  footer { background: #080808; border-top: 1px solid var(--border); padding: 40px 24px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--accent); }
+  .footer-links { display: flex; gap: 24px; list-style: none; }
+  .footer-links a { color: var(--gray); text-decoration: none; font-size: 13px; }
+  .footer-copy { color: #555; font-size: 13px; }
+  .footer-alma { color: #333; font-size: 12px; text-align: center; margin-top: 16px; }
+  .alma-badge { position: fixed; bottom: 24px; right: 24px; background: var(--accent); color: #000; padding: 10px 18px; border-radius: 50px; font-size: 13px; font-weight: 700; z-index: 999; text-decoration: none; }
+  @media (max-width: 768px) {
+    .hero-content, .about-inner, .contact-inner { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo">The Barber's Spa</div>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#resenas">Resenas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="#contacto" class="nav-cta">Reserva Tu Turno</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">&#9733;&#9733;&#9733;&#9733;&#9733; 4.7 Estrellas en Google</div>
+      <h1>La Barberia de Confianza en <span>Ciudad de Mexico</span></h1>
+      <p>4.7 estrellas y sin sitio web -- llegue a cada cliente que busca la mejor barberia en Google. Su reputacion merece visibilidad digital.</p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn-primary">Reserva Tu Turno Online</a>
+        <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-stats-row">
+          <div class="hero-stat"><div class="num">4.7&#9733;</div><div class="label">Google Rating</div></div>
+          <div class="hero-stat"><div class="num">500+</div><div class="label">Clientes</div></div>
+          <div class="hero-stat"><div class="num">10+</div><div class="label">Anos Exp.</div></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p style="color: var(--gray); font-size: 14px; line-height: 1.6;">Especialistas en corte masculino, arreglo de barba y tratamientos capilares. La barberia de confianza de la CDMX.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="section-label">Nuestros Servicios</div>
+  <h2 class="section-title">Todo lo que su imagen necesita</h2>
+  <p class="section-sub">Servicios profesionales de barberia para el hombre moderno que cuida su apariencia.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">&#9986;</div>
+      <h3>Corte y Arreglo de Barba</h3>
+      <p>Corte profesional adaptado a su estilo y tipo de rostro, con arreglo y delineado de barba de precision.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#128247;</div>
+      <h3>Afeitado Clasico</h3>
+      <p>Afeitado tradicional con navaja, toalla caliente y productos premium para una experiencia inigualable.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#128148;</div>
+      <h3>Tratamientos Capilares</h3>
+      <p>Tratamientos especializados para la salud y fortaleza de su cabello desde hidratacion hasta control de caida.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#128084;</div>
+      <h3>Estilismo Masculino</h3>
+      <p>Diseno de imagen integral: corte, barba y estilo pensados para proyectar la mejor version de usted.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="nosotros">
+  <div class="about-inner">
+    <div>
+      <div class="about-label">Nuestra Historia</div>
+      <h2>The Barber's Spa -- Mas que una barberia</h2>
+      <p>The Barber's Spa es una barberia de confianza en Ciudad de Mexico con una calificacion de 4.7 estrellas y una clientela fiel que vuelve por la calidad y el trato.</p>
+      <p>Sin presencia en linea, cada cliente que busca "barberia cerca de mi" en Google va a parar a la competencia. Un sitio web profesional cambia eso de inmediato.</p>
+      <div class="about-features">
+        <div class="feature"><span class="feature-check">&#10004;</span><span class="feature-text">Maestros barberos certificados con anos de experiencia</span></div>
+        <div class="feature"><span class="feature-check">&#10004;</span><span class="feature-text">Productos premium: ceras, aceites y tratamientos de alta gama</span></div>
+        <div class="feature"><span class="feature-check">&#10004;</span><span class="feature-text">Ambiente premium -- una experiencia que va mas alla del corte</span></div>
+        <div class="feature"><span class="feature-check">&#10004;</span><span class="feature-text">4.7 estrellas en Google -- la confianza de cientos de clientes</span></div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-visual-title">Por que elegirnos?</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content"><strong>Experiencia Comprobada</strong><p>Mas de una decada sirviendo a Ciudad de Mexico con los mas altos estandares.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content"><strong>4.7 Estrellas en Google</strong><p>Cientos de resenas positivas avalan la calidad y el servicio de The Barber's Spa.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content"><strong>Atencion Personalizada</strong><p>Cada cliente es unico -- adaptamos cada servicio a sus necesidades y estilo.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content"><strong>Ubicacion Privilegiada</strong><p>En el corazon de Ciudad de Mexico, accesible y con facil estacionamiento.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="resenas">
+  <div class="section-label">Resenas de Clientes</div>
+  <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+  <p class="section-sub">Cientos de hombres en Ciudad de Mexico confian en The Barber's Spa para verse siempre al 100.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>"Llevaba anos buscando una barberia de confianza en la CDMX. The Barber's Spa supero todas mis expectativas -- el corte y la barba quedaron perfectos."</blockquote>
+      <div class="testimonial-author"><div class="author-avatar">A</div><div><div class="author-name">Alejandro R.</div><div class="author-role">Cliente desde 2021</div></div></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>"El afeitado clasico es una experiencia que no habia tenido en ningun otro lugar. Los maestros saben exactamente lo que hacen. 100% recomendado."</blockquote>
+      <div class="testimonial-author"><div class="author-avatar">C</div><div><div class="author-name">Carlos M.</div><div class="author-role">Cliente desde 2020</div></div></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+      <blockquote>"Excelente ambiente y atencion personalizada. El tratamiento capilar que me recomendaron cambio la textura de mi cabello. Ya van tres meses yendo cada semana."</blockquote>
+      <div class="testimonial-author"><div class="author-avatar">M</div><div><div class="author-name">Miguel F.</div><div class="author-role">Cliente frecuente</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Listo para verse al maximo?</h2>
+  <p>Reserve su turno hoy y descubra por que cientos de hombres en Ciudad de Mexico eligen The Barber's Spa.</p>
+  <a href="#contacto" class="btn-dark">Reserva Tu Turno Online</a>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="contact-inner">
+    <div>
+      <h2>Visitenos o Contactenos</h2>
+      <p>Estamos ubicados en Ciudad de Mexico. Reserve su cita o contactenos directamente.</p>
+      <div class="contact-info">
+        <div class="contact-item"><span class="contact-item-icon">&#128205;</span><div><strong>Direccion</strong><span>Ciudad de Mexico, Mexico</span></div></div>
+        <div class="contact-item"><span class="contact-item-icon">&#128222;</span><div><strong>Telefono</strong><span>Contactenos para mas informacion</span></div></div>
+        <div class="contact-item"><span class="contact-item-icon">&#128336;</span><div><strong>Horario</strong><span>Lun-Sab: 9:00 AM - 8:00 PM</span></div></div>
+        <div class="contact-item"><span class="contact-item-icon">&#11088;</span><div><strong>Google Rating</strong><span>4.7 estrellas -- cientos de resenas verificadas</span></div></div>
+      </div>
+    </div>
+    <form class="contact-form" action="https://formspree.io/f/xojppajv" method="POST">
+      <input type="text" name="name" placeholder="Su nombre" required>
+      <input type="email" name="email" placeholder="Su correo electronico" required>
+      <input type="tel" name="phone" placeholder="Su telefono (opcional)">
+      <textarea name="message" placeholder="Que servicio le interesa? Prefiere algun dia u horario?"></textarea>
+      <button type="submit">Enviar Solicitud de Cita</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">The Barber's Spa</div>
+    <ul class="footer-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="footer-copy">2024 The Barber's Spa. Ciudad de Mexico.</div>
+  </div>
+  <div class="footer-alma">Diseno web por Alma Digital Services | almadigitalservices.com</div>
+</footer>
+
+<a href="#contacto" class="alma-badge">&#9986; Reserva Tu Cita</a>
+
+</body>
+</html>
