@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STUDIO 22 Nails and Wax Bar | McAllen TX | Waxing & Nails</title>
+<meta name="description" content="STUDIO 22 Nails and Wax Bar in McAllen TX — waxing, nail art, gel nails and bridal packages. 5 stars. Book online today.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#1a0a2e;color:#fff;line-height:1.6}
+a{color:#d63384;text-decoration:none}
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;font-weight:700}
+.nav-cta{background:#d63384;color:#fff;padding:.5rem 1.25rem;border-radius:50px;font-size:.85rem;font-weight:600;transition:opacity .2s}
+.nav-cta:hover{opacity:.85}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 1.5rem 3rem;background:linear-gradient(135deg,#1a0a2e 0%,#2d1245 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at center,#c085f522 0%,transparent 65%);pointer-events:none}
+.hero-badge{background:#d6338422;border:1px solid #d6338455;color:#d63384;padding:.4rem 1rem;border-radius:50px;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:inline-block;margin-bottom:1.5rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:900;line-height:1.15;margin-bottom:1.25rem;background:linear-gradient(135deg,#fff 40%,#c085f5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:clamp(1rem,2vw,1.2rem);color:#e0d0ff;max-width:620px;margin:0 auto 2.5rem}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,#d63384,#c085f5);color:#fff;padding:.85rem 2.25rem;border-radius:50px;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s;border:none;cursor:pointer;display:inline-block}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px #d6338455}
+.btn-secondary{background:transparent;border:2px solid #d63384;color:#d63384;padding:.85rem 2.25rem;border-radius:50px;font-weight:600;font-size:1rem;transition:.2s;display:inline-block}
+.btn-secondary:hover{background:#d6338422}
+/* STATS STRIP */
+.stats{background:#2d1245;padding:2rem;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;border-top:1px solid #d6338433;border-bottom:1px solid #d6338433}
+.stat{text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#d63384}
+.stat-label{font-size:.8rem;color:#bbb;text-transform:uppercase;letter-spacing:.06em}
+/* SECTIONS */
+section{padding:5rem 1.5rem}
+.container{max-width:1100px;margin:0 auto}
+.section-tag{color:#d63384;font-size:.8rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;margin-bottom:1rem}
+/* SERVICES */
+.services{background:#2d1245}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:2.5rem}
+.svc-card{background:#1a0a2e;border:1px solid #d6338433;border-radius:16px;padding:1.75rem;transition:border-color .2s,transform .2s;text-align:center}
+.svc-card:hover{border-color:#d63384;transform:translateY(-4px)}
+.svc-icon{font-size:1.5rem;color:#d63384;display:block;margin-bottom:.75rem}
+.svc-card p{color:#ddd;font-size:.95rem;font-weight:500}
+/* ABOUT */
+.about{background:#1a0a2e}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2rem}
+.about-text p{color:#ccc;font-size:1.05rem;line-height:1.8;margin-bottom:1.25rem}
+.about-visual{background:linear-gradient(135deg,#2d1245,#d6338422);border-radius:24px;padding:3rem;text-align:center;border:1px solid #d6338433}
+.about-visual .big-star{font-size:3rem;color:#d63384;display:block;margin-bottom:1rem}
+.about-visual .review-count{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#fff}
+.about-visual .review-label{color:#bbb;font-size:.9rem}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+/* PREVIEW BANNER */
+.preview-banner{background:linear-gradient(135deg,#d63384,#c085f5);padding:4rem 1.5rem;text-align:center}
+.preview-banner h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:900;margin-bottom:1rem}
+.preview-banner p{font-size:1.1rem;margin-bottom:2rem;opacity:.9;max-width:550px;margin-left:auto;margin-right:auto}
+/* CTA SECTION */
+.cta-section{background:#2d1245;padding:5rem 1.5rem;text-align:center}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:1rem}
+.cta-section p{color:#ccc;max-width:500px;margin:0 auto 2rem;font-size:1.05rem}
+/* FOOTER */
+footer{background:#0a0a15;padding:2.5rem;text-align:center;border-top:1px solid #222}
+footer p{color:#777;font-size:.85rem}
+footer a{color:#d63384;margin:0 .5rem}
+/* ALMA WATERMARK */
+.alma-bar{background:#d6338418;border-top:1px solid #d6338444;padding:.8rem;text-align:center;font-size:.8rem;color:#bbb}
+.alma-bar strong{color:#d63384}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">✦ STUDIO 22 Nails and Wax Bar</span>
+  <a href="#claim" class="nav-cta">Book Online</a>
+</nav>
+
+<section class="hero">
+  <div>
+    <span class="hero-badge">✦ Free Website Preview — McAllen, TX</span>
+    <h1>McAllen's Premier Wax Bar — Ready for Bridal Season Online</h1>
+    <p>Your Instagram shows the precision. This website brings bridal parties through the door via Google.</p>
+    <div class="hero-btns">
+      <a href="#claim" class="btn-primary">Book Your Bridal Beauty Package</a>
+      <a href="#services" class="btn-secondary">View Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">5.0★</div>
+    <div class="stat-label">Google Rating</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">18+</div>
+    <div class="stat-label">Happy Clients</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">5★</div>
+    <div class="stat-label">Service Quality</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">Online</div>
+    <div class="stat-label">Easy Booking</div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-tag">What We Offer</div>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="svc-card"><span class="svc-icon">✦</span><p>Waxing & Hair Removal</p></div><div class="svc-card"><span class="svc-icon">✦</span><p>Nail Art & Gel Nails</p></div><div class="svc-card"><span class="svc-icon">✦</span><p>Bridal Beauty Packages</p></div><div class="svc-card"><span class="svc-icon">✦</span><p>Brow Services</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-tag">About Us</div>
+        <h2 class="section-title">Our Story</h2>
+        <p>STUDIO 22 Nails and Wax Bar on N Main St in McAllen delivers studio-quality waxing and nail services with a perfect 5-star reputation. Known for precise work and a professional atmosphere, STUDIO 22 is the ideal destination for quinceañera and bridal parties seeking expert beauty prep.</p>
+        <a href="#claim" class="btn-primary">Book Your Bridal Beauty Package</a>
+      </div>
+      <div class="about-visual">
+        <span class="big-star">✦</span>
+        <div class="review-count">5.0★</div>
+        <div class="review-label">18+ Google Reviews</div>
+        <br>
+        <p style="color:#ccc;font-size:.9rem;margin-top:.75rem">McAllen, TX</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="preview-banner" id="claim">
+  <h2>Claim Your Free Website Redesign</h2>
+  <p>This is your free preview — a taste of what your website could look like. No commitment required.</p>
+  <a href="https://almadigitalservices.com" class="btn-secondary" style="border-color:#fff;color:#fff">Learn More at Alma Digital</a>
+</div>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Grow Your Business Online?</h2>
+    <p>Join hundreds of local businesses who turned their Google presence into their #1 source of new clients.</p>
+    <a href="https://almadigitalservices.com" class="btn-primary">Get Your Free Website Today</a>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <a href="https://almadigitalservices.com">Alma Digital Services</a> &mdash;
+    AI-Powered Website Redesigns for Local Businesses
+  </p>
+  <p style="margin-top:.5rem">Preview built for STUDIO 22 Nails and Wax Bar &bull; McAllen, TX</p>
+</footer>
+
+<div class="alma-bar">
+  This is a <strong>free preview</strong> created by <strong>Alma Digital Services</strong> —
+  <a href="https://almadigitalservices.com" style="color:#e0d0ff">almadigitalservices.com</a>
+</div>
+
+</body>
+</html>
