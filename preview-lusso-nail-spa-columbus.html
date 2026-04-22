@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lusso Nail Spa | Columbus Premier Nail Salon | Polaris, OH 43240</title>
+  <meta name="description" content="Lusso Nail Spa in Columbus, OH — 4.9 stars, 1,142 reviews. Expert nail artists, 1,000+ gel colors, acrylics, pedicures, nail art and waxing in the Polaris area. Book online today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blush: #e8b4bc;
+      --rose: #c97b8a;
+      --deep-rose: #9e5566;
+      --champagne: #f5e6d3;
+      --cream: #fdf8f4;
+      --dark: #2c1a20;
+      --mid: #6b4a53;
+      --light-text: #9e7e87;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── STICKY HEADER ── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(253, 248, 244, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(232, 180, 188, 0.3);
+      padding: 0 2rem;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--deep-rose);
+    }
+
+    .logo-text span {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    nav { display: flex; gap: 2rem; align-items: center; }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid);
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--deep-rose); }
+
+    .btn-header {
+      background: var(--rose);
+      color: white;
+      border: none;
+      padding: 0.55rem 1.4rem;
+      border-radius: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-header:hover { background: var(--deep-rose); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 68px;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 4rem 5rem 6rem;
+      background: var(--cream);
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tag::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--rose);
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 4vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .hero-sub {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--mid);
+      max-width: 420px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-stars {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2.2rem;
+      font-size: 0.8rem;
+      color: var(--mid);
+    }
+
+    .stars { color: #d4a853; font-size: 1rem; letter-spacing: 0.05em; }
+
+    .hero-cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      background: var(--rose);
+      color: white;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover { background: var(--deep-rose); transform: translateY(-2px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--rose);
+      border: 1.5px solid var(--rose);
+      padding: 0.9rem 2.2rem;
+      border-radius: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover { background: var(--rose); color: white; transform: translateY(-2px); }
+
+    /* Hero right — visual panel */
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #c97b8a 0%, #9e5566 50%, #7a3d4e 100%);
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 75% 80%, rgba(255,255,255,0.08) 0%, transparent 50%);
+    }
+
+    .hero-right-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem;
+      text-align: center;
+    }
+
+    .nail-art-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      width: 100%;
+      max-width: 380px;
+      margin-bottom: 2.5rem;
+    }
+
+    .nail-art-card {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 16px;
+      padding: 1.8rem 1.2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .nail-art-card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .nail-art-card .label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .nail-art-card .value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-badge {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 0.8rem 1.8rem;
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── SERVICES ── */
+    .services {
+      padding: 6rem 4rem;
+      background: white;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--rose);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      color: var(--dark);
+      margin-bottom: 0.8rem;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--light-text);
+      margin-bottom: 3.5rem;
+      max-width: 540px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      border: 1px solid rgba(232, 180, 188, 0.35);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--blush), var(--rose));
+    }
+
+    .service-card:hover {
+      border-color: var(--blush);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(201, 123, 138, 0.15);
+    }
+
+    .service-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--blush);
+      margin-bottom: 0.6rem;
+    }
+
+    .service-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .service-desc {
+      font-size: 0.8rem;
+      color: var(--mid);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      background: linear-gradient(135deg, var(--dark) 0%, #3d2028 100%);
+      padding: 6rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-left .section-label { color: var(--blush); }
+    .about-left .section-label::before { background: var(--blush); }
+
+    .about-left .section-title { color: white; }
+
+    .about-left .section-title em {
+      font-style: italic;
+      color: var(--blush);
+    }
+
+    .about-body {
+      font-size: 0.88rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.7);
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(232, 180, 188, 0.2);
+      border-radius: 14px;
+      padding: 1.8rem 1.4rem;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--blush);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      padding: 6rem 4rem;
+      background: var(--cream);
+    }
+
+    .testimonials .section-title { text-align: center; }
+    .testimonials .section-label {
+      display: flex;
+      justify-content: center;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid rgba(232, 180, 188, 0.2);
+    }
+
+    .testimonial-stars { color: #d4a853; font-size: 1rem; margin-bottom: 0.8rem; }
+
+    .testimonial-text {
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: var(--mid);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-author {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--light-text);
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--rose) 0%, var(--deep-rose) 100%);
+      padding: 5rem 4rem;
+      text-align: center;
+    }
+
+    .cta-banner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .cta-banner p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--rose);
+      border: none;
+      padding: 1rem 2.8rem;
+      border-radius: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-white:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+
+    /* ── CONTACT / FOOTER ── */
+    .contact {
+      background: var(--dark);
+      padding: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-col h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--blush);
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-col p, .contact-col a {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.9;
+      font-weight: 300;
+      text-decoration: none;
+      display: block;
+    }
+
+    .contact-col a:hover { color: var(--blush); }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 0.3rem;
+    }
+
+    .hours-row span:last-child { color: rgba(255,255,255,0.8); }
+
+    .footer-bottom {
+      background: #1a0d12;
+      padding: 1.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-bottom .built-by {
+      font-size: 0.7rem;
+      color: var(--rose);
+      font-weight: 500;
+    }
+
+    /* ── ALMA DIGITAL BANNER ── */
+    .alma-banner {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2a1a2e 100%);
+      border-top: 2px solid #00b4d8;
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .alma-banner-left p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.2rem;
+    }
+
+    .alma-banner-left h4 {
+      font-size: 1rem;
+      color: white;
+      font-weight: 500;
+    }
+
+    .alma-banner-left h4 span { color: #00b4d8; }
+
+    .alma-banner-right {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-alma {
+      background: linear-gradient(135deg, #7B2FF7, #C850C0);
+      color: white;
+      border: none;
+      padding: 0.7rem 1.8rem;
+      border-radius: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-alma:hover { opacity: 0.85; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 4rem 2rem; }
+      .hero-right { min-height: 340px; }
+      .about { grid-template-columns: 1fr; gap: 3rem; }
+      .contact { grid-template-columns: 1fr; gap: 2rem; }
+      nav { display: none; }
+      .alma-banner { flex-direction: column; text-align: center; padding: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      .services, .testimonials, .cta-banner { padding: 4rem 1.5rem; }
+      .hero-left { padding: 3rem 1.5rem; }
+      .about { padding: 4rem 1.5rem; }
+      .contact { padding: 3rem 1.5rem; }
+      .footer-bottom { padding: 1.2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── STICKY HEADER ── -->
+  <header>
+    <div class="logo-text">Lusso <span>Nail Spa</span></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#book" class="btn-header">Book Now</a>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">Columbus, OH — Est. 2014</div>
+      <h1>Columbus' Most Loved<br><em>Nail Spa</em> — Now With a<br>Website as Beautiful<br>as Your Work</h1>
+      <p class="hero-sub">4.9 stars. Over 1,000 gel colors. A team that gets your vision right every time. Lusso Nail Spa has been Columbus' go-to nail sanctuary since 2014 — and now your website can match the experience you've spent years building.</p>
+      <div class="hero-stars">
+        <span class="stars">★★★★★</span>
+        <strong>4.9</strong> — 1,142 Google Reviews
+      </div>
+      <div class="hero-cta-group" id="book">
+        <a href="#contact" class="btn-primary">Book Your Appointment</a>
+        <a href="#services" class="btn-secondary">View Services</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-pattern"></div>
+      <div class="hero-right-content">
+        <div class="nail-art-grid">
+          <div class="nail-art-card">
+            <span class="icon">💅</span>
+            <div class="value">1,000+</div>
+            <div class="label">Gel Colors</div>
+          </div>
+          <div class="nail-art-card">
+            <span class="icon">⭐</span>
+            <div class="value">4.9</div>
+            <div class="label">Star Rating</div>
+          </div>
+          <div class="nail-art-card">
+            <span class="icon">🏆</span>
+            <div class="value">1,142</div>
+            <div class="label">Reviews</div>
+          </div>
+          <div class="nail-art-card">
+            <span class="icon">📅</span>
+            <div class="value">2014</div>
+            <div class="label">Est. Columbus</div>
+          </div>
+        </div>
+        <div class="hero-badge">Walk-ins Welcome · Appointments Preferred</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section class="services" id="services">
+    <div class="section-label">Our Expertise</div>
+    <h2 class="section-title">What We Offer</h2>
+    <p class="section-subtitle">From classic manicures to intricate nail art — every service is delivered with precision, passion, and a commitment to getting it right for you.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-name">Manicures</div>
+        <div class="service-desc">From classic to spa-level luxury, every manicure is done with care and precision.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-name">Pedicures</div>
+        <div class="service-desc">Relax and refresh with a pedicure that leaves your feet looking and feeling incredible.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-name">Acrylic &amp; Solar Nails</div>
+        <div class="service-desc">Our Pink and White Solar Nails are a Columbus favorite — strong, flawless, and built to last.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-name">Gel Nails &amp; Gel X</div>
+        <div class="service-desc">Choose from nearly 1,000 colors. Chip-free, vibrant, and long-lasting.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-name">Dipping Powder</div>
+        <div class="service-desc">A healthier alternative to acrylics with a gorgeous, durable finish.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-name">Nail Art &amp; Custom Designs</div>
+        <div class="service-desc">Bring your inspiration photo. We will match it perfectly.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">07</div>
+        <div class="service-name">Waxing Services</div>
+        <div class="service-desc">Quick, precise, and professional waxing for smooth, confident results.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about" id="about">
+    <div class="about-left">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">Columbus' Most Trusted <em>Nail Sanctuary</em> Since 2014</h2>
+      <p class="about-body">Since 2014, Lusso Nail Spa has been the Polaris area destination for luxury nail care. Located at 8746 Sancus Blvd in Columbus, our team of skilled nail artists is known for one thing above all else: getting it right. Whether you walk in with a detailed nail inspiration photo or just know you want something beautiful, we deliver every single time. With 1,142 five-star reviews and nearly 1,000 gel colors on hand, we are proud to be Columbus' most trusted nail spa.</p>
+      <a href="#book" class="btn-primary">Book Your Appointment Today</a>
+    </div>
+    <div class="about-right">
+      <div class="stat-card">
+        <div class="stat-value">10+</div>
+        <div class="stat-label">Years Serving Columbus</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">1K+</div>
+        <div class="stat-label">Gel Color Options</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">1,142</div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">4.9★</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section class="testimonials">
+    <div class="section-label">What Clients Say</div>
+    <h2 class="section-title" style="margin-bottom:0.6rem;">Over 1,100 Happy Clients</h2>
+    <p class="section-subtitle" style="text-align:center;margin:0 auto 3rem;">Columbus trusts Lusso for a reason — here's what they're saying.</p>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Absolutely love Lusso Nail Spa! The technicians are incredibly skilled and always nail my design exactly as I envision it. This is my go-to spot for nails in Columbus!"</p>
+        <div class="testimonial-author">— Sarah M., Polaris, OH</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Best nail salon in the Columbus area, hands down. The Pink and White Solar set I got lasted over 4 weeks with zero lifting. I won't go anywhere else."</p>
+        <div class="testimonial-author">— Jennifer K., Dublin, OH</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The color selection here is unreal — I brought in a photo of nail art and they matched it perfectly. So professional and clean. Highly recommend Lusso!"</p>
+        <div class="testimonial-author">— Ashley R., Westerville, OH</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BANNER ── -->
+  <section class="cta-banner">
+    <h2>Ready to Experience the Lusso Difference?</h2>
+    <p>Walk-ins welcome. Appointments preferred. Located in the Polaris area of Columbus.</p>
+    <a href="#contact" class="btn-white">Book Your Appointment Today</a>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact" id="contact">
+    <div class="contact-col">
+      <h3>Visit Us</h3>
+      <p>8746 Sancus Blvd<br />Columbus, OH 43240</p>
+      <p style="margin-top:0.8rem;">Polaris Area · Easy Parking Available</p>
+    </div>
+    <div class="contact-col">
+      <h3>Hours</h3>
+      <div class="hours-row"><span>Monday – Friday</span><span>9:30 AM – 7:30 PM</span></div>
+      <div class="hours-row"><span>Saturday</span><span>9:00 AM – 7:00 PM</span></div>
+      <div class="hours-row"><span>Sunday</span><span>11:00 AM – 5:00 PM</span></div>
+    </div>
+    <div class="contact-col">
+      <h3>Contact</h3>
+      <a href="mailto:lussonailspa@gmail.com">lussonailspa@gmail.com</a>
+      <p style="margin-top:0.8rem;">Walk-ins welcome.<br/>Appointments preferred.</p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer-bottom">
+    <p>© 2026 Lusso Nail Spa · 8746 Sancus Blvd, Columbus, OH 43240</p>
+    <span class="built-by">Website by Alma Digital</span>
+  </div>
+
+  <!-- ── ALMA DIGITAL BANNER ── -->
+  <div class="alma-banner">
+    <div class="alma-banner-left">
+      <p>This is a FREE preview — designed exclusively for Lusso Nail Spa by</p>
+      <h4><span>Alma Digital</span> — AI-Powered Web Design</h4>
+    </div>
+    <div class="alma-banner-right">
+      <a href="mailto:hello@almadigital.ai" class="btn-alma">Claim Your Free Redesign</a>
+    </div>
+  </div>
+
+</body>
+</html>
