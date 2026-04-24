@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shock Hair | Peluquería Profesional en Buenos Aires</title>
+  <meta name="description" content="Shock Hair, tu peluquería de confianza en Buenos Aires. Especialistas en cortes, coloración, tratamientos capilares y peinados para eventos. ¡Reservá tu turno y transformá tu look!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --dark: #111111;
+      --card-bg: #1a1a1a;
+      --rose-gold: #c9956a;
+      --rose-light: #e8b48a;
+      --pink: #d4547a;
+      --white: #ffffff;
+      --gray: #888888;
+      --light-gray: #cccccc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ──────── NAV ──────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 4%;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,149,106,0.15);
+      transition: all 0.3s ease;
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.12em;
+      color: var(--rose-gold);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--light-gray);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--rose-gold); }
+
+    .nav-cta {
+      background: var(--rose-gold);
+      color: var(--black) !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 2px;
+      font-weight: 700 !important;
+      transition: background 0.3s ease, transform 0.2s ease !important;
+    }
+
+    .nav-cta:hover { background: var(--rose-light) !important; transform: translateY(-1px); }
+
+    /* ──────── HERO ──────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 4% 4rem;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0a05 50%, #0a0a0a 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(201,149,106,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 15% 80%, rgba(212,84,122,0.08) 0%, transparent 55%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--rose-gold);
+      margin-bottom: 1.5rem;
+      padding: 0.4rem 1.2rem;
+      border: 1px solid rgba(201,149,106,0.35);
+      border-radius: 100px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease 0.15s both;
+    }
+
+    .hero-title span {
+      color: var(--rose-gold);
+      display: block;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 300;
+      color: var(--light-gray);
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s ease 0.45s both;
+    }
+
+    .btn-primary {
+      background: var(--rose-gold);
+      color: var(--black);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--rose-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201,149,106,0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 2px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--rose-gold);
+      color: var(--rose-gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-badge {
+      margin-top: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s ease 0.6s both;
+    }
+
+    .badge-item {
+      text-align: center;
+    }
+
+    .badge-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      color: var(--rose-gold);
+      letter-spacing: 0.05em;
+    }
+
+    .badge-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gray);
+      margin-top: 0.2rem;
+    }
+
+    .badge-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ──────── MARQUEE STRIP ──────── */
+    .marquee-wrap {
+      background: var(--rose-gold);
+      padding: 0.7rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+    }
+
+    .marquee-track span {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      color: var(--black);
+      padding: 0 1.5rem;
+    }
+
+    /* ──────── SECTIONS ──────── */
+    section { padding: 6rem 4%; }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--rose-gold);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--light-gray);
+      line-height: 1.7;
+      max-width: 520px;
+    }
+
+    /* ──────── SERVICES ──────── */
+    .services-section {
+      background: var(--dark);
+    }
+
+    .services-header {
+      max-width: 1200px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      padding: 2.5rem 2rem;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--rose-gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover { background: #222222; }
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-num {
+      position: absolute;
+      top: 1.2rem; right: 1.5rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      color: rgba(255,255,255,0.04);
+      letter-spacing: 0;
+    }
+
+    .service-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* ──────── ABOUT ──────── */
+    .about-section { background: var(--black); }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-img-frame {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a1a10 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .about-img-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,149,106,0.05) 0%, transparent 60%);
+    }
+
+    .about-img-icon {
+      font-size: 6rem;
+      opacity: 0.15;
+    }
+
+    .about-badge-float {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      width: 120px;
+      height: 120px;
+      background: var(--rose-gold);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .about-badge-float .num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .about-badge-float .label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--black);
+      line-height: 1.3;
+      padding: 0 0.8rem;
+      text-align: center;
+    }
+
+    .about-text .section-sub {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .about-feature {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+    }
+
+    .feature-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--rose-gold);
+      border-radius: 50%;
+      margin-top: 0.4rem;
+      flex-shrink: 0;
+    }
+
+    .feature-text {
+      font-size: 0.85rem;
+      color: var(--light-gray);
+      line-height: 1.5;
+    }
+
+    /* ──────── TESTIMONIALS ──────── */
+    .testimonials-section {
+      background: var(--dark);
+    }
+
+    .testimonials-header {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .testimonials-header .section-sub {
+      margin: 0 auto;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 4px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .stars {
+      color: var(--rose-gold);
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--light-gray);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--rose-gold), var(--pink));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--black);
+    }
+
+    .author-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .author-source {
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+
+    /* ──────── CTA BAND ──────── */
+    .cta-section {
+      background: var(--rose-gold);
+      padding: 5rem 4%;
+      text-align: center;
+    }
+
+    .cta-section .section-title {
+      color: var(--black);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+    }
+
+    .cta-section p {
+      color: rgba(10,10,10,0.75);
+      font-size: 1.1rem;
+      margin: 1rem 0 2.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 1.1rem 2.5rem;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .btn-dark:hover {
+      background: #1a1a1a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    /* ──────── CONTACT ──────── */
+    .contact-section {
+      background: var(--black);
+    }
+
+    .contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(201,149,106,0.12);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--rose-gold);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-val {
+      font-size: 0.95rem;
+      color: var(--light-gray);
+    }
+
+    /* Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: #111111;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 2px;
+      padding: 0.85rem 1rem;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--rose-gold);
+    }
+
+    .form-group textarea { min-height: 110px; resize: vertical; }
+    .form-group select option { background: #111111; }
+
+    /* ──────── FOOTER ──────── */
+    footer {
+      background: #060606;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 3rem 4% 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.12em;
+      color: var(--rose-gold);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: var(--rose-gold); }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.2);
+      text-align: center;
+      margin-top: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ──────── ALMA BADGE ──────── */
+    .alma-badge {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: rgba(10,10,10,0.95);
+      border: 1px solid rgba(201,149,106,0.3);
+      border-radius: 100px;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.72rem;
+      color: var(--rose-gold);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      z-index: 200;
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+    }
+
+    .alma-badge:hover {
+      background: rgba(201,149,106,0.15);
+      border-color: var(--rose-gold);
+    }
+
+    /* ──────── ANIMATIONS ──────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ──────── RESPONSIVE ──────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .about-badge-float { bottom: -1rem; right: -1rem; width: 100px; height: 100px; }
+      .about-badge-float .num { font-size: 1.8rem; }
+      .badge-divider { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">SHOCK HAIR</a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#testimonios">Reseñas</a></li>
+      <li><a href="#contacto" class="nav-cta">Reservar turno</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="hero-eyebrow">✦ Peluquería Boutique · Buenos Aires ✦</div>
+      <h1 class="hero-title">
+        Tu estilo,
+        <span>reimaginado.</span>
+      </h1>
+      <p class="hero-sub">Cortes, colores y tratamientos que transforman tu cabello y elevan tu confianza — en el corazón de Buenos Aires.</p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn-primary">Reservá tu turno hoy</a>
+        <a href="#servicios" class="btn-outline">Ver servicios</a>
+      </div>
+      <div class="hero-badge">
+        <div class="badge-item">
+          <div class="badge-num">10+</div>
+          <div class="badge-label">Años de experiencia</div>
+        </div>
+        <div class="badge-divider"></div>
+        <div class="badge-item">
+          <div class="badge-num">5K+</div>
+          <div class="badge-label">Clientes satisfechos</div>
+        </div>
+        <div class="badge-divider"></div>
+        <div class="badge-item">
+          <div class="badge-num">5★</div>
+          <div class="badge-label">Calificación promedio</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>CORTES</span><span>✦</span>
+      <span>COLORACIÓN</span><span>✦</span>
+      <span>MECHAS</span><span>✦</span>
+      <span>BALAYAGE</span><span>✦</span>
+      <span>KERATINA</span><span>✦</span>
+      <span>ALISADOS</span><span>✦</span>
+      <span>PEINADOS DE NOVIA</span><span>✦</span>
+      <span>TRATAMIENTOS</span><span>✦</span>
+      <!-- Repeat for seamless loop -->
+      <span>CORTES</span><span>✦</span>
+      <span>COLORACIÓN</span><span>✦</span>
+      <span>MECHAS</span><span>✦</span>
+      <span>BALAYAGE</span><span>✦</span>
+      <span>KERATINA</span><span>✦</span>
+      <span>ALISADOS</span><span>✦</span>
+      <span>PEINADOS DE NOVIA</span><span>✦</span>
+      <span>TRATAMIENTOS</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="servicios">
+    <div class="services-header">
+      <div class="section-label">Lo que hacemos</div>
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-sub">Desde el corte más clásico hasta la coloración más atrevida — tu cabello merece lo mejor.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon">✂️</div>
+        <div class="service-name">Cortes y Peinados</div>
+        <p class="service-desc">Cortes personalizados para hombres y mujeres, adaptados a tu tipo de cabello y estilo de vida. Cada corte es único como vos.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon">🎨</div>
+        <div class="service-name">Coloración y Mechas</div>
+        <p class="service-desc">Rubios, balayage, coloración fantasía y técnicas de tendencia para un resultado que te va a sorprender. Somos especialistas en color.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon">💆</div>
+        <div class="service-name">Tratamientos Capilares</div>
+        <p class="service-desc">Hidratación profunda, keratinas y reestructurantes para un cabello sano, brillante y lleno de vida. Tu cabello te lo agradece.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon">💫</div>
+        <div class="service-name">Alisados Permanentes</div>
+        <p class="service-desc">Alisado definitivo y semi-definitivo para un resultado liso, suave y duradero. Decile adiós al frizz para siempre.</p>
+      </div>
+      <div class="service-card" style="grid-column: span 1;">
+        <div class="service-num">05</div>
+        <div class="service-icon">👰</div>
+        <div class="service-name">Peinados para Eventos</div>
+        <p class="service-desc">Peinados de novia, fiestas de 15 y eventos especiales con diseños únicos a medida. Tu gran día merece el mejor look.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="nosotros">
+    <div class="about-inner">
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <div class="about-img-icon">💇</div>
+        </div>
+        <div class="about-badge-float">
+          <div class="num">10+</div>
+          <div class="label">Años en BA</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">Nuestra historia</div>
+        <h2 class="section-title">Más que una<br/>peluquería</h2>
+        <p class="section-sub">Shock Hair es la peluquería boutique de Buenos Aires donde cada visita se convierte en una experiencia de transformación. Nuestro equipo de estilistas apasionados combina técnica de primer nivel con creatividad para darte el cabello que siempre soñaste.</p>
+        <p class="section-sub" style="margin-top: 1rem;">Desde cortes de autor hasta coloraciones de vanguardia, trabajamos con productos premium para cuidar tu cabello mientras creamos resultados que realmente te van a impactar.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="feature-dot"></div>
+            <div class="feature-text">Productos premium importados</div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-dot"></div>
+            <div class="feature-text">Estilistas certificados</div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-dot"></div>
+            <div class="feature-text">Técnicas de vanguardia</div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-dot"></div>
+            <div class="feature-text">Atención personalizada</div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-dot"></div>
+            <div class="feature-text">Ambiente exclusivo y acogedor</div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-dot"></div>
+            <div class="feature-text">Consulta de estilo gratuita</div>
+          </div>
+        </div>
+        <div style="margin-top: 2.5rem;">
+          <a href="#contacto" class="btn-primary">Reservá tu transformación</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section" id="testimonios">
+    <div class="testimonials-header">
+      <div class="section-label">Lo que dicen nuestras clientas</div>
+      <h2 class="section-title">Reseñas Reales</h2>
+      <p class="section-sub">Más de 5.000 clientas transformadas nos avalan. Leé sus experiencias.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Me hice un balayage que quedó de revista. El equipo de Shock Hair es increíble, saben exactamente lo que uno quiere. ¡Ya soy clienta fija!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">V</div>
+          <div>
+            <div class="author-name">Valentina R.</div>
+            <div class="author-source">Google Reviews · Buenos Aires</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Vine para mi peinado de casamiento y quedé hermosa. No solo quedé bien, sino que el peinado duró toda la noche perfectamente. ¡Los recomiendo a todos!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div>
+            <div class="author-name">Carolina M.</div>
+            <div class="author-source">Google Reviews · Palermo</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Me hice la keratina y quedó perfecta. Lo que más me gustó es que me explicaron todo el proceso y los cuidados posteriores. Profesionalismo total."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">L</div>
+          <div>
+            <div class="author-name">Luciana P.</div>
+            <div class="author-source">Google Reviews · Recoleta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-section">
+    <h2 class="section-title">¿Lista para tu transformación?</h2>
+    <p>Reservá tu turno hoy y descubrí por qué somos la peluquería boutique preferida de Buenos Aires.</p>
+    <a href="#contacto" class="btn-dark">Reservá tu turno hoy →</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contacto">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div class="section-label">Contacto</div>
+        <h2 class="section-title">Reservá tu turno</h2>
+        <p style="color: var(--light-gray); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
+          Completá el formulario y te contactamos para confirmar tu turno. También podés escribirnos por WhatsApp o llamarnos directamente.
+        </p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Dirección</div>
+              <div class="contact-val">Buenos Aires, Argentina</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-val">shockhair@hotmail.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <div class="contact-label">Horario</div>
+              <div class="contact-val">Lun – Sáb: 9:00 – 20:00 hs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/xojppajv" method="POST">
+        <input type="hidden" name="_subject" value="Consulta desde Shock Hair Preview" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="María García" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+54 11 XXXX-XXXX" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="servicio">Servicio de interés</label>
+          <select id="servicio" name="servicio">
+            <option value="">Seleccioná un servicio...</option>
+            <option value="corte">Corte y Peinado</option>
+            <option value="coloracion">Coloración y Mechas</option>
+            <option value="tratamiento">Tratamiento Capilar</option>
+            <option value="alisado">Alisado Permanente</option>
+            <option value="evento">Peinado para Evento</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Contanos más (opcional)</label>
+          <textarea id="mensaje" name="mensaje" placeholder="¿Tenés algún estilo en mente? ¿Fecha preferida? Contanos lo que necesitás..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; text-align: center; border: none; font-size: 0.95rem; padding: 1.1rem;">
+          Enviar consulta ✦
+        </button>
+        <p style="font-size: 0.75rem; color: var(--gray); text-align: center;">
+          Te respondemos en menos de 24 hs. Sin compromiso.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">SHOCK HAIR</div>
+      <ul class="footer-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#testimonios">Reseñas</a></li>
+        <li><a href="#contacto">Reservas</a></li>
+      </ul>
+    </div>
+    <p class="footer-copy">© 2024 Shock Hair · Buenos Aires, Argentina · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- ALMA BADGE -->
+  <a href="https://almadigitalservices.com" target="_blank" class="alma-badge">
+    ✦ Diseño por Alma Digital
+  </a>
+
+</body>
+</html>
