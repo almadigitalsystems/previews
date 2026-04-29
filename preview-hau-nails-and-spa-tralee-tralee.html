@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAU Nails and Spa | Nail Salon & Spa in Tralee, Ireland</title>
+  <meta name="description" content="HAU Nails and Spa in Tralee offers professional manicures, pedicures, gel nails, nail art, and spa treatments. Book your spa experience today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sage:   #6b8f71;
+      --teal:   #2a7f8a;
+      --blush:  #f2d9e0;
+      --cream:  #faf8f5;
+      --white:  #ffffff;
+      --dark:   #1c2b2d;
+      --text:   #2d4a4e;
+      --light:  #e8f0f1;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(28,43,45,0.96); backdrop-filter: blur(12px); padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--white); letter-spacing: 1px; }
+    .nav-logo span { color: #7eccc5; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: #a8c8cc; text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--teal); color: var(--white); padding: 10px 22px; border-radius: 6px; text-decoration: none; font-size: 0.82rem; font-weight: 600; transition: background 0.2s; }
+    .nav-cta:hover { background: #1f6570; }
+
+    /* SPLIT HERO */
+    .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; margin-top: 0; }
+
+    .hero-left { background: linear-gradient(160deg, var(--dark) 0%, #234044 100%); display: flex; flex-direction: column; justify-content: center; padding: 120px 60px 80px; }
+    .hero-tag { display: inline-block; background: rgba(126,204,197,0.15); border: 1px solid rgba(126,204,197,0.3); color: #7eccc5; font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 8px 18px; border-radius: 4px; margin-bottom: 30px; width: fit-content; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 3.5vw, 4rem); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 22px; }
+    .hero-title em { font-style: italic; color: #7eccc5; }
+    .hero-sub { font-size: 1rem; color: #8ab0b5; line-height: 1.75; margin-bottom: 40px; max-width: 440px; }
+    .hero-cta { display: inline-block; background: var(--teal); color: var(--white); padding: 15px 34px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: background 0.2s, transform 0.2s; }
+    .hero-cta:hover { background: #1f6570; transform: translateY(-2px); }
+    .hero-pill { display: inline-block; margin-left: 16px; color: #7eccc5; font-size: 0.88rem; text-decoration: none; font-weight: 500; }
+
+    .hero-right { background: var(--blush); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 120px 50px 80px; gap: 24px; }
+    .hero-card { background: var(--white); border-radius: 16px; padding: 28px; width: 100%; max-width: 320px; box-shadow: 0 4px 24px rgba(42,127,138,0.08); border: 1px solid rgba(42,127,138,0.1); }
+    .card-icon { font-size: 2rem; margin-bottom: 12px; }
+    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .card-text { font-size: 0.85rem; color: #7a9ea5; line-height: 1.6; }
+    .hero-badge { background: var(--teal); color: var(--white); border-radius: 50px; padding: 12px 24px; font-size: 0.82rem; font-weight: 700; text-align: center; width: 100%; max-width: 320px; }
+
+    /* SERVICES */
+    .services { background: var(--white); padding: 100px 24px; }
+    .section-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); text-align: center; margin-bottom: 12px; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; text-align: center; color: var(--dark); margin-bottom: 58px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; max-width: 1080px; margin: 0 auto; }
+    .service-card { border: 1.5px solid var(--light); border-radius: 14px; padding: 32px 24px; transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s; }
+    .service-card:hover { border-color: var(--teal); box-shadow: 0 8px 32px rgba(42,127,138,0.12); transform: translateY(-4px); }
+    .svc-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: rgba(42,127,138,0.15); margin-bottom: 12px; line-height: 1; }
+    .svc-name { font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+    .svc-desc { font-size: 0.86rem; color: #6a8f95; line-height: 1.6; }
+
+    /* ABOUT */
+    .about { background: var(--cream); padding: 100px 24px; }
+    .about-inner { max-width: 1050px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-visual { background: linear-gradient(145deg, var(--dark), #2a5f68); border-radius: 20px; padding: 60px 40px; text-align: center; }
+    .about-icon { font-size: 5rem; display: block; margin-bottom: 20px; }
+    .about-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; color: #7eccc5; line-height: 1.5; }
+    .about-content .section-tag { text-align: left; }
+    .about-content .section-title { text-align: left; margin-bottom: 22px; }
+    .about-text { font-size: 1rem; color: #5a7a80; line-height: 1.8; margin-bottom: 20px; }
+    .about-btn { display: inline-block; background: var(--teal); color: var(--white); padding: 14px 30px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; }
+    .about-btn:hover { background: #1f6570; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--dark); padding: 100px 24px; color: var(--white); }
+    .testimonials .section-tag { color: #7eccc5; }
+    .testimonials .section-title { color: var(--white); }
+    .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .test-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(126,204,197,0.15); border-radius: 14px; padding: 30px; }
+    .stars { color: #7eccc5; font-size: 1rem; margin-bottom: 14px; letter-spacing: 3px; }
+    .test-text { font-size: 0.93rem; line-height: 1.7; color: #a8c8cc; font-style: italic; margin-bottom: 18px; }
+    .test-author { font-weight: 700; font-size: 0.82rem; color: #7eccc5; }
+
+    /* CTA */
+    .cta { background: linear-gradient(135deg, var(--teal) 0%, var(--sage) 100%); padding: 80px 24px; text-align: center; color: var(--white); }
+    .cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; margin-bottom: 14px; }
+    .cta p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .btn-light { background: var(--white); color: var(--teal); padding: 15px 38px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 0.95rem; display: inline-block; transition: transform 0.2s; }
+    .btn-light:hover { transform: translateY(-2px); }
+
+    /* CONTACT */
+    .contact { background: var(--white); padding: 100px 24px; }
+    .contact-inner { max-width: 650px; margin: 0 auto; text-align: center; }
+    .contact-info { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin: 36px 0; }
+    .c-item { text-align: center; }
+    .c-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8aabb0; font-weight: 700; display: block; margin-bottom: 6px; }
+    .c-val { font-weight: 700; color: var(--dark); font-size: 0.95rem; }
+    .contact-form { background: var(--cream); border-radius: 16px; padding: 38px; text-align: left; margin-top: 32px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--dark); margin-bottom: 7px; letter-spacing: 0.5px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 1.5px solid #cde0e3; border-radius: 8px; font-size: 0.9rem; font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--teal); }
+    .form-group textarea { min-height: 90px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .btn-submit { width: 100%; padding: 15px; background: var(--teal); color: var(--white); border: none; border-radius: 8px; font-size: 0.95rem; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: background 0.2s; }
+    .btn-submit:hover { background: #1f6570; }
+
+    /* FOOTER */
+    footer { background: var(--dark); color: #6a9090; padding: 48px 24px 28px; text-align: center; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--white); margin-bottom: 10px; }
+    .footer-loc { font-size: 0.85rem; margin-bottom: 6px; }
+    .footer-email { font-size: 0.85rem; color: #7eccc5; margin-bottom: 24px; }
+    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 18px 0; }
+    .footer-copy { font-size: 0.76rem; }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 100px 28px 50px; }
+      .hero-right { padding: 50px 28px; }
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .nav-links { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">HAU <span>Nails &amp; Spa</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book Now</a>
+  </nav>
+
+  <!-- SPLIT HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">Tralee, Ireland's Premier Nail &amp; Spa</div>
+      <h1 class="hero-title">Tralee's Premier<br /><em>Nail &amp; Spa</em><br />Experience</h1>
+      <p class="hero-sub">From stunning nail designs to soothing spa treatments, HAU Nails and Spa brings luxury to every appointment in Tralee. You've earned this.</p>
+      <div>
+        <a href="#contact" class="hero-cta">Book Your Spa Experience</a>
+        <a href="#services" class="hero-pill">View Services →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="card-icon">💅</div>
+        <div class="card-title">Expert Nail Care</div>
+        <div class="card-text">Precision manicures, pedicures, and nail art by skilled technicians who care.</div>
+      </div>
+      <div class="hero-card">
+        <div class="card-icon">🌿</div>
+        <div class="card-title">Relaxing Spa Treatments</div>
+        <div class="card-text">Indulge in spa pedicures and beauty treatments designed to restore and refresh.</div>
+      </div>
+      <div class="hero-badge">★★★★★ Top-Rated Nail Salon in Tralee</div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-tag">What We Offer</div>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="svc-num">01</div>
+        <div class="svc-name">Manicures &amp; Pedicures</div>
+        <p class="svc-desc">Classic and luxury hand and foot treatments leaving your nails beautifully groomed and your skin silky soft.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-num">02</div>
+        <div class="svc-name">Gel &amp; Acrylic Nail Extensions</div>
+        <p class="svc-desc">Durable, stunning nail extensions in gel or acrylic — built to last and look flawless for weeks.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-num">03</div>
+        <div class="svc-name">Nail Art &amp; Custom Designs</div>
+        <p class="svc-desc">Express yourself with intricate, personalised nail art crafted by our talented team of nail artists.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-num">04</div>
+        <div class="svc-name">Spa Pedicures</div>
+        <p class="svc-desc">A luxurious pedicure experience including exfoliation, massage, and hydration for beautifully refreshed feet.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-num">05</div>
+        <div class="svc-name">Waxing Services</div>
+        <p class="svc-desc">Smooth, confident skin with professional waxing services delivered with care and precision.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-num">06</div>
+        <div class="svc-name">Eyelash Treatments</div>
+        <p class="svc-desc">From lash lifts to dramatic extensions — wake up looking effortlessly polished every morning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-visual">
+        <span class="about-icon">🌿</span>
+        <div class="about-quote">"Whether it's a spontaneous treat or a special occasion, HAU Nails and Spa delivers results you'll want to show off."</div>
+      </div>
+      <div class="about-content">
+        <div class="section-tag">Our Story</div>
+        <h2 class="section-title">Tralee's Trusted Nail &amp; Spa Destination</h2>
+        <p class="about-text">HAU Nails and Spa is Tralee's trusted destination for professional nail care and relaxing spa services, where every visit feels like a treat. The skilled team specialises in everything from classic manicures to intricate nail art, ensuring clients leave feeling pampered and polished every time.</p>
+        <p class="about-text">Whether it's a spontaneous treat or a special occasion, HAU Nails and Spa in Tralee delivers results you'll want to show off.</p>
+        <a href="#contact" class="about-btn">Book Your Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-tag">Client Love</div>
+    <h2 class="section-title">What Tralee Clients Say</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="test-text">"I always leave HAU Nails feeling amazing. The spa pedicure is absolutely divine and my nails last for weeks. Best in Tralee without question!"</p>
+        <div class="test-author">— Sinéad B., Tralee</div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="test-text">"Incredible nail art — I showed them a photo and they recreated it perfectly. The staff are so friendly and professional. Highly recommend!"</p>
+        <div class="test-author">— Fiona M., Kerry</div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="test-text">"The lash extensions are perfect and the salon is so relaxing. I come in stressed and leave feeling completely refreshed. Love this place!"</p>
+        <div class="test-author">— Ciara O., Tralee</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Be Pampered?</h2>
+    <p>Treat yourself to the luxury nail &amp; spa experience Tralee deserves. Book your appointment today.</p>
+    <a href="#contact" class="btn-light">Book Your Spa Experience</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Book Your Visit</h2>
+      <div class="contact-info">
+        <div class="c-item"><span class="c-label">Location</span><span class="c-val">Tralee, Co. Kerry, Ireland</span></div>
+        <div class="c-item"><span class="c-label">Email</span><span class="c-val">haunailsandspa@gmail.com</span></div>
+        <div class="c-item"><span class="c-label">Hours</span><span class="c-val">Mon–Sat 9am–6pm</span></div>
+      </div>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="e.g. Sinéad Murphy" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Interested In</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>Manicures &amp; Pedicures</option>
+              <option>Gel &amp; Acrylic Nail Extensions</option>
+              <option>Nail Art &amp; Custom Designs</option>
+              <option>Spa Pedicures</option>
+              <option>Waxing Services</option>
+              <option>Eyelash Treatments</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message / Preferred Date</label>
+            <textarea name="message" placeholder="Let us know your preferred appointment time or any questions..."></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Appointment Request - HAU Nails and Spa Tralee" />
+          <button type="submit" class="btn-submit">Book My Appointment →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">HAU Nails and Spa</div>
+    <div class="footer-loc">Tralee, Co. Kerry, Ireland</div>
+    <div class="footer-email">haunailsandspa@gmail.com</div>
+    <hr class="footer-divider" />
+    <div class="footer-copy">© 2026 HAU Nails and Spa. All rights reserved. | Website by <strong style="color:#7eccc5;">Alma Digital Designs</strong></div>
+  </footer>
+
+</body>
+</html>
