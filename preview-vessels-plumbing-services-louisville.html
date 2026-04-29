@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vessels Plumbing Services | Trusted Plumber in Louisville, KY</title>
+  <meta name="description" content="Vessels Plumbing Services Inc in Louisville offers emergency plumbing, water heater installation, drain cleaning, and pipe repair. Get your free estimate today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:    #0c1f3f;
+      --blue:    #174fa8;
+      --sky:     #2980d9;
+      --red:     #c0392b;
+      --white:   #ffffff;
+      --gray:    #f4f6f9;
+      --light:   #e8edf5;
+      --text:    #0c1f3f;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--navy); padding: 16px 48px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 1px; }
+    .nav-logo span { color: var(--sky); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: #8aaccc; text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red); color: var(--white); padding: 10px 22px; text-decoration: none; font-size: 0.82rem; font-weight: 700; transition: background 0.2s; }
+    .nav-cta:hover { background: #a93224; }
+
+    /* HERO */
+    .hero { min-height: 100vh; background: var(--navy); display: flex; align-items: center; padding: 110px 80px 80px; position: relative; overflow: hidden; }
+    .hero-stripe { position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: var(--blue); clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%); }
+    .hero-stripe-2 { position: absolute; top: 0; right: 0; width: 8px; height: 100%; background: var(--red); right: 40%; }
+    .hero-inner { position: relative; z-index: 2; max-width: 620px; }
+    .hero-badge { display: inline-block; background: rgba(41,128,217,0.2); border: 1px solid rgba(41,128,217,0.4); color: var(--sky); font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 8px 18px; margin-bottom: 28px; }
+    .hero-title { font-family: 'Oswald', sans-serif; font-size: clamp(3rem, 5.5vw, 5.5rem); font-weight: 700; color: var(--white); line-height: 1; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 24px; }
+    .hero-title .accent { color: var(--sky); }
+    .hero-sub { font-size: 1.05rem; color: #8aaccc; line-height: 1.75; margin-bottom: 44px; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+    .btn-red { background: var(--red); color: var(--white); padding: 16px 36px; text-decoration: none; font-weight: 700; font-size: 0.95rem; font-family: 'Oswald', sans-serif; letter-spacing: 1px; text-transform: uppercase; transition: background 0.2s; display: inline-block; }
+    .btn-red:hover { background: #a93224; }
+    .btn-border { background: transparent; color: var(--white); padding: 16px 36px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 2px solid rgba(255,255,255,0.25); transition: border-color 0.2s; display: inline-block; }
+    .btn-border:hover { border-color: rgba(255,255,255,0.6); }
+    .trust-list { display: flex; flex-direction: column; gap: 10px; }
+    .trust-item { display: flex; align-items: center; gap: 10px; }
+    .ti-icon { color: var(--sky); font-size: 1rem; }
+    .ti-text { font-size: 0.85rem; color: #8aaccc; font-weight: 500; }
+
+    /* EMERGENCY */
+    .emergency { background: var(--red); padding: 18px 24px; text-align: center; }
+    .em-text { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); letter-spacing: 1px; text-transform: uppercase; }
+    .em-text a { color: var(--white); text-decoration: underline; }
+
+    /* SERVICES */
+    .services { background: var(--gray); padding: 100px 24px; }
+    .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--sky); text-align: center; margin-bottom: 12px; }
+    .section-title { font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; text-align: center; color: var(--navy); margin-bottom: 56px; text-transform: uppercase; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+    .svc-card { background: var(--white); padding: 30px 24px; border-top: 4px solid transparent; transition: border-color 0.2s, box-shadow 0.2s; }
+    .svc-card:hover { border-color: var(--red); box-shadow: 0 6px 24px rgba(12,31,63,0.08); }
+    .svc-icon { font-size: 2rem; margin-bottom: 14px; }
+    .svc-name { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .svc-desc { font-size: 0.86rem; color: #5a7090; line-height: 1.65; }
+
+    /* WHY */
+    .why { background: var(--navy); padding: 100px 24px; color: var(--white); }
+    .why .section-label { color: var(--sky); }
+    .why .section-title { color: var(--white); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; max-width: 960px; margin: 0 auto; }
+    .why-item { background: rgba(255,255,255,0.04); padding: 32px 22px; text-align: center; border-top: 3px solid var(--sky); }
+    .wi-icon { font-size: 2.4rem; margin-bottom: 14px; display: block; }
+    .wi-title { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 10px; text-transform: uppercase; }
+    .wi-desc { font-size: 0.84rem; color: #8aaccc; line-height: 1.6; }
+
+    /* ABOUT */
+    .about { background: var(--white); padding: 100px 24px; }
+    .about-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-content .section-label { text-align: left; }
+    .about-content .section-title { text-align: left; margin-bottom: 22px; }
+    .about-text { font-size: 1rem; color: #5a7090; line-height: 1.8; margin-bottom: 18px; }
+    .about-cta { display: inline-block; background: var(--red); color: var(--white); padding: 14px 30px; text-decoration: none; font-weight: 700; font-size: 0.9rem; font-family: 'Oswald', sans-serif; letter-spacing: 1px; text-transform: uppercase; transition: background 0.2s; margin-top: 10px; }
+    .about-cta:hover { background: #a93224; }
+    .about-stats { background: var(--gray); padding: 40px 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Oswald', sans-serif; font-size: 2.8rem; font-weight: 700; color: var(--navy); line-height: 1; }
+    .stat-lab { font-size: 0.75rem; color: #6890aa; letter-spacing: 1px; text-transform: uppercase; margin-top: 5px; }
+
+    /* CONTACT */
+    .contact { background: var(--light); padding: 100px 24px; }
+    .contact-inner { max-width: 660px; margin: 0 auto; text-align: center; }
+    .contact-info { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin: 34px 0; }
+    .c-item { text-align: center; }
+    .c-label { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: #7090aa; font-weight: 700; display: block; margin-bottom: 5px; }
+    .c-val { font-weight: 700; color: var(--navy); font-size: 0.92rem; }
+    .contact-form { background: var(--white); padding: 36px; text-align: left; margin-top: 28px; box-shadow: 0 2px 16px rgba(12,31,63,0.06); }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--navy); margin-bottom: 7px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 1.5px solid #c8d8e8; font-size: 0.9rem; font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--sky); }
+    .form-group textarea { min-height: 88px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .btn-submit { width: 100%; padding: 15px; background: var(--red); color: var(--white); border: none; font-size: 0.9rem; font-weight: 700; cursor: pointer; font-family: 'Oswald', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; transition: background 0.2s; }
+    .btn-submit:hover { background: #a93224; }
+
+    footer { background: var(--navy); color: #4a6080; padding: 46px 24px 26px; text-align: center; }
+    .footer-logo { font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .footer-logo span { color: var(--sky); }
+    .footer-loc { font-size: 0.82rem; margin-bottom: 5px; }
+    .footer-email { font-size: 0.82rem; color: var(--sky); margin-bottom: 22px; }
+    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 16px 0; }
+    .footer-copy { font-size: 0.75rem; }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 60px; }
+      .hero-stripe, .hero-stripe-2 { display: none; }
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Vessels <span>Plumbing</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Free Estimate</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-stripe"></div>
+    <div class="hero-stripe-2"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">Louisville, KY's Trusted Plumbing Professionals</div>
+      <h1 class="hero-title">Louisville's<br /><span class="accent">Trusted</span><br />Plumbing<br />Pros</h1>
+      <p class="hero-sub">From emergency repairs to full installations, Vessels Plumbing delivers fast, reliable, and honest service across the greater Louisville area.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-red">Call for a Free Estimate</a>
+        <a href="#services" class="btn-border">Our Services</a>
+      </div>
+      <div class="trust-list">
+        <div class="trust-item"><span class="ti-icon">✓</span><span class="ti-text">Upfront, honest pricing — no surprises</span></div>
+        <div class="trust-item"><span class="ti-icon">✓</span><span class="ti-text">Fast response across Louisville metro area</span></div>
+        <div class="trust-item"><span class="ti-icon">✓</span><span class="ti-text">Fully licensed and insured</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="emergency">
+    <div class="em-text">🚨 Plumbing Emergency? <a href="#contact">Contact Vessels Plumbing Now</a> — Fast Response Across Louisville</div>
+  </div>
+
+  <section class="services" id="services">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon">🚨</div>
+        <div class="svc-name">Emergency Plumbing Repairs</div>
+        <p class="svc-desc">Fast-response emergency plumbing across Louisville — burst pipes, severe leaks, and urgent failures handled swiftly.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔥</div>
+        <div class="svc-name">Water Heater Installation &amp; Repair</div>
+        <p class="svc-desc">Expert installation, replacement, and repair of all water heater types — tank and tankless — for reliable hot water.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🌊</div>
+        <div class="svc-name">Drain Cleaning &amp; Unclogging</div>
+        <p class="svc-desc">Professional drain cleaning for kitchen, bathroom, and main line blockages — fast, effective, and lasting results.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔧</div>
+        <div class="svc-name">Pipe Repair &amp; Replacement</div>
+        <p class="svc-desc">Repairing cracked, corroded, or burst pipes throughout the home — from minor patches to full system replacements.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🚿</div>
+        <div class="svc-name">Bathroom &amp; Kitchen Plumbing</div>
+        <p class="svc-desc">Full bathroom and kitchen plumbing installations and renovations including sinks, toilets, showers, and faucets.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🏗️</div>
+        <div class="svc-name">Sewer Line Services</div>
+        <p class="svc-desc">Sewer line inspection, cleaning, repair, and replacement to protect your Louisville property from costly backups.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="section-label">Why Choose Vessels</div>
+    <h2 class="section-title">The Vessels Difference</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="wi-icon">💰</span>
+        <div class="wi-title">Honest Pricing</div>
+        <p class="wi-desc">Upfront estimates with zero hidden fees. You know the price before work begins.</p>
+      </div>
+      <div class="why-item">
+        <span class="wi-icon">⚡</span>
+        <div class="wi-title">Fast Response</div>
+        <p class="wi-desc">Quick arrival times for all calls — especially emergencies across the Louisville metro.</p>
+      </div>
+      <div class="why-item">
+        <span class="wi-icon">🏅</span>
+        <div class="wi-title">Expert Team</div>
+        <p class="wi-desc">Fully licensed and insured plumbing professionals with hands-on expertise for every job type.</p>
+      </div>
+      <div class="why-item">
+        <span class="wi-icon">✅</span>
+        <div class="wi-title">Quality Guaranteed</div>
+        <p class="wi-desc">We stand behind our work. Every job is done right — or we come back to make it right.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-content">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Louisville's Plumbing Company You Can Count On</h2>
+        <p class="about-text">Vessels Plumbing Services Inc is Louisville's trusted plumbing company, serving homeowners and businesses throughout the metro area with professional, dependable service you can count on. The team brings hands-on expertise to every job — from quick emergency fixes to complex full-system installations — always with upfront pricing and a commitment to getting it right.</p>
+        <p class="about-text">When Louisville needs a plumber, Vessels Plumbing Services answers the call.</p>
+        <a href="#contact" class="about-cta">Call for a Free Estimate</a>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><div class="stat-num">500+</div><div class="stat-lab">Jobs Done</div></div>
+        <div class="stat"><div class="stat-num">5★</div><div class="stat-lab">Avg Rating</div></div>
+        <div class="stat"><div class="stat-num">24/7</div><div class="stat-lab">Emergency</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-lab">Licensed</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="section-label">Get a Free Estimate</div>
+      <h2 class="section-title">Contact Vessels Plumbing</h2>
+      <div class="contact-info">
+        <div class="c-item"><span class="c-label">Location</span><span class="c-val">Louisville, KY &amp; Metro Area</span></div>
+        <div class="c-item"><span class="c-label">Email</span><span class="c-val">office@vesselsplumbing.com</span></div>
+        <div class="c-item"><span class="c-label">Hours</span><span class="c-val">Mon–Sat 7am–7pm</span></div>
+      </div>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="e.g. Mike Johnson" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>Emergency Plumbing Repairs</option>
+              <option>Water Heater Installation &amp; Repair</option>
+              <option>Drain Cleaning &amp; Unclogging</option>
+              <option>Pipe Repair &amp; Replacement</option>
+              <option>Bathroom &amp; Kitchen Plumbing</option>
+              <option>Sewer Line Services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Describe the Problem</label>
+            <textarea name="message" placeholder="Tell us about your plumbing issue, address in Louisville, and best time to reach you..."></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Free Estimate Request - Vessels Plumbing Services Louisville" />
+          <button type="submit" class="btn-submit">Request My Free Estimate →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Vessels <span>Plumbing</span> Services</div>
+    <div class="footer-loc">Louisville, KY &amp; Greater Metro Area</div>
+    <div class="footer-email">office@vesselsplumbing.com</div>
+    <hr class="footer-divider" />
+    <div class="footer-copy">© 2026 Vessels Plumbing Services Inc. All rights reserved. | Website by <strong style="color:#2980d9;">Alma Digital Designs</strong></div>
+  </footer>
+
+</body>
+</html>
