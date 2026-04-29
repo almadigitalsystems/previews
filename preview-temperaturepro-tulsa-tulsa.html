@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TemperaturePro Tulsa | HVAC Repair, Installation &amp; Maintenance in Tulsa, OK</title>
+  <meta name="description" content="TemperaturePro Tulsa offers expert HVAC repair, installation, and maintenance for residential and commercial customers in Tulsa, OK. Same-day service available. Call for a free estimate." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0d2137;
+      --blue: #1565a8;
+      --cyan: #00a8e8;
+      --orange: #ff6b35;
+      --light-bg: #f0f5fc;
+      --white: #ffffff;
+      --text-dark: #0d2137;
+      --text-mid: #3a4a60;
+      --text-light: #6b7a90;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--white); }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,33,55,0.97); backdrop-filter: blur(8px);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between;
+      height: 70px; box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-icon {
+      width: 40px; height: 40px; background: var(--cyan);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { width: 22px; height: 22px; fill: white; }
+    .nav-logo-text { font-family: 'Montserrat', sans-serif; font-weight: 800; color: white; font-size: 1.1rem; line-height: 1.2; }
+    .nav-logo-sub { font-size: 0.65rem; font-weight: 600; color: var(--cyan); letter-spacing: 2px; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-cta {
+      background: var(--orange); color: white !important; padding: 10px 22px;
+      border-radius: 6px; font-weight: 700 !important; font-size: 0.9rem !important;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .nav-cta:hover { background: #e55a25 !important; transform: translateY(-1px); }
+    @media(max-width:768px) { .nav-links { display: none; } }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0a3060 60%, #0d4080 100%);
+      padding: 90px 5% 80px; min-height: 88vh;
+      display: flex; align-items: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -100px; right: -100px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,168,232,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; width: 100%; }
+    @media(max-width:900px) { .hero-inner { grid-template-columns: 1fr; } .hero-visual { display: none; } }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0,168,232,0.15); border: 1px solid rgba(0,168,232,0.4);
+      color: var(--cyan); padding: 6px 14px; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 22px;
+    }
+    .hero-badge-dot { width: 6px; height: 6px; background: var(--cyan); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)} }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif; font-weight: 900;
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1.15;
+      color: white; margin-bottom: 22px;
+    }
+    .hero h1 span { color: var(--cyan); }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 38px; max-width: 520px; }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--orange); color: white; padding: 16px 32px;
+      border-radius: 8px; font-weight: 700; font-size: 1rem;
+      text-decoration: none; display: inline-block; transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(255,107,53,0.4);
+    }
+    .btn-primary:hover { background: #e55a25; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,107,53,0.5); }
+    .btn-secondary {
+      background: transparent; color: white; padding: 16px 32px;
+      border-radius: 8px; font-weight: 600; font-size: 1rem;
+      text-decoration: none; border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+    .hero-stats { display: flex; gap: 36px; margin-top: 48px; flex-wrap: wrap; }
+    .stat-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2rem; color: white; }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); font-weight: 500; margin-top: 2px; }
+    .hero-visual { display: flex; justify-content: center; }
+    .hero-card {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px; padding: 36px; width: 100%; max-width: 380px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-card-icon {
+      width: 72px; height: 72px; background: linear-gradient(135deg, var(--cyan), #0080c0);
+      border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px;
+    }
+    .hero-card-icon svg { width: 38px; height: 38px; fill: white; }
+    .hero-card h3 { color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+    .hero-card p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
+    .hero-card-features { list-style: none; }
+    .hero-card-features li {
+      color: rgba(255,255,255,0.75); font-size: 0.88rem; padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; gap: 10px;
+    }
+    .hero-card-features li:last-child { border-bottom: none; }
+    .check { color: var(--cyan); font-weight: 700; font-size: 1rem; }
+
+    /* TRUST BAR */
+    .trust-bar { background: var(--cyan); padding: 18px 5%; }
+    .trust-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap;
+    }
+    .trust-item { display: flex; align-items: center; gap: 10px; color: white; font-weight: 700; font-size: 0.9rem; }
+    .trust-item svg { width: 20px; height: 20px; fill: rgba(255,255,255,0.9); flex-shrink: 0; }
+
+    /* SECTIONS */
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--cyan); margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Montserrat', sans-serif; font-weight: 900;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.2;
+      color: var(--text-dark); margin-bottom: 16px;
+    }
+    .section-sub { font-size: 1.05rem; color: var(--text-mid); line-height: 1.7; max-width: 600px; margin-bottom: 52px; }
+
+    /* SERVICES */
+    .services-section { background: var(--light-bg); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media(max-width:900px) { .services-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:580px) { .services-grid { grid-template-columns: 1fr; } }
+    .service-card {
+      background: white; border-radius: 16px; padding: 32px 28px;
+      border: 1px solid #dde6f0; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(13,33,55,0.12); border-color: var(--cyan); }
+    .service-icon {
+      width: 54px; height: 54px; background: linear-gradient(135deg, #e8f4fc, #cce8f5);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+    }
+    .service-icon svg { width: 26px; height: 26px; fill: var(--blue); }
+    .service-card h3 { font-weight: 700; font-size: 1.05rem; color: var(--text-dark); margin-bottom: 10px; }
+    .service-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+
+    /* EMERGENCY BANNER */
+    .emergency-banner { background: linear-gradient(135deg, #1a0a00, #3a1500); padding: 60px 5%; }
+    .emergency-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;
+    }
+    .emergency-tag {
+      display: inline-block; background: var(--orange); color: white;
+      padding: 4px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .emergency-inner h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 900;
+      font-size: clamp(1.6rem, 3vw, 2.2rem); color: white; margin-bottom: 12px;
+    }
+    .emergency-inner p { color: rgba(255,255,255,0.7); font-size: 1rem; max-width: 500px; line-height: 1.6; }
+    .emergency-cta {
+      background: var(--orange); color: white; padding: 18px 38px;
+      border-radius: 8px; font-weight: 700; font-size: 1.1rem;
+      text-decoration: none; white-space: nowrap; transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(255,107,53,0.5); flex-shrink: 0;
+    }
+    .emergency-cta:hover { background: #e55a25; transform: translateY(-2px); }
+
+    /* ABOUT */
+    .about-section { background: white; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+    @media(max-width:800px) { .about-grid { grid-template-columns: 1fr; } }
+    .about-visual {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      border-radius: 20px; padding: 48px; color: white;
+    }
+    .about-visual h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2rem; color: white; margin-bottom: 4px; }
+    .about-tagline { color: var(--cyan); font-weight: 600; margin-bottom: 28px; font-size: 0.95rem; }
+    .about-check { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .about-check-icon { color: var(--cyan); font-size: 1.1rem; margin-top: 1px; flex-shrink: 0; font-weight: 700; }
+    .about-check p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.5; }
+    .about-content .section-sub { margin-bottom: 28px; }
+    .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    .highlight-box { background: var(--light-bg); border-radius: 12px; padding: 20px; border-left: 4px solid var(--cyan); }
+    .highlight-box .num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--blue); }
+    .highlight-box .lbl { font-size: 0.8rem; color: var(--text-mid); font-weight: 600; margin-top: 2px; }
+
+    /* REVIEWS */
+    .reviews-section { background: var(--light-bg); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    @media(max-width:900px) { .reviews-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:580px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review-card { background: white; border-radius: 16px; padding: 28px; border: 1px solid #dde6f0; }
+    .review-stars { color: #ffc107; font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
+    .review-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 20px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar {
+      width: 40px; height: 40px; background: linear-gradient(135deg, var(--blue), var(--cyan));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+    }
+    .review-name { font-weight: 700; font-size: 0.88rem; }
+    .review-date { font-size: 0.75rem; color: var(--text-light); }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #0a3060 100%);
+      text-align: center; padding: 90px 5%;
+    }
+    .cta-section .section-label { color: var(--cyan); }
+    .cta-section .section-title { color: white; max-width: 700px; margin: 0 auto 16px; }
+    .cta-section .section-sub { color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 40px; }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* CONTACT */
+    .contact-section { background: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    @media(max-width:800px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; margin-bottom: 16px; }
+    .contact-info > p { color: var(--text-mid); line-height: 1.7; margin-bottom: 32px; }
+    .contact-detail { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+    .contact-detail-icon {
+      width: 44px; height: 44px; background: var(--light-bg);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contact-detail-icon svg { width: 20px; height: 20px; fill: var(--blue); }
+    .detail-label { font-size: 0.75rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+    .detail-value { font-weight: 600; color: var(--text-dark); font-size: 1rem; margin-top: 2px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 13px 16px;
+      border: 1.5px solid #d0dcea; border-radius: 8px;
+      font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-dark);
+      background: var(--light-bg); transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(0,168,232,0.1); background: white;
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media(max-width:500px) { .form-row { grid-template-columns: 1fr; } }
+    .form-submit {
+      width: 100%; padding: 16px; background: var(--orange); color: white;
+      border: none; border-radius: 8px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif;
+    }
+    .form-submit:hover { background: #e55a25; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,107,53,0.35); }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 48px 5% 28px; }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 36px;
+    }
+    @media(max-width:768px) { .footer-inner { grid-template-columns: 1fr; gap: 28px; } }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.65; max-width: 280px; margin-top: 16px; }
+    .footer-col h4 { color: white; font-weight: 700; margin-bottom: 16px; font-size: 0.9rem; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--cyan); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+      font-size: 0.82rem;
+    }
+    .powered-by { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .powered-by a { color: rgba(0,168,232,0.6); text-decoration: none; }
+    .powered-by a:hover { color: var(--cyan); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+    </div>
+    <div>
+      <div class="nav-logo-text">TemperaturePro</div>
+      <div class="nav-logo-sub">Tulsa, OK</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Get Free Estimate</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Serving Tulsa, OK
+      </div>
+      <h1>Fast, Reliable <span>HVAC Service</span> in Tulsa &mdash; When You Need It Most</h1>
+      <p class="hero-sub">TemperaturePro Tulsa keeps your home and business comfortable year-round. Emergency repairs, full system installs, and everything in between &mdash; delivered by certified technicians who show up on time.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">See Your Free Website Preview</a>
+        <a href="#services" class="btn-secondary">Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Emergency Service</div>
+        </div>
+        <div>
+          <div class="stat-num">Same Day</div>
+          <div class="stat-label">Available</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Certified Techs</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M17.66 11.2c-.23-.3-.51-.56-.77-.82-.67-.6-1.43-1.03-2.07-1.66C13.33 7.26 13 4.85 13.95 3c-.95.23-1.78.75-2.49 1.32-2.59 2.11-3.66 5.63-2.57 8.89.03.07.05.14.08.2.07.2-.15.47-.36.41a5.2 5.2 0 0 1-.6-.24 5.3 5.3 0 0 1-.95-1.03c-.36-.5-.66-1.07-.78-1.67-.13-.7-.07-1.38-.02-2.1C6.18 7.86 5.18 6.5 5 5c-1.25 1.5-2 3.41-2 5.52 0 4.28 3.32 7.85 7.53 8.45a9.29 9.29 0 0 0 4.35-.3 8.19 8.19 0 0 0 5.12-5.92C20.72 10.66 19 9 17.66 11.2z"/></svg>
+        </div>
+        <h3>Emergency HVAC?</h3>
+        <p>When your system fails, we respond fast &mdash; day or night, weekday or weekend.</p>
+        <ul class="hero-card-features">
+          <li><span class="check">&#10003;</span> Same-day appointments available</li>
+          <li><span class="check">&#10003;</span> Certified, background-checked techs</li>
+          <li><span class="check">&#10003;</span> Transparent upfront pricing</li>
+          <li><span class="check">&#10003;</span> All makes &amp; models serviced</li>
+          <li><span class="check">&#10003;</span> Residential &amp; commercial</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      Licensed &amp; Insured
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+      24/7 Emergency Service
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+      Free Estimates
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Serving All of Tulsa, OK
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="section-inner">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Complete HVAC Solutions for Tulsa Homes &amp; Businesses</h2>
+    <p class="section-sub">From emergency repairs to full system installations &mdash; TemperaturePro handles every aspect of your heating and cooling needs.</p>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11h-4.17l3.24-3.24-1.41-1.42L15 11h-2V9l4.66-4.66-1.42-1.41L13 6.17V2h-2v4.17L7.76 2.93 6.34 4.34 11 9v2H9L4.34 6.34 2.93 7.76 6.17 11H2v2h4.17l-3.24 3.24 1.41 1.42L9 13h2v2l-4.66 4.66 1.42 1.41L11 17.83V22h2v-4.17l3.24 3.24 1.42-1.41L13 15v-2h2l4.66 4.66 1.41-1.42L17.83 13H22z"/></svg>
+        </div>
+        <h3>AC Repair &amp; Maintenance</h3>
+        <p>When your air conditioner breaks down in the Oklahoma heat, you need fast help. We diagnose and fix all makes and models &mdash; same day when possible.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M17.66 11.2c-.23-.3-.51-.56-.77-.82-.67-.6-1.43-1.03-2.07-1.66C13.33 7.26 13 4.85 13.95 3c-.95.23-1.78.75-2.49 1.32-2.59 2.11-3.66 5.63-2.57 8.89.03.07.05.14.08.2.07.2-.15.47-.36.41a5.2 5.2 0 0 1-.6-.24 5.3 5.3 0 0 1-.95-1.03c-.36-.5-.66-1.07-.78-1.67-.13-.7-.07-1.38-.02-2.1C6.18 7.86 5.18 6.5 5 5c-1.25 1.5-2 3.41-2 5.52 0 4.28 3.32 7.85 7.53 8.45a9.29 9.29 0 0 0 4.35-.3 8.19 8.19 0 0 0 5.12-5.92C20.72 10.66 19 9 17.66 11.2z"/></svg>
+        </div>
+        <h3>Heating &amp; Furnace Service</h3>
+        <p>Don&rsquo;t get caught in the cold. Our technicians service gas furnaces, heat pumps, and electric systems to keep your home warm all winter.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        </div>
+        <h3>HVAC System Installation</h3>
+        <p>Upgrading your system? We install high-efficiency units from top brands and handle everything &mdash; removal, installation, and setup.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l6 2.67v4.91c0 3.52-2.33 7.12-6 8.3-3.67-1.18-6-4.78-6-8.3V7.67L12 5z"/></svg>
+        </div>
+        <h3>Emergency HVAC Service</h3>
+        <p>HVAC emergencies don&rsquo;t follow business hours. We&rsquo;re available for urgent repairs when your system fails at the worst time.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        </div>
+        <h3>Indoor Air Quality Solutions</h3>
+        <p>Clean air matters. From air purifiers to humidity control, we help Tulsa families breathe easier inside their homes.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+        </div>
+        <h3>Commercial HVAC</h3>
+        <p>Keep your business running smoothly. We service and maintain commercial HVAC systems for offices, retail spaces, and light industrial facilities across Tulsa.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY BANNER -->
+<div class="emergency-banner">
+  <div class="emergency-inner">
+    <div>
+      <div class="emergency-tag">24/7 Emergency Response</div>
+      <h2>HVAC Emergency? We&rsquo;re Available Right Now.</h2>
+      <p>Don&rsquo;t sweat it out or freeze through the night. Our emergency HVAC technicians are ready to respond to urgent calls across Tulsa &mdash; 24 hours a day, 7 days a week.</p>
+    </div>
+    <a href="#contact" class="emergency-cta">Request Emergency Service</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual">
+        <h3>TemperaturePro Tulsa</h3>
+        <div class="about-tagline">Tulsa&rsquo;s Trusted Heating &amp; Cooling Experts</div>
+        <div class="about-check"><div class="about-check-icon">&#10003;</div><p>Certified technicians with extensive Tulsa-area field experience</p></div>
+        <div class="about-check"><div class="about-check-icon">&#10003;</div><p>Fast response times &mdash; we show up when we say we will</p></div>
+        <div class="about-check"><div class="about-check-icon">&#10003;</div><p>Honest, transparent pricing &mdash; no hidden fees, no surprises</p></div>
+        <div class="about-check"><div class="about-check-icon">&#10003;</div><p>Quality workmanship on every job, from tune-ups to full installs</p></div>
+        <div class="about-check"><div class="about-check-icon">&#10003;</div><p>Available for both residential homes and commercial properties</p></div>
+      </div>
+      <div class="about-content">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">Built on Trust. Delivered with Speed.</h2>
+        <p class="section-sub">TemperaturePro Tulsa has been serving homeowners and businesses throughout the Tulsa area with dependable heating and cooling solutions.</p>
+        <p style="color:var(--text-mid);line-height:1.75;margin-bottom:24px;">Their team of certified technicians delivers fast response times, honest pricing, and quality workmanship on every job &mdash; from routine tune-ups to complete system replacements. Whether it&rsquo;s the middle of summer or the coldest night in January, TemperaturePro shows up ready to get the job done right.</p>
+        <div class="about-highlights">
+          <div class="highlight-box"><div class="num">24/7</div><div class="lbl">Emergency Availability</div></div>
+          <div class="highlight-box"><div class="num">100%</div><div class="lbl">Certified Technicians</div></div>
+          <div class="highlight-box"><div class="num">All</div><div class="lbl">Makes &amp; Models</div></div>
+          <div class="highlight-box"><div class="num">Free</div><div class="lbl">Estimates</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="section-inner">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title">What Tulsa Customers Are Saying</h2>
+    <p class="section-sub">Real feedback from real homeowners and businesses across the Tulsa area.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;AC went out on a 104-degree day. TemperaturePro had a tech at my house within 2 hours. Fixed the issue quickly and didn&rsquo;t try to upsell me on anything I didn&rsquo;t need. Highly recommend.&rdquo;</p>
+        <div class="review-author">
+          <div class="review-avatar">MK</div>
+          <div><div class="review-name">Marcus K.</div><div class="review-date">Tulsa Homeowner</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;We use TemperaturePro for all our commercial HVAC maintenance. Professional team, always on time, and their pricing is fair and upfront. Wouldn&rsquo;t trust anyone else with our equipment.&rdquo;</p>
+        <div class="review-author">
+          <div class="review-avatar">SD</div>
+          <div><div class="review-name">Sarah D.</div><div class="review-date">Business Owner, Tulsa</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">&ldquo;Full system replacement was handled perfectly from start to finish. The crew was clean, efficient, and walked me through everything. New system runs great and my energy bill dropped noticeably.&rdquo;</p>
+        <div class="review-author">
+          <div class="review-avatar">TR</div>
+          <div><div class="review-name">Tom R.</div><div class="review-date">South Tulsa Resident</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="section-inner">
+    <div class="section-label">Get Started Today</div>
+    <h2 class="section-title">Ready to Schedule Service?</h2>
+    <p class="section-sub">Get a free estimate from Tulsa&rsquo;s trusted HVAC team. No pressure, no surprises.</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn-primary">Get Your Free Estimate</a>
+      <a href="#services" class="btn-secondary">View Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Contact Us</div>
+        <h2>Get Your Free Estimate Today</h2>
+        <p>Fill out the form and a member of the TemperaturePro Tulsa team will reach out to schedule your free estimate or service call.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div><div class="detail-label">Location</div><div class="detail-value">Tulsa, Oklahoma</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div><div class="detail-label">Email</div><div class="detail-value">jon.blitz@temperaturepro.com</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <div><div class="detail-label">Hours</div><div class="detail-value">24/7 Emergency &bull; Mon&ndash;Fri 7am&ndash;7pm</div></div>
+        </div>
+      </div>
+      <div>
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="john@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="(918) 555-0100" />
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>AC Repair &amp; Maintenance</option>
+              <option>Heating &amp; Furnace Service</option>
+              <option>HVAC System Installation</option>
+              <option>Emergency HVAC Service</option>
+              <option>Indoor Air Quality</option>
+              <option>Commercial HVAC</option>
+              <option>Other / General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us about your HVAC needs..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Get Your Free Estimate &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <div>
+          <div class="nav-logo-text">TemperaturePro</div>
+          <div class="nav-logo-sub">Tulsa, OK</div>
+        </div>
+      </a>
+      <p>Expert HVAC repair, installation, and maintenance for residential and commercial customers across Tulsa, OK. Available 24/7 for emergencies.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">AC Repair &amp; Maintenance</a>
+      <a href="#services">Heating &amp; Furnace</a>
+      <a href="#services">System Installation</a>
+      <a href="#services">Emergency Service</a>
+      <a href="#services">Indoor Air Quality</a>
+      <a href="#services">Commercial HVAC</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#about">About Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact">Free Estimate</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2025 TemperaturePro Tulsa. All rights reserved. Tulsa, Oklahoma.</div>
+    <div class="powered-by">Website by <a href="https://almadigitalservices.com" target="_blank">Alma Digital</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
