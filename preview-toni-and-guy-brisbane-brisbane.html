@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TONI&GUY Brisbane | Premium Hair Salon in Brisbane, Australia</title>
+  <meta name="description" content="TONI&GUY Brisbane offers precision haircuts, colour, balayage, and styling by internationally trained stylists. Book your appointment at Brisbane's iconic hair salon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a;
+      --dark:  #141414;
+      --mid:   #2a2a2a;
+      --gold:  #c9a84c;
+      --white: #ffffff;
+      --gray:  #f5f5f5;
+      --text:  #1a1a1a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--black); padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 900; color: var(--white); letter-spacing: 3px; text-transform: uppercase; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { color: #888; text-decoration: none; font-size: 0.78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { border: 1px solid var(--gold); color: var(--gold); padding: 10px 24px; text-decoration: none; font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
+    .nav-cta:hover { background: var(--gold); color: var(--black); }
+
+    /* MINIMALIST HERO */
+    .hero { min-height: 100vh; background: var(--black); display: flex; align-items: center; padding: 120px 80px; position: relative; overflow: hidden; }
+    .hero::before { content: 'TONI&GUY'; position: absolute; right: -60px; top: 50%; transform: translateY(-50%); font-family: 'Montserrat', sans-serif; font-size: 18vw; font-weight: 900; color: rgba(255,255,255,0.03); letter-spacing: -5px; white-space: nowrap; pointer-events: none; line-height: 1; }
+    .hero-content { max-width: 680px; position: relative; z-index: 2; }
+    .hero-location { font-size: 0.72rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; }
+    .hero-title { font-family: 'Montserrat', sans-serif; font-size: clamp(3rem, 6vw, 6.5rem); font-weight: 900; color: var(--white); line-height: 0.95; letter-spacing: -2px; margin-bottom: 32px; text-transform: uppercase; }
+    .hero-title .thin { font-weight: 300; }
+    .hero-line { width: 60px; height: 2px; background: var(--gold); margin-bottom: 30px; }
+    .hero-sub { font-size: 1rem; color: #888; line-height: 1.8; margin-bottom: 48px; max-width: 500px; font-weight: 300; }
+    .hero-btns { display: flex; gap: 16px; }
+    .btn-gold { background: var(--gold); color: var(--black); padding: 16px 38px; text-decoration: none; font-weight: 800; font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; transition: opacity 0.2s; display: inline-block; }
+    .btn-gold:hover { opacity: 0.85; }
+    .btn-border { background: transparent; color: var(--white); padding: 16px 38px; text-decoration: none; font-weight: 600; font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.2); transition: border-color 0.2s; display: inline-block; }
+    .btn-border:hover { border-color: rgba(255,255,255,0.6); }
+    .hero-numbers { position: absolute; right: 80px; bottom: 80px; display: flex; gap: 50px; }
+    .hero-num { text-align: center; }
+    .hn-val { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: 900; color: var(--white); display: block; }
+    .hn-lab { font-size: 0.68rem; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+
+    /* SERVICES */
+    .services { background: var(--gray); padding: 100px 24px; }
+    .section-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); text-align: center; margin-bottom: 14px; }
+    .section-title { font-family: 'Montserrat', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; text-align: center; color: var(--black); margin-bottom: 60px; letter-spacing: -0.5px; text-transform: uppercase; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; max-width: 1100px; margin: 0 auto; }
+    .svc-card { background: var(--white); padding: 36px 28px; border-bottom: 3px solid transparent; transition: border-color 0.2s; }
+    .svc-card:hover { border-color: var(--gold); }
+    .svc-num { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 3px; color: var(--gold); margin-bottom: 16px; }
+    .svc-name { font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 800; color: var(--black); margin-bottom: 12px; letter-spacing: 0.5px; }
+    .svc-desc { font-size: 0.85rem; color: #666; line-height: 1.7; font-weight: 300; }
+
+    /* BRAND STORY */
+    .brand { background: var(--black); padding: 100px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+    .brand-content .section-eyebrow { text-align: left; }
+    .brand-content .section-title { text-align: left; color: var(--white); margin-bottom: 24px; }
+    .brand-text { font-size: 1rem; color: #888; line-height: 1.85; margin-bottom: 20px; font-weight: 300; }
+    .brand-cta { display: inline-block; background: transparent; color: var(--gold); padding: 14px 32px; border: 1px solid var(--gold); text-decoration: none; font-weight: 700; font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; transition: background 0.2s, color 0.2s; margin-top: 12px; }
+    .brand-cta:hover { background: var(--gold); color: var(--black); }
+    .brand-visual { position: relative; }
+    .brand-visual-box { background: var(--mid); border: 1px solid rgba(201,168,76,0.2); padding: 60px 40px; text-align: center; }
+    .bv-icon { font-size: 4rem; display: block; margin-bottom: 20px; }
+    .bv-quote { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 300; color: var(--gold); font-style: italic; line-height: 1.6; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--white); padding: 100px 24px; }
+    .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; max-width: 1000px; margin: 0 auto; }
+    .test-card { padding: 36px 28px; border-top: 2px solid var(--gray); }
+    .stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 3px; margin-bottom: 16px; }
+    .test-text { font-size: 0.93rem; color: #555; line-height: 1.75; font-style: italic; margin-bottom: 18px; font-weight: 300; }
+    .test-author { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--black); letter-spacing: 1px; text-transform: uppercase; }
+
+    /* CONTACT */
+    .contact { background: var(--gray); padding: 100px 24px; }
+    .contact-inner { max-width: 620px; margin: 0 auto; text-align: center; }
+    .contact-info { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin: 36px 0; }
+    .c-item { text-align: center; }
+    .c-label { font-size: 0.65rem; letter-spacing: 2.5px; text-transform: uppercase; color: #999; font-weight: 700; display: block; margin-bottom: 5px; }
+    .c-val { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--black); font-size: 0.88rem; letter-spacing: 0.5px; }
+    .contact-form { background: var(--white); padding: 38px; text-align: left; margin-top: 28px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.72rem; font-weight: 700; color: var(--black); margin-bottom: 8px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1px solid #ddd; border-radius: 0; font-size: 0.9rem; font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { min-height: 88px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .btn-submit { width: 100%; padding: 16px; background: var(--black); color: var(--white); border: none; font-size: 0.82rem; font-weight: 700; cursor: pointer; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; text-transform: uppercase; transition: background 0.2s; }
+    .btn-submit:hover { background: var(--mid); }
+
+    footer { background: var(--black); color: #444; padding: 46px 24px 26px; text-align: center; }
+    .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 900; color: var(--white); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
+    .footer-logo span { color: var(--gold); }
+    .footer-loc { font-size: 0.82rem; margin-bottom: 5px; }
+    .footer-email { font-size: 0.82rem; color: var(--gold); margin-bottom: 22px; }
+    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.05); margin: 16px 0; }
+    .footer-copy { font-size: 0.74rem; }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 80px; }
+      .hero::before { display: none; }
+      .hero-numbers { position: static; margin-top: 40px; justify-content: flex-start; }
+      .brand { padding: 80px 24px; grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">TONI<span>&amp;</span>GUY</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#brand">About</a></li>
+      <li><a href="#contact">Book</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book Now</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-location">Brisbane, Australia</div>
+      <h1 class="hero-title">World<br /><span class="thin">Class</span><br />Hair</h1>
+      <div class="hero-line"></div>
+      <p class="hero-sub">The globally renowned TONI&amp;GUY expertise, right here in Brisbane. Precision cuts, creative colour, and flawless styling by internationally trained professionals.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-gold">Book Brisbane Appointment</a>
+        <a href="#services" class="btn-border">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-numbers">
+      <div class="hero-num"><span class="hn-val">60+</span><span class="hn-lab">Years Global</span></div>
+      <div class="hero-num"><span class="hn-val">500+</span><span class="hn-lab">Salons Worldwide</span></div>
+      <div class="hero-num"><span class="hn-val">5★</span><span class="hn-lab">Brisbane Rated</span></div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-eyebrow">What We Offer</div>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-num">01</div>
+        <div class="svc-name">Precision Haircuts</div>
+        <p class="svc-desc">Signature TONI&amp;GUY precision cutting techniques that work with your natural texture and lifestyle.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">02</div>
+        <div class="svc-name">Colour &amp; Highlights</div>
+        <p class="svc-desc">Expert colour application from subtle enhancements to dramatic transformations using the finest professional products.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">03</div>
+        <div class="svc-name">Balayage &amp; Toning</div>
+        <p class="svc-desc">Artisan balayage and toning for natural-looking sun-kissed colour that grows out beautifully.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">04</div>
+        <div class="svc-name">Blowdry &amp; Styling</div>
+        <p class="svc-desc">Professional blowdry and styling that leaves hair immaculate — from sleek and polished to voluminous and textured.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">05</div>
+        <div class="svc-name">Hair Treatments &amp; Conditioning</div>
+        <p class="svc-desc">Intensive in-salon treatments to restore shine, strength, and health to damaged or colour-treated hair.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">06</div>
+        <div class="svc-name">Bridal &amp; Special Occasion</div>
+        <p class="svc-desc">Flawless styling for weddings, formal events, and special occasions that demands you look absolutely perfect.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand" id="brand">
+    <div class="brand-content">
+      <div class="section-eyebrow">Our Story</div>
+      <h2 class="section-title">Over 60 Years of Excellence</h2>
+      <p class="brand-text">TONI&amp;GUY Brisbane brings the world-renowned expertise of the iconic global brand to the heart of Queensland. The team of internationally trained stylists specialise in precision cutting, creative colouring, and the impeccable styling techniques that have made TONI&amp;GUY a global name in hair for over 60 years.</p>
+      <p class="brand-text">Whether you're after a transformative colour service or a flawlessly polished everyday cut, TONI&amp;GUY Brisbane delivers the standard you'd expect from one of the world's most respected hair brands.</p>
+      <a href="#contact" class="brand-cta">Book Your Appointment</a>
+    </div>
+    <div class="brand-visual">
+      <div class="brand-visual-box">
+        <span class="bv-icon">✂️</span>
+        <div class="bv-quote">"The standard you'd expect from one of the world's most respected hair brands."</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="section-eyebrow">Client Reviews</div>
+    <h2 class="section-title">What Brisbane Clients Say</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="test-text">"Absolutely world-class. My balayage looks incredible — I've had so many compliments. The team are professional and talented. This is the only salon I'll go to in Brisbane."</p>
+        <div class="test-author">— Emma L., Brisbane</div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="test-text">"I came in for a precision cut and left looking completely transformed. The stylists really listen and the result was exactly what I wanted. Exceptional service every time."</p>
+        <div class="test-author">— Jessica R., Queensland</div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="test-text">"TONI&amp;GUY's international reputation speaks for itself but the Brisbane team are genuinely exceptional. Got my bridal hair done here — it was perfect all day. Highly recommend."</p>
+        <div class="test-author">— Sophie W., Brisbane</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="section-eyebrow">Book Now</div>
+      <h2 class="section-title">Your Appointment</h2>
+      <div class="contact-info">
+        <div class="c-item"><span class="c-label">Location</span><span class="c-val">Brisbane, QLD, Australia</span></div>
+        <div class="c-item"><span class="c-label">Email</span><span class="c-val">brisbane@toniandguy.com.au</span></div>
+        <div class="c-item"><span class="c-label">Hours</span><span class="c-val">Mon–Sat 9am–6pm</span></div>
+      </div>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>Precision Haircuts</option>
+              <option>Colour &amp; Highlights</option>
+              <option>Balayage &amp; Toning</option>
+              <option>Blowdry &amp; Styling</option>
+              <option>Hair Treatments &amp; Conditioning</option>
+              <option>Bridal &amp; Special Occasion</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message / Preferred Date</label>
+            <textarea name="message" placeholder="Tell us about the look you're after and a preferred date..."></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Appointment Request - TONI&GUY Brisbane" />
+          <button type="submit" class="btn-submit">Book My Brisbane Appointment</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">TONI<span>&amp;</span>GUY Brisbane</div>
+    <div class="footer-loc">Brisbane, Queensland, Australia</div>
+    <div class="footer-email">brisbane@toniandguy.com.au</div>
+    <hr class="footer-divider" />
+    <div class="footer-copy">© 2026 TONI&amp;GUY Brisbane. All rights reserved. | Website by <strong style="color:#c9a84c;">Alma Digital Designs</strong></div>
+  </footer>
+
+</body>
+</html>
