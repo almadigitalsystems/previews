@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAIR Hair Salon Cork | Expert Hair Salon in Cork, Ireland</title>
+  <meta name="description" content="CHAIR Hair Salon Cork offers expert haircuts, colour, balayage, and styling. Part of the Fane Salons family. Book your appointment with Cork's top hair team today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest:  #2d4a3e;
+      --sage:    #5a8a6e;
+      --blush:   #f5e8e0;
+      --warm:    #d4a88c;
+      --cream:   #fdfaf6;
+      --white:   #ffffff;
+      --dark:    #1a2e26;
+      --text:    #2d3d35;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--cream); border-bottom: 1px solid rgba(45,74,62,0.1); padding: 18px 48px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--forest); letter-spacing: -0.5px; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--sage); text-decoration: none; font-size: 0.82rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--forest); }
+    .nav-cta { background: var(--forest); color: var(--white); padding: 11px 24px; border-radius: 4px; text-decoration: none; font-size: 0.82rem; font-weight: 700; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--dark); }
+
+    /* HERO - Classic Professional */
+    .hero { min-height: 100vh; background: linear-gradient(160deg, var(--dark) 0%, var(--forest) 60%, var(--sage) 100%); display: flex; align-items: center; padding: 120px 80px 80px; }
+    .hero-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center; width: 100%; }
+    .hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--warm); margin-bottom: 22px; }
+    .hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(2.8rem, 5vw, 5rem); color: var(--white); line-height: 1.1; margin-bottom: 24px; }
+    .hero-title em { font-style: italic; color: var(--warm); }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.75); line-height: 1.8; margin-bottom: 42px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-warm { background: var(--warm); color: var(--dark); padding: 15px 34px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.92rem; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-warm:hover { background: #c49070; transform: translateY(-1px); }
+    .btn-ghost { background: transparent; color: var(--white); padding: 15px 34px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.92rem; border: 1.5px solid rgba(255,255,255,0.3); transition: border-color 0.2s; display: inline-block; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.7); }
+    .hero-right-panel { background: rgba(255,255,255,0.07); border-radius: 20px; padding: 40px 30px; border: 1px solid rgba(255,255,255,0.12); }
+    .hrp-title { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--warm); margin-bottom: 20px; }
+    .hrp-feature { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 20px; }
+    .hrp-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .hrp-text { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.5; }
+    .hrp-text strong { color: var(--white); display: block; margin-bottom: 2px; font-size: 0.92rem; }
+    .hrp-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 24px 0; }
+    .hrp-badge { background: var(--warm); color: var(--dark); padding: 12px 18px; border-radius: 8px; font-size: 0.82rem; font-weight: 800; text-align: center; }
+
+    /* SERVICES */
+    .services { background: var(--white); padding: 100px 24px; }
+    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--warm); text-align: center; margin-bottom: 12px; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); text-align: center; color: var(--dark); margin-bottom: 56px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; max-width: 1080px; margin: 0 auto; }
+    .svc-card { background: var(--cream); border-radius: 14px; padding: 32px 24px; border-left: 4px solid transparent; transition: border-color 0.2s, transform 0.2s; }
+    .svc-card:hover { border-color: var(--forest); transform: translateX(4px); }
+    .svc-icon { font-size: 2rem; margin-bottom: 14px; }
+    .svc-name { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--dark); margin-bottom: 10px; }
+    .svc-desc { font-size: 0.86rem; color: #6a8070; line-height: 1.65; }
+
+    /* ABOUT */
+    .about { background: var(--blush); padding: 100px 24px; }
+    .about-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-content .section-label { text-align: left; }
+    .about-content .section-title { text-align: left; margin-bottom: 22px; }
+    .about-text { font-size: 1rem; color: #5a6e60; line-height: 1.8; margin-bottom: 18px; }
+    .about-detail { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 0.88rem; color: #4a6050; font-weight: 600; }
+    .about-detail span { color: var(--forest); font-size: 1.1rem; }
+    .about-cta { display: inline-block; background: var(--forest); color: var(--white); padding: 14px 30px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; margin-top: 18px; }
+    .about-cta:hover { background: var(--dark); }
+    .about-visual { background: var(--forest); border-radius: 20px; padding: 56px 36px; text-align: center; }
+    .av-icon { font-size: 5rem; display: block; margin-bottom: 22px; }
+    .av-text { font-family: 'DM Serif Display', serif; font-size: 1.5rem; font-style: italic; color: var(--warm); line-height: 1.4; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--dark); padding: 100px 24px; color: var(--white); }
+    .testimonials .section-label { color: var(--warm); }
+    .testimonials .section-title { color: var(--white); }
+    .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+    .test-card { background: rgba(255,255,255,0.05); border-radius: 14px; padding: 28px; border: 1px solid rgba(212,168,140,0.15); }
+    .stars { color: var(--warm); font-size: 1rem; margin-bottom: 14px; }
+    .test-text { font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.7); font-style: italic; margin-bottom: 16px; }
+    .test-author { font-weight: 700; font-size: 0.82rem; color: var(--warm); }
+
+    /* CTA */
+    .cta-section { background: linear-gradient(135deg, var(--forest), var(--sage)); padding: 80px 24px; text-align: center; color: var(--white); }
+    .cta-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 14px; }
+    .cta-section p { font-size: 1rem; opacity: 0.85; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .btn-cta-white { background: var(--white); color: var(--forest); padding: 15px 38px; border-radius: 4px; text-decoration: none; font-weight: 800; font-size: 0.95rem; display: inline-block; transition: transform 0.2s; }
+    .btn-cta-white:hover { transform: translateY(-2px); }
+
+    /* CONTACT */
+    .contact { background: var(--cream); padding: 100px 24px; }
+    .contact-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+    .contact-info { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin: 34px 0; }
+    .c-item { text-align: center; }
+    .c-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8aaa90; font-weight: 700; display: block; margin-bottom: 5px; }
+    .c-val { font-weight: 700; color: var(--dark); font-size: 0.92rem; }
+    .contact-form { background: var(--white); border-radius: 14px; padding: 36px; text-align: left; margin-top: 28px; border: 1px solid rgba(45,74,62,0.08); }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.78rem; font-weight: 700; color: var(--dark); margin-bottom: 7px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 1.5px solid rgba(45,74,62,0.15); border-radius: 6px; font-size: 0.9rem; font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--forest); }
+    .form-group textarea { min-height: 88px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .btn-submit { width: 100%; padding: 14px; background: var(--forest); color: var(--white); border: none; border-radius: 6px; font-size: 0.95rem; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; }
+    .btn-submit:hover { background: var(--dark); }
+
+    footer { background: var(--dark); color: #5a7060; padding: 46px 24px 26px; text-align: center; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--white); margin-bottom: 8px; }
+    .footer-loc { font-size: 0.83rem; margin-bottom: 5px; }
+    .footer-email { font-size: 0.83rem; color: var(--warm); margin-bottom: 22px; }
+    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 16px 0; }
+    .footer-copy { font-size: 0.75rem; }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 60px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">CHAIR</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Book</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book Now</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">✦ Cork's Destination Hair Salon</div>
+        <h1 class="hero-title">Cork's Destination for <em>Exceptional</em> Hair</h1>
+        <p class="hero-sub">Creative cuts, stunning colour, and styling that turns heads. CHAIR Hair Salon is where Cork comes to look its absolute best.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-warm">Book Your Cork Appointment</a>
+          <a href="#services" class="btn-ghost">View Services</a>
+        </div>
+      </div>
+      <div class="hero-right-panel">
+        <div class="hrp-title">Why CHAIR Hair Salon?</div>
+        <div class="hrp-feature">
+          <div class="hrp-icon">✂️</div>
+          <div class="hrp-text"><strong>Technical Excellence</strong>Creative, trend-forward cuts with exceptional skill in every appointment.</div>
+        </div>
+        <div class="hrp-feature">
+          <div class="hrp-icon">👥</div>
+          <div class="hrp-text"><strong>Personalised Service</strong>Genuinely tailored consultations that put your vision first, every time.</div>
+        </div>
+        <div class="hrp-feature">
+          <div class="hrp-icon">🏆</div>
+          <div class="hrp-text"><strong>Fane Salons Family</strong>Part of one of Ireland's most established salon groups with a reputation for excellence.</div>
+        </div>
+        <div class="hrp-divider"></div>
+        <div class="hrp-badge">⭐ Cork's Most Trusted Hair Team</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon">✂️</div>
+        <div class="svc-name">Haircuts &amp; Precision Styling</div>
+        <p class="svc-desc">Creative, contemporary cuts that complement your face shape and work for your daily lifestyle.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🎨</div>
+        <div class="svc-name">Colour &amp; Highlights</div>
+        <p class="svc-desc">Expert full colour and highlighting services for vibrant results that enhance your natural beauty.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🌅</div>
+        <div class="svc-name">Balayage &amp; Ombre</div>
+        <p class="svc-desc">Natural-looking balayage and ombre techniques crafted by Cork's most talented colour specialists.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">💨</div>
+        <div class="svc-name">Blowdry &amp; Blowout</div>
+        <p class="svc-desc">Flawless blowdrys for smooth, voluminous, or textured finishes — perfect for any occasion.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">💆</div>
+        <div class="svc-name">Hair Treatments &amp; Conditioning</div>
+        <p class="svc-desc">Restorative in-salon treatments to rebuild strength, shine, and vitality in dry or damaged hair.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">👑</div>
+        <div class="svc-name">Bridal &amp; Special Occasion Hair</div>
+        <p class="svc-desc">Stunning styling for weddings, formals, and special events — making you feel extraordinary on your big day.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-content">
+        <div class="section-label">About CHAIR</div>
+        <h2 class="section-title">Cork's Most Respected Hair Destination</h2>
+        <p class="about-text">CHAIR Hair Salon is one of Cork's most respected hair destinations, known for delivering creative, trend-forward cuts and stunning colour work with every appointment. Part of the established Fane Salons family, the CHAIR team combines technical excellence with genuinely personalised service.</p>
+        <div class="about-detail"><span>✓</span> Part of the Fane Salons family</div>
+        <div class="about-detail"><span>✓</span> Creative and trend-forward techniques</div>
+        <div class="about-detail"><span>✓</span> Personalized consultations every visit</div>
+        <div class="about-detail"><span>✓</span> Results that exceed expectations</div>
+        <a href="#contact" class="about-cta">Book Your Appointment</a>
+      </div>
+      <div class="about-visual">
+        <span class="av-icon">✂️</span>
+        <div class="av-text">"Where Cork comes to look its absolute best."</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="section-label">Client Stories</div>
+    <h2 class="section-title">What Cork Clients Say</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"I've been coming to CHAIR for years and I've never had a bad appointment. The colour work is exceptional and the stylists genuinely care about the result. Best in Cork."</p>
+        <div class="test-author">— Clodagh M., Cork</div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"Got my balayage done here and I couldn't be happier. It looks so natural and the team were brilliant — very friendly and professional throughout."</p>
+        <div class="test-author">— Aoibhinn R., Cork</div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-text">"My bridal hair was done at CHAIR and it was absolutely perfect. The whole team was so calm and reassuring on the day. Would recommend to every bride in Cork!"</p>
+        <div class="test-author">— Niamh B., Cork</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Look Your Absolute Best?</h2>
+    <p>Book your appointment at CHAIR Hair Salon Cork and experience what exceptional hair care truly looks like.</p>
+    <a href="#contact" class="btn-cta-white">Book Your Cork Appointment</a>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="section-label">Book Now</div>
+      <h2 class="section-title">Make an Appointment</h2>
+      <div class="contact-info">
+        <div class="c-item"><span class="c-label">Location</span><span class="c-val">Cork, Ireland</span></div>
+        <div class="c-item"><span class="c-label">Email</span><span class="c-val">owner@fanesalons.ie</span></div>
+        <div class="c-item"><span class="c-label">Hours</span><span class="c-val">Mon–Sat 9am–6pm</span></div>
+      </div>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="e.g. Clodagh Murphy" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Interested In</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>Haircuts &amp; Precision Styling</option>
+              <option>Colour &amp; Highlights</option>
+              <option>Balayage &amp; Ombre</option>
+              <option>Blowdry &amp; Blowout</option>
+              <option>Hair Treatments &amp; Conditioning</option>
+              <option>Bridal &amp; Special Occasion Hair</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message / Preferred Date</label>
+            <textarea name="message" placeholder="Let us know what you're looking for and when suits you best..."></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Appointment Request - CHAIR Hair Salon Cork" />
+          <button type="submit" class="btn-submit">Book My Appointment →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">CHAIR Hair Salon</div>
+    <div class="footer-loc">Cork, Ireland | Part of the Fane Salons Family</div>
+    <div class="footer-email">owner@fanesalons.ie</div>
+    <hr class="footer-divider" />
+    <div class="footer-copy">© 2026 CHAIR Hair Salon Cork. All rights reserved. | Website by <strong style="color:#d4a88c;">Alma Digital Designs</strong></div>
+  </footer>
+
+</body>
+</html>
