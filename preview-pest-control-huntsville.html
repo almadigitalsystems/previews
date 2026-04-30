@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huntsville Pro Pest | Pest Control Huntsville Alabama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Layout 3 - Story Style - Earthy warm tones */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:#f7f4ee;color:#2a2218}
+
+    .urgency-banner{background:#7a3a0a;color:#fff;text-align:center;padding:11px 20px;font-weight:700;font-size:14px;letter-spacing:1px}
+    nav{background:#fff;padding:16px 30px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 8px rgba(0,0,0,.08)}
+    .logo-wrap{display:flex;flex-direction:column}
+    .logo{font-family:'Playfair Display',serif;font-size:20px;color:#3a5c1a;font-weight:700;line-height:1}
+    .logo-sub{font-size:11px;color:#999;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+    .nav-cta{background:#3a5c1a;color:#fff;padding:10px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px}
+
+    /* Minimal navbar / story hero */
+    .hero{background:#3a5c1a;padding:90px 20px 70px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(212,160,23,.12),transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(255,255,255,.04),transparent 50%)}
+    .urgency-pill{display:inline-block;background:rgba(212,160,23,.2);border:1px solid #d4a017;color:#d4a017;padding:7px 20px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;margin-bottom:26px;text-transform:uppercase}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,5.5vw,66px);color:#fff;line-height:1.1;margin-bottom:20px;max-width:800px;margin-left:auto;margin-right:auto}
+    .hero h1 em{color:#a8d870;font-style:normal}
+    .hero p{font-size:18px;color:rgba(255,255,255,.8);max-width:580px;margin:0 auto 40px;line-height:1.75}
+    .hero-cta{background:#d4a017;color:#0f1a0f;padding:18px 44px;border-radius:6px;text-decoration:none;font-weight:700;font-size:17px;display:inline-block;box-shadow:0 4px 20px rgba(212,160,23,.35)}
+    .hero-note{color:rgba(255,255,255,.45);font-size:13px;margin-top:16px}
+
+    /* Story section - personal feel */
+    .story-section{background:#fff;padding:80px 20px}
+    .story-inner{max-width:920px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:start}
+    .story-content .story-label{color:#7a5a18;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+    .story-content h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,38px);color:#2a2218;margin-bottom:18px;line-height:1.25}
+    .story-content p{color:#666;font-size:16px;line-height:1.8;margin-bottom:16px}
+    .story-content a{background:#3a5c1a;color:#fff;padding:13px 28px;border-radius:5px;text-decoration:none;font-weight:700;font-size:15px;display:inline-block;margin-top:8px}
+    .story-img{background:linear-gradient(135deg,#c8d8b0,#a8c080);border-radius:12px;height:340px;display:flex;align-items:center;justify-content:center;font-size:72px;box-shadow:0 8px 32px rgba(0,0,0,.12)}
+
+    /* Services vertical list */
+    .services-section{background:#f0ece2;padding:80px 20px;border-top:1px solid #e0d8c0}
+    .services-inner{max-width:1000px;margin:0 auto}
+    .section-label{color:#7a5a18;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);color:#2a2218;margin-bottom:14px}
+    .section-sub{color:#888;font-size:16px;margin-bottom:48px;max-width:600px;line-height:1.7}
+    .services-list{display:flex;flex-direction:column;gap:20px}
+    .service-item{background:#fff;border-radius:10px;padding:28px 32px;display:flex;align-items:flex-start;gap:20px;border:1px solid #e8e0cc;transition:border-color .3s;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+    .service-item:hover{border-color:#3a5c1a}
+    .svc-icon{font-size:36px;flex-shrink:0;margin-top:2px}
+    .svc-content h3{color:#2a2218;font-size:18px;margin-bottom:8px}
+    .svc-content p{color:#888;font-size:15px;line-height:1.65}
+
+    /* Urgency */
+    .urgency-section{background:#2a1a08;padding:60px 20px;text-align:center}
+    .urgency-section h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);color:#fff;margin-bottom:12px}
+    .urgency-section p{color:rgba(255,255,255,.75);font-size:17px;max-width:600px;margin:0 auto 30px;line-height:1.7}
+    .urgency-pill-2{display:inline-block;background:#7a3a0a;color:#fff;padding:7px 20px;border-radius:4px;font-weight:700;font-size:13px;margin-bottom:22px;letter-spacing:1px}
+
+    /* Comparison */
+    .comparison-section{background:#fff;padding:80px 20px}
+    .comp-inner{max-width:960px;margin:0 auto}
+    .comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px}
+    .comp-card{border-radius:10px;padding:30px;border:2px solid transparent}
+    .comp-before{background:#fff5f0;border-color:#e8b080}
+    .comp-after{background:#f5fff0;border-color:#7ec850}
+    .comp-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+    .comp-before .comp-label{color:#7a3a0a}
+    .comp-after .comp-label{color:#3a5c1a}
+    .comp-card h3{font-size:18px;color:#2a2218;margin-bottom:14px}
+    .comp-card ul{list-style:none}
+    .comp-card ul li{padding:7px 0;font-size:14px;color:#666;border-bottom:1px solid rgba(0,0,0,.06)}
+    .comp-before ul li::before{content:"X  ";color:#7a3a0a;font-weight:700}
+    .comp-after ul li::before{content:"V  ";color:#3a5c1a;font-weight:700}
+
+    /* CTA */
+    .cta-section{background:linear-gradient(135deg,#3a5c1a,#263d10);padding:80px 20px;text-align:center}
+    .cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:#fff;margin-bottom:14px}
+    .cta-section p{color:rgba(255,255,255,.8);font-size:18px;margin:0 auto 36px;max-width:580px;line-height:1.65}
+    .cta-btn{background:#d4a017;color:#0f1a0f;padding:18px 46px;border-radius:6px;text-decoration:none;font-weight:700;font-size:18px;display:inline-block}
+
+    .contact-section{background:#2a2218;padding:50px 20px;text-align:center}
+    .contact-section h3{color:#fff;font-size:20px;margin-bottom:14px}
+    .contact-info{color:rgba(255,255,255,.55);font-size:16px;line-height:2.1}
+    .contact-info a{color:#a8d870;text-decoration:none}
+    footer{background:#1a160e;padding:24px 20px;text-align:center;border-top:1px solid #2a2218}
+    footer p{color:#555;font-size:13px}
+    footer .powered{color:#a8d870}
+
+    @media(max-width:768px){
+      .story-inner{grid-template-columns:1fr}
+      .story-img{display:none}
+      .comp-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="urgency-banner">TERMITE SEASON ALERT -- Huntsville Homeowners Are Searching for Pest Control Right Now</div>
+  <nav>
+    <div class="logo-wrap">
+      <div class="logo">Huntsville Pro Pest</div>
+      <div class="logo-sub">Serving North Alabama</div>
+    </div>
+    <a href="#claim" class="nav-cta">Free Preview</a>
+  </nav>
+
+  <section class="hero">
+    <div class="urgency-pill">Spring 2026 -- Peak Pest Season</div>
+    <h1>Huntsville Pest Control<br>That <em>Earns Your Trust</em></h1>
+    <p>From Redstone Arsenal to Hampton Cove, Huntsville homeowners deserve a pest control company they can find online and trust immediately. We make sure that company is you.</p>
+    <a href="#claim" class="hero-cta">Get My Free Website Preview</a>
+    <p class="hero-note">See your new site in 24 hours. No credit card. No commitment.</p>
+  </section>
+
+  <section class="story-section">
+    <div class="story-inner">
+      <div class="story-content">
+        <div class="story-label">Our Story</div>
+        <h2>North Alabama's Pest Control Specialists</h2>
+        <p>We grew up in Madison County. We know the pests that love Huntsville's humid summers -- the Eastern subterranean termites that swarm every spring, the German cockroaches that sneak into homes near the Arsenal, the fire ant mounds that take over Harvest lawns after every rain.</p>
+        <p>We built this business on word-of-mouth and referrals. Now we are ready to grow -- and the right website is the first step. Let us show you what your online presence could look like.</p>
+        <a href="#claim">See Our Free Redesign Preview</a>
+      </div>
+      <div class="story-img">&#127807;</div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="services-inner">
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">Everything You Need to Protect Your Home</h2>
+      <p class="section-sub">Comprehensive pest control for Huntsville families and businesses -- from termite treatment to year-round pest prevention.</p>
+      <div class="services-list">
+        <div class="service-item"><div class="svc-icon">&#128028;</div><div class="svc-content"><h3>Termite Inspections &amp; Treatment</h3><p>Eastern subterranean termites are active across North Alabama every spring. Our certified inspectors find damage early and our treatments eliminate entire colonies -- with a warranty backed guarantee.</p></div></div>
+        <div class="service-item"><div class="svc-icon">&#127968;</div><div class="svc-content"><h3>Residential Pest Control Plans</h3><p>Monthly and quarterly treatment plans designed for Huntsville homes. We keep cockroaches, ants, spiders, and rodents out. If pests return between treatments, so do we -- at no extra charge.</p></div></div>
+        <div class="service-item"><div class="svc-icon">&#128290;</div><div class="svc-content"><h3>Mosquito Control</h3><p>Enjoy your backyard all summer. Our barrier spray treatments keep mosquitoes away for 3-4 weeks per application. Seasonal programs available for the entire Huntsville area.</p></div></div>
+        <div class="service-item"><div class="svc-icon">&#127970;</div><div class="svc-content"><h3>Commercial Pest Management</h3><p>We protect Huntsville businesses, restaurants, and office parks with discreet, effective commercial pest control programs that meet health department requirements.</p></div></div>
+        <div class="service-item"><div class="svc-icon">&#128680;</div><div class="svc-content"><h3>Emergency Same-Day Service</h3><p>Pest emergencies do not wait for business hours. Call us before noon and a licensed technician will be at your Huntsville property the same day, guaranteed.</p></div></div>
+        <div class="service-item"><div class="svc-icon">&#128269;</div><div class="svc-content"><h3>WDO Real Estate Inspections</h3><p>Licensed Wood-Destroying Organism reports for home buyers, sellers, and real estate professionals throughout Madison County. Fast turnaround, professional reports.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="urgency-section">
+    <div class="urgency-pill-2">SPRING TERMITE ALERT</div>
+    <h2>Alabama's Termite Season Is in Full Swing</h2>
+    <p>Eastern subterranean termites swarm March through May across North Alabama. While you are out treating homes, your competitors with better websites are getting the calls you should be getting.</p>
+    <a href="#claim" style="background:#d4a017;color:#0f1a0f;padding:15px 36px;border-radius:6px;text-decoration:none;font-weight:700;font-size:16px;display:inline-block">Get My Free Website Preview</a>
+  </div>
+
+  <section class="comparison-section">
+    <div class="comp-inner">
+      <div class="section-label" style="text-align:center">Website Transformation</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:10px">Before &amp; After Your Redesign</h2>
+      <p style="text-align:center;color:#888;font-size:16px;max-width:700px;margin:0 auto">Here is exactly what changes when Alma Digital redesigns your pest control website:</p>
+      <div class="comp-grid">
+        <div class="comp-card comp-before">
+          <div class="comp-label">Current Site</div>
+          <h3>Hurting Your Business</h3>
+          <ul>
+            <li>Outdated or no website at all</li>
+            <li>Not working on smartphones</li>
+            <li>Google reviews not displayed</li>
+            <li>No way to request service online</li>
+            <li>Slow and penalized by Google</li>
+            <li>Competitors are ranking above you</li>
+            <li>Looks less trustworthy than competition</li>
+          </ul>
+        </div>
+        <div class="comp-card comp-after">
+          <div class="comp-label">Redesigned Site</div>
+          <h3>Growing Your Business</h3>
+          <ul>
+            <li>Modern, professional 2026 design</li>
+            <li>Perfect display on any device</li>
+            <li>Google reviews prominently shown</li>
+            <li>Easy online service request form</li>
+            <li>Fast load -- Google rewards you</li>
+            <li>Designed to rank above competitors</li>
+            <li>Immediately builds customer trust</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="claim" class="cta-section">
+    <h2>See Your New Website Today -- Free</h2>
+    <p>We will create a full custom preview of your redesigned website at no cost. If you love what you see, launch it for as little as $50. If not, you owe us nothing at all.</p>
+    <a href="tel:+12565550100" class="cta-btn">Claim Your Free Preview</a>
+    <p style="color:rgba(255,255,255,.5);font-size:14px;margin-top:16px">Or call us: (256) 555-0100 | 7 days a week</p>
+  </section>
+
+  <div class="contact-section">
+    <h3>Huntsville Pro Pest</h3>
+    <div class="contact-info">
+      Serving Huntsville, Madison, Decatur &amp; Madison County, AL<br>
+      <a href="tel:+12565550100">(256) 555-0100</a> | <a href="mailto:info@huntsvillepropest.com">info@huntsvillepropest.com</a><br>
+      Licensed &amp; Insured | Alabama Pest Control License
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Huntsville Pro Pest. Website redesign preview by <span class="powered">Alma Digital Services</span>.</p>
+  </footer>
+</body>
+</html>
