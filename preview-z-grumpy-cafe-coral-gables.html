@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z Grumpy Cafe Coral Gables — Website Redesign Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--teal:#0b7a8a;--coral:#e85a4f;--cream:#fefaf6;--dark:#0d2a2e;--sand:#f0e8d8}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark)}
+.badge{background:var(--teal);color:var(--cream);text-align:center;padding:12px;font-size:13px;font-weight:600;letter-spacing:1px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:white;box-shadow:0 2px 8px rgba(11,122,138,0.1)}
+.logo{font-family:'Playfair Display',serif;font-size:24px;color:var(--dark)}
+.logo span{color:var(--coral)}
+nav a{color:var(--dark);opacity:0.65;text-decoration:none;font-size:14px;margin-left:28px}
+.hero{background:var(--dark);padding:120px 40px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(11,122,138,0.2) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(232,90,79,0.15) 0%,transparent 60%)}
+.hero .label{color:var(--teal);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;position:relative}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(44px,8vw,88px);font-weight:900;color:var(--cream);line-height:1.05;margin-bottom:24px;position:relative}
+.hero h1 em{color:var(--coral);font-style:normal}
+.hero p{color:var(--cream);opacity:0.75;font-size:18px;line-height:1.8;max-width:620px;margin:0 auto 48px;position:relative}
+.btn-teal{background:var(--teal);color:var(--cream);padding:18px 48px;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block}
+.pain{background:var(--sand);padding:80px 40px}
+.pain-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.pain-card{background:white;border-left:4px solid var(--coral);padding:28px;border-radius:0 4px 4px 0}
+.pain-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--dark)}
+.pain-card p{font-size:14px;line-height:1.8;opacity:0.8}
+.about{padding:100px 40px;background:white}
+.about-inner{max-width:860px;margin:0 auto;text-align:center}
+.about-inner .over{color:var(--teal);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px}
+.about-inner h2{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,48px);margin-bottom:24px}
+.about-inner p{font-size:17px;line-height:1.9;opacity:0.8}
+.menu-s{padding:100px 40px;background:var(--cream)}
+.menu-s h2{font-family:'Playfair Display',serif;font-size:44px;text-align:center;margin-bottom:12px}
+.menu-s .sub{text-align:center;opacity:0.65;margin-bottom:52px;font-size:16px}
+.menu-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.menu-item{background:white;border:1px solid rgba(11,122,138,0.15);padding:32px;border-radius:8px;transition:box-shadow 0.2s}
+.menu-icon{font-size:40px;margin-bottom:14px}
+.menu-item h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--teal);margin-bottom:8px}
+.menu-item p{font-size:14px;line-height:1.8;opacity:0.8}
+.cta-s{background:var(--coral);padding:100px 40px;text-align:center}
+.cta-s h2{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,52px);color:var(--cream);margin-bottom:20px}
+.cta-s p{color:var(--cream);opacity:0.9;font-size:17px;max-width:520px;margin:0 auto 40px}
+.btn-cream{background:var(--cream);color:var(--coral);padding:18px 48px;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block}
+footer{background:var(--dark);padding:32px;text-align:center;font-size:13px;color:var(--cream);opacity:0.5}
+@media(max-width:768px){.pain-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="badge">FREE WEBSITE REDESIGN PREVIEW — Z GRUMPY CAFE CORAL GABLES</div>
+<nav>
+  <div class="logo">Z Grumpy <span>Cafe</span></div>
+  <div><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Find Us</a></div>
+</nav>
+<section class="hero">
+  <div class="label">Coral Gables' Favorite Neighborhood Cafe</div>
+  <h1>Don't Worry. We're <em>Only Grumpy</em> Before Coffee.</h1>
+  <p>Great coffee, fresh food, and genuine hospitality in the heart of Coral Gables. Your daily dose of good — whether you need it or not.</p>
+  <a href="#menu" class="btn-teal">See What's Brewing</a>
+</section>
+<div class="pain">
+  <div class="pain-inner">
+    <div class="pain-card"><h3>Coral Gables Coffee Lovers Are Looking for Their New Spot</h3><p>When locals and visitors search "coffee shop Coral Gables" or "cafe near me," Z Grumpy Cafe should be the first result they see — not a harder-to-find option.</p></div>
+    <div class="pain-card"><h3>Your Personality Doesn't Come Through Online</h3><p>Z Grumpy Cafe has personality, warmth, and character. None of that shows on your current website. A fresh site captures what makes regulars come back every day.</p></div>
+  </div>
+</div>
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="over">Our Story</div>
+    <h2>The Neighborhood Cafe Coral Gables Deserves</h2>
+    <p>Z Grumpy Cafe was born out of a simple idea: Coral Gables needed a place where you could get a genuinely great cup of coffee, honest food made fresh, and leave feeling better than you arrived. We're that place. Maybe a little grumpy in name only.</p>
+  </div>
+</section>
+<section class="menu-s" id="menu">
+  <h2>Our Menu (Don't Be Grumpy About It)</h2>
+  <div class="sub">Fresh, honest food and specialty coffee — made daily in Coral Gables</div>
+  <div class="menu-grid">
+    <div class="menu-item"><div class="menu-icon">☕</div><h3>Specialty Coffee</h3><p>Expertly pulled espresso, seasonal lattes, cold brew, and single-origin pour overs. Coffee the way it's supposed to taste.</p></div>
+    <div class="menu-item"><div class="menu-icon">🥗</div><h3>Fresh Salads and Bowls</h3><p>Market-fresh salads, grain bowls, and light bites made every morning. Bright flavors for the Florida lifestyle.</p></div>
+    <div class="menu-item"><div class="menu-icon">🥪</div><h3>Sandwiches and Wraps</h3><p>Handcrafted sandwiches on fresh-baked bread, loaded wraps, and daily specials you'll want to come back for.</p></div>
+    <div class="menu-item"><div class="menu-icon">🍰</div><h3>Baked Goods and Pastries</h3><p>Fresh croissants, muffins, and seasonal cakes baked daily. The perfect partner to your morning coffee.</p></div>
+  </div>
+</section>
+<section class="cta-s" id="contact">
+  <h2>This Is What Your New Website Could Look Like</h2>
+  <p>Alma Digital built this free preview for Z Grumpy Cafe. We promise we're not grumpy about it.</p>
+  <a href="mailto:impallari@gmail.com?subject=Free Website Redesign" class="btn-cream">Claim Your Free Redesign</a>
+</section>
+<footer>2025 Z Grumpy Cafe Coral Gables | Preview by Alma Digital Services | Coral Gables, Florida</footer>
+</body>
+</html>
