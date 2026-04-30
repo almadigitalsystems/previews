@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tallahassee Pest Pros | Professional Pest Control Tallahassee FL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;color:#f0ede8;background:#0f1a0f}
+    .urgency-banner{background:#d4a017;color:#0f1a0f;text-align:center;padding:11px 20px;font-weight:700;font-size:14px;letter-spacing:1px}
+    nav{background:#0a100a;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;border-bottom:1px solid #1a2e1a}
+    .logo{font-family:'Playfair Display',serif;font-size:22px;color:#7ec850}
+    .nav-cta{background:#d4a017;color:#0f1a0f;padding:10px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px}
+    .hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 20px;background:linear-gradient(145deg,#060e06 0%,#122212 50%,#0a180a 100%)}
+    .hero-badge{background:rgba(212,160,23,.18);border:1px solid #d4a017;color:#d4a017;padding:8px 22px;border-radius:30px;font-size:13px;font-weight:700;letter-spacing:2px;margin-bottom:28px;text-transform:uppercase;display:inline-block}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,70px);line-height:1.1;margin-bottom:22px;color:#f0ede8;max-width:900px}
+    .hero h1 span{color:#7ec850}
+    .hero p{font-size:clamp(16px,2.5vw,20px);color:#b0b8a8;max-width:580px;margin-bottom:42px;line-height:1.75}
+    .hero-cta{background:#d4a017;color:#0f1a0f;padding:18px 44px;border-radius:6px;text-decoration:none;font-weight:700;font-size:18px;box-shadow:0 4px 24px rgba(212,160,23,.4);display:inline-block}
+    .hero-sub{color:#666;font-size:13px;margin-top:16px}
+    .stats-bar{background:#08100a;padding:32px 20px;display:grid;grid-template-columns:repeat(3,1fr);text-align:center;gap:20px;border-top:1px solid #1a2e1a;border-bottom:1px solid #1a2e1a}
+    .stat-num{font-size:34px;font-weight:700;color:#7ec850}
+    .stat-label{font-size:13px;color:#777;margin-top:5px}
+    .section{padding:72px 20px;max-width:1100px;margin:0 auto}
+    .section-label{color:#7ec850;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:#f0ede8;margin-bottom:14px}
+    .section-sub{color:#777;font-size:16px;margin-bottom:50px;max-width:600px;line-height:1.7}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .service-card{background:#0d1d0d;border:1px solid #1f361f;border-radius:10px;padding:30px;transition:border-color .3s}
+    .service-card:hover{border-color:#7ec850}
+    .service-icon{font-size:34px;margin-bottom:14px}
+    .service-card h3{color:#f0ede8;font-size:18px;margin-bottom:10px}
+    .service-card p{color:#777;font-size:15px;line-height:1.65}
+    .urgency-section{background:linear-gradient(135deg,#1a1000,#2a1a00);padding:64px 20px;text-align:center}
+    .urgency-section h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);color:#f0ede8;margin-bottom:14px}
+    .urgency-section p{color:#b8b0a0;font-size:17px;max-width:600px;margin:0 auto 32px;line-height:1.7}
+    .urgency-badge{display:inline-block;background:#d4a017;color:#0f1a0f;padding:8px 22px;border-radius:4px;font-weight:700;font-size:13px;margin-bottom:24px;letter-spacing:1px}
+    .comparison{background:#08100a;padding:72px 20px}
+    .comp-inner{max-width:960px;margin:0 auto}
+    .comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px}
+    .comp-card{border-radius:10px;padding:30px}
+    .comp-before{background:#1f0d0d;border:2px solid #4a1a1a}
+    .comp-after{background:#0d1f0d;border:2px solid #7ec850}
+    .comp-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+    .comp-before .comp-label{color:#c86060}
+    .comp-after .comp-label{color:#7ec850}
+    .comp-card h3{font-size:18px;color:#f0ede8;margin-bottom:14px}
+    .comp-card ul{list-style:none}
+    .comp-card ul li{padding:7px 0;font-size:14px;color:#888;border-bottom:1px solid rgba(255,255,255,.05)}
+    .comp-before ul li::before{content:"X  ";color:#c86060;font-weight:700}
+    .comp-after ul li::before{content:"V  ";color:#7ec850;font-weight:700}
+    .testimonial{padding:70px 20px;max-width:780px;margin:0 auto;text-align:center}
+    .test-text{font-size:21px;color:#f0ede8;line-height:1.75;font-style:italic;margin-bottom:22px}
+    .test-author{color:#7ec850;font-weight:600;font-size:15px}
+    .cta-section{background:linear-gradient(135deg,#6dbc3e 0%,#3d8c18 100%);padding:80px 20px;text-align:center}
+    .cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:#0a120a;margin-bottom:14px}
+    .cta-section p{color:#1a3010;font-size:18px;margin:0 auto 36px;max-width:580px;line-height:1.65}
+    .cta-btn{background:#0a120a;color:#7ec850;padding:18px 46px;border-radius:6px;text-decoration:none;font-weight:700;font-size:18px;display:inline-block}
+    .contact-section{background:#08100a;padding:50px 20px;text-align:center}
+    .contact-section h3{color:#f0ede8;font-size:20px;margin-bottom:14px}
+    .contact-info{color:#777;font-size:16px;line-height:2.1}
+    .contact-info a{color:#7ec850;text-decoration:none}
+    footer{background:#040804;padding:24px 20px;text-align:center;border-top:1px solid #1a2e1a}
+    footer p{color:#444;font-size:13px}
+    footer .powered{color:#7ec850}
+    @media(max-width:640px){.comp-grid{grid-template-columns:1fr}.stats-bar{grid-template-columns:1fr}.nav-links{display:none}}
+  </style>
+</head>
+<body>
+  <div class="urgency-banner">TERMITE SEASON IS HERE -- Are Tallahassee Homeowners Finding You Online?</div>
+  <nav>
+    <div class="logo">Tallahassee Pest Pros</div>
+    <a href="#claim" class="nav-cta">Free Preview</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-badge">Spring 2026 -- Peak Termite Season</div>
+    <h1>Tallahassee Pest Control<br><span>Built to Win More Business</span></h1>
+    <p>You protect Tallahassee homes from termites, fire ants, and cockroaches every day. Your website should be working just as hard -- bringing in new customers around the clock.</p>
+    <a href="#claim" class="hero-cta">Claim Your Free Website Preview</a>
+    <p class="hero-sub">No contract. No credit card. See your new site in 24 hours.</p>
+  </section>
+
+  <div class="stats-bar">
+    <div><div class="stat-num">94%</div><div class="stat-label">of customers research pest control online before calling</div></div>
+    <div><div class="stat-num">3x</div><div class="stat-label">more leads from a modern mobile-optimized website</div></div>
+    <div><div class="stat-num">$0</div><div class="stat-label">cost to see your free redesign preview</div></div>
+  </div>
+
+  <section class="section">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">Complete Pest Protection for Tallahassee</h2>
+    <p class="section-sub">From termite inspections to ongoing treatment plans -- full-service pest control for Leon County families and businesses.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#128028;</div><h3>Termite Inspections &amp; Treatment</h3><p>Subterranean termites swarm every spring in North Florida. We catch them early and eliminate colonies fast with proven baiting and liquid treatments.</p></div>
+      <div class="service-card"><div class="service-icon">&#127968;</div><h3>Residential Pest Control</h3><p>Monthly and quarterly protection plans for Tallahassee homes. Keep cockroaches, ants, and rodents out -- guaranteed or we come back free.</p></div>
+      <div class="service-card"><div class="service-icon">&#127970;</div><h3>Commercial Pest Management</h3><p>Protect your restaurant, office, or warehouse with discreet, effective commercial pest control that meets Florida health code requirements.</p></div>
+      <div class="service-card"><div class="service-icon">&#128680;</div><h3>Emergency Pest Response</h3><p>Same-day emergency service available across Leon County. Infestations cannot wait -- neither do we. Call now for immediate help.</p></div>
+      <div class="service-card"><div class="service-icon">&#127807;</div><h3>Eco-Friendly Options</h3><p>Pet-safe, child-safe, and environmentally responsible treatment options. Effective pest control without exposing your family to harsh chemicals.</p></div>
+      <div class="service-card"><div class="service-icon">&#128269;</div><h3>WDO Real Estate Inspections</h3><p>Licensed Wood-Destroying Organism inspections for buyers and sellers throughout the Tallahassee area. Reports delivered fast.</p></div>
+    </div>
+  </section>
+
+  <div class="urgency-section">
+    <div class="urgency-badge">TERMITE SEASON WARNING</div>
+    <h2>Spring Is Peak Swarming Season in North Florida</h2>
+    <p>Subterranean termites swarm March through June across the Panhandle. Every week your website is invisible online is another week customers are calling your competition instead of you.</p>
+    <a href="#claim" style="background:#d4a017;color:#0f1a0f;padding:15px 36px;border-radius:6px;text-decoration:none;font-weight:700;font-size:16px;display:inline-block">Get Your Free Website Preview</a>
+  </div>
+
+  <div class="comparison">
+    <div class="comp-inner">
+      <div class="section-label" style="text-align:center">The Difference</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:10px">Before &amp; After Your Redesign</h2>
+      <p style="text-align:center;color:#777;font-size:16px;max-width:700px;margin:0 auto">Most Tallahassee pest control sites have not been updated since 2017. Here is what changes when you modernize:</p>
+      <div class="comp-grid">
+        <div class="comp-card comp-before">
+          <div class="comp-label">Current Site</div>
+          <h3>Losing Customers Daily</h3>
+          <ul>
+            <li>Outdated Wix design from 2017</li>
+            <li>Breaks on mobile phones</li>
+            <li>No Google reviews visible</li>
+            <li>No clear call-to-action button</li>
+            <li>Loads in 5+ seconds</li>
+            <li>Not ranking on Google Maps</li>
+            <li>No online booking available</li>
+          </ul>
+        </div>
+        <div class="comp-card comp-after">
+          <div class="comp-label">Redesigned Site</div>
+          <h3>Converting Visitors to Customers</h3>
+          <ul>
+            <li>Modern professional design</li>
+            <li>Fully mobile-optimized</li>
+            <li>Google reviews prominently shown</li>
+            <li>Clear call-now and booking buttons</li>
+            <li>Loads under 2 seconds</li>
+            <li>SEO-ready structure</li>
+            <li>Online booking integration ready</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <p class="test-text">"After our website redesign, our phone started ringing off the hook during termite season. Best investment we made for the business all year."</p>
+    <p class="test-author">-- Pest control business owner, North Florida</p>
+  </div>
+
+  <section id="claim" class="cta-section">
+    <h2>See Your New Website -- Free</h2>
+    <p>We will build a custom preview of your redesigned website at no cost. If you love it, launch for as little as $50. If not, you owe us nothing.</p>
+    <a href="tel:+18505550100" class="cta-btn">Claim Your Free Preview</a>
+    <p style="color:#1a3010;font-size:14px;margin-top:15px">Or call us: (850) 555-0100</p>
+  </section>
+
+  <div class="contact-section">
+    <h3>Tallahassee Pest Pros</h3>
+    <div class="contact-info">
+      Serving Tallahassee, FL and Leon County<br>
+      <a href="tel:+18505550100">(850) 555-0100</a> | <a href="mailto:info@tallahassepestpros.com">info@tallahassepestpros.com</a><br>
+      Licensed &amp; Insured | Florida Pest Control License
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Tallahassee Pest Pros. Website redesign preview by <span class="powered">Alma Digital Services</span>.</p>
+  </footer>
+</body>
+</html>
