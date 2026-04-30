@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Southern Grill Jacksonville — Website Redesign Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--dark:#1a1210;--brick:#8b2a1a;--orange:#e07030;--cream:#f8f0e8}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark)}
+.badge{background:var(--brick);color:var(--cream);text-align:center;padding:12px;font-size:13px;font-weight:600;letter-spacing:1px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:var(--dark)}
+.logo{font-family:'Playfair Display',serif;font-size:24px;color:var(--cream)}
+.logo span{color:var(--orange)}
+nav a{color:var(--cream);opacity:0.75;text-decoration:none;font-size:14px;margin-left:28px}
+.hero{background:var(--dark);padding:120px 40px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(224,112,48,0.12) 0%,transparent 70%)}
+.label{color:var(--orange);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;position:relative}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(44px,8vw,88px);font-weight:900;color:var(--cream);line-height:1.05;margin-bottom:24px;position:relative}
+.hero h1 em{color:var(--orange);font-style:normal}
+.hero p{color:var(--cream);opacity:0.75;font-size:18px;line-height:1.8;max-width:640px;margin:0 auto 48px;position:relative}
+.btn-brick{background:var(--brick);color:var(--cream);padding:18px 48px;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block}
+.pain{background:var(--dark);padding:80px 40px}
+.pain-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.pain-card{border-left:3px solid var(--orange);padding-left:24px}
+.pain-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--cream)}
+.pain-card p{font-size:14px;line-height:1.8;color:var(--cream);opacity:0.75}
+.story{max-width:860px;margin:100px auto;padding:0 40px;text-align:center}
+.story .over{color:var(--brick);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px}
+.story h2{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,48px);margin-bottom:24px}
+.story p{font-size:17px;line-height:1.9;color:#3a2a1f;opacity:0.85}
+.menu-s{padding:100px 40px;background:white}
+.menu-s .inner{max-width:1200px;margin:0 auto}
+.menu-s h2{font-family:'Playfair Display',serif;font-size:46px;text-align:center;margin-bottom:12px}
+.menu-s .sub{text-align:center;opacity:0.7;margin-bottom:52px;font-size:16px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.menu-item{border:1px solid var(--cream);padding:32px;border-radius:4px;background:var(--cream)}
+.menu-icon{font-size:40px;margin-bottom:14px}
+.menu-item h3{font-family:'Playfair Display',serif;font-size:20px;margin-bottom:8px}
+.menu-item p{font-size:14px;line-height:1.8;opacity:0.85}
+.cta-s{background:var(--brick);padding:100px 40px;text-align:center}
+.cta-s h2{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,52px);color:var(--cream);margin-bottom:20px}
+.cta-s p{color:var(--cream);opacity:0.85;font-size:17px;max-width:520px;margin:0 auto 40px}
+.btn-cream{background:var(--cream);color:var(--brick);padding:18px 48px;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block}
+footer{background:var(--dark);padding:32px;text-align:center;font-size:13px;color:var(--cream);opacity:0.5}
+@media(max-width:768px){.pain-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="badge">FREE WEBSITE REDESIGN PREVIEW — THE SOUTHERN GRILL JACKSONVILLE</div>
+<nav>
+  <div class="logo">The <span>Southern</span> Grill</div>
+  <div><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#contact">Visit</a></div>
+</nav>
+<section class="hero">
+  <div class="label">Jacksonville's Soul Food Tradition</div>
+  <h1>Real Southern <em>Cooking.</em> Real Heart.</h1>
+  <p>From slow-smoked ribs to crispy fried chicken, every dish at The Southern Grill carries generations of flavor and Jacksonville love.</p>
+  <a href="#menu" class="btn-brick">See Our Full Menu</a>
+</section>
+<div class="pain">
+  <div class="pain-inner">
+    <div class="pain-card"><h3>Jacksonville Foodies Are Searching — Are They Finding You?</h3><p>When hungry locals search "best Southern food Jacksonville," your restaurant isn't showing up. Your current site is costing you foot traffic every single day.</p></div>
+    <div class="pain-card"><h3>First Impressions Happen Online Now</h3><p>Before anyone visits, they check your website. An outdated page tells customers your restaurant is behind the times — even if your food is legendary.</p></div>
+  </div>
+</div>
+<section class="story" id="story">
+  <div class="over">Our Story</div>
+  <h2>Cooking Jacksonville's Favorites Since Day One</h2>
+  <p>The Southern Grill was built on one simple promise: cook the food Jacksonville grew up eating, with the same love your grandma put into every meal. From pit-smoked meats to made-from-scratch sides, every plate is a tribute to Southern tradition.</p>
+</section>
+<section class="menu-s" id="menu">
+  <div class="inner">
+    <h2>From Our Kitchen to Your Table</h2>
+    <div class="sub">Slow-cooked, soul-satisfying Southern fare made fresh daily</div>
+    <div class="menu-grid">
+      <div class="menu-item"><div class="menu-icon">🥩</div><h3>Pit-Smoked BBQ</h3><p>Baby back ribs, brisket, and pulled pork smoked low and slow for 14+ hours with our signature dry rub.</p></div>
+      <div class="menu-item"><div class="menu-icon">🍗</div><h3>Fried Chicken</h3><p>Crispy, juicy, golden fried chicken that puts chain restaurants to shame. A Jacksonville staple.</p></div>
+      <div class="menu-item"><div class="menu-icon">🥦</div><h3>Southern Sides</h3><p>Collard greens, mac and cheese, cornbread, sweet potato casserole — made from scratch every morning.</p></div>
+      <div class="menu-item"><div class="menu-icon">🍑</div><h3>Southern Sweets</h3><p>Sweet tea, peach cobbler, banana pudding — the perfect finish to a real Southern meal.</p></div>
+    </div>
+  </div>
+</section>
+<section class="cta-s" id="contact">
+  <h2>This Is What Your New Website Could Look Like</h2>
+  <p>Alma Digital built this free preview just for you. See what your restaurant looks like with a modern online presence.</p>
+  <a href="mailto:thesoutherngrilljax@gmail.com?subject=Free Website Redesign" class="btn-cream">Claim Your Free Redesign</a>
+</section>
+<footer>2025 The Southern Grill Jacksonville | Preview by Alma Digital Services | thesoutherngrilljax@gmail.com</footer>
+</body>
+</html>
