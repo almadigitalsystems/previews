@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kopper Hair Salon | Cork's Award-Winning Hair Salon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#0d0a08;
+    --surface:#161210;
+    --card:#1e1814;
+    --copper:#b87333;
+    --copper2:#d4935a;
+    --cream:#f5ede3;
+    --gray:#a09080;
+    --white:#fff;
+  }
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;}
+  nav{background:rgba(13,10,8,0.98);padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(184,115,51,0.2);}
+  .logo{font-family:'Playfair Display',serif;font-size:1.7rem;letter-spacing:3px;color:var(--copper);}
+  .logo span{color:var(--copper2);}
+  .nav-links a{color:var(--gray);text-decoration:none;margin-left:2rem;font-size:0.9rem;transition:color 0.2s;}
+  .nav-links a:hover{color:var(--copper);}
+  /* HERO — Full width, dramatic */
+  .hero{position:relative;padding:8rem 2rem 6rem;text-align:center;background:linear-gradient(160deg,#0d0a08 0%,#1e1208 45%,#0d0a08 100%);overflow:hidden;}
+  .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 30%,rgba(184,115,51,0.15) 0%,transparent 65%);pointer-events:none;}
+  .award-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(184,115,51,0.12);border:1px solid rgba(184,115,51,0.5);color:var(--copper);padding:0.5rem 1.5rem;border-radius:50px;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:2rem;}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5.5vw,4.5rem);line-height:1.15;color:var(--white);margin-bottom:1.2rem;}
+  .hero h1 em{color:var(--copper);font-style:normal;}
+  .hero p{font-size:1.15rem;color:var(--gray);max-width:620px;margin:0 auto 3rem;}
+  .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+  .btn-primary{background:linear-gradient(135deg,var(--copper),#8a5220);color:var(--cream);padding:1rem 2.5rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:1rem;letter-spacing:0.5px;transition:transform 0.2s,box-shadow 0.2s;}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,115,51,0.4);}
+  .btn-outline{border:2px solid var(--copper);color:var(--copper);padding:1rem 2.5rem;border-radius:6px;text-decoration:none;font-weight:600;transition:all 0.2s;}
+  .btn-outline:hover{background:var(--copper);color:var(--bg);}
+  /* Stats bar */
+  .stats-bar{background:var(--card);border-top:1px solid rgba(184,115,51,0.2);border-bottom:1px solid rgba(184,115,51,0.2);padding:2.5rem 2rem;}
+  .stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;}
+  .stat-num{font-family:'Playfair Display',serif;font-size:2.8rem;color:var(--copper);display:block;}
+  .stat-lbl{color:var(--gray);font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;}
+  .section{padding:5rem 2rem;}
+  .container{max-width:1100px;margin:0 auto;}
+  .section-label{font-size:0.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--copper);margin-bottom:0.8rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--white);margin-bottom:0.8rem;}
+  .section-sub{color:var(--gray);max-width:580px;margin-bottom:3rem;}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;}
+  .service-card{background:var(--card);border:1px solid rgba(184,115,51,0.15);border-radius:14px;padding:2.2rem;transition:transform 0.2s,border-color 0.2s;}
+  .service-card:hover{transform:translateY(-4px);border-color:rgba(184,115,51,0.5);}
+  .service-icon{font-size:2.2rem;margin-bottom:1rem;}
+  .service-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--copper);margin-bottom:0.6rem;}
+  .service-card p{color:var(--gray);font-size:0.9rem;line-height:1.6;}
+  .service-tag{display:inline-block;background:rgba(184,115,51,0.15);color:var(--copper2);font-size:0.75rem;padding:0.2rem 0.7rem;border-radius:50px;margin-top:0.8rem;}
+  .about{background:var(--surface);padding:6rem 2rem;}
+  .about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:center;}
+  .about-content h2{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--white);margin-bottom:1.2rem;}
+  .about-content p{color:var(--gray);margin-bottom:1.2rem;line-height:1.7;}
+  .about-content .accent{color:var(--copper);font-weight:600;}
+  .brands{margin-top:2rem;}
+  .brands p{color:var(--gray);font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem;}
+  .brand-tags{display:flex;gap:0.8rem;flex-wrap:wrap;}
+  .brand-tag{background:rgba(184,115,51,0.12);border:1px solid rgba(184,115,51,0.3);color:var(--copper2);padding:0.4rem 1rem;border-radius:4px;font-size:0.9rem;font-weight:600;}
+  .about-visual{background:linear-gradient(135deg,var(--card),#2a1a0a);border-radius:16px;padding:3rem;border:1px solid rgba(184,115,51,0.2);}
+  .about-visual .big-num{font-family:'Playfair Display',serif;font-size:4.5rem;color:var(--copper);display:block;line-height:1;}
+  .about-visual .big-lbl{color:var(--gray);font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:2rem;}
+  .about-visual .divider{height:1px;background:rgba(184,115,51,0.2);margin:1.5rem 0;}
+  .reviews{padding:5rem 2rem;}
+  .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem;margin-top:3rem;}
+  .review-card{background:var(--card);border:1px solid rgba(184,115,51,0.15);border-radius:12px;padding:2rem;}
+  .stars{color:var(--copper);font-size:1.1rem;margin-bottom:0.8rem;}
+  .review-card p{color:var(--gray);font-size:0.95rem;font-style:italic;margin-bottom:1rem;line-height:1.6;}
+  .reviewer{color:var(--cream);font-size:0.85rem;font-weight:600;}
+  .contact{background:var(--surface);padding:5rem 2rem;}
+  .contact-inner{max-width:750px;margin:0 auto;text-align:center;}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:2.5rem 0;}
+  .contact-item{background:var(--card);border-radius:10px;padding:1.5rem;border:1px solid rgba(184,115,51,0.15);}
+  .contact-item h4{color:var(--copper);font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.5rem;}
+  .contact-item p{color:var(--gray);font-size:0.9rem;}
+  .cta-bar{background:linear-gradient(135deg,rgba(184,115,51,0.15),rgba(184,115,51,0.05));border:1px solid rgba(184,115,51,0.35);border-radius:16px;padding:3rem;text-align:center;}
+  .cta-bar h3{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--white);margin-bottom:0.8rem;}
+  .cta-bar p{color:var(--gray);margin-bottom:1.8rem;}
+  footer{background:#080605;padding:2rem;text-align:center;color:var(--gray);font-size:0.85rem;border-top:1px solid rgba(184,115,51,0.1);}
+  footer span{color:var(--copper);}
+  @media(max-width:768px){.stats-inner{grid-template-columns:repeat(2,1fr);}.about-inner{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">KOPPER<span>.</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="award-badge">🏆 Award-Winning · Cork City</div>
+  <h1>Cork's<br><em>Award-Winning</em><br>Hair Salon</h1>
+  <p>The city's largest team of expert stylists. 27 specialists across 3,500 sq ft of Cork's finest salon space — where copper tones and precision artistry define every visit.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-primary">Claim Your Free Preview</a>
+    <a href="#services" class="btn-outline">Explore Services</a>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <span class="stat-num">27</span>
+      <div class="stat-lbl">Expert Stylists</div>
+    </div>
+    <div>
+      <span class="stat-num">3,500</span>
+      <div class="stat-lbl">Sq Ft Salon Space</div>
+    </div>
+    <div>
+      <span class="stat-num">5★</span>
+      <div class="stat-lbl">Google Rating</div>
+    </div>
+    <div>
+      <span class="stat-num">Award</span>
+      <div class="stat-lbl">Winning Salon</div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-label">Signature Services</div>
+    <h2 class="section-title">Expert Hair Services in Cork</h2>
+    <p class="section-sub">From rich copper tones to precision cuts — every service at Kopper is delivered by specialists who love what they do.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>Hair Colour &amp; Copper Tones</h3>
+        <p>Our signature — warm copper, auburn, and red tones crafted to complement your complexion. Irish colouring expertise at its finest.</p>
+        <span class="service-tag">Kopper Signature</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Balayage &amp; Highlights</h3>
+        <p>Natural sun-kissed balayage and precision highlights using Alfaparf and Joico's premium colour systems for brilliant, lasting results.</p>
+        <span class="service-tag">Alfaparf · Joico</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✂️</div>
+        <h3>Precision Cuts &amp; Styling</h3>
+        <p>27 stylists, each with a unique approach — we match you to the right specialist for your hair type and desired style.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💎</div>
+        <h3>Treatments &amp; Hair Health</h3>
+        <p>Conditioning treatments, Olaplex, and protein therapies to restore strength, shine, and vitality to colour-treated or damaged hair.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👰</div>
+        <h3>Bridal &amp; Occasion Styling</h3>
+        <p>Cork's most trusted bridal team. Upstyles, blow-dries, and trial appointments for weddings and special occasions throughout the year.</p>
+        <span class="service-tag">Award-Winning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-content">
+      <div class="section-label">Our Salon</div>
+      <h2>Cork's Largest Expert Team</h2>
+      <p>Kopper Hair Salon stands apart because of the <span class="accent">depth of expertise</span> under one roof. With 27 dedicated stylists across a <span class="accent">3,500 sq ft</span> premium salon space, we offer something most Cork salons simply cannot — genuine specialist matching.</p>
+      <p>Whether you want rich copper tones that suit Cork's natural complexions, contemporary balayage, or a precision cut from a specialist in your exact hair type — there's a Kopper stylist for you.</p>
+      <p>We use exclusively <span class="accent">Alfaparf and Joico</span> professional products — chosen for their colour quality, hair health results, and longevity.</p>
+      <div class="brands">
+        <p>Professional Products</p>
+        <div class="brand-tags">
+          <span class="brand-tag">Alfaparf Milano</span>
+          <span class="brand-tag">Joico</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <span class="big-num">27</span>
+      <div class="big-lbl">Expert Stylists</div>
+      <div class="divider"></div>
+      <span class="big-num">3,500</span>
+      <div class="big-lbl">Square Feet</div>
+      <div class="divider"></div>
+      <span class="big-num">🏆</span>
+      <div class="big-lbl">Award-Winning Salon</div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-label">Client Reviews</div>
+    <h2 class="section-title">What Cork Clients Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"The copper colour they did for me was stunning. I've been all over Cork for colour and nothing comes close to Kopper. Absolutely love it."</p>
+        <div class="reviewer">— Niamh O., Cork</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"The size of the place is impressive but what really stands out is the talent. My stylist knew exactly what I wanted — and delivered it perfectly."</p>
+        <div class="reviewer">— Aisling C., Cork</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Chose Kopper for my wedding hair and the whole team were incredible. The trial, the big day — everything was flawless. Can't recommend enough."</p>
+        <div class="reviewer">— Claire M., Cork</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-label">Find Kopper</div>
+    <h2 class="section-title">Visit Us in Cork</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <h4>Location</h4>
+        <p>Cork City<br>Ireland</p>
+      </div>
+      <div class="contact-item">
+        <h4>Email</h4>
+        <p>info@kopperhairsalon.ie</p>
+      </div>
+      <div class="contact-item">
+        <h4>Team</h4>
+        <p>27 Expert Stylists<br>Available All Week</p>
+      </div>
+    </div>
+    <div class="cta-bar">
+      <h3>See Your New Website — Free Preview</h3>
+      <p>Alma Digital Services has designed a personalised website for Kopper Hair Salon. No commitment, no cost — just see what your online presence could look like.</p>
+      <a href="mailto:info@kopperhairsalon.ie" class="btn-primary">Claim Your Free Redesign</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Preview created by <span>Alma Digital Services</span> · almadigitalservices.com · Design preview for Kopper Hair Salon, Cork</p>
+</footer>
+
+</body>
+</html>
