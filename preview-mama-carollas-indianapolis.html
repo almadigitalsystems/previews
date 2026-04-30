@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mama Carolla's Indianapolis — Website Redesign Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--burgundy:#5a0a1a;--green:#1a5a2a;--cream:#fff8f0;--gold:#b8942a;--dark:#1a0d08}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark)}
+.badge{background:var(--burgundy);color:var(--cream);text-align:center;padding:12px;font-size:13px;font-weight:600;letter-spacing:1px}
+nav{background:var(--dark);padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);letter-spacing:1px}
+.logo span{color:var(--gold)}
+nav a{color:var(--cream);opacity:0.75;text-decoration:none;font-size:14px;margin-left:24px}
+.hero-banner{background:var(--dark);padding:0 40px;height:72px;display:flex;align-items:center;justify-content:center;text-align:center;border-bottom:3px solid var(--gold)}
+.hero-banner p{color:var(--gold);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+.hero{background:var(--burgundy);padding:100px 40px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+.hero .label{color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(44px,7vw,84px);font-weight:900;color:var(--cream);line-height:1.05;margin-bottom:28px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p{color:var(--cream);opacity:0.85;font-size:18px;line-height:1.8;max-width:640px;margin:0 auto 48px}
+.btn-gold{background:var(--gold);color:var(--dark);padding:18px 48px;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block;margin:6px}
+.btn-out{border:2px solid var(--cream);color:var(--cream);padding:16px 36px;font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block;margin:6px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:0;background:white}
+.about-text{padding:80px 60px;display:flex;flex-direction:column;justify-content:center}
+.about-text .over{color:var(--burgundy);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px}
+.about-text h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);margin-bottom:24px;color:var(--dark)}
+.about-text p{font-size:15px;line-height:1.9;color:#4a2a1a;opacity:0.85;margin-bottom:16px}
+.about-visual{background:var(--green);display:flex;align-items:center;justify-content:center;padding:60px;min-height:400px}
+.about-card{text-align:center;color:var(--cream)}
+.about-card .big{font-size:80px;margin-bottom:20px}
+.about-card h3{font-family:'Playfair Display',serif;font-size:26px;margin-bottom:12px}
+.about-card p{opacity:0.85;font-size:14px;line-height:1.8;max-width:300px}
+.pain{background:var(--dark);padding:80px 40px}
+.pain-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.pain-card{border-left:3px solid var(--gold);padding-left:24px}
+.pain-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--cream)}
+.pain-card p{font-size:14px;line-height:1.8;color:var(--cream);opacity:0.75}
+.menu-s{padding:100px 40px;background:var(--cream)}
+.menu-s h2{font-family:'Playfair Display',serif;font-size:46px;text-align:center;margin-bottom:12px;color:var(--dark)}
+.menu-s .sub{text-align:center;opacity:0.7;margin-bottom:52px;font-size:16px;color:var(--dark)}
+.menu-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.menu-item{background:white;border:1px solid rgba(90,10,26,0.1);padding:32px;border-radius:4px}
+.menu-icon{font-size:36px;margin-bottom:14px}
+.menu-item h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--burgundy);margin-bottom:8px}
+.menu-item p{font-size:14px;line-height:1.8;opacity:0.8}
+.cta-s{background:var(--green);padding:100px 40px;text-align:center}
+.cta-s h2{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,52px);color:var(--cream);margin-bottom:20px}
+.cta-s p{color:var(--cream);opacity:0.85;font-size:17px;max-width:520px;margin:0 auto 40px}
+.btn-cream{background:var(--cream);color:var(--green);padding:18px 48px;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block}
+footer{background:var(--dark);padding:32px;text-align:center;font-size:13px;color:var(--cream);opacity:0.5}
+@media(max-width:768px){.about{grid-template-columns:1fr}.about-visual{display:none}.pain-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="badge">FREE WEBSITE REDESIGN PREVIEW — MAMA CAROLLA'S INDIANAPOLIS</div>
+<nav>
+  <div class="logo">Mama <span>Carolla's</span></div>
+  <div><a href="#menu">Menu</a><a href="#about">Our Story</a><a href="#contact">Reservations</a></div>
+</nav>
+<div class="hero-banner"><p>Indianapolis's Beloved Italian Restaurant Since 1986</p></div>
+<section class="hero">
+  <div class="label">Authentic Italian Cuisine — Indianapolis, Indiana</div>
+  <h1>La Famiglia.<br><em>La Cucina.</em><br>La Nostra Casa.</h1>
+  <p>For nearly four decades, Mama Carolla's has been Indianapolis's home for authentic Italian cooking — handmade pasta, slow-simmered sauces, and the warmth of a true family table.</p>
+  <a href="#contact" class="btn-gold">Make a Reservation</a>
+  <a href="#menu" class="btn-out">View Our Menu</a>
+</section>
+<div class="about" id="about">
+  <div class="about-text">
+    <div class="over">Our Heritage</div>
+    <h2>Four Decades of Family, Food, and Indianapolis Love</h2>
+    <p>Mama Carolla's was founded on the belief that great Italian food shouldn't require a passport. Since 1986, we've been serving Indianapolis families handmade pasta, classic osso buco, and tiramisu that makes grown adults cry with joy.</p>
+    <p>We're not just a restaurant — we're an Indianapolis institution. Generations of families have celebrated birthdays, anniversaries, and first dates in our dining room.</p>
+  </div>
+  <div class="about-visual">
+    <div class="about-card">
+      <div class="big">🍝</div>
+      <h3>Handmade Pasta, Every Day</h3>
+      <p>Our pasta is made fresh every morning from scratch — the way it's been done since day one.</p>
+    </div>
+  </div>
+</div>
+<div class="pain">
+  <div class="pain-inner">
+    <div class="pain-card"><h3>Indianapolis Diners Are Searching for You and Can't Find You</h3><p>People searching "Italian restaurant Indianapolis" or "best pasta Indy" aren't finding Mama Carolla's. A modern website fixes this — and fills more tables.</p></div>
+    <div class="pain-card"><h3>38 Years of Legacy Deserves a Better Stage</h3><p>Your history and reputation are unmatched in Indianapolis. But your current website doesn't communicate that. New guests can't see what loyal customers already know.</p></div>
+  </div>
+</div>
+<section class="menu-s" id="menu">
+  <h2>From Our Kitchen</h2>
+  <div class="sub">Authentic Italian recipes made with love, every single night</div>
+  <div class="menu-grid">
+    <div class="menu-item"><div class="menu-icon">🍝</div><h3>Handmade Pasta</h3><p>Fresh tagliatelle, fettuccine, and lasagna made in-house daily. Our ragu simmers for six hours minimum.</p></div>
+    <div class="menu-item"><div class="menu-icon">🥩</div><h3>Osso Buco</h3><p>Braised veal shanks with gremolata and saffron risotto. Our most beloved dish since 1986.</p></div>
+    <div class="menu-item"><div class="menu-icon">🍕</div><h3>Wood-Fired Pizzas</h3><p>Neapolitan-style thin crust, San Marzano tomatoes, imported mozzarella, fresh basil.</p></div>
+    <div class="menu-item"><div class="menu-icon">🍮</div><h3>Classic Tiramisu</h3><p>The original Mama Carolla's recipe. Layers of espresso-soaked ladyfingers and mascarpone cream.</p></div>
+  </div>
+</section>
+<section class="cta-s" id="contact">
+  <h2>This Is What Your New Website Could Look Like</h2>
+  <p>Alma Digital built this free preview to honor 38 years of Indianapolis dining excellence. No commitment required.</p>
+  <a href="mailto:info@mamacarollas.com?subject=Free Website Redesign" class="btn-cream">Claim Your Free Redesign</a>
+</section>
+<footer>2025 Mama Carolla's Indianapolis | Preview by Alma Digital Services | info@mamacarollas.com</footer>
+</body>
+</html>
