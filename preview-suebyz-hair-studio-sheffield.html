@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suebyz Hair Studio | Sheffield's Precision Cut Specialists</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#f7f5f2;
+    --surface:#ffffff;
+    --dark:#1a1a1a;
+    --mid:#3a3a3a;
+    --accent:#8c6d4f;
+    --accent2:#c4a882;
+    --gray:#888;
+    --light:#ede8e2;
+  }
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6;}
+  nav{background:var(--dark);padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+  .logo{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--accent2);letter-spacing:2px;}
+  .nav-links a{color:#aaa;text-decoration:none;margin-left:2rem;font-size:0.9rem;transition:color 0.2s;}
+  .nav-links a:hover{color:var(--accent2);}
+  .hero{background:var(--dark);padding:7rem 2rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto;}
+  .hero-text h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.2;color:var(--surface);margin-bottom:1rem;}
+  .hero-text h1 em{color:var(--accent2);font-style:normal;}
+  .hero-text p{color:#999;font-size:1.05rem;margin-bottom:2rem;line-height:1.7;}
+  .hero-badge{display:inline-block;background:rgba(196,168,130,0.15);border:1px solid rgba(196,168,130,0.4);color:var(--accent2);padding:0.4rem 1.2rem;border-radius:4px;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem;}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+  .hero-stat{text-align:center;padding:1.2rem;background:rgba(255,255,255,0.05);border-radius:8px;border:1px solid rgba(196,168,130,0.2);}
+  .hero-stat .num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--accent2);display:block;}
+  .hero-stat .lbl{font-size:0.75rem;color:#888;text-transform:uppercase;letter-spacing:1px;}
+  .btn-primary{display:inline-block;background:var(--accent);color:var(--surface);padding:0.9rem 2.2rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:1rem;transition:background 0.2s;}
+  .btn-primary:hover{background:#7a5c3e;}
+  .btn-outline{display:inline-block;border:2px solid var(--accent2);color:var(--accent2);padding:0.9rem 2.2rem;border-radius:4px;text-decoration:none;font-weight:600;margin-left:1rem;transition:all 0.2s;}
+  .btn-outline:hover{background:var(--accent2);color:var(--dark);}
+  .section{padding:5rem 2rem;}
+  .container{max-width:1100px;margin:0 auto;}
+  .section-label{font-size:0.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:0.8rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--dark);margin-bottom:0.8rem;}
+  .section-sub{color:var(--gray);max-width:560px;margin-bottom:3rem;}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+  .service-card{background:var(--surface);border-radius:12px;padding:2rem;border:1px solid var(--light);box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.2s,box-shadow 0.2s;}
+  .service-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.1);}
+  .service-icon{font-size:2rem;margin-bottom:1rem;}
+  .service-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--dark);margin-bottom:0.5rem;}
+  .service-card p{color:var(--gray);font-size:0.9rem;}
+  .about-section{background:var(--dark);padding:5rem 2rem;}
+  .about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:center;}
+  .years-badge{background:var(--accent);border-radius:12px;padding:3rem;text-align:center;}
+  .years-badge .num{font-family:'Playfair Display',serif;font-size:5rem;color:var(--surface);display:block;}
+  .years-badge .lbl{color:rgba(255,255,255,0.8);font-size:0.9rem;letter-spacing:1px;text-transform:uppercase;}
+  .about-inner h2{font-family:'Playfair Display',serif;font-size:2rem;color:var(--surface);margin-bottom:1rem;}
+  .about-inner p{color:#aaa;margin-bottom:1rem;line-height:1.7;}
+  .about-inner .accent{color:var(--accent2);font-weight:600;}
+  .reviews-section{background:var(--bg);padding:5rem 2rem;}
+  .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem;}
+  .review-card{background:var(--surface);border-radius:12px;padding:1.8rem;border:1px solid var(--light);box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+  .stars{color:#c8922a;font-size:1rem;margin-bottom:0.8rem;}
+  .review-card p{color:var(--mid);font-size:0.95rem;font-style:italic;margin-bottom:1rem;}
+  .reviewer{color:var(--dark);font-size:0.85rem;font-weight:600;}
+  .contact-section{background:var(--dark);padding:5rem 2rem;}
+  .contact-inner{max-width:700px;margin:0 auto;text-align:center;}
+  .contact-inner h2{font-family:'Playfair Display',serif;font-size:2rem;color:var(--surface);margin-bottom:2rem;}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:2.5rem;}
+  .contact-item{background:rgba(255,255,255,0.06);border-radius:10px;padding:1.5rem;border:1px solid rgba(196,168,130,0.2);}
+  .contact-item h4{color:var(--accent2);font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.5rem;}
+  .contact-item p{color:#aaa;font-size:0.9rem;}
+  .cta-bar{background:rgba(140,109,79,0.2);border:1px solid rgba(140,109,79,0.4);border-radius:12px;padding:2.5rem;text-align:center;}
+  .cta-bar h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--surface);margin-bottom:0.7rem;}
+  .cta-bar p{color:#aaa;margin-bottom:1.5rem;}
+  footer{background:#111;padding:2rem;text-align:center;color:#555;font-size:0.85rem;}
+  footer span{color:var(--accent2);}
+  @media(max-width:768px){.hero{grid-template-columns:1fr;padding:4rem 2rem;}.about-inner{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Suebyz</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div style="background:var(--dark);">
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">234 Shoreham St · Sheffield · Highfield</div>
+      <h1>Sheffield's<br><em>Precision Cut</em><br>Specialists</h1>
+      <p>35 years of expert hairdressing in the heart of Sheffield. Suebyz Hair Studio is where skilled hands and deep experience deliver cuts that last.</p>
+      <a href="#contact" class="btn-primary">Claim Your Free Preview</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="num">35</span>
+        <span class="lbl">Years of Expert Cuts</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">5★</span>
+        <span class="lbl">Google Rating</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">100%</span>
+        <span class="lbl">Precision Focus</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-label">Our Expertise</div>
+    <h2 class="section-title">Precision Cutting Services</h2>
+    <p class="section-sub">We specialise in precision scissor cuts — the craft of great hairdressing done properly, every time.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">✂️</div>
+        <h3>Women's Precision Cut</h3>
+        <p>Bespoke cutting tailored to your face shape, hair texture, and daily routine. A cut that grows out gracefully and holds its shape.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💈</div>
+        <h3>Men's Cut &amp; Style</h3>
+        <p>Classic barbering meets salon expertise. Clean lines, relaxed consultations, and cuts that keep you looking sharp between visits.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👦</div>
+        <h3>Children's Haircuts</h3>
+        <p>Patient, gentle cuts for children of all ages. We make haircut day a positive experience from the very first visit.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌊</div>
+        <h3>Blowdry &amp; Finish</h3>
+        <p>Professional blowdry and styling to complete your look. Perfect for special occasions or when you want to step out feeling your best.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📐</div>
+        <h3>Restyle &amp; Reshape</h3>
+        <p>Ready for a change? We consult carefully before any restyle, ensuring the new direction suits your lifestyle and maintenance routine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="years-badge">
+      <span class="num">35</span>
+      <div class="lbl">Years in Sheffield</div>
+    </div>
+    <div>
+      <div class="section-label" style="color:var(--accent2);">Our Story</div>
+      <h2>35 Years of Getting It Right</h2>
+      <p>Suebyz Hair Studio has been a <span class="accent">Sheffield institution</span> for over three decades. Located on Shoreham Street in Highfield, we've built a loyal following by focusing on one thing: exceptional cutting technique.</p>
+      <p>While trends come and go, the fundamentals of great hairdressing remain constant. <span class="accent">Precision, patience, and listening to you</span> — that's what sets a truly great haircut apart.</p>
+      <p>Every client receives a full consultation before any scissors come out. We take the time to understand your hair type, your lifestyle, and what you actually want.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-label">Client Reviews</div>
+    <h2 class="section-title">What Sheffield Clients Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Sue has been cutting my hair for over 10 years. I won't go anywhere else. She listens, she gets it, and the results are consistently brilliant."</p>
+        <div class="reviewer">— Mark H., Sheffield</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Best haircut I've ever had, full stop. The consultation was thorough and the cut was perfect. Worth every penny."</p>
+        <div class="reviewer">— Rachel D., Sheffield</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Took my son here for his first proper haircut. She was so patient with him. We'll definitely be back!"</p>
+        <div class="reviewer">— Emma W., Sheffield</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="section-label" style="color:var(--accent2);">Find Us</div>
+    <h2>Visit Suebyz in Sheffield</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <h4>Address</h4>
+        <p>234 Shoreham St<br>Highfield, Sheffield</p>
+      </div>
+      <div class="contact-item">
+        <h4>Email</h4>
+        <p>suebyz@icloud.com</p>
+      </div>
+      <div class="contact-item">
+        <h4>Hours</h4>
+        <p>Tue–Sat: 9am–5pm<br>Mon &amp; Sun: Closed</p>
+      </div>
+    </div>
+    <div class="cta-bar">
+      <h3>See Your New Website — Free</h3>
+      <p>Alma Digital Services has built a personalised website preview for Suebyz Hair Studio. No commitment, no cost.</p>
+      <a href="mailto:suebyz@icloud.com" class="btn-primary">Claim Your Free Redesign</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Preview created by <span>Alma Digital Services</span> · almadigitalservices.com · Design preview for Suebyz Hair Studio</p>
+</footer>
+
+</body>
+</html>
