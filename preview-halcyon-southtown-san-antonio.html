@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halcyon Southtown San Antonio — Website Redesign Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--espresso:#1a0f08;--caramel:#b8843a;--sage:#6a9a6a;--ivory:#f9f5f0;--warm:#e8ddd0}
+body{font-family:'Inter',sans-serif;background:var(--ivory);color:var(--espresso)}
+.badge{background:var(--espresso);color:var(--warm);text-align:center;padding:12px;font-size:13px;font-weight:600;letter-spacing:1px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:var(--espresso)}
+.logo{font-family:'Playfair Display',serif;font-size:24px;color:var(--ivory);letter-spacing:1px}
+.logo span{color:var(--caramel)}
+nav a{color:var(--warm);opacity:0.8;text-decoration:none;font-size:14px;margin-left:28px}
+.hero-split{display:grid;grid-template-columns:55% 45%;min-height:88vh}
+.hero-left{background:var(--espresso);padding:80px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero-left::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 50%,rgba(184,132,58,0.08) 0%,transparent 60%)}
+.tag{border:1px solid rgba(184,132,58,0.4);color:var(--caramel);padding:8px 18px;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px;display:inline-block;width:fit-content;position:relative}
+.hero-left h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,60px);font-weight:900;color:var(--ivory);line-height:1.1;margin-bottom:24px;position:relative}
+.hero-left h1 em{color:var(--caramel);font-style:normal;display:block}
+.hero-left p{color:var(--warm);opacity:0.85;font-size:16px;line-height:1.8;margin-bottom:40px;position:relative;max-width:440px}
+.btn-c{background:var(--caramel);color:var(--espresso);padding:16px 40px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block;margin-right:12px}
+.btn-o{border:1px solid rgba(184,132,58,0.5);color:var(--caramel);padding:14px 32px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block}
+.hero-right{background:var(--sage);display:flex;align-items:center;justify-content:center;padding:60px}
+.hero-card{background:rgba(249,245,240,0.1);border:1px solid rgba(249,245,240,0.2);padding:48px;border-radius:8px;text-align:center;max-width:340px}
+.hero-card .big{font-size:72px;margin-bottom:20px}
+.hero-card h2{font-family:'Playfair Display',serif;font-size:24px;color:var(--ivory);margin-bottom:12px}
+.hero-card p{color:var(--warm);opacity:0.85;font-size:14px;line-height:1.8}
+.hero-card .pill{display:inline-block;background:var(--caramel);color:var(--espresso);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-top:16px;text-transform:uppercase;letter-spacing:1px}
+.pain{background:#2a1a0e;padding:70px 40px}
+.pain-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.pain-card{border-left:3px solid var(--caramel);padding-left:24px}
+.pain-card h3{font-size:17px;font-weight:600;margin-bottom:10px;color:var(--ivory)}
+.pain-card p{font-size:14px;line-height:1.8;color:var(--warm);opacity:0.8}
+.menu-s{padding:100px 40px;background:var(--ivory)}
+.menu-s h2{font-family:'Playfair Display',serif;font-size:46px;text-align:center;margin-bottom:12px}
+.menu-s .sub{text-align:center;opacity:0.65;margin-bottom:52px;font-size:16px}
+.menu-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.menu-item{background:white;border:1px solid var(--warm);padding:32px;border-radius:4px}
+.menu-icon{font-size:36px;margin-bottom:14px}
+.menu-item h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--espresso);margin-bottom:8px}
+.menu-item p{font-size:14px;line-height:1.8;opacity:0.8}
+.cta-s{background:var(--espresso);padding:100px 40px;text-align:center}
+.cta-s h2{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,52px);color:var(--ivory);margin-bottom:20px}
+.cta-s p{color:var(--warm);opacity:0.85;font-size:17px;max-width:520px;margin:0 auto 40px}
+footer{background:#100a05;padding:32px;text-align:center;font-size:13px;color:var(--warm);opacity:0.5}
+@media(max-width:768px){.hero-split{grid-template-columns:1fr}.hero-right{display:none}.pain-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="badge">FREE WEBSITE REDESIGN PREVIEW — HALCYON SOUTHTOWN SAN ANTONIO</div>
+<nav>
+  <div class="logo">Halcyon <span>Southtown</span></div>
+  <div><a href="#menu">Menu</a><a href="#events">Events</a><a href="#contact">Find Us</a></div>
+</nav>
+<div class="hero-split">
+  <div class="hero-left">
+    <div class="tag">San Antonio's Southtown Neighborhood Gem</div>
+    <h1>Coffee. Cocktails.<em>Community.</em></h1>
+    <p>Halcyon Southtown is San Antonio's gathering place — artisan coffee by day, craft cocktails by night, and a kitchen that never quits. Come as you are.</p>
+    <a href="#menu" class="btn-c">Explore Our Menu</a>
+    <a href="#contact" class="btn-o">Find Us</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="big">☕</div>
+      <h2>Artisan Coffee and Craft Cocktails All Day</h2>
+      <p>Specialty lattes, cold brew, fresh-pressed juices — and when the sun sets, San Antonio's most creative craft cocktail menu.</p>
+      <span class="pill">Southtown's Living Room</span>
+    </div>
+  </div>
+</div>
+<div class="pain">
+  <div class="pain-inner">
+    <div class="pain-card"><h3>San Antonio Coffee Drinkers Are Looking for You</h3><p>People searching "coffee shop Southtown" or "brunch San Antonio" should find Halcyon first. Your current site isn't capturing that local search traffic.</p></div>
+    <div class="pain-card"><h3>Your Vibe Deserves to Show Online</h3><p>Halcyon's atmosphere is what keeps people coming back. But new customers can't experience that vibe from your current website. A modern site changes that.</p></div>
+  </div>
+</div>
+<section class="menu-s" id="menu">
+  <h2>All Day. All Night. All Halcyon.</h2>
+  <div class="sub">Coffee bar, full kitchen, and craft cocktails under one roof in San Antonio's Southtown</div>
+  <div class="menu-grid">
+    <div class="menu-item"><div class="menu-icon">☕</div><h3>Specialty Coffee</h3><p>Single-origin pour overs, honey oat lattes, lavender cold brew, and seasonal specialty drinks made by trained baristas.</p></div>
+    <div class="menu-item"><div class="menu-icon">🍳</div><h3>Brunch and Bites</h3><p>Avocado toast, breakfast tacos, house-made granola, and weekend brunch specials. Fuel for your Southtown adventure.</p></div>
+    <div class="menu-item"><div class="menu-icon">🍹</div><h3>Craft Cocktails</h3><p>San Antonio's most creative craft cocktail menu — seasonal ingredients, house syrups, and cocktails you won't find anywhere else.</p></div>
+    <div class="menu-item"><div class="menu-icon">🎵</div><h3>Events and Live Music</h3><p>Open mic nights, local artist showcases, pop-up markets — Halcyon Southtown is the heartbeat of the neighborhood.</p></div>
+  </div>
+</section>
+<section class="cta-s" id="contact">
+  <h2>This Is What Your New Website Could Look Like</h2>
+  <p>Alma Digital built this free preview for Halcyon Southtown. Your community hub deserves an online presence just as welcoming as your space.</p>
+  <a href="mailto:info@halcyoncoffeebar.com?subject=Free Website Redesign" class="btn-c">Claim Your Free Redesign</a>
+</section>
+<footer>2025 Halcyon Southtown San Antonio | Preview by Alma Digital Services | info@halcyoncoffeebar.com</footer>
+</body>
+</html>
