@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amoda Hair and Beauty | Cork's Premier Hair & Beauty Salon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#1a1009;
+    --surface:#241508;
+    --card:#2e1c0c;
+    --gold:#d4a853;
+    --rose:#c8707a;
+    --cream:#f5ede0;
+    --gray:#b8a898;
+    --white:#fff;
+  }
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;}
+  nav{background:rgba(26,16,9,0.97);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(212,168,83,0.2);}
+  .logo{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);letter-spacing:1px;}
+  .logo span{color:var(--rose);}
+  .nav-links a{color:var(--gray);text-decoration:none;margin-left:2rem;font-size:0.9rem;transition:color 0.2s;}
+  .nav-links a:hover{color:var(--gold);}
+  .hero{background:linear-gradient(135deg,#1a1009 0%,#2e1c0c 50%,#1a0f0a 100%);padding:7rem 2rem 5rem;text-align:center;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 30%,rgba(212,168,83,0.12) 0%,transparent 60%);pointer-events:none;}
+  .hero-badge{display:inline-block;background:rgba(212,168,83,0.15);border:1px solid rgba(212,168,83,0.4);color:var(--gold);padding:0.4rem 1.2rem;border-radius:50px;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem;}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.2;margin-bottom:1.2rem;color:var(--white);}
+  .hero h1 em{color:var(--gold);font-style:normal;}
+  .hero p{font-size:1.1rem;color:var(--gray);max-width:600px;margin:0 auto 2.5rem;}
+  .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+  .btn-primary{background:linear-gradient(135deg,var(--gold),#b8872a);color:#1a1009;padding:0.9rem 2.2rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:1rem;letter-spacing:0.5px;transition:transform 0.2s,box-shadow 0.2s;}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,168,83,0.4);}
+  .btn-outline{border:2px solid var(--gold);color:var(--gold);padding:0.9rem 2.2rem;border-radius:6px;text-decoration:none;font-weight:600;transition:all 0.2s;}
+  .btn-outline:hover{background:var(--gold);color:#1a1009;}
+  .section{padding:5rem 2rem;}
+  .container{max-width:1100px;margin:0 auto;}
+  .section-label{font-size:0.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--white);margin-bottom:1rem;}
+  .section-sub{color:var(--gray);font-size:1rem;max-width:580px;margin-bottom:3rem;}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+  .service-card{background:var(--card);border:1px solid rgba(212,168,83,0.15);border-radius:12px;padding:2rem;transition:transform 0.2s,border-color 0.2s;}
+  .service-card:hover{transform:translateY(-4px);border-color:rgba(212,168,83,0.4);}
+  .service-icon{font-size:2rem;margin-bottom:1rem;}
+  .service-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold);margin-bottom:0.6rem;}
+  .service-card p{color:var(--gray);font-size:0.9rem;line-height:1.6;}
+  .about{background:var(--surface);padding:5rem 2rem;}
+  .about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+  .about-visual{background:linear-gradient(135deg,var(--card),#3a2010);border-radius:16px;padding:3rem;text-align:center;border:1px solid rgba(212,168,83,0.2);}
+  .about-visual .stat-num{font-family:'Playfair Display',serif;font-size:3.5rem;color:var(--gold);display:block;}
+  .about-visual .stat-lbl{color:var(--gray);font-size:0.9rem;margin-bottom:2rem;}
+  .about h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--white);margin-bottom:1rem;}
+  .about p{color:var(--gray);margin-bottom:1rem;line-height:1.7;}
+  .about .accent{color:var(--gold);font-weight:600;}
+  .reviews{padding:5rem 2rem;background:var(--bg);}
+  .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem;}
+  .review-card{background:var(--card);border:1px solid rgba(212,168,83,0.15);border-radius:12px;padding:1.8rem;}
+  .stars{color:var(--gold);font-size:1.1rem;margin-bottom:0.8rem;}
+  .review-card p{color:var(--gray);font-size:0.95rem;font-style:italic;margin-bottom:1rem;}
+  .reviewer{color:var(--cream);font-size:0.85rem;font-weight:600;}
+  .contact{background:var(--surface);padding:5rem 2rem;}
+  .contact-inner{max-width:700px;margin:0 auto;text-align:center;}
+  .contact-details{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin:2.5rem 0;}
+  .contact-item{background:var(--card);border-radius:10px;padding:1.5rem;border:1px solid rgba(212,168,83,0.15);}
+  .contact-item .icon{font-size:1.5rem;margin-bottom:0.5rem;}
+  .contact-item h4{color:var(--gold);font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+  .contact-item p{color:var(--gray);font-size:0.9rem;}
+  .cta-bar{background:linear-gradient(135deg,#2e1c0c,#1a1009);border:1px solid rgba(212,168,83,0.3);border-radius:16px;padding:3rem;text-align:center;margin-top:2rem;}
+  .cta-bar h3{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--white);margin-bottom:0.8rem;}
+  .cta-bar p{color:var(--gray);margin-bottom:1.5rem;}
+  footer{background:#0d0804;padding:2rem;text-align:center;color:var(--gray);font-size:0.85rem;border-top:1px solid rgba(212,168,83,0.1);}
+  footer span{color:var(--gold);}
+  @media(max-width:768px){.about-inner{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Amoda<span>.</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Boreenmanna Road · Cork City</div>
+  <h1>Cork's Premier<br><em>Hair &amp; Beauty</em><br>Destination</h1>
+  <p>From precision colour and balayage to facial aesthetics and nail artistry — Amoda brings together Cork's finest beauty specialists under one roof.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-primary">Claim Your Free Preview</a>
+    <a href="#services" class="btn-outline">Our Services</a>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Expert Beauty Services</h2>
+    <p class="section-sub">A full-service beauty destination — hair, skin, nails, and brows, all in one welcoming Cork salon.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>Hair Colour &amp; Balayage</h3>
+        <p>From sun-kissed balayage to bold fashion colour — our colourists craft results that complement your unique style and skin tone.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✂️</div>
+        <h3>Haircuts &amp; Styling</h3>
+        <p>Precision cuts tailored to your face shape and lifestyle. Blowdries and occasion styling for every event on your calendar.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Facial Aesthetics</h3>
+        <p>Professional skin treatments including facials and aesthetic services that restore your natural glow and confidence.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💅</div>
+        <h3>Nails &amp; Nail Art</h3>
+        <p>Gel manicures, acrylics, and intricate nail art designs. From classic French to bespoke seasonal artwork.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👁️</div>
+        <h3>Brow Treatments</h3>
+        <p>Waxing, threading, tinting, and shaping — we frame your face with perfectly defined, natural-looking brows.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌿</div>
+        <h3>Treatments &amp; Care</h3>
+        <p>Conditioning treatments and hair health consultations to keep your hair in peak condition between salon visits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-visual">
+      <span class="stat-num">5★</span>
+      <div class="stat-lbl">Google Rating</div>
+      <span class="stat-num">10+</span>
+      <div class="stat-lbl">Years Serving Cork</div>
+      <span class="stat-num">100%</span>
+      <div class="stat-lbl">Custom Consultations</div>
+    </div>
+    <div>
+      <div class="section-label">Our Story</div>
+      <h2>Where Beauty Meets Expertise in Cork</h2>
+      <p>Located on <span class="accent">Boreenmanna Road</span>, Amoda Hair and Beauty has become one of Cork's most-loved destination salons. We believe beauty treatments should be as personal as you are.</p>
+      <p>Our team of specialists brings together expertise across hair, skin, and nail care — ensuring every client leaves feeling their absolute best.</p>
+      <p>We use only <span class="accent">premium professional products</span> and stay at the forefront of beauty trends through continuous education and training.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-label">Client Love</div>
+    <h2 class="section-title">What Cork Says About Us</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Absolutely love Amoda! The balayage here is the best I've had in Cork. Always leave feeling like a million euros."</p>
+        <div class="reviewer">— Ciara M., Cork</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Got my nails and brows done in the same visit. The team are so welcoming and talented. Highly recommend!"</p>
+        <div class="reviewer">— Aoife R., Cork</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"My go-to for facial treatments in Cork. Professional, relaxing, and the results are always incredible."</p>
+        <div class="reviewer">— Sarah T., Cork</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Visit Us in Cork</h2>
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="icon">📍</div>
+        <h4>Location</h4>
+        <p>Boreenmanna Road<br>Cork City, Ireland</p>
+      </div>
+      <div class="contact-item">
+        <div class="icon">📧</div>
+        <h4>Email</h4>
+        <p>cork@amoda.ie</p>
+      </div>
+      <div class="contact-item">
+        <div class="icon">🕐</div>
+        <h4>Hours</h4>
+        <p>Mon–Sat: 9am–6pm<br>Sun: Closed</p>
+      </div>
+    </div>
+    <div class="cta-bar">
+      <h3>See Your New Website — Free Preview</h3>
+      <p>Alma Digital Services has designed a personalised website mockup for Amoda Hair and Beauty. No commitment required.</p>
+      <a href="mailto:cork@amoda.ie" class="btn-primary">Claim Your Free Redesign</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Preview created by <span>Alma Digital Services</span> · almadigitalservices.com · This is a design preview for Amoda Hair and Beauty</p>
+</footer>
+
+</body>
+</html>
