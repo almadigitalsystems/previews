@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenville Pest Masters | Pest Control Greenville South Carolina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Layout 6 - Minimalist - Black / Green / Single Accent */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#f0f0f0}
+    .urgency-banner{background:#18a840;color:#000;text-align:center;padding:11px 20px;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+    nav{background:#0a0a0a;padding:18px 30px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1a1a1a;position:sticky;top:0;z-index:100}
+    .logo{font-family:'Space Grotesk',sans-serif;font-size:20px;color:#f0f0f0;font-weight:700;letter-spacing:-0.5px}
+    .logo span{color:#18a840}
+    .nav-cta{background:#18a840;color:#000;padding:10px 22px;border-radius:3px;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.5px}
+
+    /* Bold minimalist hero */
+    .hero{padding:100px 20px 90px;max-width:1000px;margin:0 auto}
+    .hero-tag{display:inline-flex;align-items:center;gap:8px;background:#111;border:1px solid #222;color:#18a840;padding:7px 18px;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:40px}
+    .hero-tag::before{content:'';width:8px;height:8px;background:#18a840;border-radius:50%;animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,7vw,88px);font-weight:700;line-height:1;letter-spacing:-2px;margin-bottom:32px;color:#f0f0f0}
+    .hero h1 .accent{color:#18a840}
+    .hero-desc{font-size:18px;color:#888;max-width:520px;line-height:1.75;margin-bottom:48px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .btn-main{background:#18a840;color:#000;padding:18px 44px;text-decoration:none;font-weight:800;font-size:16px;letter-spacing:.5px}
+    .btn-sub{color:#888;font-size:15px;font-weight:600;text-decoration:none;border-bottom:1px solid #444;padding-bottom:2px}
+    .hero-footnote{color:#444;font-size:13px;margin-top:24px}
+
+    /* Divider with stats */
+    .stats-row{border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;background:#0d0d0d;padding:0 20px;display:grid;grid-template-columns:repeat(4,1fr)}
+    .stat-item{padding:32px 20px;text-align:center;border-right:1px solid #1a1a1a}
+    .stat-item:last-child{border-right:none}
+    .stat-num{font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;color:#18a840;letter-spacing:-1px}
+    .stat-label{font-size:12px;color:#555;margin-top:6px;line-height:1.4;letter-spacing:.5px}
+
+    /* Services — clean minimal list */
+    .services-section{padding:100px 20px;max-width:1000px;margin:0 auto}
+    .label{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#18a840;margin-bottom:16px}
+    .big-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;letter-spacing:-1px;margin-bottom:60px;color:#f0f0f0}
+    .services-list{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .svc-item{padding:32px 0;border-bottom:1px solid #1a1a1a;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+    .svc-item:nth-child(odd){padding-right:40px;border-right:1px solid #1a1a1a}
+    .svc-item:nth-child(even){padding-left:40px}
+    .svc-num{font-family:'Space Grotesk',sans-serif;font-size:13px;color:#18a840;font-weight:700;letter-spacing:1px;padding-top:3px}
+    .svc-text h3{font-size:17px;font-weight:700;color:#f0f0f0;margin-bottom:8px;letter-spacing:-.3px}
+    .svc-text p{font-size:14px;color:#666;line-height:1.65}
+
+    /* Urgency */
+    .urgency-section{background:#050805;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:70px 20px;text-align:center}
+    .urgency-tag{display:inline-block;background:#18a840;color:#000;padding:7px 18px;font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px}
+    .urgency-section h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,4vw,44px);font-weight:700;letter-spacing:-1px;color:#f0f0f0;margin-bottom:14px}
+    .urgency-section p{color:#666;font-size:17px;max-width:580px;margin:0 auto 32px;line-height:1.75}
+
+    /* Before / After */
+    .comparison-section{padding:100px 20px;max-width:1000px;margin:0 auto}
+    .comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:44px}
+    .comp-card{padding:36px;border:1px solid #1a1a1a}
+    .comp-before{background:#0d0d0d}
+    .comp-after{background:#050f05;border-color:#18a840}
+    .comp-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+    .comp-before .comp-label{color:#c84a4a}
+    .comp-after .comp-label{color:#18a840}
+    .comp-card h3{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#f0f0f0;margin-bottom:16px;letter-spacing:-.3px}
+    .comp-card ul{list-style:none}
+    .comp-card ul li{padding:8px 0;font-size:14px;color:#666;border-bottom:1px solid #1a1a1a}
+    .comp-before ul li::before{content:"X  ";color:#c84a4a;font-weight:700}
+    .comp-after ul li::before{content:"V  ";color:#18a840;font-weight:700}
+
+    /* CTA */
+    .cta-section{background:#050f05;border-top:1px solid #18a840;padding:90px 20px;text-align:center}
+    .cta-section h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,5vw,56px);font-weight:700;letter-spacing:-1.5px;color:#f0f0f0;margin-bottom:16px}
+    .cta-section p{color:#666;font-size:18px;margin:0 auto 40px;max-width:500px;line-height:1.7}
+    .cta-btn{background:#18a840;color:#000;padding:20px 52px;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:.5px;display:inline-block}
+    .cta-note{color:#444;font-size:13px;margin-top:16px;letter-spacing:.5px}
+
+    .contact-section{background:#0a0a0a;padding:50px 20px;text-align:center;border-top:1px solid #1a1a1a}
+    .contact-section h3{color:#f0f0f0;font-size:18px;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+    .contact-info{color:#555;font-size:15px;line-height:2.2}
+    .contact-info a{color:#18a840;text-decoration:none}
+    footer{background:#050505;padding:24px 20px;text-align:center}
+    footer p{color:#333;font-size:13px;letter-spacing:.5px}
+    footer .powered{color:#18a840}
+
+    @media(max-width:768px){
+      .stats-row{grid-template-columns:1fr 1fr}
+      .stat-item:nth-child(2){border-right:none}
+      .services-list{grid-template-columns:1fr}
+      .svc-item:nth-child(odd){border-right:none;padding-right:0}
+      .svc-item:nth-child(even){padding-left:0}
+      .comp-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="urgency-banner">Termite Season Active -- Greenville Homeowners Are Searching For Pest Control Now</div>
+  <nav>
+    <div class="logo">Greenville<span>Pest</span>Masters</div>
+    <a href="#claim" class="nav-cta">Free Preview</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-tag">Spring 2026 -- Peak Season</div>
+    <h1>Pest Control<br>That <span class="accent">Gets</span><br>Found Online</h1>
+    <p class="hero-desc">Greenville, Simpsonville, Greer -- Upstate SC homeowners are searching for pest control this minute. The company with the best website wins the call.</p>
+    <div class="hero-actions">
+      <a href="#claim" class="btn-main">Get Free Website Preview</a>
+      <a href="tel:+18645550100" class="btn-sub">(864) 555-0100</a>
+    </div>
+    <p class="hero-footnote">No contract. No credit card. See your site in 24 hours or less.</p>
+  </section>
+
+  <div class="stats-row">
+    <div class="stat-item"><div class="stat-num">94%</div><div class="stat-label">Research online before calling any pest company</div></div>
+    <div class="stat-item"><div class="stat-num">3x</div><div class="stat-label">More leads from a modern mobile website</div></div>
+    <div class="stat-item"><div class="stat-num">$50</div><div class="stat-label">Launch price for your fully redesigned website</div></div>
+    <div class="stat-item"><div class="stat-num">24h</div><div class="stat-label">To see your free custom preview</div></div>
+  </div>
+
+  <section class="services-section">
+    <div class="label">What We Do</div>
+    <h2 class="big-title">Full Pest Protection<br>for Upstate SC</h2>
+    <div class="services-list">
+      <div class="svc-item"><div class="svc-num">01</div><div class="svc-text"><h3>Termite Inspections &amp; Treatment</h3><p>Eastern subterranean termites swarm every spring in the Upstate. We eliminate colonies and offer annual protection warranties that give homeowners real peace of mind.</p></div></div>
+      <div class="svc-item"><div class="svc-num">02</div><div class="svc-text"><h3>Residential Pest Control</h3><p>Quarterly and monthly protection plans for Greenville homes. Cockroaches, fire ants, spiders, and rodents -- eliminated and kept out, guaranteed.</p></div></div>
+      <div class="svc-item"><div class="svc-num">03</div><div class="svc-text"><h3>Commercial Services</h3><p>Discreet, effective pest management for Greenville businesses, restaurants, and retail spaces. Health code compliant and professionally documented.</p></div></div>
+      <div class="svc-item"><div class="svc-num">04</div><div class="svc-text"><h3>Emergency Same-Day Service</h3><p>When a pest problem cannot wait, we deliver same-day service across Greenville, Spartanburg, and the surrounding Upstate counties.</p></div></div>
+      <div class="svc-item"><div class="svc-num">05</div><div class="svc-text"><h3>Mosquito Control</h3><p>Enjoy your outdoor spaces all summer with our barrier mosquito spray program. Effective for 3-4 weeks per treatment, seasonally or on-demand.</p></div></div>
+      <div class="svc-item"><div class="svc-num">06</div><div class="svc-text"><h3>WDO Real Estate Inspections</h3><p>Fast Wood-Destroying Organism inspections for buyers, sellers, and real estate professionals in Greenville and Upstate South Carolina.</p></div></div>
+    </div>
+  </section>
+
+  <div class="urgency-section">
+    <div class="urgency-tag">Termite Season Warning</div>
+    <h2>Spring Is the Highest-Risk<br>Season for Termite Damage</h2>
+    <p>Eastern subterranean termites swarm every March through May across South Carolina. Homeowners are Googling for pest control this week -- the company with the best website gets the call.</p>
+    <a href="#claim" style="background:#18a840;color:#000;padding:16px 40px;text-decoration:none;font-weight:800;font-size:16px;letter-spacing:.5px;display:inline-block">Get My Free Preview Now</a>
+  </div>
+
+  <section class="comparison-section">
+    <div class="label">The Difference</div>
+    <h2 class="big-title">Before &amp; After<br>Your Redesign</h2>
+    <div class="comp-grid">
+      <div class="comp-card comp-before">
+        <div class="comp-label">Current Site</div>
+        <h3>Working Against You</h3>
+        <ul>
+          <li>Old Wix skeleton or no website</li>
+          <li>Invisible on mobile phones</li>
+          <li>No reviews, no trust signals</li>
+          <li>Buried on page 3 of Google</li>
+          <li>Takes forever to load</li>
+          <li>Competitors look more professional</li>
+          <li>Customers call someone else</li>
+        </ul>
+      </div>
+      <div class="comp-card comp-after">
+        <div class="comp-label">Redesigned Site</div>
+        <h3>Working For You</h3>
+        <ul>
+          <li>Sharp, modern 2026 design</li>
+          <li>Flawless on every device</li>
+          <li>Reviews and trust badges visible</li>
+          <li>Optimized to rank on Google</li>
+          <li>Lightning-fast load time</li>
+          <li>Looks more professional than anyone</li>
+          <li>Customers call YOU first</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="claim" class="cta-section">
+    <h2>Your Free Preview.<br>Zero Commitment.</h2>
+    <p>We build your full custom website mockup for free. See it in 24 hours. Launch for as little as $50 -- or walk away with nothing owed.</p>
+    <a href="tel:+18645550100" class="cta-btn">Claim Your Free Preview</a>
+    <p class="cta-note">CALL OR TEXT (864) 555-0100 | AVAILABLE 7 DAYS A WEEK</p>
+  </section>
+
+  <div class="contact-section">
+    <h3>Greenville Pest Masters</h3>
+    <div class="contact-info">
+      Serving Greenville, Simpsonville, Greer, Spartanburg &amp; Upstate SC<br>
+      <a href="tel:+18645550100">(864) 555-0100</a> | <a href="mailto:info@greenvillepestmasters.com">info@greenvillepestmasters.com</a><br>
+      Licensed &amp; Insured | South Carolina Pest Control License
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Greenville Pest Masters. Website redesign preview by <span class="powered">Alma Digital Services</span>.</p>
+  </footer>
+</body>
+</html>
