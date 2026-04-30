@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow Lodge Houston — Website Redesign Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--forest:#1a2e1a;--green:#5a9a3a;--ivory:#f8f4ed;--cream:#e8dcc8;--wood:#8b5a2b}
+body{font-family:'Inter',sans-serif;background:var(--ivory);color:var(--forest)}
+.badge{background:var(--forest);color:var(--cream);text-align:center;padding:12px;font-size:13px;font-weight:600;letter-spacing:1px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:var(--forest)}
+.logo{font-family:'Playfair Display',serif;font-size:26px;color:var(--ivory)}
+.logo span{color:#7ab85a}
+nav a{color:var(--cream);opacity:0.8;text-decoration:none;font-size:14px;margin-left:28px}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:88vh}
+.hero-left{background:var(--forest);padding:80px 60px;display:flex;flex-direction:column;justify-content:center}
+.tag{border:1px solid rgba(122,184,90,0.4);color:#7ab85a;padding:8px 18px;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px;display:inline-block;width:fit-content}
+.hero-left h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,62px);font-weight:900;color:var(--ivory);line-height:1.1;margin-bottom:24px}
+.hero-left h1 em{color:#7ab85a;font-style:normal;display:block}
+.hero-left p{color:var(--cream);opacity:0.85;font-size:16px;line-height:1.8;margin-bottom:40px}
+.btn-g{background:#7ab85a;color:var(--forest);padding:16px 40px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block}
+.hero-right{background:linear-gradient(135deg,#2d4a2d,#1a3820,#3d5a3d);display:flex;align-items:center;justify-content:center;padding:60px}
+.hero-card{background:rgba(248,244,237,0.08);border:1px solid rgba(122,184,90,0.25);padding:48px;border-radius:8px;text-align:center;max-width:380px}
+.hero-card .big{font-size:72px;margin-bottom:20px}
+.hero-card h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--ivory);margin-bottom:12px}
+.hero-card p{color:var(--cream);opacity:0.8;font-size:14px;line-height:1.8}
+.hero-card .pill{display:inline-block;background:#7ab85a;color:var(--forest);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-top:16px;text-transform:uppercase;letter-spacing:1px}
+.pain{background:#2d4a2d;padding:60px 40px}
+.pain-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.pain-card{border-left:3px solid #7ab85a;padding-left:24px}
+.pain-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--ivory)}
+.pain-card p{font-size:14px;line-height:1.8;color:var(--cream);opacity:0.8}
+.features{padding:100px 40px;background:var(--ivory)}
+.features h2{font-family:'Playfair Display',serif;font-size:46px;color:var(--forest);margin-bottom:48px;text-align:center}
+.feat-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.feat{background:white;border:1px solid var(--cream);padding:32px;border-radius:4px}
+.feat-icon{font-size:36px;margin-bottom:14px}
+.feat h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--forest);margin-bottom:8px}
+.feat p{font-size:14px;line-height:1.8;color:#4a3a2a;opacity:0.85}
+.cta-s{background:var(--forest);padding:100px 40px;text-align:center}
+.cta-s h2{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,52px);color:var(--ivory);margin-bottom:20px}
+.cta-s p{color:var(--cream);opacity:0.8;font-size:17px;max-width:520px;margin:0 auto 40px}
+footer{background:#111d11;padding:32px;text-align:center;font-size:13px;color:var(--cream);opacity:0.5}
+@media(max-width:768px){.hero-split{grid-template-columns:1fr}.hero-right{display:none}.pain-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="badge">FREE WEBSITE REDESIGN PREVIEW — RAINBOW LODGE HOUSTON</div>
+<nav>
+  <div class="logo">Rainbow <span>Lodge</span></div>
+  <div><a href="#dining">Dining</a><a href="#events">Events</a><a href="#contact">Reservations</a></div>
+</nav>
+<div class="hero-split">
+  <div class="hero-left">
+    <div class="tag">Since 1936 — Houston's Hidden Gem</div>
+    <h1>Where Houston Comes to<em>Celebrate</em></h1>
+    <p>Nestled on the banks of White Oak Bayou, Rainbow Lodge is Houston's most distinctive dining destination — legendary game cuisine, romantic atmosphere, and memories that last.</p>
+    <a href="#contact" class="btn-g">Reserve Your Table</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="big">🦌</div>
+      <h2>Chef-Crafted Wild Game and Seasonal Cuisine</h2>
+      <p>Award-winning dishes featuring seasonal game, gulf seafood, and locally sourced ingredients.</p>
+      <span class="pill">Houston's #1 Romantic Dining Destination</span>
+    </div>
+  </div>
+</div>
+<div class="pain">
+  <div class="pain-inner">
+    <div class="pain-card"><h3>Reservations Left on the Table</h3><p>Houston diners search "romantic restaurant Houston" daily — but your outdated website isn't capturing them. Every day without visibility is a table that could have been booked.</p></div>
+    <div class="pain-card"><h3>Your Atmosphere Deserves to Be Showcased</h3><p>Rainbow Lodge's setting is unlike anything else in Houston. But if your digital presence doesn't reflect that magic, you're losing guests to lesser restaurants with better websites.</p></div>
+  </div>
+</div>
+<section class="features" id="dining">
+  <h2>An Experience Like No Other</h2>
+  <div class="feat-grid">
+    <div class="feat"><div class="feat-icon">🏡</div><h3>Historic 1936 Lodge</h3><p>Dine in our beautifully preserved log cabin overlooking White Oak Bayou — Houston's most iconic dining setting.</p></div>
+    <div class="feat"><div class="feat-icon">🍽️</div><h3>Wild Game Cuisine</h3><p>Venison, bison, quail, and boar prepared by our award-winning chef. Menus change seasonally.</p></div>
+    <div class="feat"><div class="feat-icon">🍷</div><h3>Award-Winning Wine List</h3><p>An expertly curated cellar of 600+ wines, featuring rare finds and seasonal pairings.</p></div>
+    <div class="feat"><div class="feat-icon">💍</div><h3>Private Events</h3><p>Proposals, anniversaries, corporate dinners — we create unforgettable moments in our private dining rooms.</p></div>
+  </div>
+</section>
+<section class="cta-s" id="contact">
+  <h2>This Is What Your New Website Could Look Like</h2>
+  <p>Alma Digital built this free preview to show you what's possible. Your venue deserves a digital presence as special as the experience itself.</p>
+  <a href="mailto:info@rainbow-lodge.com?subject=Free Website Redesign" class="btn-g">Claim Your Free Redesign</a>
+</section>
+<footer>2025 Rainbow Lodge Houston | Preview by Alma Digital Services | info@rainbow-lodge.com</footer>
+</body>
+</html>
