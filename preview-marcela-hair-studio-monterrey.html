@@ -1,300 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marcela Hair Studio | Salon de Belleza en Monterrey</title>
-  <meta name="description" content="Marcela Hair Studio en Monterrey ofrece cortes, coloracion, balayage, tratamientos capilares y peinados. Reserva tu cita hoy y transforma tu imagen." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcela Hair Studio Monterrey | Cortes, Coloración y Tratamientos Capilares</title>
+  <meta name="description" content="Descubre el salón de belleza más recomendado del Obispado. Marcela Hair Studio ofrece cortes, coloración y peinados para eventos. Agenda tu cita hoy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --terracotta: #b5553a;
-      --warm:       #d4845f;
-      --gold:       #c9a240;
-      --cream:      #faf5ef;
-      --sand:       #e8ddd0;
-      --dark:       #2a1a12;
-      --text:       #3d2a1e;
-      --white:      #ffffff;
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;overflow-x:hidden;color:#2a1a10}
+    :root{
+      --gold:#c9973c;
+      --dark-brown:#2a1a10;
+      --warm-brown:#6b3a1f;
+      --cream:#fdf6ee;
+      --light-cream:#fef9f3;
+      --text:#3a2515;
+      --text-light:#8a6040;
+      --white:#fff
     }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
-
     /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; background: rgba(42,26,18,0.95); backdrop-filter: blur(10px); }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--gold); font-style: italic; }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { color: #c8b8a8; text-decoration: none; font-size: 0.8rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-cta { background: var(--terracotta); color: var(--white); padding: 10px 24px; border-radius: 4px; text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px; transition: background 0.2s; }
-    .nav-cta:hover { background: #9a3f27; }
-
-    /* HERO — Modern Agency Style */
-    .hero { min-height: 100vh; background: var(--dark); display: flex; align-items: center; overflow: hidden; position: relative; padding: 120px 48px 80px; }
-    .hero::after { content: ''; position: absolute; right: 0; top: 0; width: 45%; height: 100%; background: linear-gradient(135deg, var(--terracotta) 0%, var(--warm) 100%); clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); }
-    .hero-content { position: relative; z-index: 2; max-width: 600px; }
-    .hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
-    .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 5vw, 5rem); font-weight: 900; color: var(--white); line-height: 1.05; margin-bottom: 24px; }
-    .hero-title .accent { color: var(--gold); font-style: italic; }
-    .hero-sub { font-size: 1rem; color: #a8907a; line-height: 1.75; margin-bottom: 42px; max-width: 480px; }
-    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn-primary { background: var(--terracotta); color: var(--white); padding: 14px 34px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.92rem; transition: background 0.2s, transform 0.2s; }
-    .btn-primary:hover { background: #9a3f27; transform: translateY(-2px); }
-    .btn-outline { background: transparent; color: var(--gold); padding: 14px 34px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.92rem; border: 1.5px solid rgba(201,162,64,0.5); transition: border-color 0.2s; }
-    .btn-outline:hover { border-color: var(--gold); }
-    .hero-right-content { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); z-index: 3; width: 38%; text-align: center; }
-    .hero-stat-block { margin-bottom: 28px; }
-    .stat-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: var(--white); line-height: 1; }
-    .stat-lab { font-size: 0.75rem; color: rgba(255,255,255,0.7); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
-    .stat-divider { width: 40px; height: 2px; background: rgba(255,255,255,0.25); margin: 20px auto; }
-
+    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(42,26,16,.97);backdrop-filter:blur(10px);padding:1rem 6%;display:flex;justify-content:space-between;align-items:center}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff}
+    .nav-logo span{color:var(--gold)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{color:#c8a880;text-decoration:none;font-size:.88rem;transition:color .2s}
+    .nav-links a:hover{color:#fff}
+    .nav-cta{background:var(--gold);color:#fff;padding:.55rem 1.5rem;border-radius:6px;text-decoration:none;font-size:.88rem;font-weight:600;transition:background .2s}
+    .nav-cta:hover{background:var(--warm-brown)}
+    /* HERO — Modern Agency */
+    .hero{min-height:100vh;background:var(--dark-brown);display:grid;grid-template-columns:55% 45%;padding-top:72px;overflow:hidden}
+    .hero-left{padding:6rem 4rem 5rem 8%;display:flex;flex-direction:column;justify-content:center}
+    .hero-tag{display:inline-flex;align-items:center;gap:.6rem;background:rgba(201,151,60,.15);border:1px solid rgba(201,151,60,.3);padding:.4rem 1rem;border-radius:4px;margin-bottom:2rem}
+    .hero-tag span{color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+    .hero-headline{font-family:'Playfair Display',serif;font-size:3.2rem;color:#fff;line-height:1.2;margin-bottom:.6rem}
+    .hero-headline em{color:var(--gold);font-style:italic;display:block}
+    .hero-location{color:#c8a880;font-size:.95rem;margin-bottom:1.8rem;font-weight:500}
+    .hero-sub{color:#a08060;font-size:.97rem;line-height:1.75;margin-bottom:2.5rem;max-width:440px}
+    .hero-rating{display:flex;align-items:center;gap.8rem;margin-bottom:2.5rem;gap:.8rem}
+    .stars{color:#ffd700;font-size:1.1rem}
+    .rating-text{color:#c8a880;font-size:.88rem}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn-gold{background:linear-gradient(135deg,var(--gold),#a87830);color:#fff;padding:.95rem 2.2rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:.93rem;transition:opacity .2s;display:inline-block}
+    .btn-gold:hover{opacity:.88}
+    .btn-ghost{border:1px solid rgba(201,151,60,.4);color:var(--gold);padding:.95rem 2.2rem;border-radius:6px;text-decoration:none;font-size:.93rem;transition:all .2s}
+    .btn-ghost:hover{background:rgba(201,151,60,.1)}
+    .hero-right{position:relative;overflow:hidden}
+    .hero-right img{width:100%;height:100%;object-fit:cover;min-height:100%}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--dark-brown) 0%,transparent 30%)}
+    .hero-badge{position:absolute;bottom:2rem;left:2rem;background:rgba(42,26,16,.92);border:1px solid rgba(201,151,60,.3);padding:1rem 1.5rem;border-radius:10px}
+    .badge-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:#fff;display:block}
+    .badge-label{color:#c8a880;font-size:.78rem}
     /* SERVICES */
-    .services { background: var(--white); padding: 100px 24px; }
-    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--terracotta); text-align: center; margin-bottom: 12px; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; text-align: center; color: var(--dark); margin-bottom: 56px; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
-    .svc-card { background: var(--cream); border-radius: 12px; padding: 34px 26px; border-bottom: 3px solid transparent; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s; }
-    .svc-card:hover { border-color: var(--terracotta); transform: translateY(-5px); box-shadow: 0 12px 32px rgba(181,85,58,0.1); }
-    .svc-icon { width: 52px; height: 52px; background: linear-gradient(135deg, var(--terracotta), var(--warm)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 18px; }
-    .svc-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
-    .svc-desc { font-size: 0.86rem; color: #7a5a4a; line-height: 1.65; }
-
+    .services{padding:6rem 8%;background:var(--cream)}
+    .label-line{display:flex;align-items:center;gap:.8rem;justify-content:center;margin-bottom:1rem}
+    .ll-bar{width:35px;height:2px;background:var(--gold)}
+    .ll-text{color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase}
+    .s-title{font-family:'Playfair Display',serif;font-size:2.4rem;text-align:center;color:var(--dark-brown);margin-bottom:.8rem}
+    .s-sub{text-align:center;color:var(--text-light);font-size:.92rem;margin-bottom:3.5rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .s-card{background:var(--white);border-radius:12px;padding:2rem;text-align:center;border-top:3px solid var(--gold);box-shadow:0 3px 16px rgba(42,26,16,.07);transition:transform .2s}
+    .s-card:hover{transform:translateY(-4px)}
+    .s-icon{font-size:2.3rem;margin-bottom:1rem}
+    .s-name{font-family:'Playfair Display',serif;font-size:1rem;color:var(--dark-brown);margin-bottom:.5rem}
+    .s-desc{color:var(--text-light);font-size:.86rem;line-height:1.6}
     /* ABOUT */
-    .about { background: linear-gradient(160deg, var(--dark) 0%, #3d1f10 100%); padding: 100px 24px; }
-    .about-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .about-content .section-label { text-align: left; color: var(--gold); }
-    .about-content .section-title { text-align: left; color: var(--white); margin-bottom: 22px; }
-    .about-text { font-size: 1rem; color: #b89880; line-height: 1.8; margin-bottom: 18px; }
-    .about-cta { display: inline-block; background: var(--terracotta); color: var(--white); padding: 14px 32px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; margin-top: 10px; }
-    .about-cta:hover { background: #9a3f27; }
-    .about-visual { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,162,64,0.2); border-radius: 16px; padding: 50px 36px; text-align: center; }
-    .about-icon { font-size: 4.5rem; display: block; margin-bottom: 20px; }
-    .about-quote { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-style: italic; color: var(--gold); line-height: 1.5; }
-
-    /* TESTIMONIALS */
-    .testimonials { background: var(--sand); padding: 100px 24px; }
-    .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; max-width: 1000px; margin: 0 auto; }
-    .test-card { background: var(--white); border-radius: 12px; padding: 28px; border-left: 4px solid var(--terracotta); }
-    .stars { color: var(--gold); font-size: 1rem; margin-bottom: 12px; }
-    .test-text { font-size: 0.92rem; color: #5a3a2a; line-height: 1.7; font-style: italic; margin-bottom: 16px; }
-    .test-author { font-weight: 700; font-size: 0.82rem; color: var(--terracotta); }
-
+    .about{padding:6rem 8%;background:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .about-img img{width:100%;height:500px;object-fit:cover;border-radius:16px}
+    .about-content .label-line{justify-content:flex-start}
+    .about-content h2{font-family:'Playfair Display',serif;font-size:2rem;color:var(--dark-brown);margin-bottom:1.5rem;line-height:1.3}
+    .about-content p{color:var(--text-light);line-height:1.8;margin-bottom:1.2rem;font-size:.93rem}
+    .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0;padding:1.5rem;background:var(--cream);border-radius:12px}
+    .a-stat{text-align:center}
+    .a-stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--dark-brown);display:block}
+    .a-stat-label{color:var(--text-light);font-size:.78rem;margin-top:.2rem}
+    /* REVIEWS */
+    .reviews{padding:6rem 8%;background:var(--dark-brown)}
+    .reviews .ll-text{color:#e8c880}
+    .reviews .ll-bar{background:#e8c880}
+    .reviews .s-title{color:#fff}
+    .reviews .s-sub{color:#a08060}
+    .r-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+    .r-card{background:rgba(255,255,255,.05);border:1px solid rgba(201,151,60,.2);border-radius:12px;padding:2rem}
+    .r-stars{color:#ffd700;margin-bottom:1rem}
+    .r-text{color:#c0a070;font-size:.9rem;line-height:1.7;margin-bottom:1.5rem;font-style:italic}
+    .r-name{color:#fff;font-weight:600;font-size:.86rem}
+    .r-loc{color:#806040;font-size:.78rem}
     /* CTA */
-    .cta-banner { background: var(--terracotta); padding: 80px 24px; text-align: center; color: var(--white); }
-    .cta-banner h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; margin-bottom: 14px; }
-    .cta-banner p { font-size: 1rem; opacity: 0.88; margin-bottom: 34px; max-width: 500px; margin-left: auto; margin-right: auto; }
-    .btn-white { background: var(--white); color: var(--terracotta); padding: 15px 38px; border-radius: 4px; text-decoration: none; font-weight: 800; font-size: 0.95rem; display: inline-block; transition: transform 0.2s; }
-    .btn-white:hover { transform: translateY(-2px); }
-
+    .cta{padding:5rem 8%;background:linear-gradient(135deg,var(--gold),var(--warm-brown));text-align:center}
+    .cta h2{font-family:'Playfair Display',serif;font-size:2.4rem;color:#fff;margin-bottom:1rem}
+    .cta p{color:rgba(255,255,255,.88);font-size:.98rem;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto}
+    .btn-white{background:#fff;color:var(--warm-brown);padding:1rem 2.8rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.95rem;display:inline-block;transition:opacity .2s}
+    .btn-white:hover{opacity:.92}
     /* CONTACT */
-    .contact { background: var(--white); padding: 100px 24px; }
-    .contact-inner { max-width: 640px; margin: 0 auto; text-align: center; }
-    .contact-info { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin: 34px 0; }
-    .c-item { text-align: center; }
-    .c-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #a08070; font-weight: 700; display: block; margin-bottom: 5px; }
-    .c-val { font-weight: 700; color: var(--dark); font-size: 0.92rem; }
-    .contact-form { background: var(--cream); border-radius: 12px; padding: 36px; text-align: left; margin-top: 28px; }
-    .form-group { margin-bottom: 16px; }
-    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--dark); margin-bottom: 7px; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 1.5px solid #d8c8b8; border-radius: 7px; font-size: 0.9rem; font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); outline: none; transition: border-color 0.2s; }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--terracotta); }
-    .form-group textarea { min-height: 88px; resize: vertical; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .btn-submit { width: 100%; padding: 14px; background: var(--terracotta); color: var(--white); border: none; border-radius: 7px; font-size: 0.95rem; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: background 0.2s; }
-    .btn-submit:hover { background: #9a3f27; }
-
-    footer { background: var(--dark); color: #7a5a48; padding: 46px 24px 26px; text-align: center; }
-    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); font-style: italic; margin-bottom: 9px; }
-    .footer-loc { font-size: 0.83rem; margin-bottom: 5px; }
-    .footer-email { font-size: 0.83rem; color: var(--warm); margin-bottom: 22px; }
-    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 16px 0; }
-    .footer-copy { font-size: 0.75rem; }
-
-    @media (max-width: 768px) {
-      .hero::after { display: none; }
-      .hero-right-content { display: none; }
-      .hero { padding: 100px 28px 60px; }
-      .about-inner { grid-template-columns: 1fr; gap: 40px; }
-      .nav-links { display: none; }
-      .form-row { grid-template-columns: 1fr; }
+    .contact{padding:5rem 8%;background:var(--cream);display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+    .contact h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--dark-brown);margin-bottom:1.5rem}
+    .c-item{display:flex;gap:1rem;margin-bottom:1.4rem}
+    .c-icon{color:var(--gold);font-size:1.2rem;margin-top:.1rem}
+    .c-label{font-weight:600;color:var(--dark-brown);font-size:.88rem;margin-bottom:.2rem}
+    .c-val{color:var(--text-light);font-size:.86rem}
+    .cf{background:#fff;padding:2.5rem;border-radius:14px;box-shadow:0 4px 20px rgba(42,26,16,.08)}
+    .cf h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--dark-brown);margin-bottom:1.5rem}
+    .fg{margin-bottom:1.1rem}
+    .fg label{display:block;font-size:.79rem;font-weight:600;color:var(--text);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+    .fg input,.fg textarea{width:100%;padding:.75rem 1rem;border:1.5px solid #e8d5c0;border-radius:7px;font-family:'Inter',sans-serif;font-size:.88rem;color:var(--text);background:var(--cream);transition:border-color .2s}
+    .fg input:focus,.fg textarea:focus{outline:none;border-color:var(--gold)}
+    .fg textarea{resize:vertical;min-height:85px}
+    .form-btn{width:100%;background:linear-gradient(135deg,var(--gold),var(--warm-brown));color:#fff;border:none;padding:.95rem;border-radius:7px;font-size:.93rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:opacity .2s}
+    .form-btn:hover{opacity:.9}
+    /* FOOTER */
+    footer{background:var(--dark-brown);padding:2.5rem 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .f-logo{font-family:'Playfair Display',serif;color:#fff;font-size:1.2rem}
+    .f-logo span{color:var(--gold)}
+    footer p{color:#806040;font-size:.82rem}
+    .f-links{display:flex;gap:1.5rem}
+    .f-links a{color:#806040;text-decoration:none;font-size:.82rem;transition:color .2s}
+    .f-links a:hover{color:#fff}
+    .alma-bar{background:#1a1a2e;text-align:center;padding:.8rem;font-size:.76rem;color:#555}
+    .alma-bar a{color:#00b4d8;text-decoration:none}
+    @media(max-width:768px){
+      .hero{grid-template-columns:1fr}
+      .hero-left{padding:5rem 5% 3rem}
+      .hero-headline{font-size:2.3rem}
+      .hero-right{height:280px}
+      .services-grid{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr;gap:2rem}
+      .r-grid{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .nav-links{display:none}
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-logo">Marcela Hair Studio</div>
-    <ul class="nav-links">
-      <li><a href="#services">Servicios</a></li>
-      <li><a href="#about">Nosotros</a></li>
-      <li><a href="#contact">Contacto</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Reservar Cita</a>
-  </nav>
+<!-- Nav -->
+<nav>
+  <div class="nav-logo">Marcela Hair <span>Studio</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Servicios</a></li>
+    <li><a href="#about">Nosotros</a></li>
+    <li><a href="#reviews">Reseñas</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Reservar Cita</a>
+</nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-eyebrow">✦ Salon de Belleza · Monterrey, Mexico</div>
-      <h1 class="hero-title">El Salon Que<br />Monterrey <span class="accent">Merece</span></h1>
-      <p class="hero-sub">Cortes modernos, coloracion experta y atencion personalizada que te hace sentir unica. Tu transformacion comienza aqui, en Monterrey.</p>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Reserva Tu Cita Ahora</a>
-        <a href="#services" class="btn-outline">Ver Servicios</a>
-      </div>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag"><span>✦ El Obispado, Monterrey · Desde hace más de una década</span></div>
+    <h1 class="hero-headline">El Salón de Belleza<em>de Confianza</em></h1>
+    <p class="hero-location">📍 Padre Mier 1395A, El Obispado, Monterrey, N.L.</p>
+    <p class="hero-sub">Cortes, coloración y tratamientos capilares que resaltan tu mejor versión — con la calidez y profesionalismo que mereces en el corazón de Monterrey.</p>
+    <div class="hero-rating">
+      <span class="stars">★★★★★</span>
+      <span class="rating-text">Tasa de recomendación del 94% · El Obispado</span>
     </div>
-    <div class="hero-right-content">
-      <div class="hero-stat-block">
-        <div class="stat-num">✂️</div>
-        <div class="stat-lab">Tecnicas Modernas</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="hero-stat-block">
-        <div class="stat-num">5★</div>
-        <div class="stat-lab">Calificacion en Monterrey</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="hero-stat-block">
-        <div class="stat-num">100%</div>
-        <div class="stat-lab">Atencion Personalizada</div>
-      </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-gold">Reserva tu Cita Hoy</a>
+      <a href="#services" class="btn-ghost">Ver Servicios</a>
     </div>
-  </section>
-
-  <section class="services" id="services">
-    <div class="section-label">Lo Que Ofrecemos</div>
-    <h2 class="section-title">Nuestros Servicios</h2>
-    <div class="services-grid">
-      <div class="svc-card">
-        <div class="svc-icon">✂️</div>
-        <div class="svc-name">Cortes de Cabello</div>
-        <p class="svc-desc">Cortes precisos y modernos adaptados a tu forma de rostro y estilo de vida personal.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">🎨</div>
-        <div class="svc-name">Coloracion y Mechas</div>
-        <p class="svc-desc">Coloracion vibrante y mechas que iluminan tu cabello con tecnicas de vanguardia.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">🌟</div>
-        <div class="svc-name">Balayage y Ombre</div>
-        <p class="svc-desc">Degradados naturales y balayage artesanal para un look fresco, moderno y de tendencia.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">💆</div>
-        <div class="svc-name">Tratamientos Capilares</div>
-        <p class="svc-desc">Tratamientos nutritivos de keratina, hidratacion y reparacion para un cabello sano y brillante.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">👑</div>
-        <div class="svc-name">Peinados y Recogidos</div>
-        <p class="svc-desc">Peinados elegantes y recogidos para bodas, eventos y ocasiones especiales de todo tipo.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">💇</div>
-        <div class="svc-name">Alaciado y Permanente</div>
-        <p class="svc-desc">Alisados profesionales y permanentes para transformar tu textura y simplificar tu rutina diaria.</p>
-      </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&auto=format&fit=crop&q=80" alt="Marcela Hair Studio salón de belleza en El Obispado Monterrey">
+    <div class="hero-overlay"></div>
+    <div class="hero-badge">
+      <span class="badge-num">94%</span>
+      <span class="badge-label">Tasa de recomendación</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="about" id="about">
-    <div class="about-inner">
-      <div class="about-content">
-        <div class="section-label">Nuestra Historia</div>
-        <h2 class="section-title">El Studio de Confianza en Monterrey</h2>
-        <p class="about-text">Marcela Hair Studio es el salon de confianza en Monterrey, donde cada clienta recibe atencion personalizada y resultados que hablan por si solos. Dirigido por Marcela, el estudio combina tecnicas modernas con un ambiente calido y acogedor para que cada visita sea una experiencia memorable.</p>
-        <p class="about-text">Desde cortes precisos hasta coloraciones vibrantes, en Marcela Hair Studio tu cabello esta en las mejores manos.</p>
-        <a href="#contact" class="about-cta">Reserva Tu Cita</a>
-      </div>
-      <div class="about-visual">
-        <span class="about-icon">💇‍♀️</span>
-        <div class="about-quote">"Tu transformacion comienza aqui, en Monterrey."</div>
-      </div>
+<!-- Services -->
+<section class="services" id="services">
+  <div class="label-line"><div class="ll-bar"></div><div class="ll-text">Nuestros Servicios</div><div class="ll-bar"></div></div>
+  <h2 class="s-title">Servicios de Estilismo Capilar</h2>
+  <p class="s-sub">Cada servicio está diseñado para resaltar tu mejor versión con técnicas modernas y productos de calidad profesional.</p>
+  <div class="services-grid">
+    <div class="s-card">
+      <div class="s-icon">✂️</div>
+      <div class="s-name">Cortes y Estilizados</div>
+      <div class="s-desc">Cortes precisos y estilizados profesionales adaptados a tu tipo de cabello, cara y estilo personal.</div>
     </div>
-  </section>
-
-  <section class="testimonials">
-    <div class="section-label">Opiniones</div>
-    <h2 class="section-title">Lo Que Dicen Nuestras Clientas</h2>
-    <div class="test-grid">
-      <div class="test-card">
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"¡Marcela es increible! Llevo años viniendo y siempre salgo con el cabello perfecto. El balayage que me hicieron duro meses hermoso."</p>
-        <div class="test-author">— Valeria R., Monterrey</div>
-      </div>
-      <div class="test-card">
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"El mejor salon en Monterrey sin duda. Me hicieron el corte exactamente como lo queria y el trato fue muy personalizado. Lo recomiendo totalmente."</p>
-        <div class="test-author">— Gabriela M., Nuevo Leon</div>
-      </div>
-      <div class="test-card">
-        <div class="stars">★★★★★</div>
-        <p class="test-text">"Fui para mi boda y el peinado estuvo perfecto toda la noche. El equipo de Marcela es muy profesional y amable. ¡Gracias por hacer mi dia especial!"</p>
-        <div class="test-author">— Alejandra C., Monterrey</div>
-      </div>
+    <div class="s-card">
+      <div class="s-icon">🎨</div>
+      <div class="s-name">Coloración y Mechas</div>
+      <div class="s-desc">Coloración completa, mechas balayage, ombré y técnicas modernas para un color luminoso y natural.</div>
     </div>
-  </section>
-
-  <section class="cta-banner">
-    <h2>Tu Transformacion Te Espera</h2>
-    <p>Reserva tu cita en Marcela Hair Studio y descubre por que somos el salon de confianza en Monterrey.</p>
-    <a href="#contact" class="btn-white">Reserva Tu Cita Ahora</a>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-      <div class="section-label">Contacto</div>
-      <h2 class="section-title">Agenda Tu Cita</h2>
-      <div class="contact-info">
-        <div class="c-item"><span class="c-label">Ubicacion</span><span class="c-val">Monterrey, Nuevo Leon, Mexico</span></div>
-        <div class="c-item"><span class="c-label">Email</span><span class="c-val">marcelahairstudio@hotmail.com</span></div>
-        <div class="c-item"><span class="c-label">Horario</span><span class="c-val">Lun–Sab 9am–7pm</span></div>
-      </div>
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xojppajv" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Tu Nombre</label>
-              <input type="text" name="name" placeholder="Ej. Valeria Martinez" required />
-            </div>
-            <div class="form-group">
-              <label>Correo Electronico</label>
-              <input type="email" name="email" placeholder="tu@correo.com" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Servicio de Interes</label>
-            <select name="service">
-              <option value="">Selecciona un servicio...</option>
-              <option>Cortes de Cabello</option>
-              <option>Coloracion y Mechas</option>
-              <option>Balayage y Ombre</option>
-              <option>Tratamientos Capilares</option>
-              <option>Peinados y Recogidos</option>
-              <option>Alaciado y Permanente</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Mensaje / Fecha Preferida</label>
-            <textarea name="message" placeholder="Cuentanos que necesitas o cuando quieres venir..."></textarea>
-          </div>
-          <input type="hidden" name="_subject" value="Nueva Cita - Marcela Hair Studio Monterrey" />
-          <button type="submit" class="btn-submit">Reservar Mi Cita →</button>
-        </form>
-      </div>
+    <div class="s-card">
+      <div class="s-icon">💆‍♀️</div>
+      <div class="s-name">Tratamientos Capilares</div>
+      <div class="s-desc">Tratamientos intensivos de hidratación, nutrición y reparación para cabello sano, brillante y fuerte.</div>
     </div>
-  </section>
+    <div class="s-card">
+      <div class="s-icon">💍</div>
+      <div class="s-name">Peinados para Ocasiones</div>
+      <div class="s-desc">Peinados elegantes y modernos para graduaciones, fiestas, cumpleaños y cualquier evento especial.</div>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">👰</div>
+      <div class="s-name">Servicios de Novia</div>
+      <div class="s-desc">Peinados nupciales y pruebas de novia para que luzcas perfecta en el día más importante de tu vida.</div>
+    </div>
+    <div class="s-card">
+      <div class="s-icon">✨</div>
+      <div class="s-name">Alisados y Permanentes</div>
+      <div class="s-desc">Alisados de queratina, permanentes y tratamientos de reestructuración para transformar tu cabello.</div>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <div class="footer-logo">Marcela Hair Studio</div>
-    <div class="footer-loc">Monterrey, Nuevo Leon, Mexico</div>
-    <div class="footer-email">marcelahairstudio@hotmail.com</div>
-    <hr class="footer-divider" />
-    <div class="footer-copy">© 2026 Marcela Hair Studio. Todos los derechos reservados. | Sitio web por <strong style="color:#d4845f;">Alma Digital Designs</strong></div>
-  </footer>
+<!-- About -->
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80" alt="Interior de Marcela Hair Studio en El Obispado Monterrey">
+  </div>
+  <div class="about-content">
+    <div class="label-line"><div class="ll-bar"></div><div class="ll-text">Nuestra Historia</div></div>
+    <h2>Más de una Década Transformando el Cabello en Monterrey</h2>
+    <p>Marcela Hair Studio es el salón de referencia en El Obispado, Monterrey, con más de una década dedicada a transformar el cabello de sus clientas. Ubicado en Padre Mier 1395A, combinamos técnica avanzada con un trato personalizado y cálido.</p>
+    <p>Con una tasa de recomendación del 94%, somos el salón de confianza de cientos de mujeres en Monterrey que buscan resultados profesionales y una experiencia de calidad cada vez que nos visitan.</p>
+    <div class="about-stats">
+      <div class="a-stat"><span class="a-stat-num">10+</span><div class="a-stat-label">Años de experiencia</div></div>
+      <div class="a-stat"><span class="a-stat-num">94%</span><div class="a-stat-label">Tasa de recomendación</div></div>
+      <div class="a-stat"><span class="a-stat-num">El Obispado</span><div class="a-stat-label">Monterrey, N.L.</div></div>
+    </div>
+    <a href="#contact" class="btn-gold">Reserva tu Cita Hoy</a>
+  </div>
+</section>
 
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+  <div class="label-line" style="justify-content:center"><div class="ll-bar"></div><div class="ll-text">Reseñas de Clientes</div><div class="ll-bar"></div></div>
+  <h2 class="s-title">Lo Que Dicen Nuestras Clientas</h2>
+  <p class="s-sub">La confianza de nuestras clientas es nuestra mayor satisfacción — con una tasa de recomendación del 94%.</p>
+  <div class="r-grid">
+    <div class="r-card">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"Marcela es increíble. Llevo años yendo a su salón y nunca me ha decepcionado. Mis mechas balayage quedaron perfectas y el trato siempre es muy cálido y profesional. ¡La recomiendo con los ojos cerrados!"</p>
+      <div class="r-name">Fernanda R.</div>
+      <div class="r-loc">Reseña · Monterrey, N.L.</div>
+    </div>
+    <div class="r-card">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"Me hice el alisado de queratina y el resultado fue espectacular. Mi cabello nunca había lucido tan brillante y manejable. El ambiente del salón es muy bonito y relajante. Definitivamente volveré pronto."</p>
+      <div class="r-name">Alejandra M.</div>
+      <div class="r-loc">Reseña · El Obispado, Monterrey</div>
+    </div>
+    <div class="r-card">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"Hice mi peinado de novia con Marcela y fue lo mejor que pude haber decidido. Desde la prueba hasta el día de la boda todo fue perfecto. Es muy detallista y escucha exactamente lo que quieres. 100% recomendada."</p>
+      <div class="r-name">Sofía G.</div>
+      <div class="r-loc">Reseña · Monterrey, N.L.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>¿Lista para Transformar tu Cabello?</h2>
+  <p>Agenda tu cita hoy y déjanos mostrarte por qué somos el salón de belleza más recomendado del Obispado en Monterrey.</p>
+  <a href="#contact" class="btn-white">Reserva tu Cita Hoy</a>
+</div>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div>
+    <h2>Visítanos en Monterrey</h2>
+    <div class="c-item">
+      <span class="c-icon">📍</span>
+      <div><div class="c-label">Dirección</div><div class="c-val">Padre Mier 1395A, El Obispado, Monterrey, N.L., México</div></div>
+    </div>
+    <div class="c-item">
+      <span class="c-icon">📧</span>
+      <div><div class="c-label">Correo Electrónico</div><div class="c-val">marcelahairstudio@hotmail.com</div></div>
+    </div>
+    <div class="c-item">
+      <span class="c-icon">💍</span>
+      <div><div class="c-label">Servicios de Novia</div><div class="c-val">Pruebas y peinados nupciales disponibles con cita previa</div></div>
+    </div>
+    <div class="c-item">
+      <span class="c-icon">⭐</span>
+      <div><div class="c-label">Recomendación</div><div class="c-val">94% de tasa de recomendación · El Obispado, Monterrey</div></div>
+    </div>
+  </div>
+  <div class="cf">
+    <h3>Agenda tu Cita</h3>
+    <form action="https://formspree.io/f/xojppajv" method="POST">
+      <div class="fg"><label>Nombre Completo</label><input type="text" name="name" placeholder="Fernanda García" required></div>
+      <div class="fg"><label>Correo Electrónico</label><input type="email" name="email" placeholder="fernanda@ejemplo.com" required></div>
+      <div class="fg"><label>Servicio de Interés</label><input type="text" name="service" placeholder="Ej. Coloración, Corte, Alisado..."></div>
+      <div class="fg"><label>Mensaje</label><textarea name="message" placeholder="Fecha preferida, preguntas o solicitudes especiales..."></textarea></div>
+      <button type="submit" class="form-btn">Reserva tu Cita Hoy</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="f-logo">Marcela Hair <span>Studio</span></div>
+  <p>Padre Mier 1395A, El Obispado, Monterrey, N.L. · marcelahairstudio@hotmail.com</p>
+  <div class="f-links">
+    <a href="#services">Servicios</a>
+    <a href="#about">Nosotros</a>
+    <a href="#reviews">Reseñas</a>
+    <a href="#contact">Contacto</a>
+  </div>
+</footer>
+<div class="alma-bar">Vista previa diseñada por <a href="https://almadigitalservices.com" target="_blank">Alma Digital Services</a> — Sitios web profesionales para negocios locales</div>
 </body>
 </html>
