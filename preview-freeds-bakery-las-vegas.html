@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freed's Bakery Las Vegas — Website Redesign Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--pink:#c42d7e;--cream:#fff9f5;--dark:#1a0a12;--gold:#f0c040;--soft:#fce8f4}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--dark)}
+.badge{background:var(--pink);color:var(--cream);text-align:center;padding:12px;font-size:13px;font-weight:600;letter-spacing:1px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:var(--dark)}
+.logo{font-family:'Playfair Display',serif;font-size:26px;color:var(--cream);letter-spacing:1px}
+.logo span{color:var(--gold)}
+nav a{color:var(--cream);opacity:0.75;text-decoration:none;font-size:14px;margin-left:28px}
+.hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 40px;background:radial-gradient(ellipse at center,#3a1030 0%,#1a0a12 70%)}
+.hero-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:8px 20px;font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(48px,8vw,96px);font-weight:900;line-height:1.0;margin-bottom:24px;color:var(--cream)}
+.hero h1 em{color:var(--gold);font-style:normal;display:block}
+.hero p{font-size:18px;line-height:1.7;opacity:0.8;max-width:600px;margin-bottom:48px;color:var(--cream)}
+.btn-pink{background:var(--pink);color:var(--cream);padding:18px 48px;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block;margin:6px}
+.btn-gold{border:2px solid var(--gold);color:var(--gold);padding:16px 36px;font-size:14px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block;margin:6px}
+.pain{background:var(--dark);padding:80px 40px}
+.pain-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.pain-card{border-left:3px solid var(--pink);padding-left:24px}
+.pain-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--cream)}
+.pain-card p{font-size:14px;line-height:1.8;color:var(--cream);opacity:0.75}
+.items-s{padding:100px 40px;background:var(--soft)}
+.items-s h2{font-family:'Playfair Display',serif;font-size:46px;text-align:center;margin-bottom:12px;color:var(--dark)}
+.items-s .sub{text-align:center;opacity:0.7;margin-bottom:52px;font-size:16px}
+.items-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.item-card{background:white;border:1px solid rgba(196,45,126,0.1);padding:32px;border-radius:8px;text-align:center}
+.item-icon{font-size:48px;margin-bottom:16px}
+.item-card h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--pink);margin-bottom:10px}
+.item-card p{font-size:14px;line-height:1.8;opacity:0.8}
+.stats{background:var(--pink);padding:80px 40px;text-align:center}
+.stats-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.stat-num{font-family:'Playfair Display',serif;font-size:64px;font-weight:900;color:var(--cream)}
+.stat-label{font-size:14px;font-weight:600;color:var(--cream);opacity:0.8;margin-top:4px}
+.cta-s{background:var(--dark);padding:100px 40px;text-align:center}
+.cta-s h2{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,56px);color:var(--cream);margin-bottom:20px}
+.cta-s p{color:var(--cream);opacity:0.8;font-size:18px;max-width:560px;margin:0 auto 40px}
+footer{background:#100008;padding:32px;text-align:center;font-size:13px;opacity:0.5;color:var(--cream)}
+@media(max-width:768px){.pain-inner,.stats-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="badge">FREE WEBSITE REDESIGN PREVIEW — FREED'S BAKERY LAS VEGAS</div>
+<nav>
+  <div class="logo">Freed's <span>Bakery</span></div>
+  <div><a href="#cakes">Custom Cakes</a><a href="#menu">Menu</a><a href="#contact">Order</a></div>
+</nav>
+<section class="hero">
+  <div class="hero-badge">Las Vegas's Most Celebrated Bakery Since 1959</div>
+  <h1>Vegas Celebrations<em>Start Here.</em></h1>
+  <p>For over 65 years, Freed's Bakery has been the choice of Las Vegas for custom cakes, legendary pastries, and every sweet moment worth celebrating.</p>
+  <a href="#cakes" class="btn-pink">Order a Custom Cake</a>
+  <a href="#menu" class="btn-gold">View Our Menu</a>
+</section>
+<div class="pain">
+  <div class="pain-inner">
+    <div class="pain-card"><h3>Las Vegas Visitors and Locals Can't Find You Easily Online</h3><p>Tourists searching "best bakery Las Vegas" and locals looking for custom cake shops are finding competitors first. Your 65-year legacy deserves better digital visibility.</p></div>
+    <div class="pain-card"><h3>Custom Cake Orders Should Be Easy to Place Online</h3><p>Your customers want to browse, get inspired, and order — but your current website makes this harder than it needs to be. Every friction point is a lost order.</p></div>
+  </div>
+</div>
+<section class="items-s" id="cakes">
+  <h2>Made With Love Since 1959</h2>
+  <div class="sub">Las Vegas's favorite destination for life's sweetest moments</div>
+  <div class="items-grid">
+    <div class="item-card"><div class="item-icon">🎂</div><h3>Custom Celebration Cakes</h3><p>Birthday, quinceañera, bar mitzvah, graduation — no design too unique. Our decorators bring your vision to life.</p></div>
+    <div class="item-card"><div class="item-icon">💒</div><h3>Wedding Cakes</h3><p>From classic elegance to modern showstoppers, our wedding cakes have graced thousands of Las Vegas ceremonies.</p></div>
+    <div class="item-card"><div class="item-icon">🥐</div><h3>Pastries and Danishes</h3><p>Fresh-baked croissants, rugalach, strudel, and European-style pastries every single morning.</p></div>
+    <div class="item-card"><div class="item-icon">🍪</div><h3>Cookies and Confections</h3><p>Black-and-white cookies, mandelbread, decorated sugar cookies, and seasonal specialties all year round.</p></div>
+  </div>
+</section>
+<div class="stats">
+  <div class="stats-grid">
+    <div><div class="stat-num">65+</div><div class="stat-label">Years in Las Vegas</div></div>
+    <div><div class="stat-num">10K+</div><div class="stat-label">Custom Cakes per Year</div></div>
+    <div><div class="stat-num">4.9</div><div class="stat-label">Star Google Rating</div></div>
+  </div>
+</div>
+<section class="cta-s" id="contact">
+  <h2>This Is What Your New Website Could Look Like</h2>
+  <p>Alma Digital built this free preview to show what's possible. 65 years of Las Vegas baking tradition deserves the best digital presence.</p>
+  <a href="mailto:jfvena@yahoo.com?subject=Free Website Redesign" class="btn-pink">Claim Your Free Redesign</a>
+</section>
+<footer>2025 Freed's Bakery Las Vegas | Preview by Alma Digital Services | Serving Las Vegas since 1959</footer>
+</body>
+</html>
