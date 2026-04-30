@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nancy's Hustle Houston — Website Redesign Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--teal:#1a6a72;--salmon:#e07865;--ivory:#fefaf5;--dark:#0e2a2e;--warm:#c8e0e2}
+body{font-family:'Inter',sans-serif;background:var(--ivory);color:var(--dark)}
+.badge{background:var(--teal);color:var(--warm);text-align:center;padding:12px;font-size:13px;font-weight:600;letter-spacing:1px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:white;box-shadow:0 1px 12px rgba(26,106,114,0.08)}
+.logo{font-family:'Playfair Display',serif;font-size:26px;color:var(--dark)}
+.logo span{color:var(--salmon)}
+nav a{color:var(--dark);opacity:0.65;text-decoration:none;font-size:14px;margin-left:28px}
+.hero-split{display:grid;grid-template-columns:50% 50%;min-height:88vh}
+.hero-left{background:var(--teal);padding:80px 60px;display:flex;flex-direction:column;justify-content:center}
+.tag{border:1px solid rgba(200,224,226,0.4);color:var(--warm);padding:8px 18px;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px;display:inline-block;width:fit-content}
+.hero-left h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,60px);font-weight:900;color:var(--ivory);line-height:1.1;margin-bottom:24px}
+.hero-left h1 em{color:var(--salmon);font-style:normal;display:block}
+.hero-left p{color:var(--warm);opacity:0.9;font-size:16px;line-height:1.8;margin-bottom:40px;max-width:420px}
+.btn-s{background:var(--salmon);color:var(--ivory);padding:16px 40px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block;margin-right:12px}
+.btn-o{border:1px solid rgba(200,224,226,0.5);color:var(--warm);padding:14px 32px;font-size:13px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block}
+.hero-right{background:linear-gradient(145deg,#e8f8fa,#d0edf0,#c8e0e2);display:flex;align-items:center;justify-content:center;padding:60px}
+.hero-card{background:white;border:none;padding:48px;border-radius:12px;text-align:center;max-width:360px;box-shadow:0 20px 60px rgba(26,106,114,0.15)}
+.hero-card .big{font-size:72px;margin-bottom:20px}
+.hero-card h2{font-family:'Playfair Display',serif;font-size:24px;color:var(--dark);margin-bottom:12px}
+.hero-card p{opacity:0.75;font-size:14px;line-height:1.8}
+.hero-card .pill{display:inline-block;background:var(--teal);color:var(--ivory);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-top:16px;text-transform:uppercase;letter-spacing:1px}
+.pain{background:var(--dark);padding:80px 40px}
+.pain-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.pain-card{border-left:3px solid var(--salmon);padding-left:24px}
+.pain-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--warm)}
+.pain-card p{font-size:14px;line-height:1.8;color:var(--warm);opacity:0.8}
+.menu-s{padding:100px 40px;background:var(--ivory)}
+.menu-s h2{font-family:'Playfair Display',serif;font-size:46px;text-align:center;margin-bottom:12px}
+.menu-s .sub{text-align:center;opacity:0.65;margin-bottom:52px;font-size:16px}
+.menu-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.menu-item{background:white;border:1px solid rgba(26,106,114,0.1);padding:32px;border-radius:8px}
+.menu-icon{font-size:36px;margin-bottom:14px}
+.menu-item h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--teal);margin-bottom:8px}
+.menu-item p{font-size:14px;line-height:1.8;opacity:0.8}
+.cta-s{background:var(--salmon);padding:100px 40px;text-align:center}
+.cta-s h2{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,52px);color:var(--ivory);margin-bottom:20px}
+.cta-s p{color:var(--ivory);opacity:0.9;font-size:17px;max-width:520px;margin:0 auto 40px}
+.btn-w{background:white;color:var(--salmon);padding:18px 48px;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;border-radius:2px;text-decoration:none;display:inline-block}
+footer{background:var(--dark);padding:32px;text-align:center;font-size:13px;color:var(--warm);opacity:0.5}
+@media(max-width:768px){.hero-split{grid-template-columns:1fr}.hero-right{display:none}.pain-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="badge">FREE WEBSITE REDESIGN PREVIEW — NANCY'S HUSTLE HOUSTON</div>
+<nav>
+  <div class="logo">Nancy's <span>Hustle</span></div>
+  <div><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Reservations</a></div>
+</nav>
+<div class="hero-split">
+  <div class="hero-left">
+    <div class="tag">Houston's Beloved Modern American Brunch Spot</div>
+    <h1>Brunch Done<em>Right.</em></h1>
+    <p>Nancy's Hustle is Houston's go-to for creative modern American brunch and dinner — locally sourced, expertly crafted, and served with genuine Houston hospitality.</p>
+    <a href="#menu" class="btn-s">View Our Menu</a>
+    <a href="#contact" class="btn-o">Reservations</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="big">🍳</div>
+      <h2>Modern American Brunch and Dinner</h2>
+      <p>Seasonal ingredients, creative cocktails, and a menu that keeps Houston foodies coming back every weekend.</p>
+      <span class="pill">James Beard Nominated</span>
+    </div>
+  </div>
+</div>
+<div class="pain">
+  <div class="pain-inner">
+    <div class="pain-card"><h3>Houston Foodies Can't Find You as Easily as They Should</h3><p>Brunch culture in Houston is booming. People searching for the best brunch spots deserve to find Nancy's Hustle at the top — your current digital presence is holding you back.</p></div>
+    <div class="pain-card"><h3>Your Accolades Should Lead Your Online Story</h3><p>James Beard recognition is rare and powerful. But your current website doesn't lead with this. A modern site makes your reputation the first thing every new customer sees.</p></div>
+  </div>
+</div>
+<section class="menu-s" id="menu">
+  <h2>The Hustle Menu</h2>
+  <div class="sub">Modern American fare with Houston soul — brunch daily, dinner nightly</div>
+  <div class="menu-grid">
+    <div class="menu-item"><div class="menu-icon">🥞</div><h3>Weekend Brunch</h3><p>Brown butter pancakes, oyster po' boy brunch, smoked salmon hash, and Houston's most creative eggs benedicts.</p></div>
+    <div class="menu-item"><div class="menu-icon">🍝</div><h3>Dinner Menu</h3><p>Rotating seasonal dishes featuring Gulf Coast seafood, heritage proteins, and Texas-grown produce. Always fresh, never predictable.</p></div>
+    <div class="menu-item"><div class="menu-icon">🍹</div><h3>Craft Cocktails and Natural Wine</h3><p>An inspired cocktail menu with house syrups, Texas spirits, and a natural wine list that rotates seasonally.</p></div>
+    <div class="menu-item"><div class="menu-icon">🌿</div><h3>Locally Sourced Ingredients</h3><p>Nancy's Hustle partners with Texas farms and Gulf fisheries to bring you ingredients at their peak — every single service.</p></div>
+  </div>
+</section>
+<section class="cta-s" id="contact">
+  <h2>This Is What Your New Website Could Look Like</h2>
+  <p>Alma Digital built this free preview for Nancy's Hustle. Your James Beard-recognized kitchen deserves a world-class digital presence.</p>
+  <a href="mailto:info@nancyshustle.com?subject=Free Website Redesign" class="btn-w">Claim Your Free Redesign</a>
+</section>
+<footer>2025 Nancy's Hustle Houston | Preview by Alma Digital Services | info@nancyshustle.com</footer>
+</body>
+</html>
