@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Moonshiners Southern Table Houston — Website Redesign Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--near:#0d0a07;--amber:#c8832a;--cream:#f7f3ed;--mid:#1a1410}
+body{font-family:'Inter',sans-serif;background:var(--near);color:var(--cream)}
+.badge{background:var(--amber);color:var(--near);text-align:center;padding:12px;font-size:13px;font-weight:600;letter-spacing:1px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 60px;border-bottom:1px solid rgba(200,131,42,0.15)}
+.logo{font-family:'Playfair Display',serif;font-size:22px;letter-spacing:3px;text-transform:uppercase;color:var(--cream)}
+.logo span{color:var(--amber)}
+nav a{color:var(--cream);opacity:0.6;text-decoration:none;font-size:13px;letter-spacing:1px;margin-left:32px;text-transform:uppercase}
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:flex-end;padding:80px 60px;background:linear-gradient(to top,rgba(13,10,7,0.95) 40%,rgba(13,10,7,0.5) 100%),repeating-linear-gradient(45deg,rgba(200,131,42,0.03) 0,rgba(200,131,42,0.03) 1px,transparent 1px,transparent 12px)}
+.hero .over{color:var(--amber);font-size:11px;letter-spacing:5px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(52px,8vw,96px);font-weight:900;line-height:1.0;margin-bottom:28px;max-width:800px}
+.hero p{font-size:18px;line-height:1.8;opacity:0.75;max-width:600px;margin-bottom:48px}
+.btn-amber{background:var(--amber);color:var(--near);padding:18px 48px;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;border-radius:1px;text-decoration:none;display:inline-block}
+.pain{background:var(--mid);padding:80px 60px}
+.pain-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.pain-card{border-bottom:1px solid rgba(200,131,42,0.2);padding-bottom:32px}
+.pain-card h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:12px;color:var(--amber)}
+.pain-card p{font-size:15px;line-height:1.9;opacity:0.75}
+.menu-s{padding:120px 60px;background:var(--near)}
+.menu-s .over{color:var(--amber);font-size:11px;letter-spacing:5px;text-transform:uppercase;margin-bottom:16px}
+.menu-s h2{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,60px);margin-bottom:60px;max-width:700px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
+.menu-item h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--amber);margin-bottom:12px}
+.menu-item p{font-size:14px;line-height:1.9;opacity:0.7;border-left:1px solid rgba(200,131,42,0.3);padding-left:16px}
+.divider{height:1px;background:rgba(200,131,42,0.2);margin:80px 60px}
+.cta-s{padding:120px 60px;text-align:center}
+.cta-s h2{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,64px);margin-bottom:20px}
+.cta-s p{opacity:0.75;font-size:18px;max-width:560px;margin:0 auto 48px}
+footer{background:var(--mid);padding:32px;text-align:center;font-size:13px;opacity:0.4;border-top:1px solid rgba(200,131,42,0.1)}
+@media(max-width:768px){.pain-inner{grid-template-columns:1fr}.hero{padding:60px 24px}.menu-s,.cta-s{padding:80px 24px}}
+</style>
+</head>
+<body>
+<div class="badge">FREE WEBSITE REDESIGN PREVIEW — THE MOONSHINERS SOUTHERN TABLE HOUSTON</div>
+<nav>
+  <div class="logo">The <span>Moonshiners</span></div>
+  <div><a href="#menu">Menu</a><a href="#spirits">Spirits</a><a href="#contact">Reserve</a></div>
+</nav>
+<section class="hero">
+  <div class="over">Houston's Premier Southern Dining and Craft Spirits Destination</div>
+  <h1>Southern Table.<br>Craft Spirits.<br>Houston Soul.</h1>
+  <p>Where the South's finest culinary traditions meet the art of craft distilling. An intimate dining experience unlike anything else in Houston.</p>
+  <a href="#contact" class="btn-amber">Reserve Your Evening</a>
+</section>
+<div class="pain">
+  <div class="pain-inner">
+    <div class="pain-card"><h3>Houston's Best-Kept Secret Should Be a Destination</h3><p>The Moonshiners experience is extraordinary — but Houston diners searching for upscale Southern dining aren't finding you online. Your current digital presence doesn't match your in-room experience.</p></div>
+    <div class="pain-card"><h3>Craft Spirits Enthusiasts Are Searching for You</h3><p>Houston's craft cocktail scene is booming. Spirits enthusiasts and foodies who would love what you do are ending up at competitors with more visible online presence.</p></div>
+  </div>
+</div>
+<section class="menu-s" id="menu">
+  <div class="over">The Table</div>
+  <h2>Southern Traditions, Elevated.</h2>
+  <div class="menu-grid">
+    <div class="menu-item"><h3>Smoked &amp; Braised</h3><p>Low-and-slow smoked brisket, braised short ribs, heritage pork shoulder — Southern patience, extraordinary results.</p></div>
+    <div class="menu-item"><h3>Southern Starters</h3><p>Deviled eggs with caviar, pimento cheese on brioche, Gulf shrimp and stone-ground grits with smoked tasso ham.</p></div>
+    <div class="menu-item"><h3>Craft Moonshine &amp; Cocktails</h3><p>House-distilled small-batch spirits, seasonal craft cocktails, and a curated American whiskey list that would impress any connoisseur.</p></div>
+    <div class="menu-item"><h3>Southern Desserts</h3><p>Brown butter chess pie, peach-bourbon bread pudding, house-churned seasonal ice creams. A proper Southern finish.</p></div>
+  </div>
+</section>
+<div class="divider"></div>
+<section class="cta-s" id="contact">
+  <h2>This Is What Your New Website Could Look Like</h2>
+  <p>Alma Digital built this free preview for The Moonshiners. Your dining experience deserves a digital presence that matches its caliber.</p>
+  <a href="mailto:info@themoonshinershouston.com?subject=Free Website Redesign" class="btn-amber">Claim Your Free Redesign</a>
+</section>
+<footer>2025 The Moonshiners Southern Table Houston | Preview by Alma Digital Services | info@themoonshinershouston.com</footer>
+</body>
+</html>
