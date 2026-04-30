@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TONI&amp;GUY Brisbane | Award-Winning Hair Salon, 150 Edward St</title>
+  <meta name="description" content="TONI&amp;GUY Brisbane: precision cuts, balayage, keratin treatments, extensions. Queensland's first TONI&amp;GUY salon — voted Best Hairdresser 7 years in a row.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:#111;overflow-x:hidden;background:#fff}
+    :root{
+      --black:#111;
+      --dark:#1a1a1a;
+      --mid:#2a2a2a;
+      --gold:#c4963a;
+      --light-gold:#e8c06a;
+      --gray:#f5f5f5;
+      --text:#333;
+      --text-light:#777;
+      --white:#fff
+    }
+    /* NAV — Minimalist */
+    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(17,17,17,.98);padding:1.1rem 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(196,150,58,.2)}
+    .nav-logo{font-family:'Inter',sans-serif;font-weight:900;font-size:1.3rem;color:#fff;letter-spacing:.05em}
+    .nav-logo span{color:var(--gold)}
+    .nav-sub{font-size:.65rem;color:#888;letter-spacing:.15em;text-transform:uppercase;margin-top:.1rem}
+    .nav-links{display:flex;gap:2.5rem;list-style:none}
+    .nav-links a{color:#999;text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:#fff}
+    .nav-book{border:1px solid var(--gold);color:var(--gold);padding:.55rem 1.5rem;border-radius:3px;text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
+    .nav-book:hover{background:var(--gold);color:#111}
+    /* HERO — Full Screen Minimal */
+    .hero{min-height:100vh;background:var(--black);display:grid;grid-template-columns:1fr 1fr;padding-top:72px;overflow:hidden}
+    .hero-content{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 8%}
+    .award-row{display:flex;align-items:center;gap:.8rem;margin-bottom:2.5rem}
+    .award-badge{background:rgba(196,150,58,.1);border:1px solid rgba(196,150,58,.3);padding:.5rem 1rem;border-radius:3px}
+    .award-text{color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+    .hero h1{font-family:'Playfair Display',serif;font-size:3.4rem;color:#fff;line-height:1.15;margin-bottom:1.5rem}
+    .hero h1 em{color:var(--gold);font-style:italic;display:block}
+    .hero-sub{color:#888;font-size:.98rem;line-height:1.75;margin-bottom:3rem;max-width:440px}
+    .hero-ctas{display:flex;gap:1rem;margin-bottom:4rem;flex-wrap:wrap}
+    .btn-gold{background:linear-gradient(135deg,var(--gold),#a07020);color:#fff;padding:.95rem 2.2rem;border-radius:3px;text-decoration:none;font-weight:700;font-size:.88rem;letter-spacing:.05em;text-transform:uppercase;transition:opacity .2s;display:inline-block}
+    .btn-gold:hover{opacity:.88}
+    .btn-ghost{border:1px solid #444;color:#999;padding:.95rem 2.2rem;border-radius:3px;text-decoration:none;font-size:.88rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:all .2s}
+    .btn-ghost:hover{border-color:#999;color:#fff}
+    .awards-list{display:flex;flex-direction:column;gap:1rem}
+    .award-item{display:flex;align-items:center;gap:.8rem}
+    .award-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+    .award-item-text{color:#666;font-size:.85rem}
+    .hero-img{position:relative;overflow:hidden}
+    .hero-img img{width:100%;height:100%;object-fit:cover}
+    .hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--black) 0%,transparent 25%)}
+    .hero-img-tag{position:absolute;bottom:2rem;right:2rem;background:rgba(17,17,17,.92);border:1px solid rgba(196,150,58,.3);padding:1.2rem 1.8rem;border-radius:4px;text-align:center}
+    .tag-top{color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem}
+    .tag-main{color:#fff;font-size:1rem;font-weight:700}
+    .tag-sub{color:#777;font-size:.78rem;margin-top:.3rem}
+    /* SERVICES */
+    .services{padding:6rem 8%;background:var(--gray)}
+    .sec-label{text-align:center;color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem}
+    .sec-title{font-family:'Playfair Display',serif;font-size:2.3rem;text-align:center;color:var(--black);margin-bottom:.8rem}
+    .sec-sub{text-align:center;color:var(--text-light);font-size:.92rem;margin-bottom:3.5rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
+    .svc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+    .svc-item{background:var(--white);padding:2rem;border-radius:4px;border-bottom:3px solid var(--gold);transition:transform .2s;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+    .svc-item:hover{transform:translateY(-3px)}
+    .svc-icon{font-size:2.2rem;margin-bottom:1rem}
+    .svc-name{font-size:.95rem;font-weight:700;color:var(--black);margin-bottom:.5rem;letter-spacing:.02em}
+    .svc-desc{color:var(--text-light);font-size:.84rem;line-height:1.6}
+    /* ABOUT */
+    .about{padding:6rem 8%;background:var(--black);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .about-img img{width:100%;height:480px;object-fit:cover;border-radius:4px}
+    .about h2{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;margin-bottom:1.5rem;line-height:1.3}
+    .about p{color:#888;line-height:1.8;margin-bottom:1.2rem;font-size:.92rem}
+    .award-strip{background:rgba(196,150,58,.08);border:1px solid rgba(196,150,58,.25);border-radius:4px;padding:1.2rem 1.5rem;margin:1.5rem 0}
+    .award-strip p{color:#ccc;font-size:.88rem;margin:0;line-height:1.6}
+    .award-strip strong{color:var(--gold)}
+    .about-list{list-style:none;margin:1.5rem 0;display:flex;flex-direction:column;gap:.7rem}
+    .about-item{display:flex;align-items:center;gap:.8rem;color:#ccc;font-size:.9rem}
+    .about-dash{color:var(--gold);font-weight:700}
+    /* REVIEWS */
+    .reviews{padding:6rem 8%;background:var(--gray)}
+    .r-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+    .r-card{background:var(--white);border:1px solid #e8e8e8;border-radius:4px;padding:2rem;border-top:3px solid var(--gold)}
+    .r-stars{color:var(--gold);font-size:1rem;margin-bottom:1rem}
+    .r-text{color:var(--text-light);font-size:.9rem;line-height:1.7;margin-bottom:1.5rem;font-style:italic}
+    .r-name{color:var(--black);font-weight:700;font-size:.86rem}
+    .r-loc{color:#aaa;font-size:.78rem}
+    /* RENOVATION STRIP */
+    .reno-strip{background:var(--mid);padding:2.5rem 8%;text-align:center;border-top:1px solid rgba(196,150,58,.2);border-bottom:1px solid rgba(196,150,58,.2)}
+    .reno-strip p{color:#ccc;font-size:.95rem;max-width:700px;margin:0 auto;line-height:1.7}
+    .reno-strip strong{color:var(--gold)}
+    /* CTA */
+    .cta{padding:5rem 8%;background:linear-gradient(135deg,var(--black),var(--mid));text-align:center;border-top:1px solid rgba(196,150,58,.2)}
+    .cta h2{font-family:'Playfair Display',serif;font-size:2.3rem;color:#fff;margin-bottom:1rem}
+    .cta p{color:#999;font-size:.98rem;margin-bottom:2.5rem}
+    .btn-white{background:var(--gold);color:#111;padding:1rem 2.8rem;border-radius:3px;text-decoration:none;font-weight:700;font-size:.88rem;text-transform:uppercase;letter-spacing:.08em;display:inline-block;transition:opacity .2s}
+    .btn-white:hover{opacity:.88}
+    /* CONTACT */
+    .contact{padding:5rem 8%;background:var(--gray);display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+    .contact h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--black);margin-bottom:1.5rem}
+    .c-item{display:flex;gap:1rem;margin-bottom:1.4rem}
+    .c-icon{color:var(--gold);font-size:1.2rem;margin-top:.1rem}
+    .c-label{font-weight:700;color:var(--black);font-size:.86rem;margin-bottom:.2rem;text-transform:uppercase;letter-spacing:.05em}
+    .c-val{color:var(--text-light);font-size:.85rem}
+    .cf{background:#fff;padding:2.5rem;border-radius:4px;border:1px solid #e8e8e8}
+    .cf h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--black);margin-bottom:1.5rem}
+    .fg{margin-bottom:1.1rem}
+    .fg label{display:block;font-size:.74rem;font-weight:700;color:var(--text);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.08em}
+    .fg input,.fg textarea{width:100%;padding:.75rem 1rem;border:1.5px solid #ddd;border-radius:3px;font-family:'Inter',sans-serif;font-size:.88rem;color:var(--text);background:var(--gray);transition:border-color .2s}
+    .fg input:focus,.fg textarea:focus{outline:none;border-color:var(--gold)}
+    .fg textarea{resize:vertical;min-height:85px}
+    .form-btn{width:100%;background:linear-gradient(135deg,var(--gold),#a07020);color:#fff;border:none;padding:.95rem;border-radius:3px;font-size:.88rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:.08em}
+    /* FOOTER */
+    footer{background:var(--black);padding:2.5rem 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(196,150,58,.2)}
+    .f-logo{font-weight:900;color:#fff;font-size:1rem;letter-spacing:.05em}
+    .f-logo span{color:var(--gold)}
+    footer p{color:#555;font-size:.8rem}
+    .f-links{display:flex;gap:1.5rem}
+    .f-links a{color:#555;text-decoration:none;font-size:.8rem;transition:color .2s}
+    .f-links a:hover{color:#fff}
+    .alma-bar{background:#0a0a0a;text-align:center;padding:.8rem;font-size:.76rem;color:#444}
+    .alma-bar a{color:#00b4d8;text-decoration:none}
+    @media(max-width:768px){
+      .hero{grid-template-columns:1fr}
+      .hero-content{padding:5rem 5% 3rem}
+      .hero h1{font-size:2.3rem}
+      .hero-img{height:260px}
+      .svc-list{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr;gap:2rem}
+      .r-grid{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <div class="nav-logo">TONI<span>&amp;GUY</span> Brisbane</div>
+    <div class="nav-sub">150 Edward Street · Queensland's First TONI&amp;GUY</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-book">Book Now</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="award-row">
+      <div class="award-badge"><div class="award-text">🏆 Best Hairdresser — Style Magazine · 7 Years Running</div></div>
+    </div>
+    <h1>Brisbane's Award-Winning Salon —<em>20 Years of Hair Excellence</em></h1>
+    <p class="hero-sub">Cuts, colour, and treatments trusted by Brisbane since 2003. Queensland's first TONI&amp;GUY salon, voted Best Hairdresser by Style Magazine seven years running. Now freshly renovated with a signature Shiatsu Massage basin lounge.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-gold">Book Your Brisbane Appointment</a>
+      <a href="#services" class="btn-ghost">Our Services</a>
+    </div>
+    <div class="awards-list">
+      <div class="award-item"><div class="award-dot"></div><div class="award-item-text">Queensland's first TONI&amp;GUY salon — opened 2003</div></div>
+      <div class="award-item"><div class="award-dot"></div><div class="award-item-text">Voted Best Hairdresser by Style Magazine — 7 consecutive years</div></div>
+      <div class="award-item"><div class="award-dot"></div><div class="award-item-text">Newly renovated Shiatsu Massage basin lounge</div></div>
+      <div class="award-item"><div class="award-dot"></div><div class="award-item-text">Led by owners Kimberley &amp; Lyndsay, 150 Edward Street</div></div>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=900&auto=format&fit=crop&q=80" alt="TONI&GUY Brisbane award-winning hair salon 150 Edward Street">
+    <div class="hero-img-overlay"></div>
+    <div class="hero-img-tag">
+      <div class="tag-top">Style Magazine Award</div>
+      <div class="tag-main">Best Hairdresser</div>
+      <div class="tag-sub">7 Consecutive Years</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="sec-label">Our Expertise</div>
+  <h2 class="sec-title">Award-Winning Hair Services</h2>
+  <p class="sec-sub">From precision cuts to balayage and luxury treatments — every service delivered to the exacting TONI&amp;GUY global standard.</p>
+  <div class="svc-list">
+    <div class="svc-item">
+      <div class="svc-icon">✂️</div>
+      <div class="svc-name">Precision Cuts &amp; Style Cuts</div>
+      <div class="svc-desc">Expert precision cutting techniques for structured, modern styles that work with your hair's natural movement and texture.</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon">🎨</div>
+      <div class="svc-name">Balayage &amp; Colour</div>
+      <div class="svc-desc">Hand-painted balayage, full colour, toning, and highlighting techniques that create beautiful, natural-looking results.</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon">💨</div>
+      <div class="svc-name">Blow Dry &amp; Styling</div>
+      <div class="svc-desc">Professional blow dry and styling services for everyday glamour, special events, or a Brazilian blowout finish.</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon">✨</div>
+      <div class="svc-name">Hair Extensions</div>
+      <div class="svc-desc">Premium hair extension services for added length, volume, and dimension — expertly applied by our specialist team.</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon">💆</div>
+      <div class="svc-name">Keratin Smoothing Treatments</div>
+      <div class="svc-desc">Transform frizzy, unruly hair into smooth, manageable, and glossy locks with our professional keratin treatment service.</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon">💐</div>
+      <div class="svc-name">Bridal &amp; Occasion Styling</div>
+      <div class="svc-desc">Stunning bridal updos, special occasion styling, and trial appointments to ensure you look flawless on the big day.</div>
+    </div>
+    <div class="svc-item">
+      <div class="svc-icon">🧖</div>
+      <div class="svc-name">Shiatsu Massage Basin Experience</div>
+      <div class="svc-desc">Our signature renovated Shiatsu Massage basin lounge — a luxurious sensory experience that begins your appointment in total relaxation.</div>
+    </div>
+  </div>
+</section>
+
+<div class="reno-strip">
+  <p>🆕 <strong>Freshly Renovated — 2024:</strong> Our signature Shiatsu Massage basin lounge at 150 Edward Street has been completely reimagined. Experience a new level of luxury the moment you arrive, with a full sensory relaxation experience before your service begins. Come see the new look.</p>
+</div>
+
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&auto=format&fit=crop&q=80" alt="Interior of TONI&GUY Brisbane at 150 Edward Street">
+  </div>
+  <div>
+    <div class="sec-label" style="text-align:left;color:var(--gold)">Our Story</div>
+    <h2>Queensland's Premier Salon for Over 20 Years</h2>
+    <p>TONI&amp;GUY Brisbane has been Queensland's premier salon for over 20 years, led by owners Kimberley and Lyndsay at 150 Edward Street in the Brisbane CBD. We were Queensland's first TONI&amp;GUY salon when we opened in 2003, and we've set the benchmark for professional hair services ever since.</p>
+    <p>Voted Best Hairdresser by Style Magazine for seven consecutive years, our team combines global TONI&amp;GUY training with deep local expertise to deliver results that consistently exceed expectations.</p>
+    <div class="award-strip">
+      <p>🏆 <strong>Style Magazine — Best Hairdresser, 7 Years Running.</strong> The most recognised hairdressing award in Brisbane, voted by readers and industry professionals across Queensland.</p>
+    </div>
+    <ul class="about-list">
+      <li class="about-item"><span class="about-dash">—</span> Queensland's first TONI&amp;GUY salon — 150 Edward Street since 2003</li>
+      <li class="about-item"><span class="about-dash">—</span> Voted Best Hairdresser, Style Magazine — 7 consecutive years</li>
+      <li class="about-item"><span class="about-dash">—</span> Newly renovated Shiatsu Massage basin lounge experience</li>
+      <li class="about-item"><span class="about-dash">—</span> Led by owners Kimberley &amp; Lyndsay — Brisbane CBD specialists</li>
+    </ul>
+    <a href="#contact" class="btn-gold">Book Your Brisbane Appointment</a>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="sec-label">Client Reviews</div>
+  <h2 class="sec-title">What Brisbane Clients Say</h2>
+  <p class="sec-sub">Voted Best Hairdresser for 7 years — and our clients agree, every visit.</p>
+  <div class="r-grid">
+    <div class="r-card">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"I've been coming to TONI&amp;GUY Brisbane for years and the quality is just unmatched in this city. Kimberley is an absolute artist. My balayage is always perfect and the new renovation looks incredible."</p>
+      <div class="r-name">Sophie H.</div>
+      <div class="r-loc">Google Review · Brisbane CBD</div>
+    </div>
+    <div class="r-card">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"The Shiatsu Massage basin experience is next level — I look forward to that alone! The precision cut I got was exactly what I asked for. Best salon experience I've had in Brisbane. Worth every cent."</p>
+      <div class="r-name">Emma L.</div>
+      <div class="r-loc">Google Review · South Brisbane</div>
+    </div>
+    <div class="r-card">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"Had my bridal hair done by Lyndsay and it was absolutely stunning. The trial and the day-of were both perfect. I felt like a million dollars walking down the aisle. Cannot recommend TONI&amp;GUY Brisbane more highly!"</p>
+      <div class="r-name">Jessica M.</div>
+      <div class="r-loc">Google Review · Brisbane, QLD</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Experience Award-Winning Hair in Brisbane</h2>
+  <p>Book your appointment at 150 Edward Street — Queensland's first and most awarded TONI&amp;GUY salon.</p>
+  <a href="#contact" class="btn-white">Book Your Brisbane Appointment</a>
+</div>
+
+<section class="contact" id="contact">
+  <div>
+    <h2>Visit Us at 150 Edward St</h2>
+    <div class="c-item">
+      <span class="c-icon">📍</span>
+      <div><div class="c-label">Address</div><div class="c-val">150 Edward Street, Brisbane CBD, Queensland, Australia</div></div>
+    </div>
+    <div class="c-item">
+      <span class="c-icon">📧</span>
+      <div><div class="c-label">Email</div><div class="c-val">brisbane@toniandguy.com.au</div></div>
+    </div>
+    <div class="c-item">
+      <span class="c-icon">🏆</span>
+      <div><div class="c-label">Awards</div><div class="c-val">Style Magazine Best Hairdresser — 7 consecutive years</div></div>
+    </div>
+    <div class="c-item">
+      <span class="c-icon">🧖</span>
+      <div><div class="c-label">Signature Experience</div><div class="c-val">Shiatsu Massage basin lounge — newly renovated 2024</div></div>
+    </div>
+  </div>
+  <div class="cf">
+    <h3>Book Your Appointment</h3>
+    <form action="https://formspree.io/f/xojppajv" method="POST">
+      <div class="fg"><label>Your Name</label><input type="text" name="name" placeholder="Sophie Harrison" required></div>
+      <div class="fg"><label>Email Address</label><input type="email" name="email" placeholder="sophie@example.com" required></div>
+      <div class="fg"><label>Service Required</label><input type="text" name="service" placeholder="e.g. Balayage, Precision Cut, Bridal Styling..."></div>
+      <div class="fg"><label>Message</label><textarea name="message" placeholder="Preferred date, stylist preference, or any special requirements..."></textarea></div>
+      <button type="submit" class="form-btn">Book Your Brisbane Appointment</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">TONI<span>&amp;GUY</span> Brisbane</div>
+  <p>150 Edward Street, Brisbane CBD, QLD · brisbane@toniandguy.com.au</p>
+  <div class="f-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+<div class="alma-bar">Preview designed by <a href="https://almadigitalservices.com" target="_blank">Alma Digital Services</a> — Professional websites for local businesses</div>
+</body>
+</html>
