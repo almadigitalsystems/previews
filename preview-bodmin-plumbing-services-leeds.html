@@ -1,296 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bodmin Plumbing Services | Trusted Plumber in Leeds, UK</title>
-  <meta name="description" content="Bodmin Plumbing Services in Leeds offers emergency repairs, boiler installation, drain unblocking, and bathroom fitting. Contact us for a free, no-obligation quote." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodmin Plumbing Services Leeds | 30+ Years Trusted Plumber West Yorkshire</title>
+  <meta name="description" content="Bodmin Plumbing Services Leeds: 24-hour emergency plumbing, bathroom installations, boiler servicing. Family-run, 4.9 stars, West Yorkshire.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy:   #0d2137;
-      --blue:   #1a4f7a;
-      --cyan:   #1e9fc4;
-      --orange: #e87525;
-      --light:  #e8f1f8;
-      --white:  #ffffff;
-      --text:   #1a2e3d;
-      --gray:   #f0f4f8;
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:#1a2a3a;overflow-x:hidden}
+    :root{
+      --navy:#1a2a4a;
+      --blue:#2a5fa5;
+      --light-blue:#4a90d9;
+      --teal:#1a8fa5;
+      --bg:#f4f8fc;
+      --white:#fff;
+      --text:#2a3a4a;
+      --text-light:#6a7a8a
     }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; }
-
-    /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--navy); padding: 16px 48px; display: flex; justify-content: space-between; align-items: center; }
-    .nav-logo { font-family: 'Barlow', sans-serif; font-size: 1.2rem; font-weight: 900; color: var(--white); letter-spacing: -0.5px; }
-    .nav-logo span { color: var(--cyan); }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { color: #7aaccc; text-decoration: none; font-size: 0.82rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta { background: var(--orange); color: var(--white); padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 0.82rem; font-weight: 800; transition: background 0.2s; }
-    .nav-cta:hover { background: #c5601a; }
-
-    /* HERO */
-    .hero { min-height: 100vh; background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); display: flex; align-items: center; padding: 120px 48px 80px; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; bottom: 0; right: 0; width: 60%; height: 100%; background: url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(30,159,196,0.06)' stroke-width='2'%3E%3Ccircle cx='300' cy='300' r='100'/%3E%3Ccircle cx='300' cy='300' r='200'/%3E%3Ccircle cx='300' cy='300' r='300'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat; pointer-events: none; }
-    .hero-inner { max-width: 700px; position: relative; z-index: 2; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(232,117,37,0.15); border: 1px solid rgba(232,117,37,0.35); color: var(--orange); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 18px; border-radius: 4px; margin-bottom: 28px; }
-    .hero-title { font-family: 'Barlow', sans-serif; font-size: clamp(2.8rem, 5.5vw, 5.5rem); font-weight: 900; color: var(--white); line-height: 1; letter-spacing: -1px; margin-bottom: 22px; }
-    .hero-title .accent { color: var(--cyan); }
-    .hero-sub { font-size: 1.05rem; color: #7aaccc; line-height: 1.75; margin-bottom: 42px; max-width: 520px; }
-    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px; }
-    .btn-orange { background: var(--orange); color: var(--white); padding: 16px 36px; border-radius: 4px; text-decoration: none; font-weight: 800; font-size: 1rem; font-family: 'Barlow', sans-serif; transition: background 0.2s, transform 0.2s; }
-    .btn-orange:hover { background: #c5601a; transform: translateY(-2px); }
-    .btn-ghost { background: transparent; color: var(--white); padding: 16px 36px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1rem; border: 2px solid rgba(255,255,255,0.25); transition: border-color 0.2s; }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.6); }
-    .trust-badges { display: flex; gap: 24px; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 8px; }
-    .trust-icon { font-size: 1.1rem; }
-    .trust-text { font-size: 0.82rem; color: #7aaccc; font-weight: 600; }
-
     /* EMERGENCY BANNER */
-    .emergency { background: var(--orange); padding: 20px 24px; text-align: center; }
-    .emergency-text { font-family: 'Barlow', sans-serif; font-size: 1.05rem; font-weight: 900; color: var(--white); letter-spacing: 0.5px; }
-    .emergency-text a { color: var(--white); text-decoration: underline; }
-
+    .emergency{background:var(--teal);text-align:center;padding:.65rem;font-size:.85rem;color:#fff;font-weight:600}
+    .emergency span{margin:0 .8rem;opacity:.6}
+    /* NAV */
+    nav{position:sticky;top:0;width:100%;z-index:100;background:var(--navy);padding:1rem 6%;display:flex;justify-content:space-between;align-items:center}
+    .nav-logo{color:#fff}
+    .logo-name{font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:-.01em}
+    .logo-sub{font-size:.72rem;color:#7aaddd;font-weight:400}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{color:#a0c0e0;text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s}
+    .nav-links a:hover{color:#fff}
+    .nav-phone{background:var(--blue);color:#fff;padding:.6rem 1.5rem;border-radius:6px;text-decoration:none;font-size:.88rem;font-weight:700}
+    /* HERO — Bold Hero */
+    .hero{background:var(--navy);min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:5rem 8%;position:relative;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1400&auto=format&fit=crop&q=50') center/cover;opacity:.12}
+    .hero-gradient{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(42,95,165,.3) 0%,transparent 70%)}
+    .hero-content{position:relative;z-index:2;max-width:780px}
+    .h-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(74,144,217,.15);border:1px solid rgba(74,144,217,.35);padding:.4rem 1.2rem;border-radius:4px;margin-bottom:2rem}
+    .h-badge-icon{color:var(--light-blue);font-size:.9rem}
+    .h-badge-text{color:#7aaddd;font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+    .hero h1{font-family:'Inter',sans-serif;font-size:3.4rem;font-weight:700;color:#fff;line-height:1.15;margin-bottom:1.2rem}
+    .hero h1 span{color:var(--light-blue)}
+    .hero-sub{color:#a0c0d8;font-size:1.05rem;line-height:1.7;margin-bottom:3rem;max-width:600px;margin-left:auto;margin-right:auto}
+    .hero-ctas{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin-bottom:4rem}
+    .btn-primary{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;padding:1rem 2.5rem;border-radius:7px;text-decoration:none;font-weight:700;font-size:1rem;transition:opacity .2s;display:inline-block}
+    .btn-primary:hover{opacity:.88}
+    .btn-secondary{border:2px solid rgba(74,144,217,.5);color:#7aaddd;padding:1rem 2.5rem;border-radius:7px;text-decoration:none;font-size:1rem;font-weight:600;transition:all .2s}
+    .btn-secondary:hover{background:rgba(74,144,217,.1);border-color:var(--light-blue)}
+    .trust-bar{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap}
+    .trust-item{display:flex;flex-direction:column;align-items:center}
+    .trust-num{font-size:1.8rem;font-weight:700;color:#fff}
+    .trust-label{font-size:.78rem;color:#a0c0d8;margin-top:.2rem}
     /* SERVICES */
-    .services { background: var(--gray); padding: 100px 24px; }
-    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--cyan); text-align: center; margin-bottom: 12px; }
-    .section-title { font-family: 'Barlow', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; text-align: center; color: var(--navy); margin-bottom: 56px; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-    .svc-card { background: var(--white); border-radius: 10px; padding: 30px 24px; border-top: 4px solid transparent; transition: border-color 0.2s, box-shadow 0.2s; }
-    .svc-card:hover { border-color: var(--orange); box-shadow: 0 8px 28px rgba(13,33,55,0.1); }
-    .svc-icon { font-size: 2rem; margin-bottom: 14px; }
-    .svc-name { font-family: 'Barlow', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
-    .svc-desc { font-size: 0.86rem; color: #5a7090; line-height: 1.65; }
-
+    .services{padding:5.5rem 8%;background:var(--bg)}
+    .sec-label{text-align:center;color:var(--blue);font-size:.73rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+    .sec-title{font-family:'Playfair Display',serif;font-size:2.3rem;text-align:center;color:var(--navy);margin-bottom:.8rem}
+    .sec-sub{text-align:center;color:var(--text-light);font-size:.92rem;margin-bottom:3.5rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+    .svc-card{background:var(--white);border-radius:12px;padding:2rem;border-left:4px solid var(--blue);box-shadow:0 3px 16px rgba(26,42,74,.07);transition:transform .2s}
+    .svc-card:hover{transform:translateY(-3px)}
+    .svc-icon{font-size:2.2rem;margin-bottom:1rem}
+    .svc-name{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+    .svc-desc{color:var(--text-light);font-size:.86rem;line-height:1.6}
     /* WHY US */
-    .why { background: var(--navy); padding: 100px 24px; color: var(--white); }
-    .why .section-label { color: var(--cyan); }
-    .why .section-title { color: var(--white); }
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; max-width: 960px; margin: 0 auto; }
-    .why-item { text-align: center; padding: 32px 20px; background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid rgba(30,159,196,0.12); }
-    .why-icon { font-size: 2.4rem; margin-bottom: 16px; display: block; }
-    .why-title { font-family: 'Barlow', sans-serif; font-size: 1.05rem; font-weight: 800; margin-bottom: 10px; color: var(--white); }
-    .why-desc { font-size: 0.85rem; color: #7aaccc; line-height: 1.6; }
-
-    /* ABOUT */
-    .about { background: var(--white); padding: 100px 24px; }
-    .about-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .about-content .section-label { text-align: left; }
-    .about-content .section-title { text-align: left; margin-bottom: 22px; }
-    .about-text { font-size: 1rem; color: #5a7090; line-height: 1.8; margin-bottom: 18px; }
-    .about-cta { display: inline-block; background: var(--orange); color: var(--white); padding: 14px 30px; border-radius: 4px; text-decoration: none; font-weight: 800; font-size: 0.9rem; font-family: 'Barlow', sans-serif; transition: background 0.2s; margin-top: 8px; }
-    .about-cta:hover { background: #c5601a; }
-    .about-stats { background: var(--gray); border-radius: 14px; padding: 40px 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-    .stat { text-align: center; }
-    .stat-num { font-family: 'Barlow', sans-serif; font-size: 2.8rem; font-weight: 900; color: var(--navy); line-height: 1; }
-    .stat-lab { font-size: 0.78rem; color: #6890aa; letter-spacing: 1px; text-transform: uppercase; margin-top: 6px; }
-
+    .why{padding:5.5rem 8%;background:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .why-img img{width:100%;height:460px;object-fit:cover;border-radius:14px}
+    .why-content h2{font-family:'Playfair Display',serif;font-size:2.1rem;color:var(--navy);margin-bottom:1.4rem;line-height:1.3}
+    .why-content p{color:var(--text-light);line-height:1.8;margin-bottom:1.2rem;font-size:.93rem}
+    .why-list{list-style:none;margin:1.5rem 0;display:flex;flex-direction:column;gap:.8rem}
+    .why-item{display:flex;align-items:center;gap:.8rem;color:var(--text);font-size:.92rem}
+    .check{color:var(--teal);font-weight:700;font-size:1.1rem}
+    .oap-box{background:var(--bg);border:2px solid var(--light-blue);border-radius:10px;padding:1.2rem 1.5rem;margin-top:1.5rem;margin-bottom:2rem}
+    .oap-box p{color:var(--navy);font-weight:600;font-size:.92rem;margin:0}
+    .oap-box span{color:var(--blue)}
+    /* REVIEWS */
+    .reviews{padding:5.5rem 8%;background:var(--navy)}
+    .reviews .sec-title{color:#fff}
+    .reviews .sec-label{color:var(--light-blue)}
+    .reviews .sec-sub{color:#a0c0d8}
+    .r-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+    .r-card{background:rgba(255,255,255,.05);border:1px solid rgba(74,144,217,.2);border-radius:12px;padding:2rem}
+    .r-stars{color:#ffd700;font-size:1rem;margin-bottom:1rem}
+    .r-text{color:#a0c0d8;font-size:.9rem;line-height:1.7;margin-bottom:1.5rem;font-style:italic}
+    .r-name{color:#fff;font-weight:600;font-size:.86rem}
+    .r-loc{color:#608090;font-size:.78rem}
+    /* CTA */
+    .cta{padding:5rem 8%;background:linear-gradient(135deg,var(--blue),var(--teal));text-align:center}
+    .cta h2{font-family:'Playfair Display',serif;font-size:2.3rem;color:#fff;margin-bottom:1rem}
+    .cta p{color:rgba(255,255,255,.88);font-size:.98rem;margin-bottom:2.5rem}
+    .btn-white{background:#fff;color:var(--navy);padding:1rem 2.8rem;border-radius:7px;text-decoration:none;font-weight:700;font-size:.95rem;display:inline-block;transition:opacity .2s}
+    .btn-white:hover{opacity:.92}
     /* CONTACT */
-    .contact { background: var(--gray); padding: 100px 24px; }
-    .contact-inner { max-width: 660px; margin: 0 auto; text-align: center; }
-    .contact-info { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin: 34px 0; }
-    .c-item { text-align: center; }
-    .c-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #7090aa; font-weight: 700; display: block; margin-bottom: 5px; }
-    .c-val { font-weight: 700; color: var(--navy); font-size: 0.92rem; }
-    .contact-form { background: var(--white); border-radius: 12px; padding: 36px; text-align: left; margin-top: 28px; box-shadow: 0 4px 20px rgba(13,33,55,0.06); }
-    .form-group { margin-bottom: 16px; }
-    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--navy); margin-bottom: 7px; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 1.5px solid #ccd8e0; border-radius: 6px; font-size: 0.9rem; font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); outline: none; transition: border-color 0.2s; }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--cyan); }
-    .form-group textarea { min-height: 88px; resize: vertical; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .btn-submit { width: 100%; padding: 14px; background: var(--orange); color: var(--white); border: none; border-radius: 6px; font-size: 0.95rem; font-weight: 800; cursor: pointer; font-family: 'Barlow', sans-serif; letter-spacing: 0.5px; transition: background 0.2s; }
-    .btn-submit:hover { background: #c5601a; }
-
-    footer { background: var(--navy); color: #4a7090; padding: 46px 24px 26px; text-align: center; }
-    .footer-logo { font-family: 'Barlow', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--white); margin-bottom: 8px; }
-    .footer-logo span { color: var(--cyan); }
-    .footer-loc { font-size: 0.83rem; margin-bottom: 5px; }
-    .footer-email { font-size: 0.83rem; color: var(--cyan); margin-bottom: 22px; }
-    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 16px 0; }
-    .footer-copy { font-size: 0.75rem; }
-
-    @media (max-width: 768px) {
-      nav { padding: 14px 20px; }
-      .nav-links { display: none; }
-      .hero { padding: 100px 24px 60px; }
-      .about-inner { grid-template-columns: 1fr; gap: 40px; }
-      .form-row { grid-template-columns: 1fr; }
-      .about-stats { grid-template-columns: 1fr 1fr; }
+    .contact{padding:5rem 8%;background:var(--bg);display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+    .contact h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--navy);margin-bottom:1.5rem}
+    .c-item{display:flex;gap:1rem;margin-bottom:1.4rem}
+    .c-icon{color:var(--blue);font-size:1.2rem;margin-top:.1rem}
+    .c-label{font-weight:700;color:var(--navy);font-size:.88rem;margin-bottom:.2rem}
+    .c-val{color:var(--text-light);font-size:.86rem}
+    .cf{background:#fff;padding:2.5rem;border-radius:14px;box-shadow:0 4px 20px rgba(26,42,74,.08)}
+    .cf h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:1.5rem}
+    .fg{margin-bottom:1.1rem}
+    .fg label{display:block;font-size:.79rem;font-weight:700;color:var(--text);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+    .fg input,.fg textarea{width:100%;padding:.75rem 1rem;border:1.5px solid #c8dae8;border-radius:7px;font-family:'Inter',sans-serif;font-size:.88rem;color:var(--text);background:var(--bg);transition:border-color .2s}
+    .fg input:focus,.fg textarea:focus{outline:none;border-color:var(--blue)}
+    .fg textarea{resize:vertical;min-height:85px}
+    .form-btn{width:100%;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;border:none;padding:.95rem;border-radius:7px;font-size:.93rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif}
+    /* FOOTER */
+    footer{background:var(--navy);padding:2.5rem 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .f-name{color:#fff;font-size:1rem;font-weight:700}
+    .f-name span{color:var(--light-blue)}
+    footer p{color:#608090;font-size:.82rem}
+    .f-links{display:flex;gap:1.5rem}
+    .f-links a{color:#608090;text-decoration:none;font-size:.82rem;transition:color .2s}
+    .f-links a:hover{color:#fff}
+    .alma-bar{background:#111827;text-align:center;padding:.8rem;font-size:.76rem;color:#555}
+    .alma-bar a{color:#00b4d8;text-decoration:none}
+    @media(max-width:768px){
+      .hero h1{font-size:2.2rem}
+      .svc-grid{grid-template-columns:1fr}
+      .why{grid-template-columns:1fr;gap:2rem}
+      .r-grid{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .trust-bar{gap:1.5rem}
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-logo">Bodmin <span>Plumbing</span></div>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Free Quote</a>
-  </nav>
+<!-- Emergency Banner -->
+<div class="emergency">
+  🔧 24-Hour Emergency Plumbing Available
+  <span>|</span>
+  Leeds &amp; West Yorkshire
+  <span>|</span>
+  OAP Discounts Available
+</div>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-badge">🔧 Leeds' Trusted Plumbing Experts</div>
-      <h1 class="hero-title">Leeds'<br /><span class="accent">Trusted</span><br />Plumbers</h1>
-      <p class="hero-sub">Fast, reliable plumbing for Leeds homes and businesses. No hidden charges — just honest work done right the first time.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn-orange">Get a Free Quote Today</a>
-        <a href="#services" class="btn-ghost">Our Services</a>
-      </div>
-      <div class="trust-badges">
-        <div class="trust-item"><span class="trust-icon">✅</span><span class="trust-text">No Hidden Charges</span></div>
-        <div class="trust-item"><span class="trust-icon">⚡</span><span class="trust-text">Emergency Cover</span></div>
-        <div class="trust-item"><span class="trust-icon">🏅</span><span class="trust-text">Fully Qualified</span></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="emergency">
-    <div class="emergency-text">🚨 Plumbing Emergency in Leeds? Call us now for fast response — <a href="#contact">Get in Touch</a></div>
+<!-- Nav -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-name">Bodmin Plumbing Services</div>
+    <div class="logo-sub">Leeds &amp; West Yorkshire · Est. 30+ Years</div>
   </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-phone">Free Quote</a>
+</nav>
 
-  <section class="services" id="services">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-title">Our Plumbing Services</h2>
-    <div class="services-grid">
-      <div class="svc-card">
-        <div class="svc-icon">🚨</div>
-        <div class="svc-name">Emergency Plumbing Repairs</div>
-        <p class="svc-desc">24/7 emergency call-outs across Leeds for burst pipes, leaks, and plumbing failures that can't wait.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">🔥</div>
-        <div class="svc-name">Boiler Installation &amp; Servicing</div>
-        <p class="svc-desc">Expert boiler installation, replacement, and annual servicing to keep your heating running safely and efficiently.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">🔍</div>
-        <div class="svc-name">Leak Detection &amp; Repair</div>
-        <p class="svc-desc">Advanced leak detection technology to find and fix hidden leaks before they cause serious damage to your property.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">🚿</div>
-        <div class="svc-name">Bathroom Fitting &amp; Renovation</div>
-        <p class="svc-desc">Full bathroom installations and renovations delivered with exceptional attention to detail and quality finish.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">🌊</div>
-        <div class="svc-name">Drain Unblocking &amp; Jetting</div>
-        <p class="svc-desc">Fast, effective drain clearing using professional high-pressure jetting equipment for stubborn blockages.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">♨️</div>
-        <div class="svc-name">Central Heating Systems</div>
-        <p class="svc-desc">Full central heating system design, installation, and repair for efficient, comfortable warmth in your home.</p>
-      </div>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-content">
+    <div class="h-badge"><span class="h-badge-icon">⭐</span><span class="h-badge-text">4.9 Stars · 66 Reviews · 30+ Years Experience</span></div>
+    <h1>Leeds's Trusted Plumber — <span>30+ Years</span> of Reliable Service</h1>
+    <p class="hero-sub">From emergency call-outs to full bathroom installations, Bodmin Plumbing Services keeps homes and businesses across West Yorkshire flowing — 24 hours a day, 7 days a week.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Call Us for a Free Quote</a>
+      <a href="#services" class="btn-secondary">Our Services</a>
     </div>
-  </section>
-
-  <section class="why">
-    <div class="section-label">Why Choose Us</div>
-    <h2 class="section-title">The Bodmin Difference</h2>
-    <div class="why-grid">
-      <div class="why-item">
-        <span class="why-icon">💰</span>
-        <div class="why-title">Upfront Pricing</div>
-        <p class="why-desc">No hidden charges. We give you a clear quote before any work begins.</p>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">🏅</span>
-        <div class="why-title">Fully Qualified</div>
-        <p class="why-desc">All engineers are Gas Safe registered and fully insured for your peace of mind.</p>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">⚡</span>
-        <div class="why-title">Fast Response</div>
-        <p class="why-desc">We respond quickly — especially for emergencies — because we know time matters.</p>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">🤝</span>
-        <div class="why-title">Trusted in Leeds</div>
-        <p class="why-desc">Hundreds of satisfied Leeds customers who keep coming back and recommending us.</p>
-      </div>
+    <div class="trust-bar">
+      <div class="trust-item"><div class="trust-num">30+</div><div class="trust-label">Years Experience</div></div>
+      <div class="trust-item"><div class="trust-num">4.9★</div><div class="trust-label">Average Rating</div></div>
+      <div class="trust-item"><div class="trust-num">66</div><div class="trust-label">Google Reviews</div></div>
+      <div class="trust-item"><div class="trust-num">24/7</div><div class="trust-label">Emergency Cover</div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="about" id="about">
-    <div class="about-inner">
-      <div class="about-content">
-        <div class="section-label">About Us</div>
-        <h2 class="section-title">Leeds Plumbers You Can Actually Rely On</h2>
-        <p class="about-text">Bodmin Plumbing Services has been serving Leeds homes and businesses with professional, dependable plumbing solutions built on transparency and skill. The team handles everything from emergency leak repairs to full bathroom renovations, bringing expert craftsmanship and honest pricing to every job.</p>
-        <p class="about-text">When you need a plumber in Leeds you can actually rely on, Bodmin Plumbing Services is the call to make.</p>
-        <a href="#contact" class="about-cta">Get a Free Quote Today</a>
-      </div>
-      <div class="about-stats">
-        <div class="stat"><div class="stat-num">500+</div><div class="stat-lab">Jobs Completed</div></div>
-        <div class="stat"><div class="stat-num">24/7</div><div class="stat-lab">Emergency Cover</div></div>
-        <div class="stat"><div class="stat-num">10+</div><div class="stat-lab">Years in Leeds</div></div>
-        <div class="stat"><div class="stat-num">5★</div><div class="stat-lab">Average Rating</div></div>
-      </div>
+<!-- Services -->
+<section class="services" id="services">
+  <div class="sec-label">What We Do</div>
+  <h2 class="sec-title">Our Plumbing Services</h2>
+  <p class="sec-sub">Comprehensive plumbing and heating solutions for residential and commercial properties across Leeds and West Yorkshire.</p>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-icon">🚨</div>
+      <div class="svc-name">Emergency 24-Hour Plumbing</div>
+      <div class="svc-desc">Available round the clock for urgent leaks, burst pipes, flooding and all plumbing emergencies across West Yorkshire.</div>
     </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-      <div class="section-label">Get a Quote</div>
-      <h2 class="section-title">Contact Bodmin Plumbing</h2>
-      <div class="contact-info">
-        <div class="c-item"><span class="c-label">Location</span><span class="c-val">Leeds, West Yorkshire, UK</span></div>
-        <div class="c-item"><span class="c-label">Email</span><span class="c-val">bodmin-p@sky.com</span></div>
-        <div class="c-item"><span class="c-label">Hours</span><span class="c-val">Mon–Sat 8am–6pm</span></div>
-      </div>
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xojppajv" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Your Name</label>
-              <input type="text" name="name" placeholder="e.g. James Bradley" required />
-            </div>
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Service Required</label>
-            <select name="service">
-              <option value="">Select a service...</option>
-              <option>Emergency Plumbing Repairs</option>
-              <option>Boiler Installation &amp; Servicing</option>
-              <option>Leak Detection &amp; Repair</option>
-              <option>Bathroom Fitting &amp; Renovation</option>
-              <option>Drain Unblocking &amp; Jetting</option>
-              <option>Central Heating Systems</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Describe the Job</label>
-            <textarea name="message" placeholder="Tell us what you need and the best time to contact you..."></textarea>
-          </div>
-          <input type="hidden" name="_subject" value="Free Quote Request - Bodmin Plumbing Services Leeds" />
-          <button type="submit" class="btn-submit">Request My Free Quote →</button>
-        </form>
-      </div>
+    <div class="svc-card">
+      <div class="svc-icon">🛁</div>
+      <div class="svc-name">Bathroom Installations</div>
+      <div class="svc-desc">Full bathroom fitting and renovation — from planning and supply through to complete installation and finishing.</div>
     </div>
-  </section>
+    <div class="svc-card">
+      <div class="svc-icon">🔥</div>
+      <div class="svc-name">Boiler Replacement &amp; Servicing</div>
+      <div class="svc-desc">Boiler installation, replacement, annual servicing and repairs to keep your heating system safe and efficient.</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🌡️</div>
+      <div class="svc-name">Heating System Repairs</div>
+      <div class="svc-desc">Central heating diagnostics, radiator repairs, thermostat replacement, and full system servicing throughout Leeds.</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🔧</div>
+      <div class="svc-name">General Plumbing &amp; Repairs</div>
+      <div class="svc-desc">Tap repairs, toilet fixes, leak detection, pipe replacement and all general plumbing maintenance jobs.</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">📋</div>
+      <div class="svc-name">Insurance &amp; Contract Work</div>
+      <div class="svc-desc">Specialist insurance claim work and long-term contract plumbing for landlords, businesses and housing associations.</div>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <div class="footer-logo">Bodmin <span>Plumbing</span> Services</div>
-    <div class="footer-loc">Leeds, West Yorkshire, UK</div>
-    <div class="footer-email">bodmin-p@sky.com</div>
-    <hr class="footer-divider" />
-    <div class="footer-copy">© 2026 Bodmin Plumbing Services. All rights reserved. | Website by <strong style="color:#1e9fc4;">Alma Digital Designs</strong></div>
-  </footer>
+<!-- Why Us -->
+<section class="why" id="about">
+  <div class="why-img">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80" alt="Bodmin Plumbing Services Leeds professional plumber at work">
+  </div>
+  <div class="why-content">
+    <div class="sec-label" style="text-align:left">Why Choose Us</div>
+    <h2>A Family Business Leeds Has Trusted for Over 30 Years</h2>
+    <p>Bodmin Plumbing Services is a family-run business based in Middleton, Leeds, with over 30 years of experience serving homes and businesses across West Yorkshire. We pride ourselves on honest pricing, reliable service, and getting the job done right first time.</p>
+    <p>With a 4.9-star rating across 66 Google reviews, our reputation speaks for itself. Whether it's a midnight emergency or a planned bathroom renovation, you can count on us.</p>
+    <ul class="why-list">
+      <li class="why-item"><span class="check">✓</span> 30+ years serving Leeds and West Yorkshire</li>
+      <li class="why-item"><span class="check">✓</span> Family-run, locally trusted business</li>
+      <li class="why-item"><span class="check">✓</span> 4.9 stars across 66 verified Google reviews</li>
+      <li class="why-item"><span class="check">✓</span> 24-hour emergency response available</li>
+      <li class="why-item"><span class="check">✓</span> Free quotes — no call-out fee to assess</li>
+    </ul>
+    <div class="oap-box"><p><span>💙 OAP Discount Available</span> — Special rates for senior customers throughout West Yorkshire.</p></div>
+    <a href="#contact" class="btn-primary">Call Us for a Free Quote</a>
+  </div>
+</section>
 
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+  <div class="sec-label">What Our Customers Say</div>
+  <h2 class="sec-title">4.9 Stars · 66 Google Reviews</h2>
+  <p class="sec-sub">Consistently top-rated plumbing service across Leeds and West Yorkshire for over 30 years.</p>
+  <div class="r-grid">
+    <div class="r-card">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"Bodmin came out at 11pm when we had a burst pipe flooding our kitchen. Fixed it within an hour and the price was completely fair. Absolute lifesavers. Won't use anyone else in Leeds."</p>
+      <div class="r-name">David H.</div>
+      <div class="r-loc">Google Review · Leeds, West Yorkshire</div>
+    </div>
+    <div class="r-card">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"Had our full bathroom renovated by Bodmin and couldn't be happier. Professional from start to finish, kept us informed throughout, and the quality of the work is outstanding. Highly recommended."</p>
+      <div class="r-name">Patricia M.</div>
+      <div class="r-loc">Google Review · Middleton, Leeds</div>
+    </div>
+    <div class="r-card">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"Family-run business that genuinely cares about their customers. I'm an OAP and they gave me a discount without me even asking. Boiler service was thorough and the price was very reasonable. Thank you!"</p>
+      <div class="r-name">Margaret T.</div>
+      <div class="r-loc">Google Review · West Yorkshire</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Need a Reliable Plumber in Leeds?</h2>
+  <p>Call us for a free, no-obligation quote. Available 24 hours for emergencies across West Yorkshire.</p>
+  <a href="#contact" class="btn-white">Call Us for a Free Quote</a>
+</div>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div>
+    <h2>Get in Touch</h2>
+    <div class="c-item">
+      <span class="c-icon">📍</span>
+      <div><div class="c-label">Location</div><div class="c-val">Middleton, Leeds, West Yorkshire, UK</div></div>
+    </div>
+    <div class="c-item">
+      <span class="c-icon">📧</span>
+      <div><div class="c-label">Email</div><div class="c-val">bodmin-p@sky.com</div></div>
+    </div>
+    <div class="c-item">
+      <span class="c-icon">🚨</span>
+      <div><div class="c-label">24-Hour Emergency</div><div class="c-val">Available round the clock for urgent plumbing issues</div></div>
+    </div>
+    <div class="c-item">
+      <span class="c-icon">💙</span>
+      <div><div class="c-label">OAP Discounts</div><div class="c-val">Special rates available for senior customers</div></div>
+    </div>
+  </div>
+  <div class="cf">
+    <h3>Request a Free Quote</h3>
+    <form action="https://formspree.io/f/xojppajv" method="POST">
+      <div class="fg"><label>Your Name</label><input type="text" name="name" placeholder="David Harrison" required></div>
+      <div class="fg"><label>Email Address</label><input type="email" name="email" placeholder="david@example.com" required></div>
+      <div class="fg"><label>Type of Job</label><input type="text" name="service" placeholder="e.g. Emergency call-out, Boiler service, Bathroom fit..."></div>
+      <div class="fg"><label>Message</label><textarea name="message" placeholder="Describe the problem or job required, your address and preferred contact time..."></textarea></div>
+      <button type="submit" class="form-btn">Request Your Free Quote</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div>
+    <div class="f-name">Bodmin <span>Plumbing Services</span></div>
+  </div>
+  <p>Middleton, Leeds, West Yorkshire · bodmin-p@sky.com · 24/7 Emergency Available</p>
+  <div class="f-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+<div class="alma-bar">Preview designed by <a href="https://almadigitalservices.com" target="_blank">Alma Digital Services</a> — Professional websites for local businesses</div>
 </body>
 </html>
