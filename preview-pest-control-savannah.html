@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savannah Pest Solutions | Professional Pest Control Savannah GA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    /* Layout 2 - Split Screen / Olive & Cream */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:#f5f2eb;color:#2a2418}
+    .urgency-banner{background:#2d5016;color:#f5f2eb;text-align:center;padding:11px 20px;font-weight:700;font-size:14px;letter-spacing:1px}
+    nav{background:#fff;padding:16px 30px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+    .logo{font-family:'Playfair Display',serif;font-size:22px;color:#2d5016;font-weight:700}
+    .nav-phone{color:#2d5016;font-weight:600;font-size:15px;text-decoration:none}
+    .nav-cta{background:#2d5016;color:#fff;padding:10px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px;margin-left:16px}
+
+    /* Split Hero */
+    .hero{display:grid;grid-template-columns:1fr 1fr;min-height:90vh}
+    .hero-left{background:#2d5016;display:flex;flex-direction:column;justify-content:center;padding:60px 50px;position:relative;overflow:hidden}
+    .hero-left::before{content:'';position:absolute;top:-50px;right:-50px;width:300px;height:300px;background:rgba(125,200,80,.1);border-radius:50%}
+    .hero-badge{background:rgba(212,160,23,.25);border:1px solid #d4a017;color:#d4a017;padding:7px 18px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;margin-bottom:24px;text-transform:uppercase;display:inline-block;width:fit-content}
+    .hero-left h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,56px);line-height:1.1;margin-bottom:20px;color:#fff}
+    .hero-left h1 span{color:#7ec850}
+    .hero-left p{font-size:17px;color:rgba(255,255,255,.8);margin-bottom:36px;line-height:1.75;max-width:420px}
+    .hero-btn-primary{background:#d4a017;color:#0f1a0f;padding:16px 36px;border-radius:6px;text-decoration:none;font-weight:700;font-size:16px;display:inline-block;margin-bottom:12px;width:fit-content}
+    .hero-sub{color:rgba(255,255,255,.55);font-size:13px;margin-top:8px}
+    .hero-right{background:linear-gradient(135deg,#e8e2d4,#d8d0be);display:flex;flex-direction:column;justify-content:center;padding:60px 50px;position:relative}
+    .termite-warning{background:#fff;border-radius:12px;padding:30px;box-shadow:0 8px 32px rgba(0,0,0,.12);margin-bottom:24px;border-left:4px solid #c84a4a}
+    .termite-warning h3{color:#c84a4a;font-size:16px;font-weight:700;margin-bottom:10px;letter-spacing:1px;text-transform:uppercase}
+    .termite-warning p{color:#5a5040;font-size:15px;line-height:1.65}
+    .quick-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .qs-item{background:#fff;border-radius:10px;padding:20px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+    .qs-num{font-size:30px;font-weight:700;color:#2d5016;font-family:'Playfair Display',serif}
+    .qs-label{font-size:12px;color:#888;margin-top:4px;line-height:1.4}
+
+    /* Services */
+    .services-section{background:#fff;padding:80px 20px}
+    .services-inner{max-width:1100px;margin:0 auto}
+    .section-label{color:#2d5016;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:#2a2418;margin-bottom:14px}
+    .section-sub{color:#888;font-size:16px;margin-bottom:50px;max-width:600px;line-height:1.7}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+    .service-card{border:1px solid #e8e4da;border-radius:10px;padding:28px;transition:all .3s;background:#faf8f4}
+    .service-card:hover{border-color:#2d5016;box-shadow:0 4px 20px rgba(45,80,22,.12)}
+    .service-icon{font-size:32px;margin-bottom:14px}
+    .service-card h3{color:#2a2418;font-size:18px;margin-bottom:10px}
+    .service-card p{color:#888;font-size:15px;line-height:1.65}
+
+    /* Comparison horizontal */
+    .comparison-section{background:#f5f2eb;padding:80px 20px}
+    .comparison-inner{max-width:1000px;margin:0 auto}
+    .comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+    .comp-card{border-radius:12px;padding:32px;border:2px solid transparent}
+    .comp-before{background:#fff3f3;border-color:#e8b0b0}
+    .comp-after{background:#f3fff0;border-color:#7ec850}
+    .comp-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+    .comp-before .comp-label{color:#c84a4a}
+    .comp-after .comp-label{color:#2d5016}
+    .comp-card h3{font-size:18px;color:#2a2418;margin-bottom:14px}
+    .comp-card ul{list-style:none}
+    .comp-card ul li{padding:7px 0;font-size:14px;color:#666;border-bottom:1px solid rgba(0,0,0,.06)}
+    .comp-before ul li::before{content:"X  ";color:#c84a4a;font-weight:700}
+    .comp-after ul li::before{content:"V  ";color:#2d5016;font-weight:700}
+
+    /* Urgency */
+    .urgency-bar{background:#2d5016;padding:50px 20px;text-align:center}
+    .urgency-bar h2{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,38px);color:#fff;margin-bottom:12px}
+    .urgency-bar p{color:rgba(255,255,255,.8);font-size:17px;max-width:600px;margin:0 auto 28px;line-height:1.7}
+    .season-badge{display:inline-block;background:#d4a017;color:#0f1a0f;padding:7px 20px;border-radius:4px;font-weight:700;font-size:13px;margin-bottom:22px;letter-spacing:1px}
+
+    /* CTA */
+    .cta-section{background:#fff;padding:80px 20px;text-align:center}
+    .cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:#2a2418;margin-bottom:14px}
+    .cta-section p{color:#666;font-size:18px;margin:0 auto 36px;max-width:580px;line-height:1.65}
+    .cta-btn{background:#2d5016;color:#fff;padding:18px 46px;border-radius:6px;text-decoration:none;font-weight:700;font-size:18px;display:inline-block}
+    .cta-note{color:#999;font-size:13px;margin-top:14px}
+
+    .contact-section{background:#2a2418;padding:50px 20px;text-align:center}
+    .contact-section h3{color:#fff;font-size:20px;margin-bottom:14px}
+    .contact-info{color:#a0987a;font-size:16px;line-height:2.1}
+    .contact-info a{color:#7ec850;text-decoration:none}
+    footer{background:#1a1810;padding:24px 20px;text-align:center;border-top:1px solid #2a2418}
+    footer p{color:#555;font-size:13px}
+    footer .powered{color:#7ec850}
+
+    @media(max-width:768px){
+      .hero{grid-template-columns:1fr}
+      .hero-right{display:none}
+      .comp-grid{grid-template-columns:1fr}
+      .quick-stats{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="urgency-banner">TERMITE SWARM SEASON -- Georgia Pest Operators Are Losing Jobs to Better-Looking Websites</div>
+  <nav>
+    <div class="logo">Savannah Pest Solutions</div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="tel:+19125550100" class="nav-phone">(912) 555-0100</a>
+      <a href="#claim" class="nav-cta">Free Preview</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-badge">Spring 2026 -- Termite Season</div>
+      <h1>Savannah Pest Control<br><span>That Wins Online</span></h1>
+      <p>The Historic District, Midtown, Pooler -- Savannah homeowners are searching for pest control right now. Is your website showing up? Does it make them want to call?</p>
+      <a href="#claim" class="hero-btn-primary">Get My Free Website Preview</a>
+      <p class="hero-sub">Free to see. Starts at $50 to launch. No contracts.</p>
+    </div>
+    <div class="hero-right">
+      <div class="termite-warning">
+        <h3>Termite Alert: Spring 2026</h3>
+        <p>Eastern subterranean termites are actively swarming across Chatham County. Homeowners are Googling "pest control near me" right now -- and calling whoever has the best-looking website.</p>
+      </div>
+      <div class="quick-stats">
+        <div class="qs-item"><div class="qs-num">94%</div><div class="qs-label">research online before calling a pest company</div></div>
+        <div class="qs-item"><div class="qs-num">3x</div><div class="qs-label">more calls from a modern mobile website</div></div>
+        <div class="qs-item"><div class="qs-num">$50</div><div class="qs-label">to launch your full redesigned website</div></div>
+        <div class="qs-item"><div class="qs-num">24h</div><div class="qs-label">to see your free preview -- no commitment</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="services-section">
+    <div class="services-inner">
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">Full-Service Pest Control for Savannah</h2>
+      <p class="section-sub">From termite treatments to year-round pest prevention -- protecting Chatham County homes and businesses since day one.</p>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-icon">&#128028;</div><h3>Termite Inspections &amp; Treatment</h3><p>Eastern subterranean termites swarm every spring in Coastal Georgia. Our certified inspectors catch damage early and eliminate entire colonies.</p></div>
+        <div class="service-card"><div class="service-icon">&#127968;</div><h3>Residential Pest Control</h3><p>Protect your Savannah home with quarterly and monthly treatment plans. We keep cockroaches, palmetto bugs, and fire ants out -- guaranteed.</p></div>
+        <div class="service-card"><div class="service-icon">&#127970;</div><h3>Commercial Services</h3><p>Discreet, effective commercial pest control for Savannah restaurants, hotels, and offices. We keep you compliant and your reputation intact.</p></div>
+        <div class="service-card"><div class="service-icon">&#128680;</div><h3>Same-Day Emergency Service</h3><p>When pests can not wait, neither do we. Call before noon and we will be at your Savannah home the same day.</p></div>
+        <div class="service-card"><div class="service-icon">&#127807;</div><h3>Pet &amp; Family Safe Treatments</h3><p>Georgia-safe, eco-friendly treatment options for families with children and pets. Effective protection without compromising your family's health.</p></div>
+        <div class="service-card"><div class="service-icon">&#128269;</div><h3>WDO Inspection Reports</h3><p>Fast Wood-Destroying Organism inspections for real estate closings across Savannah and all of Chatham County. Reports in 24 hours.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="urgency-bar">
+    <div class="season-badge">SPRING TERMITE WARNING</div>
+    <h2>Georgia's Termite Season Is at Its Peak</h2>
+    <p>Savannah's humid coastal climate makes it one of the highest-risk areas in the Southeast for termite damage. Every week without a modern website is revenue left on the table.</p>
+    <a href="#claim" style="background:#d4a017;color:#0f1a0f;padding:15px 36px;border-radius:6px;text-decoration:none;font-weight:700;font-size:16px;display:inline-block">See My Free Redesign</a>
+  </div>
+
+  <section class="comparison-section">
+    <div class="comparison-inner">
+      <div class="section-label" style="text-align:center">Before &amp; After</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:10px">What Your Website Could Look Like</h2>
+      <p style="text-align:center;color:#888;font-size:16px;max-width:700px;margin:0 auto">Most Savannah pest control sites are outdated or non-existent. Here is the transformation we deliver:</p>
+      <div class="comp-grid">
+        <div class="comp-card comp-before">
+          <div class="comp-label">Current Site</div>
+          <h3>Invisible to New Customers</h3>
+          <ul>
+            <li>Old Wix or no website at all</li>
+            <li>Not visible on mobile devices</li>
+            <li>No Google Business reviews shown</li>
+            <li>No easy way to request service</li>
+            <li>Loads too slowly to rank</li>
+            <li>Competitors are outranking you</li>
+            <li>No trust signals or certifications</li>
+          </ul>
+        </div>
+        <div class="comp-card comp-after">
+          <div class="comp-label">Redesigned Site</div>
+          <h3>Converting Visitors to Bookings</h3>
+          <ul>
+            <li>Clean, modern professional design</li>
+            <li>Perfect on any phone or tablet</li>
+            <li>Google reviews front and center</li>
+            <li>One-tap call and booking buttons</li>
+            <li>Fast-loading, SEO-optimized</li>
+            <li>Shows up above competitors</li>
+            <li>License, insurance badges visible</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="claim" class="cta-section">
+    <h2>Your Free Preview Is Waiting</h2>
+    <p>We will design a full mockup of your new website at no cost. See it, love it, then decide. Launch for as little as $50 or walk away -- no pressure, no obligation.</p>
+    <a href="tel:+19125550100" class="cta-btn">Claim Your Free Preview</a>
+    <p class="cta-note">Or text us: (912) 555-0100 | Response within 1 hour during business hours</p>
+  </section>
+
+  <div class="contact-section">
+    <h3>Savannah Pest Solutions</h3>
+    <div class="contact-info">
+      Serving Savannah, GA | Chatham County | Pooler | Rincon<br>
+      <a href="tel:+19125550100">(912) 555-0100</a> | <a href="mailto:info@savannahpestsolutions.com">info@savannahpestsolutions.com</a><br>
+      Licensed &amp; Insured | Georgia Pest Control License
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Savannah Pest Solutions. Website redesign preview by <span class="powered">Alma Digital Services</span>.</p>
+  </footer>
+</body>
+</html>
