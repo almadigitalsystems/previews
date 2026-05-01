@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nails by Pris — Professional Nail Artist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blush: #fdf0f5;
+      --rose: #c9728e;
+      --deep-rose: #8b2252;
+      --mauve: #d4a0b5;
+      --plum: #2d1520;
+      --cream: #fff9f6;
+      --warm-gold: #c4956a;
+      --light-pink: #f7dce8;
+      --mid-pink: #e8a0bf;
+      --dark-plum: #1a0d13;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--cream);
+      color: var(--plum);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(253, 240, 245, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 160, 181, 0.25);
+    }
+
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--deep-rose);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-brand span {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--plum);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--rose); }
+
+    .nav-cta {
+      background: var(--rose);
+      color: #fff !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--deep-rose) !important; color: #fff !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 7rem 2rem 4rem;
+      background: linear-gradient(135deg, var(--blush) 0%, #fff0f7 50%, var(--light-pink) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 114, 142, 0.12) 0%, transparent 70%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 34, 82, 0.08) 0%, transparent 70%);
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-text { position: relative; z-index: 1; }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1rem;
+    }
+
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--plum);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--rose);
+      font-weight: 300;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #6b4558;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+      max-width: 440px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.95rem 2.2rem;
+      background: var(--rose);
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--deep-rose);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.95rem 2.2rem;
+      border: 2px solid var(--mauve);
+      color: var(--plum);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--rose);
+      color: var(--rose);
+      transform: translateY(-2px);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image-frame {
+      width: 340px;
+      height: 440px;
+      border-radius: 200px 200px 160px 160px;
+      background: linear-gradient(160deg, var(--mauve) 0%, var(--rose) 45%, var(--deep-rose) 100%);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(139, 34, 82, 0.2);
+    }
+
+    .hero-image-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.85);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero-image-overlay .nail-emoji {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .floating-badge {
+      position: absolute;
+      bottom: -15px;
+      right: -15px;
+      background: var(--warm-gold);
+      color: #fff;
+      padding: 1rem 1.2rem;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(196, 149, 106, 0.35);
+    }
+
+    .floating-badge .big-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .floating-badge .small-text {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      opacity: 0.9;
+    }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 5rem 2rem; }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--plum);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-h2 em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    /* ── ABOUT ── */
+    .about { background: var(--blush); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 120px 20px 120px 20px;
+      background: linear-gradient(145deg, var(--light-pink) 0%, var(--mauve) 60%, var(--rose) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 2rem;
+      box-shadow: 0 20px 50px rgba(201, 114, 142, 0.18);
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      color: #5a3547;
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .stat { text-align: center; }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--rose);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--plum);
+      margin-top: 0.3rem;
+    }
+
+    /* ── SERVICES ── */
+    .services { background: var(--cream); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      border: 1px solid rgba(212, 160, 181, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(201, 114, 142, 0.12);
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--plum);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: #6b4558;
+      line-height: 1.65;
+    }
+
+    .service-price {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--rose);
+    }
+
+    /* ── GALLERY ── */
+    .gallery { background: var(--blush); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      position: relative;
+    }
+
+    .gallery-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+      min-height: 300px;
+    }
+
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .gp-1 { background: linear-gradient(135deg, #c9728e 0%, #8b2252 100%); }
+    .gp-2 { background: linear-gradient(135deg, #d4a0b5 0%, #c9728e 100%); }
+    .gp-3 { background: linear-gradient(135deg, #f7dce8 0%, #d4a0b5 100%); min-height: 150px; }
+    .gp-4 { background: linear-gradient(135deg, #c4956a 0%, #8b2252 100%); min-height: 150px; }
+    .gp-5 { background: linear-gradient(135deg, #e8a0bf 0%, #c9728e 100%); min-height: 150px; }
+
+    .gp-3 .gallery-placeholder,
+    .gp-4 .gallery-placeholder,
+    .gp-5 .gallery-placeholder { color: rgba(255,255,255,0.8); }
+
+    /* ── PROCESS ── */
+    .process { background: var(--cream); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 2.5rem;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--mauve), transparent);
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    .step-number {
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background: var(--rose);
+      color: #fff;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--plum);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-desc {
+      font-size: 0.88rem;
+      color: #6b4558;
+      line-height: 1.6;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--blush); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid rgba(212, 160, 181, 0.2);
+    }
+
+    .stars {
+      color: var(--warm-gold);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.1em;
+    }
+
+    .testimonial-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--plum);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .testimonial-author {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--rose);
+    }
+
+    /* ── BOOKING ── */
+    .booking { background: linear-gradient(135deg, var(--deep-rose) 0%, #5c1538 100%); }
+
+    .booking .section-label { color: var(--mauve); }
+
+    .booking .section-h2 { color: #fff; }
+
+    .booking .section-h2 em { color: var(--mauve); }
+
+    .booking-inner { text-align: center; }
+
+    .booking-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 550px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .booking-cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: #fff;
+      color: var(--deep-rose);
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .btn-outline-white {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      border: 2px solid rgba(255,255,255,0.5);
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+
+    .btn-outline-white:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--cream); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+
+    .contact-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--plum);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-details { list-style: none; }
+
+    .contact-details li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #5a3547;
+    }
+
+    .contact-icon {
+      font-size: 1.1rem;
+      color: var(--rose);
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rose);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 0.9rem 1.2rem;
+      border: 1.5px solid rgba(212, 160, 181, 0.4);
+      border-radius: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--plum);
+      background: #fff;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--rose);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    /* ── ALMA BANNER ── */
+    .alma-banner {
+      background: var(--plum);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .alma-banner-text {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 1rem;
+    }
+
+    .alma-banner-text strong { color: #fff; }
+
+    .alma-cta {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: var(--rose);
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .alma-cta:hover { background: var(--deep-rose); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark-plum);
+      color: rgba(255,255,255,0.6);
+      padding: 3rem 2rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand span { font-style: italic; font-weight: 300; }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-col h4 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mauve);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+      font-size: 0.88rem;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--mauve); }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-visual { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-image { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item:first-child { grid-column: span 2; min-height: 200px; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-steps::before { display: none; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .nav-links { display: none; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      nav { padding: 1rem; }
+      .hero { padding: 5.5rem 1.25rem 3rem; }
+      section { padding: 3.5rem 1.25rem; }
+      .hero-buttons { flex-direction: column; }
+      .booking-cta-group { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand">Nails <span>by Pris</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#booking" class="nav-cta">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">✦ Premium Nail Art &amp; Care</p>
+        <h1 class="hero-h1">Your nails,<br /><em>your story.</em></h1>
+        <p class="hero-sub">Handcrafted nail art that expresses who you are. From classic elegance to bold statement sets — Pris brings precision, creativity, and care to every single client.</p>
+        <div class="hero-buttons">
+          <a href="#booking" class="btn-primary">Book Your Appointment</a>
+          <a href="#gallery" class="btn-outline">View Gallery</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <div class="hero-image-overlay">
+            <div class="nail-emoji">💅</div>
+            <div>Nail art<br />portfolio</div>
+          </div>
+        </div>
+        <div class="floating-badge">
+          <div class="big-num">5★</div>
+          <div class="small-text">Rated by<br />clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-image">
+          <div>
+            <div style="font-size:2.5rem; margin-bottom:0.75rem;">💅</div>
+            <div>Pris at work —<br />crafting beautiful nails</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-label">About Pris</p>
+          <h2 class="section-h2">Nails that make you feel <em>unstoppable.</em></h2>
+          <p>Hi, I'm Pris — a passionate nail artist dedicated to helping my clients look and feel their absolute best. Every set I create is custom, thoughtfully designed for your lifestyle and personality.</p>
+          <p>I believe great nails aren't just about aesthetics — they're a confidence boost, a form of self-expression, and a little luxury you deserve. I take pride in using premium products that are long-lasting and safe for your natural nails.</p>
+          <p>Whether you want something clean and classic or bold and artistic, I've got you covered. DM me on Instagram to book your next set!</p>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-num">500+</div>
+              <div class="stat-label">Happy clients</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Years experience</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Custom sets</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <p class="section-label">✦ What I offer</p>
+      <h2 class="section-h2">Services designed <em>for you</em></h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💅</div>
+          <div class="service-name">Gel Manicure</div>
+          <p class="service-desc">Long-lasting gel polish on natural nails. Perfect for everyday wear — shiny, chip-resistant, and gorgeous for weeks.</p>
+          <div class="service-price">From $45</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <div class="service-name">Nail Extensions</div>
+          <p class="service-desc">Acrylic or gel extensions in the length and shape of your choice. Built strong, filed perfect, designed to impress.</p>
+          <div class="service-price">From $65</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <div class="service-name">Nail Art</div>
+          <p class="service-desc">Custom hand-painted designs, chrome powders, gems, and more. Your nail art is one-of-a-kind — just like you.</p>
+          <div class="service-price">From $15 add-on</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌸</div>
+          <div class="service-name">Full Set (Acrylic)</div>
+          <p class="service-desc">Classic acrylic full set — strong, beautiful, and versatile. Ideal for clients wanting length and durability.</p>
+          <div class="service-price">From $55</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💎</div>
+          <div class="service-name">Gel-X / Soft Gel</div>
+          <p class="service-desc">Lightweight soft gel extensions that look incredibly natural. Easier on your natural nails — perfect for nail biters.</p>
+          <div class="service-price">From $70</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔄</div>
+          <div class="service-name">Fill / Infill</div>
+          <p class="service-desc">Keep your existing set looking fresh. Regular fills every 2–3 weeks keep your nails strong and beautiful.</p>
+          <div class="service-price">From $35</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <p class="section-label">✦ Recent work</p>
+      <h2 class="section-h2">The <em>art</em> speaks for itself</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp-1" style="height:100%; min-height:300px;">
+            <div>
+              <div style="font-size:3rem; margin-bottom:0.75rem;">💅</div>
+              <div>Custom nail art<br />portfolio</div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp-2">
+            <div style="font-size:1.5rem;">✨</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp-3">
+            <div style="font-size:1.5rem;">🌸</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp-4">
+            <div style="font-size:1.5rem;">💎</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp-5">
+            <div style="font-size:1.5rem;">🎨</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a href="https://www.instagram.com/nailsby_pris" target="_blank" class="btn-primary">See full gallery on Instagram →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="process" id="process">
+    <div class="section-inner">
+      <p class="section-label">✦ How it works</p>
+      <h2 class="section-h2">Getting your dream nails is <em>easy</em></h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-title">Browse &amp; Inspo</div>
+          <p class="step-desc">Check my Instagram gallery for ideas. Screenshot looks you love to share with me at booking.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-title">Book Your Slot</div>
+          <p class="step-desc">DM me on Instagram or use the booking form below. Appointments fill fast — book early!</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-title">Your Appointment</div>
+          <p class="step-desc">Relax, chat, and watch your vision come to life. I take my time to make sure everything is perfect.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-title">Show Them Off</div>
+          <p class="step-desc">Walk out with nails that turn heads. Tag me on Instagram so I can share your gorgeous set!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-inner">
+      <p class="section-label">✦ Client love</p>
+      <h2 class="section-h2">What my clients <em>say</em></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Pris is honestly a nail artist, not just a nail tech. She took my inspo pic and made it 10x better. I get compliments every single day."</p>
+          <div class="testimonial-author">— Maria G.</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"I've been going to Pris for over a year and I would NEVER go anywhere else. She's detail-obsessed and so so talented. My nails last forever."</p>
+          <div class="testimonial-author">— Valentina R.</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Best nail experience I've ever had. She's gentle, fast, and the results are flawless. My gel set is still going strong at 4 weeks!"</p>
+          <div class="testimonial-author">— Jasmine T.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section class="booking" id="booking">
+    <div class="section-inner">
+      <div class="booking-inner">
+        <p class="section-label">✦ Ready?</p>
+        <h2 class="section-h2">Let's create your <em>perfect</em> set</h2>
+        <p class="booking-sub">Spots are limited — book early to secure your appointment. DM me on Instagram or fill out the contact form below and I'll get back to you within 24 hours.</p>
+        <div class="booking-cta-group">
+          <a href="https://www.instagram.com/nailsby_pris" target="_blank" class="btn-white">📸 DM on Instagram</a>
+          <a href="#contact" class="btn-outline-white">Fill Out Booking Form</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-label">✦ Get in touch</p>
+          <h3 class="section-h2" style="font-size:1.8rem;">Have questions?<br /><em>I'd love to hear from you.</em></h3>
+          <ul class="contact-details">
+            <li>
+              <span class="contact-icon">📸</span>
+              <div><strong>Instagram:</strong><br /><a href="https://www.instagram.com/nailsby_pris" target="_blank" style="color:var(--rose); text-decoration:none;">@nailsby_pris</a> — fastest way to reach me!</div>
+            </li>
+            <li>
+              <span class="contact-icon">📅</span>
+              <div><strong>Availability:</strong><br />Tue – Sun | By appointment only</div>
+            </li>
+            <li>
+              <span class="contact-icon">⏱️</span>
+              <div><strong>Response time:</strong><br />Within 24 hours</div>
+            </li>
+            <li>
+              <span class="contact-icon">📍</span>
+              <div><strong>Location:</strong><br />Serving clients in your local area — DM for details</div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="section-label">✦ Booking request</p>
+          <form class="contact-form" action="https://formspree.io/f/xojppajv" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="First &amp; Last Name" required />
+            </div>
+            <div class="form-group">
+              <label for="instagram">Instagram Handle</label>
+              <input type="text" id="instagram" name="instagram" placeholder="@yourusername" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interested In</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option>Gel Manicure</option>
+                <option>Nail Extensions</option>
+                <option>Full Set (Acrylic)</option>
+                <option>Gel-X / Soft Gel</option>
+                <option>Nail Art Add-on</option>
+                <option>Fill / Infill</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell me about your dream nails</label>
+              <textarea id="message" name="message" placeholder="Describe the look you want, any inspo, your preferred date..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="border:none; cursor:pointer; width:100%; font-size:1rem; padding:1rem;">Send Booking Request ✨</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALMA BANNER -->
+  <div class="alma-banner">
+    <p class="alma-banner-text">
+      This is a <strong>free website preview</strong> created by <strong>Alma Digital Services</strong> — we build stunning websites for beauty professionals starting at just $50.
+    </p>
+    <a href="https://almadigitalservices.com" target="_blank" class="alma-cta">Claim Your Free Redesign →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Nails <span>by Pris</span></div>
+        <p class="footer-tagline">Handcrafted nail art for the woman who deserves to feel beautiful — every single day.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Gel Manicure</a></li>
+          <li><a href="#services">Nail Extensions</a></li>
+          <li><a href="#services">Nail Art</a></li>
+          <li><a href="#services">Full Set</a></li>
+          <li><a href="#services">Gel-X</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/nailsby_pris" target="_blank">@nailsby_pris</a></li>
+          <li><a href="#booking">Book Appointment</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Nails by Pris. All rights reserved.</span>
+      <span style="font-size:0.75rem; opacity:0.5;">Preview by Alma Digital Services</span>
+    </div>
+  </footer>
+
+</body>
+</html>
