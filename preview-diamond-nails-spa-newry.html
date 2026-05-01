@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Nails Spa Newry | Manicures, Pedicures &amp; Eyelash Extensions</title>
+  <meta name="description" content="Diamond Nails Spa on Hill Street, Newry. Professional manicures, pedicures, eyelash extensions, waxing and more. Walk-ins welcome. 94% recommended. Book today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #faf7f4;
+      --blush:    #f5e8e4;
+      --rose:     #c97d8a;
+      --plum:     #2b1428;
+      --plum-mid: #3d1f38;
+      --gold:     #c4a47c;
+      --text:     #1a0d15;
+      --muted:    #6b5460;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ──── NAV ──── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 244, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(196, 164, 124, 0.25);
+      padding: 0 2rem;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .nav-diamond {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--rose), var(--gold));
+      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    }
+
+    .nav-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--plum);
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--rose); }
+
+    .nav-cta {
+      background: var(--plum);
+      color: #fff !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 40px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--rose) !important; color: #fff !important; }
+
+    /* ──── HERO ──── */
+    .hero {
+      min-height: 92vh;
+      background: var(--plum);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 80% 50%, rgba(201, 125, 138, 0.22) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(196, 164, 124, 0.15) 0%, transparent 60%);
+    }
+
+    /* decorative circles */
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      border: 1px solid rgba(196, 164, 124, 0.18);
+      top: -80px;
+      right: -80px;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(196, 164, 124, 0.15);
+      border: 1px solid rgba(196, 164, 124, 0.35);
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge::before {
+      content: '★★★★★';
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 440px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--rose), #b86070);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.85rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(201, 125, 138, 0.4);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201, 125, 138, 0.5); }
+
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid rgba(196, 164, 124, 0.5);
+      color: var(--gold);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.85rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-outline:hover { background: rgba(196, 164, 124, 0.1); }
+
+    /* hero right visual */
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .hero-card-main {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card-main::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(196, 164, 124, 0.25), transparent 70%);
+    }
+
+    .hero-card-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-card-stat {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card-desc {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .hero-cards-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .hero-card-sm {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+
+    .hero-card-sm .hero-card-label { margin-bottom: 0.4rem; }
+
+    .hero-card-sm-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .hero-card-sm-sub {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.2rem;
+    }
+
+    /* ──── TRUST BAR ──── */
+    .trust-bar {
+      background: var(--blush);
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(196, 164, 124, 0.2);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--plum);
+    }
+
+    .trust-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--rose);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.75rem;
+    }
+
+    /* ──── ABOUT ──── */
+    .about {
+      padding: 6rem 2rem;
+      background: var(--cream);
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1rem;
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--plum);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-text {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-img-frame {
+      background: linear-gradient(145deg, var(--blush), #eeddd6);
+      border-radius: 24px;
+      padding: 2.5rem;
+      text-align: center;
+      border: 1px solid rgba(201, 125, 138, 0.2);
+    }
+
+    .about-diamond-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--rose), var(--gold));
+      clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+      margin: 0 auto 1.5rem;
+    }
+
+    .about-img-frame h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--plum);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-img-frame p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .about-stat {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .about-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--rose);
+    }
+
+    .about-stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    /* ──── SERVICES ──── */
+    .services {
+      padding: 6rem 2rem;
+      background: var(--plum);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .services::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      border: 1px solid rgba(196, 164, 124, 0.1);
+      top: -200px;
+      left: -200px;
+      pointer-events: none;
+    }
+
+    .services-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-header .section-label { color: var(--gold); }
+
+    .services-header .section-heading { color: #fff; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      transition: transform 0.25s, background 0.25s, border-color 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(196, 164, 124, 0.35);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(201, 125, 138, 0.3), rgba(196, 164, 124, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.58);
+      line-height: 1.7;
+    }
+
+    /* ──── SOCIAL PROOF ──── */
+    .proof {
+      padding: 6rem 2rem;
+      background: var(--blush);
+    }
+
+    .proof-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .proof-stars {
+      font-size: 1.8rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .proof-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--plum);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .proof-sub {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+    }
+
+    .proof-badges {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .proof-badge {
+      background: #fff;
+      border-radius: 40px;
+      padding: 0.6rem 1.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--plum);
+      border: 1px solid rgba(201, 125, 138, 0.2);
+    }
+
+    /* ──── CTA ──── */
+    .cta-section {
+      padding: 7rem 2rem;
+      background: linear-gradient(135deg, var(--plum) 0%, var(--plum-mid) 100%);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 125, 138, 0.15) 0%, transparent 70%);
+      top: -150px;
+      right: -100px;
+    }
+
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196, 164, 124, 0.1) 0%, transparent 70%);
+      bottom: -80px;
+      left: -60px;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .cta-section .section-label { color: var(--gold); text-align: center; }
+
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-section p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .btn-gold {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), #b8956a);
+      color: var(--plum);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.9rem 2.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(196, 164, 124, 0.4);
+    }
+
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(196, 164, 124, 0.5); }
+
+    .cta-contact {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .cta-contact a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .cta-contact a:hover { text-decoration: underline; }
+
+    /* ──── LOCATION ──── */
+    .location {
+      padding: 4rem 2rem;
+      background: var(--cream);
+    }
+
+    .location-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .location-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--plum);
+      margin-bottom: 1.25rem;
+    }
+
+    .location-detail {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      align-items: flex-start;
+    }
+
+    .loc-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--blush);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .location-detail p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .location-detail strong {
+      display: block;
+      font-weight: 600;
+      color: var(--plum);
+      font-size: 0.875rem;
+    }
+
+    .map-placeholder {
+      background: linear-gradient(145deg, var(--blush), #e8d5cf);
+      border-radius: 20px;
+      height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      border: 1px solid rgba(201, 125, 138, 0.2);
+    }
+
+    .map-pin { font-size: 2.5rem; }
+
+    .map-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--plum);
+    }
+
+    .map-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ──── ALMA BANNER ──── */
+    .alma-banner {
+      background: var(--plum);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(196, 164, 124, 0.2);
+    }
+
+    .alma-banner p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .alma-banner a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ──── FOOTER ──── */
+    footer {
+      background: #1a0d15;
+      padding: 3rem 2rem 2rem;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-address {
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      margin-top: 1.5rem;
+      opacity: 0.5;
+    }
+
+    /* ──── RESPONSIVE ──── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-visual { display: none; }
+      .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .location-inner { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .hero-cards-row { grid-template-columns: 1fr 1fr; }
+      .trust-bar { gap: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-brand">
+      <div class="nav-diamond"></div>
+      <span class="nav-name">Diamond Nails Spa</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">94% Recommended · Newry's Favourite</div>
+        <h1>Diamond Nails Spa — Where <em>Newry</em> Goes for Perfect Nails</h1>
+        <p class="hero-sub">Professional manicures, pedicures, eyelash extensions, and more — with complimentary beverages and a warm welcome every time. Walk-ins always welcome.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Book Your Appointment</a>
+          <a href="#services" class="btn-outline">View Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-main">
+          <div class="hero-card-label">Customer Rating</div>
+          <div class="hero-card-stat">94%</div>
+          <div class="hero-card-desc">Recommended by Newry customers</div>
+        </div>
+        <div class="hero-cards-row">
+          <div class="hero-card-sm">
+            <div class="hero-card-label">Location</div>
+            <div class="hero-card-sm-val">Hill St</div>
+            <div class="hero-card-sm-sub">Newry BT34 1BT</div>
+          </div>
+          <div class="hero-card-sm">
+            <div class="hero-card-label">Policy</div>
+            <div class="hero-card-sm-val">Walk-ins</div>
+            <div class="hero-card-sm-sub">Always welcome</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item">
+      <div class="trust-icon">✓</div>
+      <span>Walk-ins Welcome</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">★</div>
+      <span>94% Recommended</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🥂</div>
+      <span>Complimentary Beverages</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">✦</div>
+      <span>Hill Street, Newry</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div>
+        <div class="section-label">About Us</div>
+        <h2 class="section-heading">Newry's Trusted Nail &amp; Beauty Destination</h2>
+        <p class="section-text">Diamond Nails Spa is Newry's trusted destination for professional nail care and beauty. Located on Hill Street in the heart of Newry, they welcome walk-ins and appointments every day — so getting stunning nails has never been easier.</p>
+        <p class="section-text">With a 94% customer recommendation rating, Diamond Nails Spa is loved by the Newry community for quality, care, and a little luxury every visit.</p>
+        <a href="#contact" class="btn-primary">Book Your Visit</a>
+      </div>
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <div class="about-diamond-icon"></div>
+          <h3>Diamond Nails Spa</h3>
+          <p>71 Hill Street · Newry BT34 1BT</p>
+          <div class="about-stats">
+            <div class="about-stat">
+              <div class="about-stat-num">94%</div>
+              <div class="about-stat-label">Customer Recommended</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-num">6+</div>
+              <div class="about-stat-label">Services Offered</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-num">7</div>
+              <div class="about-stat-label">Days a Week</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-num">✦</div>
+              <div class="about-stat-label">Walk-ins Welcome</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services-inner">
+      <div class="services-header">
+        <div class="section-label">Our Services</div>
+        <h2 class="section-heading">Everything You Need,<br />All in One Place</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💅</div>
+          <h3>Manicures</h3>
+          <p>Classic, gel, and dipping powder options for hands that turn heads — done right, every time.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌸</div>
+          <h3>Pedicures</h3>
+          <p>Relaxing, rejuvenating treatments to keep your feet looking and feeling their absolute best.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Eyelash Extensions</h3>
+          <p>Lashes that perfectly frame your look — long-lasting and beautifully shaped.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🪷</div>
+          <h3>Waxing</h3>
+          <p>Smooth, precise waxing for a clean, confident finish you can feel great about.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎀</div>
+          <h3>Children's Services</h3>
+          <p>A gentle, fun experience — because little ones deserve to feel special too.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🥂</div>
+          <h3>Complimentary Beverages</h3>
+          <p>Sip a glass of bubbly, wine, or your favourite soft drink while we take care of you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof">
+    <div class="proof-inner">
+      <div class="proof-stars">★★★★★</div>
+      <p class="proof-quote">"The go-to nail spa in Newry — every visit feels like a treat. Quality work, lovely staff, and they always make time for walk-ins."</p>
+      <p class="proof-sub">Reflecting the experience of Diamond Nails Spa customers in Newry</p>
+      <div class="proof-badges">
+        <div class="proof-badge">94% Recommended</div>
+        <div class="proof-badge">Walk-ins Welcome Daily</div>
+        <div class="proof-badge">Hill Street, Newry</div>
+        <div class="proof-badge">@diamond_nails_spa_newry</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="cta-inner">
+      <div class="section-label">Ready to Book?</div>
+      <h2>Book Your Appointment — or Just Walk In</h2>
+      <p>We're always ready for you. Come in any day for a walk-in, or get in touch to book ahead. Diamond Nails Spa is your place to relax, refresh, and feel your best.</p>
+      <div class="cta-actions">
+        <a href="tel:+447466512742" class="btn-gold">Call Us Now</a>
+        <a href="https://www.instagram.com/diamond_nails_spa_newry" target="_blank" class="btn-outline">Find Us on Instagram</a>
+      </div>
+      <div class="cta-contact">
+        <span>📞 <a href="tel:+447466512742">+44 7466 512742</a></span>
+        <span>📍 71 Hill St, Newry BT34 1BT</span>
+        <span>📧 <a href="mailto:vhai00044@gmail.com">vhai00044@gmail.com</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location">
+    <div class="location-inner">
+      <div class="location-info">
+        <h3>Find Us in Newry</h3>
+        <div class="location-detail">
+          <div class="loc-icon">📍</div>
+          <p><strong>Address</strong>71 Hill Street, Newry BT34 1BT, Northern Ireland</p>
+        </div>
+        <div class="location-detail">
+          <div class="loc-icon">📞</div>
+          <p><strong>Phone</strong><a href="tel:+447466512742" style="color: var(--rose); text-decoration: none;">+44 7466 512742</a></p>
+        </div>
+        <div class="location-detail">
+          <div class="loc-icon">🕐</div>
+          <p><strong>Hours</strong>Open daily — walk-ins always welcome</p>
+        </div>
+        <div class="location-detail">
+          <div class="loc-icon">📸</div>
+          <p><strong>Instagram</strong><a href="https://www.instagram.com/diamond_nails_spa_newry" target="_blank" style="color: var(--rose); text-decoration: none;">@diamond_nails_spa_newry</a></p>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-pin">📍</div>
+        <div class="map-label">71 Hill Street, Newry</div>
+        <div class="map-sub">BT34 1BT, Northern Ireland</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALMA BANNER -->
+  <div class="alma-banner">
+    <p>This preview was created by <a href="https://almadigitalservices.com" target="_blank">Alma Digital Services</a> — AI-powered websites built in hours, not weeks. <a href="https://almadigitalservices.com" target="_blank">Claim your free redesign →</a></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Diamond Nails Spa</div>
+    <div class="footer-address">71 Hill Street · Newry BT34 1BT · Northern Ireland</div>
+    <div class="footer-address">+44 7466 512742 · @diamond_nails_spa_newry</div>
+    <div class="footer-copy">&copy; 2026 Diamond Nails Spa. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
