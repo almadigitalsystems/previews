@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heeringa Electrical Service &ndash; Rockford, MI Licensed Electrician</title>
+<meta name="description" content="Heeringa Electrical Service provides residential wiring, panel upgrades, lighting installation &amp; more in Rockford, MI. 44 five-star reviews. Call Dan for a free quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #1e293b; overflow-x: hidden; }
+
+  /* NAVBAR */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: #0f1e2e;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 48px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+  }
+  .nav-logo {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; font-weight: 700;
+    color: white; font-family: 'Playfair Display', serif;
+  }
+  .nav-name { font-size: 1rem; font-weight: 600; color: #ffffff; line-height: 1.2; }
+  .nav-sub { font-size: 0.75rem; color: #64748b; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { color: #94a3b8; font-size: 0.9rem; text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: #ffffff; }
+  .nav-cta {
+    background: #2563eb; color: #ffffff;
+    padding: 10px 22px; border-radius: 6px;
+    text-decoration: none; font-weight: 600;
+    font-size: 0.9rem; transition: all 0.2s;
+  }
+  .nav-cta:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+  /* HERO — SPLIT SCREEN */
+  .hero {
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 88vh;
+  }
+  .hero-left {
+    background: #0f1e2e;
+    padding: 80px 60px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .hero-left::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(37,99,235,0.15);
+    border: 1px solid rgba(37,99,235,0.3);
+    color: #60a5fa; padding: 6px 14px; border-radius: 20px;
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 32px; width: fit-content;
+  }
+  .hero-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    font-weight: 700; line-height: 1.15;
+    color: #ffffff; margin-bottom: 24px;
+  }
+  .hero-left h1 .hl { color: #60a5fa; }
+  .hero-left p {
+    font-size: 1.05rem; color: #94a3b8;
+    line-height: 1.75; margin-bottom: 40px; max-width: 480px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+  .btn-blue {
+    background: #2563eb; color: #ffffff;
+    padding: 15px 30px; border-radius: 8px;
+    text-decoration: none; font-weight: 700;
+    font-size: 0.95rem; transition: all 0.2s;
+  }
+  .btn-blue:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.35); }
+  .btn-ghost {
+    border: 1px solid rgba(255,255,255,0.2); color: #94a3b8;
+    padding: 15px 24px; border-radius: 8px;
+    text-decoration: none; font-size: 0.95rem; transition: all 0.2s;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.4); color: #ffffff; }
+  .hero-stats { display: flex; gap: 0; }
+  .hero-stat {
+    padding: 20px 28px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-right: 1px solid rgba(255,255,255,0.07);
+  }
+  .hero-stat:first-child { padding-left: 0; }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #60a5fa; }
+  .hero-stat-label { font-size: 0.75rem; color: #475569; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+  .hero-right {
+    background: linear-gradient(135deg, #1e3a5f 0%, #0f2238 50%, #0f1e2e 100%);
+    padding: 60px 48px;
+    display: flex; flex-direction: column; justify-content: center; gap: 20px;
+    position: relative;
+  }
+  .hero-right::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .info-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px; padding: 28px 32px;
+    position: relative; z-index: 1; transition: all 0.3s;
+  }
+  .info-card:hover { background: rgba(255,255,255,0.09); transform: translateX(6px); }
+  .info-card-top { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .info-card-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; flex-shrink: 0;
+  }
+  .info-card h3 { font-size: 0.95rem; font-weight: 700; color: #ffffff; }
+  .info-card p { font-size: 0.85rem; color: #94a3b8; line-height: 1.6; padding-left: 58px; }
+
+  /* SECTION SHARED */
+  section { padding: 90px 48px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: #2563eb; font-weight: 600; margin-bottom: 10px; }
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    font-weight: 700; line-height: 1.15;
+    color: #1e293b; margin-bottom: 16px;
+  }
+  .sub { font-size: 1rem; color: #64748b; line-height: 1.7; max-width: 600px; }
+
+  /* SOCIAL PROOF */
+  .proof-bar {
+    background: #0f1e2e;
+    padding: 22px 48px;
+    display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;
+  }
+  .proof-bar .stars { color: #fbbf24; font-size: 1.3rem; letter-spacing: 3px; }
+  .proof-bar .text { color: #94a3b8; font-size: 0.95rem; font-weight: 500; }
+  .proof-bar .text strong { color: #ffffff; }
+
+  /* SERVICES — HORIZONTAL CARDS */
+  .services { background: #f8fafc; }
+  .services-list { display: flex; flex-direction: column; gap: 16px; margin-top: 48px; }
+  .svc-row {
+    display: flex; align-items: flex-start; gap: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px; padding: 28px 32px;
+    transition: all 0.25s; cursor: default;
+  }
+  .svc-row:hover { border-color: #2563eb; box-shadow: 0 4px 20px rgba(37,99,235,0.1); transform: translateX(4px); }
+  .svc-num {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: #eff6ff;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 1.1rem;
+    font-weight: 700; color: #2563eb;
+  }
+  .svc-body h3 { font-size: 1rem; font-weight: 700; color: #1e293b; margin-bottom: 6px; }
+  .svc-body p { font-size: 0.9rem; color: #64748b; line-height: 1.6; }
+
+  /* ABOUT — STORY */
+  .about { background: #ffffff; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-visual-wrap {
+    background: linear-gradient(135deg, #0f1e2e, #1e3a5f);
+    border-radius: 20px; padding: 48px 40px;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .metric-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+  }
+  .metric-row .ml { font-size: 0.8rem; color: #94a3b8; }
+  .metric-row .mv { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: #60a5fa; }
+  .about-content { display: flex; flex-direction: column; gap: 20px; }
+  .about-content p { font-size: 1rem; color: #475569; line-height: 1.8; }
+  .trust-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #eff6ff; border: 1px solid #bfdbfe;
+    color: #1d4ed8; padding: 6px 14px; border-radius: 20px;
+    font-size: 0.8rem; font-weight: 600;
+  }
+
+  /* GUARANTEE */
+  .guarantee { background: #0f1e2e; padding: 80px 48px; }
+  .guarantee-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+  .guarantee-inner .label { color: #60a5fa; }
+  .guarantee-inner .title { color: #ffffff; margin-left: auto; margin-right: auto; }
+  .guarantee-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 48px;
+  }
+  .g-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 32px 24px; text-align: center;
+    transition: all 0.25s;
+  }
+  .g-card:hover { background: rgba(37,99,235,0.15); border-color: rgba(37,99,235,0.4); }
+  .g-icon { font-size: 2.2rem; margin-bottom: 16px; }
+  .g-card h4 { font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+  .g-card p { font-size: 0.85rem; color: #94a3b8; line-height: 1.6; }
+
+  /* CTA BAND */
+  .cta-band {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    padding: 80px 48px; text-align: center;
+  }
+  .cta-band h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700; color: #ffffff; margin-bottom: 16px;
+  }
+  .cta-band p { font-size: 1.05rem; color: rgba(255,255,255,0.8); margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .btn-white {
+    display: inline-block;
+    background: #ffffff; color: #1d4ed8;
+    padding: 16px 36px; border-radius: 8px;
+    text-decoration: none; font-weight: 700; font-size: 1rem;
+    transition: all 0.2s;
+  }
+  .btn-white:hover { background: #f0f9ff; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  .cta-note { margin-top: 18px; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  /* CONTACT */
+  .contact { background: #f8fafc; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .contact-cards { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+  .c-card {
+    display: flex; align-items: center; gap: 16px;
+    background: #ffffff; border: 1px solid #e2e8f0;
+    border-radius: 10px; padding: 18px 22px;
+    transition: all 0.2s;
+  }
+  .c-card:hover { border-color: #2563eb; }
+  .c-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .c-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 3px; }
+  .c-val { font-size: 0.95rem; font-weight: 600; color: #1e293b; }
+  .contact-form { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; }
+  .contact-form label { font-size: 0.8rem; font-weight: 600; color: #475569; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; display: block; }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    background: #ffffff; border: 1px solid #e2e8f0;
+    border-radius: 8px; padding: 13px 16px;
+    font-size: 0.95rem; color: #1e293b; font-family: 'Inter', sans-serif;
+    outline: none; transition: border-color 0.2s;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+  .contact-form textarea { height: 120px; resize: vertical; }
+  .contact-form button {
+    background: #0f1e2e; color: #ffffff;
+    padding: 14px 28px; border-radius: 8px; border: none;
+    cursor: pointer; font-weight: 700; font-size: 0.95rem;
+    font-family: 'Inter', sans-serif; transition: all 0.2s;
+  }
+  .contact-form button:hover { background: #1e3a5f; }
+
+  /* FOOTER */
+  footer {
+    background: #0f1e2e;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 40px 48px 28px;
+  }
+  .footer-row {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 20px;
+    padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 20px;
+  }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: #ffffff; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { color: #475569; font-size: 0.85rem; text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: #60a5fa; }
+  .footer-copy { text-align: center; color: #334155; font-size: 0.8rem; }
+
+  /* ALMA RIBBON */
+  .alma-ribbon {
+    background: #2563eb; text-align: center; padding: 12px 20px;
+    font-size: 0.9rem; font-weight: 600; color: #ffffff;
+  }
+  .alma-ribbon a { color: #bfdbfe; font-weight: 700; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 60px 24px; }
+    section { padding: 70px 20px; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .guarantee-grid { grid-template-columns: 1fr; }
+    .footer-row { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ALMA RIBBON -->
+<div class="alma-ribbon">
+  Free Preview by <a href="https://almadigitalservices.com">Alma Digital Services</a> &mdash; We built your website already &mdash; take a look before you spend a dollar.
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <a class="nav-brand" href="#">
+    <div class="nav-logo">H</div>
+    <div>
+      <div class="nav-name">Heeringa Electrical Service</div>
+      <div class="nav-sub">Rockford, MI &bull; Licensed &amp; Insured</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About Dan</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="nav-cta" href="#contact">Get a Free Quote</a>
+</nav>
+
+<!-- HERO — SPLIT SCREEN -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">&#9733; 44 Five-Star Google Reviews</div>
+    <h1>
+      Rockford's Trusted Electrician &mdash;
+      <span class="hl">Now Easy to Find Online.</span>
+    </h1>
+    <p>Without a website, every homeowner searching &ldquo;electrician near me&rdquo; in Rockford finds someone else first. Your reputation deserves to work for you 24/7.</p>
+    <div class="hero-actions">
+      <a class="btn-blue" href="#contact">Get a Free Quote</a>
+      <a class="btn-ghost" href="#services">View Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">44</div>
+        <div class="hero-stat-label">5-Star Reviews</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Licensed</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">24/7</div>
+        <div class="hero-stat-label">Emergency</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="info-card">
+      <div class="info-card-top">
+        <div class="info-card-icon">&#9889;</div>
+        <h3>Residential Wiring &amp; Repairs</h3>
+      </div>
+      <p>Tripped breakers to full rewires &mdash; done right the first time, no shortcuts.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-top">
+        <div class="info-card-icon">&#128268;</div>
+        <h3>Panel Upgrades &amp; Service Changes</h3>
+      </div>
+      <p>Upgrading your home's electrical capacity safely and to code in West Michigan.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-top">
+        <div class="info-card-icon">&#128680;</div>
+        <h3>Emergency Electrical Services</h3>
+      </div>
+      <p>Urgent problem in West Michigan? Dan answers the call around the clock.</p>
+    </div>
+    <div class="info-card" style="background:rgba(37,99,235,0.2);border-color:rgba(37,99,235,0.4);">
+      <div class="info-card-top">
+        <div class="info-card-icon" style="background:rgba(37,99,235,0.3);">&#127981;</div>
+        <h3 style="color:#60a5fa;">Serving Rockford, MI</h3>
+      </div>
+      <p>Locally trusted &mdash; 44 five-star reviews from your West Michigan neighbors.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+  <span class="text"><strong>44 Five-Star Google Reviews</strong> from Rockford, MI Homeowners</span>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="label">Electrical Services</div>
+    <h2 class="title">Everything You Need,<br>Done Right</h2>
+    <p class="sub">Dan Heeringa handles residential electrical work across Rockford and West Michigan &mdash; from small repairs to complete system upgrades.</p>
+    <div class="services-list">
+      <div class="svc-row">
+        <div class="svc-num">01</div>
+        <div class="svc-body">
+          <h3>Residential Electrical Wiring &amp; Repairs</h3>
+          <p>From tripped breakers to full rewires, Dan handles it right the first time &mdash; no shortcuts.</p>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-num">02</div>
+        <div class="svc-body">
+          <h3>Electrical Panel Upgrades &amp; Service Changes</h3>
+          <p>Upgrading your home's electrical capacity safely and to code in West Michigan.</p>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-num">03</div>
+        <div class="svc-body">
+          <h3>Lighting &amp; Fixture Installation</h3>
+          <p>Indoor, outdoor, recessed, or decorative &mdash; professional installation every time.</p>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-num">04</div>
+        <div class="svc-body">
+          <h3>Outlet, Switch &amp; Ceiling Fan Installation</h3>
+          <p>Small jobs done cleanly and quickly by a licensed Rockford electrician.</p>
+        </div>
+      </div>
+      <div class="svc-row">
+        <div class="svc-num">05</div>
+        <div class="svc-body">
+          <h3>Emergency Electrical Services</h3>
+          <p>Urgent electrical problem in West Michigan? Dan answers the call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual-wrap">
+        <div class="metric-row">
+          <span class="ml">Google Reviews</span>
+          <span class="mv">44 &#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </div>
+        <div class="metric-row">
+          <span class="ml">Service Area</span>
+          <span class="mv">Rockford &amp; West MI</span>
+        </div>
+        <div class="metric-row">
+          <span class="ml">Specialization</span>
+          <span class="mv">Residential Electrical</span>
+        </div>
+        <div class="metric-row">
+          <span class="ml">Phone</span>
+          <span class="mv">616-633-6101</span>
+        </div>
+        <div class="metric-row">
+          <span class="ml">Emergency</span>
+          <span class="mv">Available 24/7</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="label">About Dan Heeringa</div>
+        <h2 class="title">Old-Fashioned Values.<br>Modern Electrical Work.</h2>
+        <p>Dan Heeringa built Heeringa Electrical Service on a foundation of honest pricing, quality workmanship, and reliability. For years, Rockford homeowners have trusted Dan for everything from a single outlet to full electrical upgrades.</p>
+        <p>44 five-star reviews prove it. Word spreads fast in a community like Rockford. Now your next customer can find you the moment they need you most.</p>
+        <div class="trust-badges">
+          <span class="badge">&#10003; Licensed</span>
+          <span class="badge">&#10003; Insured</span>
+          <span class="badge">&#10003; West Michigan Local</span>
+          <span class="badge">&#10003; Honest Pricing</span>
+        </div>
+        <a class="btn-blue" href="#contact" style="display:inline-block;margin-top:8px;">Get a Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE SECTION -->
+<div class="guarantee">
+  <div class="guarantee-inner">
+    <div class="label">The Heeringa Standard</div>
+    <h2 class="title" style="color:#fff;max-width:600px;">Why Rockford Homeowners Choose Dan</h2>
+    <div class="guarantee-grid">
+      <div class="g-card">
+        <div class="g-icon">&#128200;</div>
+        <h4>Honest Pricing</h4>
+        <p>No surprise charges. You know the cost before any work begins.</p>
+      </div>
+      <div class="g-card">
+        <div class="g-icon">&#9989;</div>
+        <h4>Quality Workmanship</h4>
+        <p>Done right the first time. No shortcuts, no callbacks.</p>
+      </div>
+      <div class="g-card">
+        <div class="g-icon">&#128336;</div>
+        <h4>Reliable &amp; On Time</h4>
+        <p>Old-fashioned reliability: when Dan commits to a time, he shows up.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2>Your Next Customer Is Searching<br>Right Now</h2>
+  <p>This is your free preview from Alma Digital Services. Claim your website and start getting found by Rockford homeowners today.</p>
+  <a class="btn-white" href="#contact">Claim Your Free Redesign</a>
+  <p class="cta-note">No commitment required &bull; Setup in under 48 hours</p>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="label">Get in Touch</div>
+        <h2 class="title" style="margin-bottom:8px;">Get a Free Quote Today</h2>
+        <p class="sub" style="margin-bottom:0;">Call or email Dan directly, or send a message below.</p>
+        <div class="contact-cards">
+          <div class="c-card">
+            <div class="c-icon">&#128222;</div>
+            <div>
+              <div class="c-label">Phone</div>
+              <div class="c-val">616-633-6101</div>
+            </div>
+          </div>
+          <div class="c-card">
+            <div class="c-icon">&#9993;</div>
+            <div>
+              <div class="c-label">Email</div>
+              <div class="c-val">heeringaelectricalservice@gmail.com</div>
+            </div>
+          </div>
+          <div class="c-card">
+            <div class="c-icon">&#127979;</div>
+            <div>
+              <div class="c-label">Service Area</div>
+              <div class="c-val">Rockford, MI &bull; West Michigan</div>
+            </div>
+          </div>
+          <div class="c-card">
+            <div class="c-icon">&#128339;</div>
+            <div>
+              <div class="c-label">Hours</div>
+              <div class="c-val">Mon&ndash;Fri 7am&ndash;5pm &bull; Emergency 24/7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1.2rem;font-weight:700;color:#1e293b;margin-bottom:20px;">Send a Message</h3>
+        <form class="contact-form" action="https://formspree.io/f/xojppajv" method="POST">
+          <div>
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Your full name" required>
+          </div>
+          <div>
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="Your phone number">
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div>
+            <label>How Can Dan Help?</label>
+            <textarea name="message" placeholder="Describe your electrical need..."></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-row">
+    <div class="footer-brand">Heeringa Electrical Service</div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    &copy; 2026 Heeringa Electrical Service &bull; Rockford, MI &bull; Licensed &amp; Insured &bull; 616-633-6101<br>
+    <span style="color:#1e293b;font-size:0.75rem;">Preview designed by <a href="https://almadigitalservices.com" style="color:#334155;">Alma Digital Services</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
