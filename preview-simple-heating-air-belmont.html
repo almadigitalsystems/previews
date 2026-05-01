@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simple Heating and Air | Free Website Preview | Alma Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0d2137;color:#fff;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.1)}
+.nav-logo{font-size:1.2rem;font-weight:800;color:#fff}
+.nav-logo span{color:#14b8a6}
+.nav-cta{background:#14b8a6;color:#000;padding:.5rem 1.2rem;border-radius:6px;font-weight:700;font-size:.85rem;text-decoration:none;transition:.2s}
+.nav-cta:hover{background:#2dd4bf}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;background:linear-gradient(135deg,#0d2137 0%,#2a1a3e 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 60% 40%,#14b8a622 0%,transparent 50%);pointer-events:none}
+.hero-badge{display:inline-block;background:#14b8a622;border:1px solid #14b8a655;color:#14b8a6;padding:.4rem 1rem;border-radius:20px;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.2rem,6vw,4.5rem);font-weight:900;line-height:1.1;margin-bottom:1.5rem;max-width:900px}
+.hero h1 span{color:#14b8a6}
+.hero p{font-size:clamp(1rem,2vw,1.3rem);color:#cbd5e1;max-width:700px;line-height:1.7;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn-primary{background:#14b8a6;color:#000;padding:1rem 2rem;border-radius:8px;font-weight:800;font-size:1rem;text-decoration:none;transition:.2s;border:none;cursor:pointer}
+.btn-primary:hover{background:#2dd4bf;transform:translateY(-2px)}
+.btn-secondary{background:transparent;color:#fff;padding:1rem 2rem;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;border:2px solid rgba(255,255,255,0.3);transition:.2s}
+.btn-secondary:hover{border-color:#fff}
+.pain-section{background:#111827;padding:4rem 2rem;text-align:center}
+.pain-section h2{font-size:1.8rem;font-weight:800;margin-bottom:.75rem;color:#f8fafc}
+.pain-section p{color:#94a3b8;max-width:600px;margin:0 auto;font-size:1.05rem}
+.pain-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;max-width:900px;margin:2.5rem auto 0}
+.pain-item{background:#1e293b;border:1px solid #334155;border-left:4px solid #14b8a6;padding:1.5rem;border-radius:8px;text-align:left}
+.pain-item h3{font-size:1rem;font-weight:700;margin-bottom:.5rem;color:#f1f5f9}
+.pain-item p{font-size:.9rem;color:#94a3b8}
+.services{padding:5rem 2rem;background:#0d2137}
+.services h2{text-align:center;font-size:2rem;font-weight:800;margin-bottom:.5rem}
+.services .sub{text-align:center;color:#94a3b8;margin-bottom:3rem;font-size:1.05rem}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+.svc-card{background:#1e293b;border:1px solid #334155;border-top:3px solid #14b8a6;padding:1.5rem;border-radius:10px;transition:.2s}
+.svc-card:hover{transform:translateY(-4px);border-color:#14b8a6}
+.svc-icon{font-size:1.5rem;color:#14b8a6;font-weight:900;margin-bottom:.75rem}
+.svc-card h3{font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.svc-card p{font-size:.85rem;color:#94a3b8;line-height:1.6}
+.cta-section{background:linear-gradient(135deg,#14b8a6cc,#2dd4bfaa);padding:5rem 2rem;text-align:center}
+.cta-section h2{font-size:2.2rem;font-weight:900;color:#000;margin-bottom:1rem}
+.cta-section p{font-size:1.1rem;color:#1a1a1a;margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
+.btn-dark{background:#000;color:#fff;padding:1.1rem 2.5rem;border-radius:8px;font-weight:800;font-size:1.1rem;text-decoration:none;display:inline-block;transition:.2s}
+.btn-dark:hover{background:#1a1a2e;transform:translateY(-2px)}
+.contact{background:#0f172a;padding:4rem 2rem;text-align:center}
+.contact h2{font-size:1.8rem;font-weight:800;margin-bottom:2rem}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;max-width:800px;margin:0 auto}
+.contact-item{background:#1e293b;padding:1.5rem;border-radius:10px;border:1px solid #334155}
+.contact-item .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:#14b8a6;font-weight:600;margin-bottom:.5rem}
+.contact-item .value{font-size:1rem;font-weight:600}
+footer{background:#000;padding:1.5rem 2rem;text-align:center;color:#475569;font-size:.8rem}
+footer span{color:#14b8a6}
+@media(max-width:768px){nav{padding:.75rem 1rem}.hero{padding:6rem 1rem 3rem}.hero h1{font-size:2rem}.services,.pain-section,.cta-section,.contact{padding:3rem 1rem}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Simple<span> Heating and Air</span></div>
+  <a href="#redesign" class="nav-cta">Claim Free Redesign</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Belmont, MI · HVAC Service Made Simple — Belmont, MI</div>
+  <h1><span>Belmont</span>'s Simple, Reliable HVAC Experts</h1>
+  <p>HVAC doesn't have to be complicated. Simple Heating and Air brings honest service, fair pricing, and expert results to West Michigan homeowners.</p>
+  <div class="hero-btns">
+    <a href="#redesign" class="btn-primary">Claim Your Free Redesign</a>
+    <a href="#services" class="btn-secondary">See Our Services</a>
+  </div>
+</section>
+
+<section class="pain-section">
+  <h2>Your website might be costing you jobs</h2>
+  <p>Your competition is booking months out. Here's what a modern site fixes for Simple Heating and Air:</p>
+  <div class="pain-items">
+    <div class="pain-item"><h3>Problem 1</h3><p>Professional homepage that shows customers you're the real deal</p></div>
+    <div class="pain-item"><h3>Problem 2</h3><p>Online booking so you capture every call — even the ones at 11pm</p></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Services We'll Showcase</h2>
+  <p class="sub">Your new site will highlight every service your team delivers.</p>
+  <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Heating Repair</h3>
+          <p>Furnaces, boilers & heat pumps.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Air Conditioning</h3>
+          <p>Repair, service & new installs.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>System Replacement</h3>
+          <p>Energy-efficient upgrade packages.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Maintenance Plans</h3>
+          <p>Seasonal checkups for year-round comfort.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>New Construction</h3>
+          <p>HVAC for new homes & additions.</p>
+        </div>
+  </div>
+</section>
+
+<section class="cta-section" id="redesign">
+  <h2>Claim Your Free Website Redesign</h2>
+  <p>We've already built a preview of what your new Simple Heating and Air website could look like. Zero commitment required — see it for free today.</p>
+  <a href="mailto:hello@almadigitalservices.com?subject=Free Redesign — Simple Heating and Air" class="btn-dark">Claim Free Redesign →</a>
+</section>
+
+<section class="contact">
+  <h2>Get In Touch</h2>
+  <div class="contact-grid">
+    <div class="contact-item"><div class="label">Business</div><div class="value">Simple Heating and Air</div></div>
+    <div class="contact-item"><div class="label">Location</div><div class="value">Belmont, MI</div></div>
+    <div class="contact-item"><div class="label">Specialty</div><div class="value">HVAC Service Made Simple — Belmont, MI</div></div>
+    <div class="contact-item"><div class="label">Preview by</div><div class="value">Alma Digital</div></div>
+  </div>
+</section>
+
+<footer>
+  <p>This is a free website preview created by <span>Alma Digital Services</span> for Simple Heating and Air. No commitment required.</p>
+</footer>
+</body>
+</html>
