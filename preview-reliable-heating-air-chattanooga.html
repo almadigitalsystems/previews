@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reliable Heating & Air | Free Website Preview | Alma Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;overflow-x:hidden}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 4rem;background:#0f2744;position:sticky;top:0;z-index:100}
+.nav-logo{font-weight:800;font-size:1.15rem;color:#fff}
+.nav-logo span{color:#0891b2}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.9rem;font-weight:500;transition:.2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:#0891b2;color:#fff;padding:.6rem 1.5rem;border-radius:5px;font-weight:700;font-size:.9rem;text-decoration:none;transition:.2s}
+.nav-cta:hover{background:#06b6d4}
+.banner{background:linear-gradient(135deg,#0f2744 0%,#0c3050 100%);color:#fff;text-align:center;padding:6rem 2rem 5rem;position:relative;overflow:hidden}
+.banner::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.banner h1{font-family:'Merriweather',serif;font-size:clamp(1.8rem,4vw,3.2rem);font-weight:900;line-height:1.25;margin-bottom:1rem;position:relative}
+.banner h1 span{color:#0891b2}
+.banner p{font-size:1.1rem;color:rgba(255,255,255,.8);max-width:650px;margin:0 auto 2.5rem;line-height:1.7;position:relative}
+.banner-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-p{background:#0891b2;color:#fff;padding:.95rem 2.2rem;border-radius:6px;font-weight:700;font-size:1rem;text-decoration:none;transition:.2s}
+.btn-p:hover{background:#06b6d4;transform:translateY(-2px)}
+.btn-s{background:rgba(255,255,255,.12);color:#fff;padding:.95rem 2.2rem;border-radius:6px;font-weight:600;font-size:1rem;text-decoration:none;border:2px solid rgba(255,255,255,.3);transition:.2s}
+.btn-s:hover{background:rgba(255,255,255,.2)}
+.trust-bar{background:#0891b2;padding:1.2rem 3rem;display:flex;justify-content:center;gap:4rem;flex-wrap:wrap}
+.trust-item{font-size:.85rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:.5rem}
+.services{padding:5rem 3rem;background:#f8fafc}
+.services h2{text-align:center;font-family:'Merriweather',serif;font-size:2rem;font-weight:900;color:#0f2744;margin-bottom:.5rem}
+.services .sub{text-align:center;color:#64748b;margin-bottom:3rem;font-size:1rem}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+.svc-card{background:#fff;border:1px solid #e2e8f0;padding:1.8rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:.2s}
+.svc-card:hover{box-shadow:0 8px 25px rgba(0,0,0,.1);transform:translateY(-3px);border-color:#0891b2}
+.svc-icon{font-size:1.3rem;color:#0891b2;margin-bottom:.75rem;font-weight:900}
+.svc-card h3{font-size:.95rem;font-weight:700;color:#0f2744;margin-bottom:.4rem}
+.svc-card p{font-size:.85rem;color:#64748b;line-height:1.6}
+.why-section{padding:5rem 3rem;background:#fff}
+.why-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.why-text h2{font-family:'Merriweather',serif;font-size:1.8rem;font-weight:900;color:#0f2744;margin-bottom:1rem}
+.why-text p{color:#64748b;line-height:1.8;margin-bottom:1rem}
+.why-list{display:flex;flex-direction:column;gap:1rem}
+.why-item{display:flex;gap:1rem;align-items:flex-start}
+.why-check{background:#0891b220;color:#0891b2;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.85rem;flex-shrink:0}
+.why-item-text h4{font-size:.95rem;font-weight:700;color:#0f2744;margin-bottom:.3rem}
+.why-item-text p{font-size:.85rem;color:#64748b}
+.cta-section{background:#0f2744;padding:5rem 2rem;text-align:center;color:#fff}
+.cta-section h2{font-family:'Merriweather',serif;font-size:2.2rem;font-weight:900;margin-bottom:1rem}
+.cta-section p{color:rgba(255,255,255,.7);max-width:600px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.7}
+.btn-accent{background:#0891b2;color:#fff;padding:1.1rem 2.8rem;border-radius:7px;font-weight:800;font-size:1.05rem;text-decoration:none;display:inline-block;transition:.2s}
+.btn-accent:hover{background:#06b6d4;transform:translateY(-2px)}
+.contact{background:#f8fafc;padding:4rem 3rem;text-align:center}
+.contact h2{font-family:'Merriweather',serif;font-size:1.6rem;font-weight:900;color:#0f2744;margin-bottom:2rem}
+.contact-row{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.c-tag{background:#fff;border:1px solid #e2e8f0;padding:1rem 2rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.c-tag .lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#0891b2;font-weight:700;margin-bottom:.3rem}
+.c-tag .val{font-size:.95rem;font-weight:700;color:#0f2744}
+footer{background:#0f2744;padding:1.5rem 2rem;text-align:center;color:rgba(255,255,255,.4);font-size:.8rem}
+footer span{color:#0891b2}
+@media(max-width:900px){.why-inner{grid-template-columns:1fr;gap:3rem}nav{padding:.75rem 1.5rem}.nav-links{display:none}.services,.why-section,.cta-section,.contact{padding:3rem 1rem}.banner{padding:5rem 1.5rem 4rem}.trust-bar{gap:2rem;padding:1rem}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Reliable<span> Heating  &  Air</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Redesign</a></li>
+    <li><a href="#redesign">Free Preview</a></li>
+  </ul>
+  <a href="#redesign" class="nav-cta">Free Redesign</a>
+</nav>
+
+<section class="banner">
+  <h1><span>Chattanooga</span>'s Reliable Heating & Cooling Experts</h1>
+  <p>When comfort can't wait, trust the name that says it all. Reliable Heating & Air — serving Chattanooga families with integrity.</p>
+  <div class="banner-btns">
+    <a href="#redesign" class="btn-p">Claim Your Free Redesign</a>
+    <a href="#services" class="btn-s">Our Services</a>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item">✓ Licensed & Insured</div>
+  <div class="trust-item">✓ Free Estimates</div>
+  <div class="trust-item">✓ 24/7 Emergency</div>
+  <div class="trust-item">✓ Chattanooga, TN</div>
+</div>
+
+<section class="services" id="services">
+  <h2>Our Services</h2>
+  <p class="sub">Reliable Heating & Air delivers professional service across Chattanooga and surrounding communities.</p>
+  <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Furnace Service</h3>
+          <p>Repair, maintenance & replacement.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Central Air</h3>
+          <p>AC units, ductless & mini-split systems.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Heat Pumps</h3>
+          <p>Year-round energy-efficient systems.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Indoor Air Quality</h3>
+          <p>Filtration, UV lights & humidifiers.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Service Plans</h3>
+          <p>Priority scheduling & seasonal checkups.</p>
+        </div>
+  </div>
+</section>
+
+<section class="why-section" id="why">
+  <div class="why-inner">
+    <div class="why-text">
+      <h2>Why Your Website Needs a Redesign</h2>
+      <p>Your competition is booking months out. Your website is losing you jobs you do not even know about. Here's what's holding Reliable Heating & Air back:</p>
+    </div>
+    <div class="why-list">
+      <div class="why-item"><div class="why-check">1</div><div class="why-item-text"><h4>The Visibility Problem</h4><p>Relying on referrals alone while online searchers call competitors instead</p></div></div>
+      <div class="why-item"><div class="why-check">2</div><div class="why-item-text"><h4>The Conversion Problem</h4><p>Outdated web presence making your business look less professional than it is</p></div></div>
+      <div class="why-item"><div class="why-check">✓</div><div class="why-item-text"><h4>The Solution</h4><p>A fast, modern website that ranks on Google, builds trust instantly, and converts visitors into booked jobs.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="redesign">
+  <h2>Claim Your Free Redesign</h2>
+  <p>We've already built a preview of your new Reliable Heating & Air website. See it for free — no sales pitch, no commitment, no contract.</p>
+  <a href="mailto:hello@almadigitalservices.com?subject=Free Redesign — Reliable Heating & Air" class="btn-accent">Claim Your Free Redesign →</a>
+</section>
+
+<section class="contact">
+  <h2>About This Preview</h2>
+  <div class="contact-row">
+    <div class="c-tag"><div class="lbl">Company</div><div class="val">Reliable Heating & Air</div></div>
+    <div class="c-tag"><div class="lbl">Location</div><div class="val">Chattanooga, TN</div></div>
+    <div class="c-tag"><div class="lbl">Industry</div><div class="val">Heating & Cooling — Chattanooga, TN</div></div>
+    <div class="c-tag"><div class="lbl">Preview by</div><div class="val">Alma Digital</div></div>
+  </div>
+</section>
+
+<footer>
+  <p>Free website preview by <span>Alma Digital Services</span> for Reliable Heating & Air. No commitment required.</p>
+</footer>
+</body>
+</html>
