@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AA-Air Company | Free Website Preview | Alma Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#fafafa;color:#0a0a0a;overflow-x:hidden}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 4rem;background:#fafafa;border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:100}
+.nav-logo{font-weight:900;font-size:1.1rem;letter-spacing:-.02em;color:#0a0a0a}
+.nav-logo span{color:#00b4d8}
+.nav-cta{background:#0a0a0a;color:#fafafa;padding:.6rem 1.5rem;border-radius:4px;font-weight:700;font-size:.85rem;text-decoration:none;transition:.2s}
+.nav-cta:hover{background:#00b4d8}
+.hero{padding:8rem 4rem;max-width:1000px;margin:0 auto}
+.hero-city{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:#00b4d8;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.5rem,6vw,5.5rem);font-weight:900;line-height:1;letter-spacing:-.04em;color:#0a0a0a;margin-bottom:2rem}
+.hero h1 .line{display:block}
+.hero h1 .accent{color:#00b4d8}
+.hero-sub{font-size:1.2rem;color:#64748b;max-width:550px;line-height:1.7;margin-bottom:3rem;font-weight:400}
+.hero-actions{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.btn-main{background:#0a0a0a;color:#fafafa;padding:1.1rem 2.5rem;border-radius:4px;font-weight:700;font-size:1rem;text-decoration:none;transition:.2s}
+.btn-main:hover{background:#00b4d8}
+.btn-link{font-size:.9rem;font-weight:600;color:#64748b;text-decoration:underline;cursor:pointer}
+.divider{height:1px;background:#e2e8f0;max-width:1000px;margin:0 auto}
+.services{padding:5rem 4rem;max-width:1000px;margin:0 auto}
+.section-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:#00b4d8;margin-bottom:1.5rem}
+.services h2{font-size:2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:3rem;color:#0a0a0a}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem}
+.svc-card{padding:1.5rem 0;border-top:2px solid #0a0a0a}
+.svc-icon{font-size:1.2rem;color:#00b4d8;font-weight:900;margin-bottom:.75rem}
+.svc-card h3{font-size:.95rem;font-weight:700;margin-bottom:.5rem;color:#0a0a0a}
+.svc-card p{font-size:.85rem;color:#64748b;line-height:1.6}
+.pain-section{background:#0a0a0a;color:#fafafa;padding:6rem 4rem}
+.pain-inner{max-width:1000px;margin:0 auto}
+.pain-section .section-label{color:#00b4d8}
+.pain-section h2{font-size:2.5rem;font-weight:900;letter-spacing:-.04em;margin-bottom:3rem;line-height:1.1}
+.pain-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem}
+.pain-item{border-top:1px solid rgba(255,255,255,.15);padding-top:1.5rem}
+.pain-num{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:#00b4d8;margin-bottom:.75rem}
+.pain-item h3{font-size:1.05rem;font-weight:700;margin-bottom:.5rem}
+.pain-item p{font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.7}
+.cta-section{padding:6rem 4rem;max-width:1000px;margin:0 auto;text-align:center}
+.cta-section h2{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-.04em;color:#0a0a0a;margin-bottom:1rem;line-height:1.1}
+.cta-section h2 span{color:#00b4d8}
+.cta-section p{color:#64748b;max-width:500px;margin:0 auto 2.5rem;font-size:1.05rem;line-height:1.7}
+.btn-cta{background:#0a0a0a;color:#fafafa;padding:1.2rem 3rem;border-radius:4px;font-weight:800;font-size:1.1rem;text-decoration:none;display:inline-block;transition:.2s}
+.btn-cta:hover{background:#00b4d8}
+.contact-bar{background:#0a0a0a;padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.contact-bar-info{color:rgba(255,255,255,.5);font-size:.85rem;}
+.contact-bar-info strong{color:#fff}
+.contact-bar-info span{color:#00b4d8}
+footer{background:#0a0a0a;padding:1rem 4rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;color:rgba(255,255,255,.3);font-size:.75rem}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.hero{padding:5rem 1.5rem}.services,.cta-section{padding:4rem 1.5rem}.pain-section{padding:4rem 1.5rem}.contact-bar{padding:1.5rem}.svc-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">AA-Air<span> Company</span></div>
+  <a href="#redesign" class="nav-cta">Free Redesign</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-city">Knoxville, TN</div>
+  <h1>
+    <span class="line">AA-Air</span>
+    <span class="line accent">Company</span>
+  </h1>
+  <p class="hero-sub">AA-Air Company delivers fast, professional HVAC service across the Knoxville area. Trusted technicians, upfront pricing, guaranteed results.</p>
+  <div class="hero-actions">
+    <a href="#redesign" class="btn-main">Claim Free Redesign</a>
+    <a href="#services" class="btn-link">View Services ↓</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="services" id="services">
+  <div class="section-label">What We Do</div>
+  <h2>Our Services</h2>
+  <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>AC Repair</h3>
+          <p>Fast, reliable cooling repairs.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Heating Service</h3>
+          <p>Furnaces, heat pumps & more.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>New Systems</h3>
+          <p>Efficient installs with warranty.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Air Quality</h3>
+          <p>Cleaner, healthier indoor air.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Tune-Ups</h3>
+          <p>Seasonal maintenance programs.</p>
+        </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="pain-section">
+  <div class="pain-inner">
+    <div class="section-label">Why This Matters</div>
+    <h2>Your website is losing you jobs you don't know about.</h2>
+    <div class="pain-list">
+      <div class="pain-item"><div class="pain-num">Problem 01</div><h3>The Visibility Gap</h3><p>Website not optimized for mobile, losing half your potential leads</p></div>
+      <div class="pain-item"><div class="pain-num">Problem 02</div><h3>The Conversion Gap</h3><p>Hard to find on Google while HVAC competitors capture all the local search traffic</p></div>
+      <div class="pain-item"><div class="pain-num">The Fix</div><h3>A Modern Website</h3><p>Fast, mobile-friendly, ranked on Google, and designed to turn visitors into booked jobs. That's what Alma Digital builds.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="redesign">
+  <h2>Get your free<br><span>website preview</span></h2>
+  <p>We've already designed what your new AA-Air Company website could look like. See it today — zero commitment.</p>
+  <a href="mailto:hello@almadigitalservices.com?subject=Free Redesign — AA-Air Company" class="btn-cta">Claim Your Free Redesign →</a>
+</section>
+
+<div class="contact-bar">
+  <div class="contact-bar-info">Preview for <strong>AA-Air Company</strong> · Knoxville, TN</div>
+  <div class="contact-bar-info">Created by <span>Alma Digital Services</span></div>
+</div>
+
+<footer>Free website preview · No commitment required · AA-Air Company · Knoxville, TN</footer>
+</body>
+</html>
