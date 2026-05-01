@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Metro Plumbing, Heating & Air | Free Website Preview | Alma Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0f172a;color:#fff;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 3rem;background:rgba(13,27,42,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-logo{font-weight:900;font-size:1.2rem;letter-spacing:-.02em;color:#fff}
+.nav-logo span{color:#06b6d4}
+.nav-cta{background:#06b6d4;color:#000;padding:.55rem 1.3rem;border-radius:6px;font-weight:700;font-size:.85rem;text-decoration:none;transition:.2s}
+.nav-cta:hover{background:#22d3ee}
+.hero{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:95vh;padding:6rem 3rem 4rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(135deg,#06b6d415 0%,#22d3ee08 100%);clip-path:polygon(20% 0,100% 0,100% 100%,0 100%);pointer-events:none}
+.hero-kicker{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:#06b6d4;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-.03em;margin-bottom:1.5rem;max-width:800px}
+.hero h1 .highlight{color:#06b6d4}
+.hero h1 .line2{display:block;color:#94a3b8;font-size:.6em;font-weight:400;letter-spacing:0;margin-top:.3rem}
+.hero-sub{font-size:1.1rem;color:#94a3b8;max-width:600px;line-height:1.7;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-a{background:#06b6d4;color:#000;padding:1rem 2.2rem;border-radius:8px;font-weight:800;font-size:1rem;text-decoration:none;transition:.2s}
+.btn-a:hover{background:#22d3ee;transform:translateY(-2px)}
+.btn-b{background:rgba(255,255,255,.08);color:#fff;padding:1rem 2.2rem;border-radius:8px;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid rgba(255,255,255,.2);transition:.2s}
+.btn-b:hover{background:rgba(255,255,255,.15)}
+.stats-bar{background:rgba(255,255,255,.04);border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);padding:2rem 3rem;display:flex;gap:4rem;flex-wrap:wrap}
+.stat{}
+.stat-num{font-size:2rem;font-weight:900;color:#06b6d4}
+.stat-label{font-size:.8rem;color:#94a3b8;margin-top:.2rem}
+.services{padding:6rem 3rem;background:#0f172a}
+.services-header{margin-bottom:3rem}
+.services-header h2{font-size:2.5rem;font-weight:900;letter-spacing:-.02em;margin-bottom:.75rem}
+.services-header p{color:#94a3b8;font-size:1rem;max-width:600px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.svc-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:2rem;border-radius:12px;transition:.3s;position:relative;overflow:hidden}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#06b6d4,#22d3ee)}
+.svc-card:hover{background:rgba(255,255,255,.08);transform:translateY(-4px)}
+.svc-icon{font-size:1.5rem;color:#06b6d4;margin-bottom:1rem;font-weight:900}
+.svc-card h3{font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.svc-card p{font-size:.85rem;color:#94a3b8;line-height:1.6}
+.pain-section{background:#060d16;padding:5rem 3rem}
+.pain-section h2{font-size:2rem;font-weight:900;letter-spacing:-.02em;margin-bottom:.75rem}
+.pain-section .sub{color:#94a3b8;margin-bottom:3rem;max-width:600px}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;max-width:900px}
+.pain-item{padding:2rem;border:1px solid rgba(255,255,255,.08);border-left:3px solid #06b6d4;border-radius:8px;background:rgba(255,255,255,.03)}
+.pain-item h3{font-size:1rem;font-weight:700;color:#06b6d4;margin-bottom:.5rem}
+.pain-item p{font-size:.9rem;color:#94a3b8;line-height:1.6}
+.cta-section{background:linear-gradient(135deg,#06b6d4dd,#22d3eebb);padding:5rem 3rem;text-align:center}
+.cta-section h2{font-size:2.5rem;font-weight:900;color:#000;margin-bottom:1rem}
+.cta-section p{color:rgba(0,0,0,.7);max-width:580px;margin:0 auto 2rem;font-size:1.05rem}
+.btn-dark{background:#000;color:#fff;padding:1.1rem 2.8rem;border-radius:8px;font-weight:800;font-size:1.05rem;text-decoration:none;display:inline-block;transition:.2s}
+.btn-dark:hover{background:#0f172a;transform:translateY(-2px)}
+.contact{background:#0f172a;padding:4rem 3rem;border-top:1px solid rgba(255,255,255,.1)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;max-width:900px}
+.contact-grid h2{grid-column:1/-1;font-size:1.5rem;font-weight:800;margin-bottom:1rem}
+.c-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:1.2rem;border-radius:8px}
+.c-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#06b6d4;margin-bottom:.4rem;font-weight:700}
+.c-value{font-size:.95rem;font-weight:600}
+footer{background:#000;padding:1.2rem 2rem;text-align:center;color:#475569;font-size:.8rem}
+footer span{color:#06b6d4}
+@media(max-width:768px){nav{padding:.75rem 1rem}.hero{padding:5rem 1.5rem 3rem}.services,.pain-section,.cta-section,.contact{padding:3rem 1.5rem}.stats-bar{padding:1.5rem;gap:2rem}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Metro<span> Plumbing,  Heating  &  Air</span></div>
+  <a href="#redesign" class="nav-cta">Free Redesign</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-kicker">Chattanooga, TN · Full-Service HVAC & Plumbing — Chattanooga, TN</div>
+  <h1>Chattanooga's Complete Home Service Experts<span class="line2">Serving Chattanooga & surrounding areas</span></h1>
+  <p class="hero-sub">One company for all your plumbing, heating, and cooling needs. Trusted by thousands of Chattanooga homeowners.</p>
+  <div class="hero-btns">
+    <a href="#redesign" class="btn-a">Claim Your Free Redesign</a>
+    <a href="#services" class="btn-b">View Services</a>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Emergency Service</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Licensed & Insured</div></div>
+  <div class="stat"><div class="stat-num">5★</div><div class="stat-label">Customer Rated</div></div>
+  <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Estimates Available</div></div>
+</div>
+
+<section class="services" id="services">
+  <div class="services-header">
+    <h2>Our Services</h2>
+    <p>Everything Metro Plumbing, Heating & Air provides — showcased professionally on your new website.</p>
+  </div>
+  <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Heating & Furnace</h3>
+          <p>Installation, repair & tune-ups.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Air Conditioning</h3>
+          <p>Central AC, mini-splits & ductless systems.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Plumbing Repair</h3>
+          <p>Leaks, pipes, water heaters & drains.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Emergency Service</h3>
+          <p>Same-day response when you need it most.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-icon">✓</div>
+          <h3>Maintenance Plans</h3>
+          <p>Preventive care to avoid costly breakdowns.</p>
+        </div>
+  </div>
+</section>
+
+<section class="pain-section">
+  <h2>Two things costing you jobs right now</h2>
+  <p class="sub">Your competition is booking months out. Your website is losing you jobs you do not even know about.</p>
+  <div class="pain-grid">
+    <div class="pain-item"><h3>Issue #1</h3><p>Generic website makes it hard for customers to trust your expertise</p></div>
+    <div class="pain-item"><h3>Issue #2</h3><p>Competitors with better websites are capturing the jobs your team should be doing</p></div>
+  </div>
+</section>
+
+<section class="cta-section" id="redesign">
+  <h2>Get Your Free Website Preview</h2>
+  <p>We've already designed what your new Metro Plumbing, Heating & Air website could look like. See it today — completely free, no commitment.</p>
+  <a href="mailto:hello@almadigitalservices.com?subject=Free Redesign — Metro Plumbing, Heating & Air" class="btn-dark">Claim Your Free Redesign →</a>
+</section>
+
+<section class="contact">
+  <div class="contact-grid">
+    <h2>About This Preview</h2>
+    <div class="c-item"><div class="c-label">Company</div><div class="c-value">Metro Plumbing, Heating & Air</div></div>
+    <div class="c-item"><div class="c-label">City</div><div class="c-value">Chattanooga, TN</div></div>
+    <div class="c-item"><div class="c-label">Industry</div><div class="c-value">Full-Service HVAC & Plumbing — Chattanooga, TN</div></div>
+    <div class="c-item"><div class="c-label">Created by</div><div class="c-value">Alma Digital</div></div>
+  </div>
+</section>
+
+<footer>
+  <p>Free preview created by <span>Alma Digital Services</span> · Not affiliated with Metro Plumbing, Heating & Air.</p>
+</footer>
+</body>
+</html>
