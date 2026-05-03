@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Palazzio Nail Lounge River Oaks — Houston</title>
+<meta name="description" content="Palazzio Nail Lounge River Oaks — modern nail salon in Houston." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#faf6f3;color:#2a1820;line-height:1.6}
+.alma-bar{position:fixed;top:0;left:0;right:0;background:#d4949f;color:#fff;padding:9px 20px;font-size:13px;text-align:center;z-index:1000;font-weight:500}
+.alma-bar a{color:#fff;text-decoration:underline;font-weight:700;margin-left:6px}
+nav{position:fixed;top:34px;left:0;right:0;padding:18px 6%;background:#faf6f3cc;backdrop-filter:blur(14px);z-index:999;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #b86b7e22}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:#b86b7e}
+nav ul{display:flex;gap:30px;list-style:none}
+nav a{color:#2a1820;text-decoration:none;font-size:.92rem;font-weight:500;transition:color .2s}
+nav a:hover{color:#b86b7e}
+nav .nav-cta{background:#b86b7e;color:#fff;padding:10px 22px;border-radius:50px;font-size:.9rem}
+nav .nav-cta:hover{background:#d4949f;color:#fff}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 6% 80px;background:radial-gradient(circle at 30% 20%,#f0e5e0 0%,#faf6f3 70%);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;max-width:1300px;margin:0 auto;width:100%;position:relative;z-index:2}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.tag{display:inline-block;background:#b86b7e22;color:#b86b7e;padding:8px 18px;border-radius:50px;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.6rem,6vw,5rem);line-height:1.05;margin-bottom:24px;font-weight:700;letter-spacing:-2px}
+h1 .accent{color:#b86b7e}
+.hero p.lead{font-size:1.15rem;color:#7a5a64;margin-bottom:36px;max-width:540px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.btn{padding:14px 30px;font-size:.95rem;font-weight:600;text-decoration:none;border-radius:50px;transition:all .25s;display:inline-block}
+.btn-primary{background:#b86b7e;color:#fff}
+.btn-primary:hover{background:#d4949f;transform:translateY(-2px);box-shadow:0 8px 24px #b86b7e55}
+.btn-ghost{background:transparent;color:#2a1820;border:1.5px solid #b86b7e55}
+.btn-ghost:hover{border-color:#b86b7e;color:#b86b7e}
+.hero-stats{display:flex;gap:48px;flex-wrap:wrap}
+.hero-stats .stat .num{font-family:'Space Grotesk',sans-serif;font-size:2.2rem;font-weight:700;color:#b86b7e;line-height:1}
+.hero-stats .stat .lbl{font-size:.82rem;color:#7a5a64;margin-top:4px;text-transform:uppercase;letter-spacing:1.5px}
+.hero-visual{aspect-ratio:1;background:linear-gradient(135deg,#b86b7e 0%,#d4949f 100%);border-radius:32px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:8rem;font-weight:700;position:relative;overflow:hidden}
+.hero-visual::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,255,255,.2),transparent 60%)}
+section{padding:100px 6%}
+.alt{background:#f0e5e0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 60px}
+.section-head .lbl{display:inline-block;background:#b86b7e22;color:#b86b7e;padding:6px 16px;border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.section-head h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:16px;letter-spacing:-1px}
+.section-head p{color:#7a5a64;font-size:1.05rem}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;max-width:1300px;margin:0 auto}
+.svc{padding:40px 32px;border-radius:24px;background:#faf6f3;border:1px solid #b86b7e22;transition:all .3s}
+.alt .svc{background:#f0e5e0;border-color:#b86b7e33}
+.svc:hover{transform:translateY(-6px);border-color:#b86b7e;box-shadow:0 16px 40px #b86b7e22}
+.svc-glyph{width:56px;height:56px;background:#b86b7e22;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:20px;color:#b86b7e}
+.svc h3{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;margin-bottom:10px;font-weight:600}
+.svc p{color:#7a5a64;font-size:.95rem}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-item{padding:36px 28px;background:#faf6f3;border-radius:20px;border:1px solid #b86b7e22;text-align:center}
+.alt .contact-item{background:#f0e5e0}
+.contact-item .ic{font-size:1.8rem;color:#b86b7e;margin-bottom:12px}
+.contact-item h4{font-family:'Space Grotesk',sans-serif;margin-bottom:8px;font-weight:600}
+.contact-item a,.contact-item p{color:#7a5a64;text-decoration:none;font-size:.95rem}
+.contact-item a:hover{color:#b86b7e}
+footer{padding:36px 6%;text-align:center;color:#7a5a64;font-size:.85rem;border-top:1px solid #b86b7e22}
+footer a{color:#b86b7e;text-decoration:none}
+@media(max-width:768px){nav ul{display:none}.nav-cta{display:inline-flex !important}}
+</style>
+</head>
+<body>
+<div class="alma-bar">💎 Free redesign preview for Palazzio Nail Lounge River Oaks — <a href="#contact">claim it</a></div>
+<nav>
+  <div class="logo">Palazzio</div>
+  <ul><li><a href="#services">Services</a></li><li><a href="#contact">Visit</a></li><li><a class="nav-cta" href="#contact">Book</a></li></ul>
+</nav>
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <span class="tag">Nail Salon • Houston</span>
+      <h1>Palazzio <span class="accent">Nail Lounge River Oaks</span></h1>
+      <p class="lead">A modern home for Palazzio Nail Lounge River Oaks — designed to convert your reputation into bookings every single day.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Book Now</a>
+        <a class="btn btn-ghost" href="#services">Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num">4.8★</div><div class="lbl">Rating</div></div>
+        <div class="stat"><div class="num">3,401+</div><div class="lbl">Reviews</div></div>
+        <div class="stat"><div class="num">Houston</div><div class="lbl">Location</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">P</div>
+  </div>
+</section>
+<section id="services" class="alt">
+  <div class="section-head"><span class="lbl">Services</span><h2>What We Do Best</h2><p>Each service designed and delivered with care.</p></div>
+  <div class="svc-grid"><div class="svc"><div class="svc-glyph">💅</div><h3>Manicure & Pedicure</h3><p>Classic, gel, and luxury treatments performed by senior technicians.</p></div><div class="svc"><div class="svc-glyph">✨</div><h3>Nail Art</h3><p>Custom designs, hand-painted detail, and the latest seasonal styles.</p></div><div class="svc"><div class="svc-glyph">🌸</div><h3>Spa Pedicures</h3><p>Restorative foot treatments, massage, and aromatherapy.</p></div><div class="svc"><div class="svc-glyph">💎</div><h3>Acrylics & Extensions</h3><p>Sculpted forms, tips, and dip systems built to last.</p></div><div class="svc"><div class="svc-glyph">🌿</div><h3>Waxing & Lashes</h3><p>Brow shaping, lash extensions, and gentle waxing services.</p></div><div class="svc"><div class="svc-glyph">👑</div><h3>Bridal Packages</h3><p>Group bookings, parties, and curated pre-wedding experiences.</p></div></div>
+</section>
+<section id="contact">
+  <div class="section-head"><span class="lbl">Visit</span><h2>Come See Us</h2><p>Book your visit, give us a call, or reach out by email.</p></div>
+  <div class="contact-grid">
+    <div class="contact-item"><div class="ic">📍</div><h4>Address</h4><p>1544 W Gray St, Houston, TX 77019, USA</p></div>
+    <div class="contact-item"><div class="ic">📞</div><h4>Phone</h4><a href="tel:(713) 942-2525">(713) 942-2525</a></div>
+    <div class="contact-item"><div class="ic">✉️</div><h4>Email</h4><a href="mailto:PalazzioNailLoungeRiverOaks@gmail.com">PalazzioNailLoungeRiverOaks@gmail.com</a></div>
+  </div>
+  <div style="text-align:center;margin-top:40px"><a class="btn btn-primary" href="tel:(713) 942-2525">Call to Book</a></div>
+</section>
+<footer>
+  <p><strong>Palazzio Nail Lounge River Oaks</strong> — Houston • 4.8★ • 3,401 reviews</p>
+  <p style="margin-top:8px;opacity:.7">Preview redesign by <a href="https://almadigitalservices.com" target="_blank">Alma Digital Services</a></p>
+</footer>
+</body></html>
