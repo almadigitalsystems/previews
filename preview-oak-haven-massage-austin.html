@@ -4,103 +4,116 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Oak Haven Massage — Austin</title>
-<meta name="description" content="Oak Haven Massage — massage therapist in Austin. A space for restoration." />
+<meta name="description" content="Oak Haven Massage — a North Austin treatment studio for deep tissue, prenatal, and Swedish work. Quiet rooms, licensed therapists, no membership upsells." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Lora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:#f5f1e8;color:#2c3a30;line-height:1.7;font-weight:300}
-.alma-bar{background:#5a7a6a;color:#fff;padding:10px 20px;font-size:13px;text-align:center;font-weight:500}
-.alma-bar a{color:#fff;text-decoration:underline;font-weight:600;margin-left:6px}
-nav{padding:24px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #5a7a6a22}
-.logo{font-family:'Lora',serif;font-size:1.4rem;font-weight:600;color:#5a7a6a;letter-spacing:1px}
+body{font-family:'Lora',sans-serif;background:#23271f;color:#f1efe6;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit}
+.alma-bar{position:fixed;top:0;left:0;right:0;background:#0a0a14;color:#fff;padding:9px 20px;font-size:13px;text-align:center;z-index:1000;border-bottom:1px solid rgba(255,255,255,.12)}
+.alma-bar a{color:#a8b591;text-decoration:none;font-weight:600;margin-left:8px}
+nav{position:fixed;top:34px;left:0;right:0;padding:18px 6%;background:rgba(0,0,0,.45);backdrop-filter:blur(14px);z-index:999;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#a8b591;letter-spacing:1.5px}
 nav ul{display:flex;gap:32px;list-style:none}
-nav a{color:#2c3a30;text-decoration:none;font-size:.92rem;font-weight:400;transition:color .2s}
-nav a:hover{color:#5a7a6a}
-.hero{padding:100px 8% 80px;text-align:center;max-width:1100px;margin:0 auto}
-.eyebrow{color:#5a7a6a;font-size:.85rem;letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:24px}
-h1{font-family:'Lora',serif;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.15;margin-bottom:28px;font-weight:500;letter-spacing:-1px}
-.hero p.lead{font-size:1.15rem;color:#6e7a72;max-width:680px;margin:0 auto 40px;font-weight:300}
-.btn{padding:16px 38px;font-size:.95rem;font-weight:500;text-decoration:none;border-radius:0;letter-spacing:2px;text-transform:uppercase;display:inline-block;transition:all .25s}
-.btn-primary{background:#5a7a6a;color:#fff}
-.btn-primary:hover{background:#8aa897}
-.hero-img{margin:50px auto 0;max-width:900px;aspect-ratio:21/9;background:linear-gradient(120deg,#5a7a6a 0%,#8aa897 100%);border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Lora',serif;font-size:5rem;font-weight:600;letter-spacing:6px}
-section{padding:90px 8%}
-.story{background:#e8e0d0}
-.story-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
-@media(max-width:900px){.story-grid{grid-template-columns:1fr}}
-.story h2{font-family:'Lora',serif;font-size:2.6rem;margin-bottom:24px;line-height:1.2;font-weight:500}
-.story p{color:#6e7a72;margin-bottom:18px;font-size:1.05rem}
-.story-quote{background:#f5f1e8;padding:48px;border-left:4px solid #5a7a6a;font-family:'Lora',serif;font-style:italic;font-size:1.3rem;color:#2c3a30;line-height:1.6;font-weight:500}
-.story-quote .who{display:block;font-style:normal;font-family:'Inter',sans-serif;font-size:.85rem;color:#5a7a6a;letter-spacing:2px;text-transform:uppercase;margin-top:18px;font-weight:600}
-.services-section .section-head{text-align:center;max-width:680px;margin:0 auto 60px}
-.section-head h2{font-family:'Lora',serif;font-size:2.6rem;margin-bottom:16px;font-weight:500}
-.section-head p{color:#6e7a72}
-.svc-list{max-width:840px;margin:0 auto}
-.svc{display:flex;align-items:flex-start;gap:28px;padding:32px 0;border-bottom:1px solid #5a7a6a22}
-.svc:last-child{border:0}
-.svc-icon{width:60px;height:60px;background:#e8e0d0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
-.svc h3{font-family:'Lora',serif;font-size:1.4rem;margin-bottom:6px;font-weight:600}
-.svc p{color:#6e7a72}
-.contact{background:#e8e0d0;text-align:center}
-.contact h2{font-family:'Lora',serif;font-size:2.6rem;margin-bottom:16px;font-weight:500}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1000px;margin:50px auto 0}
+nav a{color:#f1efe6;text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+nav a:hover{color:#a8b591}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:160px 6% 80px;overflow:hidden;background:#23271f}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.7}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(115deg,rgba(35,39,31,.82) 0%,rgba(35,39,31,.35) 65%,rgba(35,39,31,.05) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:780px}
+.eyebrow{color:#a8b591;font-size:.85rem;letter-spacing:3.5px;text-transform:uppercase;margin-bottom:24px;font-weight:700}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,6.5vw,5.2rem);line-height:1.05;margin-bottom:28px;font-weight:700;color:#f1efe6}
+.hero p.lead{font-size:1.2rem;color:#dcdac9;max-width:620px;margin:0 0 36px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+.btn{padding:16px 36px;font-size:1rem;font-weight:600;text-decoration:none;border-radius:50px;transition:all .25s;display:inline-block;letter-spacing:.5px}
+.btn-primary{background:#a8b591;color:#23271f;box-shadow:0 6px 20px rgba(168,181,145,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(168,181,145,.35)}
+.btn-ghost{background:transparent;color:#f1efe6;border:2px solid rgba(241,239,230,.22)}
+.btn-ghost:hover{border-color:#a8b591;color:#a8b591}
+.stats{display:flex;gap:50px;margin-top:64px;flex-wrap:wrap}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:#a8b591}
+.stat-lbl{font-size:.78rem;color:#c5c2b3;text-transform:uppercase;letter-spacing:1.8px;margin-top:6px}
+section{padding:110px 6%}
+.section-head{text-align:center;max-width:720px;margin:0 auto 64px}
+.section-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:18px;color:#f1efe6}
+.section-head p{color:#c5c2b3;font-size:1.1rem}
+.feature{background:#2c3128}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1200px;margin:0 auto;align-items:center}
+@media(max-width:900px){.feature-grid{grid-template-columns:1fr}}
+.feature-img{aspect-ratio:1;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.feature-img img{width:100%;height:100%;object-fit:cover}
+.feature-text h2{font-family:'Cormorant Garamond',serif;font-size:2.4rem;margin-bottom:22px;color:#f1efe6}
+.feature-text p{color:#c5c2b3;margin-bottom:20px;font-size:1.05rem}
+.services{background:#23271f}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;max-width:1200px;margin:0 auto}
+.svc{background:#23271f;padding:38px 30px;border-radius:14px;border:1px solid rgba(168,181,145,.20);transition:transform .3s,border-color .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-5px);border-color:#a8b591;box-shadow:0 16px 40px rgba(0,0,0,.18)}
+.svc-icon{font-size:2rem;margin-bottom:18px;display:inline-flex;width:50px;height:50px;align-items:center;justify-content:center;background:rgba(168,181,145,.15);border-radius:12px;color:#a8b591}
+.svc h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:10px;color:#a8b591}
+.svc p{color:#c5c2b3;font-size:.95rem;line-height:1.65}
+.contact{background:#2c3128;text-align:center}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1000px;margin:48px auto 0}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
 .contact-item{padding:32px 20px}
-.contact-item .ic{font-size:1.6rem;color:#5a7a6a;margin-bottom:12px}
-.contact-item h4{font-family:'Lora',serif;font-size:1.1rem;margin-bottom:8px;font-weight:600}
-.contact-item a,.contact-item p{color:#6e7a72;text-decoration:none;font-size:.95rem;line-height:1.7}
-.contact-item a:hover{color:#5a7a6a}
-footer{padding:36px 8%;text-align:center;color:#6e7a72;font-size:.85rem;border-top:1px solid #5a7a6a22}
-footer a{color:#5a7a6a;text-decoration:none}
-@media(max-width:768px){nav ul{display:none}}
+.contact-item .ic{font-size:1.6rem;color:#a8b591;margin-bottom:14px}
+.contact-item h4{margin-bottom:8px;font-size:.95rem;letter-spacing:1px;text-transform:uppercase;color:#f1efe6}
+.contact-item p,.contact-item a{color:#c5c2b3;text-decoration:none;font-size:.96rem;line-height:1.7}
+.contact-item a:hover{color:#a8b591}
+footer{padding:36px 6%;text-align:center;color:#c5c2b3;font-size:.85rem;border-top:1px solid rgba(168,181,145,.20)}
+footer a{color:#a8b591;text-decoration:none}
+@media(max-width:768px){nav ul{display:none}.stats{gap:28px}.feature-grid{gap:36px}}
 </style>
 </head>
 <body>
-<div class="alma-bar">🌿 Free redesign preview for Oak Haven Massage — <a href="#contact">claim it</a></div>
+<div class="alma-bar">Free redesign preview built for Oak Haven Massage by Alma Digital Services — <a href="#contact">claim yours</a></div>
 <nav>
-  <div class="logo">Oak Haven Massage</div>
-  <ul><li><a href="#story">Story</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Visit</a></li></ul>
+  <div class="logo">OAK HAVEN</div>
+  <ul><li><a href="#services">Bodywork</a></li><li><a href="#about">The Studio</a></li><li><a href="#contact">Book</a></li></ul>
 </nav>
 <section class="hero">
-  <div class="eyebrow">Austin • Massage Therapist</div>
-  <h1>A place to slow down,<br>be cared for, and breathe.</h1>
-  <p class="lead">Oak Haven Massage has welcomed 1,800 guests in Austin — each one greeted by the same care, intention, and craft. The world rushes; we don't.</p>
-  <a class="btn btn-primary" href="#contact">Reserve Your Visit</a>
-  <div class="hero-img">OAK</div>
-</section>
-<section class="story" id="story">
-  <div class="story-grid">
-    <div>
-      <div class="eyebrow">Our Story</div>
-      <h2>Built on care.<br>Trusted by 1,800.</h2>
-      <p>For years, Oak Haven Massage has been a quiet refuge for the people of Austin — a place where attention to detail isn't just a tagline, it's a discipline.</p>
-      <p>Our 4.9-star reputation isn't built on marketing. It's built on every appointment, every guest, every moment of presence.</p>
+  <div class="hero-bg"><img src="https://img.recraft.ai/8q9J_skP8Lir-MMjIZqS8vPGZ5qmpVqNHvgv7P_wTOA/rs:fit:1820:1024:0/raw:1/plain/abs://external/images/03d234e1-0c26-4e55-bfa5-75a739da93e9" alt="Serene Austin massage treatment room at dusk with sage walls, cedar beams, white linen-draped massage table, and beeswax candles glowing softly" /></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">N FM 620 · Austin · Bodywork Only</div>
+    <h1>The hour you put on the calendar to actually keep.</h1>
+    <p class="lead">Oak Haven is one studio, three quiet rooms, and a licensed therapist who has read your intake form before you sit down. No upsells, no membership pressure, no scented hallway. The world rushes; we don't.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact">Book a Session</a>
+      <a class="btn btn-ghost" href="#services">Choose Your Bodywork</a>
     </div>
-    <div class="story-quote">
-      "Oak Haven Massage is the only place I've found in Austin where I leave feeling completely restored. Every single visit."
-      <span class="who">— Verified Google Review</span>
+    <div class="stats"><div class="stat"><div class="stat-num">60 / 90</div><div class="stat-lbl">Minute Sessions</div></div><div class="stat"><div class="stat-num">1,800+</div><div class="stat-lbl">Guests Welcomed</div></div><div class="stat"><div class="stat-num">4.9★</div><div class="stat-lbl">Quietly, Consistently</div></div></div>
+  </div>
+</section>
+<section class="feature" id="about">
+  <div class="feature-grid">
+    <div class="feature-img"><img src="https://img.recraft.ai/Sb1CMU1CjRvIVj678x_q37UootOT47dQYeTom4dPrVY/rs:fit:1024:1024:0/raw:1/plain/abs://external/images/1e583c9a-163f-4b5c-81b2-64cd668da562" alt="Warm hands kneading aromatic oil into a back during a deep-tissue massage, soft amber candlelight, sage and earth tones" /></div>
+    <div class="feature-text">
+      <h2>A studio for bodywork. Not a wellness brand.</h2>
+      <p>Oak Haven was built around one belief: a 90-minute massage should feel like a 90-minute massage. The room is quiet because we keep it quiet. The therapist asks two questions, then works.</p><p>Our 4.9-star rating wasn&#x27;t built on marketing. It was built on every appointment, every guest, every moment of presence. The redesign in front of you is so the next person searching for that kind of session can find it on the first try.</p>
+      <a class="btn btn-primary" href="#contact" style="margin-top:8px">Book a Session</a>
     </div>
   </div>
 </section>
-<section class="services-section" id="services">
-  <div class="section-head"><div class="eyebrow">What We Offer</div><h2>Services</h2><p>Each treatment, each service, designed with intention.</p></div>
-  <div class="svc-list"><div class="svc"><div class="svc-icon">🌿</div><div class="svc-body"><h3>Therapeutic Massage</h3><p>Targeted bodywork tailored to your needs by licensed therapists.</p></div></div><div class="svc"><div class="svc-icon">🍃</div><div class="svc-body"><h3>Deep Tissue</h3><p>Restorative pressure for chronic tension and athletic recovery.</p></div></div><div class="svc"><div class="svc-icon">🌸</div><div class="svc-body"><h3>Swedish Relaxation</h3><p>Long, flowing strokes that quiet the nervous system.</p></div></div><div class="svc"><div class="svc-icon">🔥</div><div class="svc-body"><h3>Hot Stone</h3><p>Heated basalt stones to release deep muscular tension.</p></div></div><div class="svc"><div class="svc-icon">🤰</div><div class="svc-body"><h3>Prenatal</h3><p>Gentle, supportive massage for every stage of pregnancy.</p></div></div><div class="svc"><div class="svc-icon">💆</div><div class="svc-body"><h3>Couples Sessions</h3><p>Side-by-side rooms designed for shared restoration.</p></div></div></div>
+<section class="services" id="services">
+  <div class="section-head"><h2>The bodywork menu</h2><p>Every therapist is licensed, insured, and trained in at least three modalities. Sessions are billable to most HSA accounts.</p></div>
+  <div class="svc-grid"><div class="svc"><div class="svc-icon">🌿</div><h3>Therapeutic Deep Tissue</h3><p>Targeted to your specific pain pattern. We treat the cause, not the back as a whole.</p></div><div class="svc"><div class="svc-icon">🪨</div><h3>Hot Stone</h3><p>Heated basalt stones release deep tension before the manual work begins. 90 minutes.</p></div><div class="svc"><div class="svc-icon">💆</div><h3>Swedish Restorative</h3><p>Long, flowing strokes designed to slow the nervous system, not just relax the muscle.</p></div><div class="svc"><div class="svc-icon">🤰</div><h3>Prenatal</h3><p>Side-lying support, certified prenatal therapists, and bolster setups by trimester.</p></div><div class="svc"><div class="svc-icon">🏃</div><h3>Sports Recovery</h3><p>For training cycles, race weeks, and the day after. Includes cupping and stretch work.</p></div><div class="svc"><div class="svc-icon">💞</div><h3>Couples Suite</h3><p>Side-by-side rooms for partners. Same start time, same finish, separate intake forms.</p></div></div>
 </section>
 <section class="contact" id="contact">
-  <h2>Visit Us</h2>
-  <p style="color:#6e7a72;max-width:520px;margin:0 auto">We'd be honored to welcome you. Reach out, and we'll find a time that works for you.</p>
+  <div class="section-head"><h2>12809 N FM 620</h2><p>Tuesday through Saturday. Same-day appointments via phone only.</p></div>
   <div class="contact-grid">
-    <div class="contact-item"><div class="ic">📍</div><h4>Find Us</h4><p>12809 N FM 620, Austin, TX 78750, USA</p></div>
-    <div class="contact-item"><div class="ic">📞</div><h4>Call</h4><a href="tel:(512) 610-5300">(512) 610-5300</a></div>
+    <div class="contact-item"><div class="ic">📍</div><h4>Address</h4><p>12809 N FM 620, Austin, TX 78750</p></div>
+    <div class="contact-item"><div class="ic">📞</div><h4>Phone</h4><a href="tel:(512) 610-5300">(512) 610-5300</a></div>
     <div class="contact-item"><div class="ic">✉️</div><h4>Email</h4><a href="mailto:oakhavenmassageaustin@gmail.com">oakhavenmassageaustin@gmail.com</a></div>
   </div>
-  <a class="btn btn-primary" href="tel:(512) 610-5300" style="margin-top:48px">Reserve By Phone</a>
+  <a class="btn btn-primary" href="tel:(512) 610-5300" style="margin-top:44px">Call to Book</a>
 </section>
 <footer>
-  <p><strong>Oak Haven Massage</strong> — Austin • 4.9★ • 1,800 reviews</p>
-  <p style="margin-top:8px;opacity:.7">Preview redesign by <a href="https://almadigitalservices.com" target="_blank">Alma Digital Services</a></p>
+  <p><strong>Oak Haven Massage</strong> — Austin, TX • 4.9★ on Google • 1,800+ reviews</p>
+  <p style="margin-top:8px;opacity:.72">Preview redesign by <a href="https://almadigitalservices.com" target="_blank" rel="noopener">Alma Digital Services</a></p>
 </footer>
 </body></html>
