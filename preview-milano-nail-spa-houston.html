@@ -4,113 +4,116 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Milano Nail Spa — Houston</title>
-<meta name="description" content="Milano Nail Spa — premium nail salon in Houston. Book online, view services, and see what your visitors love." />
+<meta name="description" content="Milano Nail Spa — the Katy Freeway nail salon Houston has been booking solid for five years. View services and call to reserve your chair." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:#1a0d12;color:#fff5f0;line-height:1.6}
-.alma-bar{position:fixed;top:0;left:0;right:0;background:#0a0a14;color:#fff;padding:9px 20px;font-size:13px;text-align:center;z-index:1000;border-bottom:1px solid rgba(255,255,255,.1)}
+body{font-family:'Inter',sans-serif;background:#1a0d12;color:#fff5f0;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit}
+.alma-bar{position:fixed;top:0;left:0;right:0;background:#0a0a14;color:#fff;padding:9px 20px;font-size:13px;text-align:center;z-index:1000;border-bottom:1px solid rgba(255,255,255,.12)}
 .alma-bar a{color:#d4a574;text-decoration:none;font-weight:600;margin-left:8px}
-nav{position:fixed;top:34px;left:0;right:0;padding:18px 6%;background:rgba(0,0,0,.4);backdrop-filter:blur(12px);z-index:999;display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#d4a574;letter-spacing:1px}
+nav{position:fixed;top:34px;left:0;right:0;padding:18px 6%;background:rgba(0,0,0,.45);backdrop-filter:blur(14px);z-index:999;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#d4a574;letter-spacing:1.5px}
 nav ul{display:flex;gap:32px;list-style:none}
 nav a{color:#fff5f0;text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
 nav a:hover{color:#d4a574}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 6% 60px;text-align:center;background:radial-gradient(ellipse at top,#2a1820 0%,#1a0d12 70%)}
-.hero-inner{max-width:1100px}
-.eyebrow{color:#d4a574;font-size:.85rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px;font-weight:600}
-h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,7vw,5.5rem);line-height:1.05;margin-bottom:24px;font-weight:700}
-.hero p.lead{font-size:1.2rem;color:#c5b4a8;max-width:680px;margin:0 auto 36px}
-.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:160px 6% 80px;overflow:hidden;background:#1a0d12}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.55}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(26,13,18,.92) 0%,rgba(26,13,18,.55) 55%,rgba(26,13,18,.25) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:780px}
+.eyebrow{color:#d4a574;font-size:.85rem;letter-spacing:3.5px;text-transform:uppercase;margin-bottom:24px;font-weight:700}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,6.5vw,5.2rem);line-height:1.05;margin-bottom:28px;font-weight:700;color:#fff5f0}
+.hero p.lead{font-size:1.2rem;color:#e9d6c8;max-width:620px;margin:0 0 36px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
 .btn{padding:16px 36px;font-size:1rem;font-weight:600;text-decoration:none;border-radius:50px;transition:all .25s;display:inline-block;letter-spacing:.5px}
-.btn-primary{background:#e8b4c8;color:#fff;box-shadow:0 6px 20px #d4a57455}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px #d4a57488}
-.btn-ghost{background:transparent;color:#fff5f0;border:2px solid #fff5f033}
+.btn-primary{background:#d4a574;color:#1a0d12;box-shadow:0 6px 20px rgba(212,165,116,.45)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(212,165,116,.45)}
+.btn-ghost{background:transparent;color:#fff5f0;border:2px solid rgba(255,245,240,.25)}
 .btn-ghost:hover{border-color:#d4a574;color:#d4a574}
-.stats{display:flex;justify-content:center;gap:60px;margin-top:60px;flex-wrap:wrap}
-.stat{text-align:center}
-.stat-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:#d4a574}
-.stat-lbl{font-size:.85rem;color:#c5b4a8;text-transform:uppercase;letter-spacing:1.5px;margin-top:4px}
-section{padding:100px 6%}
-.section-head{text-align:center;max-width:700px;margin:0 auto 60px}
-.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+.stats{display:flex;gap:50px;margin-top:64px;flex-wrap:wrap}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:#d4a574}
+.stat-lbl{font-size:.78rem;color:#c5b4a8;text-transform:uppercase;letter-spacing:1.8px;margin-top:6px}
+section{padding:110px 6%}
+.section-head{text-align:center;max-width:720px;margin:0 auto 64px}
+.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:18px;color:#fff5f0}
 .section-head p{color:#c5b4a8;font-size:1.1rem}
-.services{background:#2a1820}
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;max-width:1200px;margin:0 auto}
-.svc{background:#1a0d12;padding:40px 32px;border-radius:16px;border:1px solid #d4a57422;transition:transform .3s,border-color .3s}
-.svc:hover{transform:translateY(-6px);border-color:#d4a574}
-.svc-icon{font-size:2.2rem;margin-bottom:18px}
-.svc h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;color:#d4a574}
-.svc p{color:#c5b4a8;font-size:.95rem}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto}
-@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
-.about-text h2{font-family:'Playfair Display',serif;font-size:2.5rem;margin-bottom:20px}
-.about-text p{color:#c5b4a8;margin-bottom:18px;font-size:1.05rem}
-.about-visual{aspect-ratio:1;background:linear-gradient(135deg,#d4a574 0%,#e8b4c8 100%);border-radius:24px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:5rem;color:#fff;font-weight:700}
-.contact{background:#2a1820;text-align:center}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1000px;margin:40px auto 0}
+.feature{background:#241420}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1200px;margin:0 auto;align-items:center}
+@media(max-width:900px){.feature-grid{grid-template-columns:1fr}}
+.feature-img{aspect-ratio:1;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.feature-img img{width:100%;height:100%;object-fit:cover}
+.feature-text h2{font-family:'Playfair Display',serif;font-size:2.4rem;margin-bottom:22px;color:#fff5f0}
+.feature-text p{color:#c5b4a8;margin-bottom:20px;font-size:1.05rem}
+.services{background:#1a0d12}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;max-width:1200px;margin:0 auto}
+.svc{background:#1a0d12;padding:38px 30px;border-radius:14px;border:1px solid rgba(212,165,116,.18);transition:transform .3s,border-color .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-5px);border-color:#d4a574;box-shadow:0 16px 40px rgba(0,0,0,.18)}
+.svc-icon{font-size:2rem;margin-bottom:18px;display:inline-flex;width:50px;height:50px;align-items:center;justify-content:center;background:rgba(212,165,116,.16);border-radius:12px;color:#d4a574}
+.svc h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:10px;color:#d4a574}
+.svc p{color:#c5b4a8;font-size:.95rem;line-height:1.65}
+.contact{background:#241420;text-align:center}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1000px;margin:48px auto 0}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
 .contact-item{padding:32px 20px}
-.contact-item .ic{font-size:1.8rem;color:#d4a574;margin-bottom:12px}
-.contact-item h4{margin-bottom:6px;font-size:1rem}
-.contact-item p,.contact-item a{color:#c5b4a8;text-decoration:none;font-size:.95rem;line-height:1.7}
+.contact-item .ic{font-size:1.6rem;color:#d4a574;margin-bottom:14px}
+.contact-item h4{margin-bottom:8px;font-size:.95rem;letter-spacing:1px;text-transform:uppercase;color:#fff5f0}
+.contact-item p,.contact-item a{color:#c5b4a8;text-decoration:none;font-size:.96rem;line-height:1.7}
 .contact-item a:hover{color:#d4a574}
-footer{padding:36px 6%;text-align:center;color:#c5b4a8;font-size:.85rem;border-top:1px solid #d4a57422}
+footer{padding:36px 6%;text-align:center;color:#c5b4a8;font-size:.85rem;border-top:1px solid rgba(212,165,116,.18)}
 footer a{color:#d4a574;text-decoration:none}
-@media(max-width:768px){nav ul{display:none}.stats{gap:30px}}
+@media(max-width:768px){nav ul{display:none}.stats{gap:28px}.feature-grid{gap:36px}}
 </style>
 </head>
 <body>
-<div class="alma-bar">✨ Free redesign preview built for Milano Nail Spa by Alma Digital Services — <a href="#contact">claim it</a></div>
+<div class="alma-bar">✨ Free redesign preview built for Milano Nail Spa Houston by Alma Digital Services — <a href="#contact">claim it</a></div>
 <nav>
-  <div class="logo">MNS</div>
-  <ul><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Visit</a></li></ul>
+  <div class="logo">MILANO</div>
+  <ul><li><a href="#services">Services</a></li><li><a href="#about">The Spa</a></li><li><a href="#contact">Visit</a></li></ul>
 </nav>
 <section class="hero">
+  <div class="hero-bg"><img src="https://img.recraft.ai/4pmnxToPYtpzGZ-gNnkMLHw44vUuvk9cNknHfeJJsQc/rs:fit:1820:1024:0/raw:1/plain/abs://external/images/cea07ae4-8817-45e1-94ba-78563991114f" alt="Warm cream and walnut interior of Milano Nail Spa with antique brass fixtures and golden afternoon light streaming through arched windows" /></div>
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div class="eyebrow">Nail Salon • Houston</div>
-    <h1>Milano Nail Spa</h1>
-    <p class="lead">A modern home for Milano Nail Spa — built to convert your 19,323 reviewer reputation into bookings every single day.</p>
+    <div class="eyebrow">Katy Freeway · Houston · Est. 2019</div>
+    <h1>Five years on Katy Freeway. 19,323 reviewers in.</h1>
+    <p class="lead">Houston booked Milano Nail Spa solid before the redesign. Now imagine a website that loads faster than the wait at the door — and turns the next neighbor scrolling Google into a Saturday appointment.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#contact">Book Your Visit</a>
-      <a class="btn btn-ghost" href="#services">Our Services</a>
+      <a class="btn btn-primary" href="#contact">Book Your Chair</a>
+      <a class="btn btn-ghost" href="#services">See the Menu</a>
     </div>
-    <div class="stats">
-      <div class="stat"><div class="stat-num">4.9★</div><div class="stat-lbl">Average Rating</div></div>
-      <div class="stat"><div class="stat-num">19,323+</div><div class="stat-lbl">Happy Clients</div></div>
-      <div class="stat"><div class="stat-num">5+</div><div class="stat-lbl">Years in Houston</div></div>
+    <div class="stats"><div class="stat"><div class="stat-num">4.9★</div><div class="stat-lbl">Google Average</div></div><div class="stat"><div class="stat-num">19,323</div><div class="stat-lbl">Verified Reviews</div></div><div class="stat"><div class="stat-num">5 yrs</div><div class="stat-lbl">On Katy Fwy</div></div></div>
+  </div>
+</section>
+<section class="feature" id="about">
+  <div class="feature-grid">
+    <div class="feature-img"><img src="https://img.recraft.ai/3Qc2pUOMxs8sQ88WfGyYy-fdQoRtKCPv1RgheaSzaJQ/rs:fit:1024:1024:0/raw:1/plain/abs://external/images/20d88ba0-c37c-4bca-9c47-c0e9e966f08a" alt="Close-up of perfectly manicured hands with glossy nude-pink gel polish resting on a cream marble counter" /></div>
+    <div class="feature-text">
+      <h2>The Saturday rush is real. Your website should match it.</h2>
+      <p>Milano sits on Katy Freeway because the location works. Walk-ins, regulars, the bridal parties from Memorial — the room fills itself.</p><p>What it doesn&#x27;t do is convert the 19,323rd reviewer&#x27;s friend who is searching at 9pm on a Tuesday. That&#x27;s what a redesign is for: a homepage that books her before she opens a second tab.</p>
+      <a class="btn btn-primary" href="#contact" style="margin-top:8px">Book Your Chair</a>
     </div>
   </div>
 </section>
 <section class="services" id="services">
-  <div class="section-head"><h2>What We Do</h2><p>Crafted services trusted by thousands across Houston.</p></div>
-  <div class="svc-grid"><div class="svc"><div class="svc-icon">💅</div><h3>Manicure & Pedicure</h3><p>Classic, gel, and luxury treatments performed by senior technicians.</p></div><div class="svc"><div class="svc-icon">✨</div><h3>Nail Art</h3><p>Custom designs, hand-painted detail, and the latest seasonal styles.</p></div><div class="svc"><div class="svc-icon">🌸</div><h3>Spa Pedicures</h3><p>Restorative foot treatments, massage, and aromatherapy.</p></div><div class="svc"><div class="svc-icon">💎</div><h3>Acrylics & Extensions</h3><p>Sculpted forms, tips, and dip systems built to last.</p></div><div class="svc"><div class="svc-icon">🌿</div><h3>Waxing & Lashes</h3><p>Brow shaping, lash extensions, and gentle waxing services.</p></div><div class="svc"><div class="svc-icon">👑</div><h3>Bridal Packages</h3><p>Group bookings, parties, and curated pre-wedding experiences.</p></div></div>
-</section>
-<section id="about">
-  <div class="about-grid">
-    <div class="about-text">
-      <h2>Why Houston Trusts Us</h2>
-      <p>With 19,323 verified reviews and a 4.9 star rating, Milano Nail Spa has earned a reputation built on consistency, care, and craftsmanship.</p>
-      <p>Every appointment is an opportunity to deliver the kind of experience that turns first-time visitors into lifelong clients — and that promise is at the heart of everything we do.</p>
-      <a class="btn btn-primary" href="#contact" style="margin-top:12px">Plan Your Visit</a>
-    </div>
-    <div class="about-visual">M</div>
-  </div>
+  <div class="section-head"><h2>What Milano does, every day</h2><p>Senior technicians. Hospital-grade sterilization. The Saturday-best treatment whether you walked in or booked weeks ago.</p></div>
+  <div class="svc-grid"><div class="svc"><div class="svc-icon">💅</div><h3>Signature Manicure</h3><p>Cuticle care, shaping, and a 30-minute hot-stone hand massage that regulars come back for monthly.</p></div><div class="svc"><div class="svc-icon">✨</div><h3>Gel &amp; Custom Art</h3><p>Marble, chrome, French-tip variations, and seasonal Houston-specific designs hand-painted at the chair.</p></div><div class="svc"><div class="svc-icon">🌸</div><h3>Milano Pedicure</h3><p>Sea-salt soak, paraffin wrap, and a full lower-leg massage in one of our zero-gravity recliners.</p></div><div class="svc"><div class="svc-icon">💎</div><h3>Acrylic &amp; Dip</h3><p>Sculpted overlays and dip systems built to survive the Houston humidity through to the wedding.</p></div><div class="svc"><div class="svc-icon">🌿</div><h3>Brows &amp; Lashes</h3><p>Brow shaping, lash lifts, and classic-to-volume extensions by certified technicians.</p></div><div class="svc"><div class="svc-icon">👑</div><h3>Bridal &amp; Parties</h3><p>Group bookings of 6+ get the back room, champagne, and a dedicated team for the morning.</p></div></div>
 </section>
 <section class="contact" id="contact">
-  <div class="section-head"><h2>Visit Milano Nail Spa</h2><p>We can't wait to take care of you.</p></div>
+  <div class="section-head"><h2>2799 Katy Fwy · Suite 130</h2><p>Walk-ins welcome. Call ahead for groups of three or more.</p></div>
   <div class="contact-grid">
-    <div class="contact-item"><div class="ic">📍</div><h4>Find Us</h4><p>2799 Katy Fwy #130, Houston, TX 77007, USA</p></div>
-    <div class="contact-item"><div class="ic">📞</div><h4>Call</h4><a href="tel:(281) 888-9646">(281) 888-9646</a></div>
+    <div class="contact-item"><div class="ic">📍</div><h4>Address</h4><p>2799 Katy Fwy #130, Houston, TX 77007</p></div>
+    <div class="contact-item"><div class="ic">📞</div><h4>Phone</h4><a href="tel:(281) 888-9646">(281) 888-9646</a></div>
     <div class="contact-item"><div class="ic">✉️</div><h4>Email</h4><a href="mailto:briannguyen0210@gmail.com">briannguyen0210@gmail.com</a></div>
   </div>
-  <a class="btn btn-primary" href="tel:(281) 888-9646" style="margin-top:40px">Call to Book</a>
+  <a class="btn btn-primary" href="tel:(281) 888-9646" style="margin-top:44px">Call to Book</a>
 </section>
 <footer>
-  <p><strong>Milano Nail Spa</strong> — Houston • 4.9★ on Google • 19,323 reviews</p>
-  <p style="margin-top:8px;opacity:.7">Preview redesign by <a href="https://almadigitalservices.com" target="_blank">Alma Digital Services</a></p>
+  <p><strong>Milano Nail Spa</strong> — Houston, TX • 4.9★ on Google • 19,323 reviews</p>
+  <p style="margin-top:8px;opacity:.72">Preview redesign by <a href="https://almadigitalservices.com" target="_blank" rel="noopener">Alma Digital Services</a></p>
 </footer>
 </body></html>
