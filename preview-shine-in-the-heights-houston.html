@@ -4,113 +4,116 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Shine in the Heights — Houston</title>
-<meta name="description" content="Shine in the Heights — premium hair salon in Houston. Book online, view services, and see what your visitors love." />
+<meta name="description" content="Shine in the Heights — a Houston Heights hair salon for hand-painted balayage, gloss treatments, and the Olaplex routine that keeps your color looking new at week six." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:#0f1f18;color:#f5f1e8;line-height:1.6}
-.alma-bar{position:fixed;top:0;left:0;right:0;background:#0a0a14;color:#fff;padding:9px 20px;font-size:13px;text-align:center;z-index:1000;border-bottom:1px solid rgba(255,255,255,.1)}
-.alma-bar a{color:#d4a548;text-decoration:none;font-weight:600;margin-left:8px}
-nav{position:fixed;top:34px;left:0;right:0;padding:18px 6%;background:rgba(0,0,0,.4);backdrop-filter:blur(12px);z-index:999;display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#d4a548;letter-spacing:1px}
+body{font-family:'Inter',sans-serif;background:#1f2520;color:#f0e9dc;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit}
+.alma-bar{position:fixed;top:0;left:0;right:0;background:#0a0a14;color:#fff;padding:9px 20px;font-size:13px;text-align:center;z-index:1000;border-bottom:1px solid rgba(255,255,255,.12)}
+.alma-bar a{color:#dcaa6b;text-decoration:none;font-weight:600;margin-left:8px}
+nav{position:fixed;top:34px;left:0;right:0;padding:18px 6%;background:rgba(0,0,0,.45);backdrop-filter:blur(14px);z-index:999;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:#dcaa6b;letter-spacing:1.5px}
 nav ul{display:flex;gap:32px;list-style:none}
-nav a{color:#f5f1e8;text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
-nav a:hover{color:#d4a548}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 6% 60px;text-align:center;background:radial-gradient(ellipse at top,#1a2a22 0%,#0f1f18 70%)}
-.hero-inner{max-width:1100px}
-.eyebrow{color:#d4a548;font-size:.85rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px;font-weight:600}
-h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,7vw,5.5rem);line-height:1.05;margin-bottom:24px;font-weight:700}
-.hero p.lead{font-size:1.2rem;color:#a8b0a8;max-width:680px;margin:0 auto 36px}
-.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+nav a{color:#f0e9dc;text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+nav a:hover{color:#dcaa6b}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:160px 6% 80px;overflow:hidden;background:#1f2520}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.7}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(112deg,rgba(31,37,32,.85) 0%,rgba(31,37,32,.45) 55%,rgba(31,37,32,.10) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:780px}
+.eyebrow{color:#dcaa6b;font-size:.85rem;letter-spacing:3.5px;text-transform:uppercase;margin-bottom:24px;font-weight:700}
+h1{font-family:'Fraunces',serif;font-size:clamp(2.6rem,6.5vw,5.2rem);line-height:1.05;margin-bottom:28px;font-weight:700;color:#f0e9dc}
+.hero p.lead{font-size:1.2rem;color:#d8cdb8;max-width:620px;margin:0 0 36px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
 .btn{padding:16px 36px;font-size:1rem;font-weight:600;text-decoration:none;border-radius:50px;transition:all .25s;display:inline-block;letter-spacing:.5px}
-.btn-primary{background:#5a8868;color:#fff;box-shadow:0 6px 20px #d4a54855}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px #d4a54888}
-.btn-ghost{background:transparent;color:#f5f1e8;border:2px solid #f5f1e833}
-.btn-ghost:hover{border-color:#d4a548;color:#d4a548}
-.stats{display:flex;justify-content:center;gap:60px;margin-top:60px;flex-wrap:wrap}
-.stat{text-align:center}
-.stat-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:#d4a548}
-.stat-lbl{font-size:.85rem;color:#a8b0a8;text-transform:uppercase;letter-spacing:1.5px;margin-top:4px}
-section{padding:100px 6%}
-.section-head{text-align:center;max-width:700px;margin:0 auto 60px}
-.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
-.section-head p{color:#a8b0a8;font-size:1.1rem}
-.services{background:#1a2a22}
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;max-width:1200px;margin:0 auto}
-.svc{background:#0f1f18;padding:40px 32px;border-radius:16px;border:1px solid #d4a54822;transition:transform .3s,border-color .3s}
-.svc:hover{transform:translateY(-6px);border-color:#d4a548}
-.svc-icon{font-size:2.2rem;margin-bottom:18px}
-.svc h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;color:#d4a548}
-.svc p{color:#a8b0a8;font-size:.95rem}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto}
-@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
-.about-text h2{font-family:'Playfair Display',serif;font-size:2.5rem;margin-bottom:20px}
-.about-text p{color:#a8b0a8;margin-bottom:18px;font-size:1.05rem}
-.about-visual{aspect-ratio:1;background:linear-gradient(135deg,#d4a548 0%,#5a8868 100%);border-radius:24px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:5rem;color:#fff;font-weight:700}
-.contact{background:#1a2a22;text-align:center}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1000px;margin:40px auto 0}
+.btn-primary{background:#dcaa6b;color:#1f2520;box-shadow:0 6px 20px rgba(220,170,107,.4)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(220,170,107,.4)}
+.btn-ghost{background:transparent;color:#f0e9dc;border:2px solid rgba(240,233,220,.22)}
+.btn-ghost:hover{border-color:#dcaa6b;color:#dcaa6b}
+.stats{display:flex;gap:50px;margin-top:64px;flex-wrap:wrap}
+.stat-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:#dcaa6b}
+.stat-lbl{font-size:.78rem;color:#bdb6a5;text-transform:uppercase;letter-spacing:1.8px;margin-top:6px}
+section{padding:110px 6%}
+.section-head{text-align:center;max-width:720px;margin:0 auto 64px}
+.section-head h2{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:18px;color:#f0e9dc}
+.section-head p{color:#bdb6a5;font-size:1.1rem}
+.feature{background:#262d27}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1200px;margin:0 auto;align-items:center}
+@media(max-width:900px){.feature-grid{grid-template-columns:1fr}}
+.feature-img{aspect-ratio:1;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.feature-img img{width:100%;height:100%;object-fit:cover}
+.feature-text h2{font-family:'Fraunces',serif;font-size:2.4rem;margin-bottom:22px;color:#f0e9dc}
+.feature-text p{color:#bdb6a5;margin-bottom:20px;font-size:1.05rem}
+.services{background:#1f2520}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;max-width:1200px;margin:0 auto}
+.svc{background:#1f2520;padding:38px 30px;border-radius:14px;border:1px solid rgba(220,170,107,.18);transition:transform .3s,border-color .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-5px);border-color:#dcaa6b;box-shadow:0 16px 40px rgba(0,0,0,.18)}
+.svc-icon{font-size:2rem;margin-bottom:18px;display:inline-flex;width:50px;height:50px;align-items:center;justify-content:center;background:rgba(220,170,107,.14);border-radius:12px;color:#dcaa6b}
+.svc h3{font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:10px;color:#dcaa6b}
+.svc p{color:#bdb6a5;font-size:.95rem;line-height:1.65}
+.contact{background:#262d27;text-align:center}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1000px;margin:48px auto 0}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
 .contact-item{padding:32px 20px}
-.contact-item .ic{font-size:1.8rem;color:#d4a548;margin-bottom:12px}
-.contact-item h4{margin-bottom:6px;font-size:1rem}
-.contact-item p,.contact-item a{color:#a8b0a8;text-decoration:none;font-size:.95rem;line-height:1.7}
-.contact-item a:hover{color:#d4a548}
-footer{padding:36px 6%;text-align:center;color:#a8b0a8;font-size:.85rem;border-top:1px solid #d4a54822}
-footer a{color:#d4a548;text-decoration:none}
-@media(max-width:768px){nav ul{display:none}.stats{gap:30px}}
+.contact-item .ic{font-size:1.6rem;color:#dcaa6b;margin-bottom:14px}
+.contact-item h4{margin-bottom:8px;font-size:.95rem;letter-spacing:1px;text-transform:uppercase;color:#f0e9dc}
+.contact-item p,.contact-item a{color:#bdb6a5;text-decoration:none;font-size:.96rem;line-height:1.7}
+.contact-item a:hover{color:#dcaa6b}
+footer{padding:36px 6%;text-align:center;color:#bdb6a5;font-size:.85rem;border-top:1px solid rgba(220,170,107,.18)}
+footer a{color:#dcaa6b;text-decoration:none}
+@media(max-width:768px){nav ul{display:none}.stats{gap:28px}.feature-grid{gap:36px}}
 </style>
 </head>
 <body>
-<div class="alma-bar">✨ Free redesign preview built for Shine in the Heights by Alma Digital Services — <a href="#contact">claim it</a></div>
+<div class="alma-bar">Free redesign preview built for Shine in the Heights by Alma Digital Services — <a href="#contact">claim yours</a></div>
 <nav>
-  <div class="logo">SIT</div>
-  <ul><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Visit</a></li></ul>
+  <div class="logo">SHINE · HTS</div>
+  <ul><li><a href="#services">At the Chair</a></li><li><a href="#about">The Salon</a></li><li><a href="#contact">Visit</a></li></ul>
 </nav>
 <section class="hero">
+  <div class="hero-bg"><img src="https://img.recraft.ai/XG3-BFiuMdNt0Yd0YerqeNVftH4AG6QGd5bJ4E2q9u0/rs:fit:1820:1024:0/raw:1/plain/abs://external/images/0dfa8fe4-48da-433c-a3ed-847afb440714" alt="Bright modern Houston Heights hair salon with sage walls, warm honey-oak floors, single styling chair facing a round arched mirror with vintage brass frame, dried pampas grass in a terracotta vessel" /></div>
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div class="eyebrow">Hair Salon • Houston</div>
-    <h1>Shine in the Heights</h1>
-    <p class="lead">A modern home for Shine in the Heights — built to convert your 1,211 reviewer reputation into bookings every single day.</p>
+    <div class="eyebrow">11th Street · Houston Heights</div>
+    <h1>The Heights' chair for the color that still looks fresh at week six.</h1>
+    <p class="lead">Shine sits one block off Studewood and three blocks from your favorite Heights coffee. The work — balayage that grows out properly, glosses that actually shift the tone, smoothing only when it's right — is what 1,211 reviewers came back to write about.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#contact">Book Your Visit</a>
-      <a class="btn btn-ghost" href="#services">Our Services</a>
+      <a class="btn btn-primary" href="#contact">Book the Chair</a>
+      <a class="btn btn-ghost" href="#services">See the Work</a>
     </div>
-    <div class="stats">
-      <div class="stat"><div class="stat-num">4.9★</div><div class="stat-lbl">Average Rating</div></div>
-      <div class="stat"><div class="stat-num">1,211+</div><div class="stat-lbl">Happy Clients</div></div>
-      <div class="stat"><div class="stat-num">5+</div><div class="stat-lbl">Years in Houston</div></div>
+    <div class="stats"><div class="stat"><div class="stat-num">1,211</div><div class="stat-lbl">Reviews</div></div><div class="stat"><div class="stat-num">4.9★</div><div class="stat-lbl">Google Average</div></div><div class="stat"><div class="stat-num">518</div><div class="stat-lbl">E 11th Street</div></div></div>
+  </div>
+</section>
+<section class="feature" id="about">
+  <div class="feature-grid">
+    <div class="feature-img"><img src="https://img.recraft.ai/pvK_Zt0sTZWWBhFNskR40StVUKaWUC0ea5ypNAXKM6U/rs:fit:1024:1024:0/raw:1/plain/abs://external/images/e2382dd6-4c2b-480e-ba67-781a9b7cad3f" alt="Close-up of freshly styled long wavy hair being lifted by a stylist's hand, showing warm honey highlights against a soft sage background" /></div>
+    <div class="feature-text">
+      <h2>The Heights' best-kept-secret chair, finally with a homepage</h2>
+      <p>Shine opened on 11th Street with two stylists, one chair each, and a referral list that filled the book in six weeks. Three years later, the room is bigger and the conversation is the same: what&#x27;s growing out, what&#x27;s not, and what we&#x27;d actually book next.</p><p>1,211 reviewers wrote about it before this redesign existed. The site is here so the next color client searching at 10pm on a Wednesday finds a chair instead of a sea of competitors.</p>
+      <a class="btn btn-primary" href="#contact" style="margin-top:8px">Book the Chair</a>
     </div>
   </div>
 </section>
 <section class="services" id="services">
-  <div class="section-head"><h2>What We Do</h2><p>Crafted services trusted by thousands across Houston.</p></div>
-  <div class="svc-grid"><div class="svc"><div class="svc-icon">✂️</div><h3>Cuts & Styling</h3><p>Personalized cuts and finishes to suit your hair type and lifestyle.</p></div><div class="svc"><div class="svc-icon">🌈</div><h3>Color & Highlights</h3><p>Balayage, foilage, vivids, and color corrections by master colorists.</p></div><div class="svc"><div class="svc-icon">💆</div><h3>Treatments</h3><p>Olaplex, deep conditioning, gloss, and reparative bonding services.</p></div><div class="svc"><div class="svc-icon">👰</div><h3>Bridal & Events</h3><p>Trial sessions and event-day styling for weddings and special occasions.</p></div><div class="svc"><div class="svc-icon">🌿</div><h3>Extensions</h3><p>Hand-tied wefts, tape-ins, and hot-fusion strands for lasting volume.</p></div><div class="svc"><div class="svc-icon">✨</div><h3>Smoothing & Keratin</h3><p>Frizz-free finishes and long-lasting smoothing treatments.</p></div></div>
-</section>
-<section id="about">
-  <div class="about-grid">
-    <div class="about-text">
-      <h2>Why Houston Trusts Us</h2>
-      <p>With 1,211 verified reviews and a 4.9 star rating, Shine in the Heights has earned a reputation built on consistency, care, and craftsmanship.</p>
-      <p>Every appointment is an opportunity to deliver the kind of experience that turns first-time visitors into lifelong clients — and that promise is at the heart of everything we do.</p>
-      <a class="btn btn-primary" href="#contact" style="margin-top:12px">Plan Your Visit</a>
-    </div>
-    <div class="about-visual">S</div>
-  </div>
+  <div class="section-head"><h2>The chair work</h2><p>Color appointments start with a strand consult. Refer a friend and your next gloss is on us.</p></div>
+  <div class="svc-grid"><div class="svc"><div class="svc-icon">✂️</div><h3>Cuts</h3><p>Personalized cuts shaped to your hair type, growth pattern, and how often you actually style at home.</p></div><div class="svc"><div class="svc-icon">🎨</div><h3>Balayage &amp; Color</h3><p>Hand-painted balayage, foilage, vivids, and full color corrections by master colorists.</p></div><div class="svc"><div class="svc-icon">💧</div><h3>Olaplex &amp; Gloss</h3><p>In-chair Olaplex, deep conditioning, and gloss treatments that keep tone correct between visits.</p></div><div class="svc"><div class="svc-icon">💍</div><h3>Bridal &amp; Events</h3><p>Trial sessions and event-day styling for Heights weddings, brunches, and special occasions.</p></div><div class="svc"><div class="svc-icon">➕</div><h3>Extensions</h3><p>Hand-tied wefts, tape-ins, and hot-fusion strands for lasting length and volume.</p></div><div class="svc"><div class="svc-icon">🌬️</div><h3>Smoothing</h3><p>Frizz-free finishes and long-lasting smoothing treatments — Houston-summer-tested.</p></div></div>
 </section>
 <section class="contact" id="contact">
-  <div class="section-head"><h2>Visit Shine in the Heights</h2><p>We can't wait to take care of you.</p></div>
+  <div class="section-head"><h2>518 East 11th Street</h2><p>Closed Sundays and Mondays. Online booking via the chair you saw last time.</p></div>
   <div class="contact-grid">
-    <div class="contact-item"><div class="ic">📍</div><h4>Find Us</h4><p>518 E 11th St, Houston, TX 77008, USA</p></div>
-    <div class="contact-item"><div class="ic">📞</div><h4>Call</h4><a href="tel:(713) 864-1977">(713) 864-1977</a></div>
+    <div class="contact-item"><div class="ic">📍</div><h4>Address</h4><p>518 E 11th St, Houston, TX 77008</p></div>
+    <div class="contact-item"><div class="ic">📞</div><h4>Phone</h4><a href="tel:(713) 864-1977">(713) 864-1977</a></div>
     <div class="contact-item"><div class="ic">✉️</div><h4>Email</h4><a href="mailto:shineintheheights@gmail.com">shineintheheights@gmail.com</a></div>
   </div>
-  <a class="btn btn-primary" href="tel:(713) 864-1977" style="margin-top:40px">Call to Book</a>
+  <a class="btn btn-primary" href="tel:(713) 864-1977" style="margin-top:44px">Call the Heights</a>
 </section>
 <footer>
-  <p><strong>Shine in the Heights</strong> — Houston • 4.9★ on Google • 1,211 reviews</p>
-  <p style="margin-top:8px;opacity:.7">Preview redesign by <a href="https://almadigitalservices.com" target="_blank">Alma Digital Services</a></p>
+  <p><strong>Shine in the Heights</strong> — Houston, TX • 4.9★ on Google • 1,211 reviews</p>
+  <p style="margin-top:8px;opacity:.72">Preview redesign by <a href="https://almadigitalservices.com" target="_blank" rel="noopener">Alma Digital Services</a></p>
 </footer>
 </body></html>
