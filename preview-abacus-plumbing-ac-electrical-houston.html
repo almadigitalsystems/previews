@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abacus Plumbing, AC &amp; Electrical | 24/7 Houston Home Services</title>
+<meta name="description" content="Houston's trusted plumbing, air conditioning, and electrical experts since 2003. 100+ licensed technicians, BBB A+ rated, available 24/7. Get your free estimate today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@700;800&amp;display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0a1628;--blue:#0077cc;--teal:#00b8d4;--white:#ffffff;--light:#f4f7fa;--gray:#6b7a8d;--dark-text:#1a2332}
+body{font-family:'Inter',sans-serif;color:var(--dark-text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700}
+
+.navbar{position:fixed;top:0;left:0;width:100%;background:rgba(10,22,40,0.97);backdrop-filter:blur(10px);z-index:1000;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:70px;border-bottom:2px solid var(--teal)}
+.navbar .logo{color:var(--white);font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;letter-spacing:-0.5px}
+.navbar .logo span{color:var(--teal)}
+.navbar nav{display:flex;gap:2rem}
+.navbar nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s}
+.navbar nav a:hover{color:var(--teal)}
+.navbar .cta-btn{background:var(--teal);color:var(--navy);padding:0.6rem 1.4rem;border-radius:6px;font-weight:600;font-size:0.85rem;text-decoration:none;transition:all 0.3s;border:none;cursor:pointer}
+.navbar .cta-btn:hover{background:var(--blue);color:var(--white)}
+
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#0d2137 50%,#0a1628 100%);min-height:100vh;display:flex;align-items:center;padding:120px 2rem 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;right:-30%;width:80%;height:200%;background:radial-gradient(circle,rgba(0,184,212,0.08) 0%,transparent 60%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:120px;background:linear-gradient(to top,var(--light),transparent)}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.hero-text h1{font-size:3.2rem;color:var(--white);line-height:1.15;margin-bottom:1.2rem}
+.hero-text h1 .highlight{color:var(--teal);display:inline}
+.hero-text p{color:rgba(255,255,255,0.75);font-size:1.15rem;margin-bottom:2rem;max-width:520px}
+.hero-cta{display:inline-flex;align-items:center;gap:0.6rem;background:var(--teal);color:var(--navy);padding:1rem 2.2rem;border-radius:8px;font-weight:700;font-size:1.05rem;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(0,184,212,0.3)}
+.hero-cta:hover{background:var(--blue);color:var(--white);transform:translateY(-2px);box-shadow:0 6px 30px rgba(0,119,204,0.4)}
+.hero-visual{display:flex;flex-direction:column;gap:1rem}
+.stat-card{background:rgba(255,255,255,0.06);border:1px solid rgba(0,184,212,0.2);border-radius:12px;padding:1.5rem;backdrop-filter:blur(5px)}
+.stat-card .number{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--teal)}
+.stat-card .label{color:rgba(255,255,255,0.7);font-size:0.9rem;margin-top:0.3rem}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+.badge-bar{background:var(--light);padding:2rem 2rem;border-bottom:1px solid #e2e8f0}
+.badge-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
+.badge-item{display:flex;align-items:center;gap:0.6rem;color:var(--gray);font-size:0.9rem;font-weight:500}
+.badge-icon{width:28px;height:28px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:0.8rem;font-weight:700}
+
+.services{padding:5rem 2rem;background:var(--white)}
+.section-header{text-align:center;max-width:700px;margin:0 auto 3.5rem}
+.section-header h2{font-size:2.4rem;color:var(--navy);margin-bottom:0.8rem}
+.section-header p{color:var(--gray);font-size:1.05rem}
+.services-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+.service-card{background:var(--light);border-radius:14px;padding:2.2rem;transition:all 0.3s;border:2px solid transparent;position:relative;overflow:hidden}
+.service-card:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,119,204,0.1)}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--teal),var(--blue));opacity:0;transition:opacity 0.3s}
+.service-card:hover::before{opacity:1}
+.service-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--blue));display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;font-size:1.5rem}
+.service-card h3{font-family:'Inter',sans-serif;font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:0.6rem}
+.service-card p{color:var(--gray);font-size:0.92rem;line-height:1.65}
+
+.about{background:var(--navy);padding:5rem 2rem;color:var(--white)}
+.about-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-text h2{font-size:2.2rem;margin-bottom:1.2rem;color:var(--white)}
+.about-text h2 span{color:var(--teal)}
+.about-text p{color:rgba(255,255,255,0.72);font-size:1rem;line-height:1.75;margin-bottom:1.5rem}
+.about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.about-highlights .item{background:rgba(255,255,255,0.05);border:1px solid rgba(0,184,212,0.15);border-radius:10px;padding:1.2rem;text-align:center}
+.about-highlights .item .val{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--teal);font-weight:800}
+.about-highlights .item .desc{color:rgba(255,255,255,0.6);font-size:0.82rem;margin-top:0.3rem}
+
+.testimonials{background:var(--light);padding:5rem 2rem}
+.testimonials-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+.testimonial-card{background:var(--white);border-radius:14px;padding:2rem;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+.stars{color:#f5a623;font-size:1.1rem;margin-bottom:0.8rem;letter-spacing:2px}
+.testimonial-card p{color:var(--dark-text);font-size:0.95rem;font-style:italic;line-height:1.65;margin-bottom:1rem}
+.testimonial-card .author{font-weight:600;color:var(--navy);font-size:0.88rem}
+.testimonial-card .author span{color:var(--gray);font-weight:400}
+
+.cta-section{background:linear-gradient(135deg,var(--navy),#0d2137);padding:5rem 2rem;text-align:center}
+.cta-section h2{font-size:2.4rem;color:var(--white);margin-bottom:1rem}
+.cta-section p{color:rgba(255,255,255,0.7);font-size:1.1rem;max-width:600px;margin:0 auto 2rem}
+.cta-section .hero-cta{font-size:1.1rem;padding:1.1rem 2.5rem}
+
+.contact{background:var(--white);padding:5rem 2rem}
+.contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact-info h2{font-size:2rem;color:var(--navy);margin-bottom:1.2rem}
+.contact-info p{color:var(--gray);margin-bottom:1.5rem;font-size:1rem}
+.contact-detail{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.contact-detail .icon{width:42px;height:42px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--teal)}
+.contact-detail .text{font-size:0.95rem;color:var(--dark-text)}
+.contact-detail .text strong{display:block;font-size:0.82rem;color:var(--gray);font-weight:500;text-transform:uppercase;letter-spacing:0.5px}
+.contact-form{background:var(--light);border-radius:14px;padding:2.5rem}
+.contact-form h3{font-family:'Inter',sans-serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem}
+.form-group{margin-bottom:1.2rem}
+.form-group input,.form-group textarea{width:100%;padding:0.85rem 1rem;border:1px solid #d1d9e6;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.95rem;background:var(--white);transition:border 0.3s}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--teal)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-submit{background:var(--teal);color:var(--navy);padding:0.9rem 2rem;border:none;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;width:100%;transition:all 0.3s;font-family:'Inter',sans-serif}
+.form-submit:hover{background:var(--blue);color:var(--white)}
+
+.footer{background:var(--navy);padding:3rem 2rem;border-top:2px solid var(--teal)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-left{color:rgba(255,255,255,0.5);font-size:0.85rem}
+.footer-left strong{color:var(--white)}
+.footer-right{display:flex;gap:2rem}
+.footer-right a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.85rem;transition:color 0.3s}
+.footer-right a:hover{color:var(--teal)}
+
+@media(max-width:900px){
+.hero-inner{grid-template-columns:1fr;text-align:center}
+.hero-text h1{font-size:2.4rem}
+.hero-text p{margin:0 auto 2rem}
+.hero-visual{margin-top:2rem}
+.services-grid{grid-template-columns:1fr 1fr}
+.about-inner{grid-template-columns:1fr}
+.testimonials-grid{grid-template-columns:1fr}
+.contact-inner{grid-template-columns:1fr}
+.navbar nav{display:none}
+}
+@media(max-width:600px){
+.hero-text h1{font-size:1.9rem}
+.services-grid{grid-template-columns:1fr}
+.stats-grid{grid-template-columns:1fr 1fr}
+.section-header h2{font-size:1.8rem}
+}
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Abacus <span>Plumbing, AC &amp; Electrical</span></div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="cta-btn">Get Free Estimate</a>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Houston&#8217;s Most Trusted Home Service Experts <span class="highlight">&#8212; Since 2003</span></h1>
+      <p>Plumbing, air conditioning, and electrical solutions backed by 20+ years of experience, 24/7 availability, and a team of 100+ licensed professionals.</p>
+      <a href="#contact" class="hero-cta">Get Your Free Estimate &#8594;</a>
+    </div>
+    <div class="hero-visual">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="number">20+</div>
+          <div class="label">Years Serving Houston</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">100+</div>
+          <div class="label">Licensed Technicians</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">24/7</div>
+          <div class="label">Emergency Service</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">A+</div>
+          <div class="label">BBB Accredited</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="badge-bar">
+  <div class="badge-inner">
+    <div class="badge-item"><div class="badge-icon">&#10003;</div> BBB A+ Accredited</div>
+    <div class="badge-item"><div class="badge-icon">&#9733;</div> Angie&#8217;s List Super Service Award</div>
+    <div class="badge-item"><div class="badge-icon">&#128274;</div> Background-Checked Technicians</div>
+    <div class="badge-item"><div class="badge-icon">&#9201;</div> Available 24/7/365</div>
+  </div>
+</div>
+
+<section id="services" class="services">
+  <div class="section-header">
+    <h2>Complete Home Services Under One Roof</h2>
+    <p>From plumbing emergencies to full HVAC installations and electrical upgrades &#8212; one call covers it all.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">&#128167;</div>
+      <h3>Plumbing Services</h3>
+      <p>From emergency leak repairs to full re-piping &#8212; fast, reliable plumbing that protects your home and your peace of mind.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#10052;</div>
+      <h3>Air Conditioning &amp; Heating</h3>
+      <p>Keep your Houston home comfortable year-round with expert AC installation, repair, and maintenance from certified HVAC technicians.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#9889;</div>
+      <h3>Electrical Services</h3>
+      <p>Safe, code-compliant electrical work &#8212; from panel upgrades and rewiring to lighting installation and whole-home surge protection.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#128293;</div>
+      <h3>Water Heater Services</h3>
+      <p>Gas or electric, tank or tankless &#8212; get hot water back fast with same-day water heater repair and replacement.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#127754;</div>
+      <h3>Drain &amp; Sewer Services</h3>
+      <p>Clogged drains, slab leaks, and hydro jetting handled quickly by licensed plumbers with advanced diagnostic tools.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#128640;</div>
+      <h3>Same-Day Service</h3>
+      <p>When your home needs help now, Abacus is there. Emergency plumbing, AC, and electrical service available around the clock.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <h2>Serving Houston Families <span>Since 2003</span></h2>
+      <p>Abacus Plumbing, Air Conditioning, &amp; Electrical has been serving Houston homeowners since 2003. With over 100 licensed, background-checked, and drug-screened technicians, Abacus delivers reliable plumbing, HVAC, and electrical services around the clock.</p>
+      <p>A multi-year Angie&#8217;s List Super Service Award winner and BBB A+ accredited business, Abacus has earned the trust of thousands of Houston families across Houston, Sugar Land, and Austin.</p>
+    </div>
+    <div class="about-highlights">
+      <div class="item"><div class="val">20+</div><div class="desc">Years in Business</div></div>
+      <div class="item"><div class="val">100+</div><div class="desc">Licensed Techs</div></div>
+      <div class="item"><div class="val">A+</div><div class="desc">BBB Rating</div></div>
+      <div class="item"><div class="val">3</div><div class="desc">Metro Areas Served</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+  <div class="section-header">
+    <h2>What Houston Homeowners Say</h2>
+    <p>Thousands of families trust Abacus for their home service needs.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>&#8220;Abacus came out the same day our AC went down in July. The technician was professional, explained everything, and had it running in under two hours. Lifesavers!&#8221;</p>
+      <div class="author">Sarah M. <span>&#8212; Houston, TX</span></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>&#8220;We&#8217;ve used Abacus for plumbing and electrical work. Always on time, always fair pricing, and their technicians are incredibly knowledgeable. Highly recommend.&#8221;</p>
+      <div class="author">James R. <span>&#8212; Sugar Land, TX</span></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>&#8220;Had a pipe burst at 2am and Abacus was here within the hour. They fixed the issue quickly and even helped with the water cleanup. Can&#8217;t thank them enough.&#8221;</p>
+      <div class="author">Maria L. <span>&#8212; Houston, TX</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Get Your Free Estimate &#8212; Call Abacus 24/7</h2>
+  <p>Whether it&#8217;s a plumbing emergency, AC breakdown, or electrical issue &#8212; Houston&#8217;s most trusted team is ready to help.</p>
+  <a href="#contact" class="hero-cta">Request Your Free Estimate &#8594;</a>
+</section>
+
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>Ready to schedule service or get a free estimate? Contact Abacus today &#8212; we&#8217;re available 24 hours a day, 7 days a week.</p>
+      <div class="contact-detail">
+        <div class="icon">&#128205;</div>
+        <div class="text"><strong>Location</strong>Houston, TX &amp; Surrounding Areas</div>
+      </div>
+      <div class="contact-detail">
+        <div class="icon">&#128231;</div>
+        <div class="text"><strong>Email</strong>customerservice@abacusplumbing.net</div>
+      </div>
+      <div class="contact-detail">
+        <div class="icon">&#9201;</div>
+        <div class="text"><strong>Hours</strong>24/7 Emergency Service Available</div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Request a Free Estimate</h3>
+      <form action="https://formspree.io/f/xojppajv" method="POST">
+        <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+        <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
+        <div class="form-group"><input type="tel" name="phone" placeholder="Your Phone Number"></div>
+        <div class="form-group"><textarea name="message" placeholder="Describe the service you need..." required></textarea></div>
+        <input type="hidden" name="_subject" value="New Estimate Request - Abacus Plumbing Preview">
+        <button type="submit" class="form-submit">Send Request &#8594;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left"><strong>Abacus Plumbing, AC &amp; Electrical</strong> &#8212; Houston, TX | Serving Houston, Sugar Land &amp; Austin</div>
+    <div class="footer-right">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
