@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air Tech of Houston AC &amp; Plumbing | HVAC, Plumbing &amp; Electrical Services in Houston, TX</title>
+<meta name="description" content="Family-owned since 1985. Air Tech of Houston provides 24/7 AC repair, heating, plumbing, and electrical services across the Houston metro. 100+ five-star reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@700;800&amp;display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#1b3a5c;--accent:#2196f3;--warm:#e8f4fd;--white:#ffffff;--light:#f7f9fc;--gray:#7a8a9c;--dark:#162b44;--gold:#f5a623}
+body{font-family:'Inter',sans-serif;color:#2d3748;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700}
+
+/* Navbar */
+.nav{background:var(--white);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:fixed;top:0;width:100%;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,0.06)}
+.nav .brand{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:var(--primary)}
+.nav .brand span{color:var(--accent)}
+.nav-links{display:flex;gap:1.8rem;align-items:center}
+.nav-links a{text-decoration:none;color:var(--gray);font-size:0.9rem;font-weight:500;transition:color 0.3s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:var(--white);padding:0.55rem 1.3rem;border-radius:6px;font-weight:600;font-size:0.85rem;text-decoration:none;transition:all 0.3s}
+.nav-cta:hover{background:var(--primary)}
+
+/* Split Hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;margin-top:60px}
+.hero-left{background:var(--warm);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center}
+.hero-left h1{font-size:2.8rem;color:var(--primary);line-height:1.18;margin-bottom:1.2rem}
+.hero-left h1 span{color:var(--accent)}
+.hero-left p{color:var(--gray);font-size:1.1rem;margin-bottom:2rem;max-width:480px}
+.hero-btn{display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent);color:var(--white);padding:1rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 16px rgba(33,150,243,0.25)}
+.hero-btn:hover{background:var(--primary);transform:translateY(-2px)}
+.hero-right{background:linear-gradient(135deg,var(--primary),var(--dark));display:flex;flex-direction:column;justify-content:center;align-items:center;padding:3rem;gap:2rem}
+.hero-stat{text-align:center}
+.hero-stat .num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:800;color:var(--accent)}
+.hero-stat .txt{color:rgba(255,255,255,0.75);font-size:0.95rem;margin-top:0.3rem}
+.trust-row{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+.trust-badge{background:rgba(255,255,255,0.08);border:1px solid rgba(33,150,243,0.2);border-radius:8px;padding:0.8rem 1.2rem;color:rgba(255,255,255,0.8);font-size:0.82rem;font-weight:500}
+
+/* Services as Horizontal Cards */
+.services{padding:5rem 2rem;background:var(--white)}
+.section-title{text-align:center;margin-bottom:3rem}
+.section-title h2{font-size:2.2rem;color:var(--primary);margin-bottom:0.6rem}
+.section-title p{color:var(--gray);font-size:1rem;max-width:550px;margin:0 auto}
+.service-list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:1.2rem}
+.h-card{display:flex;align-items:flex-start;gap:1.5rem;background:var(--light);border-radius:12px;padding:1.8rem 2rem;transition:all 0.3s;border-left:4px solid transparent}
+.h-card:hover{border-left-color:var(--accent);box-shadow:0 4px 20px rgba(0,0,0,0.05);transform:translateX(4px)}
+.h-card .icon{flex-shrink:0;width:48px;height:48px;background:linear-gradient(135deg,var(--accent),#1976d2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--white)}
+.h-card .content h3{font-family:'Inter',sans-serif;font-weight:700;font-size:1.1rem;color:var(--primary);margin-bottom:0.4rem}
+.h-card .content p{color:var(--gray);font-size:0.9rem;line-height:1.6}
+
+/* About */
+.about{padding:5rem 2rem;background:var(--warm)}
+.about-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-text h2{font-size:2rem;color:var(--primary);margin-bottom:1rem}
+.about-text h2 span{color:var(--accent)}
+.about-text p{color:var(--gray);font-size:0.95rem;line-height:1.75;margin-bottom:1rem}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.a-stat{background:var(--white);border-radius:10px;padding:1.5rem;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.04)}
+.a-stat .v{font-family:'Playfair Display',serif;font-size:2rem;color:var(--accent);font-weight:800}
+.a-stat .l{color:var(--gray);font-size:0.8rem;margin-top:0.2rem}
+
+/* Reviews */
+.reviews{padding:5rem 2rem;background:var(--white)}
+.reviews-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review{background:var(--light);border-radius:12px;padding:1.8rem;position:relative}
+.review::before{content:'"';font-family:'Playfair Display',serif;font-size:4rem;color:var(--accent);opacity:0.15;position:absolute;top:0.5rem;right:1rem;line-height:1}
+.review .stars{color:var(--gold);margin-bottom:0.6rem;font-size:1rem}
+.review p{font-size:0.9rem;color:#4a5568;font-style:italic;line-height:1.6;margin-bottom:0.8rem}
+.review .name{font-weight:600;color:var(--primary);font-size:0.85rem}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--primary),var(--dark));padding:4.5rem 2rem;text-align:center}
+.cta h2{color:var(--white);font-size:2.2rem;margin-bottom:0.8rem}
+.cta p{color:rgba(255,255,255,0.7);font-size:1.05rem;max-width:500px;margin:0 auto 1.8rem}
+
+/* Contact */
+.contact{padding:5rem 2rem;background:var(--light)}
+.contact-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact-info h2{font-size:1.8rem;color:var(--primary);margin-bottom:1rem}
+.contact-info p{color:var(--gray);margin-bottom:1.5rem}
+.c-item{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem}
+.c-icon{width:38px;height:38px;background:var(--warm);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1rem}
+.c-text{font-size:0.92rem;color:#2d3748}
+.c-text strong{display:block;font-size:0.78rem;color:var(--gray);text-transform:uppercase;letter-spacing:0.5px;font-weight:500}
+.form-card{background:var(--white);border-radius:14px;padding:2.5rem;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+.form-card h3{font-family:'Inter',sans-serif;font-size:1.15rem;font-weight:700;color:var(--primary);margin-bottom:1.5rem}
+.fg{margin-bottom:1rem}
+.fg input,.fg textarea{width:100%;padding:0.8rem 1rem;border:1px solid #d1dce8;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.92rem;transition:border 0.3s}
+.fg input:focus,.fg textarea:focus{outline:none;border-color:var(--accent)}
+.fg textarea{resize:vertical;min-height:90px}
+.f-btn{background:var(--accent);color:var(--white);padding:0.85rem 2rem;border:none;border-radius:8px;font-weight:700;font-size:0.95rem;cursor:pointer;width:100%;transition:all 0.3s;font-family:'Inter',sans-serif}
+.f-btn:hover{background:var(--primary)}
+
+/* Footer */
+.footer{background:var(--primary);padding:2.5rem 2rem}
+.footer-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-inner .left{color:rgba(255,255,255,0.5);font-size:0.82rem}
+.footer-inner .left strong{color:var(--white)}
+.footer-inner .right a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.82rem;margin-left:1.5rem;transition:color 0.3s}
+.footer-inner .right a:hover{color:var(--accent)}
+
+@media(max-width:900px){
+.hero{grid-template-columns:1fr}
+.hero-left{padding:4rem 2rem}
+.hero-left h1{font-size:2.2rem}
+.hero-right{padding:2.5rem 2rem}
+.about-grid{grid-template-columns:1fr}
+.reviews-grid{grid-template-columns:1fr}
+.contact-wrap{grid-template-columns:1fr}
+.nav-links{display:none}
+}
+@media(max-width:600px){
+.hero-left h1{font-size:1.8rem}
+.hero-left{padding:3rem 1.5rem}
+.about-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">Air Tech <span>of Houston</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Free Estimate</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-left">
+    <h1>Houston&#8217;s Trusted HVAC &amp; Plumbing Experts &#8212; <span>Now With a Website That Matches Your Reputation</span></h1>
+    <p>Since 1985, Air Tech of Houston has kept families comfortable with reliable AC, heating, plumbing, and electrical services. Your new website makes it even easier for Houston homeowners to find you and book service.</p>
+    <a href="#contact" class="hero-btn">Get a Free Estimate &#8594;</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stat"><div class="num">40+</div><div class="txt">Years Serving Houston</div></div>
+    <div class="hero-stat"><div class="num">100+</div><div class="txt">Five-Star Reviews</div></div>
+    <div class="trust-row">
+      <div class="trust-badge">&#10003; Family-Owned</div>
+      <div class="trust-badge">&#10003; Licensed &amp; Insured</div>
+      <div class="trust-badge">&#10003; Honest Pricing</div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="section-title">
+    <h2>Full-Service Home Comfort &amp; Repair</h2>
+    <p>Everything your home needs &#8212; HVAC, plumbing, electrical, and generators &#8212; all from one trusted team.</p>
+  </div>
+  <div class="service-list">
+    <div class="h-card">
+      <div class="icon">&#10052;</div>
+      <div class="content">
+        <h3>Air Conditioning Repair &amp; Installation</h3>
+        <p>Fast, reliable AC service when Houston heat won&#8217;t wait. From emergency repairs to full system installs, Air Tech keeps your home cool year-round.</p>
+      </div>
+    </div>
+    <div class="h-card">
+      <div class="icon">&#128293;</div>
+      <div class="content">
+        <h3>Heating Repair &amp; Installation</h3>
+        <p>Furnace acting up? Air Tech&#8217;s certified technicians diagnose and fix heating problems quickly &#8212; so your family stays warm all winter.</p>
+      </div>
+    </div>
+    <div class="h-card">
+      <div class="icon">&#128167;</div>
+      <div class="content">
+        <h3>Plumbing Services</h3>
+        <p>Leaky pipes, water heater issues, or full plumbing installs &#8212; Air Tech handles it all with the same professionalism Houston has trusted for 40 years.</p>
+      </div>
+    </div>
+    <div class="h-card">
+      <div class="icon">&#9889;</div>
+      <div class="content">
+        <h3>Electrical Services</h3>
+        <p>From panel upgrades to outlet repairs, Air Tech&#8217;s licensed electricians deliver safe, code-compliant work every time.</p>
+      </div>
+    </div>
+    <div class="h-card">
+      <div class="icon">&#9889;</div>
+      <div class="content">
+        <h3>Generator Installation &amp; Maintenance</h3>
+        <p>Never lose power again. Air Tech installs and maintains whole-home generators so your family is protected during Houston storms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Family-Owned, <span>Houston-Trusted</span></h2>
+      <p>Air Tech of Houston AC &amp; Plumbing is a family-owned business that has served the Houston metro area since 1985. With over 40 years of experience and 100+ five-star reviews, they&#8217;ve built a reputation for honest pricing, prompt service, and treating every home like their own.</p>
+      <p>From Katy to The Woodlands, Humble to Pasadena &#8212; Air Tech is Houston&#8217;s go-to for HVAC, plumbing, and electrical.</p>
+    </div>
+    <div class="about-stats">
+      <div class="a-stat"><div class="v">40+</div><div class="l">Years Experience</div></div>
+      <div class="a-stat"><div class="v">100+</div><div class="l">5-Star Reviews</div></div>
+      <div class="a-stat"><div class="v">5</div><div class="l">Service Areas</div></div>
+      <div class="a-stat"><div class="v">24/7</div><div class="l">Service Available</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="section-title">
+    <h2>What Houston Families Say</h2>
+    <p>Over 100 five-star reviews from homeowners across the metro.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>&#8220;Air Tech replaced our entire AC system and the price was incredibly fair. The crew was professional, clean, and finished the same day. Best HVAC company in Houston!&#8221;</p>
+      <div class="name">David K. &#8212; Katy, TX</div>
+    </div>
+    <div class="review">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>&#8220;Called them for a plumbing emergency on a Sunday and they showed up within the hour. Fixed the leak fast and didn&#8217;t charge extra for the weekend visit. Honest people.&#8221;</p>
+      <div class="name">Linda T. &#8212; The Woodlands, TX</div>
+    </div>
+    <div class="review">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>&#8220;We&#8217;ve been using Air Tech for over 10 years. They handle our AC maintenance, plumbing, and recently installed a whole-home generator. Wouldn&#8217;t trust anyone else.&#8221;</p>
+      <div class="name">Roberto P. &#8212; Pasadena, TX</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Get a Free Estimate from Air Tech Today</h2>
+  <p>Houston&#8217;s trusted home service experts since 1985. Call or fill out the form below to schedule your free consultation.</p>
+  <a href="#contact" class="hero-btn">Request Your Free Estimate &#8594;</a>
+</section>
+
+<section id="contact" class="contact">
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <h2>Contact Air Tech</h2>
+      <p>Ready for reliable service? Reach out today and let Air Tech take care of your home.</p>
+      <div class="c-item">
+        <div class="c-icon">&#128205;</div>
+        <div class="c-text"><strong>Service Area</strong>Houston, Katy, The Woodlands, Humble, Pasadena</div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">&#128231;</div>
+        <div class="c-text"><strong>Email</strong>service@airtechofhouston.com</div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">&#9201;</div>
+        <div class="c-text"><strong>Availability</strong>24/7 Emergency Service</div>
+      </div>
+    </div>
+    <div class="form-card">
+      <h3>Request a Free Estimate</h3>
+      <form action="https://formspree.io/f/xojppajv" method="POST">
+        <div class="fg"><input type="text" name="name" placeholder="Your Name" required></div>
+        <div class="fg"><input type="email" name="email" placeholder="Your Email" required></div>
+        <div class="fg"><input type="tel" name="phone" placeholder="Phone Number"></div>
+        <div class="fg"><textarea name="message" placeholder="How can Air Tech help?" required></textarea></div>
+        <input type="hidden" name="_subject" value="New Estimate Request - Air Tech of Houston Preview">
+        <button type="submit" class="f-btn">Send Request &#8594;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="left"><strong>Air Tech of Houston AC &amp; Plumbing</strong> &#8212; Serving the Houston Metro Since 1985</div>
+    <div class="right">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
