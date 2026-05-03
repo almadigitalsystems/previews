@@ -4,107 +4,116 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>SALON Per Se — Houston</title>
-<meta name="description" content="SALON Per Se — modern hair salon in Houston." />
+<meta name="description" content="SALON Per Se — Houston's destination for premium color, extensions, and event-day styling. Matte black walls, brushed gold fixtures, master colorists." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fafafa;line-height:1.6}
-.alma-bar{position:fixed;top:0;left:0;right:0;background:#d48a98;color:#fff;padding:9px 20px;font-size:13px;text-align:center;z-index:1000;font-weight:500}
-.alma-bar a{color:#fff;text-decoration:underline;font-weight:700;margin-left:6px}
-nav{position:fixed;top:34px;left:0;right:0;padding:18px 6%;background:#0a0a0acc;backdrop-filter:blur(14px);z-index:999;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e8a4b022}
-.logo{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:#e8a4b0}
-nav ul{display:flex;gap:30px;list-style:none}
-nav a{color:#fafafa;text-decoration:none;font-size:.92rem;font-weight:500;transition:color .2s}
-nav a:hover{color:#e8a4b0}
-nav .nav-cta{background:#e8a4b0;color:#fff;padding:10px 22px;border-radius:50px;font-size:.9rem}
-nav .nav-cta:hover{background:#d48a98;color:#fff}
-.hero{min-height:100vh;display:flex;align-items:center;padding:120px 6% 80px;background:radial-gradient(circle at 30% 20%,#1a1a1a 0%,#0a0a0a 70%);position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;max-width:1300px;margin:0 auto;width:100%;position:relative;z-index:2}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
-.tag{display:inline-block;background:#e8a4b022;color:#e8a4b0;padding:8px 18px;border-radius:50px;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
-h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.6rem,6vw,5rem);line-height:1.05;margin-bottom:24px;font-weight:700;letter-spacing:-2px}
-h1 .accent{color:#e8a4b0}
-.hero p.lead{font-size:1.15rem;color:#a8a0a4;margin-bottom:36px;max-width:540px}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
-.btn{padding:14px 30px;font-size:.95rem;font-weight:600;text-decoration:none;border-radius:50px;transition:all .25s;display:inline-block}
-.btn-primary{background:#e8a4b0;color:#fff}
-.btn-primary:hover{background:#d48a98;transform:translateY(-2px);box-shadow:0 8px 24px #e8a4b055}
-.btn-ghost{background:transparent;color:#fafafa;border:1.5px solid #e8a4b055}
-.btn-ghost:hover{border-color:#e8a4b0;color:#e8a4b0}
-.hero-stats{display:flex;gap:48px;flex-wrap:wrap}
-.hero-stats .stat .num{font-family:'Space Grotesk',sans-serif;font-size:2.2rem;font-weight:700;color:#e8a4b0;line-height:1}
-.hero-stats .stat .lbl{font-size:.82rem;color:#a8a0a4;margin-top:4px;text-transform:uppercase;letter-spacing:1.5px}
-.hero-visual{aspect-ratio:1;background:linear-gradient(135deg,#e8a4b0 0%,#d48a98 100%);border-radius:32px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:8rem;font-weight:700;position:relative;overflow:hidden}
-.hero-visual::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,255,255,.2),transparent 60%)}
-section{padding:100px 6%}
-.alt{background:#1a1a1a}
-.section-head{text-align:center;max-width:680px;margin:0 auto 60px}
-.section-head .lbl{display:inline-block;background:#e8a4b022;color:#e8a4b0;padding:6px 16px;border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
-.section-head h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3.2rem);margin-bottom:16px;letter-spacing:-1px}
-.section-head p{color:#a8a0a4;font-size:1.05rem}
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;max-width:1300px;margin:0 auto}
-.svc{padding:40px 32px;border-radius:24px;background:#0a0a0a;border:1px solid #e8a4b022;transition:all .3s}
-.alt .svc{background:#1a1a1a;border-color:#e8a4b033}
-.svc:hover{transform:translateY(-6px);border-color:#e8a4b0;box-shadow:0 16px 40px #e8a4b022}
-.svc-glyph{width:56px;height:56px;background:#e8a4b022;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:20px;color:#e8a4b0}
-.svc h3{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;margin-bottom:10px;font-weight:600}
-.svc p{color:#a8a0a4;font-size:.95rem}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
+body{font-family:'Inter',sans-serif;background:#0d0d0d;color:#f5e9e6;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit}
+.alma-bar{position:fixed;top:0;left:0;right:0;background:#0a0a14;color:#fff;padding:9px 20px;font-size:13px;text-align:center;z-index:1000;border-bottom:1px solid rgba(255,255,255,.12)}
+.alma-bar a{color:#e8b8b8;text-decoration:none;font-weight:600;margin-left:8px}
+nav{position:fixed;top:34px;left:0;right:0;padding:18px 6%;background:rgba(0,0,0,.45);backdrop-filter:blur(14px);z-index:999;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Italiana',serif;font-size:1.5rem;font-weight:700;color:#e8b8b8;letter-spacing:1.5px}
+nav ul{display:flex;gap:32px;list-style:none}
+nav a{color:#f5e9e6;text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+nav a:hover{color:#e8b8b8}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:160px 6% 80px;overflow:hidden;background:#0d0d0d}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.65}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(115deg,rgba(13,13,13,.90) 0%,rgba(13,13,13,.45) 55%,rgba(13,13,13,.10) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:780px}
+.eyebrow{color:#e8b8b8;font-size:.85rem;letter-spacing:3.5px;text-transform:uppercase;margin-bottom:24px;font-weight:700}
+h1{font-family:'Italiana',serif;font-size:clamp(2.6rem,6.5vw,5.2rem);line-height:1.05;margin-bottom:28px;font-weight:700;color:#f5e9e6}
+.hero p.lead{font-size:1.2rem;color:#dcc9c5;max-width:620px;margin:0 0 36px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+.btn{padding:16px 36px;font-size:1rem;font-weight:600;text-decoration:none;border-radius:50px;transition:all .25s;display:inline-block;letter-spacing:.5px}
+.btn-primary{background:#e8b8b8;color:#0d0d0d;box-shadow:0 6px 20px rgba(232,184,184,.4)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(232,184,184,.4)}
+.btn-ghost{background:transparent;color:#f5e9e6;border:2px solid rgba(245,233,230,.22)}
+.btn-ghost:hover{border-color:#e8b8b8;color:#e8b8b8}
+.stats{display:flex;gap:50px;margin-top:64px;flex-wrap:wrap}
+.stat-num{font-family:'Italiana',serif;font-size:2.4rem;font-weight:700;color:#e8b8b8}
+.stat-lbl{font-size:.78rem;color:#bfb1ae;text-transform:uppercase;letter-spacing:1.8px;margin-top:6px}
+section{padding:110px 6%}
+.section-head{text-align:center;max-width:720px;margin:0 auto 64px}
+.section-head h2{font-family:'Italiana',serif;font-size:clamp(2rem,4vw,3rem);margin-bottom:18px;color:#f5e9e6}
+.section-head p{color:#bfb1ae;font-size:1.1rem}
+.feature{background:#161313}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1200px;margin:0 auto;align-items:center}
+@media(max-width:900px){.feature-grid{grid-template-columns:1fr}}
+.feature-img{aspect-ratio:1;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.feature-img img{width:100%;height:100%;object-fit:cover}
+.feature-text h2{font-family:'Italiana',serif;font-size:2.4rem;margin-bottom:22px;color:#f5e9e6}
+.feature-text p{color:#bfb1ae;margin-bottom:20px;font-size:1.05rem}
+.services{background:#0d0d0d}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;max-width:1200px;margin:0 auto}
+.svc{background:#0d0d0d;padding:38px 30px;border-radius:14px;border:1px solid rgba(232,184,184,.18);transition:transform .3s,border-color .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-5px);border-color:#e8b8b8;box-shadow:0 16px 40px rgba(0,0,0,.18)}
+.svc-icon{font-size:2rem;margin-bottom:18px;display:inline-flex;width:50px;height:50px;align-items:center;justify-content:center;background:rgba(232,184,184,.14);border-radius:12px;color:#e8b8b8}
+.svc h3{font-family:'Italiana',serif;font-size:1.3rem;margin-bottom:10px;color:#e8b8b8}
+.svc p{color:#bfb1ae;font-size:.95rem;line-height:1.65}
+.contact{background:#161313;text-align:center}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1000px;margin:48px auto 0}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
-.contact-item{padding:36px 28px;background:#0a0a0a;border-radius:20px;border:1px solid #e8a4b022;text-align:center}
-.alt .contact-item{background:#1a1a1a}
-.contact-item .ic{font-size:1.8rem;color:#e8a4b0;margin-bottom:12px}
-.contact-item h4{font-family:'Space Grotesk',sans-serif;margin-bottom:8px;font-weight:600}
-.contact-item a,.contact-item p{color:#a8a0a4;text-decoration:none;font-size:.95rem}
-.contact-item a:hover{color:#e8a4b0}
-footer{padding:36px 6%;text-align:center;color:#a8a0a4;font-size:.85rem;border-top:1px solid #e8a4b022}
-footer a{color:#e8a4b0;text-decoration:none}
-@media(max-width:768px){nav ul{display:none}.nav-cta{display:inline-flex !important}}
+.contact-item{padding:32px 20px}
+.contact-item .ic{font-size:1.6rem;color:#e8b8b8;margin-bottom:14px}
+.contact-item h4{margin-bottom:8px;font-size:.95rem;letter-spacing:1px;text-transform:uppercase;color:#f5e9e6}
+.contact-item p,.contact-item a{color:#bfb1ae;text-decoration:none;font-size:.96rem;line-height:1.7}
+.contact-item a:hover{color:#e8b8b8}
+footer{padding:36px 6%;text-align:center;color:#bfb1ae;font-size:.85rem;border-top:1px solid rgba(232,184,184,.18)}
+footer a{color:#e8b8b8;text-decoration:none}
+@media(max-width:768px){nav ul{display:none}.stats{gap:28px}.feature-grid{gap:36px}}
 </style>
 </head>
 <body>
-<div class="alma-bar">💎 Free redesign preview for SALON Per Se — <a href="#contact">claim it</a></div>
+<div class="alma-bar">Free redesign preview built for SALON Per Se by Alma Digital Services — <a href="#contact">claim yours</a></div>
 <nav>
-  <div class="logo">SALON</div>
-  <ul><li><a href="#services">Services</a></li><li><a href="#contact">Visit</a></li><li><a class="nav-cta" href="#contact">Book</a></li></ul>
+  <div class="logo">PER SE</div>
+  <ul><li><a href="#services">Services</a></li><li><a href="#about">The Salon</a></li><li><a href="#contact">Reserve</a></li></ul>
 </nav>
 <section class="hero">
-  <div class="hero-grid">
-    <div>
-      <span class="tag">Hair Salon • Houston</span>
-      <h1>SALON <span class="accent">Per Se</span></h1>
-      <p class="lead">A modern home for SALON Per Se — designed to convert your reputation into bookings every single day.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">Book Now</a>
-        <a class="btn btn-ghost" href="#services">Our Services</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><div class="num">4.9★</div><div class="lbl">Rating</div></div>
-        <div class="stat"><div class="num">1,116+</div><div class="lbl">Reviews</div></div>
-        <div class="stat"><div class="num">Houston</div><div class="lbl">Location</div></div>
-      </div>
+  <div class="hero-bg"><img src="https://img.recraft.ai/_vpDWxV9axTv_i1xI_P-O8YsoeeVPAaq6Z5CoMFC650/rs:fit:1820:1024:0/raw:1/plain/abs://external/images/b784c71a-35b0-4d72-b450-46ccb8248c4b" alt="Luxury Houston hair salon interior with matte black walls, soft blush velvet upholstered chairs, brushed gold styling fixtures, and round vintage mirrors with thin black frames" /></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Clarewood Drive · Houston</div>
+    <h1>The chair that does color the way galas were going to ask anyway.</h1>
+    <p class="lead">SALON Per Se was built for clients who book the same chair before they book the dress. Matte black, blush velvet, brushed gold — and a colorist who already knows what your highlights want to do at the next charity event.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact">Reserve a Chair</a>
+      <a class="btn btn-ghost" href="#services">See the Work</a>
     </div>
-    <div class="hero-visual">S</div>
+    <div class="stats"><div class="stat"><div class="stat-num">By</div><div class="stat-lbl">Reservation Only</div></div><div class="stat"><div class="stat-num">Tue–Sat</div><div class="stat-lbl">10am to 8pm</div></div><div class="stat"><div class="stat-num">9630</div><div class="stat-lbl">Clarewood Dr</div></div></div>
   </div>
 </section>
-<section id="services" class="alt">
-  <div class="section-head"><span class="lbl">Services</span><h2>What We Do Best</h2><p>Each service designed and delivered with care.</p></div>
-  <div class="svc-grid"><div class="svc"><div class="svc-glyph">✂️</div><h3>Cuts & Styling</h3><p>Personalized cuts and finishes to suit your hair type and lifestyle.</p></div><div class="svc"><div class="svc-glyph">🌈</div><h3>Color & Highlights</h3><p>Balayage, foilage, vivids, and color corrections by master colorists.</p></div><div class="svc"><div class="svc-glyph">💆</div><h3>Treatments</h3><p>Olaplex, deep conditioning, gloss, and reparative bonding services.</p></div><div class="svc"><div class="svc-glyph">👰</div><h3>Bridal & Events</h3><p>Trial sessions and event-day styling for weddings and special occasions.</p></div><div class="svc"><div class="svc-glyph">🌿</div><h3>Extensions</h3><p>Hand-tied wefts, tape-ins, and hot-fusion strands for lasting volume.</p></div><div class="svc"><div class="svc-glyph">✨</div><h3>Smoothing & Keratin</h3><p>Frizz-free finishes and long-lasting smoothing treatments.</p></div></div>
+<section class="feature" id="about">
+  <div class="feature-grid">
+    <div class="feature-img"><img src="https://img.recraft.ai/KrTEiqWHERtcOUdXu4bg1CgTPRsPdvbNXajHnwkxJx0/rs:fit:1024:1024:0/raw:1/plain/abs://external/images/cad04bfe-d270-470e-9faf-03b305b672d3" alt="Close-up of a perfectly groomed hand holding professional gold-tone scissors above a smooth glossy black surface with a single drop of glossy hair product" /></div>
+    <div class="feature-text">
+      <h2>A salon for the appointments that come before the appointments</h2>
+      <p>Per Se isn&#x27;t trying to be everyone&#x27;s salon. It&#x27;s the chair you book three weeks before the gala, the photo shoot, the wedding, the show. The work is precise, the room is quiet, and the colorist has worked the same chair since 2019.</p><p>A client list this specific deserves a homepage that shows it. The redesign in front of you is the storefront: matte black header, blush accents, the actual room — finally rendered honestly online.</p>
+      <a class="btn btn-primary" href="#contact" style="margin-top:8px">Reserve a Chair</a>
+    </div>
+  </div>
 </section>
-<section id="contact">
-  <div class="section-head"><span class="lbl">Visit</span><h2>Come See Us</h2><p>Book your visit, give us a call, or reach out by email.</p></div>
+<section class="services" id="services">
+  <div class="section-head"><h2>The chair menu</h2><p>Premium color, premium extensions, and the consult that keeps both intact between visits.</p></div>
+  <div class="svc-grid"><div class="svc"><div class="svc-icon">✂️</div><h3>Cuts</h3><p>Personalized cuts shaped to face, growth, and the way the dress photographs from the front row.</p></div><div class="svc"><div class="svc-icon">🎨</div><h3>Couture Color</h3><p>Hand-painted balayage, foilage, vivids, and corrections by Per Se&#x27;s senior colorist.</p></div><div class="svc"><div class="svc-icon">💧</div><h3>Olaplex &amp; Bonding</h3><p>In-chair Olaplex 1+2, deep conditioning, gloss treatments, and reparative bonding.</p></div><div class="svc"><div class="svc-icon">💍</div><h3>Bridal &amp; Editorial</h3><p>Trial sessions and event-day styling for Houston weddings and editorial assignments.</p></div><div class="svc"><div class="svc-icon">➕</div><h3>Premium Extensions</h3><p>Hand-tied wefts, tape-ins, and hot-fusion strands by certified extensions specialists.</p></div><div class="svc"><div class="svc-icon">🌬️</div><h3>Smoothing</h3><p>Frizz-free finishes and long-lasting smoothing treatments matched to hair history.</p></div></div>
+</section>
+<section class="contact" id="contact">
+  <div class="section-head"><h2>9630 Clarewood Drive · Unit A-6</h2><p>By reservation only. 24-hour cancellation policy. Free parking on site.</p></div>
   <div class="contact-grid">
-    <div class="contact-item"><div class="ic">📍</div><h4>Address</h4><p>9630 Clarewood Dr Unit A-6, Houston, TX 77036, USA</p></div>
+    <div class="contact-item"><div class="ic">📍</div><h4>Address</h4><p>9630 Clarewood Dr Unit A-6, Houston, TX 77036</p></div>
     <div class="contact-item"><div class="ic">📞</div><h4>Phone</h4><a href="tel:(281) 501-2516">(281) 501-2516</a></div>
     <div class="contact-item"><div class="ic">✉️</div><h4>Email</h4><a href="mailto:salonperse@gmail.com">salonperse@gmail.com</a></div>
   </div>
-  <div style="text-align:center;margin-top:40px"><a class="btn btn-primary" href="tel:(281) 501-2516">Call to Book</a></div>
+  <a class="btn btn-primary" href="tel:(281) 501-2516" style="margin-top:44px">Call Per Se</a>
 </section>
 <footer>
-  <p><strong>SALON Per Se</strong> — Houston • 4.9★ • 1,116 reviews</p>
-  <p style="margin-top:8px;opacity:.7">Preview redesign by <a href="https://almadigitalservices.com" target="_blank">Alma Digital Services</a></p>
+  <p><strong>SALON Per Se</strong> — Houston, TX • 4.9★ on Google • Reservation Only reviews</p>
+  <p style="margin-top:8px;opacity:.72">Preview redesign by <a href="https://almadigitalservices.com" target="_blank" rel="noopener">Alma Digital Services</a></p>
 </footer>
 </body></html>
