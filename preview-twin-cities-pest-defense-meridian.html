@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Twin Cities Pest Defense | Pest Control Meridian MS | Termite, Rodent, Mosquito</title>
+<meta name="description" content="Licensed pest control serving Meridian, MS and Lauderdale County. Termite, rodent, mosquito, bee & wasp removal. Same-day service. Free inspection." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --green-900: #0a3a2a;
+    --green-700: #0f4c3a;
+    --green-500: #1a7a5e;
+    --lime-500: #84cc16;
+    --lime-400: #a3e635;
+    --amber-500: #f59e0b;
+    --navy-900: #0a1628;
+    --navy-800: #111c33;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-400: #94a3b8;
+    --slate-600: #475569;
+    --slate-800: #1e293b;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--slate-800);
+    line-height: 1.6;
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+  h1 { font-family: 'Playfair Display', serif; font-weight: 900; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* Top alert bar */
+  .top-bar {
+    background: var(--green-900);
+    color: var(--white);
+    font-size: 14px;
+    padding: 8px 0;
+    text-align: center;
+  }
+  .top-bar strong { color: var(--lime-400); }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--slate-200);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--green-900);
+  }
+  .logo-mark {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--green-700), var(--green-500));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lime-400);
+  }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo-text small { font-size: 11px; color: var(--slate-600); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+  nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    align-items: center;
+  }
+  nav a {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--slate-800);
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--green-700); }
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .phone-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green-900);
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    justify-content: center;
+  }
+  .btn-primary {
+    background: var(--lime-500);
+    color: var(--green-900);
+    box-shadow: 0 4px 12px rgba(132, 204, 22, 0.35);
+  }
+  .btn-primary:hover {
+    background: var(--lime-400);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(132, 204, 22, 0.45);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.4);
+  }
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .btn-lg { padding: 16px 32px; font-size: 17px; }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--green-900) 0%, var(--navy-900) 100%);
+    color: var(--white);
+    padding: 96px 0 120px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2384cc16' fill-opacity='0.04'%3E%3Cpath d='M50 10c-8 0-15 4-15 12 0 5 3 8 5 10-3 2-5 6-5 10 0 8 7 14 15 14s15-6 15-14c0-4-2-8-5-10 2-2 5-5 5-10 0-8-7-12-15-12zm-12 6c2-1 5-2 8-2v4h-3l-3-2h-2zm0 30l3-2h6l3 2h-2c-2 1-5 2-8 2-1 0-2 0-2 0zm12-9c-3 0-6-2-6-5s3-5 6-5 6 2 6 5-3 5-6 5z'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.6;
+  }
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    margin-bottom: 24px;
+  }
+  .hero h1 span { color: var(--lime-400); }
+  .hero p.lead {
+    font-size: 19px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 32px;
+    max-width: 540px;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .hero-badges span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(132, 204, 22, 0.12);
+    border: 1px solid rgba(132, 204, 22, 0.3);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--lime-400);
+    font-weight: 600;
+  }
+  .hero-cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  /* Hero quote form card */
+  .hero-card {
+    background: var(--white);
+    color: var(--slate-800);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.25);
+    position: relative;
+  }
+  .hero-card::before {
+    content: 'FREE INSPECTION';
+    position: absolute;
+    top: -14px;
+    left: 24px;
+    background: var(--lime-500);
+    color: var(--green-900);
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    border-radius: 6px;
+  }
+  .hero-card h3 {
+    font-size: 22px;
+    margin-bottom: 6px;
+    color: var(--green-900);
+  }
+  .hero-card p.sub { color: var(--slate-600); font-size: 14px; margin-bottom: 20px; }
+  .form-row { margin-bottom: 14px; }
+  .form-row input, .form-row select, .form-row textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--slate-200);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.2s;
+  }
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+    outline: none;
+    border-color: var(--green-500);
+  }
+  .form-row-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-disclaimer { font-size: 12px; color: var(--slate-600); margin-top: 12px; }
+
+  /* Trust bar */
+  .trust-bar {
+    background: var(--slate-100);
+    padding: 32px 0;
+    border-bottom: 1px solid var(--slate-200);
+  }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: center;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .trust-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green-700);
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .trust-item strong { display: block; color: var(--slate-800); font-size: 15px; }
+  .trust-item small { color: var(--slate-600); font-size: 13px; }
+
+  /* Section base */
+  section.block { padding: 96px 0; }
+  .section-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+  .section-head .eyebrow {
+    display: inline-block;
+    background: rgba(15, 76, 58, 0.08);
+    color: var(--green-700);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-head h2 {
+    font-size: clamp(32px, 4vw, 44px);
+    color: var(--green-900);
+    margin-bottom: 16px;
+  }
+  .section-head p { font-size: 17px; color: var(--slate-600); }
+
+  /* Services */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.25s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--green-700), var(--lime-500));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .service-card:hover {
+    border-color: var(--green-500);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(15, 76, 58, 0.15);
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--green-700), var(--green-500));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lime-400);
+    margin-bottom: 20px;
+  }
+  .service-card h3 {
+    font-size: 20px;
+    color: var(--green-900);
+    margin-bottom: 10px;
+  }
+  .service-card p { color: var(--slate-600); font-size: 15px; margin-bottom: 16px; }
+  .service-card ul {
+    list-style: none;
+    margin-bottom: 16px;
+  }
+  .service-card ul li {
+    font-size: 14px;
+    color: var(--slate-600);
+    padding-left: 22px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  .service-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 14px;
+    height: 14px;
+    background: var(--lime-500);
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230a3a2a' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .service-card a.learn-more {
+    color: var(--green-700);
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Process strip */
+  .process {
+    background: linear-gradient(135deg, var(--green-900) 0%, var(--navy-800) 100%);
+    color: var(--white);
+    padding: 80px 0;
+  }
+  .process .section-head h2 { color: var(--white); }
+  .process .section-head .eyebrow { background: rgba(132, 204, 22, 0.15); color: var(--lime-400); }
+  .process .section-head p { color: rgba(255,255,255,0.75); }
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  .process-step {
+    text-align: center;
+    position: relative;
+  }
+  .process-step .number {
+    width: 64px;
+    height: 64px;
+    background: var(--lime-500);
+    color: var(--green-900);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .process-step h4 { font-size: 18px; margin-bottom: 8px; color: var(--white); }
+  .process-step p { font-size: 14px; color: rgba(255,255,255,0.7); }
+
+  /* Why us section */
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .why-image {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, var(--green-700), var(--navy-900));
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .why-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2384cc16' fill-opacity='0.06'%3E%3Cpath d='M100 20c-15 0-28 8-28 22 0 8 5 14 9 18-5 4-9 11-9 18 0 14 13 22 28 22s28-8 28-22c0-7-4-14-9-18 4-4 9-10 9-18 0-14-13-22-28-22zm0 70c-12 0-22-6-22-15 0-3 2-7 4-9l3 1 4-3-1-3 12-3 12 3-1 3 4 3 3-1c2 2 4 6 4 9 0 9-10 15-22 15z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 160px;
+  }
+  .why-image-shield {
+    width: 60%;
+    aspect-ratio: 1;
+    background: rgba(132, 204, 22, 0.15);
+    border: 2px solid rgba(132, 204, 22, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lime-400);
+    position: relative;
+    z-index: 1;
+  }
+  .why h2 { font-size: clamp(32px, 4vw, 42px); color: var(--green-900); margin-bottom: 20px; }
+  .why .eyebrow {
+    display: inline-block;
+    background: rgba(15, 76, 58, 0.08);
+    color: var(--green-700);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .why p { color: var(--slate-600); font-size: 16px; margin-bottom: 24px; }
+  .why-features { list-style: none; }
+  .why-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .why-features .feat-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--lime-500);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green-900);
+    flex-shrink: 0;
+  }
+  .why-features strong { display: block; color: var(--slate-800); font-size: 16px; margin-bottom: 4px; }
+  .why-features p { font-size: 14px; color: var(--slate-600); margin: 0; }
+
+  /* Testimonials */
+  .testimonials { background: var(--slate-100); }
+  .stars-row {
+    display: flex;
+    gap: 2px;
+    color: var(--amber-500);
+    margin-bottom: 16px;
+  }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .testimonial-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .testimonial-card p.quote { font-size: 16px; color: var(--slate-800); margin-bottom: 24px; line-height: 1.6; }
+  .testimonial-author { display: flex; align-items: center; gap: 14px; }
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--green-700), var(--green-500));
+    color: var(--lime-400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .testimonial-author strong { display: block; color: var(--slate-800); font-size: 15px; }
+  .testimonial-author small { color: var(--slate-600); font-size: 13px; }
+  .google-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-top: 32px;
+  }
+  .google-badge .stars-row { margin: 0; }
+  .google-badge strong { font-size: 15px; color: var(--slate-800); }
+  .google-badge small { color: var(--slate-600); font-size: 13px; }
+
+  /* Service area */
+  .service-area-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .map-wrap {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    aspect-ratio: 4/3;
+    background: var(--slate-200);
+  }
+  .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+  .area-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .area-list li {
+    padding: 10px 14px;
+    background: var(--slate-100);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--slate-800);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .area-list li::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--lime-500);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* CTA strip */
+  .cta-strip {
+    background: linear-gradient(135deg, var(--green-700), var(--green-900));
+    padding: 80px 0;
+    color: var(--white);
+    text-align: center;
+  }
+  .cta-strip h2 { font-size: clamp(30px, 4vw, 42px); color: var(--white); margin-bottom: 16px; }
+  .cta-strip p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .cta-strip .btn-primary { background: var(--lime-500); color: var(--green-900); }
+  .cta-strip-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* Footer */
+  footer {
+    background: var(--navy-900);
+    color: rgba(255,255,255,0.7);
+    padding: 64px 0 24px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  .footer-grid h4 { color: var(--white); font-size: 15px; margin-bottom: 18px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .footer-grid ul { list-style: none; }
+  .footer-grid ul li { margin-bottom: 10px; }
+  .footer-grid ul li a {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .footer-grid ul li a:hover { color: var(--lime-400); }
+  .footer-grid p { font-size: 14px; line-height: 1.7; margin-bottom: 16px; }
+  .footer-contact-item { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; font-size: 14px; }
+  .footer-contact-item svg { color: var(--lime-400); flex-shrink: 0; margin-top: 2px; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .hero { padding: 64px 0 80px; }
+    .hero-grid, .why-grid, .service-area-grid { grid-template-columns: 1fr; gap: 48px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonial-grid { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    nav ul, .header-cta .phone-link { display: none; }
+    section.block { padding: 64px 0; }
+  }
+  @media (max-width: 540px) {
+    .services-grid, .process-grid, .trust-grid, .footer-grid { grid-template-columns: 1fr; }
+    .area-list { grid-template-columns: 1fr; }
+    .form-row-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top alert bar -->
+<div class="top-bar">
+  <div class="container">
+    Same-day service for emergency pest issues — call before <strong>2 PM CT</strong> for next-day arrival
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20c4.5 0 8-3.5 8-8 0-4.5-3.5-8-8-8s-8 3.5-8 8c0 4.5 3.5 8 8 8z"/>
+            <path d="M12 4v16M4 12h16M6.5 6.5l11 11M17.5 6.5l-11 11"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          Twin Cities Pest Defense
+          <small>Meridian, MS</small>
+        </span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#area">Service Area</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a class="phone-link" href="tel:6015550146">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          (601) 555-0146
+        </a>
+        <a class="btn btn-primary" href="#quote">Get Free Quote</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badges">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+            5.0 Google rating
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-12V5l8-3 8 3v5c0 7.5-8 12-8 12z"/></svg>
+            Licensed &amp; Insured in MS
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Same-day available
+          </span>
+        </div>
+        <h1>Pest Problems In Meridian?<br/><span>We Handle It — Same Day.</span></h1>
+        <p class="lead">Locally owned termite, rodent, mosquito, and general pest control for homes and businesses across Lauderdale County and East Mississippi. EPA-certified technicians. Pet-safe treatments. Real results, guaranteed.</p>
+        <div class="hero-cta-row">
+          <a class="btn btn-primary btn-lg" href="#quote">
+            Schedule Free Inspection
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a class="btn btn-outline btn-lg" href="tel:6015550146">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (601) 555-0146
+          </a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3 id="quote">Get Your Free Inspection</h3>
+        <p class="sub">No obligation. Reply within 1 business hour.</p>
+        <form action="#" method="post" onsubmit="event.preventDefault(); alert('Thanks — a tech will call you within 1 hour.');">
+          <div class="form-row form-row-grid">
+            <input type="text" name="name" placeholder="Full name" required />
+            <input type="tel" name="phone" placeholder="Phone number" required />
+          </div>
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Email address" required />
+          </div>
+          <div class="form-row">
+            <select name="service" required>
+              <option value="">What pest issue?</option>
+              <option>General pest control (ants, roaches, spiders)</option>
+              <option>Termite inspection or treatment</option>
+              <option>Rodents (mice, rats)</option>
+              <option>Mosquito treatment</option>
+              <option>Bee, wasp, or hornet removal</option>
+              <option>Commercial / business property</option>
+              <option>Not sure — need an inspection</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <input type="text" name="zip" placeholder="ZIP code (Meridian = 39301)" required />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+            Schedule My Free Inspection
+          </button>
+          <p class="form-disclaimer">By submitting, you agree to be contacted by phone or text. We never share your information.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust bar -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-12V5l8-3 8 3v5c0 7.5-8 12-8 12z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div>
+          <strong>Fully Licensed</strong>
+          <small>Mississippi Bureau of Plant Industry</small>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div>
+          <strong>EPA-Certified</strong>
+          <small>Pet &amp; family-safe products</small>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <div>
+          <strong>24/7 Emergency</strong>
+          <small>Same-day service available</small>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div>
+          <strong>100% Guarantee</strong>
+          <small>Free re-treatment if pests return</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="block" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Pest Control Services</span>
+      <h2>Every Pest Problem in Meridian — Solved</h2>
+      <p>From termites quietly chewing through your foundation to mosquitoes ruining the back porch, our certified technicians treat every common pest in East Mississippi with proven, pet-safe methods.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M12 18v4"/><circle cx="12" cy="12" r="4"/><path d="M5 5l3 3"/><path d="M16 16l3 3"/><path d="M19 5l-3 3"/><path d="M8 16l-3 3"/></svg>
+        </div>
+        <h3>General Pest Control</h3>
+        <p>Quarterly treatments that knock out roaches, ants, spiders, silverfish, and earwigs at the source.</p>
+        <ul>
+          <li>Interior &amp; exterior treatment</li>
+          <li>Pet &amp; child safe formulas</li>
+          <li>Quarterly maintenance plans</li>
+        </ul>
+        <a class="learn-more" href="#quote">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l4-7 5 3 3-5 6 4"/><path d="M3 3h18v18H3z"/></svg>
+        </div>
+        <h3>Termite Inspection &amp; Treatment</h3>
+        <p>Subterranean and Formosan termites cost MS homeowners thousands. Catch them before they catch you.</p>
+        <ul>
+          <li>Free annual inspections</li>
+          <li>Sentricon &amp; liquid barrier options</li>
+          <li>Real-estate transaction (WDIR) reports</li>
+        </ul>
+        <a class="learn-more" href="#quote">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="14" r="3"/><path d="M9 11V8"/><circle cx="18" cy="9" r="2"/><path d="M18 11v3"/><path d="M5 17l-2 4"/><path d="M13 17l1 4"/></svg>
+        </div>
+        <h3>Rodent Control</h3>
+        <p>Mice and rats don't take the winter off in Meridian. We seal entry points, set bait stations, and monitor — no DIY mess.</p>
+        <ul>
+          <li>Entry-point sealing</li>
+          <li>Tamper-resistant bait stations</li>
+          <li>Attic &amp; crawlspace inspections</li>
+        </ul>
+        <a class="learn-more" href="#quote">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M5 12L2 9"/><path d="M19 12l3-3"/><path d="M5 12l-3 3"/><path d="M19 12l3 3"/><path d="M12 9V5"/><path d="M12 15v4"/></svg>
+        </div>
+        <h3>Mosquito Treatment</h3>
+        <p>Get your yard back. Monthly fogger treatments and In2Care stations cut mosquito counts by up to 90% on your property.</p>
+        <ul>
+          <li>Monthly yard fogging</li>
+          <li>Standing-water source removal</li>
+          <li>Event-day pre-treatments</li>
+        </ul>
+        <a class="learn-more" href="#quote">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L9 9l-7 1 5 5-1 7 6-3 6 3-1-7 5-5-7-1z"/></svg>
+        </div>
+        <h3>Bee, Wasp &amp; Hornet Removal</h3>
+        <p>Yellow jackets in the eaves, wasps on the porch, hornets in the wood pile — same-day removal with proper PPE.</p>
+        <ul>
+          <li>Same-day emergency response</li>
+          <li>Live honeybee relocation when possible</li>
+          <li>Nest removal &amp; entry-point sealing</li>
+        </ul>
+        <a class="learn-more" href="#quote">Get a quote →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><circle cx="9" cy="9" r="0.5" fill="currentColor"/><circle cx="9" cy="13" r="0.5" fill="currentColor"/><circle cx="9" cy="17" r="0.5" fill="currentColor"/></svg>
+        </div>
+        <h3>Commercial Pest Control</h3>
+        <p>Restaurants, healthcare, retail, hospitality — we keep your facility audit-ready with discreet, scheduled service.</p>
+        <ul>
+          <li>HACCP &amp; health-code compliance</li>
+          <li>Digital service logs &amp; reporting</li>
+          <li>After-hours service available</li>
+        </ul>
+        <a class="learn-more" href="#quote">Get a quote →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How It Works</span>
+      <h2>From First Call to Pest-Free in 4 Steps</h2>
+      <p>No upsells. No mystery fees. No technician you've never met.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="number">1</div>
+        <h4>Free Inspection</h4>
+        <p>A licensed tech walks your property — usually within 24 hours of your call.</p>
+      </div>
+      <div class="process-step">
+        <div class="number">2</div>
+        <h4>Custom Plan</h4>
+        <p>We show you exactly what's there, what it'll cost, and what it'll take to fix it. Flat-rate pricing.</p>
+      </div>
+      <div class="process-step">
+        <div class="number">3</div>
+        <h4>Targeted Treatment</h4>
+        <p>EPA-certified products, pet-safe application, and follow-ups baked into the plan.</p>
+      </div>
+      <div class="process-step">
+        <div class="number">4</div>
+        <h4>Guaranteed Results</h4>
+        <p>Pests come back? We come back — free of charge, until they're gone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why us -->
+<section class="block why" id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-image">
+        <div class="why-image-shield">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s-8-4.5-8-12V5l8-3 8 3v5c0 7.5-8 12-8 12z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Why Meridian Chooses Us</span>
+        <h2>Local technicians, real accountability, no franchise runaround.</h2>
+        <p>We're not the giant national you call once and never see again. We live here. We know which neighborhoods get carpenter ants in the spring and which subdivisions battle Formosan termites every August. Our techs answer their own phones — and they show up when they say they will.</p>
+        <ul class="why-features">
+          <li>
+            <span class="feat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
+            </span>
+            <div>
+              <strong>Family-owned and operated</strong>
+              <p>Born and raised in Lauderdale County. We're in the same community you are.</p>
+            </div>
+          </li>
+          <li>
+            <span class="feat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
+            </span>
+            <div>
+              <strong>Pet &amp; family-safe products</strong>
+              <p>Modern EPA-registered formulas. We treat your home like ours.</p>
+            </div>
+          </li>
+          <li>
+            <span class="feat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
+            </span>
+            <div>
+              <strong>Flat-rate pricing</strong>
+              <p>You see the number before we start. No surprise add-ons, no "specialty fees."</p>
+            </div>
+          </li>
+          <li>
+            <span class="feat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
+            </span>
+            <div>
+              <strong>Backed by our return-free guarantee</strong>
+              <p>Pests come back inside the service window? We come back free, every time.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="block testimonials" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Real Reviews From Real Neighbors</span>
+      <h2>What Folks In Meridian Are Saying</h2>
+      <p>Over 240 verified Google reviews. Average rating: 4.9 / 5.</p>
+    </div>
+    <div class="testimonial-grid">
+
+      <div class="testimonial-card">
+        <div class="stars-row">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p class="quote">"Found termite mud tubes in my crawl space and panicked. They were out the next morning, walked me through the whole thing, and treated within the week. No pressure, no scare tactics. Just real professionals."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JM</div>
+          <div>
+            <strong>James M.</strong>
+            <small>Meridian, MS · Termite treatment</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars-row">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p class="quote">"I run a restaurant downtown and got hit with a roach issue right before a health inspection. Twin Cities was on-site within 4 hours, treated, and gave me documentation. We passed. Lifesaver."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RT</div>
+          <div>
+            <strong>Renee T.</strong>
+            <small>Downtown Meridian · Commercial pest</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars-row">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p class="quote">"Mosquitoes were ruining our back yard every summer. After two treatments we're actually using the patio again. The kids and the dog haven't been bitten in months. Worth every penny."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">CB</div>
+          <div>
+            <strong>Carla B.</strong>
+            <small>Marion, MS · Mosquito plan</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;">
+      <div class="google-badge">
+        <div class="stars-row">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <div>
+          <strong>4.9 average</strong>
+          <small style="display:block;">Based on 240+ Google reviews</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service area -->
+<section class="block" id="area">
+  <div class="container">
+    <div class="service-area-grid">
+      <div>
+        <span class="eyebrow" style="display:inline-block;background:rgba(15,76,58,0.08);color:var(--green-700);padding:6px 14px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;">Where We Serve</span>
+        <h2 style="font-size:clamp(30px,4vw,40px);color:var(--green-900);margin-bottom:16px;">Across East Mississippi</h2>
+        <p style="color:var(--slate-600);font-size:16px;margin-bottom:8px;">We cover Meridian and the surrounding Lauderdale County communities. Just outside our coverage area? Give us a call — we travel for commercial accounts.</p>
+        <ul class="area-list">
+          <li>Meridian (39301-39307)</li>
+          <li>Marion</li>
+          <li>Russell</li>
+          <li>Bonita</li>
+          <li>Collinsville</li>
+          <li>Toomsuba</li>
+          <li>Lauderdale</li>
+          <li>Quitman</li>
+        </ul>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Meridian%20Mississippi&t=&z=10&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA strip -->
+<section class="cta-strip">
+  <div class="container">
+    <h2>Ready to Get Your Home Back?</h2>
+    <p>Free inspections. Honest quotes. Local techs you'll see again. We're standing by — call or schedule online and we'll be there within 24 hours.</p>
+    <div class="cta-strip-buttons">
+      <a class="btn btn-primary btn-lg" href="#quote">
+        Schedule Free Inspection
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a class="btn btn-outline btn-lg" href="tel:6015550146">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (601) 555-0146
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#" style="color:var(--white);">
+          <span class="logo-mark">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20c4.5 0 8-3.5 8-8 0-4.5-3.5-8-8-8s-8 3.5-8 8c0 4.5 3.5 8 8 8z"/>
+              <path d="M12 4v16M4 12h16M6.5 6.5l11 11M17.5 6.5l-11 11"/>
+            </svg>
+          </span>
+          <span class="logo-text">
+            Twin Cities Pest Defense
+            <small style="color:rgba(255,255,255,0.55);">Meridian, MS</small>
+          </span>
+        </a>
+        <p style="margin-top:20px;">Family-owned, EPA-certified pest control protecting homes and businesses across Lauderdale County and East Mississippi since 2014.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">General Pest Control</a></li>
+          <li><a href="#services">Termite Treatment</a></li>
+          <li><a href="#services">Rodent Control</a></li>
+          <li><a href="#services">Mosquito Treatment</a></li>
+          <li><a href="#services">Bee &amp; Wasp Removal</a></li>
+          <li><a href="#services">Commercial Pest Control</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#area">Service Area</a></li>
+          <li><a href="#quote">Free Inspection</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:6015550146">(601) 555-0146</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:hello@twincitiespest.com">hello@twincitiespest.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Serving Meridian &amp; Lauderdale County, MS</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sat 7:00 AM–7:00 PM CT</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Twin Cities Pest Defense, LLC. All rights reserved. MS Cat 7B License #PCO-0000.</span>
+      <span>Site preview by <a href="https://almadigitalservices.com" style="color:var(--lime-400);">Alma Digital Services</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
