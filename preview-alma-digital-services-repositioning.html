@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alma Digital Services — Concierge Websites Built by Senior Designers</title>
+<meta name="description" content="The concierge website service for businesses that have outgrown DIY builders. A senior team. Real strategy. Delivered in days. Starting at $500." />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#1a1a2e;
+  --bg-elev:#22223a;
+  --bg-card:#2a2a3e;
+  --cyan:#00b4d8;
+  --cyan-dim:#0096b8;
+  --purple-1:#7B2FF7;
+  --purple-2:#C850C0;
+  --text:#ffffff;
+  --text-mute:#e0e0e0;
+  --text-soft:#a8a8b8;
+  --border:rgba(255,255,255,0.08);
+  --border-strong:rgba(255,255,255,0.16);
+  --shadow:0 24px 60px -20px rgba(0,0,0,0.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.18;letter-spacing:-0.01em}
+.preview-banner{
+  background:linear-gradient(90deg,var(--purple-1),var(--purple-2));
+  color:#fff;text-align:center;padding:10px 16px;font-size:13px;font-weight:600;
+  letter-spacing:0.04em;text-transform:uppercase;
+}
+.preview-banner span{opacity:0.85;font-weight:500;text-transform:none;letter-spacing:0;margin-left:8px}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(26,26,46,0.85);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:-0.01em}
+.logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:var(--text-mute);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--cyan)}
+.nav-cta{
+  background:var(--cyan);color:var(--bg);padding:10px 20px;border-radius:8px;
+  font-weight:600;font-size:14px;text-decoration:none;transition:transform .15s,box-shadow .2s;
+}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 10px 30px -10px rgba(0,180,216,0.55)}
+@media(max-width:768px){.nav-links a:not(.nav-cta){display:none}}
+
+/* HERO */
+.hero{
+  position:relative;padding:120px 0 100px;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 500px at 80% 0%, rgba(123,47,247,0.18), transparent 60%),
+    radial-gradient(700px 400px at 0% 50%, rgba(0,180,216,0.12), transparent 65%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;text-align:center;max-width:920px;margin:0 auto}
+.hero-eyebrow{
+  display:inline-block;color:var(--cyan);font-size:13px;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;margin-bottom:24px;
+  border:1px solid var(--border-strong);padding:8px 16px;border-radius:999px;
+  background:rgba(0,180,216,0.06);
+}
+.hero h1{
+  font-size:clamp(38px,5.4vw,64px);margin-bottom:24px;
+}
+.hero h1 em{font-style:italic;color:transparent;background:linear-gradient(90deg,var(--cyan),var(--purple-2));-webkit-background-clip:text;background-clip:text}
+.hero-sub{
+  font-size:clamp(16px,1.6vw,19px);color:var(--text-mute);max-width:760px;margin:0 auto 36px;
+}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.btn-primary,.btn-secondary{
+  padding:16px 30px;border-radius:10px;font-weight:600;font-size:15px;
+  text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+  transition:transform .15s,box-shadow .2s,background .2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--cyan);color:var(--bg)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(0,180,216,0.55)}
+.btn-secondary{background:transparent;color:var(--text);border-color:var(--border-strong)}
+.btn-secondary:hover{border-color:var(--cyan);color:var(--cyan)}
+.hero-trust{color:var(--text-soft);font-size:14px;max-width:680px;margin:0 auto}
+
+/* SECTION BASE */
+section.block{padding:100px 0;position:relative}
+section.block.alt{background:var(--bg-elev)}
+.section-h2{font-size:clamp(28px,3.6vw,42px);text-align:center;margin-bottom:18px;max-width:880px;margin-left:auto;margin-right:auto}
+.section-sub{text-align:center;color:var(--text-mute);max-width:760px;margin:0 auto 56px;font-size:17px}
+
+/* CATEGORY 3-COL */
+.compare-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+@media(max-width:900px){.compare-grid{grid-template-columns:1fr}}
+.compare-col{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:16px;padding:32px 28px;position:relative;
+  transition:transform .25s,border-color .25s;
+}
+.compare-col.us{
+  border-color:transparent;
+  background:linear-gradient(180deg,rgba(0,180,216,0.10),rgba(123,47,247,0.06)) padding-box,
+             linear-gradient(135deg,var(--cyan),var(--purple-2)) border-box;
+  border:1px solid transparent;
+  box-shadow:var(--shadow);
+}
+.compare-col.us::before{
+  content:"Built for businesses";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(90deg,var(--cyan),var(--purple-2));color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+  padding:6px 14px;border-radius:999px;white-space:nowrap;
+}
+.compare-tag{font-size:12px;font-weight:600;color:var(--text-soft);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px}
+.compare-h3{font-size:22px;margin-bottom:8px}
+.compare-price{font-size:13px;color:var(--cyan);font-weight:500;margin-bottom:24px}
+.compare-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.compare-list li{font-size:15px;color:var(--text-mute);padding-left:24px;position:relative;line-height:1.5}
+.compare-list li::before{
+  content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;
+  background:var(--text-soft);
+}
+.compare-col.us .compare-list li::before{background:var(--cyan)}
+.compare-closing{
+  text-align:center;margin-top:48px;font-size:18px;color:var(--text-mute);
+  max-width:780px;margin-left:auto;margin-right:auto;font-style:italic;
+}
+
+/* PRICING */
+.tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
+@media(max-width:1000px){.tier-grid{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
+.tier{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:16px;padding:36px 30px;display:flex;flex-direction:column;
+  transition:transform .25s,border-color .25s;
+}
+.tier:hover{transform:translateY(-4px);border-color:var(--border-strong)}
+.tier.featured{
+  background:linear-gradient(180deg,rgba(0,180,216,0.08),rgba(123,47,247,0.05));
+  border-color:transparent;
+  background-image:
+    linear-gradient(180deg,rgba(0,180,216,0.08),rgba(123,47,247,0.05)),
+    linear-gradient(135deg,var(--cyan),var(--purple-2));
+  background-origin:border-box;background-clip:padding-box,border-box;
+  position:relative;box-shadow:var(--shadow);
+}
+.tier.featured::before{
+  content:"Most popular";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(90deg,var(--cyan),var(--purple-2));color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+  padding:6px 14px;border-radius:999px;
+}
+.tier-name{font-size:13px;font-weight:700;color:var(--cyan);letter-spacing:0.18em;text-transform:uppercase}
+.tier-price{font-family:'Playfair Display',serif;font-size:42px;font-weight:600;margin-top:8px;line-height:1.1}
+.tier-price small{font-size:14px;color:var(--text-soft);font-family:'Inter',sans-serif;font-weight:400}
+.tier-tagline{color:var(--text-mute);font-size:15px;font-style:italic;margin-top:6px;margin-bottom:24px}
+.tier-features{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px;flex:1}
+.tier-features li{font-size:14.5px;color:var(--text-mute);padding-left:26px;position:relative;line-height:1.5}
+.tier-features li::before{
+  content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;
+  background:rgba(0,180,216,0.18);
+  background-image:radial-gradient(circle at center,var(--cyan) 30%,transparent 32%);
+}
+.tier-promise{font-weight:600;color:var(--text);margin-bottom:18px;font-size:14px}
+.tier .btn-primary,.tier .btn-secondary{justify-content:center;width:100%}
+
+.pricing-fineprint{
+  margin-top:64px;text-align:center;background:var(--bg-card);
+  border:1px solid var(--border);border-radius:14px;padding:28px 32px;max-width:880px;margin-left:auto;margin-right:auto;
+}
+.pricing-fineprint h4{font-size:16px;font-weight:700;color:var(--cyan);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;font-family:'Inter',sans-serif}
+.pricing-fineprint p{color:var(--text-mute);font-size:15px;line-height:1.7}
+
+/* WHY ALMA */
+.why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+.why-text p{color:var(--text-mute);font-size:17px;margin-bottom:18px;line-height:1.75}
+.why-card{
+  background:linear-gradient(180deg,rgba(0,180,216,0.08),rgba(123,47,247,0.05));
+  border:1px solid var(--border-strong);border-radius:16px;padding:36px;
+}
+.why-card-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px}
+.why-card-row:last-child{margin-bottom:0}
+.why-card-row .dot{
+  flex-shrink:0;width:14px;height:14px;border-radius:50%;
+  background:linear-gradient(135deg,var(--cyan),var(--purple-2));margin-top:6px;
+}
+.why-card-row .label{font-weight:600;color:var(--text);display:block;margin-bottom:2px}
+.why-card-row .value{color:var(--text-mute);font-size:15px}
+
+/* FAQ */
+.faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;
+}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:22px 28px;font-size:17px;font-weight:600;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .icon{
+  width:28px;height:28px;border-radius:50%;background:rgba(0,180,216,0.15);
+  display:flex;align-items:center;justify-content:center;color:var(--cyan);
+  font-size:18px;line-height:1;flex-shrink:0;transition:transform .25s;
+}
+.faq-item[open] summary .icon{transform:rotate(45deg)}
+.faq-item .answer{padding:0 28px 24px;color:var(--text-mute);font-size:15.5px;line-height:1.75}
+
+/* FOOTER CTA */
+.footer-cta{
+  padding:90px 0;text-align:center;
+  background:
+    radial-gradient(700px 400px at 50% 50%, rgba(0,180,216,0.10), transparent 70%),
+    var(--bg);
+  border-top:1px solid var(--border);
+}
+.footer-cta .tagline{
+  font-family:'Playfair Display',serif;font-size:clamp(22px,2.4vw,28px);
+  font-style:italic;color:var(--text-mute);max-width:780px;margin:0 auto 36px;line-height:1.4;
+}
+.footer-cta .tagline .accent{color:var(--cyan);font-style:normal;font-weight:600}
+
+/* FOOTER */
+footer{padding:60px 0 40px;border-top:1px solid var(--border)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+.footer-brand p{color:var(--text-soft);font-size:14px;margin-top:14px;max-width:340px;line-height:1.7}
+.footer-col h5{font-size:13px;font-weight:700;color:var(--text);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:18px;font-family:'Inter',sans-serif}
+.footer-col a{display:block;color:var(--text-soft);text-decoration:none;font-size:14px;margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:var(--cyan)}
+.footer-bottom{
+  border-top:1px solid var(--border);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  color:var(--text-soft);font-size:13px;
+}
+</style>
+</head>
+<body>
+
+<div class="preview-banner">
+  STAGING PREVIEW <span>— ALM-4926 repositioning copy. Not yet live on production.</span>
+</div>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="logo">Alma <span>Digital</span></a>
+    <div class="nav-links">
+      <a href="#approach">Approach</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#book" class="nav-cta">Book a strategy call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-inner">
+    <span class="hero-eyebrow">Concierge website service</span>
+    <h1>Your website, built by humans who care &mdash; <em>guided by AI, not generated by it.</em></h1>
+    <p class="hero-sub">
+      We are the concierge layer for businesses that have outgrown DIY website builders. A real team. A real strategy. A real designer reviewing every pixel. Starting at $500, delivered in days &mdash; not the months agencies quote, and not the disposable output of a $39 AI tool.
+    </p>
+    <div class="hero-ctas">
+      <a href="#book" class="btn-primary">Book a free strategy call &rarr;</a>
+      <a href="#work" class="btn-secondary">See our work</a>
+    </div>
+    <p class="hero-trust">No templates. No DIY guesswork. No outsourced support. Just a senior team building something your business deserves.</p>
+  </div>
+</header>
+
+<!-- CATEGORY POSITIONING -->
+<section class="block alt" id="approach">
+  <div class="container">
+    <h2 class="section-h2">There are three ways to get a website in 2026. We are the only one built for businesses that need it to actually work.</h2>
+    <div class="compare-grid">
+      <div class="compare-col">
+        <span class="compare-tag">Option 1</span>
+        <h3 class="compare-h3">Disposable AI builders</h3>
+        <p class="compare-price">$29&ndash;$49 / month</p>
+        <ul class="compare-list">
+          <li>Lovable, LazySands, and the rest</li>
+          <li>You write the prompts, debug what breaks, and QA the output</li>
+          <li>Built for: hobby projects and weekend builds</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <span class="compare-tag">Option 2</span>
+        <h3 class="compare-h3">Traditional agencies</h3>
+        <p class="compare-price">$8,000&ndash;$30,000</p>
+        <ul class="compare-list">
+          <li>6-week kickoff. 4-month delivery.</li>
+          <li>Beautiful &mdash; eventually</li>
+          <li>Built for: enterprises with procurement teams</li>
+        </ul>
+      </div>
+      <div class="compare-col us">
+        <span class="compare-tag">Option 3</span>
+        <h3 class="compare-h3">Alma Digital Services</h3>
+        <p class="compare-price">From $500</p>
+        <ul class="compare-list">
+          <li>A senior team builds it for you, end-to-end</li>
+          <li>AI accelerates production. Humans own the outcome.</li>
+          <li>Delivered in days. Built for businesses that need their website to work.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="compare-closing">Built for businesses that need their website to work &mdash; not their owner to learn one.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="block" id="pricing">
+  <div class="container">
+    <h2 class="section-h2">Concierge website packages. One flat fee. Built by humans.</h2>
+    <p class="section-sub">Every package includes strategy, design, copywriting, build, launch, and a senior team that answers when you write to them. No subscriptions to a tool you have to learn. No hourly billing. No surprises.</p>
+    <div class="tier-grid">
+      <!-- ESSENTIAL -->
+      <div class="tier">
+        <span class="tier-name">Essential</span>
+        <div class="tier-price">$500 <small>one-time</small></div>
+        <p class="tier-tagline">For service businesses ready to look the part.</p>
+        <ul class="tier-features">
+          <li>5-page custom site</li>
+          <li>Brand strategy session</li>
+          <li>Senior designer assigned to your project</li>
+          <li>Professional copy written for you</li>
+          <li>Mobile-perfect, SEO-ready</li>
+          <li>Launched in 5 business days</li>
+          <li>30 days of post-launch revisions</li>
+        </ul>
+        <p class="tier-promise">See it before you pay a dollar.</p>
+        <a href="#book" class="btn-secondary">Book your strategy call</a>
+      </div>
+      <!-- GROWTH -->
+      <div class="tier featured">
+        <span class="tier-name">Growth</span>
+        <div class="tier-price">$1,500 <small>one-time</small></div>
+        <p class="tier-tagline">For businesses scaling past their current site.</p>
+        <ul class="tier-features">
+          <li>Everything in Essential, plus:</li>
+          <li>10&ndash;15 pages of fully custom design</li>
+          <li>Conversion-optimized layout (informed by your actual customer data)</li>
+          <li>Custom photography direction or AI-art curation</li>
+          <li>Lead capture, booking, or e-commerce integration</li>
+          <li>Analytics + tracking setup</li>
+          <li>60 days of post-launch revisions</li>
+          <li>Quarterly performance review for 12 months</li>
+        </ul>
+        <p class="tier-promise">See it before you pay a dollar.</p>
+        <a href="#book" class="btn-primary">Book your strategy call</a>
+      </div>
+      <!-- SIGNATURE -->
+      <div class="tier">
+        <span class="tier-name">Signature</span>
+        <div class="tier-price">From $5,000</div>
+        <p class="tier-tagline">For founders who want a senior creative team on retainer.</p>
+        <ul class="tier-features">
+          <li>Unlimited pages</li>
+          <li>Dedicated creative director</li>
+          <li>Brand identity refresh included</li>
+          <li>Custom integrations (CRM, payments, booking, custom apps)</li>
+          <li>Conversion testing built into launch</li>
+          <li>6 months of post-launch evolution included</li>
+          <li>Direct line to your team &mdash; no tickets, no queues</li>
+        </ul>
+        <p class="tier-promise">Quoted per project. Two-week delivery standard.</p>
+        <a href="#book" class="btn-secondary">Book a private consultation</a>
+      </div>
+    </div>
+
+    <div class="pricing-fineprint">
+      <h4>What you will not see in our pricing</h4>
+      <p>Monthly software subscriptions. AI credits to top up. Per-page upcharges. Hidden plugin fees. Hourly support billing. Any reason to nickel-and-dime you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ALMA -->
+<section class="block alt" id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-text">
+        <h2 class="section-h2" style="text-align:left;margin-bottom:24px">The AI built the draft. A senior team built the website.</h2>
+        <p>AI is a tool. We use it the way a film studio uses cameras &mdash; to move faster, not to replace the people who make the work matter.</p>
+        <p>Every Alma project is owned by a senior creative who has shipped hundreds of sites. They write the strategy. They direct the design. They review every page before it touches your domain. The AI handles the parts that should be automated. The humans handle the parts that matter.</p>
+        <p>That is what concierge means. That is the difference between a website you built and a website that was built for you.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-row">
+          <span class="dot"></span>
+          <div>
+            <span class="label">Strategy</span>
+            <span class="value">Owned by a senior creative on every project</span>
+          </div>
+        </div>
+        <div class="why-card-row">
+          <span class="dot"></span>
+          <div>
+            <span class="label">Design direction</span>
+            <span class="value">Human-led, not template-bound</span>
+          </div>
+        </div>
+        <div class="why-card-row">
+          <span class="dot"></span>
+          <div>
+            <span class="label">Copy &amp; messaging</span>
+            <span class="value">Written for your customer, not your search bar</span>
+          </div>
+        </div>
+        <div class="why-card-row">
+          <span class="dot"></span>
+          <div>
+            <span class="label">Production</span>
+            <span class="value">AI-accelerated, human-finished</span>
+          </div>
+        </div>
+        <div class="why-card-row">
+          <span class="dot"></span>
+          <div>
+            <span class="label">Launch &amp; aftercare</span>
+            <span class="value">A real person picks up when something needs fixing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block" id="faq">
+  <div class="container">
+    <h2 class="section-h2">Questions, answered straight.</h2>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>How are you different from Lovable, LazySands, or the other $39 AI builders? <span class="icon">+</span></summary>
+        <div class="answer">We are not in the same category. Those are tools &mdash; you are the designer, strategist, and QA. We are a service &mdash; a senior team handles all of that for you. They cost less per month. We deliver more per project. Pick the one that matches what you need.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Why does an AI-assisted site cost $500 and not $39? <span class="icon">+</span></summary>
+        <div class="answer">Because $500 buys a senior team's time, not an AI subscription. Strategy, custom design, professional copy, build, launch, and a human who picks up when something needs fixing &mdash; that is what is in the price. The $39 tools sell you the software; you do the work. We sell you the website; we do the work.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How fast can you deliver? <span class="icon">+</span></summary>
+        <div class="answer">Essential and Growth packages launch in 5 business days from kickoff. Signature projects launch in two weeks. Agencies quote four to six months for the same scope. We don't.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do I see the website before paying in full? <span class="icon">+</span></summary>
+        <div class="answer">Yes. You see a working preview before any final payment. If it isn't right, we revise until it is. If it still isn't right, you don't pay the balance.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is there a monthly fee? <span class="icon">+</span></summary>
+        <div class="answer">Not for the website itself &mdash; that's a one-time build. Optional hosting and ongoing care plans start at $49/mo. Cancel anytime.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta" id="book">
+  <div class="container">
+    <p class="tagline">&ldquo;The <span class="accent">concierge</span> website service. Built by senior designers. Delivered in days. From $500.&rdquo;</p>
+    <a href="mailto:hello@almadigitalservices.com" class="btn-primary">Book a free strategy call &rarr;</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">Alma <span>Digital</span></a>
+        <p>The concierge website service. Built by senior designers. Delivered in days. From $500.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Service</h5>
+        <a href="#pricing">Pricing</a>
+        <a href="#approach">Our approach</a>
+        <a href="#work">Our work</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#why">Why Alma</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:hello@almadigitalservices.com">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get started</h5>
+        <a href="#book">Book a strategy call</a>
+        <a href="mailto:hello@almadigitalservices.com">hello@almadigitalservices.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Alma Digital Services. All rights reserved.</span>
+      <span>Concierge websites &middot; Built by senior designers &middot; Delivered in days</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
