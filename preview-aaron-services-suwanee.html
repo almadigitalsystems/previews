@@ -12,133 +12,142 @@ html{scroll-behavior:smooth}
 body{font-family:'Source Sans 3',sans-serif;color:#1c2733;background:#fdfbf6;line-height:1.65}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
+.skip-link{position:absolute;left:-9999px;top:0;background:#0f3a2e;color:#fdfbf6;padding:12px 18px;border-radius:0 0 4px 0;font-weight:700;z-index:100}
+.skip-link:focus{left:0;outline:3px solid #e2b25f;outline-offset:0}
+:focus-visible{outline:3px solid #e2b25f;outline-offset:2px}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 .preview-banner{background:#0f3a2e;color:#fdfbf6;padding:11px 20px;text-align:center;font-size:14px;font-weight:600}
 .topbar{background:#0f3a2e;color:#cdd9d2;padding:9px 0;font-size:13px}
 .topbar-row{display:flex;justify-content:space-between;align-items:center}
 .topbar a{color:#cdd9d2;margin-left:18px}
-.topbar a:hover{color:#fdfbf6}
+.topbar a:hover,.topbar a:focus{color:#fdfbf6;text-decoration:underline}
 .topbar .left{display:flex;gap:24px}
-.topbar .left span{display:flex;align-items:center;gap:6px}
+.topbar .left span,.topbar .left a{display:flex;align-items:center;gap:6px}
 nav{background:#fdfbf6;border-bottom:1px solid #e7e0cf;position:sticky;top:0;z-index:30}
 .nav-row{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
 .brand-block{display:flex;align-items:center;gap:14px}
 .brand-mark{width:54px;height:54px;background:linear-gradient(135deg,#0f3a2e 0%,#1c5f4a 100%);color:#e2b25f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bitter',serif;font-weight:800;font-size:24px;letter-spacing:-1px}
 .brand-text{font-family:'Bitter',serif}
 .brand-text strong{display:block;font-size:22px;color:#0f3a2e;font-weight:800;letter-spacing:-.3px;line-height:1}
-.brand-text span{font-size:11px;color:#647166;letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+.brand-text span{font-size:11px;color:#3d4d3f;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
 .nav-links{display:flex;gap:32px}
 .nav-links a{color:#3d4d3f;font-size:15px;font-weight:600}
-.nav-links a:hover{color:#0f3a2e}
+.nav-links a:hover,.nav-links a:focus{color:#0f3a2e;text-decoration:underline}
 .nav-cta{background:#e2b25f;color:#0f3a2e;padding:13px 26px;border-radius:4px;font-weight:700;font-size:14px;border:2px solid #e2b25f;transition:background .2s}
-.nav-cta:hover{background:#cf9a3f}
+.nav-cta:hover,.nav-cta:focus{background:#cf9a3f}
 .hero{background:linear-gradient(135deg,#0f3a2e 0%,#143d34 50%,#1f4f3f 100%);color:#fdfbf6;padding:0;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(226,178,95,.15) 0%,transparent 60%);pointer-events:none}
 .hero-content{padding:130px 0 100px;text-align:center;position:relative;z-index:1}
 .kicker{display:inline-block;background:rgba(226,178,95,.15);color:#e2b25f;padding:8px 18px;border:1px solid rgba(226,178,95,.3);border-radius:4px;font-size:13px;font-weight:600;letter-spacing:.5px;margin-bottom:24px;text-transform:uppercase}
 .hero h1{font-family:'Bitter',serif;font-size:clamp(40px,5.6vw,68px);color:#fdfbf6;line-height:1.08;letter-spacing:-1px;margin-bottom:24px;max-width:880px;margin-left:auto;margin-right:auto;font-weight:800}
 .hero h1 em{color:#e2b25f;font-style:normal}
-.hero p{font-size:19px;color:#cdd9d2;max-width:580px;margin:0 auto 38px}
+.hero p{font-size:19px;color:#e7eee9;max-width:580px;margin:0 auto 38px}
 .cta{display:inline-flex;align-items:center;gap:10px;background:#e2b25f;color:#0f3a2e;padding:18px 40px;border-radius:4px;font-weight:700;font-size:16px;transition:background .2s,transform .2s}
-.cta:hover{background:#cf9a3f;transform:translateY(-2px)}
-.cta.secondary{background:transparent;color:#fdfbf6;border:2px solid rgba(255,255,255,.3);margin-left:14px}
-.cta.secondary:hover{background:rgba(255,255,255,.1);border-color:#fdfbf6}
+.cta:hover,.cta:focus{background:#cf9a3f;transform:translateY(-2px)}
+.cta.secondary{background:transparent;color:#fdfbf6;border:2px solid rgba(255,255,255,.5);margin-left:14px}
+.cta.secondary:hover,.cta.secondary:focus{background:rgba(255,255,255,.1);border-color:#fdfbf6}
 .trust-band{background:#0a2a21;padding:32px 0;border-top:1px solid rgba(255,255,255,.06)}
-.trust-row{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap;color:#cdd9d2;font-size:14px;font-weight:500;letter-spacing:.5px}
+.trust-row{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap;color:#e7eee9;font-size:14px;font-weight:500;letter-spacing:.5px}
 .trust-row span{display:flex;align-items:center;gap:8px}
 .trust-row strong{color:#e2b25f;font-family:'Bitter',serif;font-size:18px}
 section{padding:90px 0}
 .section-head{text-align:center;margin-bottom:60px;max-width:680px;margin-left:auto;margin-right:auto}
 .section-head .kicker{background:rgba(15,58,46,.08);color:#0f3a2e;border-color:rgba(15,58,46,.2);margin-left:auto;margin-right:auto;display:block;width:fit-content;margin-bottom:20px}
 .section-head h2{font-family:'Bitter',serif;font-size:42px;color:#0f3a2e;letter-spacing:-.5px;font-weight:800;margin-bottom:14px}
-.section-head p{color:#647166;font-size:17px}
+.section-head p{color:#3d4d3f;font-size:17px}
 .about{background:#fdfbf6}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.about-img{background:linear-gradient(135deg,#0f3a2e 0%,#1c5f4a 100%);height:480px;border-radius:8px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:36px;color:#fdfbf6}
-.about-img::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 30% 70%,rgba(226,178,95,.2) 0%,transparent 60%)}
-.about-img-label{position:relative;z-index:1}
+.about-img{background:linear-gradient(135deg,#0f3a2e 0%,#1c5f4a 100%);height:auto;border-radius:8px;position:relative;overflow:hidden;display:block;padding:0;color:#fdfbf6}
+.about-img-wrap{position:relative;z-index:1;padding:0}
+.about-img-label{padding:36px;color:#fdfbf6}
 .about-img-label .badge{display:inline-block;background:#e2b25f;color:#0f3a2e;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:4px;margin-bottom:14px}
-.about-img-label h3{font-family:'Bitter',serif;font-size:30px;line-height:1.2;font-weight:800;margin-bottom:8px}
-.about-img-label p{color:#cdd9d2;font-size:14px}
+.about-img-label h3{font-family:'Bitter',serif;font-size:24px;line-height:1.3;font-weight:800;margin-bottom:8px;color:#fdfbf6}
+.about-img-label .quote-attribution{color:#e7eee9;font-size:14px}
 .about-text h2{font-family:'Bitter',serif;font-size:38px;color:#0f3a2e;letter-spacing:-.5px;font-weight:800;margin-bottom:18px}
 .about-text p{color:#3d4d3f;font-size:16px;margin-bottom:14px}
 .about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
 .stat{padding:20px;background:#f5efde;border-radius:6px;border-left:3px solid #e2b25f}
 .stat strong{display:block;font-size:30px;color:#0f3a2e;font-family:'Bitter',serif;font-weight:800;line-height:1}
-.stat span{display:block;color:#647166;font-size:13px;text-transform:uppercase;letter-spacing:.8px;margin-top:6px}
+.stat span{display:block;color:#3d4d3f;font-size:13px;text-transform:uppercase;letter-spacing:.8px;margin-top:6px;font-weight:600}
 .services{background:#f5efde;border-top:1px solid #e7e0cf;border-bottom:1px solid #e7e0cf}
 .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .service{background:#fdfbf6;padding:32px 26px;border-radius:8px;border:1px solid #e7e0cf;transition:border-color .2s,transform .2s,box-shadow .2s}
 .service:hover{border-color:#0f3a2e;transform:translateY(-4px);box-shadow:0 14px 30px rgba(15,58,46,.1)}
 .service-icon{width:54px;height:54px;background:linear-gradient(135deg,#0f3a2e 0%,#1c5f4a 100%);color:#e2b25f;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
 .service h3{font-family:'Bitter',serif;font-size:18px;color:#0f3a2e;font-weight:800;margin-bottom:8px}
-.service p{color:#647166;font-size:14px}
+.service p{color:#3d4d3f;font-size:14px}
 .service ul{list-style:none;padding:0;margin-top:12px}
 .service li{font-size:13px;color:#3d4d3f;padding:3px 0}
-.service li::before{content:"✓";color:#e2b25f;font-weight:700;margin-right:8px}
+.service li::before{content:"\2713";color:#0f3a2e;font-weight:700;margin-right:8px;display:inline-block}
 .testimonials{background:#0f3a2e;color:#fdfbf6}
 .testimonials .section-head h2{color:#fdfbf6}
 .testimonials .section-head .kicker{background:rgba(226,178,95,.15);color:#e2b25f;border-color:rgba(226,178,95,.3)}
-.testimonials .section-head p{color:#cdd9d2}
+.testimonials .section-head p{color:#e7eee9}
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.test-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:32px;border-radius:8px}
+.test-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);padding:32px;border-radius:8px}
 .test-card .stars{color:#e2b25f;margin-bottom:14px;letter-spacing:2px;font-size:16px}
 .test-card p{font-size:15px;color:#fdfbf6;line-height:1.6;margin-bottom:18px;font-style:italic}
-.test-card .author{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08)}
+.test-card .author{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
 .test-card .avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#e2b25f 0%,#cf9a3f 100%);color:#0f3a2e;display:flex;align-items:center;justify-content:center;font-family:'Bitter',serif;font-weight:800;font-size:16px}
 .test-card strong{font-size:14px;color:#fdfbf6}
-.test-card .author span{color:#cdd9d2;font-size:13px}
+.test-card .author span{color:#e7eee9;font-size:13px}
 .contact{background:#fdfbf6}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .contact-card{padding:42px;background:#f5efde;border-radius:8px;border:1px solid #e7e0cf}
 .contact-card h3{font-family:'Bitter',serif;font-size:32px;color:#0f3a2e;font-weight:800;margin-bottom:14px}
-.contact-card p{color:#3d4d3f;font-size:16px;margin-bottom:32px}
+.contact-card > p{color:#3d4d3f;font-size:16px;margin-bottom:32px}
 .contact-list{list-style:none}
-.contact-list li{padding:16px 0;border-bottom:1px solid #e7e0cf;display:flex;align-items:center;gap:16px}
+.contact-list li{padding:16px 0;border-bottom:1px solid #d4ccb6;display:flex;align-items:center;gap:16px}
 .contact-list li:last-child{border-bottom:none}
 .contact-list .icon-wrap{width:42px;height:42px;background:#0f3a2e;color:#e2b25f;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
-.contact-list .label{display:block;font-size:11px;color:#647166;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:2px}
+.contact-list .label{display:block;font-size:11px;color:#3d4d3f;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:2px}
 .contact-list .val{display:block;font-size:15px;color:#0f3a2e;font-weight:600}
+.contact-list a.val:hover,.contact-list a.val:focus{text-decoration:underline}
 form{background:#fdfbf6;padding:36px;border-radius:8px;border:1px solid #e7e0cf}
 form h3{font-family:'Bitter',serif;font-size:26px;color:#0f3a2e;font-weight:800;margin-bottom:6px}
-form .form-sub{color:#647166;font-size:14px;margin-bottom:24px}
-form label{display:block;color:#3d4d3f;font-size:13px;font-weight:600;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
-form input,form textarea,form select{width:100%;background:#fdfbf6;border:1px solid #d4ccb6;color:#1c2733;padding:13px 16px;border-radius:4px;font-family:inherit;font-size:15px;margin-bottom:16px;transition:border-color .2s,background .2s}
-form input:focus,form textarea:focus,form select:focus{outline:none;border-color:#0f3a2e;background:#f5efde}
+form .form-sub{color:#3d4d3f;font-size:14px;margin-bottom:24px}
+form label{display:block;color:#1c2733;font-size:13px;font-weight:700;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+form input,form textarea,form select{width:100%;background:#fdfbf6;border:1px solid #8a8270;color:#1c2733;padding:13px 16px;border-radius:4px;font-family:inherit;font-size:15px;margin-bottom:16px;transition:border-color .2s,background .2s}
+form input::placeholder,form textarea::placeholder{color:#5a6660;opacity:1}
+form input:focus,form textarea:focus,form select:focus{outline:none;border-color:#0f3a2e;background:#f5efde;box-shadow:0 0 0 3px rgba(15,58,46,.18)}
 form textarea{min-height:100px;resize:vertical}
 form button{width:100%;background:#0f3a2e;color:#fdfbf6;border:none;padding:16px;border-radius:4px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit;letter-spacing:.5px;transition:background .2s}
-form button:hover{background:#143d34}
-footer{background:#0a2a21;color:#cdd9d2;padding:48px 0 28px;font-size:13px}
+form button:hover,form button:focus{background:#143d34}
+.form-status{margin-top:14px;padding:12px 14px;border-radius:4px;background:#e8f3ee;color:#0f3a2e;border:1px solid #0f3a2e;font-weight:600;font-size:14px}
+.form-status[hidden]{display:none}
+footer{background:#0a2a21;color:#e7eee9;padding:48px 0 28px;font-size:13px}
 footer .container{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;align-items:start}
 footer .brand-block{justify-content:flex-start}
 footer h4{font-family:'Bitter',serif;font-size:16px;color:#e2b25f;font-weight:800;margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px}
 footer ul{list-style:none}
-footer li{padding:4px 0;font-size:14px}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:36px;padding-top:24px;text-align:center;color:#7d9088;grid-column:1 / -1}
+footer li{padding:4px 0;font-size:14px;color:#e7eee9}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:24px;text-align:center;color:#cdd9d2;grid-column:1 / -1}
 .footer-bottom a{color:#e2b25f}
+.footer-bottom a:hover,.footer-bottom a:focus{text-decoration:underline}
 @media(max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.nav-links{display:none}.about-grid,.contact-grid,.test-grid,.services-grid{grid-template-columns:1fr}footer .container{grid-template-columns:1fr}.trust-row{gap:24px}.topbar-row{flex-direction:column;gap:8px}}
 </style>
 </head>
 <body>
-<div class="preview-banner">⚡ Custom website preview built by Alma Digital Services for Aaron Services • This is what your new site could look like</div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="preview-banner" role="note"><span aria-hidden="true">⚡ </span>Custom website preview built by Alma Digital Services for Aaron Services • This is what your new site could look like</div>
 <div class="topbar">
   <div class="container topbar-row">
     <div class="left">
-      <a href="tel:+17709453453" style="color:inherit">📞 (770) 945-3453</a>
-      <a href="mailto:customerservice@chooseaaronplumbing.com" style="color:inherit">📧 customerservice@chooseaaronplumbing.com</a>
+      <a href="tel:+17709453453" aria-label="Call Aaron Services at 770-945-3453"><span aria-hidden="true">📞</span> (770) 945-3453</a>
+      <a href="mailto:customerservice@chooseaaronplumbing.com" aria-label="Email customer service at customerservice@chooseaaronplumbing.com"><span aria-hidden="true">📧</span> customerservice@chooseaaronplumbing.com</a>
     </div>
     <div>
-      <span>🕒 Mon–Sat 7am–7pm • 24/7 Emergency</span>
+      <span><span aria-hidden="true">🕒</span> Mon–Sat 7am–7pm • 24/7 Emergency</span>
     </div>
   </div>
 </div>
-<nav>
+<nav aria-label="Primary">
   <div class="container nav-row">
-    <div class="brand-block">
-      <div class="brand-mark">A</div>
+    <a href="#main-content" class="brand-block" aria-label="Aaron Services — go to main content">
+      <div class="brand-mark" aria-hidden="true">A</div>
       <div class="brand-text"><strong>Aaron Services</strong><span>Plumbing • HVAC • Electrical</span></div>
-    </div>
+    </a>
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#about">The Aaron family</a>
@@ -148,14 +157,15 @@ footer li{padding:4px 0;font-size:14px}
     <a class="nav-cta" href="#contact">Schedule Service</a>
   </div>
 </nav>
+<main id="main-content">
 <header class="hero">
   <div class="container hero-content">
     <span class="kicker">Family-Owned Since 1979 • Suwanee, GA</span>
     <h1>Atlanta's <em>most trusted</em> home services team for nearly 50 years.</h1>
     <p>Three generations of licensed plumbers, HVAC techs, and master electricians serving Suwanee and the north Atlanta metro. One call, one company, every system in your home.</p>
     <div>
-      <a class="cta" href="#contact">Schedule a Service Visit →</a>
-      <a class="cta secondary" href="tel:+17709453453">Call (770) 945-3453</a>
+      <a class="cta" href="#contact">Schedule a Service Visit <span aria-hidden="true">→</span></a>
+      <a class="cta secondary" href="tel:+17709453453" aria-label="Call Aaron Services now at 770-945-3453">Call (770) 945-3453</a>
     </div>
   </div>
   <div class="trust-band">
@@ -167,66 +177,68 @@ footer li{padding:4px 0;font-size:14px}
     </div>
   </div>
 </header>
-<section id="services" class="services">
+<section id="services" class="services" aria-labelledby="services-heading">
   <div class="container">
     <div class="section-head">
       <span class="kicker">Full home services</span>
-      <h2>One call. Every system in your home.</h2>
+      <h2 id="services-heading">One call. Every system in your home.</h2>
       <p>From a clogged drain to a full HVAC replacement to a panel upgrade — Aaron Services handles it all under one roof.</p>
     </div>
     <div class="services-grid">
-      <div class="service"><div class="service-icon">🔧</div><h3>Plumbing</h3><p>Residential plumbing for the north Atlanta metro.</p><ul><li>Drain cleaning & repair</li><li>Water heater install</li><li>Slab leak repair</li><li>Repipe & sewer line</li></ul></div>
-      <div class="service"><div class="service-icon">❄️</div><h3>Heating & Cooling</h3><p>HVAC repair, replacement, and maintenance.</p><ul><li>A/C repair & install</li><li>Furnace & heat pump</li><li>Mini-split systems</li><li>Annual tune-ups</li></ul></div>
-      <div class="service"><div class="service-icon">⚡</div><h3>Electrical</h3><p>Licensed master electrician on every job.</p><ul><li>Panel upgrades (200A)</li><li>EV charger install</li><li>Whole-home rewires</li><li>Generator install</li></ul></div>
-      <div class="service"><div class="service-icon">🏠</div><h3>Indoor Air Quality</h3><p>Cleaner air for your Atlanta home.</p><ul><li>Whole-home filtration</li><li>UV air purifiers</li><li>Humidifier install</li><li>Duct cleaning</li></ul></div>
+      <div class="service"><div class="service-icon" aria-hidden="true">🔧</div><h3>Plumbing</h3><p>Residential plumbing for the north Atlanta metro.</p><ul><li>Drain cleaning &amp; repair</li><li>Water heater install</li><li>Slab leak repair</li><li>Repipe &amp; sewer line</li></ul></div>
+      <div class="service"><div class="service-icon" aria-hidden="true">❄️</div><h3>Heating &amp; Cooling</h3><p>HVAC repair, replacement, and maintenance.</p><ul><li>A/C repair &amp; install</li><li>Furnace &amp; heat pump</li><li>Mini-split systems</li><li>Annual tune-ups</li></ul></div>
+      <div class="service"><div class="service-icon" aria-hidden="true">⚡</div><h3>Electrical</h3><p>Licensed master electrician on every job.</p><ul><li>Panel upgrades (200A)</li><li>EV charger install</li><li>Whole-home rewires</li><li>Generator install</li></ul></div>
+      <div class="service"><div class="service-icon" aria-hidden="true">🏠</div><h3>Indoor Air Quality</h3><p>Cleaner air for your Atlanta home.</p><ul><li>Whole-home filtration</li><li>UV air purifiers</li><li>Humidifier install</li><li>Duct cleaning</li></ul></div>
     </div>
   </div>
 </section>
-<section id="about" class="about">
+<section id="about" class="about" aria-labelledby="about-heading">
   <div class="container">
     <div class="about-grid">
       <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=1400&q=80&auto=format&fit=crop" alt="Aaron Services three-generation family team — plumbers, HVAC, and master electricians serving north Atlanta" loading="lazy" style="width:100%;border-radius:14px;display:block" />
-        <div class="about-img-label" style="margin-top:24px">
+        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=1400&q=80&auto=format&fit=crop" alt="Aaron Services three-generation family team — plumbers, HVAC, and master electricians serving north Atlanta" loading="lazy" style="width:100%;border-radius:8px 8px 0 0;display:block" />
+        <div class="about-img-label">
           <span class="badge">Since 1979</span>
-          <h3>"My grandfather started Aaron Services with one truck and one promise: do the work right, charge what's fair."</h3>
-          <p>— Aaron Bennett III, Third-Generation Owner</p>
+          <blockquote>
+            <h3>"My grandfather started Aaron Services with one truck and one promise: do the work right, charge what's fair."</h3>
+            <p class="quote-attribution">— Aaron Bennett III, Third-Generation Owner</p>
+          </blockquote>
         </div>
       </div>
       <div class="about-text">
         <span class="kicker">The Aaron family</span>
-        <h2>Three generations of doing it right.</h2>
+        <h2 id="about-heading">Three generations of doing it right.</h2>
         <p>Aaron Services was founded by Aaron Bennett Sr. in 1979, started as a small plumbing shop out of a single truck. By the late '80s, his son Aaron Jr. had added HVAC. Today, his grandson runs the company and added master electrical service in 2018 — making us the only fully-licensed three-trade home service company in Suwanee.</p>
         <p>What hasn't changed across all three generations: a written estimate before any work begins, a 1-year warranty on every repair, and a master tradesperson on every single job. No exceptions, no surprise charges, no upsells.</p>
-        <div class="about-stats">
+        <dl class="about-stats">
           <div class="stat"><strong>47</strong><span>Years in business</span></div>
           <div class="stat"><strong>3</strong><span>Generations of family</span></div>
           <div class="stat"><strong>2,800+</strong><span>5-star reviews</span></div>
           <div class="stat"><strong>$0</strong><span>Diagnostic fee</span></div>
-        </div>
+        </dl>
       </div>
     </div>
   </div>
 </section>
-<section id="reviews" class="testimonials">
+<section id="reviews" class="testimonials" aria-labelledby="reviews-heading">
   <div class="container">
     <div class="section-head">
       <span class="kicker">Real Reviews</span>
-      <h2>What Atlanta neighbors say</h2>
+      <h2 id="reviews-heading">What Atlanta neighbors say</h2>
       <p>Three generations of trust — built one job at a time.</p>
     </div>
     <div class="test-grid">
-      <div class="test-card"><div class="stars">★★★★★</div><p>"Came out at 11pm on a Sunday for a burst pipe. Charged us the regular rate, not the emergency rate. Forty years a customer for a reason."</p><div class="author"><div class="avatar">J</div><div><strong>Jim H.</strong><br /><span>Suwanee, GA</span></div></div></div>
-      <div class="test-card"><div class="stars">★★★★★</div><p>"Aaron's team replaced our HVAC, water heater, and panel — all in the same week. Three different crews, all professional, no surprises on the final bill. The whole package."</p><div class="author"><div class="avatar">S</div><div><strong>Sandra M.</strong><br /><span>Cumming, GA</span></div></div></div>
-      <div class="test-card"><div class="stars">★★★★★</div><p>"My grandparents used Aaron Services back in the '80s. My parents used them. Now we use them. Three generations of trust on both sides — that says it all."</p><div class="author"><div class="avatar">D</div><div><strong>Derek K.</strong><br /><span>Alpharetta, GA</span></div></div></div>
+      <article class="test-card"><div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div><p>"Came out at 11pm on a Sunday for a burst pipe. Charged us the regular rate, not the emergency rate. Forty years a customer for a reason."</p><div class="author"><div class="avatar" aria-hidden="true">J</div><div><strong>Jim H.</strong><br /><span>Suwanee, GA</span></div></div></article>
+      <article class="test-card"><div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div><p>"Aaron's team replaced our HVAC, water heater, and panel — all in the same week. Three different crews, all professional, no surprises on the final bill. The whole package."</p><div class="author"><div class="avatar" aria-hidden="true">S</div><div><strong>Sandra M.</strong><br /><span>Cumming, GA</span></div></div></article>
+      <article class="test-card"><div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div><p>"My grandparents used Aaron Services back in the '80s. My parents used them. Now we use them. Three generations of trust on both sides — that says it all."</p><div class="author"><div class="avatar" aria-hidden="true">D</div><div><strong>Derek K.</strong><br /><span>Alpharetta, GA</span></div></div></article>
     </div>
   </div>
 </section>
-<section id="contact" class="contact">
+<section id="contact" class="contact" aria-labelledby="contact-heading">
   <div class="container">
     <div class="section-head">
       <span class="kicker">Get in touch</span>
-      <h2>Schedule a free estimate today</h2>
+      <h2 id="contact-heading">Schedule a free estimate today</h2>
       <p>We answer the phone, we show up on time, and we tell you the price before we touch a tool.</p>
     </div>
     <div class="contact-grid">
@@ -234,45 +246,54 @@ footer li{padding:4px 0;font-size:14px}
         <h3>Reach the Aaron team</h3>
         <p>Free quotes, same-day appointments most weekdays, 24/7 emergency response.</p>
         <ul class="contact-list">
-          <li><div class="icon-wrap">📞</div><div><span class="label">Phone</span><a href="tel:+17709453453" class="val">(770) 945-3453</a></div></li>
-          <li><div class="icon-wrap">📧</div><div><span class="label">Email</span><a href="mailto:customerservice@chooseaaronplumbing.com" class="val">customerservice@chooseaaronplumbing.com</a></div></li>
-          <li><div class="icon-wrap">📍</div><div><span class="label">Service Area</span><span class="val">Suwanee, Cumming, Alpharetta, Roswell, Duluth, Johns Creek, Atlanta</span></div></li>
-          <li><div class="icon-wrap">⏰</div><div><span class="label">Hours</span><span class="val">Mon–Sat 7am–7pm • 24/7 Emergency</span></div></li>
-          <li><div class="icon-wrap">🆔</div><div><span class="label">License</span><span class="val">GA Master Plumber, HVAC, Electrical • Fully Insured</span></div></li>
+          <li><div class="icon-wrap" aria-hidden="true">📞</div><div><span class="label">Phone</span><a href="tel:+17709453453" class="val">(770) 945-3453</a></div></li>
+          <li><div class="icon-wrap" aria-hidden="true">📧</div><div><span class="label">Email</span><a href="mailto:customerservice@chooseaaronplumbing.com" class="val">customerservice@chooseaaronplumbing.com</a></div></li>
+          <li><div class="icon-wrap" aria-hidden="true">📍</div><div><span class="label">Service Area</span><span class="val">Suwanee, Cumming, Alpharetta, Roswell, Duluth, Johns Creek, Atlanta</span></div></li>
+          <li><div class="icon-wrap" aria-hidden="true">⏰</div><div><span class="label">Hours</span><span class="val">Mon–Sat 7am–7pm • 24/7 Emergency</span></div></li>
+          <li><div class="icon-wrap" aria-hidden="true">🆔</div><div><span class="label">License</span><span class="val">GA Master Plumber, HVAC, Electrical • Fully Insured</span></div></li>
         </ul>
       </div>
-      <form onsubmit="event.preventDefault();alert('Thanks — we will call you within 30 minutes.')">
-        <h3>Schedule service</h3>
+      <form id="schedule-form" novalidate aria-labelledby="form-heading" onsubmit="event.preventDefault();var s=document.getElementById('form-status');s.hidden=false;s.focus();">
+        <h3 id="form-heading">Schedule service</h3>
         <p class="form-sub">Tell us how we can help and we'll be in touch within 30 minutes during business hours.</p>
-        <label>Your name</label>
-        <input type="text" placeholder="Jane Doe" required />
-        <label>Phone</label>
-        <input type="tel" placeholder="Your phone number" required />
-        <label>Service needed</label>
-        <select required><option value="">Select a service…</option><option>Plumbing</option><option>Heating & Cooling</option><option>Electrical</option><option>Multiple services</option><option>Other / not sure</option></select>
-        <label>Project details</label>
-        <textarea placeholder="Brief description…" required></textarea>
+        <label for="name-field">Your name</label>
+        <input id="name-field" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required />
+        <label for="phone-field">Phone</label>
+        <input id="phone-field" name="phone" type="tel" placeholder="Your phone number" autocomplete="tel" required />
+        <label for="service-field">Service needed</label>
+        <select id="service-field" name="service" required>
+          <option value="">Select a service…</option>
+          <option value="plumbing">Plumbing</option>
+          <option value="hvac">Heating &amp; Cooling</option>
+          <option value="electrical">Electrical</option>
+          <option value="multiple">Multiple services</option>
+          <option value="other">Other / not sure</option>
+        </select>
+        <label for="details-field">Project details</label>
+        <textarea id="details-field" name="details" placeholder="Brief description…" required></textarea>
         <button type="submit">Schedule Service</button>
+        <div id="form-status" class="form-status" role="status" tabindex="-1" hidden>Thanks — we will call you within 30 minutes.</div>
       </form>
     </div>
   </div>
 </section>
+</main>
 <footer>
   <div class="container">
     <div>
-      <div class="brand-block" style="margin-bottom:18px"><div class="brand-mark">A</div><div class="brand-text"><strong style="color:#fdfbf6">Aaron Services</strong><span style="color:#7d9088">Plumbing • HVAC • Electrical</span></div></div>
-      <p>Suwanee, GA • Licensed Georgia Master Plumber, HVAC, & Electrical Contractor since 1979.</p>
+      <div class="brand-block" style="margin-bottom:18px"><div class="brand-mark" aria-hidden="true">A</div><div class="brand-text"><strong style="color:#fdfbf6">Aaron Services</strong><span style="color:#cdd9d2">Plumbing • HVAC • Electrical</span></div></div>
+      <p>Suwanee, GA • Licensed Georgia Master Plumber, HVAC, &amp; Electrical Contractor since 1979.</p>
     </div>
-    <div>
+    <nav aria-label="Footer services">
       <h4>Services</h4>
-      <ul><li>Plumbing</li><li>Heating & Cooling</li><li>Electrical</li><li>Indoor Air Quality</li><li>24/7 Emergency</li></ul>
-    </div>
-    <div>
+      <ul><li>Plumbing</li><li>Heating &amp; Cooling</li><li>Electrical</li><li>Indoor Air Quality</li><li>24/7 Emergency</li></ul>
+    </nav>
+    <nav aria-label="Footer service area">
       <h4>Service Area</h4>
       <ul><li>Suwanee</li><li>Cumming</li><li>Alpharetta</li><li>Roswell</li><li>Duluth</li><li>Johns Creek</li></ul>
-    </div>
+    </nav>
     <div class="footer-bottom">
-      <p>© 2026 Aaron Services • Licensed Georgia Master Plumber, HVAC, & Electrical Contractor</p>
+      <p>© 2026 Aaron Services • Licensed Georgia Master Plumber, HVAC, &amp; Electrical Contractor</p>
       <p style="margin-top:8px">Custom website preview built by <a href="https://almadigitalservices.com">Alma Digital Services</a></p>
     </div>
   </div>
