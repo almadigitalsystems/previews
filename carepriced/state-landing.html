@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Skilled Nursing Costs in North Carolina (2026) — Carepriced</title>
+<meta name="description" content="State median $8,500/mo across 418 facilities. Time-stamped, source-cited, per-facility cost data for skilled nursing in North Carolina." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Skilled Nursing Cost Calculator — North Carolina",
+  "applicationCategory": "FinancialApplication",
+  "dateModified": "2026-05-06",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "6800",
+    "highPrice": "11200",
+    "offerCount": "418"
+  },
+  "areaServed": { "@type": "State", "name": "North Carolina" }
+}
+</script>
+<style>
+:root{
+  --bg-page:#fafaf7;
+  --bg-surface:#ffffff;
+  --bg-elevated:#f5f3ec;
+  --ink-1:#0d1b2a;
+  --ink-2:#3d4a5c;
+  --ink-3:#6b7280;
+  --ink-4:#94a3b8;
+  --border:#e7e3da;
+  --border-strong:#cbd5e1;
+  --accent:#9a3412;
+  --accent-hover:#7c2d12;
+  --accent-soft:#fde7d3;
+  --positive:#15803d;
+  --positive-soft:#dcfce7;
+  --caution:#92400e;
+  --caution-soft:#fef3c7;
+  --shadow-sm:0 1px 2px rgba(15,23,42,.04);
+  --radius-sm:6px;
+  --radius-md:10px;
+  --radius-lg:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--bg-page);
+  color:var(--ink-1);
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"tnum","ss01";
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+.tnum{font-variant-numeric:tabular-nums}
+/* ---- Header ---- */
+.site-header{
+  border-bottom:1px solid var(--border);
+  background:var(--bg-surface);
+}
+.header-inner{
+  max-width:1120px;margin:0 auto;padding:18px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{
+  font-family:'Newsreader',Georgia,serif;
+  font-weight:600;font-size:22px;letter-spacing:-.01em;
+  color:var(--ink-1);display:flex;align-items:center;gap:10px;
+}
+.logo-mark{
+  width:28px;height:28px;border-radius:6px;
+  background:linear-gradient(135deg,#9a3412 0,#0d1b2a 100%);
+  display:inline-block;
+}
+.nav{display:flex;gap:28px;font-size:14px;color:var(--ink-2)}
+.nav a{color:var(--ink-2);font-weight:500}
+/* ---- Container ---- */
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+/* ---- Breadcrumb ---- */
+.breadcrumb{
+  font-size:13px;color:var(--ink-3);padding:18px 0 8px;
+  font-weight:500;
+}
+.breadcrumb a{color:var(--ink-3)}
+.breadcrumb .sep{margin:0 8px;color:var(--ink-4)}
+/* ---- Hero ---- */
+.hero{padding:24px 0 40px;border-bottom:1px solid var(--border)}
+.dateline{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;margin-bottom:14px;
+}
+.dateline .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin:0 8px 1px 0;vertical-align:middle}
+h1{
+  font-family:'Newsreader',Georgia,serif;
+  font-weight:600;font-size:48px;line-height:1.08;
+  letter-spacing:-.02em;margin:0 0 18px;color:var(--ink-1);
+}
+.subhead{
+  font-size:18px;color:var(--ink-2);max-width:680px;line-height:1.55;
+  margin:0 0 22px;
+}
+.subhead .pipe{color:var(--ink-4);margin:0 8px}
+/* ---- Data quality badge ---- */
+.dq-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 12px 6px 10px;border-radius:999px;
+  background:var(--caution-soft);color:var(--caution);
+  font-size:12px;font-weight:600;letter-spacing:.01em;
+  border:1px solid #f5d28a;cursor:help;
+}
+.dq-badge.v1{background:var(--positive-soft);color:var(--positive);border-color:#a7e3bd}
+.dq-dot{width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block}
+.dq-tooltip{
+  font-size:12px;color:var(--ink-3);margin-top:8px;font-weight:400;
+}
+/* ---- Stat cards ---- */
+.stats-row{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;
+}
+.stat-card{
+  background:var(--bg-surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+  padding:24px 22px 20px;
+}
+.stat-label{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;margin-bottom:8px;
+}
+.stat-value{
+  font-family:'Newsreader',Georgia,serif;
+  font-weight:600;font-size:38px;line-height:1.05;
+  color:var(--ink-1);letter-spacing:-.015em;
+  font-variant-numeric:tabular-nums;
+}
+.stat-value .unit{font-size:18px;color:var(--ink-2);font-weight:500;margin-left:4px}
+.stat-foot{font-size:12px;color:var(--ink-3);margin-top:12px;line-height:1.4}
+.cite{
+  display:inline-block;font-size:10px;background:var(--bg-elevated);
+  border:1px solid var(--border);color:var(--ink-2);
+  padding:2px 7px;border-radius:4px;font-weight:600;
+  vertical-align:middle;margin-left:4px;
+}
+sup.cite{font-size:10px;padding:1px 5px;border-radius:3px}
+/* ---- Section ---- */
+section{padding:56px 0;border-bottom:1px solid var(--border)}
+section:last-of-type{border-bottom:none}
+.section-eyebrow{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);font-weight:700;margin-bottom:12px;
+}
+h2{
+  font-family:'Newsreader',Georgia,serif;
+  font-weight:600;font-size:32px;line-height:1.15;
+  letter-spacing:-.015em;margin:0 0 8px;color:var(--ink-1);
+}
+.section-intro{font-size:16px;color:var(--ink-2);max-width:640px;margin:0 0 28px}
+/* ---- Calculator embed (placeholder iframe-style block) ---- */
+.calc-embed{
+  background:linear-gradient(180deg,#fff 0%,#fafaf7 100%);
+  border:1px solid var(--border);border-radius:var(--radius-lg);
+  padding:36px 32px;
+}
+.calc-grid{
+  display:grid;grid-template-columns:1fr 380px;gap:36px;align-items:start;
+}
+.calc-form .field{margin-bottom:22px}
+.calc-form label{
+  display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:700;margin-bottom:8px;
+}
+.calc-form .step{
+  font-size:11px;color:var(--accent);font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;margin-right:8px;
+}
+.calc-form input[type=text],.calc-form select{
+  width:100%;padding:11px 14px;font:inherit;font-size:15px;color:var(--ink-1);
+  background:#fff;border:1px solid var(--border-strong);border-radius:var(--radius-sm);
+  outline:none;transition:border-color .15s,box-shadow .15s;
+}
+.calc-form input[type=text]:focus,.calc-form select:focus{
+  border-color:var(--accent);box-shadow:0 0 0 3px rgba(154,52,18,.12);
+}
+.radio-row{display:flex;flex-direction:column;gap:10px}
+.radio-row label{
+  display:flex;align-items:center;gap:10px;padding:11px 14px;
+  border:1px solid var(--border-strong);border-radius:var(--radius-sm);
+  cursor:pointer;font-size:14px;color:var(--ink-1);font-weight:500;
+  text-transform:none;letter-spacing:0;background:#fff;
+}
+.radio-row label:hover{border-color:var(--accent);background:#fffbf6}
+.radio-row input[type=radio]{accent-color:var(--accent)}
+.radio-row .lvl-mult{
+  margin-left:auto;font-size:12px;color:var(--ink-3);
+  font-variant-numeric:tabular-nums;font-weight:600;
+}
+/* Estimate panel */
+.estimate-panel{
+  background:var(--ink-1);color:#fff;border-radius:var(--radius-lg);
+  padding:30px 28px;position:sticky;top:24px;
+}
+.est-label{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:#cdd6e0;font-weight:600;margin-bottom:14px;
+}
+.est-monthly{
+  font-family:'Newsreader',Georgia,serif;
+  font-weight:600;font-size:54px;line-height:1;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;
+}
+.est-monthly .unit{font-size:18px;color:#cdd6e0;font-weight:500;margin-left:6px}
+.est-row{font-size:14px;color:#cdd6e0;margin-top:14px;line-height:1.4;font-variant-numeric:tabular-nums}
+.est-row .v{color:#fff;font-weight:600}
+.est-divider{height:1px;background:rgba(255,255,255,.1);margin:18px 0}
+.est-cite{font-size:12px;color:#9aa6b3;line-height:1.5}
+.est-cite a{color:#f5d3ba;text-decoration:underline;text-decoration-color:rgba(245,211,186,.4)}
+.est-actions{display:flex;flex-direction:column;gap:8px;margin-top:18px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:space-between;
+  padding:11px 16px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;
+  text-decoration:none;transition:all .15s;
+}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);text-decoration:none;color:#fff}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.18)}
+.btn-ghost:hover{background:rgba(255,255,255,.06);text-decoration:none;color:#fff}
+.btn .arrow{margin-left:8px}
+.dq-badge.on-dark{background:rgba(254,243,199,.12);color:#fde0a3;border-color:rgba(245,210,138,.3)}
+/* ---- Operator browser ---- */
+.op-controls{
+  display:flex;align-items:center;gap:14px;margin-bottom:20px;
+  padding:14px 18px;background:var(--bg-surface);
+  border:1px solid var(--border);border-radius:var(--radius-md);
+  flex-wrap:wrap;
+}
+.op-controls .ctrl-label{font-size:12px;color:var(--ink-3);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-right:4px}
+.op-controls input[type=text],.op-controls select{
+  padding:8px 12px;font:inherit;font-size:14px;color:var(--ink-1);
+  background:#fff;border:1px solid var(--border-strong);border-radius:var(--radius-sm);
+}
+.op-controls .filler{flex:1}
+.op-controls .count{font-size:13px;color:var(--ink-3);font-weight:500}
+.op-controls .count strong{color:var(--ink-1);font-weight:600}
+/* Operator list */
+.op-list{display:grid;grid-template-columns:1fr;gap:0}
+.op-card{
+  display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+  padding:18px 22px;border:1px solid var(--border);background:var(--bg-surface);
+  border-radius:0;border-bottom-width:0;
+  transition:background .12s,border-color .12s;
+}
+.op-card:first-child{border-top-left-radius:var(--radius-md);border-top-right-radius:var(--radius-md)}
+.op-card:last-child{border-bottom-width:1px;border-bottom-left-radius:var(--radius-md);border-bottom-right-radius:var(--radius-md)}
+.op-card:hover{background:#fffaf3;cursor:pointer}
+.op-card .op-name{
+  font-family:'Newsreader',Georgia,serif;font-weight:600;
+  font-size:19px;color:var(--ink-1);letter-spacing:-.005em;
+  margin-bottom:3px;line-height:1.25;
+}
+.op-card .op-loc{font-size:13px;color:var(--ink-3);font-weight:500}
+.op-card .op-loc .ccn{margin-left:8px;font-size:12px;color:var(--ink-4)}
+.op-rate{text-align:right}
+.op-rate .rate-val{
+  font-family:'Newsreader',Georgia,serif;font-weight:600;
+  font-size:24px;color:var(--ink-1);letter-spacing:-.01em;
+  font-variant-numeric:tabular-nums;line-height:1;
+}
+.op-rate .rate-label{font-size:11px;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-top:5px}
+.op-rate .rate-arrow{font-size:14px;color:var(--accent);margin-left:8px;font-weight:600}
+.pagination{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:20px;font-size:13px;color:var(--ink-3);
+}
+.page-btn{
+  padding:7px 14px;border:1px solid var(--border-strong);background:#fff;
+  border-radius:var(--radius-sm);font-size:13px;color:var(--ink-1);
+  font-weight:600;cursor:pointer;
+}
+.page-btn:hover{border-color:var(--accent);color:var(--accent)}
+/* ---- Methodology ---- */
+.method{
+  background:var(--bg-elevated);border:1px solid var(--border);
+  border-radius:var(--radius-md);padding:24px 26px;
+}
+.method summary{
+  cursor:pointer;font-weight:600;font-size:16px;color:var(--ink-1);
+  list-style:none;display:flex;align-items:center;gap:10px;
+}
+.method summary::-webkit-details-marker{display:none}
+.method summary::before{content:"+";font-size:20px;color:var(--accent);font-weight:600;width:18px;display:inline-block}
+.method[open] summary::before{content:"–"}
+.method ul{margin:18px 0 0 0;padding-left:20px;color:var(--ink-2);font-size:15px}
+.method li{margin-bottom:8px}
+/* ---- How families pay (Priority 3 link block) ---- */
+.bridge{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+}
+.bridge a{
+  display:block;padding:22px 24px;border:1px solid var(--border);
+  background:var(--bg-surface);border-radius:var(--radius-md);
+  text-decoration:none;transition:border-color .15s,transform .12s;
+}
+.bridge a:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+.bridge .b-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px}
+.bridge .b-title{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:18px;color:var(--ink-1);margin-bottom:6px;letter-spacing:-.005em}
+.bridge .b-desc{font-size:13px;color:var(--ink-3);line-height:1.5}
+/* ---- Related ---- */
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.related-list{list-style:none;padding:0;margin:12px 0 0}
+.related-list li{padding:8px 0;border-bottom:1px solid var(--border);font-size:15px}
+.related-list li:last-child{border-bottom:none}
+.related-list a{font-weight:500}
+/* ---- Sources block ---- */
+.sources{font-size:13px;color:var(--ink-3);line-height:1.6;padding-top:18px;margin-top:24px;border-top:1px solid var(--border)}
+.sources ol{padding-left:20px;margin:8px 0}
+.sources li{margin-bottom:6px}
+.sources li a{color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--border-strong)}
+/* ---- Footer ---- */
+footer{
+  background:#0d1b2a;color:#cdd6e0;padding:48px 0 36px;margin-top:0;
+  font-size:14px;
+}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.foot-grid h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#fff;font-weight:600;margin:0 0 14px}
+.foot-grid ul{list-style:none;padding:0;margin:0}
+.foot-grid li{margin-bottom:8px}
+.foot-grid a{color:#9aa6b3;font-weight:400}
+.foot-grid a:hover{color:#fff;text-decoration:none}
+.foot-bottom{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:12px;color:#7e8a99}
+.foot-logo .logo{color:#fff;margin-bottom:14px}
+.foot-blurb{font-size:13px;color:#9aa6b3;line-height:1.55;max-width:320px}
+
+/* ---- Mobile ---- */
+@media (max-width:880px){
+  h1{font-size:34px}
+  h2{font-size:26px}
+  .stats-row{grid-template-columns:1fr;gap:12px}
+  .stat-value{font-size:32px}
+  .calc-grid{grid-template-columns:1fr;gap:24px}
+  .estimate-panel{position:static}
+  .est-monthly{font-size:42px}
+  .bridge{grid-template-columns:1fr}
+  .related-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .nav{display:none}
+  .header-inner{padding:14px 20px}
+  .wrap{padding:0 20px}
+  .op-card{grid-template-columns:1fr;gap:8px}
+  .op-rate{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo"><span class="logo-mark"></span>Carepriced</a>
+    <nav class="nav">
+      <a href="/calculator/">Cost calculators</a>
+      <a href="/care-types/">Care types</a>
+      <a href="/financial-aid/">How families pay</a>
+      <a href="/about/">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="breadcrumb">
+    <a href="/calculator/">Senior Care</a><span class="sep">›</span>
+    <a href="/calculator/skilled-nursing/">Skilled Nursing</a><span class="sep">›</span>
+    North Carolina
+  </div>
+
+  <section class="hero" style="border-bottom:none;padding-bottom:0">
+    <div class="dateline"><span class="dot"></span>Last updated May 6, 2026 · Refreshed monthly</div>
+    <h1>Skilled Nursing Costs<br/>in North Carolina, 2026</h1>
+    <p class="subhead">
+      Median monthly cost across <strong>418 facilities</strong> in North Carolina, sourced from
+      Genworth/CareScout 2024<sup class="cite">1</sup> with metro-tier adjustments by ZIP.
+      <span class="pipe">|</span> State median <strong>$8,500/mo</strong>.
+    </p>
+    <div class="dq-badge" title="v0 estimate uses state median + metro tier multiplier. Will upgrade to per-facility CMS cost-report data in Phase 1-full.">
+      <span class="dq-dot"></span> State-anchored estimate · last verified May 6, 2026
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-label">State median</div>
+        <div class="stat-value tnum">$8,500<span class="unit">/mo</span></div>
+        <div class="stat-foot">Genworth/CareScout 2024 NC SNF median<sup class="cite">1</sup></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Range</div>
+        <div class="stat-value tnum">$6,800–$11,200</div>
+        <div class="stat-foot">Low to high across all 418 facilities, before level-of-care adjustments</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Facilities</div>
+        <div class="stat-value tnum">418</div>
+        <div class="stat-foot">Across 4 metro tiers (A–D), all 100 NC counties</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section id="estimate">
+    <div class="section-eyebrow">Cost calculator</div>
+    <h2>Estimate your skilled nursing cost</h2>
+    <p class="section-intro">
+      Enter a ZIP or pick a facility for a facility-specific estimate; otherwise we'll show the
+      North Carolina state median. All math is shown — no marketing fluff.
+    </p>
+
+    <div class="calc-embed">
+      <div class="calc-grid">
+        <div class="calc-form">
+
+          <div class="field">
+            <label><span class="step">Step 1</span> Where in NC?</label>
+            <input type="text" id="zip" placeholder="ZIP code (e.g. 27209)" inputmode="numeric" maxlength="5" />
+          </div>
+
+          <div class="field">
+            <label><span class="step">Step 2</span> Pick a facility (optional)</label>
+            <select id="operator">
+              <option value="">All NC facilities — show state median</option>
+              <option value="biscoe" data-median="7800" data-low="6250" data-high="10300" data-tier="D-rural" data-city="Biscoe">Autumn Care Of Biscoe — Biscoe ($7,800)</option>
+              <option value="durham" data-median="8900" data-low="7100" data-high="11800" data-tier="A-metro" data-city="Durham">Hillcrest Convalescent — Durham ($8,900)</option>
+              <option value="raleigh" data-median="9200" data-low="7400" data-high="12100" data-tier="A-metro" data-city="Raleigh">Sunrise of North Raleigh — Raleigh ($9,200)</option>
+              <option value="charlotte" data-median="9400" data-low="7600" data-high="12500" data-tier="A-metro" data-city="Charlotte">Brookdale Charlotte East — Charlotte ($9,400)</option>
+              <option value="asheville" data-median="8700" data-low="6900" data-high="11500" data-tier="B-mid" data-city="Asheville">Aston Park Health Care — Asheville ($8,700)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label><span class="step">Step 3</span> Level of care needed</label>
+            <div class="radio-row">
+              <label><input type="radio" name="level" value="1.0" checked /> Standard care<span class="lvl-mult">× 1.00</span></label>
+              <label><input type="radio" name="level" value="1.15" /> Higher needs (mobility / ADL help)<span class="lvl-mult">× 1.15</span></label>
+              <label><input type="radio" name="level" value="1.40" /> Memory care / extensive ADL<span class="lvl-mult">× 1.40</span></label>
+            </div>
+          </div>
+        </div>
+
+        <aside class="estimate-panel">
+          <div class="est-label">Your estimate</div>
+          <div class="est-monthly tnum"><span id="estMonthly">$8,500</span><span class="unit">/mo</span></div>
+          <div class="est-row">Range <span class="v" id="estRange">$6,800 – $11,200</span></div>
+          <div class="est-row">Annual <span class="v tnum" id="estAnnual">$102,000</span></div>
+          <div class="est-divider"></div>
+          <div class="dq-badge on-dark" id="dqBadge">
+            <span class="dq-dot"></span> State-anchored estimate
+          </div>
+          <div class="est-cite" id="estCite" style="margin-top:10px">
+            Source: Genworth/CareScout 2024 NC state median<sup class="cite">1</sup>.
+            <span id="tierLine">No facility selected — using state median path.</span>
+          </div>
+          <div class="est-actions">
+            <a href="#" class="btn btn-primary" id="viewFacility" style="display:none">View facility details <span class="arrow">→</span></a>
+            <a href="#operator-browser" class="btn btn-ghost">Compare nearby <span class="arrow">→</span></a>
+            <a href="/financial-aid/" class="btn btn-ghost">How families pay <span class="arrow">→</span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPERATOR BROWSER ============ -->
+  <section id="operator-browser">
+    <div class="section-eyebrow">418 facilities</div>
+    <h2>Find a facility near you</h2>
+    <p class="section-intro">
+      All 418 skilled nursing facilities in North Carolina, sortable by median monthly cost.
+      Click any facility for a full cost breakdown, level-of-care projections, and source citations.
+    </p>
+
+    <div class="op-controls">
+      <span class="ctrl-label">City</span>
+      <input type="text" placeholder="Filter by city…" style="width:220px" />
+      <span class="ctrl-label">Sort</span>
+      <select style="width:200px">
+        <option>Median ↓ (highest first)</option>
+        <option>Median ↑ (lowest first)</option>
+        <option>Name A–Z</option>
+      </select>
+      <span class="filler"></span>
+      <span class="count">Showing <strong>1–8</strong> of <strong>418</strong></span>
+    </div>
+
+    <div class="op-list">
+      <a class="op-card" href="/calculator/skilled-nursing/north-carolina/autumn-care-biscoe/">
+        <div>
+          <div class="op-name">Autumn Care Of Biscoe</div>
+          <div class="op-loc">Biscoe, NC 27209 <span class="ccn">CCN 345000</span></div>
+        </div>
+        <div class="op-rate">
+          <div class="rate-val">$7,800<span style="font-size:14px;color:var(--ink-3);font-weight:500"> /mo</span></div>
+          <div class="rate-label">Median <span class="rate-arrow">→</span></div>
+        </div>
+      </a>
+      <a class="op-card" href="#">
+        <div>
+          <div class="op-name">Hillcrest Convalescent Center</div>
+          <div class="op-loc">Durham, NC 27705 <span class="ccn">CCN 345112</span></div>
+        </div>
+        <div class="op-rate">
+          <div class="rate-val">$8,900<span style="font-size:14px;color:var(--ink-3);font-weight:500"> /mo</span></div>
+          <div class="rate-label">Median <span class="rate-arrow">→</span></div>
+        </div>
+      </a>
+      <a class="op-card" href="#">
+        <div>
+          <div class="op-name">Sunrise of North Raleigh</div>
+          <div class="op-loc">Raleigh, NC 27615 <span class="ccn">CCN 345224</span></div>
+        </div>
+        <div class="op-rate">
+          <div class="rate-val">$9,200<span style="font-size:14px;color:var(--ink-3);font-weight:500"> /mo</span></div>
+          <div class="rate-label">Median <span class="rate-arrow">→</span></div>
+        </div>
+      </a>
+      <a class="op-card" href="#">
+        <div>
+          <div class="op-name">Brookdale Charlotte East</div>
+          <div class="op-loc">Charlotte, NC 28212 <span class="ccn">CCN 345318</span></div>
+        </div>
+        <div class="op-rate">
+          <div class="rate-val">$9,400<span style="font-size:14px;color:var(--ink-3);font-weight:500"> /mo</span></div>
+          <div class="rate-label">Median <span class="rate-arrow">→</span></div>
+        </div>
+      </a>
+      <a class="op-card" href="#">
+        <div>
+          <div class="op-name">Aston Park Health Care</div>
+          <div class="op-loc">Asheville, NC 28803 <span class="ccn">CCN 345402</span></div>
+        </div>
+        <div class="op-rate">
+          <div class="rate-val">$8,700<span style="font-size:14px;color:var(--ink-3);font-weight:500"> /mo</span></div>
+          <div class="rate-label">Median <span class="rate-arrow">→</span></div>
+        </div>
+      </a>
+      <a class="op-card" href="#">
+        <div>
+          <div class="op-name">Pruitt Health — Greensboro</div>
+          <div class="op-loc">Greensboro, NC 27408 <span class="ccn">CCN 345516</span></div>
+        </div>
+        <div class="op-rate">
+          <div class="rate-val">$8,400<span style="font-size:14px;color:var(--ink-3);font-weight:500"> /mo</span></div>
+          <div class="rate-label">Median <span class="rate-arrow">→</span></div>
+        </div>
+      </a>
+      <a class="op-card" href="#">
+        <div>
+          <div class="op-name">The Carolina Inn at Winston-Salem</div>
+          <div class="op-loc">Winston-Salem, NC 27103 <span class="ccn">CCN 345628</span></div>
+        </div>
+        <div class="op-rate">
+          <div class="rate-val">$8,200<span style="font-size:14px;color:var(--ink-3);font-weight:500"> /mo</span></div>
+          <div class="rate-label">Median <span class="rate-arrow">→</span></div>
+        </div>
+      </a>
+      <a class="op-card" href="#">
+        <div>
+          <div class="op-name">Liberty Commons Nursing Center</div>
+          <div class="op-loc">Wilmington, NC 28403 <span class="ccn">CCN 345744</span></div>
+        </div>
+        <div class="op-rate">
+          <div class="rate-val">$8,100<span style="font-size:14px;color:var(--ink-3);font-weight:500"> /mo</span></div>
+          <div class="rate-label">Median <span class="rate-arrow">→</span></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pagination">
+      <span>Page 1 of 53</span>
+      <div style="display:flex;gap:8px">
+        <button class="page-btn" disabled style="opacity:.4;cursor:not-allowed">← Prev</button>
+        <button class="page-btn">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW FAMILIES PAY ============ -->
+  <section>
+    <div class="section-eyebrow">Priority 3 · Financial aid</div>
+    <h2>How families pay for skilled nursing</h2>
+    <p class="section-intro">
+      The average NC family covers SNF costs through a mix of programs. We've researched the rules
+      so you don't have to navigate VA.gov or carrier marketing copy alone.
+    </p>
+    <div class="bridge">
+      <a href="/financial-aid/va-aid-attendance/">
+        <div class="b-label">Veteran benefit</div>
+        <div class="b-title">VA Aid &amp; Attendance</div>
+        <div class="b-desc">Up to $2,727/mo for veterans needing daily assistance. Eligibility, monthly amount, application walkthrough.</div>
+      </a>
+      <a href="/financial-aid/medicaid-waivers/north-carolina/">
+        <div class="b-label">Public coverage</div>
+        <div class="b-title">NC Medicaid waivers (HCBS)</div>
+        <div class="b-desc">North Carolina's Community Alternatives Programs cover SNF-level care for qualifying low-asset households.</div>
+      </a>
+      <a href="/financial-aid/long-term-care-insurance/">
+        <div class="b-label">Private coverage</div>
+        <div class="b-title">Long-term care insurance</div>
+        <div class="b-desc">Filing a claim on a parent's existing policy — what to pull, who to call, how reimbursements work.</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ METHODOLOGY ============ -->
+  <section>
+    <div class="section-eyebrow">Methodology</div>
+    <h2>How we sourced this data</h2>
+    <p class="section-intro">
+      Carepriced doesn't take operator advertising and isn't a referral marketplace. Every number on this page
+      is sourced and dated. Here's exactly how the v0 estimate is computed.
+    </p>
+    <details class="method" open>
+      <summary>v0 — State-anchored estimate methodology</summary>
+      <ul>
+        <li><strong>State median anchor:</strong> Genworth/CareScout Cost of Care Survey 2024, North Carolina SNF private room.</li>
+        <li><strong>Metro tier multipliers:</strong> Tier A (Charlotte/Raleigh-Durham/Triad metro) = 1.15× · Tier B (mid-size MSAs) = 1.05× · Tier C (small metro) = 1.00× · Tier D (rural) = 0.92×.</li>
+        <li><strong>Per-facility low/high range:</strong> Derived from tier-adjusted state range bands (low = state low × tier, high = state high × tier).</li>
+        <li><strong>Per-record citation:</strong> Every operator detail page lists its sources, retrieval date, and any inferences applied.</li>
+        <li><strong>Phase 1-full upgrade:</strong> Once we ingest CMS Form 2540-24 cost reports per facility (target Q3 2026), badges flip from "state-anchored estimate" to "per-facility cost report" with filing references.</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- ============ RELATED ============ -->
+  <section>
+    <div class="section-eyebrow">Related</div>
+    <h2>Compare across care types &amp; states</h2>
+    <div class="related-grid" style="margin-top:24px">
+      <div>
+        <div class="stat-label" style="margin-bottom:8px">Other care types in NC</div>
+        <ul class="related-list">
+          <li><a href="/calculator/assisted-living/north-carolina/">Assisted living in North Carolina</a> · State median $5,200/mo</li>
+          <li><a href="/calculator/memory-care/north-carolina/">Memory care in North Carolina</a> · State median $6,800/mo</li>
+          <li><a href="/calculator/independent-living/north-carolina/">Independent living in North Carolina</a> · State median $3,400/mo</li>
+          <li><a href="/calculator/home-care/north-carolina/">Home care in North Carolina</a> · $26/hr median</li>
+        </ul>
+      </div>
+      <div>
+        <div class="stat-label" style="margin-bottom:8px">Skilled nursing — neighboring states</div>
+        <ul class="related-list">
+          <li><a href="/calculator/skilled-nursing/south-carolina/">South Carolina</a> · State median $8,100/mo (–4.7%)</li>
+          <li><a href="/calculator/skilled-nursing/virginia/">Virginia</a> · State median $9,400/mo (+10.6%)</li>
+          <li><a href="/calculator/skilled-nursing/tennessee/">Tennessee</a> · State median $7,900/mo (–7.1%)</li>
+          <li><a href="/calculator/skilled-nursing/georgia/">Georgia</a> · State median $8,200/mo (–3.5%)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sources">
+      <div class="stat-label" style="margin-bottom:6px">Sources</div>
+      <ol>
+        <li id="src1">Genworth Financial / CareScout. <em>Cost of Care Survey 2024.</em> North Carolina skilled nursing private room median. Retrieved May 6, 2026. <a href="#">View source</a></li>
+        <li id="src2">CMS Provider Data Catalog. <em>Provider of Services File (POS), Q1 2026.</em> Facility addresses, CCNs, ownership. <a href="#">View source</a></li>
+        <li id="src3">U.S. Census Bureau. <em>2020 Decennial Census, Urban Areas (UA) program.</em> Used to assign Carepriced metro tiers (A–D). <a href="#">View source</a></li>
+      </ol>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-logo">
+        <div class="logo"><span class="logo-mark"></span>Carepriced</div>
+        <p class="foot-blurb">Senior care cost data, time-stamped and sourced. We don't take operator advertising and we're not a referral marketplace.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculator/skilled-nursing/">Skilled nursing</a></li>
+          <li><a href="/calculator/memory-care/">Memory care</a></li>
+          <li><a href="/calculator/assisted-living/">Assisted living</a></li>
+          <li><a href="/calculator/home-care/">Home care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pay for care</h4>
+        <ul>
+          <li><a href="/financial-aid/va-aid-attendance/">VA Aid &amp; Attendance</a></li>
+          <li><a href="/financial-aid/medicaid-waivers/">Medicaid waivers</a></li>
+          <li><a href="/financial-aid/long-term-care-insurance/">LTC insurance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/sources/">Data sources</a></li>
+          <li><a href="/about/">About Carepriced</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Carepriced · Last data refresh: May 6, 2026 · Next refresh: June 1, 2026
+    </div>
+  </div>
+</footer>
+
+<script>
+// --- Calculator math (locked spec §3) ---
+const stateMedian = 8500, stateLow = 6800, stateHigh = 11200;
+const opSel = document.getElementById('operator');
+const lvls = document.getElementsByName('level');
+const estMonthly = document.getElementById('estMonthly');
+const estRange = document.getElementById('estRange');
+const estAnnual = document.getElementById('estAnnual');
+const dqBadge = document.getElementById('dqBadge');
+const tierLine = document.getElementById('tierLine');
+const viewFacility = document.getElementById('viewFacility');
+const fmt = v => '$' + (v||0).toLocaleString('en-US');
+
+function recompute(){
+  const opt = opSel.options[opSel.selectedIndex];
+  const hasOp = !!opt.value;
+  let lvl = 1.0;
+  for (const r of lvls) if (r.checked) lvl = parseFloat(r.value);
+  let base, low, high;
+  if (hasOp) {
+    base = parseInt(opt.dataset.median,10);
+    low = parseInt(opt.dataset.low,10);
+    high = parseInt(opt.dataset.high,10);
+  } else {
+    base = stateMedian; low = stateLow; high = stateHigh;
+  }
+  const monthly = Math.round(base * lvl);
+  const lowV = Math.round(low * lvl);
+  const highV = Math.round(high * lvl);
+  const annual = monthly * 12;
+  estMonthly.textContent = fmt(monthly);
+  estRange.textContent = fmt(lowV) + ' – ' + fmt(highV);
+  estAnnual.textContent = fmt(annual);
+  if (hasOp) {
+    dqBadge.classList.remove('v1');
+    dqBadge.innerHTML = '<span class="dq-dot"></span> State-anchored estimate · ' + opt.text.split(' — ')[0];
+    tierLine.innerHTML = 'Tier <strong>' + opt.dataset.tier + '</strong> applied to ' + opt.dataset.city + '.';
+    viewFacility.style.display = 'inline-flex';
+    viewFacility.href = '/calculator/skilled-nursing/north-carolina/' + opt.value + '/?level=' + (lvl===1?'standard':lvl===1.15?'higher':'memory');
+  } else {
+    dqBadge.innerHTML = '<span class="dq-dot"></span> State-anchored estimate';
+    tierLine.textContent = 'No facility selected — using state median path.';
+    viewFacility.style.display = 'none';
+  }
+}
+opSel.addEventListener('change', recompute);
+for (const r of lvls) r.addEventListener('change', recompute);
+recompute();
+</script>
+</body>
+</html>
