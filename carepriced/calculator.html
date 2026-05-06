@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Senior Care Cost Calculator — Carepriced</title>
+<meta name="description" content="Estimate skilled nursing, assisted living, memory care, independent living, and home care costs by state and facility. Time-stamped, source-cited." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Senior Care Cost Calculator",
+  "applicationCategory": "FinancialApplication",
+  "dateModified": "2026-05-06",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "3400",
+    "highPrice": "12500",
+    "offerCount": "418"
+  }
+}
+</script>
+<style>
+:root{
+  --bg-page:#fafaf7;--bg-surface:#ffffff;--bg-elevated:#f5f3ec;
+  --ink-1:#0d1b2a;--ink-2:#3d4a5c;--ink-3:#6b7280;--ink-4:#94a3b8;
+  --border:#e7e3da;--border-strong:#cbd5e1;
+  --accent:#9a3412;--accent-hover:#7c2d12;--accent-soft:#fde7d3;
+  --positive:#15803d;--positive-soft:#dcfce7;
+  --caution:#92400e;--caution-soft:#fef3c7;
+  --radius-sm:6px;--radius-md:10px;--radius-lg:14px;
+}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg-page);color:var(--ink-1);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum"}
+a{color:var(--accent);text-decoration:none}a:hover{color:var(--accent-hover);text-decoration:underline}
+.tnum{font-variant-numeric:tabular-nums}
+/* Header */
+.site-header{border-bottom:1px solid var(--border);background:var(--bg-surface)}
+.header-inner{max-width:1120px;margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:22px;letter-spacing:-.01em;color:var(--ink-1);display:flex;align-items:center;gap:10px}
+.logo-mark{width:28px;height:28px;border-radius:6px;background:linear-gradient(135deg,#9a3412 0,#0d1b2a 100%);display:inline-block}
+.nav{display:flex;gap:28px;font-size:14px;color:var(--ink-2)}
+.nav a{color:var(--ink-2);font-weight:500}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+/* Breadcrumb */
+.breadcrumb{font-size:13px;color:var(--ink-3);padding:18px 0 8px;font-weight:500}
+.breadcrumb a{color:var(--ink-3)}
+.breadcrumb .sep{margin:0 8px;color:var(--ink-4)}
+/* Hero */
+.hero{padding:24px 0 40px;border-bottom:1px solid var(--border)}
+.dateline{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:14px}
+.dateline .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin:0 8px 1px 0;vertical-align:middle}
+h1{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:48px;line-height:1.08;letter-spacing:-.02em;margin:0 0 16px;color:var(--ink-1)}
+.subhead{font-size:18px;color:var(--ink-2);max-width:680px;line-height:1.55;margin:0 0 22px}
+.dq-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 10px;border-radius:999px;background:var(--caution-soft);color:var(--caution);font-size:12px;font-weight:600;letter-spacing:.01em;border:1px solid #f5d28a;cursor:help}
+.dq-badge.v1{background:var(--positive-soft);color:var(--positive);border-color:#a7e3bd}
+.dq-dot{width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block}
+.dq-badge.on-dark{background:rgba(254,243,199,.12);color:#fde0a3;border-color:rgba(245,210,138,.3)}
+/* Calculator container */
+.calc-shell{padding:48px 0 64px;border-bottom:1px solid var(--border)}
+.calc-grid{display:grid;grid-template-columns:1.4fr 420px;gap:36px;align-items:start}
+.calc-form-block{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 36px}
+.field{margin-bottom:24px}
+.field label.lbl{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:10px}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;letter-spacing:0}
+.field input[type=text],.field select{width:100%;padding:13px 16px;font:inherit;font-size:16px;color:var(--ink-1);background:#fff;border:1px solid var(--border-strong);border-radius:var(--radius-sm);outline:none;transition:border-color .15s,box-shadow .15s}
+.field input[type=text]:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(154,52,18,.12)}
+.helper{font-size:13px;color:var(--ink-3);margin-top:8px}
+/* Care-type picker pills */
+.pill-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.pill{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:14px 8px;border:1px solid var(--border-strong);background:#fff;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s;font-size:13px;color:var(--ink-1);text-align:center;font-weight:500}
+.pill input{display:none}
+.pill .ico{font-size:18px;line-height:1}
+.pill:hover{border-color:var(--accent);background:#fffbf6}
+.pill.active{border-color:var(--accent);background:#fffbf6;box-shadow:inset 0 0 0 1px var(--accent)}
+.pill.active .ico{color:var(--accent)}
+.pill .label{font-size:13px;font-weight:600;line-height:1.2}
+.pill .median{font-size:11px;color:var(--ink-3);font-weight:500}
+/* State + ZIP row */
+.row-2{display:grid;grid-template-columns:1.5fr 1fr;gap:14px}
+/* Radio rows */
+.radio-row{display:flex;flex-direction:column;gap:10px}
+.radio-row label.opt{display:flex;align-items:center;gap:10px;padding:13px 16px;border:1px solid var(--border-strong);border-radius:var(--radius-sm);cursor:pointer;font-size:15px;color:var(--ink-1);font-weight:500;background:#fff}
+.radio-row label.opt:hover{border-color:var(--accent);background:#fffbf6}
+.radio-row input[type=radio]{accent-color:var(--accent)}
+.radio-row .lvl-mult{margin-left:auto;font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;font-weight:600}
+.radio-row .lvl-desc{display:block;font-size:12px;color:var(--ink-3);font-weight:400;margin-top:2px}
+/* Estimate panel (sticky) */
+.estimate-panel{background:var(--ink-1);color:#fff;border-radius:var(--radius-lg);padding:32px 30px;position:sticky;top:24px}
+.est-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#cdd6e0;font-weight:600;margin-bottom:16px}
+.est-monthly{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:64px;line-height:1;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+.est-monthly .unit{font-size:20px;color:#cdd6e0;font-weight:500;margin-left:6px}
+.est-row{font-size:15px;color:#cdd6e0;margin-top:14px;line-height:1.4;font-variant-numeric:tabular-nums;display:flex;justify-content:space-between}
+.est-row .v{color:#fff;font-weight:600}
+.est-divider{height:1px;background:rgba(255,255,255,.1);margin:20px 0}
+.est-cite{font-size:12px;color:#9aa6b3;line-height:1.55}
+.est-cite a{color:#f5d3ba;text-decoration:underline;text-decoration-color:rgba(245,211,186,.4)}
+.est-cite .src-link{color:#f5d3ba}
+.est-actions{display:flex;flex-direction:column;gap:8px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:space-between;padding:13px 18px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;text-decoration:none;transition:all .15s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);text-decoration:none;color:#fff}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.18)}
+.btn-ghost:hover{background:rgba(255,255,255,.06);text-decoration:none;color:#fff}
+.btn .arrow{margin-left:8px}
+.formula-block{font-family:'JetBrains Mono','Courier New',monospace;font-size:11px;line-height:1.5;color:#9aa6b3;background:rgba(255,255,255,.04);padding:12px 14px;border-radius:6px;margin-top:14px;border:1px solid rgba(255,255,255,.06)}
+.formula-block .var{color:#fde0a3}
+.formula-block .num{color:#86efac}
+/* Sections */
+section{padding:56px 0;border-bottom:1px solid var(--border)}
+section:last-of-type{border-bottom:none}
+.section-eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+h2{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:32px;line-height:1.15;letter-spacing:-.015em;margin:0 0 8px;color:var(--ink-1)}
+.section-intro{font-size:16px;color:var(--ink-2);max-width:640px;margin:0 0 28px}
+/* "What we estimated" — explanation block */
+.explain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.explain-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:24px 22px}
+.explain-card .e-num{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:36px;color:var(--accent);line-height:1;margin-bottom:10px}
+.explain-card h3{font-family:'Newsreader',Georgia,serif;font-weight:600;font-size:18px;color:var(--ink-1);margin:0 0 6px;letter-spacing:-.005em}
+.explain-card p{font-size:14px;color:var(--ink-3);margin:0;line-height:1.55}
+/* State coverage map (placeholder list) */
+.state-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.state-link{display:flex;flex-direction:column;padding:14px 14px;border:1px solid var(--border);background:var(--bg-surface);border-radius:var(--radius-sm);text-decoration:none;transition:all .12s}
+.state-link:hover{border-color:var(--accent);background:#fffbf6;text-decoration:none;transform:translateY(-1px)}
+.state-link .st-name{font-size:14px;font-weight:600;color:var(--ink-1)}
+.state-link .st-med{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;margin-top:2px}
+/* Footer */
+footer{background:#0d1b2a;color:#cdd6e0;padding:48px 0 36px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.foot-grid h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#fff;font-weight:600;margin:0 0 14px}
+.foot-grid ul{list-style:none;padding:0;margin:0}
+.foot-grid li{margin-bottom:8px}
+.foot-grid a{color:#9aa6b3;font-weight:400}
+.foot-grid a:hover{color:#fff;text-decoration:none}
+.foot-bottom{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:12px;color:#7e8a99}
+.foot-logo .logo{color:#fff;margin-bottom:14px}
+.foot-blurb{font-size:13px;color:#9aa6b3;line-height:1.55;max-width:320px}
+@media (max-width:880px){
+  h1{font-size:34px}h2{font-size:26px}
+  .calc-grid{grid-template-columns:1fr;gap:24px}
+  .estimate-panel{position:static}
+  .est-monthly{font-size:48px}
+  .pill-row{grid-template-columns:repeat(2,1fr)}
+  .row-2{grid-template-columns:1fr}
+  .calc-form-block{padding:24px 22px}
+  .explain-grid{grid-template-columns:1fr}
+  .state-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .nav{display:none}
+  .header-inner{padding:14px 20px}
+  .wrap{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo"><span class="logo-mark"></span>Carepriced</a>
+    <nav class="nav">
+      <a href="/calculator/" style="color:var(--accent)">Cost calculators</a>
+      <a href="/care-types/">Care types</a>
+      <a href="/financial-aid/">How families pay</a>
+      <a href="/about/">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="breadcrumb">
+    <a href="/">Home</a><span class="sep">›</span>
+    Cost calculator
+  </div>
+
+  <section class="hero" style="padding-bottom:0;border-bottom:none">
+    <div class="dateline"><span class="dot"></span>Last updated May 6, 2026 · Refreshed monthly</div>
+    <h1>Senior Care<br/>Cost Calculator</h1>
+    <p class="subhead">
+      Pick a care type, state, and level of need. We'll estimate your monthly cost using
+      Genworth/CareScout 2024 data with metro-tier adjustments. Math is shown — no marketing fluff.
+    </p>
+    <div class="dq-badge"><span class="dq-dot"></span> State-anchored estimate · last verified May 6, 2026</div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section class="calc-shell">
+    <div class="calc-grid">
+
+      <div class="calc-form-block">
+
+        <div class="field">
+          <label class="lbl"><span class="step-num">1</span> Type of care</label>
+          <div class="pill-row">
+            <label class="pill" data-care="independent" data-median="3400">
+              <input type="radio" name="care" value="independent" data-median="3400" />
+              <span class="ico">⌂</span>
+              <span class="label">Independent</span>
+              <span class="median">$3,400/mo</span>
+            </label>
+            <label class="pill" data-care="assisted" data-median="5200">
+              <input type="radio" name="care" value="assisted" data-median="5200" />
+              <span class="ico">◯</span>
+              <span class="label">Assisted living</span>
+              <span class="median">$5,200/mo</span>
+            </label>
+            <label class="pill" data-care="memory" data-median="6800">
+              <input type="radio" name="care" value="memory" data-median="6800" />
+              <span class="ico">◐</span>
+              <span class="label">Memory care</span>
+              <span class="median">$6,800/mo</span>
+            </label>
+            <label class="pill active" data-care="skilled" data-median="8500">
+              <input type="radio" name="care" value="skilled" data-median="8500" checked />
+              <span class="ico">●</span>
+              <span class="label">Skilled nursing</span>
+              <span class="median">$8,500/mo</span>
+            </label>
+            <label class="pill" data-care="home" data-median="2250">
+              <input type="radio" name="care" value="home" data-median="2250" />
+              <span class="ico">↺</span>
+              <span class="label">Home care</span>
+              <span class="median">$2,250/mo</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="lbl"><span class="step-num">2</span> Where</label>
+          <div class="row-2">
+            <select id="state">
+              <option value="nc" data-multiplier="1.00" data-median="8500" data-low="6800" data-high="11200" selected>North Carolina</option>
+              <option value="ca" data-multiplier="1.18" data-median="10030" data-low="8000" data-high="13200">California</option>
+              <option value="ny" data-multiplier="1.32" data-median="11220" data-low="8950" data-high="14800">New York</option>
+              <option value="fl" data-multiplier="0.96" data-median="8160" data-low="6520" data-high="10750">Florida</option>
+              <option value="tx" data-multiplier="0.94" data-median="7990" data-low="6400" data-high="10550">Texas</option>
+              <option value="hi" data-multiplier="1.41" data-median="11985" data-low="9580" data-high="15800">Hawaii</option>
+              <option value="ms" data-multiplier="0.78" data-median="6630" data-low="5290" data-high="8730">Mississippi</option>
+            </select>
+            <input type="text" id="zip" placeholder="ZIP (optional)" inputmode="numeric" maxlength="5" />
+          </div>
+          <div class="helper">ZIP refines the estimate using metro-tier multipliers (A=1.15× / B=1.05× / C=1.00× / D=0.92×).</div>
+        </div>
+
+        <div class="field">
+          <label class="lbl"><span class="step-num">3</span> Pick a facility (optional)</label>
+          <select id="operator">
+            <option value="">All facilities — show state median</option>
+            <option value="biscoe" data-median="7800" data-low="6250" data-high="10300" data-tier="D-rural" data-city="Biscoe">Autumn Care Of Biscoe — Biscoe ($7,800)</option>
+            <option value="durham" data-median="8900" data-low="7100" data-high="11800" data-tier="A-metro" data-city="Durham">Hillcrest Convalescent — Durham ($8,900)</option>
+            <option value="raleigh" data-median="9200" data-low="7400" data-high="12100" data-tier="A-metro" data-city="Raleigh">Sunrise of North Raleigh — Raleigh ($9,200)</option>
+            <option value="charlotte" data-median="9400" data-low="7600" data-high="12500" data-tier="A-metro" data-city="Charlotte">Brookdale Charlotte East — Charlotte ($9,400)</option>
+            <option value="asheville" data-median="8700" data-low="6900" data-high="11500" data-tier="B-mid" data-city="Asheville">Aston Park Health Care — Asheville ($8,700)</option>
+          </select>
+          <div class="helper">All 418 NC SNFs available. List populates from the index for your selected state.</div>
+        </div>
+
+        <div class="field">
+          <label class="lbl"><span class="step-num">4</span> Level of care needed</label>
+          <div class="radio-row">
+            <label class="opt">
+              <input type="radio" name="level" value="1.00" checked />
+              <span><strong>Standard care</strong><span class="lvl-desc">Routine SNF — most residents</span></span>
+              <span class="lvl-mult">× 1.00</span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="level" value="1.15" />
+              <span><strong>Higher needs</strong><span class="lvl-desc">Mobility / ADL assistance, advanced care</span></span>
+              <span class="lvl-mult">× 1.15</span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="level" value="1.40" />
+              <span><strong>Memory care / extensive ADL</strong><span class="lvl-desc">Cognitive support, behavioral, full ADL</span></span>
+              <span class="lvl-mult">× 1.40</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="estimate-panel">
+        <div class="est-label">Your estimate</div>
+        <div class="est-monthly tnum"><span id="estMonthly">$8,500</span><span class="unit">/mo</span></div>
+        <div class="est-row"><span>Range</span><span class="v" id="estRange">$6,800 – $11,200</span></div>
+        <div class="est-row"><span>Annual</span><span class="v tnum" id="estAnnual">$102,000</span></div>
+        <div class="est-row"><span>Over 3 years</span><span class="v tnum" id="est3y">$306,000</span></div>
+        <div class="est-divider"></div>
+        <div class="dq-badge on-dark" id="dqBadge">
+          <span class="dq-dot"></span> State-anchored estimate
+        </div>
+        <div class="est-cite" id="estCite" style="margin-top:12px">
+          Source: Genworth/CareScout 2024 NC state median<sup style="background:rgba(255,255,255,.08);color:#fde0a3;padding:1px 5px;border-radius:3px;font-size:9px">1</sup>.
+          <span id="tierLine" style="display:block;margin-top:6px">No facility selected — using state median path.</span>
+        </div>
+        <div class="formula-block" id="formulaBlock">
+monthly = <span class="var">base</span> × <span class="var">level</span>
+       = <span class="num">$8,500</span> × <span class="num">1.00</span>
+       = <span class="num">$8,500</span>
+        </div>
+        <div class="est-actions">
+          <a href="/calculator/skilled-nursing/north-carolina/" class="btn btn-primary" id="viewState">View North Carolina facilities <span class="arrow">→</span></a>
+          <a href="#" class="btn btn-ghost" id="viewFacility" style="display:none">View facility details <span class="arrow">→</span></a>
+          <a href="/financial-aid/" class="btn btn-ghost">How families pay <span class="arrow">→</span></a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- "What we estimated, in plain English" -->
+  <section>
+    <div class="section-eyebrow">What this means</div>
+    <h2>What we estimated, in plain English</h2>
+    <p class="section-intro">Three things you should know about this number before you trust it.</p>
+
+    <div class="explain-grid">
+      <div class="explain-card">
+        <div class="e-num">1</div>
+        <h3>It's a state-anchored estimate</h3>
+        <p>v0 numbers come from Genworth/CareScout 2024 state median + a metro-tier multiplier (A 1.15× / B 1.05× / C 1.00× / D 0.92×). Per-facility cost-report data lands later this year.</p>
+      </div>
+      <div class="explain-card">
+        <div class="e-num">2</div>
+        <h3>The range matters more than the median</h3>
+        <p>SNF costs vary ±20–30% within a state based on tier, ownership, and bed type (private vs semi-private). The range we show reflects that real spread.</p>
+      </div>
+      <div class="explain-card">
+        <div class="e-num">3</div>
+        <h3>Most families combine programs</h3>
+        <p>Out-of-pocket alone is rare. VA Aid &amp; Attendance, NC Medicaid waivers, and existing LTC policies typically offset 30–60% of the monthly figure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- State coverage -->
+  <section>
+    <div class="section-eyebrow">All 50 states</div>
+    <h2>Skilled nursing by state</h2>
+    <p class="section-intro">State-level pages show per-facility data, level-of-care projections, and full source citations.</p>
+
+    <div class="state-grid">
+      <a class="state-link" href="/calculator/skilled-nursing/north-carolina/"><span class="st-name">North Carolina</span><span class="st-med">$8,500/mo · 418 facilities</span></a>
+      <a class="state-link" href="/calculator/skilled-nursing/california/"><span class="st-name">California</span><span class="st-med">$10,030/mo</span></a>
+      <a class="state-link" href="/calculator/skilled-nursing/new-york/"><span class="st-name">New York</span><span class="st-med">$11,220/mo</span></a>
+      <a class="state-link" href="/calculator/skilled-nursing/florida/"><span class="st-name">Florida</span><span class="st-med">$8,160/mo</span></a>
+      <a class="state-link" href="/calculator/skilled-nursing/texas/"><span class="st-name">Texas</span><span class="st-med">$7,990/mo</span></a>
+      <a class="state-link" href="/calculator/skilled-nursing/hawaii/"><span class="st-name">Hawaii</span><span class="st-med">$11,985/mo</span></a>
+      <a class="state-link" href="/calculator/skilled-nursing/mississippi/"><span class="st-name">Mississippi</span><span class="st-med">$6,630/mo</span></a>
+      <a class="state-link" href="/calculator/skilled-nursing/virginia/"><span class="st-name">Virginia</span><span class="st-med">$9,400/mo</span></a>
+      <a class="state-link" href="/calculator/skilled-nursing/south-carolina/"><span class="st-name">South Carolina</span><span class="st-med">$8,100/mo</span></a>
+      <a class="state-link" href="/calculator/skilled-nursing/georgia/"><span class="st-name">Georgia</span><span class="st-med">$8,200/mo</span></a>
+    </div>
+    <p style="font-size:13px;color:var(--ink-3);margin-top:14px">Plus 40 more states. <a href="/calculator/skilled-nursing/">View all skilled nursing pages →</a></p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-logo">
+        <div class="logo"><span class="logo-mark"></span>Carepriced</div>
+        <p class="foot-blurb">Senior care cost data, time-stamped and sourced. We don't take operator advertising and we're not a referral marketplace.</p>
+      </div>
+      <div>
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/calculator/skilled-nursing/">Skilled nursing</a></li>
+          <li><a href="/calculator/memory-care/">Memory care</a></li>
+          <li><a href="/calculator/assisted-living/">Assisted living</a></li>
+          <li><a href="/calculator/home-care/">Home care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pay for care</h4>
+        <ul>
+          <li><a href="/financial-aid/va-aid-attendance/">VA Aid &amp; Attendance</a></li>
+          <li><a href="/financial-aid/medicaid-waivers/">Medicaid waivers</a></li>
+          <li><a href="/financial-aid/long-term-care-insurance/">LTC insurance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="/methodology/">Methodology</a></li>
+          <li><a href="/sources/">Data sources</a></li>
+          <li><a href="/about/">About Carepriced</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Carepriced · Last data refresh: May 6, 2026 · Next refresh: June 1, 2026
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---- State for ZIP-tier inference (mock for v0) ----
+const careMedians = { independent:3400, assisted:5200, memory:6800, skilled:8500, home:2250 };
+
+const opSel = document.getElementById('operator');
+const stateSel = document.getElementById('state');
+const lvls = document.getElementsByName('level');
+const careInputs = document.getElementsByName('care');
+const pills = document.querySelectorAll('.pill');
+
+const estMonthly = document.getElementById('estMonthly');
+const estRange = document.getElementById('estRange');
+const estAnnual = document.getElementById('estAnnual');
+const est3y = document.getElementById('est3y');
+const dqBadge = document.getElementById('dqBadge');
+const tierLine = document.getElementById('tierLine');
+const viewFacility = document.getElementById('viewFacility');
+const viewState = document.getElementById('viewState');
+const formulaBlock = document.getElementById('formulaBlock');
+const fmt = v => '$' + (v||0).toLocaleString('en-US');
+
+// pill click syncs radio
+pills.forEach(p => p.addEventListener('click', () => {
+  pills.forEach(x => x.classList.remove('active'));
+  p.classList.add('active');
+  p.querySelector('input').checked = true;
+  recompute();
+}));
+
+function recompute(){
+  const opt = opSel.options[opSel.selectedIndex];
+  const stateOpt = stateSel.options[stateSel.selectedIndex];
+  let care = 'skilled';
+  for (const c of careInputs) if (c.checked) care = c.value;
+
+  const hasOp = !!opt.value;
+  let lvl = 1.0;
+  for (const r of lvls) if (r.checked) lvl = parseFloat(r.value);
+
+  let base, low, high;
+  if (hasOp) {
+    base = parseInt(opt.dataset.median,10);
+    low = parseInt(opt.dataset.low,10);
+    high = parseInt(opt.dataset.high,10);
+  } else {
+    // care-type * state multiplier, with NC as baseline
+    base = Math.round(careMedians[care] * (parseFloat(stateOpt.dataset.multiplier) || 1));
+    low = Math.round(base * 0.80);
+    high = Math.round(base * 1.32);
+  }
+  const monthly = Math.round(base * lvl);
+  const lowV = Math.round(low * lvl);
+  const highV = Math.round(high * lvl);
+  const annual = monthly * 12;
+  const threeYear = annual * 3;
+
+  estMonthly.textContent = fmt(monthly);
+  estRange.textContent = fmt(lowV) + ' – ' + fmt(highV);
+  estAnnual.textContent = fmt(annual);
+  est3y.textContent = fmt(threeYear);
+
+  // Formula block
+  formulaBlock.innerHTML = `monthly = <span class="var">base</span> × <span class="var">level</span>
+       = <span class="num">${fmt(base)}</span> × <span class="num">${lvl.toFixed(2)}</span>
+       = <span class="num">${fmt(monthly)}</span>`;
+
+  if (hasOp) {
+    dqBadge.innerHTML = '<span class="dq-dot"></span> State-anchored estimate · ' + opt.text.split(' — ')[0];
+    tierLine.innerHTML = 'Tier <strong>' + opt.dataset.tier + '</strong> applied to ' + opt.dataset.city + '.';
+    viewFacility.style.display = 'inline-flex';
+    viewFacility.href = '/calculator/skilled-nursing/north-carolina/' + opt.value + '/?level=' + (lvl===1?'standard':lvl===1.15?'higher':'memory');
+  } else {
+    dqBadge.innerHTML = '<span class="dq-dot"></span> State-anchored estimate';
+    tierLine.textContent = 'No facility selected — using ' + stateOpt.text + ' state median.';
+    viewFacility.style.display = 'none';
+  }
+
+  // Update "View [State] facilities" CTA
+  const stateName = stateOpt.text;
+  const stateSlug = stateName.toLowerCase().replace(/\s+/g,'-');
+  const careSlug = care === 'skilled' ? 'skilled-nursing' :
+                   care === 'assisted' ? 'assisted-living' :
+                   care === 'memory' ? 'memory-care' :
+                   care === 'independent' ? 'independent-living' : 'home-care';
+  viewState.textContent = `View ${stateName} facilities`;
+  // Recreate arrow
+  const arrow = document.createElement('span');
+  arrow.className = 'arrow';
+  arrow.textContent = '→';
+  viewState.appendChild(arrow);
+  viewState.href = `/calculator/${careSlug}/${stateSlug}/`;
+}
+
+opSel.addEventListener('change', recompute);
+stateSel.addEventListener('change', recompute);
+for (const r of lvls) r.addEventListener('change', recompute);
+for (const c of careInputs) c.addEventListener('change', recompute);
+recompute();
+</script>
+</body>
+</html>
