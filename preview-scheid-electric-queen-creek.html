@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Scheid Electric — Queen Creek, AZ. Family-owned electrical contractor for the East Valley. Honest work, fair pricing, free estimates." />
+<title>Scheid Electric — Family-Owned Electricians in Queen Creek, AZ</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:#1f1f24;background:#faf6ee;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+.preview-banner{background:#1f3b6e;color:#faf6ee;padding:11px 20px;text-align:center;font-size:14px;font-weight:600}
+nav{background:#faf6ee;border-bottom:1px solid #e8dfc8}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.brand{font-family:'DM Serif Display',serif;font-size:26px;color:#1f3b6e;letter-spacing:-.5px}
+.nav-links{display:flex;gap:32px}
+.nav-links a{color:#3d3d44;font-size:15px;font-weight:500}
+.nav-links a:hover{color:#1f3b6e}
+.nav-cta{background:transparent;color:#1f3b6e;padding:11px 22px;border:2px solid #1f3b6e;border-radius:50px;font-weight:700;font-size:14px;transition:background .2s,color .2s}
+.nav-cta:hover{background:#1f3b6e;color:#faf6ee}
+.hero{padding:0;background:#faf6ee}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:680px}
+.hero-text{padding:80px 64px 80px 0;display:flex;flex-direction:column;justify-content:center}
+.kicker{display:inline-block;color:#1f3b6e;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px;padding-bottom:8px;border-bottom:2px solid #d4a533;width:fit-content}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(40px,5.4vw,64px);line-height:1.05;color:#1f1f24;margin-bottom:22px;letter-spacing:-1px}
+.hero h1 em{color:#1f3b6e;font-style:italic}
+.hero p{font-size:18px;color:#5d5d68;margin-bottom:32px;max-width:480px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:#1f3b6e;color:#faf6ee;padding:17px 36px;border-radius:50px;font-weight:700;font-size:15px;transition:background .2s,transform .2s;border:2px solid #1f3b6e}
+.cta:hover{background:#15294f;transform:translateY(-2px)}
+.cta.outline{background:transparent;color:#1f3b6e;margin-left:14px}
+.hero-image{background:linear-gradient(135deg,#1f3b6e 0%,#0c1d3d 100%);position:relative;display:flex;align-items:center;justify-content:center;padding:60px;overflow:hidden}
+.hero-image::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(212,165,51,.18) 0%,transparent 50%);pointer-events:none}
+.feature-card{background:#faf6ee;padding:36px;border-radius:18px;max-width:380px;position:relative;z-index:1;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.feature-card .badge{display:inline-block;background:#d4a533;color:#1f1f24;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:14px}
+.feature-card h3{font-family:'DM Serif Display',serif;font-size:26px;color:#1f1f24;line-height:1.2;margin-bottom:14px}
+.feature-card p{color:#5d5d68;font-size:15px;margin-bottom:18px}
+.feature-card .author{display:flex;align-items:center;gap:14px;padding-top:18px;border-top:1px solid #e8dfc8}
+.feature-card .avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#d4a533 0%,#a88126 100%);display:flex;align-items:center;justify-content:center;color:#1f1f24;font-weight:700;font-size:18px;font-family:'DM Serif Display',serif}
+.feature-card .author-info strong{display:block;font-size:14px;color:#1f1f24}
+.feature-card .author-info span{font-size:13px;color:#5d5d68}
+section{padding:90px 0}
+.section-head{text-align:center;margin-bottom:60px;max-width:680px;margin-left:auto;margin-right:auto}
+.section-head .kicker{margin-left:auto;margin-right:auto;display:block;width:fit-content}
+.section-head h2{font-family:'DM Serif Display',serif;font-size:42px;color:#1f1f24;letter-spacing:-.5px;margin-bottom:14px}
+.section-head p{color:#5d5d68;font-size:17px}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.service{background:#fff;padding:36px;border-radius:18px;border:1px solid #e8dfc8;transition:border-color .2s,box-shadow .2s,transform .2s}
+.service:hover{border-color:#1f3b6e;box-shadow:0 14px 40px rgba(31,59,110,.1);transform:translateY(-4px)}
+.service-icon{width:54px;height:54px;background:rgba(31,59,110,.08);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
+.service h3{font-family:'DM Serif Display',serif;font-size:22px;color:#1f1f24;margin-bottom:10px}
+.service p{color:#5d5d68;font-size:15px}
+.values{background:#1f3b6e;color:#faf6ee}
+.values .section-head h2{color:#faf6ee}
+.values .section-head p{color:#bcc4d2}
+.values .section-head .kicker{color:#d4a533;border-color:#d4a533}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.value{text-align:center}
+.value-num{font-family:'DM Serif Display',serif;font-size:48px;color:#d4a533;display:block;margin-bottom:14px;line-height:1}
+.value h3{font-family:'DM Serif Display',serif;font-size:24px;margin-bottom:10px;color:#faf6ee}
+.value p{color:#bcc4d2;font-size:15px}
+.testimonials{background:#fff}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.test-card{padding:28px;background:#faf6ee;border-radius:14px;border:1px solid #e8dfc8}
+.test-card .stars{color:#d4a533;margin-bottom:12px;font-size:16px;letter-spacing:1.5px}
+.test-card p{font-size:15px;color:#3d3d44;margin-bottom:18px;font-style:italic;line-height:1.6}
+.test-card .author{display:flex;align-items:center;gap:12px;font-size:14px}
+.test-card .avatar-sm{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#d4a533 0%,#a88126 100%);display:flex;align-items:center;justify-content:center;color:#1f1f24;font-weight:700;font-size:14px}
+.test-card strong{color:#1f1f24}
+.test-card .author span{color:#5d5d68}
+.contact{background:#faf6ee;border-top:1px solid #e8dfc8}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.contact-card{background:#1f3b6e;color:#faf6ee;padding:48px;border-radius:18px}
+.contact-card h3{font-family:'DM Serif Display',serif;font-size:34px;margin-bottom:14px;color:#faf6ee}
+.contact-card p{color:#bcc4d2;font-size:16px;margin-bottom:32px}
+.contact-list{list-style:none}
+.contact-list li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12);display:flex;gap:16px;align-items:start}
+.contact-list .label{display:block;font-size:12px;color:#d4a533;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px}
+.contact-list .value{display:block;font-size:16px;color:#faf6ee;font-weight:500}
+form{background:#fff;padding:36px;border-radius:18px;border:1px solid #e8dfc8}
+form h3{font-family:'DM Serif Display',serif;font-size:26px;color:#1f1f24;margin-bottom:6px}
+form .form-sub{color:#5d5d68;font-size:14px;margin-bottom:26px}
+form label{display:block;color:#3d3d44;font-size:13px;font-weight:600;margin-bottom:6px}
+form input,form textarea{width:100%;background:#faf6ee;border:1px solid #e8dfc8;color:#1f1f24;padding:13px 16px;border-radius:10px;font-family:inherit;font-size:15px;margin-bottom:16px;transition:border-color .2s,background .2s}
+form input:focus,form textarea:focus{outline:none;border-color:#1f3b6e;background:#fff}
+form textarea{min-height:110px;resize:vertical}
+form button{width:100%;background:#1f3b6e;color:#faf6ee;border:none;padding:15px;border-radius:50px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit;transition:background .2s}
+form button:hover{background:#15294f}
+footer{background:#1f1f24;color:#bcc4d2;padding:48px 0 28px;text-align:center;font-size:13px}
+footer .brand{justify-content:center;margin-bottom:14px;color:#d4a533;font-size:24px}
+@media(max-width:880px){.nav-links{display:none}.hero-grid,.contact-grid,.services-grid,.values-grid,.test-grid{grid-template-columns:1fr}.hero-text{padding:60px 24px}.hero-image{padding:60px 24px}}
+</style>
+</head>
+<body>
+<div class="preview-banner">⚡ Custom website preview built by Alma Digital Services for Scheid Electric • This is what your new site could look like</div>
+<nav>
+  <div class="container nav-row">
+    <div class="brand">Scheid Electric</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Scheid</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Free Estimate</a>
+  </div>
+</nav>
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="kicker">Family-Owned • Queen Creek, AZ</span>
+        <h1>The electrician your <em>neighbor</em> already trusts.</h1>
+        <p>Scheid Electric is a small, family-run shop serving Queen Creek and the East Valley. We pick up the phone, show up on time, and charge what we said we would. That's it. That's the whole thing.</p>
+        <div>
+          <a class="cta" href="#contact">Book a Free Estimate →</a>
+          <a class="cta outline" href="tel:+14807820000">Call (480) 772-3759</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="feature-card">
+          <span class="badge">★ 4.9 Google rating</span>
+          <h3>"Showed up when promised, did exactly what he said, and the bill matched the quote."</h3>
+          <p>That's the kind of review that makes our day — and the kind of work we put our name on, every single job.</p>
+          <div class="author">
+            <div class="avatar">S</div>
+            <div class="author-info">
+              <strong>Scheid Electric</strong>
+              <span>Family-owned since 2009</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Services</span>
+      <h2>What we handle for the East Valley</h2>
+      <p>Honest electrical work for homes and small businesses across Queen Creek, San Tan Valley, Gilbert, Mesa, and Apache Junction.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service"><div class="service-icon">⚡</div><h3>Panel Upgrades</h3><p>Old fuse box or 100-amp panel? We replace it with a modern 200-amp service ready for new A/C, EV charging, and pool equipment loads.</p></div>
+      <div class="service"><div class="service-icon">🔌</div><h3>EV Charger Install</h3><p>Tesla, Ford F-150 Lightning, Rivian, Mustang Mach-E — we install Level 2 chargers for any EV. Most jobs done in one day.</p></div>
+      <div class="service"><div class="service-icon">☀️</div><h3>Solar-Ready Wiring</h3><p>Going solar? We pre-wire panels, install critter guards, and tie in batteries. Built for AZ heat, hail, and dust storms.</p></div>
+      <div class="service"><div class="service-icon">🏡</div><h3>Home Remodels</h3><p>Kitchen, bath, addition, casita — we handle the electrical from rough-in through final inspection. Permits included.</p></div>
+      <div class="service"><div class="service-icon">🌵</div><h3>Outdoor & Pool</h3><p>Pool wiring, landscape lighting, ramada outlets, hot tub circuits, generator transfer switches. AZ outdoor living done right.</p></div>
+      <div class="service"><div class="service-icon">🚨</div><h3>24/7 Emergency</h3><p>Power out? Burning smell? Tripped breaker that won't reset? We answer day and night, and we'll be there in under 90 minutes.</p></div>
+    </div>
+  </div>
+</section>
+<section id="why" class="values">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Why Scheid</span>
+      <h2>Three things we do differently</h2>
+      <p>It's why our customers come back, and why their neighbors call us next.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value"><span class="value-num">01</span><h3>We answer the phone</h3><p>Not a call center, not a chatbot. When you call, you get a Scheid family member or one of our two electricians.</p></div>
+      <div class="value"><span class="value-num">02</span><h3>Written, fixed-price quotes</h3><p>The price you see on the quote is the price you pay. No hourly billing surprises, no parts markups.</p></div>
+      <div class="value"><span class="value-num">03</span><h3>1-year written warranty</h3><p>If anything we install fails within a year, we come back and fix it. No charge, no debate, no hassle.</p></div>
+    </div>
+  </div>
+</section>
+<section id="reviews" class="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Real Reviews</span>
+      <h2>What our Queen Creek neighbors say</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card"><div class="stars">★★★★★</div><p>"Called Scheid on a Saturday afternoon when our A/C breaker kept tripping. He came out within two hours, found a loose lug, and didn't charge a dime extra. Honest as the day is long."</p><div class="author"><div class="avatar-sm">M</div><div><strong>Melissa P.</strong><br /><span>Queen Creek, AZ</span></div></div></div>
+      <div class="test-card"><div class="stars">★★★★★</div><p>"Quoted us $1,800 for the EV charger install. Two other companies quoted $3,500+. Scheid finished in three hours, ran a dedicated 60-amp circuit, and pulled the permit. Real pros."</p><div class="author"><div class="avatar-sm">D</div><div><strong>David K.</strong><br /><span>San Tan Valley, AZ</span></div></div></div>
+      <div class="test-card"><div class="stars">★★★★★</div><p>"We had Scheid wire our pool, hot tub, and ramada lighting all in one project. Showed up every day on time, finished under budget. We've already booked them for the kitchen remodel."</p><div class="author"><div class="avatar-sm">R</div><div><strong>Roberto G.</strong><br /><span>Gilbert, AZ</span></div></div></div>
+    </div>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Let's get you a quote.</h3>
+        <p>Free, written, fixed-price estimates. Most homes — same week. We'll call back within an hour during business hours.</p>
+        <ul class="contact-list">
+          <li><div><span class="label">Phone</span><span class="value">(480) 772-3759</span></div></li>
+          <li><div><span class="label">Email</span><span class="value">scheid@scheidelectric.com</span></div></li>
+          <li><div><span class="label">Service Area</span><span class="value">Queen Creek, San Tan Valley, Gilbert, Mesa, Apache Junction, Florence</span></div></li>
+          <li><div><span class="label">Hours</span><span class="value">Mon–Fri 7am–6pm • 24/7 Emergency</span></div></li>
+          <li><div><span class="label">License</span><span class="value">AZ ROC #298400 • Bonded & Insured</span></div></li>
+        </ul>
+      </div>
+      <form onsubmit="event.preventDefault();alert('Thanks — Scheid will call you within the hour.')">
+        <h3>Request a quote</h3>
+        <p class="form-sub">Tell us a little about your project. We'll call back within the hour.</p>
+        <label>Name</label>
+        <input type="text" placeholder="Your name" required />
+        <label>Phone</label>
+        <input type="tel" placeholder="(480) 555-0123" required />
+        <label>Email</label>
+        <input type="email" placeholder="you@email.com" />
+        <label>What can we help with?</label>
+        <textarea placeholder="Brief description of your project…" required></textarea>
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="brand">Scheid Electric</div>
+    <p>© 2026 Scheid Electric • Queen Creek, AZ • Licensed Arizona Electrical Contractor ROC #298400</p>
+    <p style="margin-top:8px">Custom website preview built by <a href="https://almadigitalservices.com" style="color:#d4a533">Alma Digital Services</a></p>
+  </div>
+</footer>
+</body>
+</html>
