@@ -89,6 +89,10 @@ form button:hover{background:#ffd400;color:#0d1422}
 footer{background:#0d1422;color:#fffefa;padding:48px 0 28px;text-align:center;border-top:6px solid #ffd400}
 footer .brand{justify-content:center;margin-bottom:14px;font-size:28px}
 footer p{color:#9aa5b6;font-size:13px;margin-top:8px}
+.banner-image{margin-top:48px;border-radius:14px;overflow:hidden;border:5px solid #ffd400;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.banner-image img{width:100%;height:auto;display:block}
+.three-col-image{margin-top:60px;border-radius:12px;overflow:hidden}
+.three-col-image img{width:100%;height:auto;display:block}
 @media(max-width:880px){.nav-links{display:none}.hero-grid,.contact-grid,.services-grid,.test-grid,.three-col{grid-template-columns:1fr}.hero h1{font-size:54px}.section-head h2{font-size:38px}}
 </style>
 </head>
@@ -127,6 +131,11 @@ footer p{color:#9aa5b6;font-size:13px;margin-top:8px}
       <a class="cta" style="width:100%;justify-content:center" href="#contact">Claim Offer</a>
     </div>
   </div>
+  <div class="container">
+    <div class="banner-image">
+      <img src="https://images.unsplash.com/photo-1565608087341-404b25492fee?w=1600&q=80&auto=format&fit=crop" alt="Master electrician Doug installing a new 200-amp service panel in a Fort Worth home" loading="lazy" />
+    </div>
+  </div>
 </header>
 <section id="services" class="section-band alt">
   <div class="container">
@@ -157,6 +166,9 @@ footer p{color:#9aa5b6;font-size:13px;margin-top:8px}
       <div class="feature"><h3>Honest Pricing</h3><p>Written estimate before we start. The price you see is the price you pay. Zero markup on parts.</p></div>
       <div class="feature"><h3>Guaranteed</h3><p>1-year written warranty on labor. Lifetime support on any panel I install. If something goes wrong, I come back — for free.</p></div>
     </div>
+    <div class="three-col-image">
+      <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=1600&q=80&auto=format&fit=crop" alt="Douglas Electrical Services crew running new wiring in a Fort Worth commercial buildout" loading="lazy" />
+    </div>
   </div>
 </section>
 <section id="reviews" class="testimonials">
@@ -179,8 +191,8 @@ footer p{color:#9aa5b6;font-size:13px;margin-top:8px}
         <h3>READY TO<br /><span>POWER UP?</span></h3>
         <p>Free estimates. Same-day service most weekdays. Master electrician on every job — no exceptions.</p>
         <ul class="contact-list">
-          <li><span class="label">Phone</span>(817) 657-1341</li>
-          <li><span class="label">Email</span>doug@douglaselectricalservices.net</li>
+          <li><span class="label">Phone</span><a href="tel:+18176571341" style="color:#ffd400">(817) 657-1341</a></li>
+          <li><span class="label">Email</span><a href="mailto:doug0609@gmail.com" style="color:#ffd400">doug0609@gmail.com</a></li>
           <li><span class="label">Service Area</span>Fort Worth + DFW Metroplex</li>
           <li><span class="label">Hours</span>Mon–Sat 7am–7pm • 24/7 Emergency</li>
           <li><span class="label">License</span>TX Master Electrician #19200</li>
@@ -191,7 +203,7 @@ footer p{color:#9aa5b6;font-size:13px;margin-top:8px}
         <label>Name</label>
         <input type="text" placeholder="Jane Doe" required />
         <label>Phone</label>
-        <input type="tel" placeholder="(817) 555-0123" required />
+        <input type="tel" placeholder="Your phone number" required />
         <label>Project</label>
         <textarea placeholder="What can Doug help with?" required></textarea>
         <button type="submit">Send to Doug</button>
