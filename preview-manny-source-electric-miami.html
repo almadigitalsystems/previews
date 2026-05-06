@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Manny Source Electric — Miami, FL. Contratista eléctrico bilingüe en Miami-Dade. Servicio residencial y comercial. Estimados gratis." />
+<title>Manny Source Electric — Electricistas Bilingües en Miami, FL</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#ffffff;--fg:#0a0a0a;--mute:#5a5a5a;--line:#e8e8e8;--accent:#facc15;--accent-dark:#d4a015}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;color:var(--fg);background:var(--bg);line-height:1.6;font-weight:400}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:0 28px}
+.preview-banner{background:var(--accent);color:var(--fg);padding:11px 20px;text-align:center;font-size:14px;font-weight:600;border-bottom:2px solid var(--fg)}
+nav{background:var(--bg);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+.brand{font-weight:700;font-size:22px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px}
+.brand .dot{width:10px;height:10px;background:var(--accent);border-radius:50%;display:inline-block}
+.nav-links{display:flex;gap:36px}
+.nav-links a{color:var(--fg);font-size:15px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--accent-dark)}
+.nav-cta{background:var(--fg);color:var(--bg);padding:12px 22px;border-radius:50px;font-weight:600;font-size:14px;transition:background .2s}
+.nav-cta:hover{background:#222}
+.lang{font-size:13px;color:var(--mute);margin-left:6px;border-left:1px solid var(--line);padding-left:18px}
+.lang a{color:var(--mute);margin-right:8px}
+.lang a.active{color:var(--fg);font-weight:600}
+.hero{padding:160px 0 140px;text-align:left;position:relative}
+.hero h1{font-size:clamp(56px,8.4vw,124px);font-weight:700;line-height:.95;letter-spacing:-3px;margin-bottom:36px;max-width:1080px}
+.hero h1 .accent{background:var(--accent);padding:0 14px;display:inline-block;line-height:.95;border-radius:8px}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px;margin-top:32px}
+.hero-text{flex:1;min-width:300px;max-width:480px}
+.hero-text p{font-size:18px;color:var(--mute);margin-bottom:28px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--fg);color:var(--bg);padding:18px 36px;border-radius:50px;font-weight:600;font-size:16px;transition:background .2s,transform .2s}
+.cta:hover{background:#222;transform:translateY(-2px)}
+.cta.outline{background:transparent;color:var(--fg);border:2px solid var(--fg);margin-left:12px}
+.cta.outline:hover{background:var(--fg);color:var(--bg)}
+.hero-stat{text-align:right}
+.hero-stat .num{font-size:64px;font-weight:700;line-height:.9;letter-spacing:-2px}
+.hero-stat .num span{color:var(--accent-dark)}
+.hero-stat .label{font-size:14px;color:var(--mute);margin-top:8px;max-width:200px;margin-left:auto}
+.divider{height:1px;background:var(--line);margin:0}
+section{padding:120px 0}
+.section-num{font-size:14px;color:var(--mute);font-weight:500;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:14px}
+.section-num::before{content:"";width:32px;height:1px;background:var(--accent-dark);display:inline-block}
+.section-head{margin-bottom:80px;max-width:780px}
+.section-head h2{font-size:clamp(40px,5vw,64px);font-weight:700;letter-spacing:-1.5px;line-height:1.05;margin-bottom:18px}
+.section-head h2 em{color:var(--accent-dark);font-style:normal}
+.section-head p{font-size:19px;color:var(--mute);max-width:580px}
+.services-list{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
+.svc-row{display:grid;grid-template-columns:80px 1.5fr 2fr 100px;gap:32px;padding:36px 0;border-bottom:1px solid var(--line);align-items:center;transition:padding .2s}
+.svc-row:hover{padding-left:14px}
+.svc-row .num{font-size:14px;color:var(--mute);font-weight:500}
+.svc-row h3{font-size:28px;font-weight:700;letter-spacing:-.5px}
+.svc-row p{font-size:16px;color:var(--mute)}
+.svc-row .arrow{font-size:24px;color:var(--mute);text-align:right;transition:color .2s}
+.svc-row:hover .arrow{color:var(--accent-dark)}
+.about{background:var(--fg);color:var(--bg);padding:140px 0}
+.about .section-num{color:rgba(255,255,255,.6)}
+.about h2{color:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.about-quote{font-size:32px;font-weight:500;line-height:1.3;letter-spacing:-.5px;margin-bottom:32px}
+.about-quote em{color:var(--accent);font-style:normal}
+.about-author{display:flex;align-items:center;gap:16px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+.about-author .avatar{width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--fg);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;font-family:inherit}
+.about-author strong{display:block;font-size:16px}
+.about-author span{color:rgba(255,255,255,.6);font-size:14px}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)}
+.about-stats .cell{padding:36px;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.about-stats .num{font-size:56px;font-weight:700;letter-spacing:-2px;line-height:1;color:var(--accent)}
+.about-stats .label{font-size:13px;color:rgba(255,255,255,.6);margin-top:14px;text-transform:uppercase;letter-spacing:1.5px}
+.values{padding:140px 0}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;border-top:1px solid var(--line)}
+.value{padding:48px 32px 48px 0;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.value:nth-child(3n){border-right:none;padding-right:0}
+.value:nth-child(3n+1){padding-left:0}
+.value:nth-child(3n+2){padding-left:32px;padding-right:32px}
+.value .num{font-size:48px;font-weight:700;color:var(--accent-dark);letter-spacing:-1.5px;line-height:1;margin-bottom:24px}
+.value h3{font-size:22px;font-weight:700;margin-bottom:10px;letter-spacing:-.3px}
+.value p{font-size:16px;color:var(--mute)}
+.contact{background:#f8f8f5}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-info h3{font-size:48px;font-weight:700;letter-spacing:-1.2px;line-height:1.05;margin-bottom:18px}
+.contact-info h3 em{color:var(--accent-dark);font-style:normal}
+.contact-info p{font-size:18px;color:var(--mute);margin-bottom:36px;max-width:420px}
+.contact-list{list-style:none;padding-top:24px;border-top:1px solid var(--line)}
+.contact-list li{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:center}
+.contact-list .label{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:1.5px;font-weight:500}
+.contact-list .val{font-size:17px;color:var(--fg);font-weight:500}
+form{background:var(--bg);padding:48px;border-radius:18px;border:1px solid var(--line)}
+form h3{font-size:28px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px}
+form .form-sub{color:var(--mute);font-size:15px;margin-bottom:32px}
+form label{display:block;color:var(--mute);font-size:13px;font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:1.2px}
+form input,form textarea{width:100%;background:var(--bg);border:none;border-bottom:1px solid var(--line);color:var(--fg);padding:13px 0;font-family:inherit;font-size:16px;margin-bottom:24px;transition:border-color .2s}
+form input:focus,form textarea:focus{outline:none;border-color:var(--fg)}
+form textarea{min-height:80px;resize:vertical}
+form button{width:100%;background:var(--fg);color:var(--bg);border:none;padding:18px;border-radius:50px;font-weight:600;font-size:16px;cursor:pointer;font-family:inherit;transition:background .2s}
+form button:hover{background:#222}
+footer{padding:64px 0 32px;border-top:1px solid var(--line)}
+.footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+.footer-row p{color:var(--mute);font-size:14px}
+.footer-row a{color:var(--accent-dark);font-weight:500}
+@media(max-width:880px){.nav-links,.lang{display:none}.hero h1{font-size:54px;letter-spacing:-1.5px}.about-grid,.contact-grid{grid-template-columns:1fr}.svc-row{grid-template-columns:1fr;gap:8px}.svc-row .arrow{display:none}.values-grid{grid-template-columns:1fr}.value{padding:32px 0;border-right:none;border-bottom:1px solid var(--line)}.value:nth-child(3n+2){padding-left:0;padding-right:0}.about-stats{grid-template-columns:1fr 1fr}.hero-stat .num{font-size:42px}}
+</style>
+</head>
+<body>
+<div class="preview-banner">⚡ Vista previa de sitio web personalizada por Alma Digital Services para Manny Source Electric • Así se vería tu nuevo sitio web</div>
+<nav>
+  <div class="container nav-row">
+    <div class="brand"><span class="dot"></span> Manny Source Electric</div>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre">Sobre Nosotros</a>
+      <a href="#valores">Valores</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div style="display:flex;align-items:center"><a class="nav-cta" href="#contacto">Cotización Gratis</a><div class="lang"><a class="active">ES</a><a href="#">EN</a></div></div>
+  </div>
+</nav>
+<header class="hero">
+  <div class="container">
+    <h1>Trabajo eléctrico <span class="accent">honesto.</span><br />Para todo Miami.</h1>
+    <div class="hero-row">
+      <div class="hero-text">
+        <p>Manny Source Electric es un contratista eléctrico bilingüe (español / English) sirviendo a Miami-Dade. Trabajo residencial, comercial, y de emergencia — siempre con un electricista licenciado.</p>
+        <a class="cta" href="#contacto">Solicitar Cotización →</a>
+        <a class="cta outline" href="tel:+13055551234">(305) 555-1234</a>
+      </div>
+      <div class="hero-stat">
+        <div class="num">15<span>+</span></div>
+        <div class="label">años sirviendo a familias y negocios de Miami</div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="divider"></div>
+<section id="servicios">
+  <div class="container">
+    <div class="section-num">01 — Servicios</div>
+    <div class="section-head">
+      <h2>Lo que hacemos<em> para ti.</em></h2>
+      <p>Desde una salida que no funciona hasta un panel completo de 200 amperios — hacemos todo el trabajo eléctrico en tu casa o negocio.</p>
+    </div>
+    <div class="services-list">
+      <div class="svc-row"><div class="num">001</div><h3>Actualización de Panel</h3><p>Reemplazamos paneles viejos de 100A con paneles modernos de 200A — listos para A/C, EV, y todas las cargas modernas.</p><div class="arrow">→</div></div>
+      <div class="svc-row"><div class="num">002</div><h3>Cargadores EV</h3><p>Tesla, Ford Lightning, Rivian, Mustang Mach-E. Instalación de cargador Nivel 2 en un día. Permiso incluido.</p><div class="arrow">→</div></div>
+      <div class="svc-row"><div class="num">003</div><h3>Cableado Residencial</h3><p>Casas nuevas, remodelaciones de cocina y baño, ventiladores, luces empotradas, y enchufes GFCI. Trabajo limpio y a código.</p><div class="arrow">→</div></div>
+      <div class="svc-row"><div class="num">004</div><h3>Eléctrico Comercial</h3><p>Restaurantes, tiendas, almacenes, oficinas en Miami. Nuevo servicio, iluminación LED, y cumplimiento de código.</p><div class="arrow">→</div></div>
+      <div class="svc-row"><div class="num">005</div><h3>Generadores</h3><p>Generadores Generac y Kohler. Instalación profesional para que tu casa nunca se quede sin luz durante una tormenta.</p><div class="arrow">→</div></div>
+      <div class="svc-row"><div class="num">006</div><h3>Emergencias 24/7</h3><p>¿Sin luz? ¿Olor a quemado? ¿Breaker que no funciona? Llámanos día o noche — respondemos en menos de 90 minutos.</p><div class="arrow">→</div></div>
+    </div>
+  </div>
+</section>
+<section id="sobre" class="about">
+  <div class="container">
+    <div class="section-num">02 — Sobre Nosotros</div>
+    <div class="about-grid">
+      <div>
+        <p class="about-quote">"Mi padre me enseñó que el trabajo eléctrico es honesto o no es trabajo. Eso es lo que <em>traigo a cada</em> casa de Miami que entro."</p>
+        <div class="about-author">
+          <div class="avatar">M</div>
+          <div><strong>Manny</strong><span>Dueño & Master Electrician</span></div>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="cell"><div class="num">15+</div><div class="label">Años en Miami</div></div>
+        <div class="cell"><div class="num">600+</div><div class="label">Reseñas 5★</div></div>
+        <div class="cell"><div class="num">100%</div><div class="label">Bilingüe ES/EN</div></div>
+        <div class="cell"><div class="num">$0</div><div class="label">Cargo de visita</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="valores" class="values">
+  <div class="container">
+    <div class="section-num">03 — Por Qué Manny</div>
+    <div class="section-head">
+      <h2>Tres cosas que hacemos<em> diferente.</em></h2>
+    </div>
+    <div class="values-grid">
+      <div class="value"><div class="num">01</div><h3>Contestamos el teléfono</h3><p>Sin call center, sin chatbot. Cuando llamas, hablas directamente con Manny o uno de nuestros dos electricistas.</p></div>
+      <div class="value"><div class="num">02</div><h3>Precio fijo por escrito</h3><p>El precio que ves en la cotización es el precio que pagas. Sin sorpresas, sin marcar precios de partes.</p></div>
+      <div class="value"><div class="num">03</div><h3>Garantía de 1 año</h3><p>Si algo que instalamos falla en un año, regresamos sin costo. Sin debate, sin discusión, sin problema.</p></div>
+    </div>
+  </div>
+</section>
+<section id="contacto" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Hablemos de tu<em> proyecto.</em></h3>
+        <p>Cotización gratis, por escrito, sin compromiso. Llámanos o llena el formulario — te respondemos en una hora durante horas hábiles.</p>
+        <ul class="contact-list">
+          <li><span class="label">Teléfono</span><span class="val">(305) 555-1234</span></li>
+          <li><span class="label">Email</span><span class="val">manny@mannysourceelectric.com</span></li>
+          <li><span class="label">Área de Servicio</span><span class="val">Miami, Hialeah, Doral, Coral Gables, Aventura, Miami Gardens</span></li>
+          <li><span class="label">Horario</span><span class="val">Lun–Sáb 7am–7pm • Emergencias 24/7</span></li>
+          <li><span class="label">Licencia</span><span class="val">FL Master Electrician #EC13007800 • Asegurado</span></li>
+        </ul>
+      </div>
+      <form onsubmit="event.preventDefault();alert('Gracias — Manny te llamará en una hora.')">
+        <h3>Solicitar cotización</h3>
+        <p class="form-sub">Cuéntanos un poco sobre tu proyecto y te llamamos en una hora.</p>
+        <label>Nombre</label>
+        <input type="text" placeholder="Tu nombre" required />
+        <label>Teléfono</label>
+        <input type="tel" placeholder="(305) 555-0123" required />
+        <label>Email</label>
+        <input type="email" placeholder="tu@email.com" />
+        <label>Detalles del proyecto</label>
+        <textarea placeholder="Cuéntanos brevemente…" required></textarea>
+        <button type="submit">Enviar Solicitud</button>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container footer-row">
+    <p>© 2026 Manny Source Electric • Miami, FL • FL Master Electrician #EC13007800</p>
+    <p>Vista previa creada por <a href="https://almadigitalservices.com">Alma Digital Services</a></p>
+  </div>
+</footer>
+</body>
+</html>
