@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Manny Source Electric — Miami, FL. Contratista eléctrico bilingüe en Miami-Dade. Servicio residencial y comercial. Estimados gratis." />
-<title>Manny Source Electric — Electricistas Bilingües en Miami, FL</title>
+<title>Manny Source Electric Corp — Electricistas Bilingües en Miami, FL</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
 <style>
 :root{--bg:#ffffff;--fg:#0a0a0a;--mute:#5a5a5a;--line:#e8e8e8;--accent:#facc15;--accent-dark:#d4a015}
@@ -102,6 +102,10 @@ footer{padding:64px 0 32px;border-top:1px solid var(--line)}
 .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
 .footer-row p{color:var(--mute);font-size:14px}
 .footer-row a{color:var(--accent-dark);font-weight:500}
+.hero-img{margin-top:60px;border-radius:18px;overflow:hidden;border:6px solid var(--accent)}
+.hero-img img{width:100%;height:auto;display:block}
+.about .about-img{border-radius:14px;overflow:hidden;margin-top:24px}
+.about .about-img img{width:100%;height:auto;display:block;filter:grayscale(0)}
 @media(max-width:880px){.nav-links,.lang{display:none}.hero h1{font-size:54px;letter-spacing:-1.5px}.about-grid,.contact-grid{grid-template-columns:1fr}.svc-row{grid-template-columns:1fr;gap:8px}.svc-row .arrow{display:none}.values-grid{grid-template-columns:1fr}.value{padding:32px 0;border-right:none;border-bottom:1px solid var(--line)}.value:nth-child(3n+2){padding-left:0;padding-right:0}.about-stats{grid-template-columns:1fr 1fr}.hero-stat .num{font-size:42px}}
 </style>
 </head>
@@ -126,12 +130,15 @@ footer{padding:64px 0 32px;border-top:1px solid var(--line)}
       <div class="hero-text">
         <p>Manny Source Electric es un contratista eléctrico bilingüe (español / English) sirviendo a Miami-Dade. Trabajo residencial, comercial, y de emergencia — siempre con un electricista licenciado.</p>
         <a class="cta" href="#contacto">Solicitar Cotización →</a>
-        <a class="cta outline" href="tel:+13055551234">(305) 555-1234</a>
+        <a class="cta outline" href="tel:+17862992168">(786) 299-2168</a>
       </div>
       <div class="hero-stat">
         <div class="num">15<span>+</span></div>
         <div class="label">años sirviendo a familias y negocios de Miami</div>
       </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1565608087341-404b25492fee?w=1600&q=80&auto=format&fit=crop" alt="Manny Source Electric Corp instalando un panel de 200 amperios en una casa de Miami-Dade" loading="lazy" />
     </div>
   </div>
 </header>
@@ -193,8 +200,8 @@ footer{padding:64px 0 32px;border-top:1px solid var(--line)}
         <h3>Hablemos de tu<em> proyecto.</em></h3>
         <p>Cotización gratis, por escrito, sin compromiso. Llámanos o llena el formulario — te respondemos en una hora durante horas hábiles.</p>
         <ul class="contact-list">
-          <li><span class="label">Teléfono</span><span class="val">(305) 555-1234</span></li>
-          <li><span class="label">Email</span><span class="val">manny@mannysourceelectric.com</span></li>
+          <li><span class="label">Teléfono</span><a href="tel:+17862992168" class="val">(786) 299-2168</a></li>
+          <li><span class="label">Email</span><a href="mailto:mannysource01@gmail.com" class="val">mannysource01@gmail.com</a></li>
           <li><span class="label">Área de Servicio</span><span class="val">Miami, Hialeah, Doral, Coral Gables, Aventura, Miami Gardens</span></li>
           <li><span class="label">Horario</span><span class="val">Lun–Sáb 7am–7pm • Emergencias 24/7</span></li>
           <li><span class="label">Licencia</span><span class="val">FL Master Electrician #EC13007800 • Asegurado</span></li>
@@ -206,7 +213,7 @@ footer{padding:64px 0 32px;border-top:1px solid var(--line)}
         <label>Nombre</label>
         <input type="text" placeholder="Tu nombre" required />
         <label>Teléfono</label>
-        <input type="tel" placeholder="(305) 555-0123" required />
+        <input type="tel" placeholder="Tu número de teléfono" required />
         <label>Email</label>
         <input type="email" placeholder="tu@email.com" />
         <label>Detalles del proyecto</label>
