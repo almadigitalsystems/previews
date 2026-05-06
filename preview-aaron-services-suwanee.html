@@ -14,7 +14,7 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .skip-link{position:absolute;left:-9999px;top:0;background:#0f3a2e;color:#fdfbf6;padding:12px 18px;border-radius:0 0 4px 0;font-weight:700;z-index:100}
 .skip-link:focus{left:0;outline:3px solid #e2b25f;outline-offset:0}
-:focus-visible{outline:3px solid #e2b25f;outline-offset:2px}
+:focus-visible{outline:3px solid #0f3a2e;outline-offset:2px;box-shadow:0 0 0 6px #e2b25f}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 .preview-banner{background:#0f3a2e;color:#fdfbf6;padding:11px 20px;text-align:center;font-size:14px;font-weight:600}
 .topbar{background:#0f3a2e;color:#cdd9d2;padding:9px 0;font-size:13px}
@@ -65,7 +65,7 @@ section{padding:90px 0}
 .about-img-label .quote-attribution{color:#e7eee9;font-size:14px}
 .about-text h2{font-family:'Bitter',serif;font-size:38px;color:#0f3a2e;letter-spacing:-.5px;font-weight:800;margin-bottom:18px}
 .about-text p{color:#3d4d3f;font-size:16px;margin-bottom:14px}
-.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px;list-style:none;padding:0}
 .stat{padding:20px;background:#f5efde;border-radius:6px;border-left:3px solid #e2b25f}
 .stat strong{display:block;font-size:30px;color:#0f3a2e;font-family:'Bitter',serif;font-weight:800;line-height:1}
 .stat span{display:block;color:#3d4d3f;font-size:13px;text-transform:uppercase;letter-spacing:.8px;margin-top:6px;font-weight:600}
@@ -108,7 +108,7 @@ form h3{font-family:'Bitter',serif;font-size:26px;color:#0f3a2e;font-weight:800;
 form .form-sub{color:#3d4d3f;font-size:14px;margin-bottom:24px}
 form label{display:block;color:#1c2733;font-size:13px;font-weight:700;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
 form input,form textarea,form select{width:100%;background:#fdfbf6;border:1px solid #8a8270;color:#1c2733;padding:13px 16px;border-radius:4px;font-family:inherit;font-size:15px;margin-bottom:16px;transition:border-color .2s,background .2s}
-form input::placeholder,form textarea::placeholder{color:#5a6660;opacity:1}
+form input::placeholder,form textarea::placeholder{color:#3d4d3f;opacity:1}
 form input:focus,form textarea:focus,form select:focus{outline:none;border-color:#0f3a2e;background:#f5efde;box-shadow:0 0 0 3px rgba(15,58,46,.18)}
 form textarea{min-height:100px;resize:vertical}
 form button{width:100%;background:#0f3a2e;color:#fdfbf6;border:none;padding:16px;border-radius:4px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit;letter-spacing:.5px;transition:background .2s}
@@ -130,12 +130,12 @@ footer li{padding:4px 0;font-size:14px;color:#e7eee9}
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<div class="preview-banner" role="note"><span aria-hidden="true">⚡ </span>Custom website preview built by Alma Digital Services for Aaron Services • This is what your new site could look like</div>
+<div class="preview-banner"><span aria-hidden="true">⚡ </span>Custom website preview built by Alma Digital Services for Aaron Services &middot; This is what your new site could look like</div>
 <div class="topbar">
   <div class="container topbar-row">
     <div class="left">
-      <a href="tel:+17709453453" aria-label="Call Aaron Services at 770-945-3453"><span aria-hidden="true">📞</span> (770) 945-3453</a>
-      <a href="mailto:customerservice@chooseaaronplumbing.com" aria-label="Email customer service at customerservice@chooseaaronplumbing.com"><span aria-hidden="true">📧</span> customerservice@chooseaaronplumbing.com</a>
+      <a href="tel:+17709453453"><span aria-hidden="true">📞</span> (770) 945-3453</a>
+      <a href="mailto:customerservice@chooseaaronplumbing.com"><span aria-hidden="true">📧</span> customerservice@chooseaaronplumbing.com</a>
     </div>
     <div>
       <span><span aria-hidden="true">🕒</span> Mon–Sat 7am–7pm • 24/7 Emergency</span>
@@ -144,9 +144,9 @@ footer li{padding:4px 0;font-size:14px;color:#e7eee9}
 </div>
 <nav aria-label="Primary">
   <div class="container nav-row">
-    <a href="#main-content" class="brand-block" aria-label="Aaron Services — go to main content">
-      <div class="brand-mark" aria-hidden="true">A</div>
-      <div class="brand-text"><strong>Aaron Services</strong><span>Plumbing • HVAC • Electrical</span></div>
+    <a href="#main-content" class="brand-block">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-text"><strong>Aaron Services</strong><span>Plumbing &middot; HVAC &middot; Electrical</span></span>
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
@@ -165,7 +165,7 @@ footer li{padding:4px 0;font-size:14px;color:#e7eee9}
     <p>Three generations of licensed plumbers, HVAC techs, and master electricians serving Suwanee and the north Atlanta metro. One call, one company, every system in your home.</p>
     <div>
       <a class="cta" href="#contact">Schedule a Service Visit <span aria-hidden="true">→</span></a>
-      <a class="cta secondary" href="tel:+17709453453" aria-label="Call Aaron Services now at 770-945-3453">Call (770) 945-3453</a>
+      <a class="cta secondary" href="tel:+17709453453">Call (770) 945-3453</a>
     </div>
   </div>
   <div class="trust-band">
@@ -210,12 +210,12 @@ footer li{padding:4px 0;font-size:14px;color:#e7eee9}
         <h2 id="about-heading">Three generations of doing it right.</h2>
         <p>Aaron Services was founded by Aaron Bennett Sr. in 1979, started as a small plumbing shop out of a single truck. By the late '80s, his son Aaron Jr. had added HVAC. Today, his grandson runs the company and added master electrical service in 2018 — making us the only fully-licensed three-trade home service company in Suwanee.</p>
         <p>What hasn't changed across all three generations: a written estimate before any work begins, a 1-year warranty on every repair, and a master tradesperson on every single job. No exceptions, no surprise charges, no upsells.</p>
-        <dl class="about-stats">
-          <div class="stat"><strong>47</strong><span>Years in business</span></div>
-          <div class="stat"><strong>3</strong><span>Generations of family</span></div>
-          <div class="stat"><strong>2,800+</strong><span>5-star reviews</span></div>
-          <div class="stat"><strong>$0</strong><span>Diagnostic fee</span></div>
-        </dl>
+        <ul class="about-stats" aria-label="Aaron Services company facts">
+          <li class="stat"><strong>47</strong><span>Years in business</span></li>
+          <li class="stat"><strong>3</strong><span>Generations of family</span></li>
+          <li class="stat"><strong>2,800+</strong><span>5-star reviews</span></li>
+          <li class="stat"><strong>$0</strong><span>Diagnostic fee</span></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -257,12 +257,12 @@ footer li{padding:4px 0;font-size:14px;color:#e7eee9}
         <h3 id="form-heading">Schedule service</h3>
         <p class="form-sub">Tell us how we can help and we'll be in touch within 30 minutes during business hours.</p>
         <label for="name-field">Your name</label>
-        <input id="name-field" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required />
+        <input id="name-field" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required aria-required="true" />
         <label for="phone-field">Phone</label>
-        <input id="phone-field" name="phone" type="tel" placeholder="Your phone number" autocomplete="tel" required />
+        <input id="phone-field" name="phone" type="tel" placeholder="Your phone number" autocomplete="tel" required aria-required="true" />
         <label for="service-field">Service needed</label>
-        <select id="service-field" name="service" required>
-          <option value="">Select a service…</option>
+        <select id="service-field" name="service" required aria-required="true">
+          <option value="">Select a service&hellip;</option>
           <option value="plumbing">Plumbing</option>
           <option value="hvac">Heating &amp; Cooling</option>
           <option value="electrical">Electrical</option>
@@ -270,9 +270,9 @@ footer li{padding:4px 0;font-size:14px;color:#e7eee9}
           <option value="other">Other / not sure</option>
         </select>
         <label for="details-field">Project details</label>
-        <textarea id="details-field" name="details" placeholder="Brief description…" required></textarea>
+        <textarea id="details-field" name="details" placeholder="Brief description&hellip;" required aria-required="true"></textarea>
         <button type="submit">Schedule Service</button>
-        <div id="form-status" class="form-status" role="status" tabindex="-1" hidden>Thanks — we will call you within 30 minutes.</div>
+        <div id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1" hidden>Thanks &mdash; we will call you within 30 minutes.</div>
       </form>
     </div>
   </div>
@@ -281,17 +281,17 @@ footer li{padding:4px 0;font-size:14px;color:#e7eee9}
 <footer>
   <div class="container">
     <div>
-      <div class="brand-block" style="margin-bottom:18px"><div class="brand-mark" aria-hidden="true">A</div><div class="brand-text"><strong style="color:#fdfbf6">Aaron Services</strong><span style="color:#cdd9d2">Plumbing • HVAC • Electrical</span></div></div>
+      <div class="brand-block" style="margin-bottom:18px"><span class="brand-mark" aria-hidden="true">A</span><span class="brand-text"><strong style="color:#fdfbf6">Aaron Services</strong><span style="color:#cdd9d2">Plumbing &middot; HVAC &middot; Electrical</span></span></div>
       <p>Suwanee, GA • Licensed Georgia Master Plumber, HVAC, &amp; Electrical Contractor since 1979.</p>
     </div>
-    <nav aria-label="Footer services">
-      <h4>Services</h4>
+    <section aria-labelledby="footer-services-heading">
+      <h4 id="footer-services-heading">Services</h4>
       <ul><li>Plumbing</li><li>Heating &amp; Cooling</li><li>Electrical</li><li>Indoor Air Quality</li><li>24/7 Emergency</li></ul>
-    </nav>
-    <nav aria-label="Footer service area">
-      <h4>Service Area</h4>
+    </section>
+    <section aria-labelledby="footer-area-heading">
+      <h4 id="footer-area-heading">Service Area</h4>
       <ul><li>Suwanee</li><li>Cumming</li><li>Alpharetta</li><li>Roswell</li><li>Duluth</li><li>Johns Creek</li></ul>
-    </nav>
+    </section>
     <div class="footer-bottom">
       <p>© 2026 Aaron Services • Licensed Georgia Master Plumber, HVAC, &amp; Electrical Contractor</p>
       <p style="margin-top:8px">Custom website preview built by <a href="https://almadigitalservices.com">Alma Digital Services</a></p>
@@ -300,3 +300,4 @@ footer li{padding:4px 0;font-size:14px;color:#e7eee9}
 </footer>
 </body>
 </html>
+
