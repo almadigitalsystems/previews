@@ -458,9 +458,10 @@ function recompute(){
   est3y.textContent = fmt(threeYear);
 
   // Formula block
-  formulaBlock.innerHTML = `monthly = <span class="var">base</span> × <span class="var">level</span>
-       = <span class="num">${fmt(base)}</span> × <span class="num">${lvl.toFixed(2)}</span>
-       = <span class="num">${fmt(monthly)}</span>`;
+  formulaBlock.innerHTML =
+    'monthly = <span class="var">base</span> × <span class="var">level</span>\n' +
+    '       = <span class="num">' + fmt(base) + '</span> × <span class="num">' + lvl.toFixed(2) + '</span>\n' +
+    '       = <span class="num">' + fmt(monthly) + '</span>';
 
   if (hasOp) {
     dqBadge.innerHTML = '<span class="dq-dot"></span> State-anchored estimate · ' + opt.text.split(' — ')[0];
@@ -473,20 +474,19 @@ function recompute(){
     viewFacility.style.display = 'none';
   }
 
-  // Update "View [State] facilities" CTA
+  // Update state-facing CTA
   const stateName = stateOpt.text;
   const stateSlug = stateName.toLowerCase().replace(/\s+/g,'-');
   const careSlug = care === 'skilled' ? 'skilled-nursing' :
                    care === 'assisted' ? 'assisted-living' :
                    care === 'memory' ? 'memory-care' :
                    care === 'independent' ? 'independent-living' : 'home-care';
-  viewState.textContent = `View ${stateName} facilities`;
-  // Recreate arrow
+  viewState.textContent = 'View ' + stateName + ' facilities';
   const arrow = document.createElement('span');
   arrow.className = 'arrow';
   arrow.textContent = '→';
   viewState.appendChild(arrow);
-  viewState.href = `/calculator/${careSlug}/${stateSlug}/`;
+  viewState.href = '/calculator/' + careSlug + '/' + stateSlug + '/';
 }
 
 opSel.addEventListener('change', recompute);
