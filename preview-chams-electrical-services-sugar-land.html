@@ -24,6 +24,10 @@ nav{position:sticky;top:0;z-index:30;background:rgba(14,23,38,.92);backdrop-filt
 .nav-links a:hover{color:#3ea6ff}
 .nav-cta{background:#3ea6ff;color:#0e1726;padding:11px 22px;border-radius:6px;font-weight:700;font-size:14px}
 .hero{padding:120px 0 110px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at top,#1a2a44 0%,#0e1726 70%)}
+.hero-image{margin:48px auto 0;max-width:920px;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);border:1px solid rgba(62,166,255,.18)}
+.hero-image img{width:100%;height:auto;display:block}
+.about-image{border-radius:14px;overflow:hidden;border:1px solid rgba(62,166,255,.15)}
+.about-image img{width:100%;height:auto;display:block}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(62,166,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(62,166,255,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .hero-content{position:relative;z-index:1}
 .kicker{display:inline-block;background:rgba(62,166,255,.12);color:#3ea6ff;padding:7px 18px;border-radius:24px;font-size:13px;font-weight:600;letter-spacing:.5px;margin-bottom:24px;border:1px solid rgba(62,166,255,.3)}
@@ -107,6 +111,9 @@ footer .brand{justify-content:center;margin-bottom:14px;font-size:20px}
       <div><strong>24/7</strong>Emergency service</div>
       <div><strong>Licensed</strong>TX TDLR #36500</div>
     </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1600&q=80&auto=format&fit=crop" alt="Licensed electrician working on a residential breaker panel" loading="lazy" />
+    </div>
   </div>
 </header>
 <section id="services" class="services">
@@ -142,6 +149,9 @@ footer .brand{justify-content:center;margin-bottom:14px;font-size:20px}
         </div>
       </div>
       <div class="about-card">
+        <div class="about-image" style="margin-bottom:24px">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&auto=format&fit=crop" alt="Chams Electrical Services technician installing a 200-amp service panel" loading="lazy" />
+        </div>
         <p class="quote">"Chams replaced our breaker panel and added a 50-amp circuit for our new range. Came when they said, finished early, cleaned up perfectly, and the price was fair. Easiest electrical job we've ever booked."</p>
         <div class="signoff">— Maria L., Sugar Land homeowner</div>
       </div>
@@ -164,8 +174,8 @@ footer .brand{justify-content:center;margin-bottom:14px;font-size:20px}
     <div class="contact-grid">
       <div class="contact-info">
         <h3>Reach us</h3>
-        <div class="contact-row"><div class="icon">📞</div><div><strong style="color:#fff;display:block">Phone</strong>(281) 313-0000</div></div>
-        <div class="contact-row"><div class="icon">✉️</div><div><strong style="color:#fff;display:block">Email</strong>info@chamselectrical.com</div></div>
+        <div class="contact-row"><div class="icon">📞</div><div><strong style="color:#fff;display:block">Phone</strong><a href="tel:+18326593442" style="color:#3ea6ff">(832) 659-3442</a></div></div>
+        <div class="contact-row"><div class="icon">✉️</div><div><strong style="color:#fff;display:block">Email</strong><a href="mailto:amselectricalinc@hotmail.com" style="color:#3ea6ff">amselectricalinc@hotmail.com</a></div></div>
         <div class="contact-row"><div class="icon">📍</div><div><strong style="color:#fff;display:block">Service Area</strong>Sugar Land, TX & Houston Metro</div></div>
         <div class="contact-row"><div class="icon">⏰</div><div><strong style="color:#fff;display:block">Hours</strong>Mon–Fri 7am–7pm • 24/7 Emergency</div></div>
         <div class="contact-row"><div class="icon">🆔</div><div><strong style="color:#fff;display:block">License</strong>TX TDLR #36500 • Bonded & Insured</div></div>
@@ -175,7 +185,7 @@ footer .brand{justify-content:center;margin-bottom:14px;font-size:20px}
         <label>Your name</label>
         <input type="text" placeholder="Jane Doe" required />
         <label>Phone</label>
-        <input type="tel" placeholder="(281) 555-0123" required />
+        <input type="tel" placeholder="Your phone number" required />
         <label>What can we help with?</label>
         <textarea placeholder="Brief description of your electrical project…" required></textarea>
         <button type="submit">Send Request</button>
