@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paradigm Tree Works | Spokane WA Tree Removal & Trimming</title>
+<meta name="description" content="Paradigm Tree Works — Spokane's trusted tree removal, trimming, stump grinding & emergency storm service. 4.8 stars. Licensed & insured. Call (208) 512-0535.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --forest:#1b3a1f;
+    --bark:#4a3728;
+    --moss:#3d6b41;
+    --leaf:#5a8f5e;
+    --sky:#a8c5da;
+    --cream:#f5f0e8;
+    --white:#ffffff;
+    --text:#1a1a1a;
+    --gray:#6b7280;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Montserrat',sans-serif;color:var(--text);background:var(--white)}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:100;background:var(--forest);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px;box-shadow:0 2px 20px rgba(0,0,0,0.4)}
+  .nav-logo{color:var(--white);font-size:1.2rem;font-weight:900;letter-spacing:0.5px}
+  .nav-logo span{color:#7ec87e}
+  .nav-links{display:flex;gap:2rem;list-style:none}
+  .nav-links a{color:#cbd5e1;text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;transition:color 0.2s}
+  .nav-links a:hover{color:#7ec87e}
+  .nav-cta{background:#7ec87e;color:var(--forest);padding:0.5rem 1.2rem;border-radius:4px;font-weight:700;font-size:0.85rem;text-decoration:none;transition:all 0.2s}
+  .nav-cta:hover{background:#5a8f5e;color:var(--white)}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,var(--forest) 0%,#2d5a2d 40%,var(--bark) 100%);min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:4rem 2rem}
+  .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+  .hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+  .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(126,200,126,0.15);border:1px solid rgba(126,200,126,0.3);color:#7ec87e;padding:0.4rem 1rem;border-radius:20px;font-size:0.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem}
+  .hero h1{font-family:'Lora',serif;font-size:3.2rem;color:var(--white);line-height:1.1;margin-bottom:1.2rem}
+  .hero h1 em{font-style:normal;color:#7ec87e}
+  .hero-sub{font-size:1.05rem;color:#94a3b8;line-height:1.7;margin-bottom:2rem}
+  .hero-cta-row{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+  .btn-primary{background:#7ec87e;color:var(--forest);padding:0.85rem 2rem;border-radius:6px;font-weight:800;font-size:0.95rem;text-decoration:none;transition:all 0.2s;letter-spacing:0.5px}
+  .btn-primary:hover{background:#5ab85a;transform:translateY(-1px)}
+  .btn-secondary{color:var(--white);padding:0.85rem 2rem;border:2px solid rgba(255,255,255,0.3);border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:all 0.2s}
+  .btn-secondary:hover{border-color:var(--white)}
+  .hero-stats{display:flex;gap:2rem;margin-top:2.5rem}
+  .hero-stat{text-align:center}
+  .hero-stat-num{font-size:1.8rem;font-weight:900;color:#7ec87e;display:block}
+  .hero-stat-label{font-size:0.75rem;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px}
+  .hero-visual{position:relative}
+  .hero-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem;color:var(--white)}
+  .hero-card-title{font-size:1rem;font-weight:700;margin-bottom:1.2rem;color:#7ec87e}
+  .service-chip{display:inline-block;background:rgba(126,200,126,0.1);border:1px solid rgba(126,200,126,0.2);color:#a3d9a3;padding:0.4rem 0.8rem;border-radius:20px;font-size:0.78rem;font-weight:600;margin:0.25rem}
+  .emergency-badge{background:linear-gradient(135deg,#dc2626,#b91c1c);color:var(--white);padding:1rem 1.5rem;border-radius:10px;margin-top:1.2rem;font-weight:700;font-size:0.9rem;text-align:center}
+  .emergency-badge span{font-size:1.3rem;display:block;margin-bottom:0.3rem}
+
+  /* TRUST BAR */
+  .trust-bar{background:var(--cream);padding:1.5rem 2rem;border-bottom:1px solid #e5e7eb}
+  .trust-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:1rem}
+  .trust-item{display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;font-weight:600;color:var(--forest)}
+  .trust-icon{font-size:1.2rem}
+
+  /* SECTION DEFAULTS */
+  section{padding:5rem 2rem}
+  .section-inner{max-width:1200px;margin:0 auto}
+  .section-tag{font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--moss);margin-bottom:0.8rem}
+  .section-title{font-family:'Lora',serif;font-size:2.4rem;color:var(--forest);line-height:1.2;margin-bottom:1rem}
+  .section-sub{color:var(--gray);font-size:1rem;line-height:1.7;max-width:600px}
+
+  /* SERVICES */
+  .services-section{background:var(--white)}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+  .service-card{border:1px solid #e5e7eb;border-radius:12px;padding:1.8rem;transition:all 0.3s;cursor:default}
+  .service-card:hover{border-color:var(--leaf);transform:translateY(-3px);box-shadow:0 8px 30px rgba(27,58,31,0.1)}
+  .service-icon{font-size:2.2rem;margin-bottom:1rem}
+  .service-card h3{font-size:1.05rem;font-weight:700;color:var(--forest);margin-bottom:0.6rem}
+  .service-card p{font-size:0.88rem;color:var(--gray);line-height:1.6}
+  .service-card.featured{background:var(--forest);border-color:var(--forest);color:var(--white)}
+  .service-card.featured h3{color:#7ec87e}
+  .service-card.featured p{color:#94a3b8}
+
+  /* WHY US — ALTERNATING */
+  .why-section{background:var(--forest)}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
+  .why-list{list-style:none;display:flex;flex-direction:column;gap:1.5rem}
+  .why-item{display:flex;gap:1rem;align-items:flex-start}
+  .why-check{background:#7ec87e;color:var(--forest);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85rem;flex-shrink:0;margin-top:0.15rem}
+  .why-item-text h4{color:var(--white);font-weight:700;margin-bottom:0.3rem}
+  .why-item-text p{color:#94a3b8;font-size:0.88rem;line-height:1.6}
+  .why-visual{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem}
+  .rating-display{text-align:center;padding:2rem}
+  .rating-number{font-size:4rem;font-weight:900;color:#7ec87e;display:block}
+  .stars{color:#f59e0b;font-size:1.5rem;margin:0.5rem 0}
+  .rating-label{color:#94a3b8;font-size:0.85rem}
+  .review-list{margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+  .review-item{background:rgba(255,255,255,0.05);border-radius:8px;padding:1rem}
+  .review-name{font-weight:700;color:var(--white);font-size:0.85rem;margin-bottom:0.3rem}
+  .review-text{color:#94a3b8;font-size:0.8rem;line-height:1.5;font-style:italic}
+
+  /* PROCESS */
+  .process-section{background:var(--cream)}
+  .process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-top:3rem}
+  .process-step{text-align:center;padding:1.5rem}
+  .step-num{width:52px;height:52px;background:var(--forest);color:#7ec87e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:900;margin:0 auto 1rem}
+  .process-step h3{font-weight:700;color:var(--forest);margin-bottom:0.5rem}
+  .process-step p{font-size:0.85rem;color:var(--gray);line-height:1.6}
+
+  /* EMERGENCY */
+  .emergency-section{background:linear-gradient(135deg,#7f1d1d,#dc2626);padding:4rem 2rem;text-align:center;color:var(--white)}
+  .emergency-section h2{font-family:'Lora',serif;font-size:2.2rem;margin-bottom:1rem}
+  .emergency-section p{font-size:1rem;color:rgba(255,255,255,0.85);max-width:500px;margin:0 auto 1.5rem}
+  .emergency-phone{font-size:2rem;font-weight:900;color:var(--white);text-decoration:none;display:block;margin-bottom:1.5rem}
+
+  /* SERVICE AREA */
+  .area-section{background:var(--white)}
+  .area-chips{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+  .area-chip{background:var(--cream);border:1px solid #d1fae5;color:var(--forest);padding:0.4rem 1rem;border-radius:20px;font-size:0.82rem;font-weight:600}
+
+  /* CONTACT */
+  .contact-section{background:var(--forest);color:var(--white)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
+  .contact-info h3{color:#7ec87e;font-size:1.1rem;font-weight:700;margin-bottom:1.5rem}
+  .contact-row{display:flex;align-items:flex-start;gap:0.8rem;margin-bottom:1.2rem}
+  .contact-icon{font-size:1.1rem;margin-top:0.1rem;flex-shrink:0}
+  .contact-row p{color:#94a3b8;font-size:0.9rem;line-height:1.5}
+  .contact-form-wrapper h3{color:#7ec87e;font-size:1.1rem;font-weight:700;margin-bottom:1.5rem}
+  .form-group{margin-bottom:1rem}
+  .form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:0.75rem 1rem;color:var(--white);font-size:0.9rem;font-family:'Montserrat',sans-serif;outline:none;transition:border 0.2s}
+  .form-group input::placeholder,.form-group textarea::placeholder{color:#64748b}
+  .form-group input:focus,.form-group textarea:focus{border-color:#7ec87e}
+  .form-group textarea{height:100px;resize:none}
+  .form-submit{background:#7ec87e;color:var(--forest);border:none;padding:0.85rem 2rem;border-radius:6px;font-weight:800;font-size:0.95rem;cursor:pointer;width:100%;transition:background 0.2s;font-family:'Montserrat',sans-serif}
+  .form-submit:hover{background:#5ab85a}
+
+  /* FOOTER */
+  footer{background:#0f2412;color:#64748b;padding:2rem;text-align:center;font-size:0.82rem}
+  footer a{color:#7ec87e;text-decoration:none}
+
+  /* PREVIEW BANNER */
+  .preview-banner{background:linear-gradient(135deg,#1a1a2e,#2a2a3e);color:#00b4d8;text-align:center;padding:0.75rem 1rem;font-size:0.82rem;font-weight:700;letter-spacing:0.5px}
+  .preview-banner span{color:#ffffff}
+
+  @media(max-width:768px){
+    .hero-inner,.why-grid,.contact-grid{grid-template-columns:1fr}
+    .hero h1{font-size:2rem}
+    .nav-links{display:none}
+    .hero-stats{gap:1rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-banner">
+  WEBSITE PREVIEW — <span>Paradigm Tree Works</span> — Built by Alma Digital Services
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Paradigm <span>Tree Works</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why-us">About</a></li>
+    <li><a href="#process">Our Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:2085120535" class="nav-cta">Call Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">⭐ 4.8 Stars &nbsp;|&nbsp; Spokane & Surrounding Areas</div>
+      <h1>Spokane's <em>Trusted</em> Tree Experts</h1>
+      <p class="hero-sub">From emergency storm damage to routine trimming, Paradigm Tree Works delivers professional tree care that protects your property and keeps your yard beautiful year-round.</p>
+      <div class="hero-cta-row">
+        <a href="tel:2085120535" class="btn-primary">📞 (208) 512-0535</a>
+        <a href="#services" class="btn-secondary">View Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">4.8★</span><span class="hero-stat-label">Google Rating</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">40+</span><span class="hero-stat-label">Happy Clients</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">24/7</span><span class="hero-stat-label">Emergency Service</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-title">🌲 Our Services</div>
+        <div>
+          <span class="service-chip">Tree Removal</span>
+          <span class="service-chip">Tree Trimming</span>
+          <span class="service-chip">Stump Grinding</span>
+          <span class="service-chip">Crown Reduction</span>
+          <span class="service-chip">Dead Tree Removal</span>
+          <span class="service-chip">Hazard Assessment</span>
+          <span class="service-chip">Land Clearing</span>
+          <span class="service-chip">Brush Removal</span>
+        </div>
+        <div class="emergency-badge">
+          <span>⚡ 24/7 Storm Emergency</span>
+          Call (208) 512-0535 — We respond fast
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-icon">🛡️</span> Fully Licensed & Insured</div>
+    <div class="trust-item"><span class="trust-icon">⚡</span> 24/7 Emergency Response</div>
+    <div class="trust-item"><span class="trust-icon">🌲</span> ISA-Certified Arborists</div>
+    <div class="trust-item"><span class="trust-icon">💰</span> Free Estimates</div>
+    <div class="trust-item"><span class="trust-icon">📍</span> Spokane & Coeur d'Alene Area</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="section-inner">
+    <div class="section-tag">What We Do</div>
+    <h2 class="section-title">Complete Tree Care Services</h2>
+    <p class="section-sub">Whether you need a hazardous tree removed or your property cleared after a storm, our certified crew handles every job safely and efficiently.</p>
+    <div class="services-grid">
+      <div class="service-card featured">
+        <div class="service-icon">🌲</div>
+        <h3>Tree Removal</h3>
+        <p>Safe, complete removal of dead, diseased, or hazardous trees. We handle trees of all sizes with precision equipment and zero damage to your property.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✂️</div>
+        <h3>Tree Trimming & Pruning</h3>
+        <p>Shape your trees for health, safety, and curb appeal. We remove dead branches, improve structure, and let in more light — all while preserving the tree's natural form.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪨</div>
+        <h3>Stump Grinding</h3>
+        <p>Eliminate unsightly stumps that attract pests and create mowing hazards. We grind stumps below grade so you can replant, seed, or level the area.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⛈️</div>
+        <h3>Emergency Storm Service</h3>
+        <p>Fallen tree on your roof? Dangerous limbs hanging over your driveway? We're available 24/7 for emergency response throughout the Spokane region.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3>Hazard Assessment</h3>
+        <p>Not sure if a tree is safe? Our certified arborists inspect root systems, canopy, and structure to give you a full report — with honest recommendations.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏡</div>
+        <h3>Land Clearing</h3>
+        <p>Preparing a lot for construction or reclaiming overgrown property? We clear trees, brush, and stumps efficiently, leaving you a clean, usable space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section" id="why-us">
+  <div class="section-inner">
+    <div class="section-tag" style="color:#7ec87e">Why Paradigm</div>
+    <h2 class="section-title" style="color:var(--white)">Tree Work Done Right — Every Time</h2>
+    <div class="why-grid">
+      <ul class="why-list">
+        <li class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-text">
+            <h4>Fully Licensed & Insured</h4>
+            <p>We carry full liability and workers' comp insurance, protecting your property and our crew. Never hire an unlicensed tree service — the risk isn't worth it.</p>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-text">
+            <h4>Certified Arborists On Staff</h4>
+            <p>Our team includes ISA-certified arborists who understand tree biology, proper pruning technique, and how to preserve long-term tree health.</p>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-text">
+            <h4>No Damage Guarantee</h4>
+            <p>We protect your lawn, landscaping, and structures throughout every job. Our equipment and methods are chosen specifically to minimize ground disturbance.</p>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-text">
+            <h4>Free, Honest Estimates</h4>
+            <p>No surprise charges. We assess your project, explain exactly what's needed, and give you a firm quote before any work begins.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="why-visual">
+        <div class="rating-display">
+          <span class="rating-number">4.8</span>
+          <div class="stars">★★★★★</div>
+          <span class="rating-label">Based on 40 Google reviews</span>
+        </div>
+        <div class="review-list">
+          <div class="review-item">
+            <div class="review-name">Sarah M. — Spokane Valley</div>
+            <div class="review-text">"Paradigm removed three large trees in our backyard without damaging a single shrub. Professional, fast, and cleaned up everything. Highly recommend."</div>
+          </div>
+          <div class="review-item">
+            <div class="review-name">Mike T. — Liberty Lake</div>
+            <div class="review-text">"Called them after a storm took a branch onto our fence. They were there same day, fixed the problem, and were very fairly priced. Real professionals."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <div class="section-inner">
+    <div class="section-tag">How It Works</div>
+    <h2 class="section-title">Simple, Stress-Free Process</h2>
+    <p class="section-sub">From your first call to the final cleanup, we make tree work easy.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>Free Estimate</h3>
+        <p>Call or text us. We'll schedule a visit, assess your trees, and give you a clear, honest quote with no obligation.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>Schedule Your Job</h3>
+        <p>We work around your schedule. Most jobs are booked within days — or the same day for storm emergencies.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>Crew Arrives & Works</h3>
+        <p>Our trained crew arrives on time, protects your property, and completes the work safely and efficiently.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>Complete Cleanup</h3>
+        <p>We haul away all debris, chip branches, and leave your property cleaner than we found it. No mess left behind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY CTA -->
+<section class="emergency-section">
+  <h2>Storm Damage? We Respond 24/7</h2>
+  <p>Don't wait with a dangerous tree on your property. Our emergency crew is standing by around the clock — call now for immediate response.</p>
+  <a href="tel:2085120535" class="emergency-phone">(208) 512-0535</a>
+  <a href="tel:2085120535" class="btn-primary">Call for Emergency Service</a>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area-section" id="area">
+  <div class="section-inner">
+    <div class="section-tag">Coverage</div>
+    <h2 class="section-title">Serving Greater Spokane</h2>
+    <p class="section-sub">We serve homeowners and businesses throughout the Spokane metro and surrounding communities.</p>
+    <div class="area-chips">
+      <span class="area-chip">Spokane, WA</span>
+      <span class="area-chip">Spokane Valley</span>
+      <span class="area-chip">Liberty Lake</span>
+      <span class="area-chip">Coeur d'Alene, ID</span>
+      <span class="area-chip">Post Falls, ID</span>
+      <span class="area-chip">Cheney</span>
+      <span class="area-chip">Medical Lake</span>
+      <span class="area-chip">Mead</span>
+      <span class="area-chip">Deer Park</span>
+      <span class="area-chip">Millwood</span>
+      <span class="area-chip">Airway Heights</span>
+      <span class="area-chip">Nine Mile Falls</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <div class="section-tag" style="color:#7ec87e">Get In Touch</div>
+    <h2 class="section-title" style="color:var(--white)">Request a Free Estimate</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-row">
+          <span class="contact-icon">📞</span>
+          <p><strong style="color:#fff">(208) 512-0535</strong><br>Call or text anytime — 24/7 for emergencies</p>
+        </div>
+        <div class="contact-row">
+          <span class="contact-icon">📍</span>
+          <p>Spokane, WA &amp; Coeur d'Alene, ID area<br>Serving a 40-mile radius</p>
+        </div>
+        <div class="contact-row">
+          <span class="contact-icon">🕐</span>
+          <p>Mon–Fri: 7am – 6pm<br>Sat: 8am – 4pm<br>Emergency: 24/7</p>
+        </div>
+        <div class="contact-row">
+          <span class="contact-icon">⭐</span>
+          <p>4.8 stars on Google<br>40+ verified reviews</p>
+        </div>
+      </div>
+      <div class="contact-form-wrapper">
+        <h3>Tell Us About Your Project</h3>
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <div class="form-group"><input type="text" name="name" placeholder="Your Full Name" required></div>
+          <div class="form-group"><input type="tel" name="phone" placeholder="Phone Number" required></div>
+          <div class="form-group"><input type="email" name="email" placeholder="Email Address"></div>
+          <div class="form-group">
+            <select name="service" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:0.75rem 1rem;color:#94a3b8;font-size:0.9rem;width:100%;font-family:'Montserrat',sans-serif">
+              <option value="">Select Service Needed</option>
+              <option>Tree Removal</option>
+              <option>Tree Trimming / Pruning</option>
+              <option>Stump Grinding</option>
+              <option>Emergency Storm Service</option>
+              <option>Hazard Assessment</option>
+              <option>Land Clearing</option>
+            </select>
+          </div>
+          <div class="form-group"><textarea name="message" placeholder="Describe your project — tree size, location, urgency..."></textarea></div>
+          <button type="submit" class="form-submit">Request Free Estimate →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Paradigm Tree Works &nbsp;|&nbsp; Spokane, WA &nbsp;|&nbsp; <a href="tel:2085120535">(208) 512-0535</a> &nbsp;|&nbsp; Licensed & Insured</p>
+  <p style="margin-top:0.5rem;color:#374151">Website by <a href="https://almadigitalservices.com">Alma Digital Services</a> — <em>This is a free preview. <a href="https://almadigitalservices.com">Claim your site</a> today.</em></p>
+</footer>
+
+</body>
+</html>
