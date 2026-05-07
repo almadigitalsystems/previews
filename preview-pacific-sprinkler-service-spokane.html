@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacific Sprinkler Service | Spokane WA Irrigation Installation & Repair</title>
+<meta name="description" content="Pacific Sprinkler Service — 5-star rated irrigation specialists in Spokane WA. Expert sprinkler installation, repair & seasonal service. Call (509) 230-8838.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --deep:#0b1f3a;
+    --navy:#1a3456;
+    --blue:#1d6fa4;
+    --accent:#2dd4bf;
+    --light-teal:#e0f9f7;
+    --silver:#e8edf4;
+    --white:#fff;
+    --text:#0f172a;
+    --muted:#5a6a84;
+    --border:#dde3ee;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--white)}
+
+  /* PREVIEW BANNER */
+  .preview-banner{background:linear-gradient(135deg,#1a1a2e,#2a2a3e);color:#00b4d8;text-align:center;padding:0.75rem 1rem;font-size:0.82rem;font-weight:700;letter-spacing:0.5px}
+  .preview-banner span{color:#ffffff}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:100;background:var(--deep);padding:0 3rem;height:70px;display:flex;align-items:center;justify-content:space-between}
+  .nav-logo{color:var(--white);font-weight:800;font-size:1.15rem;letter-spacing:-0.3px}
+  .nav-logo em{font-style:normal;color:var(--accent)}
+  .nav-links{display:flex;gap:2.5rem;list-style:none}
+  .nav-links a{color:#94a3b8;text-decoration:none;font-size:0.85rem;font-weight:600;transition:color 0.2s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{background:var(--accent);color:var(--deep);padding:0.55rem 1.4rem;border-radius:5px;font-weight:700;font-size:0.85rem;text-decoration:none;transition:all 0.2s}
+  .nav-cta:hover{background:#14b8a6;transform:translateY(-1px)}
+
+  /* BOLD HERO — FULL SCREEN */
+  .hero{min-height:92vh;background:linear-gradient(165deg,var(--deep) 0%,var(--navy) 55%,#0d4a7a 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 2rem;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(45,212,191,0.06) 0%,transparent 70%)}
+  .hero-content{position:relative;z-index:1;max-width:860px}
+  .hero-pill{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(45,212,191,0.12);border:1px solid rgba(45,212,191,0.25);color:var(--accent);padding:0.45rem 1.2rem;border-radius:30px;font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2rem}
+  .hero h1{font-family:'Fraunces',serif;font-size:4rem;color:var(--white);line-height:1.1;margin-bottom:1.5rem;letter-spacing:-1px}
+  .hero h1 span{color:var(--accent)}
+  .hero-sub{font-size:1.1rem;color:#94a3b8;line-height:1.75;max-width:620px;margin:0 auto 2.5rem}
+  .hero-cta-row{display:flex;gap:1.2rem;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:3rem}
+  .btn-accent{background:var(--accent);color:var(--deep);padding:1rem 2.5rem;border-radius:6px;font-weight:800;font-size:1rem;text-decoration:none;transition:all 0.2s;letter-spacing:-0.2px}
+  .btn-accent:hover{background:#14b8a6;transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,212,191,0.3)}
+  .btn-outline-light{color:var(--white);border:2px solid rgba(255,255,255,0.25);padding:1rem 2rem;border-radius:6px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:all 0.2s}
+  .btn-outline-light:hover{border-color:var(--accent);color:var(--accent)}
+  .hero-stat-row{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08)}
+  .hero-stat-item{text-align:center}
+  .hero-stat-num{font-size:2.2rem;font-weight:800;color:var(--accent);display:block;line-height:1}
+  .hero-stat-label{font-size:0.72rem;color:#64748b;text-transform:uppercase;letter-spacing:1px;margin-top:0.3rem}
+
+  /* TRUST ROW */
+  .trust-row{background:var(--silver);padding:1.2rem 2rem}
+  .tr-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap}
+  .tr-item{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;font-weight:700;color:var(--navy)}
+
+  /* SECTION */
+  section{padding:5rem 2rem}
+  .si{max-width:1100px;margin:0 auto}
+  .ey{font-size:0.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem}
+  .st{font-family:'Fraunces',serif;font-size:2.4rem;color:var(--text);line-height:1.2;margin-bottom:1rem;letter-spacing:-0.5px}
+  .ss{color:var(--muted);line-height:1.7;max-width:580px}
+
+  /* SERVICES */
+  .svc-section{background:var(--white)}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+  .svc-card{border:1px solid var(--border);border-radius:14px;padding:2rem;transition:all 0.3s;position:relative;overflow:hidden}
+  .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--accent),var(--blue));transform:scaleX(0);transition:transform 0.3s;transform-origin:left}
+  .svc-card:hover::before{transform:scaleX(1)}
+  .svc-card:hover{border-color:var(--accent);box-shadow:0 8px 30px rgba(13,31,58,0.1);transform:translateY(-2px)}
+  .sc-icon{font-size:2rem;margin-bottom:1rem}
+  .svc-card h3{font-size:1rem;font-weight:700;color:var(--deep);margin-bottom:0.6rem}
+  .svc-card p{font-size:0.85rem;color:var(--muted);line-height:1.65}
+  .svc-card.star{background:linear-gradient(135deg,var(--deep),var(--navy));border-color:transparent}
+  .svc-card.star h3{color:var(--accent)}
+  .svc-card.star p{color:#94a3b8}
+  .svc-card.star::before{transform:scaleX(1)}
+
+  /* AUTHORITY SECTION */
+  .authority-section{background:var(--deep)}
+  .auth-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem}
+  .auth-left h2{font-family:'Fraunces',serif;font-size:2.2rem;color:var(--white);line-height:1.2;margin-bottom:1.2rem}
+  .auth-left h2 span{color:var(--accent)}
+  .auth-left p{color:#94a3b8;font-size:0.95rem;line-height:1.8;margin-bottom:1.2rem}
+  .auth-certs{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.5rem}
+  .auth-cert{background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.2);color:var(--accent);padding:0.4rem 0.9rem;border-radius:20px;font-size:0.78rem;font-weight:600}
+  .auth-right{}
+  .rating-hero{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:2rem;text-align:center;margin-bottom:1.2rem}
+  .rh-num{font-size:5rem;font-weight:800;color:var(--accent);line-height:1;display:block}
+  .rh-stars{color:#fbbf24;font-size:1.6rem;margin:0.4rem 0}
+  .rh-label{color:#94a3b8;font-size:0.82rem;font-weight:600}
+  .authority-points{display:flex;flex-direction:column;gap:1rem}
+  .ap{display:flex;gap:0.9rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1.1rem;align-items:flex-start}
+  .ap-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.1rem}
+  .ap h4{color:var(--white);font-size:0.88rem;font-weight:700;margin-bottom:0.2rem}
+  .ap p{color:#94a3b8;font-size:0.8rem;line-height:1.5}
+
+  /* HOW WE'RE DIFFERENT */
+  .diff-section{background:var(--silver)}
+  .diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:3rem}
+  .diff-item{background:var(--white);border-radius:12px;padding:1.8rem;border-bottom:3px solid var(--accent)}
+  .di-icon{font-size:1.8rem;margin-bottom:0.8rem}
+  .diff-item h3{font-size:0.92rem;font-weight:700;color:var(--deep);margin-bottom:0.5rem}
+  .diff-item p{font-size:0.82rem;color:var(--muted);line-height:1.6}
+
+  /* PROCESS */
+  .process-section{background:var(--white)}
+  .ps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem}
+  .psg{position:relative;padding:1.5rem}
+  .psg-num{font-family:'Fraunces',serif;font-size:3rem;color:rgba(29,111,164,0.12);font-weight:700;position:absolute;top:0;left:1rem;line-height:1}
+  .psg h4{font-size:0.9rem;font-weight:700;color:var(--deep);margin-bottom:0.4rem;margin-top:1.8rem}
+  .psg p{font-size:0.8rem;color:var(--muted);line-height:1.55}
+
+  /* CTA STRIP */
+  .cta-section{background:linear-gradient(135deg,var(--deep) 0%,var(--navy) 100%);padding:5rem 2rem;text-align:center}
+  .cta-section h2{font-family:'Fraunces',serif;font-size:2.5rem;color:var(--white);margin-bottom:1rem;letter-spacing:-0.5px}
+  .cta-section p{color:#94a3b8;font-size:1rem;max-width:520px;margin:0 auto 1.5rem;line-height:1.7}
+  .cta-phone{font-size:2.4rem;font-weight:800;color:var(--accent);display:block;text-decoration:none;margin-bottom:1.5rem}
+  .cta-phone:hover{color:#14b8a6}
+
+  /* AREA */
+  .area-section{background:var(--white)}
+  .chips{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+  .chip{background:var(--light-teal);border:1px solid #99f6e4;color:var(--navy);padding:0.4rem 1rem;border-radius:20px;font-size:0.8rem;font-weight:600}
+
+  /* CONTACT */
+  .contact-section{background:var(--deep)}
+  .cg{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
+  .ci{color:var(--white)}
+  .ci h3{color:var(--accent);font-size:1rem;font-weight:700;margin-bottom:1.5rem}
+  .cr{display:flex;gap:0.8rem;margin-bottom:1.2rem;align-items:flex-start}
+  .cr-icon{font-size:1rem;flex-shrink:0;margin-top:0.1rem}
+  .cr p{color:#94a3b8;font-size:0.88rem;line-height:1.5}
+  .cr strong{color:var(--white)}
+  .form-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:2rem}
+  .form-box h3{color:var(--accent);font-size:0.95rem;font-weight:700;margin-bottom:1.2rem}
+  .fg{margin-bottom:0.9rem}
+  .fg input,.fg textarea,.fg select{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:0.75rem 1rem;color:var(--white);font-size:0.88rem;font-family:'Plus Jakarta Sans',sans-serif;outline:none;transition:border 0.2s}
+  .fg input::placeholder,.fg textarea::placeholder{color:#475569}
+  .fg input:focus,.fg textarea:focus{border-color:var(--accent)}
+  .fg select{color:#64748b}
+  .fg select option{background:#0b1f3a}
+  .fg textarea{height:90px;resize:none}
+  .fs{width:100%;background:var(--accent);color:var(--deep);border:none;padding:0.85rem;border-radius:6px;font-weight:800;font-size:0.95rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:background 0.2s}
+  .fs:hover{background:#14b8a6}
+
+  /* FOOTER */
+  footer{background:#050e1a;padding:1.5rem;text-align:center;color:#334155;font-size:0.78rem}
+  footer a{color:var(--accent);text-decoration:none}
+
+  @media(max-width:768px){
+    .hero h1{font-size:2.2rem}
+    .auth-grid,.cg{grid-template-columns:1fr}
+    .ps-grid{grid-template-columns:1fr 1fr}
+    .nav-links{display:none}
+    nav{padding:0 1.5rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-banner">
+  WEBSITE PREVIEW — <span>Pacific Sprinkler Service</span> — Built by Alma Digital Services
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Pacific <em>Sprinkler</em> Service</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#authority">About</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:5092308838" class="nav-cta">📞 (509) 230-8838</a>
+</nav>
+
+<!-- HERO — BOLD CENTERED -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-pill">⭐ 5.0 Stars &nbsp;·&nbsp; Spokane, WA &nbsp;·&nbsp; Irrigation Specialists</div>
+    <h1>Spokane's <span>Premier</span><br>Sprinkler Service</h1>
+    <p class="hero-sub">Pacific Sprinkler Service delivers expert irrigation installation, repair, and seasonal maintenance with a 5-star commitment to quality — every job, every customer, every time.</p>
+    <div class="hero-cta-row">
+      <a href="tel:5092308838" class="btn-accent">📞 Call (509) 230-8838</a>
+      <a href="#services" class="btn-outline-light">See Our Services</a>
+    </div>
+    <div class="hero-stat-row">
+      <div class="hero-stat-item"><span class="hero-stat-num">5.0★</span><span class="hero-stat-label">Google Rating</span></div>
+      <div class="hero-stat-item"><span class="hero-stat-num">100%</span><span class="hero-stat-label">Satisfaction Guaranteed</span></div>
+      <div class="hero-stat-item"><span class="hero-stat-num">Free</span><span class="hero-stat-label">Estimates</span></div>
+      <div class="hero-stat-item"><span class="hero-stat-num">All</span><span class="hero-stat-label">Brands Serviced</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST ROW -->
+<div class="trust-row">
+  <div class="tr-inner">
+    <div class="tr-item">🏅 Licensed & Insured</div>
+    <div class="tr-item">💧 All Irrigation Systems</div>
+    <div class="tr-item">🌸 Spring Startup</div>
+    <div class="tr-item">❄️ Fall Winterization</div>
+    <div class="tr-item">⚡ Fast Response</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="svc-section" id="services">
+  <div class="si">
+    <div class="ey">What We Do</div>
+    <h2 class="st">Complete Irrigation Services</h2>
+    <p class="ss">From designing and installing a brand-new system to fixing a single broken head — we handle every aspect of residential and commercial irrigation in Spokane.</p>
+    <div class="svc-grid">
+      <div class="svc-card star">
+        <div class="sc-icon">💧</div>
+        <h3>Sprinkler System Installation</h3>
+        <p>Complete irrigation system design and installation for new and existing properties. Zoned coverage, water-efficient heads, and professional-grade components built to last.</p>
+      </div>
+      <div class="svc-card">
+        <div class="sc-icon">🔧</div>
+        <h3>Sprinkler Repair & Service</h3>
+        <p>Broken heads, valve failures, controller issues, line leaks — we diagnose and repair any irrigation problem quickly and correctly, on all major brands.</p>
+      </div>
+      <div class="svc-card">
+        <div class="sc-icon">🌸</div>
+        <h3>Spring System Startup</h3>
+        <p>Turn-on, pressurization, head inspection and adjustment, backflow check, and zone programming to get your system fully operational for spring.</p>
+      </div>
+      <div class="svc-card">
+        <div class="sc-icon">❄️</div>
+        <h3>Fall Winterization</h3>
+        <p>Full compressed-air blowout of every zone before Spokane's first hard freeze. Protects your investment from burst lines and cracked fittings.</p>
+      </div>
+      <div class="svc-card">
+        <div class="sc-icon">⚙️</div>
+        <h3>System Upgrades & Expansions</h3>
+        <p>Upgrade to smart WiFi controllers, add new zones for expanded coverage, or retrofit an older system with modern heads for better efficiency.</p>
+      </div>
+      <div class="svc-card">
+        <div class="sc-icon">📋</div>
+        <h3>Backflow Testing & Certification</h3>
+        <p>Annual backflow preventer testing and certification as required by Spokane Water. Certified testers on staff — we file your paperwork and keep your system compliant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORITY -->
+<section class="authority-section" id="authority">
+  <div class="si">
+    <div class="ey" style="color:var(--accent)">Our Standard</div>
+    <div class="auth-grid">
+      <div class="auth-left">
+        <h2>A 5-Star Standard <span>Every Job</span></h2>
+        <p>Pacific Sprinkler Service was built on a simple belief: every customer deserves the same premium service, whether they're getting a single head replaced or a full system installed from scratch.</p>
+        <p>Our 5.0 Google rating isn't just a number — it's our operating standard. We build our pricing, scheduling, and workmanship around earning that score on every single job, not just occasionally.</p>
+        <p>We serve Spokane homeowners and businesses with irrigation solutions designed specifically for the Pacific Northwest climate — the kind of expertise that prevents the common failures we see in systems installed by generalists.</p>
+        <div class="auth-certs">
+          <span class="auth-cert">✓ Licensed Technicians</span>
+          <span class="auth-cert">✓ Fully Insured</span>
+          <span class="auth-cert">✓ All Brands Serviced</span>
+          <span class="auth-cert">✓ Free Written Estimates</span>
+          <span class="auth-cert">✓ 100% Satisfaction Guaranteed</span>
+        </div>
+      </div>
+      <div class="auth-right">
+        <div class="rating-hero">
+          <span class="rh-num">5.0</span>
+          <div class="rh-stars">★★★★★</div>
+          <span class="rh-label">Perfect Google Rating · 100% of customers recommended us</span>
+        </div>
+        <div class="authority-points">
+          <div class="ap">
+            <span class="ap-icon">🎯</span>
+            <div><h4>Diagnosis-First Approach</h4><p>We identify the real issue before touching anything — no unnecessary parts, no guesswork repairs.</p></div>
+          </div>
+          <div class="ap">
+            <span class="ap-icon">💰</span>
+            <div><h4>Transparent, Flat Pricing</h4><p>Written estimates before work begins. You know exactly what you'll pay — no surprises at the end.</p></div>
+          </div>
+          <div class="ap">
+            <span class="ap-icon">✅</span>
+            <div><h4>Workmanship Guarantee</h4><p>We stand behind every repair and installation. If something isn't right, we come back and make it right.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT MAKES US DIFFERENT -->
+<section class="diff-section">
+  <div class="si">
+    <div class="ey">Our Difference</div>
+    <h2 class="st">Why Spokane Chooses Pacific Sprinkler</h2>
+    <p class="ss">We don't compete on being the cheapest — we compete on being the best. Here's what that looks like in practice.</p>
+    <div class="diff-grid">
+      <div class="diff-item">
+        <div class="di-icon">🔍</div>
+        <h3>Full System Assessment</h3>
+        <p>Every service call includes a complete system walkthrough so you know the state of your entire system, not just the one thing that broke.</p>
+      </div>
+      <div class="diff-item">
+        <div class="di-icon">🚐</div>
+        <h3>Stocked Service Trucks</h3>
+        <p>We carry parts for the most common repairs on every truck. Most jobs are completed in a single visit without waiting on parts to arrive.</p>
+      </div>
+      <div class="diff-item">
+        <div class="di-icon">📱</div>
+        <h3>Smart Controller Options</h3>
+        <p>We install and program WiFi-enabled controllers so you can monitor and adjust your system from your phone, reducing water use and bills.</p>
+      </div>
+      <div class="diff-item">
+        <div class="di-icon">📅</div>
+        <h3>Priority Seasonal Scheduling</h3>
+        <p>Returning customers get first access to spring startup and fall winterization slots — the most in-demand dates of the year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <div class="si">
+    <div class="ey">How It Works</div>
+    <h2 class="st">Easy From First Call to Final Check</h2>
+    <div class="ps-grid">
+      <div class="psg"><div class="psg-num">01</div><h4>Call or Request Online</h4><p>Reach us at (509) 230-8838 or submit a form. We respond quickly and schedule a visit at your convenience.</p></div>
+      <div class="psg"><div class="psg-num">02</div><h4>Free On-Site Estimate</h4><p>We visit your property, assess your full system, and give you a clear written quote before any work begins.</p></div>
+      <div class="psg"><div class="psg-num">03</div><h4>Expert Service Completed</h4><p>Licensed technicians complete the work using professional-grade components with precision and care.</p></div>
+      <div class="psg"><div class="psg-num">04</div><h4>Full System Test & Walkthrough</h4><p>We run every zone, confirm everything is working, and walk you through what was done before we leave.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready for a Flawless Irrigation System?</h2>
+  <p>Call us today for a free estimate on any service — installation, repair, or seasonal maintenance. We serve all of greater Spokane.</p>
+  <a href="tel:5092308838" class="cta-phone">(509) 230-8838</a>
+  <a href="#contact" class="btn-accent">Request Free Estimate</a>
+</section>
+
+<!-- AREA -->
+<section class="area-section">
+  <div class="si">
+    <div class="ey">Coverage</div>
+    <h2 class="st">Serving Greater Spokane</h2>
+    <p class="ss">Pacific Sprinkler Service covers the entire Spokane metro area and surrounding communities.</p>
+    <div class="chips">
+      <span class="chip">Spokane, WA</span>
+      <span class="chip">Spokane Valley</span>
+      <span class="chip">Liberty Lake</span>
+      <span class="chip">Cheney</span>
+      <span class="chip">Medical Lake</span>
+      <span class="chip">Mead</span>
+      <span class="chip">Deer Park</span>
+      <span class="chip">Millwood</span>
+      <span class="chip">Greenacres</span>
+      <span class="chip">Otis Orchards</span>
+      <span class="chip">Airway Heights</span>
+      <span class="chip">Nine Mile Falls</span>
+      <span class="chip">Colbert</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="si">
+    <div class="ey" style="color:var(--accent)">Get In Touch</div>
+    <h2 class="st" style="color:var(--white)">Request a Free Estimate</h2>
+    <div class="cg">
+      <div class="ci">
+        <h3>Contact Pacific Sprinkler Service</h3>
+        <div class="cr"><span class="cr-icon">📞</span><p><strong>(509) 230-8838</strong><br>Call or text — we respond fast</p></div>
+        <div class="cr"><span class="cr-icon">📍</span><p>Serving Spokane, WA &amp; surrounding areas</p></div>
+        <div class="cr"><span class="cr-icon">🕐</span><p>Mon–Fri: 7am – 6pm<br>Sat: 8am – 3pm<br>Same-week service available</p></div>
+        <div class="cr"><span class="cr-icon">⭐</span><p><strong>5.0 Google Rating</strong><br>100% of customers recommended us</p></div>
+        <div style="margin-top:2rem;background:rgba(45,212,191,0.08);border:1px solid rgba(45,212,191,0.15);border-radius:12px;padding:1.5rem">
+          <p style="color:var(--accent);font-weight:700;font-size:0.88rem;margin-bottom:0.6rem">🏆 Our Promise To You</p>
+          <p style="color:#94a3b8;font-size:0.82rem;line-height:1.6">We deliver the same 5-star service to every customer. If you're not completely satisfied with our work, we come back and make it right — no questions, no excuses.</p>
+        </div>
+      </div>
+      <div class="form-box">
+        <h3>Tell Us About Your Project</h3>
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <div class="fg"><input type="text" name="name" placeholder="Your Full Name" required></div>
+          <div class="fg"><input type="tel" name="phone" placeholder="Phone Number" required></div>
+          <div class="fg"><input type="email" name="email" placeholder="Email Address"></div>
+          <div class="fg">
+            <select name="service">
+              <option value="">Select Service Needed</option>
+              <option>New Sprinkler Installation</option>
+              <option>Sprinkler Repair</option>
+              <option>Spring Startup</option>
+              <option>Fall Winterization</option>
+              <option>Backflow Testing</option>
+              <option>System Upgrade</option>
+              <option>Not sure — need assessment</option>
+            </select>
+          </div>
+          <div class="fg"><textarea name="message" placeholder="Describe your property and what you need..."></textarea></div>
+          <button type="submit" class="fs">Request Free Estimate →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Pacific Sprinkler Service &nbsp;|&nbsp; Spokane, WA &nbsp;|&nbsp; <a href="tel:5092308838">(509) 230-8838</a> &nbsp;|&nbsp; Licensed & Insured</p>
+  <p style="margin-top:0.4rem">Website by <a href="https://almadigitalservices.com">Alma Digital Services</a> — <em>This is a free preview. <a href="https://almadigitalservices.com">Claim your site</a> today.</em></p>
+</footer>
+
+</body>
+</html>
