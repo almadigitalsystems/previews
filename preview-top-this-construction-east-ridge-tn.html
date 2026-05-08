@@ -4,25 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top This Construction | Expert Roofing in East Ridge, TN</title>
-  <meta name="description" content="Top This Construction — East Ridge's most-reviewed roofing contractor serving Chattanooga and surrounding areas. Roof replacement, repairs, storm damage, and gutters. Call (423) 432-4490." />
+  <meta name="description" content="Top This Construction &mdash; East Ridge's most-reviewed roofing contractor serving Chattanooga and surrounding areas. Roof replacement, repairs, storm damage, and gutters. Call (423) 432-4490." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --slate-dark: #1a2332;
-      --slate-mid: #243044;
-      --slate-light: #2e3d54;
+      --slate-dark: #0f1923;
+      --slate-mid: #1a2535;
+      --slate-light: #243044;
       --red: #c0392b;
       --red-bright: #e74c3c;
+      --amber: #d4621e;
+      --amber-light: #f0895a;
       --white: #ffffff;
-      --gray-100: #f4f6f8;
-      --gray-200: #e2e6ea;
+      --gray-100: #f3f5f7;
+      --gray-200: #e0e5ec;
       --gray-400: #94a3b8;
       --gray-600: #64748b;
-      --text-dark: #1a2332;
+      --text-dark: #0f1923;
     }
 
     html { scroll-behavior: smooth; }
@@ -34,830 +36,275 @@
       line-height: 1.6;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: var(--slate-dark);
       border-bottom: 3px solid var(--red);
       padding: 0 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;
       height: 68px;
     }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .nav-logo-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--red);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
+      width: 42px; height: 42px;
+      background: var(--red); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center; color: white;
     }
-
-    .nav-logo-text {
-      color: var(--white);
-      font-weight: 800;
-      font-size: 1.1rem;
-      line-height: 1.2;
-    }
-
-    .nav-logo-text span {
-      display: block;
-      font-size: 0.65rem;
-      font-weight: 500;
-      color: var(--gray-400);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--gray-400);
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
+    .nav-logo-text { color: var(--white); font-weight: 800; font-size: 1.05rem; line-height: 1.2; }
+    .nav-logo-text span { display: block; font-size: 0.65rem; font-weight: 500; color: var(--gray-400); letter-spacing: 0.08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--gray-400); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--white); }
-
     .nav-cta {
-      background: var(--red);
-      color: var(--white) !important;
-      padding: 9px 20px;
-      border-radius: 6px;
-      font-weight: 700 !important;
-      font-size: 0.88rem !important;
+      background: var(--red); color: var(--white) !important;
+      padding: 9px 18px; border-radius: 6px;
+      font-weight: 700 !important; font-size: 0.85rem !important;
       transition: background 0.2s !important;
+      display: inline-flex; align-items: center; gap: 7px;
     }
+    .nav-cta:hover { background: var(--red-bright) !important; }
 
-    .nav-cta:hover { background: var(--red-bright) !important; color: var(--white) !important; }
-
-    /* ── HERO ── */
+    /* HERO — full bleed */
     .hero {
-      background: var(--slate-dark);
-      background-image:
-        linear-gradient(135deg, rgba(192,57,43,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse at top right, rgba(192,57,43,0.08) 0%, transparent 65%);
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 48px;
-      padding: 80px 5% 60px;
       position: relative;
+      background-image: url("https://raw.githubusercontent.com/almadigitalsystems/previews/main/assets/img/top-this-construction-hero.webp");
+      background-size: cover;
+      background-position: center 35%;
+      background-repeat: no-repeat;
+      min-height: 90vh;
+      display: flex; align-items: center;
+      padding: 100px 5% 80px;
       overflow: hidden;
     }
-
-    .hero-image-col {
-      position: relative;
-      z-index: 2;
-      flex-shrink: 0;
-    }
-
-    .hero-photo {
-      width: 440px;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-      display: block;
-    }
-
-    @media (max-width: 1100px) {
-      .hero-image-col { display: none; }
-      .hero { justify-content: flex-start; }
-    }
-
     .hero::before {
       content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      opacity: 0.4;
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg,
+        rgba(10,15,22,0.93) 0%,
+        rgba(10,15,22,0.82) 45%,
+        rgba(10,15,22,0.38) 80%,
+        transparent 100%
+      );
     }
-
-    /* roof silhouette decoration — hidden when real photo is shown */
     .hero::after {
-      content: '';
-      position: absolute;
-      right: -40px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 520px;
-      height: 520px;
-      background: linear-gradient(135deg, var(--slate-mid) 0%, var(--slate-light) 100%);
-      clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
-      opacity: 0.08;
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
+      background: linear-gradient(to bottom, var(--red) 0%, var(--amber) 100%);
     }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 680px;
-    }
-
+    .hero-content { position: relative; z-index: 2; max-width: 700px; }
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(192,57,43,0.18);
-      border: 1px solid rgba(192,57,43,0.4);
-      color: #ff8c82;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 20px;
-      margin-bottom: 28px;
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(192,57,43,0.2); border: 1px solid rgba(192,57,43,0.45);
+      color: #ff9a92; font-size: 0.77rem; font-weight: 700;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 20px; margin-bottom: 24px;
     }
-
-    .hero-badge::before { content: '🏆'; font-size: 0.9rem; }
-
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 5.5vw, 4rem);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 24px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(3rem, 7vw, 5.2rem);
+      font-weight: 900; color: var(--white);
+      line-height: 1.0; letter-spacing: -0.01em;
+      text-transform: uppercase; margin-bottom: 22px;
     }
-
-    h1 em {
-      font-style: normal;
-      color: var(--red-bright);
-    }
-
-    .hero-sub {
-      font-size: 1.12rem;
-      color: var(--gray-400);
-      line-height: 1.7;
-      margin-bottom: 36px;
-      max-width: 560px;
-    }
-
-    .hero-sub strong {
-      color: var(--white);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-      margin-bottom: 48px;
-    }
-
+    h1 em { font-style: normal; color: var(--amber-light); display: block; }
+    .hero-sub { font-size: 1.08rem; color: rgba(255,255,255,0.72); line-height: 1.75; margin-bottom: 36px; max-width: 520px; }
+    .hero-sub strong { color: var(--white); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 52px; }
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--red);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 16px 30px;
-      border-radius: 8px;
-      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--red); color: var(--white);
+      font-weight: 700; font-size: 1rem; padding: 16px 30px;
+      border-radius: 6px; text-decoration: none;
       transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 4px 20px rgba(192,57,43,0.4);
+      box-shadow: 0 4px 20px rgba(192,57,43,0.45);
     }
-
-    .btn-primary:hover { background: var(--red-bright); transform: translateY(-1px); }
-
+    .btn-primary:hover { background: var(--red-bright); transform: translateY(-2px); }
     .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: var(--white);
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 15px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      border: 2px solid rgba(255,255,255,0.25);
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--white);
+      font-weight: 600; font-size: 0.95rem; padding: 15px 28px;
+      border-radius: 6px; text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.3);
       transition: border-color 0.2s, background 0.2s;
     }
-
-    .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
-
-    .hero-stats {
-      display: flex;
-      gap: 36px;
-      flex-wrap: wrap;
-    }
-
+    .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .hero-stats { display: flex; gap: 0; flex-wrap: wrap; }
     .hero-stat {
-      text-align: left;
+      text-align: left; padding: 20px 32px 20px 0;
+      border-right: 1px solid rgba(255,255,255,0.12); margin-right: 32px;
     }
-
+    .hero-stat:last-child { border-right: none; margin-right: 0; }
     .hero-stat-num {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.4rem; font-weight: 900; color: var(--white);
+      line-height: 1; letter-spacing: -0.02em;
     }
+    .hero-stat-num.accent { color: var(--amber-light); }
+    .hero-stat-label { font-size: 0.73rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
 
-    .hero-stat-label {
-      font-size: 0.78rem;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 4px;
-    }
-
-    /* ── TRUST BAR ── */
+    /* TRUST BAR */
     .trust-bar {
       background: var(--slate-mid);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 20px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 32px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 18px 5%;
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 8px 20px;
     }
-
     .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--gray-400);
-      font-size: 0.85rem;
-      font-weight: 500;
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.65); font-size: 0.83rem; font-weight: 500;
+      padding: 6px 14px; border-radius: 20px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
     }
+    .trust-item svg { color: var(--amber-light); }
 
-    .trust-item span:first-child { font-size: 1.2rem; }
-
-    /* ── SECTIONS ── */
+    /* SECTIONS */
     section { padding: 80px 5%; }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 12px;
-    }
-
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
     h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 700;
-      color: var(--slate-dark);
-      line-height: 1.2;
-      margin-bottom: 16px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+      color: var(--slate-dark); line-height: 1.1;
+      letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 14px;
     }
+    h2 em { font-style: normal; color: var(--red); }
+    .section-intro { font-size: 1.02rem; color: var(--gray-600); max-width: 560px; line-height: 1.75; margin-bottom: 48px; }
 
-    h2 em {
-      font-style: normal;
-      color: var(--red);
-    }
-
-    .section-intro {
-      font-size: 1.05rem;
-      color: var(--gray-600);
-      max-width: 560px;
-      line-height: 1.7;
-      margin-bottom: 48px;
-    }
-
-    /* ── SERVICES ── */
+    /* SERVICES */
     .services { background: var(--gray-100); }
-
     .services-header { text-align: center; margin-bottom: 48px; }
     .services-header .section-intro { margin: 0 auto; }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
     .service-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 32px 28px;
-      border: 1px solid var(--gray-200);
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-      position: relative;
-      overflow: hidden;
+      background: var(--white); border-radius: 10px; padding: 32px 26px 28px;
+      border: 1px solid var(--gray-200); position: relative; overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: var(--red);
-      opacity: 0;
-      transition: opacity 0.2s;
+    .service-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease;
     }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-      border-color: transparent;
-    }
-
-    .service-card:hover::before { opacity: 1; }
-
+    .service-card:nth-child(even)::after { background: var(--amber); }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+    .service-card:hover::after { transform: scaleX(1); }
     .service-icon {
-      width: 52px;
-      height: 52px;
-      background: rgba(192,57,43,0.1);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
+      width: 54px; height: 54px; background: rgba(192,57,43,0.1); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--red); margin-bottom: 20px;
     }
-
+    .service-card:nth-child(even) .service-icon { background: rgba(212,98,30,0.1); color: var(--amber); }
     .service-card h3 {
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--slate-dark);
-      margin-bottom: 10px;
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.2rem;
+      color: var(--slate-dark); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.01em;
     }
+    .service-card p { font-size: 0.875rem; color: var(--gray-600); line-height: 1.65; }
 
-    .service-card p {
-      font-size: 0.88rem;
-      color: var(--gray-600);
-      line-height: 1.6;
-    }
-
-    /* ── WHY US ── */
-    .why-us {
-      background: var(--slate-dark);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .why-us::before {
-      content: '';
-      position: absolute;
-      bottom: -80px; right: -80px;
-      width: 400px; height: 400px;
-      background: var(--red);
-      opacity: 0.04;
-      border-radius: 50%;
-    }
-
-    .why-us .section-label { color: #ff8c82; }
+    /* WHY US */
+    .why-us { background: var(--slate-dark); position: relative; overflow: hidden; }
+    .why-us::before { content: ''; position: absolute; bottom: -80px; right: -80px; width: 400px; height: 400px; background: var(--red); opacity: 0.04; border-radius: 50%; }
+    .why-us .section-label { color: var(--amber-light); }
     .why-us h2 { color: var(--white); }
     .why-us .section-intro { color: var(--gray-400); }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-    }
-
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
     .why-item {
-      padding: 28px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      transition: background 0.2s;
+      padding: 28px; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07); border-top: 2px solid var(--red);
+      border-radius: 10px; transition: background 0.2s;
     }
-
+    .why-item:nth-child(even) { border-top-color: var(--amber); }
     .why-item:hover { background: rgba(255,255,255,0.07); }
+    .why-item-num { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; color: var(--red); opacity: 0.35; line-height: 1; margin-bottom: 10px; }
+    .why-item:nth-child(even) .why-item-num { color: var(--amber); }
+    .why-item h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; color: var(--white); margin-bottom: 8px; letter-spacing: 0.02em; }
+    .why-item p { font-size: 0.875rem; color: var(--gray-400); line-height: 1.65; }
 
-    .why-item-num {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: var(--red);
-      opacity: 0.4;
-      font-family: 'Playfair Display', serif;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .why-item h3 {
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-
-    .why-item p {
-      font-size: 0.875rem;
-      color: var(--gray-400);
-      line-height: 1.6;
-    }
-
-    /* ── REVIEWS ── */
+    /* REVIEWS */
     .reviews-section { background: var(--white); }
-
-    .reviews-header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-bottom: 48px;
-    }
-
-    .rating-display {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 4px;
-    }
-
-    .stars {
-      color: #f59e0b;
-      font-size: 1.3rem;
-      letter-spacing: 2px;
-    }
-
-    .rating-num {
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--slate-dark);
-      line-height: 1;
-    }
-
-    .rating-count {
-      font-size: 0.82rem;
-      color: var(--gray-600);
-    }
-
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .review-card {
-      background: var(--gray-100);
-      border-radius: 12px;
-      padding: 28px;
-      border: 1px solid var(--gray-200);
-    }
-
+    .reviews-header { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 48px; }
+    .rating-display { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+    .stars { color: #f59e0b; font-size: 1.25rem; letter-spacing: 2px; }
+    .rating-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2.8rem; font-weight: 900; color: var(--slate-dark); line-height: 1; }
+    .rating-count { font-size: 0.82rem; color: var(--gray-600); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .review-card { background: var(--gray-100); border-radius: 10px; padding: 28px; border: 1px solid var(--gray-200); position: relative; }
+    .review-card::before { content: '"'; font-family: Georgia, serif; font-size: 4rem; color: var(--red); opacity: 0.15; position: absolute; top: 12px; left: 18px; line-height: 1; }
     .review-stars { color: #f59e0b; font-size: 0.95rem; margin-bottom: 14px; }
+    .review-text { font-size: 0.9rem; color: var(--slate-dark); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+    .reviewer { display: flex; align-items: center; gap: 12px; }
+    .reviewer-avatar { width: 40px; height: 40px; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 0.88rem; flex-shrink: 0; }
+    .reviewer-name { font-weight: 700; font-size: 0.88rem; color: var(--slate-dark); }
+    .reviewer-sub { font-size: 0.78rem; color: var(--gray-600); }
 
-    .review-text {
-      font-size: 0.9rem;
-      color: var(--slate-dark);
-      line-height: 1.65;
-      margin-bottom: 18px;
-      font-style: italic;
-    }
-
-    .reviewer {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .reviewer-avatar {
-      width: 40px; height: 40px;
-      background: var(--red);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .reviewer-name {
-      font-weight: 700;
-      font-size: 0.88rem;
-      color: var(--slate-dark);
-    }
-
-    .reviewer-sub {
-      font-size: 0.78rem;
-      color: var(--gray-600);
-    }
-
-    /* ── PROCESS ── */
+    /* PROCESS */
     .process-section { background: var(--gray-100); }
-
-    .process-section h2 { text-align: center; }
-    .process-section .section-label { text-align: center; }
+    .process-section h2, .process-section .section-label { text-align: center; }
     .process-section .section-intro { text-align: center; margin: 0 auto 56px; }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; max-width: 960px; margin: 0 auto; position: relative; }
+    .process-steps::before { content: ''; position: absolute; top: 30px; left: 12%; width: 76%; height: 2px; background: var(--gray-200); z-index: 0; }
+    .process-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+    .step-num { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.3rem; margin: 0 auto 20px; border: 4px solid var(--gray-100); }
+    .process-step:nth-child(odd) .step-num { background: var(--red); box-shadow: 0 0 0 3px var(--red); }
+    .process-step:nth-child(even) .step-num { background: var(--amber); box-shadow: 0 0 0 3px var(--amber); }
+    .process-step h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; text-transform: uppercase; color: var(--slate-dark); margin-bottom: 8px; letter-spacing: 0.02em; }
+    .process-step p { font-size: 0.83rem; color: var(--gray-600); line-height: 1.65; }
 
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0;
-      max-width: 960px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .process-steps::before {
-      content: '';
-      position: absolute;
-      top: 30px; left: 12%;
-      width: 76%;
-      height: 2px;
-      background: var(--gray-200);
-      z-index: 0;
-    }
-
-    .process-step {
-      text-align: center;
-      padding: 0 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .step-num {
-      width: 60px;
-      height: 60px;
-      background: var(--slate-dark);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-weight: 900;
-      font-size: 1.1rem;
-      margin: 0 auto 20px;
-      border: 4px solid var(--gray-100);
-      box-shadow: 0 0 0 3px var(--slate-dark);
-    }
-
-    .process-step h3 {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--slate-dark);
-      margin-bottom: 8px;
-    }
-
-    .process-step p {
-      font-size: 0.82rem;
-      color: var(--gray-600);
-      line-height: 1.6;
-    }
-
-    /* ── CTA BAND ── */
+    /* CTA BAND */
     .cta-band {
-      background: var(--red);
-      background-image: linear-gradient(135deg, var(--red) 0%, #a93226 100%);
-      padding: 64px 5%;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-band::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 260px; height: 260px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 50%;
-    }
-
-    .cta-band::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; left: 10%;
-      width: 160px; height: 160px;
-      background: rgba(255,255,255,0.04);
-      border-radius: 50%;
-    }
-
-    .cta-band h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--white);
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      margin-bottom: 16px;
-    }
-
-    .cta-band p {
-      color: rgba(255,255,255,0.85);
-      font-size: 1.05rem;
-      max-width: 540px;
-      margin: 0 auto 36px;
-      line-height: 1.65;
-    }
-
-    .cta-band .btn-primary {
-      background: var(--white);
-      color: var(--red);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-
-    .cta-band .btn-primary:hover {
-      background: var(--gray-100);
-      color: var(--red);
-    }
-
-    /* ── CONTACT ── */
-    .contact-section {
       background: var(--slate-dark);
+      border-left: 5px solid var(--red);
+      padding: 64px 5%; text-align: center;
+      position: relative; overflow: hidden;
     }
+    .cta-band::before { content: ''; position: absolute; top: -40%; right: -5%; width: 50vh; height: 50vh; background: radial-gradient(circle, rgba(192,57,43,0.12) 0%, transparent 65%); }
+    .cta-band::after { content: ''; position: absolute; bottom: -40%; left: 5%; width: 40vh; height: 40vh; background: radial-gradient(circle, rgba(212,98,30,0.1) 0%, transparent 65%); }
+    .cta-band h2 { font-family: 'Barlow Condensed', sans-serif; color: var(--white); font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 14px; position: relative; z-index: 1; }
+    .cta-band p { color: rgba(255,255,255,0.72); font-size: 1.05rem; max-width: 540px; margin: 0 auto 36px; line-height: 1.7; position: relative; z-index: 1; }
+    .cta-band .btn-primary { background: var(--red); color: var(--white); box-shadow: 0 4px 24px rgba(192,57,43,0.5); position: relative; z-index: 1; }
+    .cta-band .btn-primary:hover { background: var(--red-bright); }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-      max-width: 1000px;
-    }
-
-    .contact-section .section-label { color: #ff8c82; }
+    /* CONTACT */
+    .contact-section { background: var(--slate-dark); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; max-width: 1000px; }
+    .contact-section .section-label { color: var(--amber-light); }
     .contact-section h2 { color: var(--white); margin-bottom: 20px; }
-
     .contact-info { list-style: none; }
-    .contact-info li {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
-
+    .contact-info li { display: flex; align-items: flex-start; gap: 14px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
     .contact-info li:last-child { border-bottom: none; }
-
-    .contact-icon {
-      width: 38px; height: 38px;
-      background: rgba(192,57,43,0.2);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-
-    .contact-detail-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gray-600);
-      margin-bottom: 3px;
-    }
-
-    .contact-detail-value {
-      font-size: 0.95rem;
-      color: var(--white);
-      font-weight: 500;
-    }
-
-    .contact-detail-value a {
-      color: var(--white);
-      text-decoration: none;
-    }
-
-    .contact-form-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 14px;
-      padding: 36px 32px;
-    }
-
-    .contact-form-card h3 {
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 24px;
-    }
-
+    .contact-icon { width: 38px; height: 38px; background: rgba(212,98,30,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--amber-light); flex-shrink: 0; }
+    .contact-detail-label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-600); margin-bottom: 3px; }
+    .contact-detail-value { font-size: 0.95rem; color: var(--white); font-weight: 500; }
+    .contact-detail-value a { color: var(--white); text-decoration: none; }
+    .contact-form-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 36px 32px; }
+    .contact-form-card h3 { font-family: 'Barlow Condensed', sans-serif; color: var(--white); font-weight: 700; font-size: 1.4rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 24px; }
     .form-group { margin-bottom: 16px; }
-
-    .form-group label {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--gray-400);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px;
-      padding: 12px 14px;
-      color: var(--white);
-      font-size: 0.9rem;
-      font-family: 'Inter', sans-serif;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--red-bright);
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: var(--gray-600);
-    }
-
+    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--gray-400); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.07em; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 12px 14px; color: var(--white); font-size: 0.9rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--amber); }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--gray-600); }
     .form-group select option { background: var(--slate-dark); color: var(--white); }
     .form-group textarea { resize: vertical; min-height: 100px; }
-
-    .form-submit {
-      width: 100%;
-      background: var(--red);
-      color: var(--white);
-      border: none;
-      padding: 14px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: background 0.2s;
-      font-family: 'Inter', sans-serif;
-      margin-top: 6px;
-    }
-
+    .form-submit { width: 100%; background: var(--red); color: var(--white); border: none; padding: 14px; border-radius: 6px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: background 0.2s; font-family: 'Inter', sans-serif; margin-top: 6px; }
     .form-submit:hover { background: var(--red-bright); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: #111b27;
-      padding: 32px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .footer-copy {
-      font-size: 0.82rem;
-      color: var(--gray-600);
-    }
-
+    /* FOOTER */
+    footer { background: #080e14; padding: 28px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-top: 1px solid rgba(255,255,255,0.05); }
+    .footer-copy { font-size: 0.82rem; color: var(--gray-600); }
     .footer-copy strong { color: var(--gray-400); }
+    .footer-phone a { color: var(--white); text-decoration: none; font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
 
-    .footer-phone a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+    /* PREVIEW BANNER */
+    .preview-banner { background: linear-gradient(90deg, #7B2FF7, #C850C0); color: var(--white); text-align: center; padding: 12px 20px; font-size: 0.82rem; font-weight: 600; }
+    .preview-banner a { color: var(--white); text-decoration: underline; }
 
-    /* ── ALMA PREVIEW BANNER ── */
-    .preview-banner {
-      background: linear-gradient(90deg, #7B2FF7, #C850C0);
-      color: var(--white);
-      text-align: center;
-      padding: 12px 20px;
-      font-size: 0.82rem;
-      font-weight: 600;
-    }
-
-    .preview-banner a {
-      color: var(--white);
-      text-decoration: underline;
-    }
-
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       nav { padding: 0 4%; }
       .nav-links { display: none; }
-      .hero { padding: 60px 4% 50px; min-height: auto; }
-      h1 { font-size: 2.1rem; }
-      .hero::after { display: none; }
-      .hero-stats { gap: 24px; }
+      .hero { padding: 70px 4% 60px; min-height: auto; }
+      h1 { font-size: 2.8rem; }
+      .hero-stats { gap: 0; flex-wrap: wrap; }
+      .hero-stat { padding: 14px 20px 14px 0; margin-right: 20px; }
       section { padding: 60px 4%; }
       .contact-grid { grid-template-columns: 1fr; gap: 36px; }
       .process-steps::before { display: none; }
@@ -870,46 +317,36 @@
 </head>
 <body>
 
-  <!-- Preview Banner -->
   <div class="preview-banner">
-    🎨 This is a FREE website preview built by <strong>Alma Digital Services</strong> — <a href="tel:+17862563238">Call us to claim your redesign</a>
+    This is a FREE website preview built by <strong>Alma Digital Services</strong> &mdash; <a href="tel:+17862563238">Call us to claim your redesign</a>
   </div>
 
-  <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">🏠</div>
-      <div class="nav-logo-text">
-        Top This Construction
-        <span>East Ridge, TN</span>
-      </div>
+      <div class="nav-logo-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg></div>
+      <div class="nav-logo-text">Top This Construction<span>East Ridge, TN</span></div>
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#process">Our Process</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="tel:+14234324490" class="nav-cta">📞 (423) 432-4490</a></li>
+      <li><a href="tel:+14234324490" class="nav-cta"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg> (423) 432-4490</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge">Chattanooga's Top-Rated Roofer</div>
+      <div class="hero-badge"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="14" height="14" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"/></svg> Chattanooga's Top-Rated Roofer</div>
       <h1>East Ridge's Most<br/>Trusted <em>Roofing</em><br/>Contractor</h1>
       <p class="hero-sub">
-        <strong>64 five-star reviews and counting.</strong> From roof replacements to storm damage repair —
+        <strong>64 five-star reviews and counting.</strong> From roof replacements to storm damage repair &mdash;
         Top This Construction protects homes across East Ridge and the greater Chattanooga area.
         Licensed, insured, and built on craftsmanship.
       </p>
       <div class="hero-actions">
-        <a href="tel:+14234324490" class="btn-primary">
-          📞 Call (423) 432-4490
-        </a>
-        <a href="#services" class="btn-secondary">
-          View Our Services ↓
-        </a>
+        <a href="tel:+14234324490" class="btn-primary"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg> Call (423) 432-4490</a>
+        <a href="#services" class="btn-secondary">View Our Services &darr;</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -917,100 +354,82 @@
           <div class="hero-stat-label">Google Reviews</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">5★</div>
-          <div class="hero-stat-label">Average Rating</div>
+          <div class="hero-stat-num accent">5.0</div>
+          <div class="hero-stat-label">Star Rating</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">100%</div>
-          <div class="hero-stat-label">Licensed & Insured</div>
+          <div class="hero-stat-label">Licensed &amp; Insured</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">Free</div>
+          <div class="hero-stat-num accent">Free</div>
           <div class="hero-stat-label">Estimates</div>
         </div>
       </div>
     </div>
-    <div class="hero-image-col">
-      <img
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=880&h=800&fit=crop&auto=format&q=80"
-        alt="Top This Construction crew completing a roof replacement in East Ridge, TN"
-        class="hero-photo"
-        loading="eager"
-        width="440"
-        height="400"
-      />
-    </div>
   </section>
 
-  <!-- TRUST BAR -->
   <div class="trust-bar">
-    <div class="trust-item"><span>✅</span><span>Licensed & Insured in Tennessee</span></div>
-    <div class="trust-item"><span>⭐</span><span>64 Verified Google Reviews</span></div>
-    <div class="trust-item"><span>📍</span><span>Proudly Serving East Ridge & Chattanooga</span></div>
-    <div class="trust-item"><span>⚡</span><span>Same-Day Emergency Response</span></div>
-    <div class="trust-item"><span>🏷️</span><span>Free Estimates — No Pressure</span></div>
+    <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg> Licensed &amp; Insured in Tennessee</div>
+    <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg> 64 Verified Google Reviews</div>
+    <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg> Proudly Serving East Ridge &amp; Chattanooga</div>
+    <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg> Same-Day Emergency Response</div>
+    <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z"/></svg> Free Estimates &mdash; No Pressure</div>
   </div>
 
-  <!-- SERVICES -->
   <section class="services" id="services">
     <div class="services-header">
       <div class="section-label">What We Do</div>
       <h2>Complete Roofing Services<br/>for East Ridge Homeowners</h2>
-      <p class="section-intro">
-        From minor repairs to full replacements, we handle every roofing need with precision and care.
-        When Tennessee storms hit, we're the crew East Ridge trusts to show up and get it done right.
-      </p>
+      <p class="section-intro">From minor repairs to full replacements, we handle every roofing need with precision and care. When Tennessee storms hit, we're the crew East Ridge trusts to show up and get it done right.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon">🏠</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg></div>
         <h3>Roof Replacement</h3>
         <p>Full tear-off and replacement with premium shingles. We work with all major manufacturers and stand behind every installation we complete.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🔨</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z"/></svg></div>
         <h3>Roof Repair</h3>
-        <p>Leaks, missing shingles, damaged flashing — we fix it fast. Most repairs completed same-day or next-day to prevent interior damage from spreading.</p>
+        <p>Leaks, missing shingles, damaged flashing &mdash; we fix it fast. Most repairs completed same-day or next-day to prevent interior damage from spreading.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">⛈️</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg></div>
         <h3>Storm Damage Restoration</h3>
         <p>Hail, wind, and heavy rain wreak havoc on Tennessee roofs. We document damage, work with your insurance company, and restore your roof completely.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🌊</div>
-        <h3>Gutters & Drainage</h3>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+        <h3>Gutters &amp; Drainage</h3>
         <p>Seamless gutter installation, repair, and cleaning. Proper drainage protects your roof, foundation, and landscaping for years to come.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🔍</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg></div>
         <h3>Free Roof Inspections</h3>
-        <p>Not sure what condition your roof is in? We offer thorough inspections with a detailed report — no obligation, no pressure, just honest information.</p>
+        <p>Not sure what condition your roof is in? We offer thorough inspections with a detailed report &mdash; no obligation, no pressure, just honest information.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🏢</div>
+        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"/></svg></div>
         <h3>Commercial Roofing</h3>
-        <p>Flat roofs, TPO, modified bitumen — we handle commercial properties throughout the Chattanooga area with minimal business disruption.</p>
+        <p>Flat roofs, TPO, modified bitumen &mdash; we handle commercial properties throughout the Chattanooga area with minimal business disruption.</p>
       </div>
     </div>
   </section>
 
-  <!-- WHY US -->
   <section class="why-us" id="about">
     <div class="section-label">Why Top This Construction</div>
-    <h2 style="color:#fff; margin-bottom:14px;">The East Ridge Standard<br/>Every Competitor <em style="color:#e74c3c;">Wishes They Could Match</em></h2>
-    <p class="section-intro">
-      64 Google reviews don't lie. East Ridge homeowners keep choosing us because we show up, we're honest, and we do the work right the first time.
-    </p>
+    <h2 style="color:#fff; margin-bottom:14px;">The East Ridge Standard<br/>Every Competitor <em style="color:var(--amber-light)">Wishes They Could Match</em></h2>
+    <p class="section-intro">64 Google reviews don't lie. East Ridge homeowners keep choosing us because we show up, we're honest, and we do the work right the first time.</p>
     <div class="why-grid">
       <div class="why-item">
         <div class="why-item-num">01</div>
-        <h3>Transparent Pricing — Every Time</h3>
+        <h3>Transparent Pricing &mdash; Every Time</h3>
         <p>We give you a detailed written estimate before any work begins. No surprise invoices, no hidden fees. What we quote is what you pay.</p>
       </div>
       <div class="why-item">
         <div class="why-item-num">02</div>
-        <h3>Local Crew — Not a Subcontractor Chain</h3>
+        <h3>Local Crew &mdash; Not a Subcontractor Chain</h3>
         <p>Our team is local to East Ridge and Chattanooga. The same people who estimate your job are the ones who show up to complete it.</p>
       </div>
       <div class="why-item">
@@ -1020,13 +439,12 @@
       </div>
       <div class="why-item">
         <div class="why-item-num">04</div>
-        <h3>Quality Materials & Workmanship Warranty</h3>
+        <h3>Quality Materials &amp; Workmanship Warranty</h3>
         <p>We use manufacturer-approved materials and back our work with a written warranty. Your investment is protected long after we leave.</p>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS -->
   <section class="reviews-section" id="reviews">
     <div class="reviews-header">
       <div>
@@ -1034,142 +452,67 @@
         <h2>64 Homeowners<br/>Can't Be Wrong</h2>
       </div>
       <div class="rating-display">
-        <div class="stars">★★★★★</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <div class="rating-num">5.0</div>
         <div class="rating-count">Based on 64 Google Reviews</div>
       </div>
     </div>
     <div class="reviews-grid">
       <div class="review-card">
-        <div class="review-stars">★★★★★</div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-text">"After the hailstorm last spring, Top This Construction was out within 24 hours to assess the damage. They handled everything with our insurance and had our roof replaced in two days. Incredible team."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">MR</div>
-          <div>
-            <div class="reviewer-name">Mike R.</div>
-            <div class="reviewer-sub">East Ridge, TN · Google Review</div>
-          </div>
-        </div>
+        <div class="reviewer"><div class="reviewer-avatar">MR</div><div><div class="reviewer-name">Mike R.</div><div class="reviewer-sub">East Ridge, TN &middot; Google Review</div></div></div>
       </div>
       <div class="review-card">
-        <div class="review-stars">★★★★★</div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-text">"We had a leak that three other roofers couldn't figure out. Top This found it immediately, fixed it properly, and followed up a week later to make sure everything was still holding. That kind of service is rare."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">JT</div>
-          <div>
-            <div class="reviewer-name">Jennifer T.</div>
-            <div class="reviewer-sub">Chattanooga, TN · Google Review</div>
-          </div>
-        </div>
+        <div class="reviewer"><div class="reviewer-avatar">JT</div><div><div class="reviewer-name">Jennifer T.</div><div class="reviewer-sub">Chattanooga, TN &middot; Google Review</div></div></div>
       </div>
       <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Honest pricing, showed up on time, cleaned up perfectly after — and the new roof looks fantastic. I've already referred three of my neighbors to Top This Construction. Couldn't be happier."</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">DK</div>
-          <div>
-            <div class="reviewer-name">David K.</div>
-            <div class="reviewer-sub">East Ridge, TN · Google Review</div>
-          </div>
-        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Honest pricing, showed up on time, cleaned up perfectly after &mdash; and the new roof looks fantastic. I've already referred three of my neighbors to Top This Construction. Couldn't be happier."</p>
+        <div class="reviewer"><div class="reviewer-avatar">DK</div><div><div class="reviewer-name">David K.</div><div class="reviewer-sub">East Ridge, TN &middot; Google Review</div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
   <section class="process-section" id="process">
     <div class="section-label">How It Works</div>
     <h2>Your Roof. Done Right. Done Fast.</h2>
     <p class="section-intro">No runarounds, no delays. Here's our simple 4-step process from first call to final walkthrough.</p>
     <div class="process-steps">
-      <div class="process-step">
-        <div class="step-num">1</div>
-        <h3>Free Inspection</h3>
-        <p>We assess your roof honestly and provide a detailed written estimate at no charge.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">2</div>
-        <h3>Approve & Schedule</h3>
-        <p>You approve the estimate and we schedule your project — often within the same week.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">3</div>
-        <h3>Expert Installation</h3>
-        <p>Our local crew completes the work with precision, keeping your property clean throughout.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">4</div>
-        <h3>Final Walkthrough</h3>
-        <p>We walk the completed job with you, confirm you're fully satisfied, and provide your warranty.</p>
-      </div>
+      <div class="process-step"><div class="step-num">1</div><h3>Free Inspection</h3><p>We assess your roof honestly and provide a detailed written estimate at no charge.</p></div>
+      <div class="process-step"><div class="step-num">2</div><h3>Approve &amp; Schedule</h3><p>You approve the estimate and we schedule your project &mdash; often within the same week.</p></div>
+      <div class="process-step"><div class="step-num">3</div><h3>Expert Installation</h3><p>Our local crew completes the work with precision, keeping your property clean throughout.</p></div>
+      <div class="process-step"><div class="step-num">4</div><h3>Final Walkthrough</h3><p>We walk the completed job with you, confirm you're fully satisfied, and provide your warranty.</p></div>
     </div>
   </section>
 
-  <!-- CTA BAND -->
   <div class="cta-band">
     <h2>Your Roof Needs Attention.<br/>Let's Talk.</h2>
     <p>Whether it's a small repair or a full replacement, Top This Construction is ready to help East Ridge homeowners protect what matters most. Call now for your free estimate.</p>
-    <a href="tel:+14234324490" class="btn-primary">
-      📞 Call (423) 432-4490 Now
-    </a>
+    <a href="tel:+14234324490" class="btn-primary"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg> Call (423) 432-4490 Now</a>
   </div>
 
-  <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <div class="contact-grid">
       <div>
         <div class="section-label">Get In Touch</div>
         <h2>Ready to Protect<br/>Your Home?</h2>
         <ul class="contact-info">
-          <li>
-            <div class="contact-icon">📞</div>
-            <div>
-              <div class="contact-detail-label">Phone</div>
-              <div class="contact-detail-value"><a href="tel:+14234324490">(423) 432-4490</a></div>
-            </div>
-          </li>
-          <li>
-            <div class="contact-icon">✉️</div>
-            <div>
-              <div class="contact-detail-label">Email</div>
-              <div class="contact-detail-value"><a href="mailto:info@topthisconstruction.com">info@topthisconstruction.com</a></div>
-            </div>
-          </li>
-          <li>
-            <div class="contact-icon">📍</div>
-            <div>
-              <div class="contact-detail-label">Service Area</div>
-              <div class="contact-detail-value">East Ridge, TN & Greater Chattanooga</div>
-            </div>
-          </li>
-          <li>
-            <div class="contact-icon">⏰</div>
-            <div>
-              <div class="contact-detail-label">Hours</div>
-              <div class="contact-detail-value">Mon–Fri 7am–6pm · Sat 8am–4pm · Emergency 24/7</div>
-            </div>
-          </li>
-          <li>
-            <div class="contact-icon">🏷️</div>
-            <div>
-              <div class="contact-detail-label">Free Estimates</div>
-              <div class="contact-detail-value">Always free, always honest — no obligation</div>
-            </div>
-          </li>
+          <li><div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg></div><div><div class="contact-detail-label">Phone</div><div class="contact-detail-value"><a href="tel:+14234324490">(423) 432-4490</a></div></div></li>
+          <li><div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></div><div><div class="contact-detail-label">Email</div><div class="contact-detail-value"><a href="mailto:info@topthisconstruction.com">info@topthisconstruction.com</a></div></div></li>
+          <li><div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></div><div><div class="contact-detail-label">Service Area</div><div class="contact-detail-value">East Ridge, TN &amp; Greater Chattanooga</div></div></li>
+          <li><div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><div><div class="contact-detail-label">Hours</div><div class="contact-detail-value">Mon&ndash;Fri 7am&ndash;6pm &middot; Sat 8am&ndash;4pm &middot; Emergency 24/7</div></div></li>
+          <li><div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z"/></svg></div><div><div class="contact-detail-label">Free Estimates</div><div class="contact-detail-value">Always free, always honest &mdash; no obligation</div></div></li>
         </ul>
       </div>
       <div class="contact-form-card">
         <h3>Request a Free Estimate</h3>
         <form action="https://formspree.io/f/xojppajv" method="POST">
-          <input type="hidden" name="_subject" value="New inquiry — Top This Construction preview" />
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" name="name" placeholder="John Smith" required />
-          </div>
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" name="phone" placeholder="(423) 555-0000" required />
-          </div>
+          <input type="hidden" name="_subject" value="New inquiry - Top This Construction preview" />
+          <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="John Smith" required /></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(423) 555-0000" required /></div>
           <div class="form-group">
             <label>Service Needed</label>
             <select name="service">
@@ -1182,24 +525,16 @@
               <option>Commercial Roofing</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>Message (optional)</label>
-            <textarea name="message" placeholder="Describe your roofing concern..."></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send Request →</button>
+          <div class="form-group"><label>Message (optional)</label><textarea name="message" placeholder="Describe your roofing concern..."></textarea></div>
+          <button type="submit" class="form-submit">Send Request &rarr;</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="footer-copy">
-      © 2025 <strong>Top This Construction</strong> · East Ridge, TN · Licensed & Insured · Serving the Greater Chattanooga Area
-    </div>
-    <div class="footer-phone">
-      <a href="tel:+14234324490">📞 (423) 432-4490</a>
-    </div>
+    <div class="footer-copy">&copy; 2025 <strong>Top This Construction</strong> &middot; East Ridge, TN &middot; Licensed &amp; Insured &middot; Serving the Greater Chattanooga Area</div>
+    <div class="footer-phone"><a href="tel:+14234324490"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg> (423) 432-4490</a></div>
   </footer>
 
 </body>
