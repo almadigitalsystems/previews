@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Georgia Heating &amp; Air of Hixson | HVAC Services Chattanooga, TN</title>
+  <meta name="description" content="North Georgia Heating &amp; Air of Hixson — trusted HVAC experts serving Chattanooga, TN and surrounding areas. AC installation, heating repair, maintenance plans, and emergency service. 169 five-star Google reviews." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #0f2240;
+      --navy-light: #163259;
+      --blue: #1a7fd4;
+      --cyan: #00c2e8;
+      --cyan-light: #4dd8f0;
+      --steel: #6ba3c8;
+      --white: #ffffff;
+      --gray: #e2eaf2;
+      --gray-mid: #8fa8c0;
+      --orange: #f57c1f;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,22,40,0.97); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,194,232,0.15);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-icon {
+      width: 40px; height: 40px; background: linear-gradient(135deg, var(--cyan), var(--blue));
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 900;
+    }
+    .nav-name { font-size: 15px; font-weight: 700; color: var(--white); line-height: 1.2; }
+    .nav-name span { display: block; font-size: 11px; font-weight: 500; color: var(--cyan); letter-spacing: 0.05em; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--gray-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-cta {
+      background: var(--cyan); color: var(--navy); font-size: 14px; font-weight: 700;
+      padding: 10px 22px; border-radius: 6px; text-decoration: none; transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--cyan-light); transform: translateY(-1px); }
+    @media(max-width:768px){
+      .nav-links { display: none; }
+      .nav-name { font-size: 13px; }
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; padding: 120px 5% 80px;
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 50%, #0c1e3a 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+    }
+    .hero-bg-grid {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(0,194,232,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,194,232,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-glow {
+      position: absolute; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,194,232,0.12) 0%, transparent 70%);
+      top: -150px; right: -100px; pointer-events: none;
+    }
+    .hero-inner { position: relative; max-width: 800px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0,194,232,0.12); border: 1px solid rgba(0,194,232,0.3);
+      color: var(--cyan); font-size: 13px; font-weight: 600;
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 28px;
+      letter-spacing: 0.03em;
+    }
+    .hero-badge::before { content: "★"; font-size: 14px; }
+    .hero-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 900; line-height: 1.0; letter-spacing: -0.01em;
+      margin-bottom: 24px; color: var(--white);
+    }
+    .hero-headline .accent { color: var(--cyan); }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px); line-height: 1.6;
+      color: var(--gray); max-width: 600px; margin-bottom: 40px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-bottom: 56px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--cyan); color: var(--navy); font-weight: 700; font-size: 16px;
+      padding: 16px 32px; border-radius: 8px; text-decoration: none;
+      transition: all 0.25s; box-shadow: 0 4px 24px rgba(0,194,232,0.35);
+    }
+    .btn-primary:hover { background: var(--cyan-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,194,232,0.4); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 2px solid var(--steel); color: var(--white); font-weight: 600; font-size: 16px;
+      padding: 14px 30px; border-radius: 8px; text-decoration: none; transition: all 0.25s;
+    }
+    .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+    .hero-stats {
+      display: flex; flex-wrap: wrap; gap: 36px;
+    }
+    .hero-stat { }
+    .hero-stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 36px; font-weight: 900; color: var(--cyan); display: block;
+    }
+    .hero-stat-label { font-size: 13px; color: var(--gray-mid); font-weight: 500; }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--navy-mid); border-top: 1px solid rgba(0,194,232,0.1);
+      border-bottom: 1px solid rgba(0,194,232,0.1); padding: 20px 5%;
+    }
+    .trust-bar-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 36px;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; font-weight: 600; color: var(--gray);
+    }
+    .trust-icon { font-size: 20px; }
+
+    /* SECTION BASE */
+    section { padding: 90px 5%; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-tag {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--cyan); margin-bottom: 12px;
+    }
+    .section-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(32px, 4vw, 54px); font-weight: 800; line-height: 1.1; color: var(--white);
+      margin-bottom: 16px;
+    }
+    .section-sub { font-size: 17px; line-height: 1.7; color: var(--gray-mid); max-width: 580px; }
+
+    /* SERVICES */
+    .services-section { background: var(--navy); }
+    .services-grid {
+      margin-top: 52px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;
+    }
+    .service-card {
+      background: var(--navy-mid); border: 1px solid rgba(0,194,232,0.12);
+      border-radius: 12px; padding: 32px 28px;
+      transition: all 0.25s; cursor: default;
+    }
+    .service-card:hover {
+      border-color: var(--cyan); transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    .service-icon {
+      width: 52px; height: 52px; border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0,194,232,0.18), rgba(26,127,212,0.18));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin-bottom: 20px;
+    }
+    .service-name { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .service-desc { font-size: 14px; line-height: 1.6; color: var(--gray-mid); }
+
+    /* ABOUT */
+    .about-section {
+      background: linear-gradient(160deg, var(--navy-mid) 0%, #0c2040 100%);
+    }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 52px;
+    }
+    @media(max-width:768px){ .about-grid { grid-template-columns: 1fr; } }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-placeholder {
+      width: 100%; aspect-ratio: 4/3; border-radius: 16px;
+      background: linear-gradient(135deg, #163259 0%, #0a1e38 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      border: 1px solid rgba(0,194,232,0.15);
+      gap: 16px;
+    }
+    .about-img-icon { font-size: 72px; }
+    .about-img-text { font-size: 15px; color: var(--cyan); font-weight: 600; }
+    .about-badge-wrap {
+      position: absolute; bottom: -20px; right: -20px;
+      background: var(--cyan); color: var(--navy);
+      padding: 18px 24px; border-radius: 12px;
+      text-align: center; font-weight: 800;
+    }
+    .about-badge-num { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; line-height: 1; }
+    .about-badge-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+    .about-text p { font-size: 16px; line-height: 1.8; color: var(--gray); margin-bottom: 20px; }
+    .about-values { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+    .about-value {
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .about-value-icon {
+      width: 36px; height: 36px; min-width: 36px; border-radius: 8px;
+      background: rgba(0,194,232,0.12); display: flex; align-items: center; justify-content: center; font-size: 18px;
+    }
+    .about-value-text strong { display: block; font-size: 15px; color: var(--white); margin-bottom: 2px; }
+    .about-value-text span { font-size: 13px; color: var(--gray-mid); }
+
+    /* REVIEWS */
+    .reviews-section { background: var(--navy); }
+    .reviews-header-row {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
+      gap: 24px; margin-bottom: 48px;
+    }
+    .reviews-rating-big {
+      display: flex; align-items: center; gap: 16px;
+    }
+    .reviews-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 72px; font-weight: 900; color: var(--cyan); line-height: 1;
+    }
+    .reviews-stars-label { }
+    .stars-row { color: #f59e0b; font-size: 22px; letter-spacing: 2px; }
+    .reviews-count { font-size: 14px; color: var(--gray-mid); margin-top: 4px; }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+    }
+    .review-card {
+      background: var(--navy-mid); border: 1px solid rgba(0,194,232,0.08);
+      border-radius: 12px; padding: 28px;
+    }
+    .review-stars { color: #f59e0b; font-size: 16px; margin-bottom: 14px; }
+    .review-text { font-size: 14px; line-height: 1.7; color: var(--gray); margin-bottom: 16px; font-style: italic; }
+    .review-author { font-size: 13px; font-weight: 700; color: var(--cyan); }
+    .review-date { font-size: 12px; color: var(--gray-mid); }
+
+    /* SERVICE AREA */
+    .area-section {
+      background: var(--navy-mid); padding: 90px 5%;
+    }
+    .area-grid {
+      margin-top: 40px;
+      display: flex; flex-wrap: wrap; gap: 12px;
+    }
+    .area-pill {
+      background: rgba(0,194,232,0.08); border: 1px solid rgba(0,194,232,0.2);
+      color: var(--gray); font-size: 14px; font-weight: 500;
+      padding: 10px 20px; border-radius: 100px;
+      transition: all 0.2s;
+    }
+    .area-pill:hover { background: rgba(0,194,232,0.15); border-color: var(--cyan); color: var(--white); }
+    .area-pill.highlight { background: rgba(0,194,232,0.18); border-color: var(--cyan); color: var(--white); font-weight: 700; }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, #0a1628 0%, #0d2447 50%, #061629 100%);
+      padding: 100px 5%; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-glow {
+      position: absolute; width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(0,194,232,0.1) 0%, transparent 65%);
+      top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;
+    }
+    .cta-inner { position: relative; max-width: 700px; margin: 0 auto; }
+    .cta-tag {
+      display: inline-block; background: rgba(245,124,31,0.15); border: 1px solid rgba(245,124,31,0.4);
+      color: #f57c1f; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 24px;
+    }
+    .cta-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(36px, 5vw, 62px); font-weight: 900; line-height: 1.05;
+      color: var(--white); margin-bottom: 20px;
+    }
+    .cta-heading .accent { color: var(--cyan); }
+    .cta-sub { font-size: 17px; line-height: 1.7; color: var(--gray-mid); margin-bottom: 40px; }
+    .cta-buttons { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-bottom: 32px; }
+    .cta-note { font-size: 13px; color: var(--gray-mid); }
+
+    /* CONTACT */
+    .contact-section { background: var(--navy); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 52px;
+    }
+    @media(max-width:768px){ .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info { }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px;
+    }
+    .contact-item-icon {
+      width: 44px; height: 44px; min-width: 44px; border-radius: 10px;
+      background: rgba(0,194,232,0.12); display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .contact-item-label { font-size: 12px; font-weight: 700; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .contact-item-value { font-size: 17px; font-weight: 600; color: var(--white); }
+    .contact-item-sub { font-size: 13px; color: var(--gray-mid); margin-top: 2px; }
+    .contact-form { }
+    .form-title { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--gray-mid); margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; background: var(--navy-mid); border: 1px solid rgba(0,194,232,0.15);
+      border-radius: 8px; padding: 12px 16px; color: var(--white); font-size: 15px; font-family: 'Inter', sans-serif;
+      outline: none; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--cyan);
+    }
+    .form-group textarea { height: 100px; resize: vertical; }
+    .form-group select option { background: var(--navy-mid); }
+    .form-submit {
+      width: 100%; background: var(--cyan); color: var(--navy);
+      font-weight: 700; font-size: 16px; padding: 16px; border: none;
+      border-radius: 8px; cursor: pointer; transition: all 0.2s;
+    }
+    .form-submit:hover { background: var(--cyan-light); transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer {
+      background: #060f1c; border-top: 1px solid rgba(0,194,232,0.08);
+      padding: 48px 5% 32px;
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px;
+    }
+    .footer-brand .brand-name { font-size: 18px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .footer-brand .brand-desc { font-size: 14px; color: var(--gray-mid); max-width: 280px; line-height: 1.6; }
+    .footer-links h4 { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 8px; }
+    .footer-links a { font-size: 14px; color: var(--gray-mid); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--cyan); }
+    .footer-bottom {
+      max-width: 1100px; margin: 40px auto 0;
+      padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+      font-size: 13px; color: var(--gray-mid);
+    }
+    .footer-bottom a { color: var(--cyan); text-decoration: none; }
+
+    /* PREVIEW BANNER */
+    .preview-banner {
+      background: linear-gradient(135deg, var(--orange), #e06515);
+      color: #fff; text-align: center; padding: 14px 20px;
+      font-size: 14px; font-weight: 700; letter-spacing: 0.02em;
+      position: sticky; top: 0; z-index: 200;
+    }
+    .preview-banner a { color: #fff; text-decoration: underline; }
+
+    /* EMERGENCY BAR */
+    .emergency-bar {
+      background: #c0392b; color: #fff; text-align: center; padding: 10px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+    }
+    .emergency-bar a { color: #fff; font-weight: 800; }
+  </style>
+</head>
+<body>
+
+  <!-- PREVIEW BANNER -->
+  <div class="preview-banner">
+    &#128274; This is a free website preview exclusively for North Georgia Heating &amp; Air of Hixson &mdash;
+    <a href="tel:4236680050">Call (423) 668-0050</a> to claim your redesign
+  </div>
+
+  <!-- EMERGENCY BAR -->
+  <div class="emergency-bar">
+    🔥 24/7 Emergency HVAC Service &mdash; <a href="tel:4236680050">(423) 668-0050</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand">
+      <div class="nav-logo-icon">❄</div>
+      <div class="nav-name">
+        North Georgia Heating &amp; Air
+        <span>Hixson / Chattanooga, TN</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#service-area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:4236680050">(423) 668-0050</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">169 Google Reviews &nbsp;&bull;&nbsp; 5-Star Rated HVAC</div>
+      <h1 class="hero-headline">
+        Chattanooga's Most<br />
+        <span class="accent">Trusted HVAC</span><br />
+        Experts Since Day One
+      </h1>
+      <p class="hero-sub">
+        North Georgia Heating &amp; Air of Hixson keeps Chattanooga comfortable year-round.
+        Fast response times, honest pricing, and a team that treats your home like their own.
+        Licensed, insured, and backed by 169 five-star reviews.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">&#128190; Claim Your Free Redesign</a>
+        <a class="btn-secondary" href="tel:4236680050">&#128222; (423) 668-0050</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">169</span>
+          <span class="hero-stat-label">Google Reviews</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">5.0&#9733;</span>
+          <span class="hero-stat-label">Average Rating</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">24/7</span>
+          <span class="hero-stat-label">Emergency Service</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">TN</span>
+          <span class="hero-stat-label">Licensed &amp; Insured</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><span class="trust-icon">✅</span> TN State Licensed</div>
+      <div class="trust-item"><span class="trust-icon">🛡️</span> Fully Insured</div>
+      <div class="trust-item"><span class="trust-icon">⚡</span> Same-Day Service Available</div>
+      <div class="trust-item"><span class="trust-icon">💰</span> Upfront Flat-Rate Pricing</div>
+      <div class="trust-item"><span class="trust-icon">🌡️</span> All Makes &amp; Models</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-inner">
+      <p class="section-tag">What We Do</p>
+      <h2 class="section-heading">Complete HVAC Services<br />for Chattanooga Homes &amp; Businesses</h2>
+      <p class="section-sub">From routine maintenance to full system replacements, North Georgia Heating &amp; Air of Hixson handles every HVAC need in Chattanooga and the surrounding Tennessee Valley.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">❄️</div>
+          <div class="service-name">AC Installation &amp; Replacement</div>
+          <div class="service-desc">Energy-efficient central air systems, ductless mini-splits, and multi-zone setups sized perfectly for your Chattanooga home.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <div class="service-name">AC Repair &amp; Diagnostics</div>
+          <div class="service-desc">Fast diagnosis and same-day repair for all AC makes and models. We fix it right the first time — guaranteed.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔥</div>
+          <div class="service-name">Heating Systems</div>
+          <div class="service-desc">Furnace installation, heat pump service, and gas line work. Keep your family warm when Tennessee winters hit hard.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔩</div>
+          <div class="service-name">Heating Repair</div>
+          <div class="service-desc">24/7 emergency heating repair. No heat in winter? We're on our way — day or night, weekends included.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <div class="service-name">Maintenance Plans</div>
+          <div class="service-desc">Bi-annual tune-ups that extend equipment life, lower energy bills, and prevent costly breakdowns before they happen.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌀</div>
+          <div class="service-name">Duct Cleaning &amp; Sealing</div>
+          <div class="service-desc">Cleaner air, better airflow, and lower utility bills. Duct leaks waste up to 30% of conditioned air — we seal them tight.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💨</div>
+          <div class="service-name">Indoor Air Quality</div>
+          <div class="service-desc">Whole-home air purifiers, UV systems, humidifiers, and dehumidifiers for healthier air in every room.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <div class="service-name">Commercial HVAC</div>
+          <div class="service-desc">Light commercial installation, maintenance contracts, and emergency repair for Chattanooga businesses and retail spaces.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌡️</div>
+          <div class="service-name">Smart Thermostat Installs</div>
+          <div class="service-desc">Upgrade to a Nest, Ecobee, or Honeywell smart thermostat and cut your energy bills by up to 23% automatically.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="section-inner">
+      <p class="section-tag">Who We Are</p>
+      <h2 class="section-heading">Born in Hixson,<br />Built to Serve Chattanooga</h2>
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <div class="about-img-placeholder">
+            <div class="about-img-icon">🏠❄️</div>
+            <div class="about-img-text">North Georgia Heating &amp; Air of Hixson</div>
+          </div>
+          <div class="about-badge-wrap">
+            <div class="about-badge-num">169</div>
+            <div class="about-badge-label">5-Star Reviews</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            North Georgia Heating &amp; Air of Hixson was built right here in the Tennessee Valley — and every job
+            we take reflects the pride we have in this community. We know Chattanooga summers are brutal and the
+            winter nights can catch you off guard. That's why we answer our phones, show up on time, and never
+            cut corners.
+          </p>
+          <p>
+            With 169 Google reviews and counting, our reputation speaks for itself. We've earned the trust
+            of Hixson, East Brainerd, Signal Mountain, and dozens of surrounding communities — one honest
+            HVAC job at a time.
+          </p>
+          <div class="about-values">
+            <div class="about-value">
+              <div class="about-value-icon">🎯</div>
+              <div class="about-value-text">
+                <strong>Transparent Pricing</strong>
+                <span>Flat-rate quotes before any work begins — no surprise invoices</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">⚡</div>
+              <div class="about-value-text">
+                <strong>Fast Response</strong>
+                <span>Same-day service on most calls — 24/7 emergency availability</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">🏆</div>
+              <div class="about-value-text">
+                <strong>Licensed Professionals</strong>
+                <span>Tennessee-licensed technicians trained on all major HVAC brands</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">💬</div>
+              <div class="about-value-text">
+                <strong>Real Communication</strong>
+                <span>We call before we arrive and follow up after every job</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-inner">
+      <p class="section-tag">What Neighbors Are Saying</p>
+      <div class="reviews-header-row">
+        <div>
+          <h2 class="section-heading">169 Reasons Chattanooga<br />Homeowners Trust Us</h2>
+          <p class="section-sub">Real reviews from real Hixson and Chattanooga homeowners who relied on us when it mattered most.</p>
+        </div>
+        <div class="reviews-rating-big">
+          <div class="reviews-num">5.0</div>
+          <div class="reviews-stars-label">
+            <div class="stars-row">★★★★★</div>
+            <div class="reviews-count">169 Google Reviews</div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"My AC went out on the hottest day of the year. They had a tech out within two hours, diagnosed the problem fast, and had us cooling again before dinner. Pricing was fair and the tech was super professional."</div>
+          <div class="review-author">Jennifer T.</div>
+          <div class="review-date">Hixson, TN &mdash; Google Review</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Best HVAC company I've ever dealt with in Chattanooga. Installed a new Trane system last fall and my heating bills dropped noticeably. The crew was clean, on time, and explained everything."</div>
+          <div class="review-author">Marcus R.</div>
+          <div class="review-date">Chattanooga, TN &mdash; Google Review</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Called at 10pm because our heat stopped working. They picked up immediately and had someone here by midnight. No extra charges for the late call. Truly exceptional service — will never use anyone else."</div>
+          <div class="review-author">Linda &amp; Dave K.</div>
+          <div class="review-date">Signal Mountain, TN &mdash; Google Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="area-section" id="service-area">
+    <div class="section-inner">
+      <p class="section-tag">Service Area</p>
+      <h2 class="section-heading">Proudly Serving the<br />Greater Chattanooga Region</h2>
+      <p class="section-sub">From Hixson to the Georgia border, North Georgia Heating &amp; Air covers the entire Tennessee Valley — fast.</p>
+      <div class="area-grid">
+        <div class="area-pill highlight">Hixson, TN</div>
+        <div class="area-pill highlight">Chattanooga, TN</div>
+        <div class="area-pill">East Brainerd</div>
+        <div class="area-pill">Signal Mountain</div>
+        <div class="area-pill">Soddy-Daisy</div>
+        <div class="area-pill">Red Bank</div>
+        <div class="area-pill">Harrison</div>
+        <div class="area-pill">Ooltewah</div>
+        <div class="area-pill">East Ridge</div>
+        <div class="area-pill">Ringgold, GA</div>
+        <div class="area-pill">Fort Oglethorpe, GA</div>
+        <div class="area-pill">Rossville, GA</div>
+        <div class="area-pill">Chickamauga, GA</div>
+        <div class="area-pill">North Georgia</div>
+        <div class="area-pill">Tennessee Valley</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="cta-glow"></div>
+    <div class="cta-inner">
+      <div class="cta-tag">&#9888; Your Competitors Are Already Doing This</div>
+      <h2 class="cta-heading">
+        Nashville HVAC Companies<br />
+        Are Taking <span class="accent">Your</span> Customers<br />
+        With Better Websites
+      </h2>
+      <p class="cta-sub">
+        You have 169 five-star Google reviews — one of the best reputations in Chattanooga.
+        But if your website doesn't show it, you're handing jobs to competitors who do.
+        This is your free preview. Claim it before someone else does.
+      </p>
+      <div class="cta-buttons">
+        <a class="btn-primary" href="#contact">&#128190; Claim This Website Free</a>
+        <a class="btn-secondary" href="tel:4236680050">&#128222; Call (423) 668-0050</a>
+      </div>
+      <div class="cta-note">No cost. No obligation. Free website redesign preview — yours to keep.</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <p class="section-tag">Get In Touch</p>
+      <h2 class="section-heading">Ready to Upgrade<br />Your Online Presence?</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-value">(423) 668-0050</div>
+              <div class="contact-item-sub">Call or text anytime — 24/7 emergency line</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-value">Hixson, TN</div>
+              <div class="contact-item-sub">Serving Chattanooga &amp; Greater Tennessee Valley</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div>
+              <div class="contact-item-label">Hours</div>
+              <div class="contact-item-value">Mon–Fri 7am–7pm</div>
+              <div class="contact-item-sub">24/7 Emergency Service Available</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">⭐</div>
+            <div>
+              <div class="contact-item-label">Rating</div>
+              <div class="contact-item-value">5.0 Stars — 169 Reviews</div>
+              <div class="contact-item-sub">Top-rated HVAC in Hixson on Google</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <div class="form-title">Request a Free Estimate</div>
+          <form action="https://formspree.io/f/xojppajv" method="POST">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="(423) 555-0000" />
+            </div>
+            <div class="form-group">
+              <label>Service Needed</label>
+              <select name="service">
+                <option value="">Select a service...</option>
+                <option>AC Repair</option>
+                <option>AC Installation / Replacement</option>
+                <option>Heating Repair</option>
+                <option>Heating Installation</option>
+                <option>Maintenance Plan</option>
+                <option>Duct Cleaning</option>
+                <option>Indoor Air Quality</option>
+                <option>Commercial HVAC</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message (optional)</label>
+              <textarea name="message" placeholder="Describe the issue or what you need..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Request →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-name">North Georgia Heating &amp; Air of Hixson</div>
+        <div class="brand-desc">Licensed HVAC contractors serving Hixson, Chattanooga, and the greater Tennessee Valley. 169 five-star Google reviews.</div>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">AC Repair &amp; Installation</a></li>
+          <li><a href="#services">Heating Systems</a></li>
+          <li><a href="#services">Maintenance Plans</a></li>
+          <li><a href="#services">Duct Cleaning</a></li>
+          <li><a href="#services">Indoor Air Quality</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#service-area">Service Area</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:4236680050">(423) 668-0050</a></li>
+          <li><a href="#contact">Schedule Service</a></li>
+          <li>Hixson, TN</li>
+          <li>24/7 Emergency Available</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 North Georgia Heating &amp; Air of Hixson. All rights reserved.</span>
+      <span>Preview designed by <a href="https://almadigitalservices.com">Alma Digital Services</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
