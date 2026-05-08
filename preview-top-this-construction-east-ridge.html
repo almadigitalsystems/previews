@@ -91,8 +91,12 @@
 
   .hero-bg {
     position: absolute; inset: 0;
-    background-image: url('https://img.recraft.ai/HEVpxp4cpkhWZHQSuUal5uWpCxZHW5M1KAsSWpTdSkM/rs:fit:1365:1024:0/raw:1/plain/abs://external/images/1c254eb3-3004-4134-81e6-4c14696d9efd');
-    background-size: cover; background-position: center top;
+    overflow: hidden;
+  }
+  .hero-bg img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center top;
     filter: brightness(0.42);
   }
 
@@ -968,7 +972,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg"><img src="https://img.recraft.ai/HEVpxp4cpkhWZHQSuUal5uWpCxZHW5M1KAsSWpTdSkM/rs:fit:1365:1024:0/raw:1/plain/abs://external/images/1c254eb3-3004-4134-81e6-4c14696d9efd" alt="Professional roofing contractor serving East Ridge and Chattanooga TN" width="1365" height="1024" loading="eager"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div>
@@ -1503,7 +1507,8 @@
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li>(423) 432-4490</li>
+        <li><a href="tel:4234324490" style="color:inherit;text-decoration:none;">(423) 432-4490</a></li>
+        <li><a href="mailto:info@topthisconstruction.com" style="color:inherit;text-decoration:none;">info@topthisconstruction.com</a></li>
         <li>East Ridge, TN 37412</li>
         <li>Mon–Fri 7am–6pm</li>
         <li>Sat 8am–4pm</li>
