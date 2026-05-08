@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Built Your Website. Who Researched It? | Alma Digital Services</title>
+  <meta name="description" content="10Web, Wix, and Squarespace generate pages. They don't generate knowledge of your business. See how Alma Digital is different — and see your free preview before paying a thing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --charcoal:   #1a1a2e;
+      --dark:       #20203a;
+      --darker:     #13132a;
+      --card:       #252540;
+      --cyan:       #00b4d8;
+      --cyan-dim:   rgba(0,180,216,0.12);
+      --cyan-border:rgba(0,180,216,0.25);
+      --purple:     #7B2FF7;
+      --purple-end: #C850C0;
+      --white:      #ffffff;
+      --gray:       #d8d8ec;
+      --mid:        #9090b0;
+      --red-dim:    rgba(255,90,90,0.12);
+      --red:        #ff6b6b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--charcoal);
+      color: var(--white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── UTILITIES ─────────────────────────────── */
+    .container  { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    .container-lg { max-width: 1020px; margin: 0 auto; padding: 0 24px; }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 18px;
+    }
+
+    /* ── HERO ──────────────────────────────────── */
+    .hero {
+      background: var(--darker);
+      padding: 96px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -160px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 900px;
+      background: radial-gradient(circle, rgba(0,180,216,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(123,47,247,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--cyan-border);
+      border-radius: 100px;
+      padding: 6px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--cyan);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5.5vw, 72px);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      max-width: 880px;
+      margin: 0 auto 24px;
+    }
+    .hero h1 .accent { color: var(--cyan); }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--mid);
+      max-width: 580px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+    .brand-row-label {
+      font-size: 13px;
+      color: var(--mid);
+    }
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray);
+    }
+    .brand-pill::before {
+      content: '';
+      display: block;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--mid);
+    }
+    .brand-row-vs {
+      font-size: 12px;
+      color: var(--mid);
+      font-weight: 600;
+    }
+    .brand-pill.alma {
+      background: var(--cyan-dim);
+      border-color: var(--cyan-border);
+      color: var(--cyan);
+    }
+    .brand-pill.alma::before { background: var(--cyan); }
+
+    .hero-img {
+      display: block;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      object-fit: cover;
+    }
+
+    /* ── PROBLEM ───────────────────────────────── */
+    .problem {
+      background: var(--dark);
+      padding: 100px 24px;
+    }
+    .problem h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3.5vw, 44px);
+      font-weight: 700;
+      line-height: 1.22;
+      margin-bottom: 36px;
+    }
+    .prose p {
+      color: var(--gray);
+      font-size: 17px;
+      line-height: 1.82;
+      margin-bottom: 22px;
+    }
+    .prose p strong { color: var(--white); }
+    .prose p:last-child { margin-bottom: 0; }
+
+    .callout-block {
+      border-left: 3px solid var(--cyan);
+      background: var(--cyan-dim);
+      border-radius: 0 10px 10px 0;
+      padding: 22px 28px;
+      margin: 36px 0;
+      font-size: 19px;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── GAP / COMPARISON ──────────────────────── */
+    .gap {
+      background: var(--charcoal);
+      padding: 100px 24px;
+    }
+    .gap-head {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .gap-head h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3.5vw, 44px);
+      font-weight: 700;
+      line-height: 1.22;
+      margin-bottom: 14px;
+    }
+    .gap-head p {
+      color: var(--mid);
+      font-size: 16px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .compare-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .compare-table thead th {
+      padding: 20px 28px 18px;
+      text-align: left;
+    }
+    .compare-table thead th .th-eyebrow {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 6px;
+    }
+    .compare-table thead th .th-label {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .th-do {
+      background: rgba(255,255,255,0.04);
+      border-right: 1px solid rgba(255,255,255,0.06);
+      width: 50%;
+    }
+    .th-do .th-label { color: var(--gray); }
+
+    .th-dont {
+      background: var(--red-dim);
+    }
+    .th-dont .th-label { color: var(--red); }
+
+    .compare-table tbody tr {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      transition: background 0.15s;
+    }
+    .compare-table tbody tr:hover {
+      background: rgba(255,255,255,0.02);
+    }
+    .compare-table tbody td {
+      padding: 16px 28px;
+      font-size: 15.5px;
+      vertical-align: middle;
+    }
+    .compare-table tbody td:first-child {
+      background: rgba(255,255,255,0.025);
+      border-right: 1px solid rgba(255,255,255,0.05);
+      color: var(--gray);
+    }
+    .compare-table tbody td:last-child {
+      background: rgba(255,90,90,0.04);
+      color: var(--gray);
+    }
+
+    .cell-check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cell-check .icon {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .icon-yes {
+      background: rgba(0,180,216,0.15);
+      color: var(--cyan);
+    }
+    .icon-no {
+      background: rgba(255,90,90,0.15);
+      color: var(--red);
+    }
+
+    .compare-footnote {
+      text-align: center;
+      margin-top: 28px;
+      color: var(--mid);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .compare-footnote strong { color: var(--gray); }
+
+    /* ── DIFFERENTIATOR ────────────────────────── */
+    .diff {
+      background: var(--darker);
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .diff::before {
+      content: '';
+      position: absolute;
+      right: -100px; top: -150px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(123,47,247,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .diff-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .diff-copy h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3vw, 40px);
+      font-weight: 700;
+      line-height: 1.22;
+      margin-bottom: 26px;
+    }
+    .diff-copy p {
+      color: var(--gray);
+      font-size: 16.5px;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .diff-copy .kicker {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-style: italic;
+      font-size: 18px;
+      color: var(--white);
+    }
+    .diff-copy .kicker strong { color: var(--cyan); font-style: normal; }
+
+    .diff-steps {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .diff-step {
+      display: flex;
+      gap: 16px;
+      padding: 20px 24px;
+      align-items: flex-start;
+    }
+    .diff-step + .diff-step {
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .step-badge {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--purple), var(--purple-end));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .step-text span {
+      font-size: 13.5px;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    /* ── WHY IT MATTERS ────────────────────────── */
+    .why {
+      background: var(--dark);
+      padding: 100px 24px;
+    }
+    .why h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3.5vw, 44px);
+      font-weight: 700;
+      line-height: 1.22;
+      margin-bottom: 32px;
+    }
+    .why .prose p { font-size: 17px; }
+
+    .highlight-quote {
+      border-left: 3px solid var(--cyan);
+      background: var(--cyan-dim);
+      border-radius: 0 10px 10px 0;
+      padding: 24px 28px;
+      margin: 36px 0;
+      font-size: clamp(18px, 2.2vw, 22px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.5;
+    }
+
+    /* ── CTA ───────────────────────────────────── */
+    .cta {
+      background: var(--darker);
+      padding: 112px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta::before {
+      content: '';
+      position: absolute;
+      bottom: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(0,180,216,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .cta-inner { max-width: 640px; margin: 0 auto; position: relative; }
+    .cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 58px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .cta p {
+      color: var(--gray);
+      font-size: 17px;
+      line-height: 1.75;
+      margin-bottom: 44px;
+    }
+
+    .promise-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin-bottom: 48px;
+      list-style: none;
+    }
+    .promise-list li {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .promise-list li::before {
+      content: '✓';
+      color: var(--cyan);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      background: var(--cyan);
+      color: #060614;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 20px 56px;
+      border-radius: 10px;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,180,216,0.45);
+    }
+
+    /* ── FOOTER ────────────────────────────────── */
+    .footer {
+      background: #0e0e20;
+      padding: 28px 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      font-size: 13px;
+      color: var(--mid);
+    }
+    .footer a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    .footer a:hover { text-decoration: underline; }
+    .footer-sep { opacity: 0.3; }
+
+    /* ── RESPONSIVE ────────────────────────────── */
+    @media (max-width: 720px) {
+      .diff-grid { grid-template-columns: 1fr; gap: 40px; }
+      .compare-table thead th,
+      .compare-table tbody td { padding: 14px 16px; font-size: 14px; }
+      .hero h1 { letter-spacing: -0.01em; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HERO ═══════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Alma Digital Services
+    </div>
+    <h1>
+      AI built your website.<br>
+      You still had to fill in<br>
+      <span class="accent">everything that mattered.</span>
+    </h1>
+    <p class="hero-sub">
+      10Web, Wix, and Squarespace generate pages.<br>
+      They don't generate knowledge of your business.
+    </p>
+    <div class="brand-row">
+      <span class="brand-row-label">Comparing</span>
+      <span class="brand-pill">10Web</span>
+      <span class="brand-pill">Wix</span>
+      <span class="brand-pill">Squarespace</span>
+      <span class="brand-row-vs">vs.</span>
+      <span class="brand-pill alma">Alma Digital</span>
+    </div>
+    <img
+      src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=480&fit=crop&auto=format&q=80"
+      alt="Professional building a modern business website on a laptop"
+      width="1200"
+      height="480"
+      loading="eager"
+      class="hero-img"
+    >
+  </section>
+
+  <!-- ═══ THE PROBLEM ═════════════════════════════════ -->
+  <section class="problem">
+    <div class="container">
+      <span class="eyebrow">The Problem</span>
+      <h2>You've seen the ads.<br>"Build a website in minutes with AI."</h2>
+      <div class="prose">
+        <p>So you try it. You answer the prompts. Pick a template. Let the AI do its thing. An hour later, you have something that looks... okay. Kind of generic. The photos aren't yours. The copy doesn't sound like you. The services section lists things you don't even offer.</p>
+        <p>You fix it. Then fix it again. Then realize you've spent half a day on something that still doesn't feel right.</p>
+
+        <div class="callout-block">
+          The tool generates the pages. You still have to know what to put on them.
+        </div>
+
+        <p><strong>10Web, Wix, and Squarespace are template engines with a chatbot attached.</strong> They don't know your business. They don't know your city, your customers, or what makes someone call you instead of the competitor down the street.</p>
+        <p>That's not a knock on the technology. That's the truth about what these tools are built to do — and what they're not.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE GAP ══════════════════════════════════════ -->
+  <section class="gap">
+    <div class="gap-head">
+      <span class="eyebrow">The Gap</span>
+      <h2>What AI Builders Do vs. What They Don't</h2>
+      <p>No vendor marketing — just what the tools actually handle, and where they stop.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="th-do">
+              <span class="th-eyebrow">10Web · Wix · Squarespace</span>
+              <span class="th-label">What AI Builders Do</span>
+            </th>
+            <th class="th-dont">
+              <span class="th-eyebrow">The Gap They Leave Behind</span>
+              <span class="th-label">What They Don't Do</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-yes">✓</span>
+                Generate a layout in seconds
+              </div>
+            </td>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-no">✕</span>
+                Research your actual business
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-yes">✓</span>
+                Suggest stock photos
+              </div>
+            </td>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-no">✕</span>
+                Know what your customers care about
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-yes">✓</span>
+                Fill in placeholder copy
+              </div>
+            </td>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-no">✕</span>
+                Write in your voice
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-yes">✓</span>
+                Give you a template that works
+              </div>
+            </td>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-no">✕</span>
+                Create a site that converts for your market
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-yes">✓</span>
+                Let you edit everything yourself
+              </div>
+            </td>
+            <td>
+              <div class="cell-check">
+                <span class="icon icon-no">✕</span>
+                Do the work for you
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="compare-footnote">
+        <strong>10Web</strong> auto-generates pages. <strong>Wix</strong> gives you a starting point. <strong>Squarespace</strong> gives you beautiful templates.<br>
+        None of them study your business before writing a single word.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ ALMA'S DIFFERENTIATOR ═══════════════════════ -->
+  <section class="diff">
+    <div class="diff-grid">
+      <div class="diff-copy">
+        <span class="eyebrow">Alma's Differentiator</span>
+        <h2>We don't ask you to fill in the blanks.</h2>
+        <p>Before we build anything, we research your business — your industry, your location, your competitors, your customers. We write copy based on what we find, not based on what you remember to type into a prompt box.</p>
+        <p>The result: a website that sounds like you wrote it yourself, on a good day, after you'd thought about it for a week.</p>
+        <p>You see it before you pay anything. If you don't love it, we revise until you do.</p>
+        <p class="kicker">The AI doesn't know your business. <strong>We do.</strong></p>
+      </div>
+      <div class="diff-steps">
+        <div class="diff-step">
+          <div class="step-badge">1</div>
+          <div class="step-text">
+            <strong>We research your business</strong>
+            <span>Industry, location, competitors, and what your customers actually care about</span>
+          </div>
+        </div>
+        <div class="diff-step">
+          <div class="step-badge">2</div>
+          <div class="step-text">
+            <strong>We write the copy</strong>
+            <span>Based on what we find — not a prompt box you have to fill in yourself</span>
+          </div>
+        </div>
+        <div class="diff-step">
+          <div class="step-badge">3</div>
+          <div class="step-text">
+            <strong>You see it first</strong>
+            <span>A complete free preview before you commit to anything</span>
+          </div>
+        </div>
+        <div class="diff-step">
+          <div class="step-badge">4</div>
+          <div class="step-text">
+            <strong>We revise until it's right</strong>
+            <span>You decide when it sounds like you. We don't ship until it does.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY IT MATTERS ══════════════════════════════ -->
+  <section class="why">
+    <div class="container">
+      <span class="eyebrow">Why It Matters</span>
+      <h2>A template site still reads like a template.</h2>
+      <div class="prose">
+        <p>A website built from a template — no matter how good the AI — still reads like a template. Customers feel it. They land on your page and something feels off. The copy is too broad. The photos are too stock. The whole thing could belong to any business in any city.</p>
+
+        <div class="highlight-quote">
+          Your business isn't generic. Your website shouldn't be either.
+        </div>
+
+        <p>When someone lands on an Alma site, they land on a page built around your specific business, your city, and your customers. The difference is visible.</p>
+        <p><strong>The difference converts.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ══════════════════════════════════════════ -->
+  <section class="cta">
+    <div class="cta-inner">
+      <span class="eyebrow">Ready?</span>
+      <h2>See what we build before you pay a thing.</h2>
+      <p>We'll build your site, show you the preview, and you decide. No subscription. No templates to wrestle with. No AI prompts to fill in. Just a website that sounds like you — done.</p>
+      <ul class="promise-list">
+        <li>No subscription</li>
+        <li>No templates to wrestle with</li>
+        <li>No AI prompts to fill in</li>
+      </ul>
+      <a href="mailto:hello@almadigitalservices.com" class="btn-cta">See Your Free Preview</a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Alma Digital Services</span>
+      <span class="footer-sep">·</span>
+      <a href="tel:+1-800-000-0000">Call Us</a>
+      <span class="footer-sep">·</span>
+      <a href="mailto:hello@almadigitalservices.com">hello@almadigitalservices.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
