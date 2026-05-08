@@ -191,6 +191,11 @@
     }
     .about-img-icon { font-size: 72px; }
     .about-img-text { font-size: 15px; color: var(--cyan); font-weight: 600; }
+    .about-img {
+      width: 100%; aspect-ratio: 4/3; border-radius: 16px;
+      object-fit: cover; border: 1px solid rgba(0,194,232,0.15);
+      display: block;
+    }
     .about-badge-wrap {
       position: absolute; bottom: -20px; right: -20px;
       background: var(--cyan); color: var(--navy);
@@ -509,10 +514,12 @@
       <h2 class="section-heading">Born in Hixson,<br />Built to Serve Chattanooga</h2>
       <div class="about-grid">
         <div class="about-img-wrap">
-          <div class="about-img-placeholder">
-            <div class="about-img-icon">🏠❄️</div>
-            <div class="about-img-text">North Georgia Heating &amp; Air of Hixson</div>
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&h=450&fit=crop&auto=format&q=80"
+            alt="North Georgia Heating &amp; Air of Hixson — professional HVAC service in Chattanooga, TN"
+            class="about-img"
+            loading="lazy"
+          />
           <div class="about-badge-wrap">
             <div class="about-badge-num">169</div>
             <div class="about-badge-label">5-Star Reviews</div>
@@ -678,6 +685,14 @@
             </div>
           </div>
           <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:info@northgeorgiaheatingair.com" style="color:var(--cyan);text-decoration:none;">info@northgeorgiaheatingair.com</a></div>
+              <div class="contact-item-sub">Email us anytime — we respond within 1 business hour</div>
+            </div>
+          </div>
+          <div class="contact-item">
             <div class="contact-item-icon">🕐</div>
             <div>
               <div class="contact-item-label">Hours</div>
@@ -761,6 +776,7 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:4236680050">(423) 668-0050</a></li>
+          <li><a href="mailto:info@northgeorgiaheatingair.com">info@northgeorgiaheatingair.com</a></li>
           <li><a href="#contact">Schedule Service</a></li>
           <li>Hixson, TN</li>
           <li>24/7 Emergency Available</li>
