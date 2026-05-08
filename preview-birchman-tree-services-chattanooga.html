@@ -141,6 +141,17 @@
       background: linear-gradient(90deg, var(--green-accent), var(--green-light), var(--earth-tan));
     }
 
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .hero-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -149,6 +160,8 @@
       gap: 60px;
       align-items: center;
       width: 100%;
+      position: relative;
+      z-index: 1;
     }
 
     .hero-badge {
@@ -526,6 +539,15 @@
     }
 
     /* Why stats */
+    .why-photo {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      height: 260px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
     .why-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -959,6 +981,12 @@
 
   <!-- HERO -->
   <section class="hero">
+    <img
+      src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&auto=format&fit=crop&q=60"
+      alt="Tall forest trees in Chattanooga, Tennessee"
+      class="hero-bg-img"
+      loading="eager"
+    />
     <div class="hero-inner">
       <div class="hero-content">
         <div class="hero-badge">111 Five-Star Google Reviews</div>
@@ -1113,6 +1141,13 @@
       </div>
 
       <div class="why-stats fade-up">
+        <img
+          src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=700&auto=format&fit=crop&q=80"
+          alt="Birchman Tree Services crew safely removing a large tree"
+          class="why-photo"
+          style="grid-column: 1 / -1;"
+          loading="lazy"
+        />
         <div class="why-stat">
           <div class="why-stat-num">111</div>
           <div class="why-stat-label">Five-Star Google Reviews</div>
@@ -1209,6 +1244,15 @@
             </div>
           </div>
           <div class="contact-row">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-row-label">Email</div>
+              <div class="contact-row-value">
+                <a href="mailto:info@birchmantreeservices.com">info@birchmantreeservices.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-row">
             <div class="contact-icon">📍</div>
             <div>
               <div class="contact-row-label">Service Area</div>
@@ -1296,6 +1340,7 @@
         <h4>Contact</h4>
         <ul>
           <li><span>📞 (770) 362-8930</span></li>
+          <li><a href="mailto:info@birchmantreeservices.com">✉️ info@birchmantreeservices.com</a></li>
           <li><span>📍 Chattanooga, TN</span></li>
           <li><span>🕐 Mon–Sat 7am–6pm</span></li>
           <li><span>⚡ 24/7 Emergency Line</span></li>
