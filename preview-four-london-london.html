@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FOUR London | Award-Winning Hair Salon, London</title>
+<meta name="description" content="FOUR London — a premier London hair salon delivering exceptional cuts, colour, and treatments. Book your transformation today.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#0d0d14;color:#e8e4dc}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,20,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.12)}
+.logo{font-weight:800;color:#c9a84c;font-size:1.15rem;letter-spacing:.04em}.nav-cta{background:#c9a84c;color:#0d0d14;padding:10px 26px;border-radius:3px;font-size:.85rem;font-weight:700;text-decoration:none;letter-spacing:.04em}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:110px 64px 64px;max-width:820px}
+.badge{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);color:#c9a84c;padding:7px 18px;border-radius:2px;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:28px;display:inline-block}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,5.5vw,4.2rem);line-height:1.05;margin-bottom:20px;color:#f0ece4;font-weight:400}
+h1 .accent{color:#c9a84c}
+.hero-sub{color:rgba(232,228,220,.55);font-size:1.05rem;max-width:520px;line-height:1.85;margin-bottom:40px}
+.btn-primary{background:#c9a84c;color:#0d0d14;padding:16px 38px;border-radius:3px;font-weight:700;font-size:.92rem;text-decoration:none;display:inline-block;letter-spacing:.05em;text-transform:uppercase}
+.btn-outline{border:1px solid rgba(201,168,76,.5);color:#c9a84c;padding:14px 32px;border-radius:3px;font-weight:600;font-size:.88rem;text-decoration:none;display:inline-block;margin-left:14px;background:transparent;letter-spacing:.05em;text-transform:uppercase}
+.sec{padding:88px 24px}.inner{max-width:1100px;margin:0 auto}
+.sec-label{color:#c9a84c;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.sec-title{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.2vw,2.6rem);margin-bottom:16px;color:#f0ece4;font-weight:400}
+.sec-desc{color:rgba(232,228,220,.5);max-width:560px;line-height:1.75;margin-bottom:40px}
+.dark-sec{background:#080810}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:rgba(201,168,76,.08)}
+.svc-item{padding:36px 32px;background:#080810;transition:background .25s}.svc-item:hover{background:rgba(201,168,76,.04)}
+.svc-num{color:#c9a84c;font-size:1.1rem;font-weight:900;margin-bottom:14px;letter-spacing:.04em}
+.svc-item h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:#f0ece4}
+.svc-item p{color:rgba(232,228,220,.45);font-size:.88rem;line-height:1.7}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about-text p{color:rgba(232,228,220,.6);line-height:1.85;margin-bottom:16px;font-size:.97rem}
+.about-stat{margin-top:36px;display:flex;gap:40px}
+.stat-num{font-family:'DM Serif Display',serif;font-size:2.8rem;color:#c9a84c;font-weight:400;line-height:1}
+.stat-label{font-size:.8rem;color:rgba(232,228,220,.45);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px}
+.about-quote{background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.12);border-radius:4px;padding:40px;align-self:start}
+.about-quote blockquote{font-family:'DM Serif Display',serif;font-size:1.35rem;color:#f0ece4;line-height:1.6;font-weight:400;margin-bottom:18px}
+.about-quote cite{color:#c9a84c;font-size:.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;font-style:normal}
+.cta-sec{text-align:center;background:#c9a84c;color:#0d0d14}
+.cta-sec h2{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:14px;font-weight:400}
+.cta-sec p{color:rgba(13,13,20,.65);max-width:500px;margin:0 auto 32px;line-height:1.7}
+.form-input{padding:14px 18px;border-radius:3px;border:1px solid rgba(13,13,20,.2);background:rgba(13,13,20,.06);color:#0d0d14;font-size:.92rem;font-family:Inter,sans-serif;width:100%}.form-input::placeholder{color:rgba(13,13,20,.4)}
+.btn-dark{background:#0d0d14;color:#c9a84c;padding:15px 36px;border-radius:3px;font-weight:700;font-size:.9rem;font-family:Inter,sans-serif;cursor:pointer;border:none;width:100%;letter-spacing:.06em;text-transform:uppercase}
+footer{padding:40px 24px;text-align:center;color:rgba(232,228,220,.3);font-size:.8rem;background:#080810;border-top:1px solid rgba(201,168,76,.08)}
+.footer-brand{color:#c9a84c;font-weight:800;font-size:1rem;margin-bottom:8px;letter-spacing:.04em}
+@media(max-width:900px){.about-wrap{grid-template-columns:1fr}.hero{padding:100px 28px 52px}nav{padding:16px 22px}}
+@media(max-width:768px){.btn-outline{display:none}}
+</style></head><body>
+<nav><span class="logo">FOUR London</span><a href="#book" class="nav-cta">Book Now</a></nav>
+<section class="hero">
+<span class="badge">Hair Salon &#8212; London</span>
+<h1>Where <span class="accent">Precision</span><br>Meets Identity</h1>
+<p class="hero-sub">FOUR London crafts bespoke colour and cuts for clients who treat their hair as an extension of who they are &#8212; with the technical skill to back every appointment.</p>
+<div><a href="#book" class="btn-primary">Book Your Appointment</a><a href="#services" class="btn-outline">Our Services</a></div>
+</section>
+<section class="sec dark-sec" id="services">
+<div class="inner">
+<p class="sec-label">What We Do</p>
+<h2 class="sec-title">Salon Services</h2>
+<p class="sec-desc">From lived-in colour to precision cuts &#8212; every service is designed to work with your hair, not against it.</p>
+<div class="svc-grid">
+<div class="svc-item"><div class="svc-num">01</div><h3>Signature Cuts</h3><p>Precision cutting tailored to your face shape, hair texture, and lifestyle. Every detail considered.</p></div>
+<div class="svc-item"><div class="svc-num">02</div><h3>Colour &amp; Highlights</h3><p>Balayage, babylights, full colour, and toning. Natural results that move the way your hair does.</p></div>
+<div class="svc-item"><div class="svc-num">03</div><h3>Blowouts &amp; Styling</h3><p>Polished blowouts and editorial styling for everyday confidence or special occasions.</p></div>
+<div class="svc-item"><div class="svc-num">04</div><h3>Treatments</h3><p>Keratin smoothing, Olaplex bonding treatments, and bespoke conditioning for damaged hair.</p></div>
+<div class="svc-item"><div class="svc-num">05</div><h3>Bridal &amp; Occasion</h3><p>Trial appointments and same-day styling for weddings, events, and everything in between.</p></div>
+<div class="svc-item"><div class="svc-num">06</div><h3>Consultations</h3><p>Free 15-minute consultations for colour transformations and major changes. We plan before we act.</p></div>
+</div>
+</div>
+</section>
+<section class="sec" id="about">
+<div class="inner">
+<div class="about-wrap">
+<div class="about-text">
+<p class="sec-label">About FOUR London</p>
+<h2 class="sec-title">Craft Behind Every Chair</h2>
+<p>FOUR London was built on a simple principle: great hair requires time, precision, and an honest conversation. Every stylist at FOUR is selected for their technical ability and their ability to listen &#8212; because a cut that suits someone else&#8217;s Instagram is not the same as a cut that suits you.</p>
+<p>Based in London and serving clients across the city, FOUR has built a reputation for colour work that ages gracefully and cuts that grow out beautifully.</p>
+<div class="about-stat">
+<div><div class="stat-num">10+</div><div class="stat-label">Years in London</div></div>
+<div><div class="stat-num">4.9</div><div class="stat-label">Avg. Rating</div></div>
+<div><div class="stat-num">5K+</div><div class="stat-label">Happy Clients</div></div>
+</div>
+</div>
+<div class="about-quote">
+<blockquote>&#8220;The best colour I&#8217;ve ever had &#8212; and I&#8217;ve been to salons all over London. FOUR actually listened to what I wanted.&#8221;</blockquote>
+<cite>&#8212; Verified Client</cite>
+</div>
+</div>
+</div>
+</section>
+<section class="sec cta-sec" id="book">
+<div class="inner">
+<p class="sec-label" style="color:rgba(13,13,20,.5)">Get Started</p>
+<h2>Ready for Your Best Hair?</h2>
+<p>Book your appointment at FOUR London. Cuts, colour, and treatments &#8212; all tailored to you.</p>
+<form action="https://formspree.io/f/xojppajv" method="POST" style="max-width:460px;margin:28px auto 0;display:grid;gap:12px">
+<input type="text" name="name" placeholder="Your Name" required class="form-input">
+<input type="email" name="email" placeholder="Email Address" required class="form-input">
+<input type="tel" name="phone" placeholder="Phone Number" class="form-input">
+<input type="text" name="service" placeholder="Service you&#8217;re interested in" class="form-input">
+<button type="submit" class="btn-dark">Request Appointment</button>
+</form>
+</div>
+</section>
+<footer><div class="footer-brand">FOUR London</div><p>&#169; 2026 FOUR London &#8212; London, UK</p></footer>
+</body></html>
