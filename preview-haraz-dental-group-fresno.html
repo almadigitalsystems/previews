@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haraz Dental Group Fresno | Expert Oral Surgery &amp; Affordable Dental Care</title>
+  <meta name="description" content="Haraz Dental Group in Fresno, CA — 4.9 stars, 1,400+ reviews. Dr. Muhammad Nadeem DDS offers expert oral surgery, dental implants, wisdom teeth removal, root canals, and general dentistry. PPO &amp; Medi-Cal accepted. Book today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0d2b5e;
+      --navy-mid: #1a3a7a;
+      --teal: #00a8c8;
+      --teal-light: #e6f7fc;
+      --white: #ffffff;
+      --off-white: #f7f9fc;
+      --light-gray: #edf1f7;
+      --text-dark: #111827;
+      --text-mid: #374151;
+      --text-light: #6b7280;
+      --gold: #f59e0b;
+      --border: #e2e8f0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* PREVIEW BANNER */
+    .preview-banner {
+      background: linear-gradient(135deg, #0d2b5e, #00a8c8);
+      color: var(--white);
+      text-align: center;
+      padding: 14px 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+    .preview-banner a {
+      color: #a5f3fc;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    .preview-banner strong { font-weight: 700; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .nav-logo-text span:first-child {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--navy);
+    }
+    .nav-logo-text span:last-child {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-mid);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      font-size: 0.875rem !important;
+      transition: background 0.2s !important;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--navy-mid) !important; color: var(--white) !important; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0f3875 60%, #1a4d94 100%);
+      color: var(--white);
+      padding: 80px 32px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,168,200,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-text { padding-bottom: 80px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,168,200,0.2);
+      border: 1px solid rgba(0,168,200,0.4);
+      color: #a5f3fc;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero-badge::before { content: '★'; color: #f59e0b; }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+    .hero h1 span { color: #67e8f9; }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat .num {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat .stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 1px; }
+    .hero-stat .label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.65);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+    .hero-stat-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { background: #0090b0; transform: translateY(-1px); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      padding: 15px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.2); }
+    .hero-img-wrap {
+      position: relative;
+      align-self: flex-end;
+    }
+    .hero-img-wrap img {
+      width: 100%;
+      max-width: 520px;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+      display: block;
+      box-shadow: 0 -20px 60px rgba(0,0,0,0.3);
+    }
+    .hero-img-badge {
+      position: absolute;
+      bottom: 30px;
+      left: -20px;
+      background: var(--white);
+      border-radius: 14px;
+      padding: 14px 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-img-badge .badge-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--teal-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+    .hero-img-badge .badge-text strong {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .hero-img-badge .badge-text span {
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--teal-light);
+      border-top: 3px solid var(--teal);
+      padding: 20px 32px;
+    }
+    .trust-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .trust-item span { font-size: 1.2rem; }
+    .trust-divider {
+      width: 1px;
+      height: 20px;
+      background: var(--teal);
+      opacity: 0.4;
+    }
+
+    /* SECTION COMMONS */
+    section { padding: 80px 32px; }
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 640px;
+    }
+    .section-header { margin-bottom: 50px; }
+    .centered { text-align: center; }
+    .centered .section-sub { margin: 0 auto; }
+    .max-w { max-width: 1200px; margin: 0 auto; }
+
+    /* SERVICES */
+    .services { background: var(--off-white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+    }
+    .service-card:hover {
+      box-shadow: 0 8px 32px rgba(0,40,100,0.1);
+      border-color: var(--teal);
+      transform: translateY(-2px);
+    }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--teal-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .service-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ABOUT */
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+    }
+    .about-img-stat {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+    .about-img-stat .big { font-size: 2.2rem; font-weight: 700; }
+    .about-img-stat .small { font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 4px; }
+    .about-text { padding-right: 20px; }
+    .about-text p {
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .about-stat-box {
+      background: var(--off-white);
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid var(--border);
+    }
+    .about-stat-box .val {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .about-stat-box .stars { color: var(--gold); }
+    .about-stat-box .lbl {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* INSURANCE */
+    .insurance { background: var(--off-white); }
+    .insurance-cards {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .ins-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 28px;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ins-card span { font-size: 1.2rem; }
+    .insurance-note {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+    }
+    .insurance-note a { color: var(--teal); text-decoration: none; font-weight: 600; }
+
+    /* REVIEWS */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .review-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .review-stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 12px; }
+    .review-text {
+      font-size: 0.925rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+    .review-author { font-size: 0.8rem; font-weight: 700; color: var(--navy); }
+    .review-author span { color: var(--text-light); font-weight: 400; }
+    .reviews-cta {
+      text-align: center;
+      margin-top: 36px;
+    }
+    .reviews-cta p { font-size: 0.875rem; color: var(--text-mid); }
+    .reviews-cta strong { color: var(--navy); }
+
+    /* CONTACT */
+    .contact { background: linear-gradient(135deg, var(--navy) 0%, #0f3875 100%); color: var(--white); }
+    .contact h2 { color: var(--white); }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .contact-info h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .contact-details { list-style: none; }
+    .contact-details li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .contact-details .icon {
+      width: 38px;
+      height: 38px;
+      background: rgba(0,168,200,0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    .contact-details .info strong {
+      display: block;
+      font-weight: 600;
+      color: var(--white);
+      font-size: 0.95rem;
+    }
+    .contact-details .info span {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
+    }
+    .contact-details a { color: #67e8f9; text-decoration: none; }
+    .contact-details a:hover { text-decoration: underline; }
+    .contact-cta-box {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px;
+      color: var(--text-dark);
+    }
+    .contact-cta-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .contact-cta-box p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .cta-stack { display: flex; flex-direction: column; gap: 12px; }
+    .cta-btn-main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-btn-main:hover { background: var(--navy-mid); }
+    .cta-btn-phone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--teal-light);
+      color: var(--navy);
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .cta-btn-phone:hover { background: #d0f0f8; }
+    .ins-note {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0a1f48;
+      color: rgba(255,255,255,0.7);
+      padding: 40px 32px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-nap { font-size: 0.85rem; line-height: 1.8; }
+    .footer-nap strong { color: var(--white); display: block; font-size: 1rem; margin-bottom: 4px; }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.8rem; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); margin-top: 8px; }
+    footer a { color: #67e8f9; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-text { padding-bottom: 0; }
+      .hero-img-wrap { display: none; }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-img-wrap { display: none; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { padding-bottom: 60px; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 0 16px; }
+      section { padding: 60px 16px; }
+      .hero { padding: 50px 16px; }
+      .trust-bar { padding: 16px; }
+      .hero-stats { gap: 16px; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PREVIEW BANNER -->
+<div class="preview-banner">
+  <strong>✦ Preview</strong> — See Your New Website — Free. No commitment. &nbsp;
+  <a href="#contact">Book Your Appointment Today →</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">H</div>
+    <div class="nav-logo-text">
+      <span>Haraz Dental Group</span>
+      <span>Fresno, CA</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#insurance">Insurance</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:+15595549791" class="nav-cta">📞 Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">4.9 Stars · 1,472 Reviews · Fresno's Top Dental Group</div>
+      <h1>Fresno's Most Trusted Dental Group — Expert Oral Surgery, Implants &amp; <span>Affordable Care</span></h1>
+      <p class="hero-sub">Dr. Muhammad Nadeem and the Haraz Dental Group team bring compassionate, expert dental care to Fresno — backed by 1,472 five-star reviews, advanced oral surgery expertise, and prices your insurance can actually cover.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="stars">★★★★★</div>
+          <div class="num">4.9</div>
+          <div class="label">Star Rating</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="num">1,472</div>
+          <div class="label">5-Star Reviews</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="num">PPO &amp;</div>
+          <div class="label">Medi-Cal Accepted</div>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">📅 Book Your Appointment Today</a>
+        <a href="tel:+15595549791" class="btn-secondary">📞 Call (559) 554-9791</a>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1588776814546-1ffbb172c6c4?w=800&h=600&fit=crop&crop=center"
+        alt="Dr. Muhammad Nadeem DDS and the Haraz Dental Group team in Fresno CA"
+        width="800"
+        height="600"
+        loading="eager"
+      >
+      <div class="hero-img-badge">
+        <div class="badge-icon">🦷</div>
+        <div class="badge-text">
+          <strong>Oral Surgery Experts</strong>
+          <span>Implants · Extractions · Wisdom Teeth</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span>✅</span> PPO Insurance Accepted</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span>✅</span> Medi-Cal Accepted</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span>✅</span> CareCredit Financing Available</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span>✅</span> Oral Surgery Specialists</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span>✅</span> 4.9 Stars · 1,472 Reviews</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="max-w">
+    <div class="section-header centered">
+      <div class="section-label">Our Services</div>
+      <h2>Comprehensive Dental Care for Every Need</h2>
+      <p class="section-sub">From routine cleanings to complex oral surgery, Haraz Dental Group has the expertise and compassion to care for your whole family.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🦷</div>
+        <h3>Painless Tooth Extractions</h3>
+        <p>Gentle, stress-free extractions with minimal downtime. We make every procedure as comfortable as possible.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔬</div>
+        <h3>Wisdom Teeth Removal</h3>
+        <p>Expert removal by Fresno's oral surgery specialists. Safe, efficient, and designed with your comfort in mind.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Dental Implants</h3>
+        <p>Permanent, natural-looking tooth replacement done right. Restore your smile with implants that last a lifetime.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🩺</div>
+        <h3>Gum Disease Treatment</h3>
+        <p>Periodontal care to protect your smile at the root. Early intervention for lasting gum health.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💊</div>
+        <h3>Root Canals</h3>
+        <p>Comfortable endodontic treatment that saves your natural tooth. Modern techniques mean minimal discomfort.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👑</div>
+        <h3>Crowns &amp; Restorations</h3>
+        <p>Durable, beautiful crowns that look and feel natural. Protect and restore damaged teeth with precision.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💫</div>
+        <h3>Teeth Whitening &amp; Cosmetic Care</h3>
+        <p>Brighten your smile with professional-grade results. Safe, effective whitening that lasts.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏥</div>
+        <h3>General &amp; Preventive Dentistry</h3>
+        <p>Cleanings, exams, and care for the whole family. Your foundation for a lifetime of healthy smiles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="max-w">
+    <div class="about-inner">
+      <div class="about-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=700&h=600&fit=crop&crop=center"
+          alt="Haraz Dental Group office and dental team Fresno CA"
+          width="700"
+          height="600"
+          loading="lazy"
+        >
+        <div class="about-img-stat">
+          <div class="big">4.9★</div>
+          <div class="small">1,472 Five-Star Reviews</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">About Us</div>
+        <h2>Central Valley's Leader in Oral Surgery &amp; Comprehensive Dental Care</h2>
+        <p>Haraz Dental Group is a Central Valley leader in oral surgery and comprehensive dental care, serving Fresno patients under the expert care of Dr. Muhammad Nadeem DDS. With 1,472 five-star reviews and a 4.9-star rating, the practice has built its reputation on combining advanced surgical skill with genuine compassion — from routine cleanings to complex implant procedures.</p>
+        <p>Located at 6099 N First St in Fresno, they accept most PPO insurance and Medi-Cal, making quality care accessible to every family in the Valley.</p>
+        <div class="about-stats">
+          <div class="about-stat-box">
+            <div class="val"><span class="stars">★★★★★</span></div>
+            <div class="lbl">4.9-Star Rating</div>
+          </div>
+          <div class="about-stat-box">
+            <div class="val">1,472</div>
+            <div class="lbl">Five-Star Reviews</div>
+          </div>
+          <div class="about-stat-box">
+            <div class="val">PPO &amp;</div>
+            <div class="lbl">Medi-Cal Accepted</div>
+          </div>
+          <div class="about-stat-box">
+            <div class="val">Oral</div>
+            <div class="lbl">Surgery Specialists</div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary" style="align-self: flex-start;">📅 Book Your Appointment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews" style="background: var(--off-white);">
+  <div class="max-w">
+    <div class="section-header centered">
+      <div class="section-label">Patient Reviews</div>
+      <h2>What Fresno Patients Are Saying</h2>
+      <p class="section-sub">1,472 five-star reviews and counting. Here's why Fresno families trust Haraz Dental Group.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Dr. Nadeem and his team made my wisdom teeth removal completely painless. I was nervous going in, but they were so gentle and explained every step. Highly recommend to anyone in Fresno looking for an oral surgeon!"</p>
+        <div class="review-author">Maria G. <span>— Fresno, CA</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I've had dental implants done here and the results are incredible — they look completely natural. The staff accepts Medi-Cal which made the whole process so much more accessible for my family. Best dental office in the Central Valley."</p>
+        <div class="review-author">James R. <span>— Fresno, CA</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I was terrified of root canals but Dr. Nadeem made it completely comfortable. Zero pain during the procedure. The team is professional, warm, and truly cares about their patients. I've never felt better about going to the dentist!"</p>
+        <div class="review-author">Patricia L. <span>— Fresno, CA</span></div>
+      </div>
+    </div>
+    <div class="reviews-cta">
+      <p><strong>4.9 stars</strong> based on <strong>1,472 reviews</strong> from Fresno patients</p>
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE -->
+<section class="insurance" id="insurance">
+  <div class="max-w">
+    <div class="section-header centered">
+      <div class="section-label">Insurance &amp; Financing</div>
+      <h2>Affordable Care for Every Fresno Family</h2>
+      <p class="section-sub">We believe quality dental care should be accessible to everyone. We accept most major insurance plans and offer flexible financing options.</p>
+    </div>
+    <div class="insurance-cards">
+      <div class="ins-card"><span>🏥</span> Most PPO Insurance</div>
+      <div class="ins-card"><span>💙</span> Medi-Cal Accepted</div>
+      <div class="ins-card"><span>💳</span> CareCredit Financing</div>
+      <div class="ins-card"><span>📞</span> Verify Your Coverage</div>
+    </div>
+    <p class="insurance-note">
+      Questions about your insurance? <a href="tel:+15595549791">Call us at (559) 554-9791</a> or
+      <a href="mailto:harazdentalgroup@gmail.com">email harazdentalgroup@gmail.com</a> — we'll help you figure it out.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="max-w">
+    <div class="section-header">
+      <div class="section-label" style="color: #67e8f9;">Contact &amp; Booking</div>
+      <h2>Book Your Appointment at Haraz Dental Group</h2>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-info">
+        <h3>Office Information</h3>
+        <ul class="contact-details">
+          <li>
+            <div class="icon">📍</div>
+            <div class="info">
+              <strong>Address</strong>
+              <span>6099 N First St, Suite 104<br>Fresno, CA 93710</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon">📞</div>
+            <div class="info">
+              <strong>Phone</strong>
+              <span><a href="tel:+15595549791">(559) 554-9791</a></span>
+            </div>
+          </li>
+          <li>
+            <div class="icon">✉️</div>
+            <div class="info">
+              <strong>Email</strong>
+              <span><a href="mailto:harazdentalgroup@gmail.com">harazdentalgroup@gmail.com</a></span>
+            </div>
+          </li>
+          <li>
+            <div class="icon">🕐</div>
+            <div class="info">
+              <strong>Hours</strong>
+              <span>Mon–Thu: 8:30 AM – 2:30 PM<br>Fri: 8:30 AM – 12:30 PM</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon">💙</div>
+            <div class="info">
+              <strong>Insurance</strong>
+              <span>Most PPO Insurance &amp; Medi-Cal Accepted<br>CareCredit available</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="contact-cta-box">
+        <h3>Ready to Book Your Appointment?</h3>
+        <p>Join 1,472+ Fresno patients who trust Haraz Dental Group for expert oral surgery, implants, and compassionate dental care. New patients welcome.</p>
+        <div class="cta-stack">
+          <a href="tel:+15595549791" class="cta-btn-main">📅 Book Your Appointment Today</a>
+          <a href="tel:+15595549791" class="cta-btn-phone">📞 Call (559) 554-9791</a>
+        </div>
+        <p class="ins-note">Most PPO Insurance &amp; Medi-Cal Accepted · CareCredit Available</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-nap">
+      <strong>Haraz Dental Group</strong>
+      6099 N First St, Suite 104, Fresno, CA 93710<br>
+      <a href="tel:+15595549791">(559) 554-9791</a> ·
+      <a href="mailto:harazdentalgroup@gmail.com">harazdentalgroup@gmail.com</a>
+    </div>
+    <div style="text-align: right;">
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#insurance">Insurance</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-copy">© 2026 Haraz Dental Group. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
