@@ -6,7 +6,7 @@
 <title>Paradigm Tree Works | Spokane WA Tree Removal & Trimming</title>
 <meta name="description" content="Paradigm Tree Works — Spokane's trusted tree removal, trimming, stump grinding & emergency storm service. 4.8 stars. Licensed & insured. Call (208) 512-0535.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:wght@400;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
@@ -61,7 +61,10 @@
   .trust-bar{background:var(--cream);padding:1.5rem 2rem;border-bottom:1px solid #e5e7eb}
   .trust-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:1rem}
   .trust-item{display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;font-weight:600;color:var(--forest)}
-  .trust-icon{font-size:1.2rem}
+  .trust-icon{font-size:1.2rem;display:flex;align-items:center}
+  .trust-icon .material-symbols-outlined{font-size:1.2rem}
+  .service-icon .material-symbols-outlined{font-size:2.2rem;color:var(--moss)}
+  .service-card.featured .service-icon .material-symbols-outlined{color:#7ec87e}
 
   /* SECTION DEFAULTS */
   section{padding:5rem 2rem}
@@ -212,11 +215,11 @@
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-inner">
-    <div class="trust-item"><span class="trust-icon">🛡️</span> Fully Licensed & Insured</div>
-    <div class="trust-item"><span class="trust-icon">⚡</span> 24/7 Emergency Response</div>
-    <div class="trust-item"><span class="trust-icon">🌲</span> ISA-Certified Arborists</div>
-    <div class="trust-item"><span class="trust-icon">💰</span> Free Estimates</div>
-    <div class="trust-item"><span class="trust-icon">📍</span> Spokane & Coeur d'Alene Area</div>
+    <div class="trust-item"><span class="trust-icon"><span class="material-symbols-outlined">verified_user</span></span> Fully Licensed & Insured</div>
+    <div class="trust-item"><span class="trust-icon"><span class="material-symbols-outlined">bolt</span></span> 24/7 Emergency Response</div>
+    <div class="trust-item"><span class="trust-icon"><span class="material-symbols-outlined">eco</span></span> ISA-Certified Arborists</div>
+    <div class="trust-item"><span class="trust-icon"><span class="material-symbols-outlined">local_offer</span></span> Free Estimates</div>
+    <div class="trust-item"><span class="trust-icon"><span class="material-symbols-outlined">location_on</span></span> Spokane & Coeur d'Alene Area</div>
   </div>
 </div>
 
@@ -228,32 +231,32 @@
     <p class="section-sub">Whether you need a hazardous tree removed or your property cleared after a storm, our certified crew handles every job safely and efficiently.</p>
     <div class="services-grid">
       <div class="service-card featured">
-        <div class="service-icon">🌲</div>
+        <div class="service-icon"><span class="material-symbols-outlined">park</span></div>
         <h3>Tree Removal</h3>
         <p>Safe, complete removal of dead, diseased, or hazardous trees. We handle trees of all sizes with precision equipment and zero damage to your property.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">✂️</div>
+        <div class="service-icon"><span class="material-symbols-outlined">content_cut</span></div>
         <h3>Tree Trimming & Pruning</h3>
         <p>Shape your trees for health, safety, and curb appeal. We remove dead branches, improve structure, and let in more light — all while preserving the tree's natural form.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🪨</div>
+        <div class="service-icon"><span class="material-symbols-outlined">construction</span></div>
         <h3>Stump Grinding</h3>
         <p>Eliminate unsightly stumps that attract pests and create mowing hazards. We grind stumps below grade so you can replant, seed, or level the area.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">⛈️</div>
+        <div class="service-icon"><span class="material-symbols-outlined">thunderstorm</span></div>
         <h3>Emergency Storm Service</h3>
         <p>Fallen tree on your roof? Dangerous limbs hanging over your driveway? We're available 24/7 for emergency response throughout the Spokane region.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🔍</div>
+        <div class="service-icon"><span class="material-symbols-outlined">search</span></div>
         <h3>Hazard Assessment</h3>
         <p>Not sure if a tree is safe? Our certified arborists inspect root systems, canopy, and structure to give you a full report — with honest recommendations.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🏡</div>
+        <div class="service-icon"><span class="material-symbols-outlined">home</span></div>
         <h3>Land Clearing</h3>
         <p>Preparing a lot for construction or reclaiming overgrown property? We clear trees, brush, and stumps efficiently, leaving you a clean, usable space.</p>
       </div>
@@ -443,4 +446,5 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3dd269f06adb46e7a334bfac111d44db"}'></script>
 </body>
 </html>
+
 
