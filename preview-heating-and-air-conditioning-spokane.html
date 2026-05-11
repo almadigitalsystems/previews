@@ -206,7 +206,15 @@
       .value-grid { grid-template-columns: 1fr; }
       .hero-btns { flex-direction: column; }
     }
-  </style>
+  
+/* DT-013 fix: SVG icon sizing */
+.svc-icon svg,.sc-icon svg,.svc-ico svg{width:1.8rem;height:1.8rem;display:block;}
+.svc-h-icon svg{width:1.5rem;height:1.5rem;}
+.cicon svg,.ct-ic svg,.ci-icon svg{width:22px;height:22px;stroke:#fff;}
+.ico svg{width:1.3rem;height:1.3rem;}
+.btn-icon{width:1em;height:1em;display:inline-block;vertical-align:middle;margin-right:4px;}
+.nav-cta svg,.nav-call svg,.btn-main svg,.btn-pri svg,.btn-p svg,.btn-b svg,.emerg-phone svg{width:1em;height:1em;display:inline-block;vertical-align:middle;margin-right:4px;}
+</style>
 </head>
 <body>
 
@@ -234,8 +242,9 @@
       <h1>Clean Air.<br>Perfect <span class="hi">Comfort.</span><br>All Year Round.</h1>
       <p>Spokane's home heating and air conditioning specialists. We design, install, and maintain HVAC systems that keep your family comfortable through every season — efficiently and reliably.</p>
       <div class="hero-btns">
+        <a href="tel:+15090000000" class="btn-a"><svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6Z"/></svg> Call Now</a>
         <a href="#contact" class="btn-a">Get Free Quote →</a>
-        <a href="mailto:info@heatingairspokan.com" class="btn-b">✉️ Send a Message</a>
+        <a href="mailto:info@heatingairspokan.com" class="btn-b"><svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg> Send a Message</a>
       </div>
       <div class="trust-row">
         <div class="trust-item"><span class="icon">✓</span> 5-Star Rated</div>
@@ -257,27 +266,27 @@
   </div>
   <div class="svc-list">
     <div class="svc-h">
-      <div class="svc-h-icon">🔥</div>
+      <div class="svc-h-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/><path d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/></svg></div>
       <div class="svc-h-body"><h3>Heating Systems</h3><p>Furnace and heat pump installations, repairs, and maintenance. Keep your Spokane home warm through the coldest winters with an efficient, properly sized heating system.</p></div>
     </div>
     <div class="svc-h">
-      <div class="svc-h-icon">❄️</div>
+      <div class="svc-h-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636 5.636 18.364"/></svg></div>
       <div class="svc-h-body"><h3>Air Conditioning</h3><p>Central AC, ductless mini-splits, and cooling system repairs. Stay cool and comfortable during Spokane's summer heat without sky-high energy bills.</p></div>
     </div>
     <div class="svc-h">
-      <div class="svc-h-icon">🔧</div>
+      <div class="svc-h-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"/></svg></div>
       <div class="svc-h-body"><h3>Preventive Maintenance</h3><p>Annual HVAC tune-ups that extend equipment life, improve efficiency, and prevent costly emergency breakdowns. Schedule your service before the season starts.</p></div>
     </div>
     <div class="svc-h">
-      <div class="svc-h-icon">🌬️</div>
+      <div class="svc-h-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/></svg></div>
       <div class="svc-h-body"><h3>Indoor Air Quality</h3><p>Air purifiers, humidifiers, and ventilation upgrades. Breathe cleaner, healthier air in your home — especially important during Spokane's wildfire smoke seasons.</p></div>
     </div>
     <div class="svc-h">
-      <div class="svc-h-icon">🏠</div>
+      <div class="svc-h-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg></div>
       <div class="svc-h-body"><h3>System Replacements</h3><p>Old HVAC system reaching the end of its life? We'll help you choose the right replacement for your home's size, budget, and efficiency goals — then install it right.</p></div>
     </div>
     <div class="svc-h">
-      <div class="svc-h-icon">⚡</div>
+      <div class="svc-h-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg></div>
       <div class="svc-h-body"><h3>Emergency Service</h3><p>HVAC breakdowns don't wait for business hours. When you need urgent heating or cooling help, we respond fast to get your system running again.</p></div>
     </div>
   </div>
@@ -298,10 +307,10 @@
       <p>We're not just here to fix your system — we're here to make sure you understand what we're doing and why. Transparent service, honest recommendations, and clean professional work every time.</p>
       <p>Our 5-star rating reflects the standard we hold ourselves to: show up on time, do the work right the first time, and leave your home exactly as we found it — just with a better HVAC system.</p>
       <div class="value-grid">
-        <div class="val-item"><div class="ico">🎯</div><h4>Precision Installation</h4><p>Properly sized and installed for maximum efficiency</p></div>
-        <div class="val-item"><div class="ico">💰</div><h4>Honest Pricing</h4><p>Clear quotes with no hidden fees or surprise charges</p></div>
-        <div class="val-item"><div class="ico">🏆</div><h4>5-Star Rated</h4><p>Every customer leaves satisfied — that's our guarantee</p></div>
-        <div class="val-item"><div class="ico">🛡️</div><h4>Fully Insured</h4><p>Licensed and insured for your complete peace of mind</p></div>
+        <div class="val-item"><div class="ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><h4>Precision Installation</h4><p>Properly sized and installed for maximum efficiency</p></div>
+        <div class="val-item"><div class="ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><h4>Honest Pricing</h4><p>Clear quotes with no hidden fees or surprise charges</p></div>
+        <div class="val-item"><div class="ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"/></svg></div><h4>5-Star Rated</h4><p>Every customer leaves satisfied — that's our guarantee</p></div>
+        <div class="val-item"><div class="ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg></div><h4>Fully Insured</h4><p>Licensed and insured for your complete peace of mind</p></div>
       </div>
     </div>
   </div>
@@ -391,19 +400,19 @@
     <div class="ct-left">
       <h3>Heating &amp; Air Conditioning</h3>
       <div class="ct-row">
-        <div class="ct-ic">✉️</div>
+        <div class="ct-ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></div>
         <div><div class="ct-lbl">Email</div><a href="mailto:info@heatingairspokan.com" class="ct-v">info@heatingairspokan.com</a></div>
       </div>
       <div class="ct-row">
-        <div class="ct-ic">📞</div>
+        <div class="ct-ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6Z"/></svg></div>
         <div><div class="ct-lbl">Phone</div><a href="tel:+15090000000" class="ct-v">Contact us for phone number</a></div>
       </div>
       <div class="ct-row">
-        <div class="ct-ic">📍</div>
+        <div class="ct-ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></div>
         <div><div class="ct-lbl">Location</div><span class="ct-v">Spokane, WA</span></div>
       </div>
       <div class="ct-row">
-        <div class="ct-ic">⏰</div>
+        <div class="ct-ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
         <div><div class="ct-lbl">Hours</div><span class="ct-v">Mon–Sat 8am–6pm</span></div>
       </div>
       <div class="info-box">
@@ -436,8 +445,8 @@
 <footer>
   <p>
     <strong>Heating &amp; Air Conditioning</strong> — HVAC Specialists | Spokane, WA<br>
-    ✉️ <a href="mailto:info@heatingairspokan.com">info@heatingairspokan.com</a> &nbsp;·&nbsp;
-    📞 <a href="tel:+15090000000">Contact for phone number</a><br>
+    <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg> <a href="mailto:info@heatingairspokan.com">info@heatingairspokan.com</a> &nbsp;·&nbsp;
+    <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6Z"/></svg> <a href="tel:+15090000000">Contact for phone number</a><br>
     <small>Licensed &amp; Insured · 5.0 Google Rating · Serving Greater Spokane, WA</small>
   </p>
   <p style="margin-top:14px;font-size:0.72rem;">
