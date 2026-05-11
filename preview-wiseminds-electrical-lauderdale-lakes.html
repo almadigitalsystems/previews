@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WiseMinds Electrical Contractors | Licensed Electricians in Lauderdale Lakes, FL</title>
+  <meta name="description" content="WiseMinds Electrical Contractors — licensed & insured electricians serving Lauderdale Lakes and all of South Florida since 2010. Panel upgrades, EV chargers, commercial electrical, 24/7 emergency service. Free estimates. Top 5% FL contractors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #050d1f;
+      --navy-mid: #0a1628;
+      --navy-light: #0f1f3d;
+      --amber: #f5a00a;
+      --amber-dark: #d4880a;
+      --blue: #1a6bde;
+      --white: #ffffff;
+      --gray-100: #f1f5f9;
+      --gray-300: #cbd5e1;
+      --gray-500: #64748b;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--white); line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(5,13,31,0.96); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(245,160,10,0.2);
+      padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-logo {
+      font-family: 'Oswald', sans-serif; font-size: 1.25rem; font-weight: 700;
+      color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-logo .bolt { color: var(--amber); }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: var(--gray-300); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--amber); }
+    .nav-cta {
+      background: var(--amber); color: var(--navy); padding: 0.6rem 1.5rem;
+      border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.875rem;
+      letter-spacing: 0.03em; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--amber-dark); }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--amber); color: var(--navy); margin-top: 65px;
+      padding: 0.65rem 2rem; text-align: center; font-weight: 700;
+      font-size: 0.82rem; letter-spacing: 0.06em;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 88vh; overflow: hidden; position: relative;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(ellipse at 20% 50%, rgba(26,107,222,0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(245,160,10,0.07) 0%, transparent 50%);
+      pointer-events: none; z-index: 1;
+    }
+    .hero-content {
+      padding: 4.5rem 3rem 4.5rem 8vw; position: relative; z-index: 2;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(245,160,10,0.12); border: 1px solid rgba(245,160,10,0.28);
+      color: var(--amber); padding: 0.4rem 1rem; border-radius: 100px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 1.5rem; width: fit-content;
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif; font-size: clamp(2.4rem, 4.5vw, 3.75rem);
+      font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1.25rem;
+    }
+    .hero h1 span { color: var(--amber); }
+    .hero-sub {
+      font-size: 1.05rem; color: var(--gray-300); margin-bottom: 2rem;
+      max-width: 460px; line-height: 1.75;
+    }
+    .hero-cta-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .btn-primary {
+      background: var(--amber); color: var(--navy); padding: 0.9rem 2rem;
+      border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 1rem;
+      display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s;
+    }
+    .btn-primary:hover { background: var(--amber-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,160,10,0.3); }
+    .btn-secondary {
+      background: transparent; color: var(--white); padding: 0.9rem 2rem; border-radius: 4px;
+      text-decoration: none; font-weight: 600; font-size: 1rem;
+      border: 1px solid rgba(255,255,255,0.25); display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--amber); color: var(--amber); }
+    .hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .hero-stat { display: flex; flex-direction: column; }
+    .hero-stat .number { font-family: 'Oswald', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--amber); }
+    .hero-stat .label { font-size: 0.78rem; color: var(--gray-300); letter-spacing: 0.04em; text-transform: uppercase; }
+
+    .hero-visual { position: relative; height: 88vh; overflow: hidden; }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.65) saturate(0.85); }
+    .hero-visual::after {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(to right, var(--navy) 0%, transparent 35%),
+                  linear-gradient(to top, var(--navy) 0%, transparent 25%);
+    }
+
+    /* PROOF STRIP */
+    .proof-strip {
+      background: var(--navy-mid); padding: 3rem 8vw;
+      border-top: 1px solid rgba(245,160,10,0.12); border-bottom: 1px solid rgba(245,160,10,0.12);
+    }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .proof-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.75rem; }
+    .proof-icon {
+      width: 52px; height: 52px; background: rgba(245,160,10,0.1);
+      border: 1px solid rgba(245,160,10,0.22); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+    }
+    .proof-value { font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--amber); }
+    .proof-label { font-size: 0.875rem; color: var(--gray-300); line-height: 1.5; }
+
+    /* SERVICES */
+    .services { padding: 5rem 8vw; background: var(--navy); }
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Oswald', sans-serif; font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+      font-weight: 700; color: var(--white);
+    }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--navy-mid); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px; padding: 2rem; transition: all 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 4px; height: 100%; background: var(--amber); opacity: 0; transition: opacity 0.3s;
+    }
+    .service-card:hover { border-color: rgba(245,160,10,0.3); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.35); }
+    .service-card:hover::before { opacity: 1; }
+    .service-card.emergency {
+      grid-column: span 3; background: linear-gradient(135deg, #1a0505, #200a0a);
+      border-color: rgba(220,38,38,0.25); display: flex; gap: 2rem; align-items: center;
+    }
+    .service-card.emergency::before { background: #dc2626; }
+    .service-card.emergency:hover { border-color: rgba(220,38,38,0.5); }
+    .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .service-title { font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+    .service-desc { font-size: 0.9rem; color: var(--gray-300); line-height: 1.75; }
+    .emergency-cta {
+      flex-shrink: 0; background: #dc2626; color: white; padding: 1rem 2rem;
+      border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem;
+      text-align: center; transition: background 0.2s; white-space: nowrap;
+    }
+    .emergency-cta:hover { background: #b91c1c; }
+
+    /* ABOUT */
+    .about {
+      background: var(--navy-mid); padding: 5rem 8vw;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+    .about-visual { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
+    .about-visual img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8); }
+    .about-badge {
+      position: absolute; bottom: 1.5rem; right: 1.5rem;
+      background: var(--amber); color: var(--navy); padding: 1rem 1.5rem;
+      border-radius: 10px; font-family: 'Oswald', sans-serif; font-weight: 700; text-align: center;
+    }
+    .about-badge .big-num { font-size: 2.75rem; line-height: 1; display: block; }
+    .about-badge .small-text { font-size: 0.75rem; font-weight: 600; display: block; letter-spacing: 0.08em; }
+    .about-content h2 {
+      font-family: 'Oswald', sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 700; color: var(--white); margin-bottom: 1.5rem;
+    }
+    .about-content h2 span { color: var(--amber); }
+    .about-content p { color: var(--gray-300); line-height: 1.8; margin-bottom: 1.25rem; }
+    .about-points { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem; }
+    .about-point { display: flex; align-items: flex-start; gap: 0.85rem; font-size: 0.9rem; color: var(--gray-300); }
+    .about-point .check { color: var(--amber); font-weight: 700; flex-shrink: 0; margin-top: 0.15rem; font-size: 1rem; }
+
+    /* COVERAGE */
+    .coverage { padding: 4rem 8vw; background: var(--navy); text-align: center; }
+    .coverage-map { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2.5rem; }
+    .county-badge {
+      background: var(--navy-light); border: 1px solid rgba(245,160,10,0.2);
+      border-radius: 8px; padding: 1rem 2rem; font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem; font-weight: 600; color: var(--white);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .county-badge .dot { color: var(--amber); }
+    .coverage-note { margin-top: 1.75rem; color: var(--gray-500); font-size: 0.875rem; }
+
+    /* EMERGENCY STRIP */
+    .emergency-strip {
+      background: linear-gradient(90deg, #7f1d1d, #991b1b); padding: 1.25rem 8vw;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .emstrip-text { font-weight: 700; font-size: 1rem; color: white; display: flex; align-items: center; gap: 0.75rem; }
+    .emstrip-text .pulse { animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .emstrip-phone {
+      font-family: 'Oswald', sans-serif; font-size: 1.4rem; font-weight: 700;
+      color: white; text-decoration: none; white-space: nowrap;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+      padding: 5.5rem 8vw; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: '⚡'; position: absolute; font-size: 22rem; opacity: 0.025;
+      top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
+    }
+    .cta-section h2 {
+      font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700; color: var(--white); margin-bottom: 1rem; position: relative;
+    }
+    .cta-section p { color: var(--gray-300); font-size: 1.1rem; max-width: 480px; margin: 0 auto 2.5rem; position: relative; }
+    .cta-phone {
+      font-family: 'Oswald', sans-serif; font-size: 2.75rem; font-weight: 700;
+      color: var(--amber); text-decoration: none; display: block; margin-bottom: 1.75rem; position: relative;
+      transition: color 0.2s;
+    }
+    .cta-phone:hover { color: var(--amber-dark); }
+
+    /* CONTACT */
+    .contact {
+      background: var(--navy-mid); padding: 5rem 8vw;
+      display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;
+    }
+    .contact-info h3 {
+      font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700;
+      color: var(--white); margin-bottom: 2rem;
+    }
+    .contact-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+    .contact-item .icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .contact-item .text { color: var(--gray-300); font-size: 0.9rem; line-height: 1.6; }
+    .contact-item .text a { color: var(--amber); text-decoration: none; }
+    .contact-item .text a:hover { text-decoration: underline; }
+    .contact-item .text strong { color: var(--amber); }
+
+    .contact-form { background: var(--navy-light); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 2.5rem; }
+    .contact-form h3 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1.75rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { font-size: 0.78rem; font-weight: 600; color: var(--gray-300); letter-spacing: 0.06em; text-transform: uppercase; }
+    .form-group input, .form-group textarea, .form-group select {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px; padding: 0.75rem 1rem; color: var(--white);
+      font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--amber); }
+    .form-group select option { background: var(--navy-mid); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      background: var(--amber); color: var(--navy); border: none; padding: 1rem 2rem;
+      border-radius: 6px; font-family: 'Inter', sans-serif; font-weight: 700;
+      font-size: 1rem; cursor: pointer; width: 100%; margin-top: 0.75rem; transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--amber-dark); }
+
+    /* FOOTER */
+    footer {
+      background: #020810; padding: 2rem 8vw;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      border-top: 1px solid rgba(245,160,10,0.12); flex-wrap: wrap;
+    }
+    .footer-logo { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--gray-300); }
+    .footer-logo span { color: var(--amber); }
+    .footer-copy { font-size: 0.8rem; color: var(--gray-500); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: var(--gray-500); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--amber); }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { height: 320px; }
+      .hero-content { padding: 3rem 1.5rem; }
+      .proof-grid { grid-template-columns: repeat(2,1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card.emergency { grid-column: span 1; flex-direction: column; }
+      .about { grid-template-columns: 1fr; gap: 2rem; }
+      .contact { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; text-align: center; gap: 0.75rem; }
+      nav { padding: 1rem; }
+      .nav-links { display: none; }
+      .emergency-strip { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="bolt">⚡</span>
+    WISEMINDS ELECTRICAL
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="tel:+19547702631" class="nav-cta">Call Now: (954) 770-2631</a>
+</nav>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+  ⚡ LICENSED &amp; INSURED &nbsp;·&nbsp; TOP 5% FLORIDA CONTRACTORS &nbsp;·&nbsp; 24/7 EMERGENCY SERVICE &nbsp;·&nbsp; FREE ESTIMATES
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      ⭐ Serving South Florida Since 2010
+    </div>
+    <h1>South Florida's Trusted <span>Electricians</span> — Residential &amp; Commercial</h1>
+    <p class="hero-sub">Serving Lauderdale Lakes and all of South Florida since 2010. Licensed, insured, and available 24/7 when you need us most.</p>
+    <div class="hero-cta-group">
+      <a href="tel:+19547702631" class="btn-primary">⚡ Get Your Free Estimate</a>
+      <a href="mailto:wisemindselectric@gmail.com" class="btn-secondary">✉ Send a Message</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="number">4.6★</span>
+        <span class="label">HomeAdvisor</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number">Top 5%</span>
+        <span class="label">FL Contractors</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number">15+ Yrs</span>
+        <span class="label">Experience</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80"
+         alt="Professional electrician working on electrical panel in Lauderdale Lakes FL"
+         width="1200" height="800" loading="eager">
+  </div>
+</section>
+
+<!-- Proof Strip -->
+<section class="proof-strip">
+  <div class="proof-grid">
+    <div class="proof-card">
+      <div class="proof-icon">⭐</div>
+      <div class="proof-value">4.6/5</div>
+      <div class="proof-label">HomeAdvisor Rating</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-icon">🏆</div>
+      <div class="proof-value">Top 5%</div>
+      <div class="proof-label">Florida Licensed Contractors<br>BuildZoom Score: 108</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-icon">🛡️</div>
+      <div class="proof-value">Licensed &amp; Insured</div>
+      <div class="proof-label">Florida Licensed Electricians<br>Every Job, No Exceptions</div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-icon">📅</div>
+      <div class="proof-value">Since 2010</div>
+      <div class="proof-label">15+ Years Serving<br>South Florida</div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="section-header">
+    <p class="section-label">What We Do</p>
+    <h2 class="section-title">Everything Electrical. Done Right.</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">⚡</div>
+      <div class="service-title">Panel Upgrades &amp; Rewiring</div>
+      <p class="service-desc">Old panels cause fires and fail inspections. We upgrade safely and to code — protecting your family and your investment for the long term.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚗</div>
+      <div class="service-title">EV Charger Installation</div>
+      <p class="service-desc">Future-proof your home or business with a Level 2 EV charging station installed right by certified South Florida electricians.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏢</div>
+      <div class="service-title">Commercial Electrical &amp; Generators</div>
+      <p class="service-desc">Office buildouts, industrial projects, backup generator installs — we handle the big jobs with precision and proper permitting.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💡</div>
+      <div class="service-title">Lighting &amp; Smart Home</div>
+      <p class="service-desc">Recessed lighting, ceiling fans, outdoor lighting, and smart home wiring done clean. Upgrade your space the right way, on schedule.</p>
+    </div>
+    <div class="service-card" style="grid-column: span 2;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <div class="service-icon" style="margin-bottom: 0.5rem;">🚨</div>
+          <div class="service-title">Emergency Electrical Service — 24/7</div>
+          <p class="service-desc" style="max-width: 560px;">Available around the clock because electrical problems don't wait for business hours. Call us anytime — we respond fast and fix it right the first time.</p>
+        </div>
+        <a href="tel:+19547702631" class="emergency-cta">🚨 Call Now: (954) 770-2631</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="about-visual">
+    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
+         alt="WiseMinds Electrical Contractors team completing commercial electrical project in Broward County Florida"
+         width="800" height="600" loading="lazy">
+    <div class="about-badge">
+      <span class="big-num">15</span>
+      <span class="small-text">YEARS TRUSTED</span>
+    </div>
+  </div>
+  <div class="about-content">
+    <p class="section-label">Our Story</p>
+    <h2>15 Years <span>Powering</span> South Florida</h2>
+    <p>WiseMinds Electrical Contractors has been serving homes and businesses across Miami-Dade, Broward, and Palm Beach counties since 2010. Based in Lauderdale Lakes, FL, our licensed and insured team ranks in the top 5% of all Florida contractors by BuildZoom — because we do the work right the first time.</p>
+    <p>From a quick outlet fix to a full commercial buildout, we show up fast and get it done.</p>
+    <div class="about-points">
+      <div class="about-point">
+        <span class="check">✓</span>
+        <span>BuildZoom Score 108 — Top 5% of all Florida licensed contractors</span>
+      </div>
+      <div class="about-point">
+        <span class="check">✓</span>
+        <span>4.6/5 verified rating on HomeAdvisor</span>
+      </div>
+      <div class="about-point">
+        <span class="check">✓</span>
+        <span>Fully licensed &amp; insured on every residential and commercial job</span>
+      </div>
+      <div class="about-point">
+        <span class="check">✓</span>
+        <span>Serving Miami-Dade, Broward, and Palm Beach counties since 2010</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coverage Area -->
+<section class="coverage">
+  <p class="section-label">Service Area</p>
+  <h2 class="section-title">We Cover All of South Florida</h2>
+  <div class="coverage-map">
+    <div class="county-badge"><span class="dot">⚡</span> Miami-Dade County</div>
+    <div class="county-badge"><span class="dot">⚡</span> Broward County</div>
+    <div class="county-badge"><span class="dot">⚡</span> Palm Beach County</div>
+  </div>
+  <p class="coverage-note">Based in Lauderdale Lakes, FL — reaching every corner of South Florida</p>
+</section>
+
+<!-- Emergency Strip -->
+<div class="emergency-strip">
+  <div class="emstrip-text">
+    <span class="pulse">🚨</span>
+    <span>ELECTRICAL EMERGENCY? We respond 24/7 — same-day service available throughout South Florida</span>
+  </div>
+  <a href="tel:+19547702631" class="emstrip-phone">📞 (954) 770-2631</a>
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <p class="section-label">Get Started Today</p>
+  <h2>Ready to Get Started?</h2>
+  <p>Get a free estimate today — no pressure, no obligation. We'll respond fast.</p>
+  <a href="tel:+19547702631" class="cta-phone">(954) 770-2631</a>
+  <a href="tel:+19547702631" class="btn-primary" style="display: inline-flex; font-size: 1.05rem; padding: 1rem 2.5rem;">⚡ Call (954) 770-2631</a>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="contact-info">
+    <h3>Contact Info</h3>
+    <div class="contact-item">
+      <span class="icon">📍</span>
+      <div class="text">2709 Willow Avenue<br>Lauderdale Lakes, FL 33311</div>
+    </div>
+    <div class="contact-item">
+      <span class="icon">📞</span>
+      <div class="text"><a href="tel:+19547702631">(954) 770-2631</a></div>
+    </div>
+    <div class="contact-item">
+      <span class="icon">✉️</span>
+      <div class="text"><a href="mailto:wisemindselectric@gmail.com">wisemindselectric@gmail.com</a></div>
+    </div>
+    <div class="contact-item">
+      <span class="icon">🕐</span>
+      <div class="text">
+        Mon–Sun, 7:00 AM – 8:00 PM<br>
+        <strong>24/7 for Emergencies</strong>
+      </div>
+    </div>
+    <div class="contact-item">
+      <span class="icon">🗺️</span>
+      <div class="text">
+        Miami-Dade · Broward · Palm Beach<br>
+        All of South Florida
+      </div>
+    </div>
+  </div>
+  <div class="contact-form">
+    <h3>Get Your Free Estimate</h3>
+    <form action="https://formspree.io/f/xojppajv" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" name="first_name" placeholder="John" required>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" name="last_name" placeholder="Smith" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="(954) 555-0000" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="john@example.com" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full">
+          <label>Service Needed</label>
+          <select name="service">
+            <option value="">Select a service...</option>
+            <option>Panel Upgrade &amp; Rewiring</option>
+            <option>EV Charger Installation</option>
+            <option>Commercial Electrical</option>
+            <option>Generator Installation</option>
+            <option>Lighting &amp; Smart Home</option>
+            <option>Emergency Electrical Service</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full">
+          <label>Tell Us About Your Project</label>
+          <textarea name="message" placeholder="Describe your electrical project or issue — we'll provide a free, no-pressure estimate..."></textarea>
+        </div>
+      </div>
+      <input type="hidden" name="_replyto" value="wisemindselectric@gmail.com">
+      <button type="submit" class="form-submit">⚡ Request Free Estimate</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">⚡ <span>WiseMinds</span> Electrical Contractors</div>
+  <div class="footer-copy">© 2025 WiseMinds Electrical Contractors · Licensed &amp; Insured · Lauderdale Lakes, FL 33311</div>
+  <div class="footer-links">
+    <a href="tel:+19547702631">(954) 770-2631</a>
+    <a href="mailto:wisemindselectric@gmail.com">Email Us</a>
+  </div>
+</footer>
+
+</body>
+</html>
