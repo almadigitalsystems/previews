@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Plumbing Services | Springfield Plumbers – Same-Day Service</title>
+  <meta name="description" content="Demo Plumbing Services in Springfield offers fast, reliable plumbing repairs, drain cleaning, water heater service, and more. Licensed plumbers, same-day availability, honest pricing. Get your free quote today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #0e2044;
+      --teal: #0ea5c7;
+      --teal-light: #38bfdb;
+      --silver: #c8d8e8;
+      --white: #ffffff;
+      --off-white: #f0f6fb;
+      --gray: #6b8297;
+      --dark-gray: #1c2f42;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(10, 22, 40, 0.97);
+      backdrop-filter: blur(8px);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      border-bottom: 1px solid rgba(14,165,199,0.2);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--teal), #0077a8);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .nav-logo-text {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .nav-logo-text span { color: var(--teal-light); font-size: 0.75rem; display: block; font-weight: 500; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: var(--silver);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal-light); }
+
+    .nav-cta {
+      background: var(--teal);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--teal-light) !important; color: var(--navy) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, #0b2a4a 100%);
+      display: flex;
+      align-items: center;
+      padding: 100px 5% 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(14,165,199,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(14,165,199,0.07) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(14,165,199,0.15);
+      border: 1px solid rgba(14,165,199,0.4);
+      color: var(--teal-light);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--teal-light);
+    }
+
+    .hero-sub {
+      font-size: 1.08rem;
+      color: var(--silver);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 44px;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+      padding: 15px 30px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--teal-light); color: var(--navy); transform: translateY(-2px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 15px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 2px solid rgba(200,216,232,0.4);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: var(--teal-light); color: var(--teal-light); }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--silver);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .trust-badge .check {
+      width: 20px; height: 20px;
+      background: rgba(14,165,199,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal-light);
+      font-size: 11px;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+      display: block;
+    }
+
+    .hero-card {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 18px 22px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    }
+
+    .hero-card-label { font-size: 0.72rem; color: var(--gray); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+    .hero-card-value { font-size: 1.6rem; font-weight: 800; color: var(--navy); line-height: 1; margin: 4px 0; }
+    .hero-card-sub { font-size: 0.8rem; color: var(--teal); font-weight: 600; }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--teal);
+      padding: 28px 5%;
+    }
+
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat-item { color: var(--white); }
+    .stat-num { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-label { font-size: 0.85rem; opacity: 0.88; font-weight: 500; margin-top: 4px; }
+
+    /* ── SERVICES ── */
+    .services {
+      padding: 90px 5%;
+      background: var(--off-white);
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 560px;
+      margin-bottom: 50px;
+    }
+
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 32px 28px;
+      border: 1px solid #dce8f0;
+      transition: box-shadow 0.25s, transform 0.2s, border-color 0.25s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 16px 48px rgba(14,165,199,0.12);
+      transform: translateY(-4px);
+      border-color: var(--teal-light);
+    }
+
+    .service-icon {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, rgba(14,165,199,0.12), rgba(14,165,199,0.06));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 90px 5%;
+      background: var(--white);
+    }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 20px 60px rgba(10,22,40,0.12);
+      display: block;
+    }
+
+    .about-content { }
+
+    .about-content p {
+      font-size: 1.05rem;
+      color: #3a5068;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .feature-dot {
+      width: 8px; height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      padding: 90px 5%;
+      background: var(--navy);
+    }
+
+    .testimonials .section-title { color: var(--white); }
+    .testimonials .section-label { color: var(--teal-light); }
+    .testimonials .section-sub { color: var(--silver); }
+
+    .testimonials-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(14,165,199,0.2);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .stars { color: #fbbf24; font-size: 1rem; margin-bottom: 14px; }
+
+    .testimonial-card blockquote {
+      font-size: 0.95rem;
+      color: var(--silver);
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .reviewer { font-weight: 700; color: var(--white); font-size: 0.9rem; }
+    .reviewer-loc { font-size: 0.8rem; color: var(--teal-light); }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: linear-gradient(135deg, #0a6a8a 0%, var(--teal) 100%);
+      padding: 80px 5%;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.88);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: #0a6a8a;
+      padding: 16px 34px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      padding: 16px 30px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.6);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+    /* ── CONTACT ── */
+    .contact {
+      padding: 90px 5%;
+      background: var(--off-white);
+    }
+
+    .contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .contact-info p {
+      color: var(--gray);
+      margin-bottom: 30px;
+      font-size: 0.97rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .contact-detail-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, rgba(14,165,199,0.15), rgba(14,165,199,0.06));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-detail-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--gray);
+    }
+
+    .contact-detail-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-top: 2px;
+    }
+
+    .contact-detail-value a {
+      color: var(--navy);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-detail-value a:hover { color: var(--teal); }
+
+    .contact-form {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 36px;
+      box-shadow: 0 8px 32px rgba(10,22,40,0.08);
+    }
+
+    .contact-form h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 22px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #d0dce8;
+      border-radius: 7px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--navy);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--teal); }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--teal);
+      color: var(--white);
+      padding: 14px;
+      border: none;
+      border-radius: 7px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 6px;
+    }
+
+    .form-submit:hover { background: var(--teal-light); color: var(--navy); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 50px 5% 28px;
+      color: var(--silver);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin: 12px 0 20px;
+      line-height: 1.65;
+    }
+
+    .footer-phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--teal-light);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-col ul li a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--teal-light); }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--gray);
+    }
+
+    /* ── ALMA DIGITAL PREVIEW BANNER ── */
+    .preview-banner {
+      background: linear-gradient(90deg, #1a1a2e, #0e2044);
+      border-top: 2px solid #00b4d8;
+      padding: 14px 5%;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #e0e0e0;
+    }
+
+    .preview-banner strong { color: #00b4d8; }
+
+    .preview-banner a {
+      color: #00b4d8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner, .about-inner, .contact-inner { grid-template-columns: 1fr; }
+      .hero-image-wrap { order: -1; }
+      .hero-img, .about-img { height: 300px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .nav-links { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 580px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon">🔧</div>
+      <div class="nav-logo-text">
+        Demo Plumbing Services
+        <span>Licensed &amp; Insured · Springfield</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+14175550100" class="nav-cta">Call Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">
+          <span>⚡</span> Springfield's Most Trusted Plumbers
+        </div>
+        <h1>Springfield's Trusted Plumbers — <em>Fast, Clean, and Done Right</em> the First Time</h1>
+        <p class="hero-sub">From leaky faucets to full pipe replacements, Demo Plumbing Services gets the job done same day. No mess, no guesswork — just reliable plumbing you can count on.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            Get Your Free Quote Today →
+          </a>
+          <a href="#contact" class="btn-secondary">
+            See Your Website Preview
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-badge"><div class="check">✓</div> Licensed &amp; Insured</div>
+          <div class="trust-badge"><div class="check">✓</div> Same-Day Available</div>
+          <div class="trust-badge"><div class="check">✓</div> 24/7 Emergencies</div>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+          alt="Licensed plumber fixing pipes in Springfield home"
+          width="800"
+          height="460"
+          loading="eager"
+          class="hero-img"
+        />
+        <div class="hero-card">
+          <div class="hero-card-label">Response Time</div>
+          <div class="hero-card-value">Same Day</div>
+          <div class="hero-card-sub">⚡ Emergency calls 24/7</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Jobs Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Emergency Service</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Licensed &amp; Insured</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5★</div>
+        <div class="stat-label">Google Rated</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Complete Plumbing Services<br>for Springfield Homes &amp; Businesses</h2>
+      <p class="section-sub">Fast, reliable, and done right — our licensed plumbers handle every job from simple repairs to full replacements.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚨</div>
+          <h3>Emergency Plumbing Repairs</h3>
+          <p>Available 24/7 when you need us most. Burst pipes, flooding, no hot water — we respond fast and fix it right.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌀</div>
+          <h3>Drain Cleaning &amp; Unclogging</h3>
+          <p>Fast solutions for slow or blocked drains. We clear kitchen, bathroom, and floor drains quickly and completely.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔥</div>
+          <h3>Water Heater Installation &amp; Repair</h3>
+          <p>Hot water restored today. We install, repair, and replace all makes and models — traditional and tankless.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔩</div>
+          <h3>Pipe Repair &amp; Replacement</h3>
+          <p>Leaks fixed before they become disasters. We diagnose and repair pipes efficiently with minimal disruption to your home.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Bathroom &amp; Kitchen Plumbing</h3>
+          <p>Installations and upgrades done right. Faucets, fixtures, sinks, toilets, garbage disposals — we handle it all.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💧</div>
+          <h3>Leak Detection &amp; Prevention</h3>
+          <p>Stop small problems before they become big bills. Our experts pinpoint hidden leaks and get them fixed fast.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80"
+          alt="Demo Plumbing Services team working in Springfield"
+          width="800"
+          height="440"
+          loading="lazy"
+          class="about-img"
+        />
+      </div>
+      <div class="about-content">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Springfield's Plumbers You Can Actually Count On</h2>
+        <p>Demo Plumbing Services has been serving Springfield homeowners and businesses for years, building a reputation for honest pricing, punctual service, and work that holds up.</p>
+        <p>Our licensed plumbers show up on time, treat your home with respect, and never leave until the job is done right. When Springfield has a plumbing problem, Demo Plumbing is the first call.</p>
+        <div class="about-features">
+          <div class="feature-row"><span class="feature-dot"></span> Fully licensed and insured plumbers</div>
+          <div class="feature-row"><span class="feature-dot"></span> Honest, upfront pricing — no surprises</div>
+          <div class="feature-row"><span class="feature-dot"></span> Same-day service, 24/7 emergency response</div>
+          <div class="feature-row"><span class="feature-dot"></span> We treat your home like our own</div>
+          <div class="feature-row"><span class="feature-dot"></span> Work backed by our satisfaction guarantee</div>
+        </div>
+        <a href="#contact" class="btn-primary">Get Your Free Quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-label">What Springfield Says</div>
+      <h2 class="section-title">Trusted by Homeowners &amp; Businesses Across Springfield</h2>
+      <p class="section-sub" style="margin-bottom:48px;">Real stories from real customers who called Demo Plumbing first.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"They came out within 2 hours of my emergency call and fixed our burst pipe before it did serious damage. Incredibly professional and the pricing was fair. Will absolutely call them again."</blockquote>
+          <div class="reviewer">Mark T.</div>
+          <div class="reviewer-loc">Springfield Homeowner</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I've tried other plumbers in Springfield and nobody compares. Demo Plumbing showed up on time, explained everything clearly, and left my bathroom spotless. Five stars without hesitation."</blockquote>
+          <div class="reviewer">Sarah L.</div>
+          <div class="reviewer-loc">Springfield, Local Business Owner</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"They replaced our water heater same day — installed and running before dinner. No mess, no hassle, and the price was exactly what they quoted. Highly recommend to anyone in Springfield."</blockquote>
+          <div class="reviewer">James K.</div>
+          <div class="reviewer-loc">Springfield Resident</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Ready to Fix Your Plumbing Problem Today?</h2>
+    <p>No mess, no guesswork — just reliable Springfield plumbers who get it done right the first time. Get your free quote now.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn-white">Get Your Free Quote Today</a>
+      <a href="#contact" class="btn-outline-white">See Your Website Preview — No Payment Required</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title" style="margin-bottom:8px;">Call Us or Request a Free Quote</h2>
+      <p style="color:var(--gray);margin-bottom:50px;">Available same day. Emergency line open 24/7.</p>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-info">
+        <h3>Demo Plumbing Services</h3>
+        <p>Serving Springfield and surrounding areas. We respond fast, price fairly, and stand behind our work.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div>
+            <div class="contact-detail-label">Call or Text</div>
+            <div class="contact-detail-value"><a href="tel:+14175550100">(417) 555-0100</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div>
+            <div class="contact-detail-label">Email Us</div>
+            <div class="contact-detail-value"><a href="mailto:info@demoplumbing.com">info@demoplumbing.com</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <div class="contact-detail-label">Service Area</div>
+            <div class="contact-detail-value">Springfield &amp; Surrounding Areas</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div>
+            <div class="contact-detail-label">Hours</div>
+            <div class="contact-detail-value">Mon–Sat 7am–7pm · Emergency 24/7</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Request Your Free Quote</h3>
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <input type="hidden" name="_subject" value="New Quote Request — Demo Plumbing Services" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="first_name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(417) 555-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option>Emergency Plumbing Repair</option>
+              <option>Drain Cleaning &amp; Unclogging</option>
+              <option>Water Heater Installation/Repair</option>
+              <option>Pipe Repair &amp; Replacement</option>
+              <option>Bathroom &amp; Kitchen Plumbing</option>
+              <option>Leak Detection</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Describe Your Issue</label>
+            <textarea id="message" name="message" placeholder="Tell us what's going on and we'll get back to you quickly…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send My Free Quote Request →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,#0ea5c7,#0077a8);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">🔧</div>
+          <span style="color:#fff;font-weight:700;font-size:1.05rem;">Demo Plumbing Services</span>
+        </div>
+        <p>Springfield's trusted plumbers for reliable repairs, drain cleaning, water heaters, and more. Licensed, insured, same-day available.</p>
+        <a href="tel:+14175550100" class="footer-phone-link">📞 (417) 555-0100</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Emergency Repairs</a></li>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heaters</a></li>
+          <li><a href="#services">Pipe Repair</a></li>
+          <li><a href="#services">Bathroom &amp; Kitchen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+14175550100">(417) 555-0100</a></li>
+          <li><a href="mailto:info@demoplumbing.com">info@demoplumbing.com</a></li>
+          <li><a href="#contact">Get a Free Quote</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Demo Plumbing Services · Springfield · All Rights Reserved</span>
+      <span>Licensed &amp; Insured · Same-Day Service</span>
+    </div>
+  </footer>
+
+  <!-- Preview Banner -->
+  <div class="preview-banner">
+    <strong>This is a free website preview</strong> created by <strong>Alma Digital Services</strong> for Demo Plumbing Services.
+    <a href="mailto:hello@almadigitalservices.com">Claim your free redesign today →</a>
+  </div>
+
+</body>
+</html>
