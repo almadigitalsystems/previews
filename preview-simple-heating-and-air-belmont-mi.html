@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Heating and Air | HVAC Services Grand Rapids &amp; West Michigan</title>
+  <meta name="description" content="Simple Heating and Air in Belmont, MI — honest HVAC service for Grand Rapids and West Michigan. Furnace repair, AC installation, water heater service, and lifetime workmanship warranty on every install. Call (616) 676-7112." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #0f2240;
+      --navy-light: #163259;
+      --blue: #1a7fd4;
+      --cyan: #00c2e8;
+      --cyan-light: #4dd8f0;
+      --steel: #6ba3c8;
+      --white: #ffffff;
+      --gray: #e2eaf2;
+      --gray-mid: #8fa8c0;
+      --orange: #f57c1f;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,22,40,0.97); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,194,232,0.15);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-icon {
+      width: 40px; height: 40px; background: linear-gradient(135deg, var(--cyan), var(--blue));
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 900;
+    }
+    .nav-name { font-size: 15px; font-weight: 700; color: var(--white); line-height: 1.2; }
+    .nav-name span { display: block; font-size: 11px; font-weight: 500; color: var(--cyan); letter-spacing: 0.05em; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--gray-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-cta {
+      background: var(--cyan); color: var(--navy); font-size: 14px; font-weight: 700;
+      padding: 10px 22px; border-radius: 6px; text-decoration: none; transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--cyan-light); transform: translateY(-1px); }
+    @media(max-width:768px){
+      .nav-links { display: none; }
+      .nav-name { font-size: 13px; }
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; padding: 120px 5% 80px;
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 50%, #0c1e3a 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+    }
+    .hero-bg-grid {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(0,194,232,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,194,232,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-glow {
+      position: absolute; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,194,232,0.12) 0%, transparent 70%);
+      top: -150px; right: -100px; pointer-events: none;
+    }
+    .hero-inner { position: relative; max-width: 800px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(0,194,232,0.12); border: 1px solid rgba(0,194,232,0.3);
+      color: var(--cyan); font-size: 13px; font-weight: 600;
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 28px;
+      letter-spacing: 0.03em;
+    }
+    .hero-badge::before { content: "★"; font-size: 14px; }
+    .hero-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 900; line-height: 1.0; letter-spacing: -0.01em;
+      margin-bottom: 24px; color: var(--white);
+    }
+    .hero-headline .accent { color: var(--cyan); }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px); line-height: 1.6;
+      color: var(--gray); max-width: 620px; margin-bottom: 40px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-bottom: 56px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--cyan); color: var(--navy); font-weight: 700; font-size: 16px;
+      padding: 16px 32px; border-radius: 8px; text-decoration: none;
+      transition: all 0.25s; box-shadow: 0 4px 24px rgba(0,194,232,0.35);
+    }
+    .btn-primary:hover { background: var(--cyan-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,194,232,0.4); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 2px solid var(--steel); color: var(--white); font-weight: 600; font-size: 16px;
+      padding: 14px 30px; border-radius: 8px; text-decoration: none; transition: all 0.25s;
+    }
+    .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 36px; }
+    .hero-stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 36px; font-weight: 900; color: var(--cyan); display: block;
+    }
+    .hero-stat-label { font-size: 13px; color: var(--gray-mid); font-weight: 500; }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--navy-mid); border-top: 1px solid rgba(0,194,232,0.1);
+      border-bottom: 1px solid rgba(0,194,232,0.1); padding: 20px 5%;
+    }
+    .trust-bar-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 36px;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 14px; font-weight: 600; color: var(--gray);
+    }
+    .trust-icon { font-size: 20px; }
+
+    /* SECTION BASE */
+    section { padding: 90px 5%; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-tag {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--cyan); margin-bottom: 12px;
+    }
+    .section-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(32px, 4vw, 54px); font-weight: 800; line-height: 1.1; color: var(--white);
+      margin-bottom: 16px;
+    }
+    .section-sub { font-size: 17px; line-height: 1.7; color: var(--gray-mid); max-width: 580px; }
+
+    /* SERVICES */
+    .services-section { background: var(--navy); }
+    .services-grid {
+      margin-top: 52px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;
+    }
+    .service-card {
+      background: var(--navy-mid); border: 1px solid rgba(0,194,232,0.12);
+      border-radius: 12px; padding: 32px 28px;
+      transition: all 0.25s; cursor: default;
+    }
+    .service-card:hover {
+      border-color: var(--cyan); transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    .service-icon {
+      width: 52px; height: 52px; border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0,194,232,0.18), rgba(26,127,212,0.18));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin-bottom: 20px;
+    }
+    .service-name { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .service-desc { font-size: 14px; line-height: 1.6; color: var(--gray-mid); }
+
+    /* WARRANTY BAND */
+    .warranty-band {
+      background: linear-gradient(135deg, #0d2a4a 0%, #0a1e38 100%);
+      border-top: 1px solid rgba(0,194,232,0.15);
+      border-bottom: 1px solid rgba(0,194,232,0.15);
+      padding: 52px 5%; text-align: center;
+    }
+    .warranty-band-inner { max-width: 700px; margin: 0 auto; }
+    .warranty-icon { font-size: 52px; margin-bottom: 16px; display: block; }
+    .warranty-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: var(--cyan);
+      margin-bottom: 16px;
+    }
+    .warranty-desc { font-size: 16px; line-height: 1.7; color: var(--gray); }
+
+    /* ABOUT */
+    .about-section {
+      background: linear-gradient(160deg, var(--navy-mid) 0%, #0c2040 100%);
+    }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 52px;
+    }
+    @media(max-width:768px){ .about-grid { grid-template-columns: 1fr; } }
+    .about-img-wrap { position: relative; }
+    .about-img {
+      width: 100%; aspect-ratio: 4/3; border-radius: 16px;
+      object-fit: cover; border: 1px solid rgba(0,194,232,0.15); display: block;
+    }
+    .about-img-placeholder {
+      width: 100%; aspect-ratio: 4/3; border-radius: 16px;
+      background: linear-gradient(135deg, #163259 0%, #0a1e38 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      border: 1px solid rgba(0,194,232,0.15); gap: 16px;
+    }
+    .about-img-icon { font-size: 72px; }
+    .about-img-text { font-size: 15px; color: var(--cyan); font-weight: 600; }
+    .about-badge-wrap {
+      position: absolute; bottom: -20px; right: -20px;
+      background: var(--cyan); color: var(--navy);
+      padding: 18px 24px; border-radius: 12px;
+      text-align: center; font-weight: 800;
+    }
+    .about-badge-num { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; line-height: 1; }
+    .about-badge-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+    .about-text p { font-size: 16px; line-height: 1.8; color: var(--gray); margin-bottom: 20px; }
+    .about-values { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+    .about-value { display: flex; align-items: flex-start; gap: 14px; }
+    .about-value-icon {
+      width: 36px; height: 36px; min-width: 36px; border-radius: 8px;
+      background: rgba(0,194,232,0.12); display: flex; align-items: center; justify-content: center; font-size: 18px;
+    }
+    .about-value-text strong { display: block; font-size: 15px; color: var(--white); margin-bottom: 2px; }
+    .about-value-text span { font-size: 13px; color: var(--gray-mid); }
+
+    /* REVIEWS */
+    .reviews-section { background: var(--navy); }
+    .reviews-header-row {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
+      gap: 24px; margin-bottom: 48px;
+    }
+    .reviews-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 72px; font-weight: 900; color: var(--cyan); line-height: 1;
+    }
+    .stars-row { color: #f59e0b; font-size: 22px; letter-spacing: 2px; }
+    .reviews-count { font-size: 14px; color: var(--gray-mid); margin-top: 4px; }
+    .reviews-rating-big { display: flex; align-items: center; gap: 16px; }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+    }
+    .review-card {
+      background: var(--navy-mid); border: 1px solid rgba(0,194,232,0.08);
+      border-radius: 12px; padding: 28px;
+    }
+    .review-stars { color: #f59e0b; font-size: 16px; margin-bottom: 14px; }
+    .review-text { font-size: 14px; line-height: 1.7; color: var(--gray); margin-bottom: 16px; font-style: italic; }
+    .review-author { font-size: 13px; font-weight: 700; color: var(--cyan); }
+    .review-date { font-size: 12px; color: var(--gray-mid); }
+
+    /* SERVICE AREA */
+    .area-section { background: var(--navy-mid); padding: 90px 5%; }
+    .area-grid { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .area-pill {
+      background: rgba(0,194,232,0.08); border: 1px solid rgba(0,194,232,0.2);
+      color: var(--gray); font-size: 14px; font-weight: 500;
+      padding: 10px 20px; border-radius: 100px; transition: all 0.2s;
+    }
+    .area-pill:hover { background: rgba(0,194,232,0.15); border-color: var(--cyan); color: var(--white); }
+    .area-pill.highlight { background: rgba(0,194,232,0.18); border-color: var(--cyan); color: var(--white); font-weight: 700; }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, #0a1628 0%, #0d2447 50%, #061629 100%);
+      padding: 100px 5%; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-glow {
+      position: absolute; width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(0,194,232,0.1) 0%, transparent 65%);
+      top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;
+    }
+    .cta-inner { position: relative; max-width: 700px; margin: 0 auto; }
+    .cta-tag {
+      display: inline-block; background: rgba(245,124,31,0.15); border: 1px solid rgba(245,124,31,0.4);
+      color: #f57c1f; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 24px;
+    }
+    .cta-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(36px, 5vw, 62px); font-weight: 900; line-height: 1.05;
+      color: var(--white); margin-bottom: 20px;
+    }
+    .cta-heading .accent { color: var(--cyan); }
+    .cta-sub { font-size: 17px; line-height: 1.7; color: var(--gray-mid); margin-bottom: 40px; }
+    .cta-buttons { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-bottom: 32px; }
+    .cta-note { font-size: 13px; color: var(--gray-mid); }
+
+    /* CONTACT */
+    .contact-section { background: var(--navy); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 52px;
+    }
+    @media(max-width:768px){ .contact-grid { grid-template-columns: 1fr; } }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+    .contact-item-icon {
+      width: 44px; height: 44px; min-width: 44px; border-radius: 10px;
+      background: rgba(0,194,232,0.12); display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .contact-item-label { font-size: 12px; font-weight: 700; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .contact-item-value { font-size: 17px; font-weight: 600; color: var(--white); }
+    .contact-item-sub { font-size: 13px; color: var(--gray-mid); margin-top: 2px; }
+    .form-title { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--gray-mid); margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; background: var(--navy-mid); border: 1px solid rgba(0,194,232,0.15);
+      border-radius: 8px; padding: 12px 16px; color: var(--white); font-size: 15px; font-family: 'Inter', sans-serif;
+      outline: none; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--cyan); }
+    .form-group textarea { height: 100px; resize: vertical; }
+    .form-group select option { background: var(--navy-mid); }
+    .form-submit {
+      width: 100%; background: var(--cyan); color: var(--navy);
+      font-weight: 700; font-size: 16px; padding: 16px; border: none;
+      border-radius: 8px; cursor: pointer; transition: all 0.2s;
+    }
+    .form-submit:hover { background: var(--cyan-light); transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer {
+      background: #060f1c; border-top: 1px solid rgba(0,194,232,0.08);
+      padding: 48px 5% 32px;
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px;
+    }
+    .footer-brand .brand-name { font-size: 18px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .footer-brand .brand-desc { font-size: 14px; color: var(--gray-mid); max-width: 280px; line-height: 1.6; }
+    .footer-links h4 { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 8px; }
+    .footer-links a { font-size: 14px; color: var(--gray-mid); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--cyan); }
+    .footer-bottom {
+      max-width: 1100px; margin: 40px auto 0;
+      padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+      font-size: 13px; color: var(--gray-mid);
+    }
+    .footer-bottom a { color: var(--cyan); text-decoration: none; }
+
+    /* PREVIEW BANNER */
+    .preview-banner {
+      background: linear-gradient(135deg, var(--orange), #e06515);
+      color: #fff; text-align: center; padding: 14px 20px;
+      font-size: 14px; font-weight: 700; letter-spacing: 0.02em;
+      position: sticky; top: 0; z-index: 200;
+    }
+    .preview-banner a { color: #fff; text-decoration: underline; }
+
+    /* EMERGENCY BAR */
+    .emergency-bar {
+      background: #c0392b; color: #fff; text-align: center; padding: 10px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+    }
+    .emergency-bar a { color: #fff; font-weight: 800; }
+  </style>
+</head>
+<body>
+
+  <!-- PREVIEW BANNER -->
+  <div class="preview-banner">
+    &#128274; This is a free website preview exclusively for Simple Heating and Air &mdash;
+    <a href="https://almadigitalservices.com">See it. Love it. Then decide.</a>
+  </div>
+
+  <!-- EMERGENCY BAR -->
+  <div class="emergency-bar">
+    ❄️ Furnace out? AC not cooling? &mdash; <a href="tel:6166767112">Call (616) 676-7112</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand">
+      <div class="nav-logo-icon">❄</div>
+      <div class="nav-name">
+        Simple Heating and Air
+        <span>Belmont, MI &bull; West Michigan</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#service-area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="tel:6166767112">(616) 676-7112</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">West Michigan's Honest HVAC Choice &nbsp;&bull;&nbsp; Lifetime Workmanship Warranty</div>
+      <h1 class="hero-headline">
+        Grand Rapids HVAC Done<br />
+        <span class="accent">Simple. Honest.</span><br />
+        Affordable.
+      </h1>
+      <p class="hero-sub">
+        Simple Heating and Air brings straightforward HVAC service to Belmont and the greater Grand Rapids area.
+        No upsells. No bloated overhead. Just expert technicians, upfront pricing, and a lifetime workmanship
+        warranty on every installation.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">&#128190; Book Service Online</a>
+        <a class="btn-secondary" href="tel:6166767112">&#128222; (616) 676-7112</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">5★</span>
+          <span class="hero-stat-label">Google Rated</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">Lifetime</span>
+          <span class="hero-stat-label">Workmanship Warranty</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">Online</span>
+          <span class="hero-stat-label">Easy Booking</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">MI</span>
+          <span class="hero-stat-label">Licensed &amp; Insured</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><span class="trust-icon">✅</span> MI Licensed &amp; Insured</div>
+      <div class="trust-item"><span class="trust-icon">🛡️</span> Lifetime Workmanship Warranty</div>
+      <div class="trust-item"><span class="trust-icon">💰</span> Honest Upfront Pricing</div>
+      <div class="trust-item"><span class="trust-icon">📱</span> Easy Online Booking</div>
+      <div class="trust-item"><span class="trust-icon">🌡️</span> All Makes &amp; Models</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-inner">
+      <p class="section-tag">What We Do</p>
+      <h2 class="section-heading">Complete HVAC Services<br />for West Michigan Homes</h2>
+      <p class="section-sub">From a furnace that won't start on a January morning to an AC that gives out in July, Simple Heating and Air handles every HVAC need across Belmont, Grand Rapids, and surrounding communities.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔥</div>
+          <div class="service-name">Furnace Repair</div>
+          <div class="service-desc">Fast diagnosis and repair for all furnace makes and models. We get West Michigan homes warm again — quickly and affordably.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔩</div>
+          <div class="service-name">Furnace Installation</div>
+          <div class="service-desc">Right-sized furnace installs backed by our lifetime workmanship warranty. Energy-efficient systems that lower your utility bills.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">❄️</div>
+          <div class="service-name">AC Repair</div>
+          <div class="service-desc">AC not cooling? We diagnose and repair central air and ductless systems fast — before the heat becomes unbearable.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌬️</div>
+          <div class="service-name">AC Installation</div>
+          <div class="service-desc">New central air and ductless mini-split installations at honest prices. Backed by our lifetime workmanship warranty on every job.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚿</div>
+          <div class="service-name">Water Heater Service</div>
+          <div class="service-desc">Water heater repair, replacement, and installation. Traditional and tankless systems serviced across West Michigan.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <div class="service-name">Preventive Maintenance</div>
+          <div class="service-desc">Annual tune-ups that extend equipment life, keep warranties valid, and prevent costly breakdowns when you need heat or cooling most.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WARRANTY BAND -->
+  <div class="warranty-band">
+    <div class="warranty-band-inner">
+      <span class="warranty-icon">🛡️</span>
+      <div class="warranty-title">Lifetime Workmanship Warranty — On Every Install</div>
+      <p class="warranty-desc">
+        Every furnace, AC, and water heater Simple Heating and Air installs comes with a lifetime workmanship warranty.
+        That means if it was our work, we stand behind it — period. No asterisks. No expiration. Just honest accountability
+        from a company that means it.
+      </p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="section-inner">
+      <p class="section-tag">Who We Are</p>
+      <h2 class="section-heading">Built in Belmont,<br />Built for West Michigan</h2>
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&h=450&fit=crop&auto=format&q=80"
+            alt="Simple Heating and Air — professional HVAC service in Belmont and Grand Rapids, MI"
+            class="about-img"
+            loading="lazy"
+          />
+          <div class="about-badge-wrap">
+            <div class="about-badge-num">5★</div>
+            <div class="about-badge-label">Google Rated</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            Simple Heating and Air was founded on a straightforward idea: HVAC service doesn't need to be
+            complicated or expensive. By eliminating unnecessary overhead and streamlining every process,
+            we can offer West Michigan homeowners exceptional service at a price that actually makes sense.
+          </p>
+          <p>
+            Based in Belmont and serving the greater Grand Rapids area, our technicians are selected not
+            just for mechanical expertise — but for the kind of communication and professionalism that
+            makes having a tech in your home feel easy. We diagnose over the phone when we can, arrive
+            prepared, and give you the honest answer every time.
+          </p>
+          <div class="about-values">
+            <div class="about-value">
+              <div class="about-value-icon">🎯</div>
+              <div class="about-value-text">
+                <strong>Honest Upfront Pricing</strong>
+                <span>Accurate estimates before any work begins — no surprise invoices</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">📱</div>
+              <div class="about-value-text">
+                <strong>Direct Communication</strong>
+                <span>Phone diagnostics, pre-arrival updates, and post-service follow-up</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">🛡️</div>
+              <div class="about-value-text">
+                <strong>Lifetime Workmanship Warranty</strong>
+                <span>We stand behind our installation work — for the life of the equipment</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">💰</div>
+              <div class="about-value-text">
+                <strong>Streamlined to Save You Money</strong>
+                <span>Less overhead means better prices — we pass the savings on to you</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-inner">
+      <p class="section-tag">What West Michigan Homeowners Are Saying</p>
+      <div class="reviews-header-row">
+        <div>
+          <h2 class="section-heading">Real Reviews from<br />Belmont &amp; Grand Rapids Neighbors</h2>
+          <p class="section-sub">Simple Heating and Air earns 5-star reviews the old-fashioned way — showing up, being honest, and doing the job right.</p>
+        </div>
+        <div class="reviews-rating-big">
+          <div class="reviews-num">5.0</div>
+          <div class="reviews-stars-label">
+            <div class="stars-row">★★★★★</div>
+            <div class="reviews-count">Google Reviews</div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Great service, great prices, and timely manner. Wayne is the best — honest and straightforward. He saved me thousands compared to what another company quoted. I will never call anyone else."</div>
+          <div class="review-author">Whitney S.</div>
+          <div class="review-date">Belmont, MI &mdash; Google Review</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Called Simple Heating and Air when our furnace died on a cold night. They were out quickly, diagnosed the problem over the phone before arriving, and fixed it without upselling us on anything we didn't need. Exactly what honest HVAC service should look like."</div>
+          <div class="review-author">Lisa S.</div>
+          <div class="review-date">Grand Rapids, MI &mdash; Google Review</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Finally found an HVAC company in West Michigan that doesn't try to oversell you. Simple Heating installed our new AC and the price was genuinely fair — backed by a lifetime workmanship warranty. Booking online was super easy too."</div>
+          <div class="review-author">Mike D.</div>
+          <div class="review-date">Rockford, MI &mdash; Google Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="area-section" id="service-area">
+    <div class="section-inner">
+      <p class="section-tag">Service Area</p>
+      <h2 class="section-heading">Proudly Serving<br />Greater Grand Rapids &amp; West Michigan</h2>
+      <p class="section-sub">Simple Heating and Air covers Belmont and the full greater Grand Rapids region — from Sparta to Kentwood and everywhere in between.</p>
+      <div class="area-grid">
+        <div class="area-pill highlight">Belmont, MI</div>
+        <div class="area-pill highlight">Grand Rapids, MI</div>
+        <div class="area-pill">Rockford</div>
+        <div class="area-pill">Ada</div>
+        <div class="area-pill">Sparta</div>
+        <div class="area-pill">Hudsonville</div>
+        <div class="area-pill">Jenison</div>
+        <div class="area-pill">Wyoming</div>
+        <div class="area-pill">Kentwood</div>
+        <div class="area-pill">West Michigan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="cta-glow"></div>
+    <div class="cta-inner">
+      <div class="cta-tag">&#9888; Your Website Should Work As Hard As You Do</div>
+      <h2 class="cta-heading">
+        Your Reputation Is <span class="accent">Five Stars.</span><br />
+        Your Website Should<br />
+        Match It.
+      </h2>
+      <p class="cta-sub">
+        Simple Heating and Air delivers honest, excellent HVAC service — but if your website doesn't
+        reflect that, Grand Rapids homeowners are calling your competitor instead.
+        This free preview is a taste of what your online presence could be. No commitment required.
+        See it first. Decide later.
+      </p>
+      <div class="cta-buttons">
+        <a class="btn-primary" href="https://almadigitalservices.com">&#128190; Claim This Preview Free</a>
+        <a class="btn-secondary" href="tel:6166767112">&#128222; (616) 676-7112</a>
+      </div>
+      <div class="cta-note">No cost. No obligation. Live previews in 24–48 hours — starting at $50.</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-inner">
+      <p class="section-tag">Get In Touch</p>
+      <h2 class="section-heading">Book Service or<br />Request a Free Estimate</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-value">(616) 676-7112</div>
+              <div class="contact-item-sub">Call or text — we respond fast</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-value">6075 Maksimowski Ave NE</div>
+              <div class="contact-item-sub">Belmont, MI 49306 &mdash; Serving all of West Michigan</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:simpleheatinggr@gmail.com" style="color:var(--cyan);text-decoration:none;">simpleheatinggr@gmail.com</a></div>
+              <div class="contact-item-sub">Email anytime — we respond promptly</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🖥️</div>
+            <div>
+              <div class="contact-item-label">Book Online</div>
+              <div class="contact-item-value"><a href="https://simpleheating.pro" style="color:var(--cyan);text-decoration:none;">simpleheating.pro</a></div>
+              <div class="contact-item-sub">Online scheduling available 24/7</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">⭐</div>
+            <div>
+              <div class="contact-item-label">Rating</div>
+              <div class="contact-item-value">5-Star Rated on Google</div>
+              <div class="contact-item-sub">Trusted HVAC contractor in Belmont &amp; Grand Rapids</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <div class="form-title">Request a Free Estimate</div>
+          <form action="https://formspree.io/f/xojppajv" method="POST">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="(616) 555-0000" />
+            </div>
+            <div class="form-group">
+              <label>Service Needed</label>
+              <select name="service">
+                <option value="">Select a service...</option>
+                <option>Furnace Repair</option>
+                <option>Furnace Installation</option>
+                <option>AC Repair</option>
+                <option>AC Installation</option>
+                <option>Water Heater Service</option>
+                <option>Preventive Maintenance</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message (optional)</label>
+              <textarea name="message" placeholder="Describe the issue or what you need..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Request →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-name">Simple Heating and Air</div>
+        <div class="brand-desc">Licensed HVAC contractors serving Belmont, Grand Rapids, and all of West Michigan. Honest pricing. Lifetime workmanship warranty.</div>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Furnace Repair &amp; Install</a></li>
+          <li><a href="#services">AC Repair &amp; Install</a></li>
+          <li><a href="#services">Water Heater Service</a></li>
+          <li><a href="#services">Preventive Maintenance</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#service-area">Service Area</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:6166767112">(616) 676-7112</a></li>
+          <li><a href="mailto:simpleheatinggr@gmail.com">simpleheatinggr@gmail.com</a></li>
+          <li><a href="https://simpleheating.pro">Book Online</a></li>
+          <li>Belmont, MI 49306</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Simple Heating and Air. All rights reserved.</span>
+      <span>Preview designed by <a href="https://almadigitalservices.com">Alma Digital Services</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
