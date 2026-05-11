@@ -190,7 +190,15 @@
       .hero-btns { flex-direction: column; }
       .guarantee-items { flex-direction: column; align-items: center; }
     }
-  </style>
+  
+/* DT-013 fix: SVG icon sizing */
+.svc-icon svg,.sc-icon svg,.svc-ico svg{width:1.8rem;height:1.8rem;display:block;}
+.svc-h-icon svg{width:1.5rem;height:1.5rem;}
+.cicon svg,.ct-ic svg,.ci-icon svg{width:22px;height:22px;stroke:#fff;}
+.ico svg{width:1.3rem;height:1.3rem;}
+.btn-icon{width:1em;height:1em;display:inline-block;vertical-align:middle;margin-right:4px;}
+.nav-cta svg,.nav-call svg,.btn-main svg,.btn-pri svg,.btn-p svg,.btn-b svg,.emerg-phone svg{width:1em;height:1em;display:inline-block;vertical-align:middle;margin-right:4px;}
+</style>
 </head>
 <body>
 
@@ -200,19 +208,19 @@
 
 <nav>
   <a href="#" class="logo">Spokane <span>Air Conditioning</span> Repair Service</a>
-  <a href="tel:+15092105515" class="nav-call">📞 (509) 210-5515</a>
+  <a href="tel:+15092105515" class="nav-call"><svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6Z"/></svg> (509) 210-5515</a>
 </nav>
 
 <!-- STORY HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="announce">🔧 Professional HVAC Service · Spokane, WA</div>
+      <div class="announce"><svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"/></svg> Professional HVAC Service · Spokane, WA</div>
       <h1>Expert AC &amp; Heating Repair.<br><span class="hi">Spokane's</span> New Standard.</h1>
       <p class="story">We're <strong>Spokane Air Conditioning Repair Service</strong> — a dedicated HVAC company built on one principle: every customer deserves fast, honest, and professional service. No excuses. No shortcuts.</p>
       <p class="story">We repair, install, and maintain heating and cooling systems throughout the Spokane area — and we stand behind every job we do, guaranteed.</p>
       <div class="hero-btns">
-        <a href="tel:+15092105515" class="btn-p">📞 (509) 210-5515</a>
+        <a href="tel:+15092105515" class="btn-p"><svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6Z"/></svg> (509) 210-5515</a>
         <a href="#contact" class="btn-s">Get Free Estimate →</a>
       </div>
       <div class="commitment-box">
@@ -242,18 +250,18 @@
     <p>From emergency AC repair on a Spokane summer afternoon to heating installations before the first frost — we handle it all.</p>
   </div>
   <div class="svc-grid">
-    <div class="svc-card"><span class="svc-ico">❄️</span><h3>AC Repair &amp; Service</h3><p>Fast, accurate diagnosis and repair of all air conditioning systems. We fix it right and we fix it fast — especially when Spokane summers hit hard.</p></div>
-    <div class="svc-card"><span class="svc-ico">🔥</span><h3>Heating Repair</h3><p>Furnace, heat pump, and boiler repairs when you need them most. We respond quickly to keep your home warm through Spokane's coldest months.</p></div>
-    <div class="svc-card"><span class="svc-ico">🏗️</span><h3>New HVAC Installation</h3><p>Complete system installations — we help you choose the right equipment for your home, then install it to manufacturer spec for maximum efficiency and lifespan.</p></div>
-    <div class="svc-card"><span class="svc-ico">🔧</span><h3>Tune-Ups &amp; Maintenance</h3><p>Preventive maintenance that catches problems early, reduces energy bills, and extends the life of your HVAC equipment.</p></div>
-    <div class="svc-card"><span class="svc-ico">⚡</span><h3>Emergency Service</h3><p>HVAC emergencies can't wait. Call us for urgent heating and cooling repairs — we prioritize emergency calls and respond as fast as possible.</p></div>
-    <div class="svc-card"><span class="svc-ico">🌬️</span><h3>Air Quality &amp; Ventilation</h3><p>Improve your indoor air quality with filters, purifiers, humidifiers, and ventilation improvements — important for Spokane's wildfire smoke seasons.</p></div>
+    <div class="svc-card"><span class="svc-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636 5.636 18.364"/></svg></span><h3>AC Repair &amp; Service</h3><p>Fast, accurate diagnosis and repair of all air conditioning systems. We fix it right and we fix it fast — especially when Spokane summers hit hard.</p></div>
+    <div class="svc-card"><span class="svc-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/><path d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/></svg></span><h3>Heating Repair</h3><p>Furnace, heat pump, and boiler repairs when you need them most. We respond quickly to keep your home warm through Spokane's coldest months.</p></div>
+    <div class="svc-card"><span class="svc-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"/></svg></span><h3>New HVAC Installation</h3><p>Complete system installations — we help you choose the right equipment for your home, then install it to manufacturer spec for maximum efficiency and lifespan.</p></div>
+    <div class="svc-card"><span class="svc-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"/></svg></span><h3>Tune-Ups &amp; Maintenance</h3><p>Preventive maintenance that catches problems early, reduces energy bills, and extends the life of your HVAC equipment.</p></div>
+    <div class="svc-card"><span class="svc-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg></span><h3>Emergency Service</h3><p>HVAC emergencies can't wait. Call us for urgent heating and cooling repairs — we prioritize emergency calls and respond as fast as possible.</p></div>
+    <div class="svc-card"><span class="svc-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"/></svg></span><h3>Air Quality &amp; Ventilation</h3><p>Improve your indoor air quality with filters, purifiers, humidifiers, and ventilation improvements — important for Spokane's wildfire smoke seasons.</p></div>
   </div>
 </section>
 
 <!-- GUARANTEE STRIP -->
 <div class="guarantee">
-  <h2>🛡️ Our Quality Guarantee</h2>
+  <h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg> Our Quality Guarantee</h2>
   <p>We back every job with a satisfaction guarantee. If something isn't right after we've completed your service, we'll come back and make it right — no questions asked, no extra charge.</p>
   <div class="guarantee-items">
     <div class="gitem"><span class="num">100%</span><span class="lbl">Satisfaction Guaranteed</span></div>
@@ -261,7 +269,7 @@
     <div class="gitem"><span class="num">24/7</span><span class="lbl">Emergency Availability</span></div>
     <div class="gitem"><span class="num">$0</span><span class="lbl">Free Estimates</span></div>
   </div>
-  <a href="tel:+15092105515" class="btn-p" style="background:#fff;color:var(--teal);font-size:1rem;">📞 Call (509) 210-5515</a>
+  <a href="tel:+15092105515" class="btn-p" style="background:#fff;color:var(--teal);font-size:1rem;"><svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6Z"/></svg> Call (509) 210-5515</a>
 </div>
 
 <!-- WHY US -->
@@ -364,23 +372,23 @@
     <div class="ct-l">
       <h3>Spokane Air Conditioning Repair Service</h3>
       <div class="ci">
-        <div class="ci-icon">📞</div>
+        <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6Z"/></svg></div>
         <div><div class="ci-lbl">Phone</div><a href="tel:+15092105515" class="ci-v">(509) 210-5515</a></div>
       </div>
       <div class="ci">
-        <div class="ci-icon">✉️</div>
+        <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></div>
         <div><div class="ci-lbl">Email</div><a href="mailto:info@spokaneairrepair.com" class="ci-v">info@spokaneairrepair.com</a></div>
       </div>
       <div class="ci">
-        <div class="ci-icon">📍</div>
+        <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></div>
         <div><div class="ci-lbl">Location</div><span class="ci-v">Spokane, WA</span></div>
       </div>
       <div class="ci">
-        <div class="ci-icon">⏰</div>
+        <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
         <div><div class="ci-lbl">Hours</div><span class="ci-v">Mon–Sat 7am–8pm | Emergency 24/7</span></div>
       </div>
       <div class="new-biz-box">
-        <h4>🛡️ 100% Satisfaction Guarantee</h4>
+        <h4><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg> 100% Satisfaction Guarantee</h4>
         <p>We stand behind every job. If you're not satisfied, we'll make it right — no questions asked, no extra charge. That's our promise to every Spokane customer.</p>
       </div>
     </div>
@@ -410,7 +418,7 @@
 <footer>
   <p>
     <strong>Spokane Air Conditioning Repair Service</strong> — HVAC Contractors | Spokane, WA<br>
-    📞 <a href="tel:+15092105515">(509) 210-5515</a> &nbsp;·&nbsp; ✉️ <a href="mailto:info@spokaneairrepair.com">info@spokaneairrepair.com</a><br>
+    <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6Z"/></svg> <a href="tel:+15092105515">(509) 210-5515</a> &nbsp;·&nbsp; <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg> <a href="mailto:info@spokaneairrepair.com">info@spokaneairrepair.com</a><br>
     <small>Licensed &amp; Insured · 100% Satisfaction Guaranteed · Spokane County, WA</small>
   </p>
   <p style="margin-top:14px;font-size:0.72rem;">
