@@ -62,7 +62,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
+      flex-shrink: 0;
     }
 
     .nav-logo-text {
@@ -267,7 +267,7 @@
 
     .hero-card-label { font-size: 0.72rem; color: var(--gray); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
     .hero-card-value { font-size: 1.6rem; font-weight: 800; color: var(--navy); line-height: 1; margin: 4px 0; }
-    .hero-card-sub { font-size: 0.8rem; color: var(--teal); font-weight: 600; }
+    .hero-card-sub { font-size: 0.8rem; color: var(--teal); font-weight: 600; display: flex; align-items: center; gap: 5px; }
 
     /* ── STATS STRIP ── */
     .stats-strip {
@@ -346,7 +346,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
       margin-bottom: 18px;
     }
 
@@ -555,7 +554,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
       flex-shrink: 0;
     }
 
@@ -715,7 +713,7 @@
       color: var(--gray);
     }
 
-    /* ── ALMA DIGITAL PREVIEW BANNER ── */
+    /* ── ALMA DIGITAL SERVICES PREVIEW BANNER ── */
     .preview-banner {
       background: linear-gradient(90deg, #1a1a2e, #0e2044);
       border-top: 2px solid #00b4d8;
@@ -757,7 +755,9 @@
   <!-- Navigation -->
   <nav>
     <a href="#hero" class="nav-logo">
-      <div class="nav-logo-icon">🔧</div>
+      <div class="nav-logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
       <div class="nav-logo-text">
         Demo Plumbing Services
         <span>Licensed &amp; Insured · Springfield</span>
@@ -776,7 +776,8 @@
     <div class="hero-inner">
       <div>
         <div class="hero-badge">
-          <span>⚡</span> Springfield's Most Trusted Plumbers
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Springfield's Most Trusted Plumbers
         </div>
         <h1>Springfield's Trusted Plumbers — <em>Fast, Clean, and Done Right</em> the First Time</h1>
         <p class="hero-sub">From leaky faucets to full pipe replacements, Demo Plumbing Services gets the job done same day. No mess, no guesswork — just reliable plumbing you can count on.</p>
@@ -806,7 +807,10 @@
         <div class="hero-card">
           <div class="hero-card-label">Response Time</div>
           <div class="hero-card-value">Same Day</div>
-          <div class="hero-card-sub">⚡ Emergency calls 24/7</div>
+          <div class="hero-card-sub">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#0ea5c7" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Emergency calls 24/7
+          </div>
         </div>
       </div>
     </div>
@@ -842,32 +846,44 @@
       <p class="section-sub">Fast, reliable, and done right — our licensed plumbers handle every job from simple repairs to full replacements.</p>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">🚨</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
           <h3>Emergency Plumbing Repairs</h3>
           <p>Available 24/7 when you need us most. Burst pipes, flooding, no hot water — we respond fast and fix it right.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🌀</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          </div>
           <h3>Drain Cleaning &amp; Unclogging</h3>
           <p>Fast solutions for slow or blocked drains. We clear kitchen, bathroom, and floor drains quickly and completely.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🔥</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
           <h3>Water Heater Installation &amp; Repair</h3>
           <p>Hot water restored today. We install, repair, and replace all makes and models — traditional and tankless.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🔩</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
           <h3>Pipe Repair &amp; Replacement</h3>
           <p>Leaks fixed before they become disasters. We diagnose and repair pipes efficiently with minimal disruption to your home.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🏠</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
           <h3>Bathroom &amp; Kitchen Plumbing</h3>
           <p>Installations and upgrades done right. Faucets, fixtures, sinks, toilets, garbage disposals — we handle it all.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">💧</div>
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
           <h3>Leak Detection &amp; Prevention</h3>
           <p>Stop small problems before they become big bills. Our experts pinpoint hidden leaks and get them fixed fast.</p>
         </div>
@@ -957,7 +973,9 @@
         <p>Serving Springfield and surrounding areas. We respond fast, price fairly, and stand behind our work.</p>
 
         <div class="contact-detail">
-          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
           <div>
             <div class="contact-detail-label">Call or Text</div>
             <div class="contact-detail-value"><a href="tel:+14175550100">(417) 555-0100</a></div>
@@ -965,7 +983,9 @@
         </div>
 
         <div class="contact-detail">
-          <div class="contact-detail-icon">✉️</div>
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
           <div>
             <div class="contact-detail-label">Email Us</div>
             <div class="contact-detail-value"><a href="mailto:info@demoplumbing.com">info@demoplumbing.com</a></div>
@@ -973,7 +993,9 @@
         </div>
 
         <div class="contact-detail">
-          <div class="contact-detail-icon">📍</div>
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
           <div>
             <div class="contact-detail-label">Service Area</div>
             <div class="contact-detail-value">Springfield &amp; Surrounding Areas</div>
@@ -981,7 +1003,9 @@
         </div>
 
         <div class="contact-detail">
-          <div class="contact-detail-icon">🕐</div>
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0ea5c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
           <div>
             <div class="contact-detail-label">Hours</div>
             <div class="contact-detail-value">Mon–Sat 7am–7pm · Emergency 24/7</div>
@@ -1039,11 +1063,16 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-          <div style="width:36px;height:36px;background:linear-gradient(135deg,#0ea5c7,#0077a8);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">🔧</div>
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,#0ea5c7,#0077a8);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
           <span style="color:#fff;font-weight:700;font-size:1.05rem;">Demo Plumbing Services</span>
         </div>
         <p>Springfield's trusted plumbers for reliable repairs, drain cleaning, water heaters, and more. Licensed, insured, same-day available.</p>
-        <a href="tel:+14175550100" class="footer-phone-link">📞 (417) 555-0100</a>
+        <a href="tel:+14175550100" class="footer-phone-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (417) 555-0100
+        </a>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
