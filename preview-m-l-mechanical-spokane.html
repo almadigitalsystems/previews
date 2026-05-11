@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M & L Mechanical | Spokane's Trusted HVAC Service</title>
+  <meta name="description" content="M & L Mechanical – Spokane WA HVAC experts. 4.9 stars, heating & cooling experts. Call (509) 326-2677 for fast response." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #0d1b2a;
+      --primary-mid: #112236;
+      --primary-light: #1a3050;
+      --accent: #17a2b8;
+      --accent-bright: #00c4d8;
+      --orange: #ff6b35;
+      --white: #ffffff;
+      --gray-100: #f0f4f8;
+      --gray-300: #c0cfe0;
+      --gray-500: #6b8099;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--primary); color: var(--white); overflow-x: hidden; }
+
+    .alma-banner {
+      background: linear-gradient(90deg, #7B2FF7, #00b4d8);
+      text-align: center; padding: 12px 20px;
+      font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em;
+    }
+    .alma-banner a { color: #fff; text-decoration: underline; margin-left: 8px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13, 27, 42, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(23, 162, 184, 0.25);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 68px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo .logo-icon {
+      width: 38px; height: 38px; background: var(--accent); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 800; color: var(--primary);
+    }
+    .nav-logo .logo-text { font-size: 1.15rem; font-weight: 700; color: var(--white); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--gray-300); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--orange); color: var(--white);
+      padding: 10px 22px; border-radius: 6px;
+      font-weight: 700; font-size: 0.9rem; text-decoration: none;
+      transition: background 0.2s; white-space: nowrap;
+    }
+    .nav-cta:hover { background: #e05a28; }
+
+    .emergency-strip {
+      background: var(--orange); text-align: center;
+      padding: 10px 20px; font-size: 0.9rem; font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .emergency-strip span { opacity: 0.85; margin: 0 8px; }
+
+    .hero {
+      min-height: 88vh; display: flex; align-items: center;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-mid) 50%, #0a2540 100%);
+      position: relative; overflow: hidden; padding: 80px 5% 60px;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: 0; right: 0;
+      width: 55%; height: 100%;
+      background: radial-gradient(ellipse at 70% 50%, rgba(23, 162, 184, 0.12) 0%, transparent 70%);
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(23, 162, 184, 0.15); border: 1px solid rgba(23, 162, 184, 0.4);
+      color: var(--accent); padding: 6px 16px; border-radius: 100px;
+      font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 800; line-height: 1.15;
+      color: var(--white); margin-bottom: 20px;
+    }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--gray-300); line-height: 1.7;
+      margin-bottom: 32px; max-width: 480px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+    .btn-primary {
+      background: var(--orange); color: white; padding: 14px 28px;
+      border-radius: 8px; font-weight: 700; font-size: 1rem;
+      text-decoration: none; display: inline-block; transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(255,107,53,0.3);
+    }
+    .btn-primary:hover { background: #e05a28; transform: translateY(-1px); }
+    .btn-secondary {
+      background: rgba(23, 162, 184, 0.12); color: var(--accent);
+      border: 1.5px solid rgba(23, 162, 184, 0.5);
+      padding: 14px 28px; border-radius: 8px; font-weight: 600;
+      font-size: 1rem; text-decoration: none; display: inline-block; transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(23, 162, 184, 0.2); }
+    .hero-stats { display: flex; gap: 28px; }
+    .stat .num { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+    .stat .label { font-size: 0.75rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; }
+    .hero-visual { display: flex; flex-direction: column; gap: 16px; position: relative; z-index: 1; }
+    .hero-card {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(23, 162, 184, 0.2);
+      border-radius: 14px; padding: 24px; backdrop-filter: blur(8px);
+    }
+    .hero-card.primary { background: rgba(23, 162, 184, 0.1); border-color: rgba(23, 162, 184, 0.4); }
+    .card-icon { font-size: 2rem; margin-bottom: 10px; }
+    .card-title { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .card-text { font-size: 0.85rem; color: var(--gray-300); line-height: 1.5; }
+    .stars { color: #fbbf24; font-size: 1.1rem; margin-bottom: 6px; }
+
+    .services { background: var(--primary-mid); padding: 80px 5%; }
+    .section-label {
+      color: var(--accent); font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800;
+      margin-bottom: 16px; color: var(--white);
+    }
+    .section-sub { color: var(--gray-300); font-size: 1rem; line-height: 1.7; max-width: 540px; margin-bottom: 48px; }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; max-width: 1200px; margin: 0 auto;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(23, 162, 184, 0.15);
+      border-radius: 12px; padding: 28px; transition: all 0.3s;
+    }
+    .service-card:hover { border-color: var(--accent); background: rgba(23, 162, 184, 0.07); transform: translateY(-3px); }
+    .service-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .service-name { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .service-desc { font-size: 0.87rem; color: var(--gray-300); line-height: 1.6; }
+
+    .trust { background: var(--primary); padding: 70px 5%; }
+    .trust-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .trust-badge-big {
+      background: linear-gradient(135deg, var(--accent), #0891b2);
+      border-radius: 16px; padding: 40px; text-align: center;
+      box-shadow: 0 20px 60px rgba(23, 162, 184, 0.2);
+    }
+    .trust-badge-big .big-num { font-size: 4rem; font-weight: 800; line-height: 1; }
+    .trust-badge-big .big-stars { font-size: 2rem; color: #fbbf24; margin: 8px 0; }
+    .trust-badge-big .big-label { font-size: 1rem; opacity: 0.9; }
+    .floating-badge {
+      position: absolute; bottom: -16px; right: -16px;
+      background: var(--orange); color: white;
+      border-radius: 12px; padding: 16px 20px;
+      font-size: 0.85rem; font-weight: 700; text-align: center;
+      box-shadow: 0 8px 24px rgba(255,107,53,0.3);
+    }
+    .trust-visual { position: relative; }
+    .trust-feature { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+    .trust-feature .check {
+      width: 28px; height: 28px; background: rgba(23, 162, 184, 0.15);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;
+    }
+    .trust-feature-text h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+    .trust-feature-text p { font-size: 0.85rem; color: var(--gray-300); line-height: 1.5; }
+
+    .testimonials { background: var(--primary-mid); padding: 80px 5%; }
+    .testimonials .section-title, .testimonials .section-label, .testimonials .section-sub { text-align: center; }
+    .testimonials .section-sub { margin: 0 auto 48px; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
+    .testimonial {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(23, 162, 184, 0.15);
+      border-radius: 14px; padding: 28px;
+    }
+    .testimonial .stars { font-size: 1rem; margin-bottom: 14px; }
+    .testimonial p { font-size: 0.9rem; color: var(--gray-300); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+    .testimonial-author { font-size: 0.85rem; font-weight: 700; color: var(--white); }
+    .testimonial-loc { font-size: 0.78rem; color: var(--gray-500); }
+
+    .booking { background: var(--primary); padding: 80px 5%; }
+    .booking-inner { max-width: 1100px; margin: 0 auto; }
+    .booking-header { text-align: center; margin-bottom: 48px; }
+    .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .booking-step { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
+    .step-num {
+      width: 36px; height: 36px; background: var(--accent); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 0.9rem; color: var(--primary); flex-shrink: 0;
+    }
+    .step-text h4 { font-weight: 700; margin-bottom: 4px; }
+    .step-text p { font-size: 0.85rem; color: var(--gray-300); line-height: 1.5; }
+    .booking-form {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(23, 162, 184, 0.2);
+      border-radius: 14px; padding: 32px;
+    }
+    .form-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--gray-300); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 11px 14px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 7px; color: var(--white); font-family: 'Inter', sans-serif;
+      font-size: 0.9rem; outline: none; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
+    .form-group select option { background: var(--primary-mid); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .btn-submit {
+      width: 100%; padding: 14px; background: var(--orange); color: white;
+      border: none; border-radius: 8px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: background 0.2s; margin-top: 8px;
+    }
+    .btn-submit:hover { background: #e05a28; }
+
+    .area { background: var(--primary-mid); padding: 70px 5%; }
+    .area-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .area-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .area-chip {
+      background: rgba(23, 162, 184, 0.1); border: 1px solid rgba(23, 162, 184, 0.3);
+      color: var(--accent); padding: 6px 14px; border-radius: 100px;
+      font-size: 0.82rem; font-weight: 600;
+    }
+    .area-map-placeholder {
+      height: 280px; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(23, 162, 184, 0.2); border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 12px; color: var(--gray-500);
+    }
+    .area-map-placeholder .map-icon { font-size: 2.5rem; }
+
+    .cta-banner {
+      background: linear-gradient(135deg, #0a2a3a 0%, var(--primary-mid) 100%);
+      border-top: 1px solid rgba(23, 162, 184, 0.25);
+      border-bottom: 1px solid rgba(23, 162, 184, 0.25);
+      padding: 70px 5%; text-align: center;
+    }
+    .cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; margin-bottom: 16px;
+    }
+    .cta-sub { color: var(--gray-300); font-size: 1.05rem; max-width: 520px; margin: 0 auto 32px; line-height: 1.7; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    footer {
+      background: #080f17; padding: 48px 5% 24px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; max-width: 1200px; margin: 0 auto; margin-bottom: 36px; }
+    .footer-brand .logo-text { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: block; }
+    .footer-desc { font-size: 0.85rem; color: var(--gray-500); line-height: 1.7; max-width: 280px; }
+    .footer-col h4 { font-size: 0.85rem; font-weight: 700; color: var(--gray-300); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { color: var(--gray-500); font-size: 0.85rem; text-decoration: none; }
+    .footer-col ul li a:hover { color: var(--accent); }
+    .footer-col .contact-item { font-size: 0.85rem; color: var(--gray-500); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.8rem; color: var(--gray-500); }
+
+    .preview-footer {
+      background: linear-gradient(90deg, #7B2FF7, #2563eb);
+      padding: 28px 5%; text-align: center;
+    }
+    .preview-footer h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+    .preview-footer p { font-size: 0.88rem; opacity: 0.88; margin-bottom: 18px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .btn-claim {
+      background: white; color: #7B2FF7; padding: 12px 28px;
+      border-radius: 8px; font-weight: 800; font-size: 0.95rem;
+      text-decoration: none; display: inline-block; transition: all 0.2s;
+    }
+    .btn-claim:hover { background: #f0e8ff; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .trust-inner, .booking-grid, .area-inner { grid-template-columns: 1fr; }
+      .services-grid, .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-visual { display: none; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .services-grid, .testimonials-grid, .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3dd269f06adb46e7a334bfac111d44db"}'></script>
+</head>
+<body>
+
+  <div class="alma-banner">
+    ✨ This is a FREE website preview created for M & L Mechanical by Alma Digital Services.
+    <a href="mailto:hello@almadigitalservices.com">Claim Your Free Redesign →</a>
+  </div>
+
+  <div class="emergency-strip">
+    🔥 24/7 EMERGENCY HVAC SERVICE <span>|</span> Call Now: (509) 326-2677 <span>|</span> Heating & Cooling Specialists
+  </div>
+
+  <nav>
+    <div class="nav-logo">
+      <div class="logo-icon">ML</div>
+      <span class="logo-text">M & L Mechanical</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">Why Us</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#booking">Book Now</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:5093262677" class="nav-cta">☎ (509) 326-2677</a>
+  </nav>
+
+  <section class="hero">
+    <div style="width:100%;max-height:480px;overflow:hidden;position:absolute;top:0;left:0;opacity:0.15;z-index:0;">
+      <img src="https://img.recraft.ai/MHZVQA-MWNCXOJoqYI9WCDvN-0xOozB5ysI-2VDRitk/rs:fit:1820:1024:0/raw:1/plain/abs://external/images/5edbe6c0-a214-42e3-9c57-f99204f15e82" alt="M & L Mechanical — Professional HVAC Service in Spokane WA"
+           style="width:100%;height:auto;display:block;object-fit:cover;" loading="eager" width="1820" height="1024">
+    </div>
+    <div class="hero-grid" style="position:relative;z-index:1;">
+      <div class="hero-content">
+        <div class="hero-badge">⚡ SPOKANE'S HEATING & COOLING EXPERTS</div>
+        <h1>
+          Spokane's Most Trusted<br/>
+          <em>HVAC Service Team</em>
+        </h1>
+        <p class="hero-sub">From emergency furnace repairs to full AC installations — M & L Mechanical keeps Spokane homes and businesses comfortable year-round. 4.9 stars, 19 verified reviews.</p>
+        <div class="hero-actions">
+          <a href="tel:5093262677" class="btn-primary">🚨 Call Now</a>
+          <a href="#booking" class="btn-secondary">📅 Book Service</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="num">4.9★</div>
+            <div class="label">Google Rating</div>
+          </div>
+          <div class="stat">
+            <div class="num">19+</div>
+            <div class="label">Reviews</div>
+          </div>
+          <div class="stat">
+            <div class="num">24/7</div>
+            <div class="label">Available</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        
+        <div class="hero-card primary">
+          <div class="card-icon">🏆</div>
+          <div class="stars">★★★★★</div>
+          <div class="card-title">4.9 Stars on Google</div>
+          <div class="card-text">Rated by 19+ real Spokane customers — consistently praised for speed, quality, and professionalism.</div>
+        </div>
+        <div class="hero-card">
+          <div class="card-icon">⚡</div>
+          <div class="card-title">Emergency HVAC Response</div>
+          <div class="card-text">Heating or cooling system down? We dispatch quickly — day, night, weekends, and holidays.</div>
+        </div>
+        <div class="hero-card">
+          <div class="card-icon">🔧</div>
+          <div class="card-title">All HVAC Systems</div>
+          <div class="card-text">Furnaces, heat pumps, central AC, ductless mini-splits, and commercial HVAC — fully equipped on every service call.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-label">WHAT WE DO</div>
+      <h2 class="section-title">Complete HVAC Services</h2>
+      <p class="section-sub">Every service call is handled by trained technicians with the tools and parts to get your system running right.</p>
+      <div class="services-grid">
+        
+        <div class="service-card">
+          <div class="service-icon">🔥</div>
+          <div class="service-name">Furnace Repair & Installation</div>
+          <div class="service-desc">Gas, electric, and oil furnace service — repairs, replacements, and new installations for Spokane homes and businesses.</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">❄️</div>
+          <div class="service-name">AC Repair & Installation</div>
+          <div class="service-desc">Central air conditioning service, refrigerant recharge, compressor replacement, and full system installations.</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🌡️</div>
+          <div class="service-name">Heat Pump Systems</div>
+          <div class="service-desc">Heat pump installation, repair, and maintenance — efficient year-round comfort for eastern Washington climates.</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <div class="service-name">HVAC Maintenance & Tune-Ups</div>
+          <div class="service-desc">Annual preventive maintenance contracts keep your system running efficiently and extend equipment life.</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏭</div>
+          <div class="service-name">Commercial HVAC</div>
+          <div class="service-desc">Commercial heating and cooling systems — rooftop units, split systems, and building HVAC management.</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <div class="service-name">Emergency HVAC Service</div>
+          <div class="service-desc">24/7 emergency response — no heat in January or AC failure in August, we're dispatched fast.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" id="about">
+    <div class="trust-inner">
+      <div class="trust-visual">
+        
+        <div class="trust-badge-big">
+          <div class="big-num">4.9</div>
+          <div class="big-stars">★★★★★</div>
+          <div class="big-label">19 Verified Google Reviews</div>
+        </div>
+        <div class="floating-badge">
+          🕐 Fast Response<br/>Same-Day Available
+        </div>
+      </div>
+      <div class="trust-content">
+        <div class="section-label">WHY SPOKANE TRUSTS US</div>
+        <h2 class="section-title">Reliable, Fast &amp; Honest</h2>
+        
+        <div class="trust-feature">
+          <div class="check">✓</div>
+          <div class="trust-feature-text">
+            <h4>Upfront Pricing — No Surprises</h4>
+            <p>We diagnose first and quote before any work begins. What we say is what you pay.</p>
+          </div>
+        </div>
+
+        <div class="trust-feature">
+          <div class="check">✓</div>
+          <div class="trust-feature-text">
+            <h4>Licensed & Insured in Washington State</h4>
+            <p>Fully licensed HVAC contractors, bonded and insured for your complete protection.</p>
+          </div>
+        </div>
+
+        <div class="trust-feature">
+          <div class="check">✓</div>
+          <div class="trust-feature-text">
+            <h4>Locally Owned — Spokane Proud</h4>
+            <p>We live and work in Spokane. Community reputation means everything to us.</p>
+          </div>
+        </div>
+
+        <div class="trust-feature">
+          <div class="check">✓</div>
+          <div class="trust-feature-text">
+            <h4>4.9 Stars — Verified by 19 Customers</h4>
+            <p>Real Spokane homeowners and businesses consistently rate us 5 stars for quality and reliability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="section-label">WHAT CUSTOMERS SAY</div>
+    <h2 class="section-title">4.9 Stars Across 19 Reviews</h2>
+    <p class="section-sub">Spokane homeowners and businesses count on M & L Mechanical for their HVAC needs.</p>
+    <div class="testimonials-grid">
+      
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Called M & L Mechanical at 7am when our furnace went out overnight. Tech was here within 2 hours, diagnosed the issue, and had it running before lunch. Incredibly professional and fair price."</p>
+        <div class="testimonial-author">Robert K.</div>
+        <div class="testimonial-loc">South Hill, Spokane</div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Had them install a new heat pump system. Clean work, on time, and they walked us through everything. System has been running great all winter. Highly recommend."</p>
+        <div class="testimonial-author">Sarah M.</div>
+        <div class="testimonial-loc">North Spokane</div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Annual maintenance contract with M & L — best decision we made. They catch issues before they become emergencies. Very professional team."</p>
+        <div class="testimonial-author">James & Lisa T.</div>
+        <div class="testimonial-loc">Spokane Valley</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="booking-inner">
+      <div class="booking-header">
+        <div class="section-label">SCHEDULE SERVICE</div>
+        <h2 class="section-title">Book Your HVAC Service</h2>
+        <p class="section-sub" style="max-width:480px;margin:0 auto;">Schedule in advance or request same-day service. For emergencies, call us directly at (509) 326-2677.</p>
+      </div>
+      <div class="booking-grid">
+        <div class="booking-info">
+          <div class="booking-step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Describe Your Issue</h4>
+              <p>Tell us what's happening — no heat, AC not cooling, strange noises, or just a tune-up needed.</p>
+            </div>
+          </div>
+          <div class="booking-step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Pick a Time</h4>
+              <p>Morning, afternoon, or evening — we work around your schedule. Same-day often available.</p>
+            </div>
+          </div>
+          <div class="booking-step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <h4>We Confirm &amp; Show Up</h4>
+              <p>You'll get a confirmation and a call when the tech is on the way. No long waiting windows.</p>
+            </div>
+          </div>
+          <div class="booking-step">
+            <div class="step-num">4</div>
+            <div class="step-text">
+              <h4>Problem Solved</h4>
+              <p>Our tech diagnoses the issue, explains exactly what was found, and fixes it right the first time.</p>
+            </div>
+          </div>
+        </div>
+        <div class="booking-form">
+          <div class="form-title">Request Service</div>
+          <form action="https://formspree.io/f/xojppajv" method="POST">
+            <input type="hidden" name="_subject" value="M & L Mechanical — Service Request" />
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="Full name" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="(509) 555-0000" required />
+            </div>
+            <div class="form-group">
+              <label>Service Needed</label>
+              <select name="service">
+                                <option>Furnace Repair & Installation</option>
+                <option>AC Repair & Installation</option>
+                <option>Heat Pump Systems</option>
+                <option>HVAC Maintenance & Tune-Ups</option>
+                <option>Commercial HVAC</option>
+                <option>Emergency HVAC Service</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Describe the Problem</label>
+              <textarea name="message" placeholder="E.g. furnace not igniting, AC blowing warm air, need annual tune-up..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Schedule My Service →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="area" id="area">
+    <div class="area-inner">
+      <div>
+        <div class="section-label">WHERE WE WORK</div>
+        <h2 class="section-title">Serving Greater Spokane</h2>
+        <p class="section-sub">We serve Spokane and surrounding communities throughout eastern Washington. If you're not sure we cover your area — just call or submit the form.</p>
+        <div class="area-list">
+          <span class="area-chip">Spokane</span>
+          <span class="area-chip">Spokane Valley</span>
+          <span class="area-chip">South Hill</span>
+          <span class="area-chip">North Spokane</span>
+          <span class="area-chip">Liberty Lake</span>
+          <span class="area-chip">Cheney</span>
+          <span class="area-chip">Medical Lake</span>
+          <span class="area-chip">Airway Heights</span>
+          <span class="area-chip">Deer Park</span>
+          <span class="area-chip">Mead</span>
+        </div>
+      </div>
+      <div class="area-map-placeholder">
+        <div class="map-icon">📍</div>
+        <div style="font-size:0.9rem;font-weight:600;color:var(--accent);">Spokane, WA</div>
+        <div style="font-size:0.8rem;">Serving Eastern Washington</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" id="contact">
+    <div class="section-label">CONTACT US</div>
+    <h2 class="cta-title">Is Your HVAC System Ready for Spokane Winters?</h2>
+    <p class="cta-sub">Don't wait for a breakdown on the coldest night of the year. Call M & L Mechanical — Spokane's highest-rated HVAC team.</p>
+    <div class="cta-actions">
+      <a href="tel:5093262677" class="btn-primary">📞 Call (509) 326-2677</a>
+      <a href="#booking" class="btn-secondary">📅 Book Online</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">M & L Mechanical</span>
+        <p class="footer-desc">Spokane's trusted heating and cooling specialists. Available 24/7 for residential and commercial HVAC service throughout eastern Washington.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+                    <li><a href="#services">Furnace Repair & Installation</a></li>
+          <li><a href="#services">AC Repair & Installation</a></li>
+          <li><a href="#services">Heat Pump Systems</a></li>
+          <li><a href="#services">HVAC Maintenance & Tune-Ups</a></li>
+          <li><a href="#services">Commercial HVAC</a></li>
+          <li><a href="#services">Emergency HVAC Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="contact-item">📞 (509) 326-2677</div>
+        <div class="contact-item">📍 Spokane, WA</div>
+        <div class="contact-item">🕐 24/7 Available</div>
+        <div class="contact-item" style="margin-top:16px;"><span style="color:var(--accent);font-size:1rem;">★★★★★</span> 4.9 / 5 — Google</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 M & L Mechanical. All rights reserved. Spokane, WA.</p>
+      <p>Licensed &amp; Insured in Washington State</p>
+    </div>
+  </footer>
+
+  <div class="preview-footer">
+    <h3>🚀 This is your FREE website preview from Alma Digital Services</h3>
+    <p>Your business has 4.9 stars but no website — your competitors are capturing the customers you should be getting. This preview shows exactly what your site could look like. Claim it today at no upfront cost.</p>
+    <a href="mailto:hello@almadigitalservices.com?subject=M & L Mechanical - Claim My Free Redesign" class="btn-claim">Claim Your Free Redesign →</a>
+  </div>
+
+</body>
+</html>
