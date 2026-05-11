@@ -31,11 +31,9 @@ h1 .accent{color:#ffc107}
 .sec-desc{color:rgba(255,255,255,.48);max-width:600px;line-height:1.7;margin-bottom:40px}
 .card-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
 .h-card{background:rgba(255,193,7,.04);border:1px solid rgba(255,193,7,.12);border-radius:14px;padding:28px 26px;transition:transform .2s,border-color .2s}.h-card:hover{transform:translateY(-3px);border-color:rgba(255,193,7,.28)}
-.h-card .icon{font-size:26px;margin-bottom:12px;display:block}
 .h-card h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:#fff}
 .h-card p{color:rgba(255,255,255,.48);font-size:.88rem;line-height:1.6}
 .emerg-card{background:linear-gradient(135deg,rgba(255,193,7,.12),rgba(255,193,7,.04));border:1px solid rgba(255,193,7,.3);border-radius:14px;padding:32px;display:flex;align-items:center;gap:24px;margin-bottom:40px}
-.emerg-icon{font-size:2.5rem;flex-shrink:0}
 .emerg-card h3{font-size:1.1rem;font-weight:800;color:#ffc107;margin-bottom:6px}
 .emerg-card p{color:rgba(255,255,255,.55);font-size:.9rem;line-height:1.6}
 .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
@@ -83,7 +81,7 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:36px 24px;text-align:c
     </div>
   </div>
   <div class="hero-right">
-    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80" alt="Licensed master electrician serving Humble TX" width="800" height="600" loading="eager" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.18;z-index:0;">
+    <img src="/images/aphase-electric-hero.jpg" alt="Licensed master electrician at work in Humble TX" width="800" height="600" loading="eager" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.18;z-index:0;">
     <span class="hero-icon">&#9889;</span>
   </div>
 </section>
@@ -95,7 +93,9 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:36px 24px;text-align:c
     <p class="sec-desc">From a tripped breaker to a full commercial installation, A Phase Electric handles residential and commercial electrical work throughout the greater Houston area.</p>
 
     <div class="emerg-card">
-      <span class="emerg-icon">&#128680;</span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" width="44" height="44" style="flex-shrink:0" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+      </svg>
       <div>
         <h3>24-Hour Emergency Electrician</h3>
         <p>Electrical emergencies don&#8217;t wait for business hours. A Phase Electric is available around the clock to restore power, fix dangerous wiring, and handle any electrical emergency fast.</p>
@@ -104,32 +104,44 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:36px 24px;text-align:c
 
     <div class="card-row">
       <div class="h-card">
-        <span class="icon">&#127969;</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" width="32" height="32" style="display:block;margin-bottom:12px" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+        </svg>
         <h3>Residential Electrical Services</h3>
         <p>From outlet repairs to full rewires, we handle every electrical need in your Humble home safely and to code.</p>
       </div>
       <div class="h-card">
-        <span class="icon">&#127970;</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" width="32" height="32" style="display:block;margin-bottom:12px" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/>
+        </svg>
         <h3>Commercial Electrical Work</h3>
         <p>Licensed commercial electrical services for Houston-area businesses, offices, and industrial properties.</p>
       </div>
       <div class="h-card">
-        <span class="icon">&#128268;</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" width="32" height="32" style="display:block;margin-bottom:12px" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/>
+        </svg>
         <h3>Breaker Box Repair &amp; Replacement</h3>
         <p>Panel upgrades, breaker replacements, and electrical load improvements to meet today&#8217;s power demands.</p>
       </div>
       <div class="h-card">
-        <span class="icon">&#128161;</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" width="32" height="32" style="display:block;margin-bottom:12px" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>
+        </svg>
         <h3>Lighting Installation &amp; Upgrades</h3>
         <p>Indoor and outdoor lighting, recessed lighting, LED upgrades, and ceiling fan installation done right.</p>
       </div>
       <div class="h-card">
-        <span class="icon">&#9211;</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" width="32" height="32" style="display:block;margin-bottom:12px" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9"/>
+        </svg>
         <h3>Generator Installation &amp; Maintenance</h3>
         <p>Stay powered during Texas storms. We install, maintain, and repair generators for homes and businesses.</p>
       </div>
       <div class="h-card">
-        <span class="icon">&#128269;</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" width="32" height="32" style="display:block;margin-bottom:12px" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+        </svg>
         <h3>Electrical Safety Inspections</h3>
         <p>Identify hazards before they become problems. Thorough inspections for peace of mind and code compliance.</p>
       </div>
@@ -187,4 +199,3 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:36px 24px;text-align:c
 
 </body>
 </html>
-
