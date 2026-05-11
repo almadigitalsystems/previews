@@ -1,653 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HVAC Contractor And Services | Spokane's Trusted HVAC Service</title>
-  <meta name="description" content="HVAC Contractor And Services – Spokane WA HVAC experts. 5.0 star rated, professional HVAC installations. Call (509) 210-5317 for fast response." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVAC Contractor And Services | Spokane WA | 5-Star HVAC</title>
+  <meta name="description" content="HVAC Contractor And Services — Perfect 5-star rated HVAC company in Spokane, WA. Professional installations, tune-ups, and repairs. Call (509) 210-5317.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --primary: #0f172a;
-      --primary-mid: #1e293b;
-      --primary-light: #334155;
-      --accent: #3b82f6;
-      --accent-bright: #60a5fa;
-      --orange: #ff6b35;
+      --dark: #0a0d14;
+      --dark2: #11151e;
+      --blue: #0f3460;
+      --cyan: #00b4d8;
+      --cyan2: #0096c7;
       --white: #ffffff;
-      --gray-100: #f0f4f8;
-      --gray-300: #c0cfe0;
-      --gray-500: #6b8099;
+      --silver: #9eb3c2;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--primary); color: var(--white); overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--white); overflow-x: hidden; }
 
-    .alma-banner {
-      background: linear-gradient(90deg, #7B2FF7, #00b4d8);
-      text-align: center; padding: 12px 20px;
-      font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em;
-    }
-    .alma-banner a { color: #fff; text-decoration: underline; margin-left: 8px; }
+    .preview-bar { background: #0f3460; text-align: center; padding: 10px; font-size: 0.82rem; color: rgba(255,255,255,0.8); border-bottom: 1px solid rgba(0,180,216,0.3); }
+    .preview-bar strong { color: #ffd700; }
 
     nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(15, 23, 42, 0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(59, 130, 246, 0.25);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10,13,20,0.96); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0,180,216,0.2);
+      height: 70px; padding: 0 5%;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5%; height: 68px;
     }
-    .nav-logo { display: flex; align-items: center; gap: 10px; }
-    .nav-logo .logo-icon {
-      width: 38px; height: 38px; background: var(--accent); border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; font-weight: 800; color: var(--primary);
+    .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: -0.5px; }
+    .logo .hi { color: var(--cyan); }
+    .nav-r { display: flex; align-items: center; gap: 20px; }
+    .nav-r .stars { color: #ffd700; font-size: 0.85rem; }
+    .nav-call {
+      background: var(--cyan); color: var(--dark); font-weight: 700; font-size: 0.88rem;
+      padding: 10px 22px; border-radius: 6px; text-decoration: none; transition: all 0.2s;
     }
-    .nav-logo .logo-text { font-size: 1.15rem; font-weight: 700; color: var(--white); }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { color: var(--gray-300); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-cta {
-      background: var(--orange); color: var(--white);
-      padding: 10px 22px; border-radius: 6px;
-      font-weight: 700; font-size: 0.9rem; text-decoration: none;
-      transition: background 0.2s; white-space: nowrap;
-    }
-    .nav-cta:hover { background: #e05a28; }
+    .nav-call:hover { background: var(--cyan2); color: var(--white); }
 
-    .emergency-strip {
-      background: var(--orange); text-align: center;
-      padding: 10px 20px; font-size: 0.9rem; font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-    .emergency-strip span { opacity: 0.85; margin: 0 8px; }
-
+    /* BOLD HERO */
     .hero {
-      min-height: 88vh; display: flex; align-items: center;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-mid) 50%, #0c1a35 100%);
-      position: relative; overflow: hidden; padding: 80px 5% 60px;
+      min-height: 100vh;
+      background: linear-gradient(160deg, #060a12 0%, #0a0d14 40%, #0d1a30 100%);
+      display: flex; align-items: center; padding: 100px 5% 60px;
+      position: relative; overflow: hidden;
     }
-    .hero::before {
-      content: ''; position: absolute; top: 0; right: 0;
-      width: 55%; height: 100%;
-      background: radial-gradient(ellipse at 70% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+    .hero-bg {
+      position: absolute; top: 0; right: 0; bottom: 0; width: 55%;
+      background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+      opacity: 0.18;
+      clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
     }
-    .hero-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%;
+    .hero-inner { position: relative; z-index: 2; max-width: 660px; }
+    .five-star-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(90deg, rgba(255,215,0,0.12), rgba(255,215,0,0.05));
+      border: 1px solid rgba(255,215,0,0.3);
+      padding: 10px 22px; border-radius: 100px; margin-bottom: 28px;
     }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.4);
-      color: var(--accent); padding: 6px 16px; border-radius: 100px;
-      font-size: 0.8rem; font-weight: 600; margin-bottom: 20px; letter-spacing: 0.05em;
-    }
+    .five-star-badge span { color: #ffd700; font-size: 1rem; letter-spacing: 2px; }
+    .five-star-badge em { font-style: normal; font-size: 0.82rem; color: #e8cc60; font-weight: 600; }
     .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 4vw, 3.4rem);
-      font-weight: 800; line-height: 1.15;
-      color: var(--white); margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 900; line-height: 1.05;
+      margin-bottom: 22px; letter-spacing: -1px;
     }
-    .hero h1 em { color: var(--accent); font-style: normal; }
-    .hero-sub {
-      font-size: 1.1rem; color: var(--gray-300); line-height: 1.7;
-      margin-bottom: 32px; max-width: 480px;
+    .hero h1 .hi { color: var(--cyan); }
+    .hero p { font-size: 1.1rem; color: var(--silver); line-height: 1.75; margin-bottom: 38px; max-width: 560px; }
+    .btn-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+    .btn-main {
+      background: var(--cyan); color: var(--dark); font-weight: 800; font-size: 1rem;
+      padding: 16px 34px; border-radius: 8px; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
     }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
-    .btn-primary {
-      background: var(--orange); color: white; padding: 14px 28px;
-      border-radius: 8px; font-weight: 700; font-size: 1rem;
-      text-decoration: none; display: inline-block; transition: all 0.2s;
-      box-shadow: 0 4px 20px rgba(255,107,53,0.3);
+    .btn-main:hover { background: var(--cyan2); color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,180,216,0.4); }
+    .btn-ghost {
+      border: 2px solid rgba(255,255,255,0.2); color: var(--white); font-weight: 600; font-size: 1rem;
+      padding: 14px 30px; border-radius: 8px; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;
     }
-    .btn-primary:hover { background: #e05a28; transform: translateY(-1px); }
-    .btn-secondary {
-      background: rgba(59, 130, 246, 0.12); color: var(--accent);
-      border: 1.5px solid rgba(59, 130, 246, 0.5);
-      padding: 14px 28px; border-radius: 8px; font-weight: 600;
-      font-size: 1rem; text-decoration: none; display: inline-block; transition: all 0.2s;
-    }
-    .btn-secondary:hover { background: rgba(59, 130, 246, 0.2); }
-    .hero-stats { display: flex; gap: 28px; }
-    .stat .num { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
-    .stat .label { font-size: 0.75rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; }
-    .hero-visual { display: flex; flex-direction: column; gap: 16px; position: relative; z-index: 1; }
-    .hero-card {
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(59, 130, 246, 0.2);
-      border-radius: 14px; padding: 24px; backdrop-filter: blur(8px);
-    }
-    .hero-card.primary { background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.4); }
-    .card-icon { font-size: 2rem; margin-bottom: 10px; }
-    .card-title { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-    .card-text { font-size: 0.85rem; color: var(--gray-300); line-height: 1.5; }
-    .stars { color: #fbbf24; font-size: 1.1rem; margin-bottom: 6px; }
+    .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+    .hero-metrics { display: flex; gap: 40px; flex-wrap: wrap; }
+    .metric { text-align: left; }
+    .metric-val { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 900; color: var(--cyan); display: block; }
+    .metric-lbl { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--silver); margin-top: 3px; }
 
-    .services { background: var(--primary-mid); padding: 80px 5%; }
-    .section-label {
-      color: var(--accent); font-size: 0.8rem; font-weight: 600;
-      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px;
+    /* SERVICES — clean white cards on dark */
+    .services { padding: 88px 5%; background: var(--dark2); }
+    .sh { text-align: center; margin-bottom: 52px; }
+    .stag {
+      display: inline-block; background: rgba(0,180,216,0.1); color: var(--cyan);
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 14px;
     }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800;
-      margin-bottom: 16px; color: var(--white);
+    .sh h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; margin-bottom: 14px; color: var(--white); }
+    .sh h2 .hi { color: var(--cyan); }
+    .sh p { font-size: 0.95rem; color: var(--silver); max-width: 520px; margin: 0 auto; line-height: 1.65; }
+    .svc-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .sc {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(0,180,216,0.1);
+      border-radius: 14px; padding: 30px 24px; transition: all 0.3s; position: relative; overflow: hidden;
     }
-    .section-sub { color: var(--gray-300); font-size: 1rem; line-height: 1.7; max-width: 540px; margin-bottom: 48px; }
-    .services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 24px; max-width: 1200px; margin: 0 auto;
-    }
-    .service-card {
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(59, 130, 246, 0.15);
-      border-radius: 12px; padding: 28px; transition: all 0.3s;
-    }
-    .service-card:hover { border-color: var(--accent); background: rgba(59, 130, 246, 0.07); transform: translateY(-3px); }
-    .service-icon { font-size: 2.2rem; margin-bottom: 14px; }
-    .service-name { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-    .service-desc { font-size: 0.87rem; color: var(--gray-300); line-height: 1.6; }
+    .sc::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--cyan); opacity: 0; transition: opacity 0.3s; }
+    .sc:hover { border-color: rgba(0,180,216,0.35); background: rgba(0,180,216,0.05); transform: translateY(-3px); }
+    .sc:hover::before { opacity: 1; }
+    .sc-icon { font-size: 1.9rem; margin-bottom: 14px; display: block; }
+    .sc h3 { font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--white); }
+    .sc p { font-size: 0.86rem; color: var(--silver); line-height: 1.6; }
 
-    .trust { background: var(--primary); padding: 70px 5%; }
-    .trust-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .trust-badge-big {
-      background: linear-gradient(135deg, var(--accent), #1d4ed8);
-      border-radius: 16px; padding: 40px; text-align: center;
-      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
-    }
-    .trust-badge-big .big-num { font-size: 4rem; font-weight: 800; line-height: 1; }
-    .trust-badge-big .big-stars { font-size: 2rem; color: #fbbf24; margin: 8px 0; }
-    .trust-badge-big .big-label { font-size: 1rem; opacity: 0.9; }
-    .floating-badge {
-      position: absolute; bottom: -16px; right: -16px;
-      background: var(--orange); color: white;
-      border-radius: 12px; padding: 16px 20px;
-      font-size: 0.85rem; font-weight: 700; text-align: center;
-      box-shadow: 0 8px 24px rgba(255,107,53,0.3);
-    }
-    .trust-visual { position: relative; }
-    .trust-feature { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
-    .trust-feature .check {
-      width: 28px; height: 28px; background: rgba(59, 130, 246, 0.15);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      color: var(--accent); font-size: 0.9rem; flex-shrink: 0; margin-top: 2px;
-    }
-    .trust-feature-text h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
-    .trust-feature-text p { font-size: 0.85rem; color: var(--gray-300); line-height: 1.5; }
+    /* PERFECT RATING SPOTLIGHT */
+    .perfect { background: linear-gradient(135deg, #0d1a30, #0f3060); padding: 72px 5%; text-align: center; border-top: 1px solid rgba(0,180,216,0.15); border-bottom: 1px solid rgba(0,180,216,0.15); }
+    .perfect-stars { color: #ffd700; font-size: 2.5rem; letter-spacing: 6px; margin-bottom: 16px; }
+    .perfect h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; margin-bottom: 12px; }
+    .perfect p { color: var(--silver); max-width: 540px; margin: 0 auto 28px; font-size: 1rem; line-height: 1.7; }
 
-    .testimonials { background: var(--primary-mid); padding: 80px 5%; }
-    .testimonials .section-title, .testimonials .section-label, .testimonials .section-sub { text-align: center; }
-    .testimonials .section-sub { margin: 0 auto 48px; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
-    .testimonial {
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(59, 130, 246, 0.15);
-      border-radius: 14px; padding: 28px;
-    }
-    .testimonial .stars { font-size: 1rem; margin-bottom: 14px; }
-    .testimonial p { font-size: 0.9rem; color: var(--gray-300); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
-    .testimonial-author { font-size: 0.85rem; font-weight: 700; color: var(--white); }
-    .testimonial-loc { font-size: 0.78rem; color: var(--gray-500); }
+    /* ABOUT SPLIT */
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 88px 5%; background: var(--dark); max-width: 100%; }
+    .about-txt .stag { display: inline-block; margin-bottom: 14px; }
+    .about-txt h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 18px; }
+    .about-txt h2 .hi { color: var(--cyan); }
+    .about-txt p { color: var(--silver); line-height: 1.8; margin-bottom: 14px; font-size: 0.93rem; }
+    .about-list { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .about-list li { display: flex; align-items: center; gap: 10px; color: #c0d4e0; font-size: 0.9rem; }
+    .about-list li::before { content: '✓'; color: var(--cyan); font-weight: 700; }
 
-    .booking { background: var(--primary); padding: 80px 5%; }
-    .booking-inner { max-width: 1100px; margin: 0 auto; }
-    .booking-header { text-align: center; margin-bottom: 48px; }
-    .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .booking-step { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
-    .step-num {
-      width: 36px; height: 36px; background: var(--accent); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 0.9rem; color: var(--primary); flex-shrink: 0;
-    }
-    .step-text h4 { font-weight: 700; margin-bottom: 4px; }
-    .step-text p { font-size: 0.85rem; color: var(--gray-300); line-height: 1.5; }
-    .booking-form {
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(59, 130, 246, 0.2);
-      border-radius: 14px; padding: 32px;
-    }
-    .form-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 24px; }
-    .form-group { margin-bottom: 16px; }
-    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--gray-300); margin-bottom: 6px; }
-    .form-group input, .form-group select, .form-group textarea {
-      width: 100%; padding: 11px 14px;
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 7px; color: var(--white); font-family: 'Inter', sans-serif;
-      font-size: 0.9rem; outline: none; transition: border-color 0.2s;
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
-    .form-group select option { background: var(--primary-mid); }
-    .form-group textarea { resize: vertical; min-height: 80px; }
-    .btn-submit {
-      width: 100%; padding: 14px; background: var(--orange); color: white;
-      border: none; border-radius: 8px; font-size: 1rem; font-weight: 700;
-      cursor: pointer; transition: background 0.2s; margin-top: 8px;
-    }
-    .btn-submit:hover { background: #e05a28; }
+    /* HOW IT WORKS */
+    .process { padding: 88px 5%; background: var(--dark2); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+    .step { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 30px 22px; text-align: center; transition: border-color 0.3s; }
+    .step:hover { border-color: rgba(0,180,216,0.3); }
+    .step-n { width: 52px; height: 52px; border-radius: 50%; background: var(--cyan); display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.3rem; color: var(--dark); margin: 0 auto 18px; }
+    .step h3 { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; color: var(--white); }
+    .step p { font-size: 0.84rem; color: var(--silver); line-height: 1.55; }
 
-    .area { background: var(--primary-mid); padding: 70px 5%; }
-    .area-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .area-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-    .area-chip {
-      background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3);
-      color: var(--accent); padding: 6px 14px; border-radius: 100px;
-      font-size: 0.82rem; font-weight: 600;
-    }
-    .area-map-placeholder {
-      height: 280px; background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: 12px; color: var(--gray-500);
-    }
-    .area-map-placeholder .map-icon { font-size: 2.5rem; }
+    /* WORK PHOTOS */
+    .gallery { padding: 88px 5%; background: var(--dark); }
+    .photo-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 220px 220px; gap: 14px; }
+    .photo-grid .p-main { grid-row: span 2; }
+    .photo-item { border-radius: 12px; overflow: hidden; }
+    .photo-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .photo-item:hover img { transform: scale(1.05); }
 
-    .cta-banner {
-      background: linear-gradient(135deg, #0a1628 0%, var(--primary-mid) 100%);
-      border-top: 1px solid rgba(59, 130, 246, 0.25);
-      border-bottom: 1px solid rgba(59, 130, 246, 0.25);
-      padding: 70px 5%; text-align: center;
-    }
-    .cta-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; margin-bottom: 16px;
-    }
-    .cta-sub { color: var(--gray-300); font-size: 1.05rem; max-width: 520px; margin: 0 auto 32px; line-height: 1.7; }
-    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    /* AREAS */
+    .areas { padding: 72px 5%; background: var(--dark2); text-align: center; }
+    .area-tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 36px; }
+    .atag { background: rgba(0,180,216,0.07); border: 1px solid rgba(0,180,216,0.16); border-radius: 8px; padding: 10px 18px; font-size: 0.84rem; color: #a0bece; }
 
-    footer {
-      background: #080f17; padding: 48px 5% 24px;
-      border-top: 1px solid rgba(255,255,255,0.07);
+    /* CONTACT */
+    .contact { padding: 88px 5%; background: #f0f9ff; }
+    .ct-wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; max-width: 1100px; margin: 0 auto; }
+    .ct-info h3 { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 800; color: #0a0d14; margin-bottom: 24px; }
+    .ct-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+    .ct-ic { width: 42px; height: 42px; background: var(--cyan2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .ct-lbl { font-size: 0.7rem; color: #6080a0; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+    .ct-val { font-weight: 700; color: #0a0d14; text-decoration: none; font-size: 1rem; }
+    .ct-val:hover { color: var(--cyan2); }
+    .cf input, .cf select, .cf textarea {
+      width: 100%; padding: 13px 15px; border: 1.5px solid #cce0ec; border-radius: 8px;
+      font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #0a0d14; background: #fff;
+      margin-bottom: 12px; outline: none; transition: border-color 0.2s;
     }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; max-width: 1200px; margin: 0 auto; margin-bottom: 36px; }
-    .footer-brand .logo-text { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; display: block; }
-    .footer-desc { font-size: 0.85rem; color: var(--gray-500); line-height: 1.7; max-width: 280px; }
-    .footer-col h4 { font-size: 0.85rem; font-weight: 700; color: var(--gray-300); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.06em; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 8px; }
-    .footer-col ul li a { color: var(--gray-500); font-size: 0.85rem; text-decoration: none; }
-    .footer-col ul li a:hover { color: var(--accent); }
-    .footer-col .contact-item { font-size: 0.85rem; color: var(--gray-500); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-    .footer-bottom p { font-size: 0.8rem; color: var(--gray-500); }
+    .cf input:focus, .cf textarea:focus { border-color: var(--cyan2); }
+    .cf textarea { height: 110px; resize: vertical; }
+    .cf button {
+      width: 100%; padding: 15px; background: var(--cyan2); color: #fff; font-weight: 700;
+      font-size: 0.95rem; border: none; border-radius: 8px; cursor: pointer;
+      font-family: 'Montserrat', sans-serif; transition: background 0.2s;
+    }
+    .cf button:hover { background: #0d1a30; }
 
-    .preview-footer {
-      background: linear-gradient(90deg, #7B2FF7, #2563eb);
-      padding: 28px 5%; text-align: center;
-    }
-    .preview-footer h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
-    .preview-footer p { font-size: 0.88rem; opacity: 0.88; margin-bottom: 18px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.6; }
-    .btn-claim {
-      background: white; color: #7B2FF7; padding: 12px 28px;
-      border-radius: 8px; font-weight: 800; font-size: 0.95rem;
-      text-decoration: none; display: inline-block; transition: all 0.2s;
-    }
-    .btn-claim:hover { background: #f0e8ff; }
+    footer { background: #06080e; padding: 36px 5%; text-align: center; border-top: 1px solid rgba(0,180,216,0.1); }
+    footer p { color: #3a5060; font-size: 0.82rem; line-height: 1.9; }
+    footer a { color: var(--cyan); text-decoration: none; }
+    footer strong { color: #7090a0; }
 
-    @media (max-width: 900px) {
-      .hero-grid, .trust-inner, .booking-grid, .area-inner { grid-template-columns: 1fr; }
-      .services-grid, .testimonials-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .hero-visual { display: none; }
-      .nav-links { display: none; }
+    @media (max-width: 860px) {
+      .about { grid-template-columns: 1fr; }
+      .ct-wrap { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .photo-grid .p-main { grid-row: span 1; }
+      .hero-bg { display: none; }
     }
-    @media (max-width: 600px) {
-      .services-grid, .testimonials-grid, .footer-grid { grid-template-columns: 1fr; }
+    @media (max-width: 500px) {
+      .photo-grid { grid-template-columns: 1fr; }
+      .hero-metrics { gap: 20px; }
     }
   </style>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3dd269f06adb46e7a334bfac111d44db"}'></script>
 </head>
 <body>
 
-  <div class="alma-banner">
-    ✨ This is a FREE website preview created for HVAC Contractor And Services by Alma Digital Services.
-    <a href="mailto:hello@almadigitalservices.com">Claim Your Free Redesign →</a>
-  </div>
+<div class="preview-bar">
+  ✨ <strong>FREE Website Preview</strong> — See how your new HVAC Contractor And Services website could look. Claim it today.
+</div>
 
-  <div class="emergency-strip">
-    ⭐ 5.0 GOOGLE RATING <span>|</span> Call: (509) 210-5317 <span>|</span> Professional HVAC Installations & Service
+<nav>
+  <a href="#" class="logo"><span class="hi">HVAC</span> Contractor &amp; Services</a>
+  <div class="nav-r">
+    <span class="stars">★★★★★ 5.0</span>
+    <a href="tel:+15092105317" class="nav-call">📞 Call Now</a>
   </div>
+</nav>
 
-  <nav>
-    <div class="nav-logo">
-      <div class="logo-icon">HC</div>
-      <span class="logo-text">HVAC Contractor And Services</span>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="five-star-badge">
+      <span>★★★★★</span>
+      <em>Perfect 5.0 Rating — Spokane, WA</em>
     </div>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">Why Us</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
-      <li><a href="#booking">Book Now</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <h1>Professional <span class="hi">HVAC</span> Service.<br>Five Stars. Every Time.</h1>
+    <p>We don't just fix your heating and cooling — we earn your trust. A perfect 5-star rating from every customer we've served in Spokane, WA. That's our standard, and it's not changing.</p>
+    <div class="btn-row">
+      <a href="tel:+15092105317" class="btn-main">📞 (509) 210-5317</a>
+      <a href="#contact" class="btn-ghost">Free Estimate →</a>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric"><span class="metric-val">5.0★</span><span class="metric-lbl">Perfect Rating</span></div>
+      <div class="metric"><span class="metric-val">100%</span><span class="metric-lbl">Satisfaction Rate</span></div>
+      <div class="metric"><span class="metric-val">24/7</span><span class="metric-lbl">Emergency Line</span></div>
+      <div class="metric"><span class="metric-val">WA</span><span class="metric-lbl">Certified &amp; Insured</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="sh">
+    <div class="stag">What We Do</div>
+    <h2>HVAC Services Done <span class="hi">Right</span></h2>
+    <p>Every service we perform earns five stars. Here's how we keep Spokane comfortable year-round.</p>
+  </div>
+  <div class="svc-row">
+    <div class="sc"><span class="sc-icon">🔥</span><h3>Heating Installation</h3><p>Expert furnace and heat pump installations designed for Spokane's cold winters. Efficient, reliable, and properly sized for your home.</p></div>
+    <div class="sc"><span class="sc-icon">❄️</span><h3>AC Installation</h3><p>Central AC and ductless systems installed with precision. Cool your home efficiently all summer without the energy bill shock.</p></div>
+    <div class="sc"><span class="sc-icon">🔧</span><h3>Tune-Ups &amp; Maintenance</h3><p>Professional seasonal tune-ups that maximize efficiency, catch problems early, and extend the life of your HVAC equipment.</p></div>
+    <div class="sc"><span class="sc-icon">⚡</span><h3>Emergency Repairs</h3><p>When your system fails, we answer. 24/7 emergency HVAC repair for heating and cooling breakdowns throughout Spokane.</p></div>
+    <div class="sc"><span class="sc-icon">🏠</span><h3>Residential HVAC</h3><p>Full-service HVAC for homeowners — new installs, replacements, repairs, and maintenance from a team that treats your home with respect.</p></div>
+    <div class="sc"><span class="sc-icon">🏢</span><h3>Commercial HVAC</h3><p>Light commercial HVAC service for Spokane businesses. We keep your employees and customers comfortable year-round.</p></div>
+  </div>
+</section>
+
+<section class="perfect">
+  <div class="perfect-stars">★★★★★</div>
+  <h2>A Perfect 5-Star Rating Is Not an Accident</h2>
+  <p>Every customer who has hired HVAC Contractor And Services has left with a 5-star experience. We show up on time, do the work right, and leave your home cleaner than we found it. That's the standard we hold ourselves to — every single job.</p>
+  <a href="tel:+15092105317" class="btn-main">📞 Experience 5-Star HVAC Service</a>
+</section>
+
+<section class="about" id="about">
+  <div>
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80"
+         alt="Professional HVAC technician performing service inspection Spokane"
+         width="700" height="467" loading="lazy"
+         style="width:100%;height:auto;border-radius:16px;border:1px solid rgba(0,180,216,0.15);">
+  </div>
+  <div class="about-txt">
+    <div class="stag">About Us</div>
+    <h2>Professional HVAC.<br><span class="hi">Personal Service.</span></h2>
+    <p>We're HVAC professionals who believe the job isn't done until you're 100% satisfied. Our perfect rating is proof that this approach works — and we intend to keep it that way.</p>
+    <p>From our first call to the final walkthrough, every step of our service is designed to make you feel like the most important customer we have — because you are.</p>
+    <ul class="about-list">
+      <li>Washington State Certified HVAC Technicians</li>
+      <li>Fully Licensed and Insured</li>
+      <li>Upfront Flat-Rate Pricing — No Surprises</li>
+      <li>Clean Work Practices — Respect Your Home</li>
+      <li>Follow-Up After Every Job</li>
     </ul>
-    <a href="tel:5092105317" class="nav-cta">☎ (509) 210-5317</a>
-  </nav>
-
-  <section class="hero">
-    <div style="width:100%;max-height:480px;overflow:hidden;position:absolute;top:0;left:0;opacity:0.15;z-index:0;">
-      <img src="https://img.recraft.ai/om5zY1jpnCEUGvNOqJgIJdBqgBL6pLej2OhCND0t9V8/rs:fit:1820:1024:0/raw:1/plain/abs://external/images/293311f5-0978-4956-8dd9-a9db4bf6291f" alt="HVAC Contractor And Services — Professional HVAC Spokane WA"
-           style="width:100%;height:auto;display:block;object-fit:cover;" loading="eager" width="1820" height="1024">
-    </div>
-    <div class="hero-grid" style="position:relative;z-index:1;">
-      <div class="hero-content">
-        <div class="hero-badge">⚡ 5.0 STAR RATED — SPOKANE HVAC PROS</div>
-        <h1>
-          Perfect 5 Stars for<br/>
-          <em>HVAC You Can Trust</em>
-        </h1>
-        <p class="hero-sub">Every customer gives us 5 stars — because we show up on time, communicate clearly, and fix it right the first time. Professional HVAC service across greater Spokane.</p>
-        <div class="hero-actions">
-          <a href="tel:5092105317" class="btn-primary">🚨 Call Now</a>
-          <a href="#booking" class="btn-secondary">📅 Book Service</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="num">5.0★</div>
-            <div class="label">Google Rating</div>
-          </div>
-          <div class="stat">
-            <div class="num">5+</div>
-            <div class="label">Reviews</div>
-          </div>
-          <div class="stat">
-            <div class="num">24/7</div>
-            <div class="label">Available</div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        
-        <div class="hero-card primary">
-          <div class="card-icon">🏆</div>
-          <div class="stars">★★★★★</div>
-          <div class="card-title">5.0 Stars on Google</div>
-          <div class="card-text">Rated by 5+ real Spokane customers — consistently praised for speed, quality, and professionalism.</div>
-        </div>
-        <div class="hero-card">
-          <div class="card-icon">⚡</div>
-          <div class="card-title">Emergency HVAC Response</div>
-          <div class="card-text">Heating or cooling system down? We dispatch quickly — day, night, weekends, and holidays.</div>
-        </div>
-        <div class="hero-card">
-          <div class="card-icon">🔧</div>
-          <div class="card-title">All HVAC Systems</div>
-          <div class="card-text">Furnaces, heat pumps, central AC, ductless mini-splits, and commercial HVAC — fully equipped on every service call.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="services" id="services">
-    <div style="max-width:1200px;margin:0 auto;">
-      <div class="section-label">WHAT WE DO</div>
-      <h2 class="section-title">Complete HVAC Services</h2>
-      <p class="section-sub">Every service call is handled by trained technicians with the tools and parts to get your system running right.</p>
-      <div class="services-grid">
-        
-        <div class="service-card">
-          <div class="service-icon">🛠️</div>
-          <div class="service-name">HVAC System Installation</div>
-          <div class="service-desc">Full system design and installation — central air, split systems, ductless mini-splits, and heat pump packages.</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🔥</div>
-          <div class="service-name">Heating System Service</div>
-          <div class="service-desc">Gas furnace, electric heat, heat pump, and boiler repair and installation by certified technicians.</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">❄️</div>
-          <div class="service-name">Air Conditioning Service</div>
-          <div class="service-desc">AC diagnostics, refrigerant service, coil cleaning, compressor replacement, and new AC installation.</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">📋</div>
-          <div class="service-name">HVAC Tune-Up & Maintenance</div>
-          <div class="service-desc">Seasonal tune-ups to maximize efficiency, prevent breakdowns, and extend system lifespan.</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🌬️</div>
-          <div class="service-name">Indoor Air Quality</div>
-          <div class="service-desc">Air filtration, UV purifiers, humidity control, and ventilation upgrades for healthier indoor air.</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">⚡</div>
-          <div class="service-name">Emergency HVAC Repair</div>
-          <div class="service-desc">24-hour emergency HVAC service for heating and cooling failures — rapid response, fair pricing.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="trust" id="about">
-    <div class="trust-inner">
-      <div class="trust-visual">
-        
-        <div class="trust-badge-big">
-          <div class="big-num">5.0</div>
-          <div class="big-stars">★★★★★</div>
-          <div class="big-label">5 Verified Google Reviews</div>
-        </div>
-        <div class="floating-badge">
-          🕐 Fast Response<br/>Same-Day Available
-        </div>
-      </div>
-      <div class="trust-content">
-        <div class="section-label">WHY SPOKANE TRUSTS US</div>
-        <h2 class="section-title">Reliable, Fast &amp; Honest</h2>
-        
-        <div class="trust-feature">
-          <div class="check">✓</div>
-          <div class="trust-feature-text">
-            <h4>Perfect 5.0 Google Rating</h4>
-            <p>Every customer who has reviewed us gave us 5 stars. We take that seriously on every job.</p>
-          </div>
-        </div>
-
-        <div class="trust-feature">
-          <div class="check">✓</div>
-          <div class="trust-feature-text">
-            <h4>Certified HVAC Technicians</h4>
-            <p>EPA certified, NATE accredited technicians who know Spokane climate and common HVAC issues.</p>
-          </div>
-        </div>
-
-        <div class="trust-feature">
-          <div class="check">✓</div>
-          <div class="trust-feature-text">
-            <h4>Transparent Quotes Before Work Begins</h4>
-            <p>You'll always know the price before we touch anything. No hidden fees, no surprise charges.</p>
-          </div>
-        </div>
-
-        <div class="trust-feature">
-          <div class="check">✓</div>
-          <div class="trust-feature-text">
-            <h4>Licensed, Bonded & Insured</h4>
-            <p>Fully licensed HVAC contractors in Washington State — you're covered on every job.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials" id="testimonials">
-    <div class="section-label">WHAT CUSTOMERS SAY</div>
-    <h2 class="section-title">5.0 Stars Across 5 Reviews</h2>
-    <p class="section-sub">Spokane homeowners and businesses count on HVAC Contractor And Services for their HVAC needs.</p>
-    <div class="testimonials-grid">
-      
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"Got multiple quotes for a new AC installation. HVAC Contractor was the most professional, competitive on price, and got the job done in a day. Perfect installation."</p>
-        <div class="testimonial-author">Angela B.</div>
-        <div class="testimonial-loc">Spokane Valley</div>
-      </div>
-
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"Had them service our aging furnace ahead of winter. Thorough inspection, honest assessment, fixed a minor issue before it became a big one. 5 stars well earned."</p>
-        <div class="testimonial-author">Marcus D.</div>
-        <div class="testimonial-loc">South Hill</div>
-      </div>
-
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"Best HVAC experience I've had in Spokane. On time, clean, professional. They installed our mini-split system and explained everything. Couldn't be happier."</p>
-        <div class="testimonial-author">Christine L.</div>
-        <div class="testimonial-loc">North Spokane</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="booking" id="booking">
-    <div class="booking-inner">
-      <div class="booking-header">
-        <div class="section-label">SCHEDULE SERVICE</div>
-        <h2 class="section-title">Book Your HVAC Service</h2>
-        <p class="section-sub" style="max-width:480px;margin:0 auto;">Schedule in advance or request same-day service. For emergencies, call us directly at (509) 210-5317.</p>
-      </div>
-      <div class="booking-grid">
-        <div class="booking-info">
-          <div class="booking-step">
-            <div class="step-num">1</div>
-            <div class="step-text">
-              <h4>Describe Your Issue</h4>
-              <p>Tell us what's happening — no heat, AC not cooling, strange noises, or just a tune-up needed.</p>
-            </div>
-          </div>
-          <div class="booking-step">
-            <div class="step-num">2</div>
-            <div class="step-text">
-              <h4>Pick a Time</h4>
-              <p>Morning, afternoon, or evening — we work around your schedule. Same-day often available.</p>
-            </div>
-          </div>
-          <div class="booking-step">
-            <div class="step-num">3</div>
-            <div class="step-text">
-              <h4>We Confirm &amp; Show Up</h4>
-              <p>You'll get a confirmation and a call when the tech is on the way. No long waiting windows.</p>
-            </div>
-          </div>
-          <div class="booking-step">
-            <div class="step-num">4</div>
-            <div class="step-text">
-              <h4>Problem Solved</h4>
-              <p>Our tech diagnoses the issue, explains exactly what was found, and fixes it right the first time.</p>
-            </div>
-          </div>
-        </div>
-        <div class="booking-form">
-          <div class="form-title">Request Service</div>
-          <form action="https://formspree.io/f/xojppajv" method="POST">
-            <input type="hidden" name="_subject" value="HVAC Contractor And Services — Service Request" />
-            <div class="form-group">
-              <label>Your Name</label>
-              <input type="text" name="name" placeholder="Full name" required />
-            </div>
-            <div class="form-group">
-              <label>Phone Number</label>
-              <input type="tel" name="phone" placeholder="(509) 555-0000" required />
-            </div>
-            <div class="form-group">
-              <label>Service Needed</label>
-              <select name="service">
-                                <option>HVAC System Installation</option>
-                <option>Heating System Service</option>
-                <option>Air Conditioning Service</option>
-                <option>HVAC Tune-Up & Maintenance</option>
-                <option>Indoor Air Quality</option>
-                <option>Emergency HVAC Repair</option>
-                <option>Other / Not Sure</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Describe the Problem</label>
-              <textarea name="message" placeholder="E.g. furnace not igniting, AC blowing warm air, need annual tune-up..."></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Schedule My Service →</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="area" id="area">
-    <div class="area-inner">
-      <div>
-        <div class="section-label">WHERE WE WORK</div>
-        <h2 class="section-title">Serving Greater Spokane</h2>
-        <p class="section-sub">We serve Spokane and surrounding communities throughout eastern Washington. If you're not sure we cover your area — just call or submit the form.</p>
-        <div class="area-list">
-          <span class="area-chip">Spokane</span>
-          <span class="area-chip">Spokane Valley</span>
-          <span class="area-chip">South Hill</span>
-          <span class="area-chip">North Spokane</span>
-          <span class="area-chip">Liberty Lake</span>
-          <span class="area-chip">Cheney</span>
-          <span class="area-chip">Medical Lake</span>
-          <span class="area-chip">Airway Heights</span>
-          <span class="area-chip">Deer Park</span>
-          <span class="area-chip">Mead</span>
-        </div>
-      </div>
-      <div class="area-map-placeholder">
-        <div class="map-icon">📍</div>
-        <div style="font-size:0.9rem;font-weight:600;color:var(--accent);">Spokane, WA</div>
-        <div style="font-size:0.8rem;">Serving Eastern Washington</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-banner" id="contact">
-    <div class="section-label">CONTACT US</div>
-    <h2 class="cta-title">Need HVAC Service Done Right?</h2>
-    <p class="cta-sub">5 stars don't happen by accident. Call HVAC Contractor And Services — Spokane homeowners trust us to get it right every time.</p>
-    <div class="cta-actions">
-      <a href="tel:5092105317" class="btn-primary">📞 Call (509) 210-5317</a>
-      <a href="#booking" class="btn-secondary">📅 Book Online</a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="logo-text">HVAC Contractor And Services</span>
-        <p class="footer-desc">5.0 star rated HVAC contractor serving Spokane and eastern Washington. Specializing in HVAC installations, service, and maintenance.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-                    <li><a href="#services">HVAC System Installation</a></li>
-          <li><a href="#services">Heating System Service</a></li>
-          <li><a href="#services">Air Conditioning Service</a></li>
-          <li><a href="#services">HVAC Tune-Up & Maintenance</a></li>
-          <li><a href="#services">Indoor Air Quality</a></li>
-          <li><a href="#services">Emergency HVAC Repair</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="contact-item">📞 (509) 210-5317</div>
-        <div class="contact-item">📍 Spokane, WA</div>
-        <div class="contact-item">🕐 24/7 Available</div>
-        <div class="contact-item" style="margin-top:16px;"><span style="color:var(--accent);font-size:1rem;">★★★★★</span> 5.0 / 5 — Google</div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024 HVAC Contractor And Services. All rights reserved. Spokane, WA.</p>
-      <p>Licensed &amp; Insured in Washington State</p>
-    </div>
-  </footer>
-
-  <div class="preview-footer">
-    <h3>🚀 This is your FREE website preview from Alma Digital Services</h3>
-    <p>You have a perfect rating but no website — potential customers can't find you online. This preview shows what a professional web presence would look like. Claim it today at no upfront cost.</p>
-    <a href="mailto:hello@almadigitalservices.com?subject=HVAC Contractor And Services - Claim My Free Redesign" class="btn-claim">Claim Your Free Redesign →</a>
   </div>
+</section>
+
+<section class="process">
+  <div class="sh">
+    <div class="stag">Our Process</div>
+    <h2>How We Earn <span class="hi">5 Stars</span></h2>
+    <p>It's not magic. It's a commitment to doing the right thing at every step of your service.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="step-n">1</div><h3>You Call, We Answer</h3><p>Real person, real fast. No voicemail roulette, no call center — we pick up and we listen.</p></div>
+    <div class="step"><div class="step-n">2</div><h3>Honest Assessment</h3><p>We diagnose accurately and tell you exactly what's needed — only what's needed, nothing more.</p></div>
+    <div class="step"><div class="step-n">3</div><h3>Work Done Right</h3><p>Every install, repair, and tune-up meets manufacturer specs. We don't cut corners — ever.</p></div>
+    <div class="step"><div class="step-n">4</div><h3>You're Satisfied</h3><p>System test, full walkthrough, your questions answered. We don't leave until you're completely happy.</p></div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="sh">
+    <div class="stag">Our Work</div>
+    <h2>Recent <span class="hi">Projects</span></h2>
+    <p>HVAC installations and service calls completed across the Spokane area.</p>
+  </div>
+  <div class="photo-grid">
+    <div class="photo-item p-main">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+           alt="HVAC installation project Spokane WA" width="800" height="600" loading="lazy">
+    </div>
+    <div class="photo-item">
+      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=500&q=80"
+           alt="HVAC technician performing maintenance" width="500" height="375" loading="lazy">
+    </div>
+    <div class="photo-item">
+      <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=500&q=80"
+           alt="Air conditioning unit installed residential home" width="500" height="375" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="areas">
+  <div class="sh">
+    <div class="stag">Service Areas</div>
+    <h2>Serving <span class="hi">Greater Spokane</span></h2>
+    <p>We travel throughout Spokane County. If you're not sure, just call — we'll let you know.</p>
+  </div>
+  <div class="area-tags">
+    <div class="atag">📍 Spokane</div>
+    <div class="atag">📍 Spokane Valley</div>
+    <div class="atag">📍 North Spokane</div>
+    <div class="atag">📍 South Hill</div>
+    <div class="atag">📍 Liberty Lake</div>
+    <div class="atag">📍 Cheney</div>
+    <div class="atag">📍 Airway Heights</div>
+    <div class="atag">📍 Deer Park</div>
+    <div class="atag">📍 Mead</div>
+    <div class="atag">📍 Millwood</div>
+    <div class="atag">📍 Five Mile</div>
+    <div class="atag">📍 Medical Lake</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div style="text-align:center;margin-bottom:48px;">
+    <div class="stag" style="background:rgba(0,150,199,0.1);color:#0096c7;">Request Service</div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:#0a0d14;margin-bottom:12px;">
+      Get Your <span style="color:#0096c7;">Free Estimate</span>
+    </h2>
+    <p style="color:#4a6080;font-size:0.95rem;max-width:480px;margin:0 auto;">Call us directly at (509) 210-5317 or fill out the form below and we'll respond within the hour.</p>
+  </div>
+  <div class="ct-wrap">
+    <div class="ct-info">
+      <h3>HVAC Contractor And Services</h3>
+      <div class="ct-row">
+        <div class="ct-ic">📞</div>
+        <div><div class="ct-lbl">Phone</div><a href="tel:+15092105317" class="ct-val">(509) 210-5317</a></div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-ic">✉️</div>
+        <div><div class="ct-lbl">Email</div><a href="mailto:info@hvaccontractorservices.com" class="ct-val">info@hvaccontractorservices.com</a></div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-ic">📍</div>
+        <div><div class="ct-lbl">Location</div><span class="ct-val">Spokane, WA</span></div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-ic">⏰</div>
+        <div><div class="ct-lbl">Hours</div><span class="ct-val">Mon–Sat 7am–8pm | Emergency 24/7</span></div>
+      </div>
+      <div style="margin-top:28px;padding:18px;background:linear-gradient(135deg,rgba(0,150,199,0.1),rgba(0,120,160,0.05));border:1px solid rgba(0,150,199,0.2);border-radius:12px;">
+        <div style="color:#ffd700;font-size:1.1rem;letter-spacing:2px;margin-bottom:6px;">★★★★★</div>
+        <div style="font-weight:700;color:#0a0d14;margin-bottom:4px;">Perfect 5.0 Rating</div>
+        <div style="font-size:0.83rem;color:#4a6080;">100% of our customers rate us 5 stars. Your satisfaction is guaranteed.</div>
+      </div>
+    </div>
+    <div>
+      <form class="cf" action="https://formspree.io/f/xojppajv" method="POST">
+        <input type="hidden" name="business" value="HVAC Contractor And Services - Spokane WA">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="tel" name="phone" placeholder="Best Phone Number">
+        <input type="email" name="email" placeholder="Email Address" required>
+        <select name="service" required>
+          <option value="" disabled selected>Service Needed</option>
+          <option>Heating Repair / Furnace</option>
+          <option>AC / Cooling Repair</option>
+          <option>New System Installation</option>
+          <option>Seasonal Tune-Up</option>
+          <option>Emergency Service</option>
+          <option>Commercial HVAC</option>
+          <option>Other</option>
+        </select>
+        <textarea name="message" placeholder="Tell us about your HVAC needs..."></textarea>
+        <button type="submit">Request Free Estimate →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <strong>HVAC Contractor And Services</strong> — Spokane, WA<br>
+    📞 <a href="tel:+15092105317">(509) 210-5317</a> &nbsp;·&nbsp; ✉️ <a href="mailto:info@hvaccontractorservices.com">info@hvaccontractorservices.com</a><br>
+    <small>Licensed &amp; Insured · 5.0 Google Rating · Spokane County, WA</small>
+  </p>
+  <p style="margin-top:14px;font-size:0.72rem;">
+    © 2025 HVAC Contractor And Services. Website preview by <a href="mailto:info@almawebcreative.com">Alma Digital Services</a>.
+  </p>
+</footer>
 
 </body>
 </html>
