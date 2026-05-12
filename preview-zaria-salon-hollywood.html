@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Hair Salon Hollywood FL | Zaria Salon | Curly &amp; Coily Specialists</title>
+<meta name="description" content="Hollywood FL natural hair specialist. Wash-and-go's, loc maintenance, protective styles, and more. Quality natural ingredients, expert stylists. Call (954) 613-8876.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#faf4ec;--terra:#c27040;--brown:#2a1810;--gold:#d4956a;--warm:#f5ece0;--dark:#1a0e08;--mid:#7a4f35}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark)}
+/* Nav — minimal */
+nav{padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--brown);text-decoration:none;letter-spacing:1px}
+.nav-links a{color:var(--mid);text-decoration:none;margin-left:1.5rem;font-size:.9rem;font-weight:500}
+.nav-book{background:var(--terra);color:#fff!important;padding:.55rem 1.3rem;border-radius:30px;margin-left:1.5rem!important}
+/* Hero — story style, large personal photo focus */
+.hero{padding:3rem 2rem 5rem;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:center}
+.hero-text .eyebrow{color:var(--terra);font-size:.85rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:1.2rem}
+.hero-text h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5rem);font-weight:700;color:var(--brown);line-height:1.05;margin-bottom:1.5rem}
+.hero-text p{color:var(--mid);font-size:1.1rem;line-height:1.8;margin-bottom:2rem}
+.hero-text .address{font-size:.9rem;color:var(--mid);margin-bottom:2rem;font-style:italic}
+.hero-btns{display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.btn-terra{display:inline-block;background:var(--terra);color:#fff;padding:1rem 2.2rem;border-radius:30px;text-decoration:none;font-weight:600;font-size:.95rem;letter-spacing:.5px}
+.btn-outline-terra{display:inline-block;border:2px solid var(--terra);color:var(--terra);padding:.9rem 2.2rem;border-radius:30px;text-decoration:none;font-weight:600;font-size:.95rem}
+.hero-img{border-radius:20px;overflow:hidden;position:relative}
+.hero-img img{width:100%;height:600px;object-fit:cover;display:block;border-radius:20px}
+.hero-img::after{content:'Open Tue3Sat, 10am36pm';position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(42,24,16,.85);color:#fff;padding:.5rem 1.2rem;border-radius:20px;font-size:.85rem;font-weight:500}
+/* Story band */
+.story-band{background:var(--brown);padding:4rem 2rem;text-align:center}
+.story-band h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--cream);font-style:italic;margin-bottom:1.2rem}
+.story-band p{color:rgba(250,244,236,.8);max-width:720px;margin:0 auto;line-height:1.8;font-size:1.05rem}
+/* Services — vertical list with icons */
+.services-section{padding:5rem 2rem;background:var(--warm)}
+.services-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.services-text .eyebrow{color:var(--terra);font-size:.85rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:.75rem}
+.services-text h2{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--brown);line-height:1.1;margin-bottom:1.5rem}
+.services-text p{color:var(--mid);line-height:1.8;font-size:1rem;margin-bottom:2rem}
+.svc-list{display:flex;flex-direction:column;gap:.75rem}
+.svc-item{display:flex;align-items:center;gap:1rem;padding:1.2rem 1.5rem;background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(42,24,16,.06)}
+.svc-dot{width:38px;height:38px;background:var(--terra);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;color:#fff}
+.svc-label{font-weight:600;color:var(--brown);font-size:.95rem}
+/* Values */
+.values-section{padding:5rem 2rem;background:var(--cream)}
+.values-inner{max-width:1000px;margin:0 auto;text-align:center}
+.values-inner .eyebrow{color:var(--terra);font-size:.85rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:.75rem}
+.values-inner h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--brown);margin-bottom:3rem}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;text-align:center}
+.val-card{padding:2rem 1.5rem}
+.val-icon{font-size:2.5rem;margin-bottom:1rem}
+.val-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--brown);margin-bottom:.75rem}
+.val-card p{color:var(--mid);font-size:.95rem;line-height:1.6}
+/* CTA */
+.cta-section{background:var(--terra);padding:4.5rem 2rem;text-align:center}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:3rem;color:#fff;margin-bottom:1rem}
+.cta-section p{color:rgba(255,255,255,.9);font-size:1.1rem;margin-bottom:2rem}
+.cta-cream-btn{display:inline-block;background:var(--cream);color:var(--terra);padding:1.2rem 3rem;border-radius:30px;text-decoration:none;font-weight:700;font-size:1rem;letter-spacing:.5px}
+/* Contact */
+.contact-section{padding:5rem 2rem;background:var(--warm)}
+.contact-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.contact-info h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--brown);margin-bottom:1.5rem}
+.ci-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.ci-icon{font-size:1.3rem;width:36px;text-align:center}
+.ci-text a{color:var(--brown);text-decoration:none;font-weight:600;font-size:1rem}
+.ci-text a:hover{color:var(--terra)}
+.ci-text span{color:var(--mid);font-size:.95rem}
+form{display:flex;flex-direction:column;gap:1rem;background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(42,24,16,.06)}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--brown);margin-bottom:.5rem}
+input,textarea{padding:.9rem;border:1.5px solid #e8ddd0;border-radius:8px;font-size:1rem;font-family:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--terra)}
+.submit-btn{background:var(--terra);color:#fff;padding:1rem;border:none;border-radius:30px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;cursor:pointer}
+footer{background:var(--brown);color:rgba(250,244,236,.65);padding:2rem;text-align:center;font-size:.9rem}
+footer a{color:var(--gold);text-decoration:none}
+@media(max-width:768px){.hero,.services-inner,.contact-inner{grid-template-columns:1fr}.values-grid{grid-template-columns:1fr 1fr}nav .nav-links{display:none}.hero-img img{height:400px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">Zaria Salon</a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Book</a>
+    <a href="tel:+19546138876" class="nav-book">Book Appointment</a>
+  </div>
+</nav>
+
+<div style="max-width:1100px;margin:0 auto">
+  <section class="hero">
+    <div class="hero-text">
+      <span class="eyebrow">Hollywood, FL Natural Hair Salon</span>
+      <h1>Hollywood&#39;s Go-To Natural Hair Salon</h1>
+      <p>Specializing in curly, coily, and natural hair care. Wash-and-go&#39;s, locs, protective styles, and more &#8212; by stylists who truly understand your hair.</p>
+      <p class="address">2730 Hollywood Blvd, Hollywood, FL &nbsp;|&nbsp; Open Tue&#8211;Sat, 10am&#8211;6pm</p>
+      <div class="hero-btns">
+        <a class="btn-terra" href="tel:+19546138876">Book Your Appointment</a>
+        <a class="btn-outline-terra" href="mailto:info@zariasalon.com">Email Us</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80" alt="Zaria Salon natural hair specialist Hollywood FL styling curly coily hair" width="800" height="600" loading="eager">
+    </div>
+  </section>
+</div>
+
+<section class="story-band">
+  <h2>Your Hair Deserves Specialists Who Understand It</h2>
+  <p>At Zaria Salon, we&#39;re dedicated to helping clients with curly and coily hair achieve healthy, beautiful results. Using only quality products with natural ingredients, our team educates clients on proper home care to promote lasting hair health and length retention.</p>
+</section>
+
+<section class="services-section" id="services">
+  <div class="services-inner">
+    <div class="services-text">
+      <span class="eyebrow">What We Offer</span>
+      <h2>Services for Every Curl Pattern</h2>
+      <p>From protective styles to loc maintenance &#8212; everything your natural hair needs from stylists who specialize in exactly this.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item"><div class="svc-dot">&#127783;</div><div class="svc-label">Wash &amp; Go</div></div>
+      <div class="svc-item"><div class="svc-dot">&#128081;</div><div class="svc-label">Loc Maintenance</div></div>
+      <div class="svc-item"><div class="svc-dot">&#10024;</div><div class="svc-label">Two-Strand Twists</div></div>
+      <div class="svc-item"><div class="svc-dot">&#128144;</div><div class="svc-label">Crochet Styles</div></div>
+      <div class="svc-item"><div class="svc-dot">&#128141;</div><div class="svc-label">Manicures &amp; Pedicures</div></div>
+      <div class="svc-item"><div class="svc-dot">&#128172;</div><div class="svc-label">Natural Hair Consultations</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="values-inner">
+    <span class="eyebrow">Our Philosophy</span>
+    <h2>Natural. Educated. Caring.</h2>
+    <div class="values-grid">
+      <div class="val-card"><div class="val-icon">&#127807;</div><h3>Natural Ingredients</h3><p>We use only quality products formulated with natural ingredients that nourish rather than strip your hair.</p></div>
+      <div class="val-card"><div class="val-icon">&#128218;</div><h3>Client Education</h3><p>We teach you how to care for your hair at home &#8212; so the results last long after you leave the chair.</p></div>
+      <div class="val-card"><div class="val-icon">&#129504;</div><h3>Expert Specialists</h3><p>Our team is trained specifically in curly and coily hair. This is what we do. It&#39;s all we do.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready for Your Best Hair Yet?</h2>
+  <p>Call us or book your appointment today &#8212; new clients always welcome.</p>
+  <a class="cta-cream-btn" href="tel:+19546138876">Book Your Appointment</a>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Find Us in Hollywood</h3>
+      <div class="ci-row"><div class="ci-icon">&#128222;</div><div class="ci-text"><a href="tel:+19546138876">(954) 613-8876</a></div></div>
+      <div class="ci-row"><div class="ci-icon">&#9993;</div><div class="ci-text"><a href="mailto:info@zariasalon.com">info@zariasalon.com</a></div></div>
+      <div class="ci-row"><div class="ci-icon">&#128205;</div><div class="ci-text"><span>2730 Hollywood Blvd<br>Hollywood, FL</span></div></div>
+      <div class="ci-row"><div class="ci-icon">&#128337;</div><div class="ci-text"><span>Tue&#8211;Sat: 10am&#8211;6pm</span></div></div>
+    </div>
+    <div>
+      <form action="https://formspree.io/f/xojppajv" method="POST">
+        <div class="form-title">Book Your Appointment</div>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone">
+        <textarea name="message" placeholder="What service are you interested in?" rows="4"></textarea>
+        <button class="submit-btn" type="submit">Book Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Zaria Salon &#8212; Hollywood, FL | <a href="tel:+19546138876">(954) 613-8876</a> | <a href="mailto:info@zariasalon.com">info@zariasalon.com</a></p>
+  <p style="margin-top:.5rem;font-size:.8rem;opacity:.5">Preview by <a href="https://almadigitalservices.com">Alma Digital Services</a></p>
+</footer>
+</body></html>
