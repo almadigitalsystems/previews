@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVAC Repair Fort Lauderdale | Cajun Bear AC Repair | Family-Owned</title>
+<meta name="description" content="Fort Lauderdale's trusted family-owned HVAC repair company. 20+ years experience, emergency weekend service, fast response. Call (954) 850-1204.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0a1628;--blue:#0066cc;--cyan:#00b8d9;--white:#fff;--light:#e8f4fd;--gray:#f5f7f9}
+body{font-family:'Roboto',sans-serif;color:#1a1a1a}
+nav{position:sticky;top:0;z-index:100;background:var(--navy);display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.nav-logo{color:var(--cyan);font-family:'Oswald',sans-serif;font-size:1.3rem;font-weight:700;text-decoration:none}
+.nav-phone{color:#fff;font-size:.95rem}
+.nav-phone a{color:#fff;text-decoration:none}
+.nav-cta{background:var(--cyan);color:var(--navy);padding:.55rem 1.3rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:.9rem;font-family:'Oswald',sans-serif}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#0d2244 60%,#0a1e3c 100%);min-height:85vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:4rem 2rem}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 70% 50%,rgba(0,184,217,.12) 0%,transparent 60%)}
+.hero-content{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(0,184,217,.15);border:1px solid var(--cyan);color:var(--cyan);padding:.4rem 1rem;border-radius:20px;font-size:.85rem;font-family:'Oswald',sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem}
+h1{font-family:'Oswald',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:1.5rem}
+h1 span{color:var(--cyan)}
+.hero p{font-size:1.15rem;color:rgba(255,255,255,.8);max-width:600px;margin-bottom:2rem;line-height:1.7}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--cyan);color:var(--navy);padding:1rem 2rem;border-radius:4px;text-decoration:none;font-weight:700;font-family:'Oswald',sans-serif;letter-spacing:1px;font-size:1rem}
+.btn-secondary{border:2px solid rgba(255,255,255,.5);color:#fff;padding:1rem 2rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:1rem}
+.stats-bar{background:var(--blue);padding:1.5rem 2rem}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center}
+.stat-num{font-family:'Oswald',sans-serif;font-size:2rem;font-weight:700;color:var(--cyan)}
+.stat-label{font-size:.85rem;color:rgba(255,255,255,.9)}
+.services{padding:5rem 2rem;background:var(--gray)}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-tag{display:inline-block;color:var(--blue);font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:.6rem}
+.section-title{font-family:'Oswald',sans-serif;font-size:2.4rem;font-weight:700;color:var(--navy);margin-bottom:1rem}
+.section-sub{color:#555;max-width:600px;margin-bottom:3rem;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+.service-card{background:#fff;border-radius:8px;padding:2rem;border-top:4px solid var(--cyan);box-shadow:0 2px 15px rgba(0,0,0,.06)}
+.service-icon{font-size:2.2rem;margin-bottom:1rem}
+.service-card h3{font-family:'Oswald',sans-serif;font-size:1.25rem;color:var(--navy);margin-bottom:.7rem}
+.service-card p{color:#666;line-height:1.6;font-size:.95rem}
+.about{padding:5rem 2rem;background:var(--navy)}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-img img{width:100%;height:auto;object-fit:cover;border-radius:8px;display:block}
+.about-text .section-tag{color:var(--cyan)}
+.about-text .section-title{color:#fff}
+.about-text p{color:rgba(255,255,255,.8);line-height:1.8;margin-bottom:1.5rem}
+.cta-band{background:linear-gradient(135deg,var(--blue) 0%,var(--cyan) 100%);padding:4rem 2rem;text-align:center}
+.cta-band h2{font-family:'Oswald',sans-serif;font-size:2.5rem;color:#fff;margin-bottom:1rem}
+.cta-band p{color:rgba(255,255,255,.9);font-size:1.1rem;margin-bottom:2rem}
+.cta-dark-btn{display:inline-block;background:var(--navy);color:#fff;padding:1.2rem 3rem;border-radius:4px;text-decoration:none;font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:1px}
+.contact{padding:5rem 2rem;background:#fff}
+.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.contact-info h3{font-family:'Oswald',sans-serif;font-size:1.5rem;color:var(--navy);margin-bottom:1.5rem}
+.contact-item{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.c-icon{width:40px;height:40px;background:var(--light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-item a{color:var(--navy);text-decoration:none;font-weight:500;font-size:1.05rem}
+.contact-item a:hover{color:var(--blue)}
+.contact-item span{color:#444;font-size:1rem}
+form{display:flex;flex-direction:column;gap:1rem}
+input,textarea{padding:.9rem;border:1px solid #ddd;border-radius:4px;font-size:1rem;font-family:inherit}
+textarea{resize:vertical}
+.form-title{font-family:'Oswald',sans-serif;font-size:1.5rem;color:var(--navy);margin-bottom:1.5rem}
+.submit-btn{background:var(--blue);color:#fff;padding:1rem;border:none;border-radius:4px;font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:700;cursor:pointer}
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:2rem;text-align:center;font-size:.9rem}
+footer a{color:var(--cyan);text-decoration:none}
+@media(max-width:768px){.stats-inner{grid-template-columns:repeat(2,1fr)}.about-inner,.contact-inner{grid-template-columns:1fr}nav{flex-direction:column;gap:.75rem;text-align:center}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="#">&#10052; Cajun Bear AC Repair</a>
+  <span class="nav-phone"><a href="tel:+19548501204">(954) 850-1204</a></span>
+  <a class="nav-cta" href="tel:+19548501204">Call Now</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Fort Lauderdale&#39;s Trusted HVAC Team</div>
+    <h1>HVAC Repair Done Right &#8212;<br><span>Fort Lauderdale&#39;s</span><br>Trusted Family Team</h1>
+    <p>20+ years of reliable AC service. No surprises, no runaround &#8212; just cold air, fast.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="tel:+19548501204">Call Now for a Free Estimate</a>
+      <a class="btn-secondary" href="mailto:info@cajunbearacrepair.com">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div><div class="stat-num">20+</div><div class="stat-label">Years of Experience</div></div>
+    <div><div class="stat-num">24/7</div><div class="stat-label">Emergency Service</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">Licensed &amp; Insured</div></div>
+    <div><div class="stat-num">Same</div><div class="stat-label">Day Service Available</div></div>
+  </div>
+</div>
+
+<section class="services">
+  <div class="section-inner">
+    <div class="section-tag">What We Do</div>
+    <h2 class="section-title">Our HVAC Services</h2>
+    <p class="section-sub">From emergency breakdowns to scheduled maintenance, Cajun Bear has South Florida covered.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#128680;</div><h3>Emergency AC Repair</h3><p>AC out on a Sunday? We show up. Emergency repairs on weekends and holidays when you need us most.</p></div>
+      <div class="service-card"><div class="service-icon">&#127968;</div><h3>Residential Maintenance</h3><p>Keep your home comfortable year-round with scheduled tune-ups and preventive maintenance plans.</p></div>
+      <div class="service-card"><div class="service-icon">&#127970;</div><h3>Commercial HVAC</h3><p>Installations, repairs, and maintenance contracts for offices and commercial spaces of any size.</p></div>
+      <div class="service-card"><div class="service-icon">&#9889;</div><h3>Same-Day Service</h3><p>Fast response when it matters most. Most same-day requests handled by end of business day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-inner">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80" alt="Cajun Bear AC Repair HVAC technician servicing unit in Fort Lauderdale" width="800" height="600" loading="eager">
+    </div>
+    <div class="about-text">
+      <div class="section-tag">Our Story</div>
+      <h2 class="section-title">Family-Owned.<br>Fort Lauderdale Proud.</h2>
+      <p>Cajun Bear AC Repair is a family-owned HVAC company serving Fort Lauderdale and surrounding South Florida communities. With 20+ years of hands-on experience, they specialize in fast, reliable air conditioning repairs for homes and businesses.</p>
+      <p>When your AC goes out during a South Florida summer, you need someone who actually shows up &#8212; not an answering service. That&#39;s why Cajun Bear offers emergency weekend availability when you need it most.</p>
+      <a class="btn-primary" href="tel:+19548501204">(954) 850-1204 &#8212; Call Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Ready for Cold Air? Let&#39;s Talk.</h2>
+  <p>Call now for a free estimate &#8212; no obligation, no runaround.</p>
+  <a class="cta-dark-btn" href="tel:+19548501204">Call Now for a Free Estimate</a>
+</section>
+
+<section class="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <div class="contact-item"><div class="c-icon">&#128222;</div><a href="tel:+19548501204">(954) 850-1204</a></div>
+      <div class="contact-item"><div class="c-icon">&#9993;</div><a href="mailto:info@cajunbearacrepair.com">info@cajunbearacrepair.com</a></div>
+      <div class="contact-item"><div class="c-icon">&#128205;</div><span>Fort Lauderdale, FL &amp; South Florida</span></div>
+      <div class="contact-item"><div class="c-icon">&#128336;</div><span>Emergency Weekend Service Available</span></div>
+    </div>
+    <div>
+      <div class="form-title">Request a Free Estimate</div>
+      <form action="https://formspree.io/f/xojppajv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone">
+        <textarea name="message" placeholder="Describe your AC issue" rows="4" required></textarea>
+        <button class="submit-btn" type="submit">Send Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Cajun Bear AC Repair &#8212; Fort Lauderdale, FL | <a href="tel:+19548501204">(954) 850-1204</a> | <a href="mailto:info@cajunbearacrepair.com">info@cajunbearacrepair.com</a></p>
+  <p style="margin-top:.5rem;font-size:.8rem;opacity:.5">Preview by <a href="https://almadigitalservices.com">Alma Digital Services</a></p>
+</footer>
+</body></html>
