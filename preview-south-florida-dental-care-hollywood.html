@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hollywood FL Dentist | South Florida Dental Care | Dr. Frydman &amp; Cohen</title>
+<meta name="description" content="Hollywood FL dentists with 60+ years combined experience. General and cosmetic dentistry, dental implants, and more. 99.5% patient satisfaction. Call (954) 966-6410.">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--charcoal:#1a2744;--blue:#1a73e8;--mint:#e8f5f0;--soft-blue:#e8f0fe;--white:#fff;--gray:#f8f9fa;--text:#333}
+body{font-family:'Lato',sans-serif;color:var(--text)}
+/* Top Bar */
+.top-bar{background:var(--charcoal);color:rgba(255,255,255,.85);padding:.6rem 2rem;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}
+.top-bar a{color:rgba(255,255,255,.85);text-decoration:none}
+.top-bar a:hover{color:#fff}
+/* Main Nav */
+.main-nav{background:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+.main-nav .logo{font-family:'Merriweather',serif;color:var(--charcoal);font-size:1.1rem;font-weight:700;text-decoration:none}
+.main-nav .logo span{color:var(--blue);display:block;font-size:.75rem;font-weight:300;letter-spacing:1px}
+.nav-links a{color:var(--charcoal);text-decoration:none;margin-left:1.5rem;font-size:.9rem;font-weight:600}
+.nav-cta-btn{background:var(--blue);color:#fff!important;padding:.6rem 1.4rem;border-radius:4px;margin-left:1.5rem!important}
+/* Hero Banner */
+.hero-banner{background:linear-gradient(135deg,var(--charcoal) 0%,#1e3a6e 100%);padding:5rem 2rem;position:relative;overflow:hidden}
+.hero-banner::before{content:'';position:absolute;top:0;right:0;width:45%;height:100%;background:url('https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&q=80') center/cover no-repeat;opacity:.3}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.hero-kicker{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);padding:.4rem 1rem;border-radius:20px;font-size:.85rem;letter-spacing:1px;margin-bottom:1.5rem}
+.hero-banner h1{font-family:'Merriweather',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;color:#fff;line-height:1.2;max-width:650px;margin-bottom:1.5rem}
+.hero-banner p{color:rgba(255,255,255,.8);font-size:1.1rem;max-width:550px;line-height:1.7;margin-bottom:2rem}
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:'Merriweather',serif;font-size:2rem;font-weight:700;color:#7dd3fc}
+.hero-stat-label{color:rgba(255,255,255,.7);font-size:.8rem;margin-top:.2rem}
+.hero-banner .cta-btn{display:inline-block;background:var(--blue);color:#fff;padding:1rem 2.2rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:1rem;margin-right:1rem}
+.hero-banner .sec-btn{display:inline-block;border:2px solid rgba(255,255,255,.4);color:#fff;padding:1rem 2.2rem;border-radius:4px;text-decoration:none;font-weight:600;font-size:1rem}
+/* About */
+.about-section{padding:5rem 2rem;background:#fff}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-img img{width:100%;height:auto;border-radius:12px;object-fit:cover;display:block;box-shadow:0 8px 30px rgba(0,0,0,.1)}
+.section-eyebrow{color:var(--blue);font-size:.85rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:.75rem}
+h2{font-family:'Merriweather',serif;font-size:2.2rem;font-weight:700;color:var(--charcoal);margin-bottom:1.2rem;line-height:1.3}
+.about-section p{color:#555;line-height:1.8;margin-bottom:1.2rem;font-size:1rem}
+.trust-badges{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.5rem}
+.badge{background:var(--soft-blue);color:var(--blue);padding:.5rem 1rem;border-radius:6px;font-size:.85rem;font-weight:600}
+/* Services */
+.services-section{background:var(--gray);padding:5rem 2rem}
+.services-inner{max-width:1100px;margin:0 auto;text-align:center}
+.services-inner h2{margin-bottom:.75rem}
+.services-inner .intro{color:#555;max-width:600px;margin:0 auto 3rem;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;text-align:left}
+.svc-card{background:#fff;border-radius:10px;padding:1.8rem;border-left:4px solid var(--blue);box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.svc-card h3{font-family:'Merriweather',serif;font-size:1.05rem;color:var(--charcoal);margin-bottom:.6rem}
+.svc-card p{color:#666;font-size:.9rem;line-height:1.5}
+/* CTA */
+.cta-section{background:var(--charcoal);padding:4.5rem 2rem;text-align:center}
+.cta-section h2{font-family:'Merriweather',serif;font-size:2.2rem;color:#fff;margin-bottom:1rem}
+.cta-section p{color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:2rem}
+.cta-main-btn{display:inline-block;background:var(--blue);color:#fff;padding:1.1rem 2.8rem;border-radius:4px;text-decoration:none;font-weight:700;font-size:1.05rem;letter-spacing:.5px}
+/* Contact */
+.contact-section{padding:5rem 2rem;background:var(--mint)}
+.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.contact-info h3{font-family:'Merriweather',serif;font-size:1.4rem;color:var(--charcoal);margin-bottom:1.5rem}
+.ci-row{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.3rem}
+.ci-icon{width:38px;height:38px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:#fff}
+.ci-text{color:#444;line-height:1.5}
+.ci-text a{color:var(--charcoal);text-decoration:none;font-weight:600;font-size:1.05rem}
+.ci-text a:hover{color:var(--blue)}
+form{display:flex;flex-direction:column;gap:1rem;background:#fff;padding:2rem;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.07)}
+.form-title{font-family:'Merriweather',serif;font-size:1.3rem;color:var(--charcoal);margin-bottom:.5rem}
+input,textarea{padding:.9rem;border:1.5px solid #d0dce8;border-radius:6px;font-size:1rem;font-family:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--blue)}
+.submit-btn{background:var(--blue);color:#fff;padding:1rem;border:none;border-radius:6px;font-family:'Lato',sans-serif;font-size:1rem;font-weight:700;cursor:pointer}
+footer{background:var(--charcoal);color:rgba(255,255,255,.65);padding:2rem;text-align:center;font-size:.9rem}
+footer a{color:#7dd3fc;text-decoration:none}
+@media(max-width:768px){.about-inner,.contact-inner{grid-template-columns:1fr}.main-nav .nav-links{display:none}.top-bar{flex-direction:column;gap:.4rem;text-align:center}.hero-stats{gap:1rem}}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <span>4030 Sheridan Street, Suite B, Hollywood, FL</span>
+  <span><a href="tel:+19549666410">(954) 966-6410</a> &nbsp;|&nbsp; <a href="mailto:info@southfloridadentalcare.com">info@southfloridadentalcare.com</a></span>
+</div>
+
+<nav class="main-nav">
+  <a class="logo" href="#">South Florida Dental Care<span>Dr. Frydman &amp; Dr. Cohen</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+19549666410" class="nav-cta-btn">Request Appointment</a>
+  </div>
+</nav>
+
+<section class="hero-banner">
+  <div class="hero-inner">
+    <div class="hero-kicker">&#11088; Hollywood, FL&#39;s Trusted Dental Practice</div>
+    <h1>60+ Years of Dental Excellence &#8212; Hollywood, Florida</h1>
+    <p>General and cosmetic dentistry by Dr. Frydman and Dr. Cohen. Accepting new patients at 4030 Sheridan Street.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">60+</div><div class="hero-stat-label">Years Combined Experience</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">99.5%</div><div class="hero-stat-label">Patient Referral Rate</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">2</div><div class="hero-stat-label">Expert Doctors on Staff</div></div>
+    </div>
+    <a class="cta-btn" href="tel:+19549666410">Request an Appointment</a>
+    <a class="sec-btn" href="mailto:info@southfloridadentalcare.com">Email Us</a>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800&q=80" alt="South Florida Dental Care office in Hollywood FL with Dr. Frydman and Dr. Cohen" width="800" height="600" loading="eager">
+    </div>
+    <div>
+      <span class="section-eyebrow">About the Practice</span>
+      <h2>A Hollywood Community Cornerstone</h2>
+      <p>South Florida Dental Care, led by Dr. Leonardo Frydman (DMD, CAGS) and Dr. Gabriela Cohen (DMD), has been a trusted name in Hollywood-area dentistry for decades.</p>
+      <p>With over 60 years of combined experience and a 99.5% patient referral rate, the practice is built on personalized care and lasting patient relationships &#8212; located conveniently at 4030 Sheridan Street, Suite B.</p>
+      <div class="trust-badges">
+        <span class="badge">DMD, CAGS Certified</span>
+        <span class="badge">99.5% Referral Rate</span>
+        <span class="badge">New Patients Welcome</span>
+        <span class="badge">Hollywood, FL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="services-inner">
+    <span class="section-eyebrow">What We Offer</span>
+    <h2>Comprehensive Dental Services</h2>
+    <p class="intro">From routine cleanings to advanced cosmetic procedures &#8212; everything your smile needs under one roof.</p>
+    <div class="services-grid">
+      <div class="svc-card"><h3>&#129463; General Dentistry</h3><p>Routine exams, cleanings, fillings, and preventive care to keep your smile healthy.</p></div>
+      <div class="svc-card"><h3>&#10024; Cosmetic Dentistry</h3><p>Veneers, bonding, whitening, and smile makeovers tailored to your goals.</p></div>
+      <div class="svc-card"><h3>&#128247; Dental Implants</h3><p>Natural-looking permanent replacements for missing teeth by our experienced team.</p></div>
+      <div class="svc-card"><h3>&#9728; Teeth Whitening</h3><p>Professional whitening treatments for a brighter, more confident smile.</p></div>
+      <div class="svc-card"><h3>&#127970; Prosthodontics</h3><p>Crowns, bridges, dentures, and full mouth reconstructions for lasting results.</p></div>
+      <div class="svc-card"><h3>&#128680; Emergency Dental</h3><p>Urgent care for dental pain, trauma, and unexpected dental emergencies.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Accepting New Patients &#8212; Call Us Today</h2>
+  <p>Experience the care Hollywood has trusted for decades. Dr. Frydman and Dr. Cohen are ready to welcome you.</p>
+  <a class="cta-main-btn" href="tel:+19549666410">Request an Appointment</a>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Visit Us in Hollywood</h3>
+      <div class="ci-row"><div class="ci-icon">&#128222;</div><div class="ci-text"><a href="tel:+19549666410">(954) 966-6410</a></div></div>
+      <div class="ci-row"><div class="ci-icon">&#9993;</div><div class="ci-text"><a href="mailto:info@southfloridadentalcare.com">info@southfloridadentalcare.com</a></div></div>
+      <div class="ci-row"><div class="ci-icon">&#128205;</div><div class="ci-text">4030 Sheridan Street, Suite B<br>Hollywood, FL</div></div>
+      <div class="ci-row"><div class="ci-icon">&#128337;</div><div class="ci-text">Mon&#8211;Fri: 9am&#8211;5pm<br>Appointments Available</div></div>
+    </div>
+    <div>
+      <form action="https://formspree.io/f/xojppajv" method="POST">
+        <div class="form-title">Request an Appointment</div>
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone">
+        <textarea name="message" placeholder="Any specific concerns or questions?" rows="4"></textarea>
+        <button class="submit-btn" type="submit">Request Appointment</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 South Florida Dental Care &#8212; Dr. Frydman &amp; Dr. Cohen | <a href="tel:+19549666410">(954) 966-6410</a> | <a href="mailto:info@southfloridadentalcare.com">info@southfloridadentalcare.com</a></p>
+  <p style="margin-top:.5rem;font-size:.8rem;opacity:.5">Preview by <a href="https://almadigitalservices.com">Alma Digital Services</a></p>
+</footer>
+</body></html>
