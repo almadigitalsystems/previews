@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miami Full-Service Salon | Saints-N-Scissors | Hair, Nails, Microblading</title>
+<meta name="description" content="North Miami's rebel beauty destination since 2014. Expert hair, nails, microblading, lash extensions, tattoos and more. Call (305) 981-2220 to book.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#0a0a0a;--near-black:#111;--gold:#c9a227;--gold-light:#e8c547;--burgundy:#4a1020;--white:#f5f5f5;--gray:#1a1a1a;--mid:#888}
+body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--white)}
+/* Nav */
+nav{padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1f1f1f}
+.logo{font-family:'Bebas Neue',cursive;font-size:1.8rem;color:var(--white);text-decoration:none;letter-spacing:3px}
+.logo span{color:var(--gold)}
+nav ul{list-style:none;display:flex;gap:2rem;align-items:center}
+nav ul a{color:var(--mid);text-decoration:none;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;font-weight:500;transition:color .3s}
+nav ul a:hover{color:var(--gold)}
+.nav-book{border:1px solid var(--gold)!important;color:var(--gold)!important;padding:.5rem 1.3rem}
+/* Hero */
+.hero{min-height:90vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.hero-left{background:var(--near-black);padding:6rem 4rem;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+.hero-left::after{content:'';position:absolute;top:0;right:0;width:1px;height:100%;background:linear-gradient(to bottom,transparent,var(--gold),transparent)}
+.hero-kicker{color:var(--gold);font-size:.75rem;letter-spacing:4px;text-transform:uppercase;font-weight:600;margin-bottom:2rem}
+.hero h1{font-family:'Bebas Neue',cursive;font-size:clamp(4rem,8vw,7rem);line-height:.95;color:var(--white);margin-bottom:2rem;letter-spacing:2px}
+.hero h1 em{color:var(--gold);font-style:normal;display:block}
+.hero-sub{color:var(--mid);font-size:1rem;line-height:1.7;max-width:420px;margin-bottom:1.5rem;font-weight:300}
+.est{color:#555;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--black);padding:1rem 2.2rem;text-decoration:none;font-family:'Bebas Neue',cursive;font-size:1.1rem;letter-spacing:2px}
+.btn-ghost{display:inline-block;border:1px solid #333;color:var(--white);padding:1rem 2.2rem;text-decoration:none;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;font-weight:500}
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.7)}
+.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--near-black) 0%,transparent 40%)}
+/* Since badge */
+.since-badge{position:absolute;bottom:2rem;right:2rem;background:var(--gold);color:var(--black);padding:1rem 1.5rem;font-family:'Bebas Neue',cursive;font-size:1.5rem;letter-spacing:2px}
+/* Services */
+.services-section{padding:6rem 2rem;background:var(--near-black)}
+.inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:.75rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;font-weight:600;display:block;margin-bottom:1.5rem}
+.section-title{font-family:'Bebas Neue',cursive;font-size:clamp(3rem,6vw,5rem);color:var(--white);line-height:.95;margin-bottom:3rem;letter-spacing:2px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#1f1f1f}
+.svc-item{padding:2.5rem 2rem;background:var(--black);position:relative;overflow:hidden}
+.svc-item::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s}
+.svc-item:hover::before{width:100%}
+.svc-num{font-family:'Bebas Neue',cursive;font-size:3rem;color:#1f1f1f;position:absolute;top:.5rem;right:1rem;line-height:1}
+.svc-icon{font-size:1.8rem;margin-bottom:1rem}
+.svc-item h3{font-family:'Bebas Neue',cursive;font-size:1.4rem;color:var(--white);letter-spacing:1px;margin-bottom:.6rem}
+.svc-item p{color:var(--mid);font-size:.85rem;line-height:1.6;font-weight:300}
+/* About */
+.about-section{padding:6rem 2rem;background:var(--black)}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center}
+.about-text .section-label{color:var(--gold)}
+.about-text h2{font-family:'Bebas Neue',cursive;font-size:clamp(2.5rem,5vw,4rem);color:var(--white);letter-spacing:2px;line-height:1;margin-bottom:2rem}
+.about-text p{color:var(--mid);line-height:1.8;font-size:.95rem;font-weight:300;margin-bottom:1.2rem}
+.about-text strong{color:var(--white);font-weight:600}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;display:block;border:1px solid #1f1f1f}
+.about-img::before{content:'';position:absolute;top:-1rem;left:-1rem;right:1rem;bottom:1rem;border:1px solid var(--gold);z-index:0}
+.about-img img{position:relative;z-index:1}
+/* CTA */
+.cta-section{background:var(--burgundy);padding:5rem 2rem;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'SNS';font-family:'Bebas Neue',cursive;font-size:20rem;color:rgba(0,0,0,.15);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap}
+.cta-section h2{font-family:'Bebas Neue',cursive;font-size:clamp(3rem,7vw,5.5rem);color:var(--white);letter-spacing:3px;margin-bottom:1rem;position:relative}
+.cta-section p{color:rgba(255,255,255,.7);font-size:1rem;margin-bottom:2.5rem;position:relative;font-weight:300}
+.cta-gold-btn{display:inline-block;background:var(--gold);color:var(--black);padding:1.2rem 3.5rem;text-decoration:none;font-family:'Bebas Neue',cursive;font-size:1.3rem;letter-spacing:3px;position:relative}
+/* Contact */
+.contact-section{padding:5rem 2rem;background:var(--near-black)}
+.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.contact-info h3{font-family:'Bebas Neue',cursive;font-size:2rem;color:var(--white);letter-spacing:2px;margin-bottom:2rem}
+.ci-row{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.3rem;border-bottom:1px solid #1f1f1f;padding-bottom:1.3rem}
+.ci-icon{font-size:1.1rem;color:var(--gold);width:24px;text-align:center}
+.ci-row a{color:var(--white);text-decoration:none;font-size:.95rem;font-weight:500}
+.ci-row a:hover{color:var(--gold)}
+.ci-row span{color:var(--mid);font-size:.9rem;font-weight:300}
+form{display:flex;flex-direction:column;gap:1rem}
+.form-title{font-family:'Bebas Neue',cursive;font-size:1.8rem;color:var(--white);letter-spacing:2px;margin-bottom:.5rem}
+input,textarea{padding:.9rem 1rem;background:#1a1a1a;border:1px solid #2a2a2a;color:var(--white);font-size:.95rem;font-family:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+input::placeholder,textarea::placeholder{color:#555}
+.submit-btn{background:var(--gold);color:var(--black);padding:1rem;border:none;font-family:'Bebas Neue',cursive;font-size:1.2rem;letter-spacing:2px;cursor:pointer}
+footer{border-top:1px solid #1f1f1f;padding:2rem;text-align:center;background:var(--black);color:#444;font-size:.85rem}
+footer a{color:var(--gold);text-decoration:none}
+@media(max-width:768px){.hero{grid-template-columns:1fr}.hero-right{height:300px}.hero-left{padding:3rem 1.5rem}.about-inner,.contact-inner{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr 1fr}nav ul{display:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#"><span>Saints</span>-N-Scissors</a>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:+13059812220" class="nav-book">Book Your Chair</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-kicker">North Miami, FL &nbsp;&#8231;&nbsp; Full-Service Salon &amp; Body Art</div>
+    <h1>Rebel <em>Glamour</em></h1>
+    <p class="hero-sub">Full-service salon specialists in hair, nails, microblading, lash extensions, and ink &#8212; since 2014.</p>
+    <p class="est">Est. 2014 &nbsp;&#8231;&nbsp; 11091 Biscayne Blvd, Suite B</p>
+    <div class="hero-btns">
+      <a class="btn-gold" href="tel:+13059812220">Book Your Chair</a>
+      <a class="btn-ghost" href="mailto:info@saints-n-scissors.com">Email Us</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1560066984-138daab0b14f?w=800&q=80" alt="Saints-N-Scissors full service salon interior North Miami FL" width="800" height="600" loading="eager">
+    <div class="since-badge">Since 2014</div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="inner">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Full-Service.<br>No Limits.</h2>
+    <div class="services-grid">
+      <div class="svc-item"><span class="svc-num">01</span><div class="svc-icon">&#9986;</div><h3>Haircuts &amp; Color</h3><p>Expert cuts and color for curly, long, and damaged hair &#8212; our specialty since day one.</p></div>
+      <div class="svc-item"><span class="svc-num">02</span><div class="svc-icon">&#128247;</div><h3>Microblading</h3><p>Precision brow definition that looks natural and lasts. Semi-permanent perfection.</p></div>
+      <div class="svc-item"><span class="svc-num">03</span><div class="svc-icon">&#10024;</div><h3>Lash Extensions</h3><p>Volume, hybrid, and classic sets applied by certified lash artists.</p></div>
+      <div class="svc-item"><span class="svc-num">04</span><div class="svc-icon">&#128141;</div><h3>Manicures &amp; Pedicures</h3><p>Gel, acrylic, dip &#8212; hands and feet treated with the care they deserve.</p></div>
+      <div class="svc-item"><span class="svc-num">05</span><div class="svc-icon">&#128167;</div><h3>Waxing</h3><p>Professional full-body waxing services in a comfortable, private setting.</p></div>
+      <div class="svc-item"><span class="svc-num">06</span><div class="svc-icon">&#129305;</div><h3>Tattoos</h3><p>Custom ink by skilled artists. Consult with our team to design your next piece.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <span class="section-label">Our Story</span>
+      <h2>Born From Passion. Built on Loyalty.</h2>
+      <p>Founded in 2014 by <strong>three passionate Miami stylists</strong>, Saints-N-Scissors is North Miami&#39;s full-service salon and body art destination.</p>
+      <p>Known for their expertise in curly, long, and damaged hair, they&#39;ve built a loyal following on personalized service and a vibe that&#39;s equal parts <strong>edgy and welcoming</strong>.</p>
+      <p>Find them at <strong>11091 Biscayne Blvd, Suite B</strong> &#8212; where rebels get glam and everyone leaves looking exactly like themselves, only better.</p>
+    </div>
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80" alt="Saints-N-Scissors salon stylists working at Biscayne Blvd North Miami" width="800" height="600" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Your Chair is Waiting</h2>
+  <p>Call or book online &#8212; walk-ins welcome when available.</p>
+  <a class="cta-gold-btn" href="tel:+13059812220">Book Your Chair</a>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <h3>Find Us</h3>
+      <div class="ci-row"><div class="ci-icon">&#128222;</div><a href="tel:+13059812220">(305) 981-2220</a></div>
+      <div class="ci-row"><div class="ci-icon">&#9993;</div><a href="mailto:info@saints-n-scissors.com">info@saints-n-scissors.com</a></div>
+      <div class="ci-row"><div class="ci-icon">&#128205;</div><span>11091 Biscayne Blvd, Suite B<br>North Miami, FL</span></div>
+      <div class="ci-row"><div class="ci-icon">&#128337;</div><span>Call to confirm current hours</span></div>
+    </div>
+    <div>
+      <div class="form-title">Book Your Chair</div>
+      <form action="https://formspree.io/f/xojppajv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone">
+        <textarea name="message" placeholder="What service are you looking for?" rows="4"></textarea>
+        <button class="submit-btn" type="submit">Book Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Saints-N-Scissors &nbsp;&#8231;&nbsp; 11091 Biscayne Blvd, Suite B, North Miami, FL &nbsp;&#8231;&nbsp; <a href="tel:+13059812220">(305) 981-2220</a> &nbsp;&#8231;&nbsp; <a href="mailto:info@saints-n-scissors.com">info@saints-n-scissors.com</a></p>
+  <p style="margin-top:.5rem;opacity:.4">Preview by <a href="https://almadigitalservices.com">Alma Digital Services</a></p>
+</footer>
+</body></html>
