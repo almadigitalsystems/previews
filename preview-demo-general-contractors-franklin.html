@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo General Contractors | Franklin, TN — Quality Home Remodeling</title>
+  <meta name="description" content="Demo General Contractors in Franklin, TN specializes in kitchen remodeling, bathroom renovation, home additions, roofing, and complete home renovations. Licensed and bonded, free project estimates." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --charcoal: #1c1c1e;
+      --charcoal-mid: #252528;
+      --amber: #c97b2a;
+      --amber-light: #e09944;
+      --warm-silver: #c8c0b0;
+      --white: #ffffff;
+      --warm-off-white: #f7f4f0;
+      --gray: #7a7068;
+      --stone: #3a3530;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(28, 28, 30, 0.97);
+      backdrop-filter: blur(8px);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      border-bottom: 1px solid rgba(201,123,42,0.25);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--amber), #9a5c10);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-text {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .nav-logo-text span { color: var(--amber-light); font-size: 0.75rem; display: block; font-weight: 500; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: var(--warm-silver);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--amber-light); }
+
+    .nav-cta {
+      background: var(--amber) !important;
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--amber-light) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-mid) 50%, #1e1c18 100%);
+      display: flex;
+      align-items: center;
+      padding: 100px 5% 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -150px; left: -150px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(201,123,42,0.09) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 450px; height: 450px;
+      background: radial-gradient(circle, rgba(201,123,42,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    /* Reversed: image on left, text on right */
+    .hero-image-wrap { order: -1; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,123,42,0.15);
+      border: 1px solid rgba(201,123,42,0.4);
+      color: var(--amber-light);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--amber-light);
+    }
+
+    .hero-sub {
+      font-size: 1.08rem;
+      color: var(--warm-silver);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 44px;
+    }
+
+    .btn-primary {
+      background: var(--amber);
+      color: var(--white);
+      padding: 15px 30px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--amber-light); transform: translateY(-2px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 15px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 2px solid rgba(200,192,176,0.4);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: var(--amber-light); color: var(--amber-light); }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--warm-silver);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .trust-badge .check {
+      width: 20px; height: 20px;
+      background: rgba(201,123,42,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber-light);
+      font-size: 11px;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+      display: block;
+    }
+
+    .hero-card {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 18px 22px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    }
+
+    .hero-card-label { font-size: 0.72rem; color: var(--gray); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+    .hero-card-value { font-size: 1.6rem; font-weight: 800; color: var(--charcoal); line-height: 1; margin: 4px 0; }
+    .hero-card-sub { font-size: 0.8rem; color: var(--amber); font-weight: 600; display: flex; align-items: center; gap: 5px; }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--amber);
+      padding: 28px 5%;
+    }
+
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat-item { color: var(--white); }
+    .stat-num { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-label { font-size: 0.85rem; opacity: 0.88; font-weight: 500; margin-top: 4px; }
+
+    /* ── SERVICES ── */
+    .services {
+      padding: 90px 5%;
+      background: var(--warm-off-white);
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--charcoal);
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 560px;
+      margin-bottom: 50px;
+    }
+
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 32px 28px;
+      border: 1px solid #ddd8d0;
+      transition: box-shadow 0.25s, transform 0.2s, border-color 0.25s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 16px 48px rgba(201,123,42,0.14);
+      transform: translateY(-4px);
+      border-color: var(--amber-light);
+    }
+
+    .service-icon {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, rgba(201,123,42,0.14), rgba(201,123,42,0.06));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 90px 5%;
+      background: var(--white);
+    }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 20px 60px rgba(28,28,30,0.14);
+      display: block;
+    }
+
+    .about-content p {
+      font-size: 1.05rem;
+      color: #4a4238;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    .feature-dot {
+      width: 8px; height: 8px;
+      background: var(--amber);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      padding: 90px 5%;
+      background: var(--charcoal);
+    }
+
+    .testimonials .section-title { color: var(--white); }
+    .testimonials .section-label { color: var(--amber-light); }
+    .testimonials .section-sub { color: var(--warm-silver); }
+
+    .testimonials-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,123,42,0.22);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .stars { color: #fbbf24; font-size: 1rem; margin-bottom: 14px; }
+
+    .testimonial-card blockquote {
+      font-size: 0.95rem;
+      color: var(--warm-silver);
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .reviewer { font-weight: 700; color: var(--white); font-size: 0.9rem; }
+    .reviewer-loc { font-size: 0.8rem; color: var(--amber-light); }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: linear-gradient(135deg, #7a4a0a 0%, var(--amber) 100%);
+      padding: 80px 5%;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.88);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: #7a4a0a;
+      padding: 16px 34px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      padding: 16px 30px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.6);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+    /* ── CONTACT ── */
+    .contact {
+      padding: 90px 5%;
+      background: var(--warm-off-white);
+    }
+
+    .contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    .contact-info p {
+      color: var(--gray);
+      margin-bottom: 30px;
+      font-size: 0.97rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .contact-detail-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, rgba(201,123,42,0.15), rgba(201,123,42,0.06));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-detail-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--gray);
+    }
+
+    .contact-detail-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-top: 2px;
+    }
+
+    .contact-detail-value a {
+      color: var(--charcoal);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-detail-value a:hover { color: var(--amber); }
+
+    .contact-form {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 36px;
+      box-shadow: 0 8px 32px rgba(28,28,30,0.08);
+    }
+
+    .contact-form h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 22px;
+    }
+
+    .form-group { margin-bottom: 18px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #d8d0c4;
+      border-radius: 7px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--amber); }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--amber);
+      color: var(--white);
+      padding: 14px;
+      border: none;
+      border-radius: 7px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 6px;
+    }
+
+    .form-submit:hover { background: var(--amber-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal);
+      padding: 50px 5% 28px;
+      color: var(--warm-silver);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin: 12px 0 20px;
+      line-height: 1.65;
+    }
+
+    .footer-phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--amber-light);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-col ul li a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--amber-light); }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--gray);
+    }
+
+    /* ── PREVIEW BANNER ── */
+    .preview-banner {
+      background: linear-gradient(90deg, #1a1a2e, #0e2044);
+      border-top: 2px solid #00b4d8;
+      padding: 14px 5%;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #e0e0e0;
+    }
+
+    .preview-banner strong { color: #00b4d8; }
+
+    .preview-banner a {
+      color: #00b4d8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner, .about-inner, .contact-inner { grid-template-columns: 1fr; }
+      .hero-image-wrap { order: unset; }
+      .hero-img, .about-img { height: 300px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .nav-links { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 580px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="nav-logo-text">
+        Demo General Contractors
+        <span>Licensed &amp; Bonded · Franklin, TN</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+16155550300" class="nav-cta">Call Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-image-wrap" style="position:relative;">
+        <img
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80"
+          alt="General contractor overseeing home renovation project in Franklin Tennessee"
+          width="800"
+          height="460"
+          loading="eager"
+          class="hero-img"
+        />
+        <div class="hero-card">
+          <div class="hero-card-label">Projects Completed</div>
+          <div class="hero-card-value">300+</div>
+          <div class="hero-card-sub">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#c97b2a" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Franklin &amp; surrounding areas
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="hero-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Franklin's Trusted Contractors
+        </div>
+        <h1>Franklin's Remodeling Experts — <em>Quality Craftsmanship</em> That Adds Real Value</h1>
+        <p class="hero-sub">From kitchen renovations to full home additions, Demo General Contractors delivers projects on time, on budget, and built to last. Licensed, bonded, and backed by 20 years of building Franklin homes right.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            Get Your Free Project Estimate →
+          </a>
+          <a href="#contact" class="btn-secondary">
+            See Your Website Preview
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-badge"><div class="check">✓</div> Licensed &amp; Bonded</div>
+          <div class="trust-badge"><div class="check">✓</div> Free Estimates</div>
+          <div class="trust-badge"><div class="check">✓</div> 20+ Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num">300+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years in Franklin</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Licensed &amp; Bonded</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5★</div>
+        <div class="stat-label">Google Rated</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-label">What We Build</div>
+      <h2 class="section-title">Complete Home Remodeling &amp; Construction<br>for Franklin Homeowners</h2>
+      <p class="section-sub">From single-room renovations to full home additions — professional craftsmanship, honest timelines, and work that adds real value to your home.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          </div>
+          <h3>Kitchen Remodeling</h3>
+          <p>Transform your kitchen from dated to stunning. Cabinets, countertops, islands, lighting, and full layout redesigns — done beautifully and on time.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M9 4v16"/><path d="M4 9h5"/></svg>
+          </div>
+          <h3>Bathroom Renovation</h3>
+          <p>Master baths, guest baths, and en-suites rebuilt to modern standards. We handle tile, fixtures, vanities, showers, and plumbing coordination.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Home Additions &amp; Extensions</h3>
+          <p>Need more space? We design and build seamless additions — master suites, sunrooms, garages, second stories — that match your home perfectly.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20M4 20V10.5L12 4l8 6.5V20"/><path d="M10 20v-6h4v6"/></svg>
+          </div>
+          <h3>Roofing &amp; Siding</h3>
+          <p>Full roof replacements, repairs, and re-roofing. Plus siding installations in vinyl, fiber cement, or wood that protect your home and boost curb appeal.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          </div>
+          <h3>Deck &amp; Patio Construction</h3>
+          <p>Extend your living space outdoors. Custom wood and composite decks, covered patios, pergolas, and outdoor kitchens built to last Tennessee summers.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Interior Remodeling</h3>
+          <p>Basements, living rooms, home offices, and whole-home makeovers. Flooring, drywall, painting, trim, and everything in between done right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+          alt="Demo General Contractors team at a remodeling project in Franklin Tennessee"
+          width="800"
+          height="440"
+          loading="lazy"
+          class="about-img"
+        />
+      </div>
+      <div class="about-content">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Franklin's Remodeling Contractor That Delivers What It Promises</h2>
+        <p>Demo General Contractors has been building and renovating Franklin homes for over 20 years. Our reputation is built on one thing: doing exactly what we say we'll do, for exactly what we quoted, finished when we committed.</p>
+        <p>Our licensed tradespeople take pride in their craft — clean job sites, honest communication, and work that stands up to inspection and adds real value to your home. When Franklin homeowners want it done right, they call Demo GC.</p>
+        <div class="about-features">
+          <div class="feature-row"><span class="feature-dot"></span> Licensed general contractor, fully bonded &amp; insured</div>
+          <div class="feature-row"><span class="feature-dot"></span> Free detailed written estimates — no surprises</div>
+          <div class="feature-row"><span class="feature-dot"></span> Projects finished on time and on budget</div>
+          <div class="feature-row"><span class="feature-dot"></span> Clean job sites — we respect your home</div>
+          <div class="feature-row"><span class="feature-dot"></span> All work permitted and code-compliant</div>
+        </div>
+        <a href="#contact" class="btn-primary">Get Your Free Project Estimate →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-label">What Franklin Says</div>
+      <h2 class="section-title">Trusted by Homeowners Across Franklin &amp; Williamson County</h2>
+      <p class="section-sub" style="margin-bottom:48px;">Real stories from Franklin homeowners who trusted Demo GC with their most important investment.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"We hired Demo GC for a full kitchen gut-and-remodel. Came in exactly on budget, finished two days early, and the craftsmanship is beautiful. Every contractor we've had since has asked who did our kitchen. Highly recommend."</blockquote>
+          <div class="reviewer">Mike &amp; Lisa R.</div>
+          <div class="reviewer-loc">Franklin Homeowners</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"They built a 600 sq ft addition onto our home and it looks like it was always there. Seamless integration, perfect match on the exterior, and zero headaches through the whole process. These guys are the real deal in Franklin."</blockquote>
+          <div class="reviewer">Patricia H.</div>
+          <div class="reviewer-loc">Franklin, Brentwood Area</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"After two bad experiences with other contractors, Demo GC restored my faith. They showed up every day, communicated constantly, and delivered a master bathroom renovation that exceeded what I even imagined. Worth every penny."</blockquote>
+          <div class="reviewer">Chris &amp; Amy W.</div>
+          <div class="reviewer-loc">Franklin Residents, 8 years</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Ready to Transform Your Home?</h2>
+    <p>Free detailed estimates, licensed professionals, and work that adds real value. Let's talk about your project today.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn-white">Get Your Free Project Estimate</a>
+      <a href="#contact" class="btn-outline-white">See Your Website Preview — No Payment Required</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title" style="margin-bottom:8px;">Call Us or Request a Free Project Estimate</h2>
+      <p style="color:var(--gray);margin-bottom:50px;">We respond within one business day. Free, no-obligation estimates for all projects.</p>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-info">
+        <h3>Demo General Contractors</h3>
+        <p>Serving Franklin, Brentwood, Spring Hill, and all of Williamson County. Licensed, bonded, and built on 20 years of trust.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">Call or Text</div>
+            <div class="contact-detail-value"><a href="tel:+16155550300">(615) 555-0300</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">Email Us</div>
+            <div class="contact-detail-value"><a href="mailto:info@demogc.com">info@demogc.com</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">Service Area</div>
+            <div class="contact-detail-value">Franklin, Brentwood, Spring Hill &amp; Williamson County</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c97b2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">Hours</div>
+            <div class="contact-detail-value">Mon–Fri 7am–6pm · Sat 8am–3pm</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Request Your Free Project Estimate</h3>
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <input type="hidden" name="_subject" value="New Estimate Request — Demo General Contractors" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="first_name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(615) 555-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Project Type</label>
+            <select id="service" name="service">
+              <option value="">Select a project type…</option>
+              <option>Kitchen Remodeling</option>
+              <option>Bathroom Renovation</option>
+              <option>Home Addition / Extension</option>
+              <option>Roofing</option>
+              <option>Siding</option>
+              <option>Deck / Patio</option>
+              <option>Interior Remodeling</option>
+              <option>Full Home Renovation</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Describe Your Project</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project — scope, timeline, and any specific details…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send My Free Estimate Request →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,#c97b2a,#9a5c10);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span style="color:#fff;font-weight:700;font-size:1.05rem;">Demo General Contractors</span>
+        </div>
+        <p>Franklin's trusted remodeling and construction experts. Licensed, bonded, 20+ years building Williamson County homes right.</p>
+        <a href="tel:+16155550300" class="footer-phone-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.37 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (615) 555-0300
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Kitchen Remodeling</a></li>
+          <li><a href="#services">Bathroom Renovation</a></li>
+          <li><a href="#services">Home Additions</a></li>
+          <li><a href="#services">Roofing &amp; Siding</a></li>
+          <li><a href="#services">Deck &amp; Patio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+16155550300">(615) 555-0300</a></li>
+          <li><a href="mailto:info@demogc.com">info@demogc.com</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Demo General Contractors · Franklin, TN · All Rights Reserved</span>
+      <span>Licensed &amp; Bonded · Williamson County</span>
+    </div>
+  </footer>
+
+  <!-- Preview Banner -->
+  <div class="preview-banner">
+    <strong>This is a free website preview</strong> created by <strong>Alma Digital Services</strong> for Demo General Contractors.
+    <a href="mailto:hello@almadigitalservices.com">Claim your free redesign today →</a>
+  </div>
+
+</body>
+</html>
