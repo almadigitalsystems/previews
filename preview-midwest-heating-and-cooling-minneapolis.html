@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midwest Heating &amp; Cooling | HVAC Services Minneapolis, MN</title>
+  <meta name="description" content="Minneapolis HVAC experts offering heating, cooling, ventilation, and 24/7 emergency repair. Serving homes and businesses across the Twin Cities. Call (952) 451-5960." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:    #0f1928;
+      --navy2:   #162236;
+      --orange:  #e8601a;
+      --orange2: #ff7a36;
+      --steel:   #2a6aad;
+      --steel2:  #3a80c8;
+      --light:   #f0f4f8;
+      --white:   #ffffff;
+      --gray:    #8b9bb4;
+      --text:    #1e2d42;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      border-bottom: 3px solid var(--orange);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--orange);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .nav-logo-text {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-logo-text span {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--gray);
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-phone {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--orange);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-phone:hover { color: var(--orange2); }
+
+    .nav-cta {
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--orange2); }
+
+    /* TOP BADGE */
+    .top-badge {
+      background: var(--orange);
+      text-align: center;
+      padding: 8px 16px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      background: var(--navy);
+      padding: 80px 5% 90px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 55%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 0%, rgba(42,106,173,0.12) 100%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(232,96,26,0.15);
+      border: 1px solid rgba(232,96,26,0.4);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--orange);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--orange);
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #b0c0d4;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--orange2); transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .hero-proof {
+      display: flex;
+      gap: 28px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #b0c0d4;
+      font-size: 0.85rem;
+    }
+
+    .proof-item .check {
+      width: 20px;
+      height: 20px;
+      background: rgba(232,96,26,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
+    /* HERO IMAGE SIDE */
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-img-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 3px solid rgba(42,106,173,0.3);
+      position: relative;
+    }
+
+    .hero-img-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-stat-card {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: var(--white);
+      border-radius: 10px;
+      padding: 16px 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-stat-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--orange);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .hero-stat-number {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.72rem;
+      color: var(--gray);
+      letter-spacing: 0.5px;
+    }
+
+    .hero-badge-card {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      background: var(--orange);
+      border-radius: 10px;
+      padding: 12px 16px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(232,96,26,0.4);
+    }
+
+    .hero-badge-card .num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .hero-badge-card .lbl {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--navy2);
+      padding: 20px 5%;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .trust-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #b0c0d4;
+      font-size: 0.85rem;
+    }
+
+    .trust-item .icon {
+      font-size: 1.2rem;
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 90px 5%;
+      background: var(--light);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 56px;
+    }
+
+    .section-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: #5a6a7e;
+      line-height: 1.7;
+    }
+
+    .services-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 32px 28px;
+      border: 1px solid rgba(0,0,0,0.07);
+      border-left: 4px solid var(--orange);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 80px; height: 80px;
+      background: radial-gradient(circle at bottom right, rgba(232,96,26,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .service-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+
+    .service-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: #5a6a7e;
+      line-height: 1.65;
+    }
+
+    /* Emergency card spans 2 cols on large grid */
+    .service-card.emergency {
+      grid-column: span 1;
+      background: var(--navy);
+      border-left-color: var(--orange2);
+    }
+
+    .service-card.emergency .service-title,
+    .service-card.emergency .service-desc {
+      color: var(--white);
+    }
+
+    .service-card.emergency .service-desc {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ABOUT */
+    .about {
+      padding: 90px 5%;
+      background: var(--white);
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-wrap img {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .about-accent {
+      position: absolute;
+      top: -16px;
+      left: -16px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid var(--orange);
+      border-radius: 12px;
+      z-index: -1;
+    }
+
+    .about-content .section-label { text-align: left; }
+    .about-content .section-title { text-align: left; }
+
+    .about-text {
+      font-size: 1rem;
+      color: #4a5a70;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .stat-box {
+      background: var(--light);
+      border-radius: 10px;
+      padding: 20px;
+      border-top: 3px solid var(--orange);
+    }
+
+    .stat-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      color: #5a6a7e;
+      line-height: 1.4;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+      padding: 80px 5%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '🔥';
+      position: absolute;
+      font-size: 200px;
+      opacity: 0.04;
+      top: -30px;
+      left: -30px;
+      line-height: 1;
+    }
+
+    .cta-section::after {
+      content: '❄️';
+      position: absolute;
+      font-size: 200px;
+      opacity: 0.04;
+      bottom: -30px;
+      right: -30px;
+      line-height: 1;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-inner h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .cta-inner h2 span { color: var(--orange); }
+
+    .cta-inner p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-xl {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-xl.orange {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .btn-xl.orange:hover { background: var(--orange2); transform: translateY(-2px); }
+
+    .btn-xl.outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-xl.outline:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--light);
+      padding: 80px 5%;
+    }
+
+    .contact-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--orange);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text a {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .contact-item-text a:hover { color: var(--orange); }
+
+    .contact-item-text span {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--gray);
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .contact-form {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 32px 28px;
+      border: 1px solid rgba(0,0,0,0.07);
+    }
+
+    .contact-form h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d0dce8;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--orange);
+    }
+
+    .form-group textarea { resize: vertical; height: 100px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--orange);
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover { background: var(--orange2); }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      padding: 40px 5%;
+      border-top: 3px solid var(--orange);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+
+    .footer-logo span { color: var(--orange); }
+
+    .footer-contact {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .footer-contact a {
+      color: #b0c0d4;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-contact a:hover { color: var(--orange); }
+
+    .footer-copy {
+      color: #5a6a7e;
+      font-size: 0.8rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-img-wrap { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.9rem; }
+      .nav-phone { display: none; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BADGE -->
+  <div class="top-badge">&#128293; 24/7 Emergency HVAC Service &nbsp;|&nbsp; Minneapolis Twin Cities &nbsp;|&nbsp; Call Now: (952) 451-5960</div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo" aria-label="Midwest Heating and Cooling home">
+      <div class="nav-logo-icon">&#10052;</div>
+      <div class="nav-logo-text">
+        Midwest Heating &amp; Cooling
+        <span>Minneapolis, MN</span>
+      </div>
+    </a>
+    <a href="tel:+19524515960" class="nav-phone">(952) 451-5960</a>
+    <a href="#contact" class="nav-cta">Free Estimate</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">&#9733; Minneapolis HVAC Specialists</div>
+        <h1>Minneapolis HVAC Experts You Can <span>Actually Count On</span></h1>
+        <p>Heating repairs, cooling installs, and 24/7 emergency service &mdash; backed by 15+ years of experience and a commitment to 100% customer satisfaction.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Get Your Free Estimate</a>
+          <a href="tel:+19524515960" class="btn-secondary">&#128222; Call Now</a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-item"><div class="check">&#10003;</div> 15+ Years Experience</div>
+          <div class="proof-item"><div class="check">&#10003;</div> 100% Satisfaction Guaranteed</div>
+          <div class="proof-item"><div class="check">&#10003;</div> Licensed &amp; Insured in MN</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80&auto=format&fit=crop"
+            alt="HVAC technician servicing a heating system in Minneapolis home"
+            width="700"
+            height="467"
+            loading="eager"
+          />
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon">&#128295;</div>
+          <div>
+            <div class="hero-stat-number">15+</div>
+            <div class="hero-stat-label">Years of HVAC Expertise</div>
+          </div>
+        </div>
+        <div class="hero-badge-card">
+          <div class="num">24/7</div>
+          <div class="lbl">Emergency<br/>Service</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="icon">&#128293;</span> Furnace &amp; Heating Repair</div>
+      <div class="trust-item"><span class="icon">&#10052;</span> AC Installation &amp; Repair</div>
+      <div class="trust-item"><span class="icon">&#127807;</span> Indoor Air Quality</div>
+      <div class="trust-item"><span class="icon">&#9989;</span> Preventive Maintenance</div>
+      <div class="trust-item"><span class="icon">&#128222;</span> 24/7 Emergency Response</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Complete HVAC Services for Minneapolis Homes &amp; Businesses</h2>
+      <p class="section-subtitle">From routine maintenance to same-day emergency repairs &mdash; we handle every heating and cooling challenge Twin Cities residents face.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">&#128293;</div>
+        <div class="service-title">Furnace &amp; Heating Repair</div>
+        <p class="service-desc">Fast diagnostics and reliable fixes to keep your home warm through every Minneapolis winter. We service all makes and models.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#10052;</div>
+        <div class="service-title">Air Conditioning Installation &amp; Repair</div>
+        <p class="service-desc">Certified AC installs and cooling system repairs for homes and commercial spaces. Beat the Minnesota summer heat with confidence.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#127807;</div>
+        <div class="service-title">Ventilation &amp; Indoor Air Quality</div>
+        <p class="service-desc">Proper airflow solutions that improve comfort and air quality year-round. Breathe easier with expert ventilation assessments.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#128295;</div>
+        <div class="service-title">Preventive Maintenance Plans</div>
+        <p class="service-desc">Regular tune-ups and inspections that prevent breakdowns before they happen. Protect your investment and extend system lifespan.</p>
+      </div>
+      <div class="service-card emergency">
+        <div class="service-icon">&#128222;</div>
+        <div class="service-title">24/7 Emergency HVAC Service</div>
+        <p class="service-desc">Heating or cooling crisis? We answer the call any hour, any day &mdash; because Minneapolis weather doesn&apos;t keep business hours.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#127968;</div>
+        <div class="service-title">Residential &amp; Commercial</div>
+        <p class="service-desc">Trusted by Minneapolis homeowners and commercial property managers alike. Right-sized solutions for every space and budget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=600&q=80&auto=format&fit=crop"
+          alt="Midwest Heating and Cooling technician performing HVAC maintenance"
+          width="600"
+          height="450"
+          loading="lazy"
+        />
+        <div class="about-accent"></div>
+      </div>
+      <div class="about-content">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Built on Honesty, Driven by Results</h2>
+        <p class="about-text">Midwest Heating &amp; Cooling LLC has been serving Minneapolis homeowners and businesses since 2022, built on the owner&apos;s 15+ years of hands-on HVAC expertise. Whether it&apos;s a furnace that stopped working on the coldest night of the year or a full system installation for a commercial office, we bring professionalism, honest pricing, and the kind of workmanship customers remember.</p>
+        <p class="about-text">Our mission: reliability, quality, and 100% customer satisfaction &mdash; every single job. We treat every home like our own and every customer like a neighbor.</p>
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Years hands-on HVAC expertise</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Customer satisfaction commitment</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Emergency service availability</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">MN</div>
+            <div class="stat-label">Licensed &amp; insured in Minnesota</div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary">Get Your Free HVAC Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2>Get Your <span>Free HVAC Estimate</span> Today</h2>
+      <p>No obligation. Live results in 24&ndash;48 hours. Minneapolis&apos;s most trusted HVAC team is ready when you are.</p>
+      <div class="cta-btns">
+        <a href="#contact" class="btn-xl orange">Request Free Estimate</a>
+        <a href="tel:+19524515960" class="btn-xl outline">&#128222; (952) 451-5960</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="section-header" style="margin-bottom:40px;">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Ready to Schedule?</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128222;</div>
+            <div class="contact-item-text">
+              <span>Phone</span>
+              <a href="tel:+19524515960">(952) 451-5960</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128140;</div>
+            <div class="contact-item-text">
+              <span>Email</span>
+              <a href="mailto:midwest.hvacc@gmail.com">midwest.hvacc@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128205;</div>
+            <div class="contact-item-text">
+              <span>Service Area</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=1410+Nicollet+Ave+Minneapolis+MN+55403" target="_blank" rel="noopener noreferrer">Minneapolis &amp; Twin Cities Metro</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128336;</div>
+            <div class="contact-item-text">
+              <span>Emergency Line</span>
+              <a href="tel:+19524515960">24/7 &mdash; (952) 451-5960</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Request a Free Estimate</h3>
+          <form action="https://formspree.io/f/xojppajv" method="POST">
+            <input type="hidden" name="_subject" value="New HVAC Estimate Request — Midwest Heating &amp; Cooling" />
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Full Name" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <select name="service">
+                <option value="">Select a Service...</option>
+                <option>Furnace &amp; Heating Repair</option>
+                <option>Air Conditioning Installation &amp; Repair</option>
+                <option>Ventilation &amp; Indoor Air Quality</option>
+                <option>Preventive Maintenance Plan</option>
+                <option>24/7 Emergency Service</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Describe your issue or project..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send My Request &#8594;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP EMBED -->
+  <div style="width:100%;height:320px;background:#e8edf2;overflow:hidden;">
+    <iframe
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFmBWY&q=1410+Nicollet+Ave,+Minneapolis,+MN+55403"
+      width="100%"
+      height="320"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Midwest Heating and Cooling service area map">
+    </iframe>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Midwest Heating &amp; <span>Cooling LLC</span></div>
+      <div class="footer-contact">
+        <a href="tel:+19524515960">(952) 451-5960</a>
+        <a href="mailto:midwest.hvacc@gmail.com">midwest.hvacc@gmail.com</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Midwest Heating &amp; Cooling LLC &mdash; Minneapolis, MN</div>
+    </div>
+  </footer>
+
+</body>
+</html>
