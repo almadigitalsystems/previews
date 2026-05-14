@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A-1 Florida Electric Contractor | Licensed Electricians in Hialeah Gardens, FL</title>
+  <meta name="description" content="A-1 Florida Electric Contractor offers 24/7 residential and commercial electrical services in Hialeah Gardens and the greater Miami area. Panel upgrades, emergency repairs, generator installs, and more. Call now for a free estimate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #07090f; color: #e2e8f0; }
+
+    .preview-banner {
+      background: #fde047; color: #07090f;
+      text-align: center; padding: 0.6rem 1rem;
+      font-size: 0.85rem; font-weight: 600;
+    }
+    .preview-banner a { color: #07090f; font-weight: 700; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(7, 9, 15, 0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(253, 224, 71, 0.12);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem; font-weight: 800;
+      color: #fde047; text-decoration: none;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-brand svg { width: 20px; height: 20px; fill: #fde047; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #fde047; }
+    .nav-cta {
+      background: #fde047; color: #07090f;
+      padding: 0.55rem 1.4rem; border-radius: 4px;
+      font-weight: 700; font-size: 0.88rem;
+      text-decoration: none;
+    }
+    .nav-cta:hover { background: #facc15; }
+
+    .hero {
+      min-height: 92vh;
+      background: linear-gradient(135deg, #07090f 0%, #0c1120 55%, #07090f 100%);
+      display: flex; align-items: center;
+      padding: 5rem 2rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    .hero-grid {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(253, 224, 71, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(253, 224, 71, 0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .hero-glow {
+      position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 55% 60% at 75% 50%, rgba(253, 224, 71, 0.05) 0%, transparent 65%),
+                  radial-gradient(ellipse 35% 40% at 15% 35%, rgba(21, 101, 192, 0.07) 0%, transparent 55%);
+    }
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 480px; gap: 4rem; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(253, 224, 71, 0.08); border: 1px solid rgba(253, 224, 71, 0.28);
+      color: #fde047; padding: 0.38rem 1rem; border-radius: 100px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #fde047; animation: pulse 2s infinite; display: inline-block; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+    .hero-headline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(3rem, 5.5vw, 5rem);
+      font-weight: 900; line-height: 1.0;
+      color: #ffffff; margin-bottom: 1.25rem;
+    }
+    .hero-headline .accent { color: #fde047; display: block; }
+    .hero-sub {
+      font-size: 1.05rem; line-height: 1.75;
+      color: #64748b; margin-bottom: 2rem; max-width: 530px;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #fde047; color: #07090f;
+      padding: 0.9rem 1.8rem; border-radius: 5px;
+      font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .btn-primary:hover { background: #facc15; transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1.5px solid rgba(253, 224, 71, 0.35); color: #fde047;
+      padding: 0.9rem 1.8rem; border-radius: 5px;
+      font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: #fde047; background: rgba(253, 224, 71, 0.07); }
+
+    .hero-stats { display: flex; gap: 2.5rem; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 800; color: #fde047; line-height: 1; }
+    .stat-label { font-size: 0.75rem; color: #475569; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.2rem; }
+
+    .hero-visual { position: relative; }
+    .hero-img-frame {
+      border-radius: 12px; overflow: hidden;
+      border: 1px solid rgba(253, 224, 71, 0.1);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+    }
+    .hero-img-frame img { display: block; width: 100%; height: 380px; object-fit: cover; }
+    .float-badge {
+      position: absolute; bottom: -1.25rem; left: -1.75rem;
+      background: #111827; border: 1px solid rgba(253,224,71,0.18);
+      border-radius: 10px; padding: 0.9rem 1.25rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+    }
+    .float-badge-top { font-size: 0.72rem; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem; }
+    .float-badge-main { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 800; color: #fde047; }
+    .float-badge-sub { font-size: 0.78rem; color: #64748b; margin-top: 0.15rem; }
+
+    .services { padding: 6rem 2rem; background: #060810; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fde047; margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #ffffff; line-height: 1.08; margin-bottom: 0.75rem; }
+    .section-sub { font-size: 0.98rem; color: #475569; max-width: 500px; line-height: 1.65; }
+    .section-header { margin-bottom: 3.5rem; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .service-card {
+      background: #0e1118; border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px; padding: 1.75rem; transition: all 0.25s;
+    }
+    .service-card:hover { border-color: rgba(253,224,71,0.25); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+    .svc-icon { width: 42px; height: 42px; background: rgba(253,224,71,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .svc-icon svg { width: 20px; height: 20px; }
+    .svc-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem; }
+    .svc-desc { font-size: 0.88rem; color: #475569; line-height: 1.6; }
+
+    .about { padding: 6rem 2rem; background: #07090f; }
+    .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-img-frame { border-radius: 12px; overflow: hidden; border: 1px solid rgba(253,224,71,0.08); position: relative; }
+    .about-img-frame img { display: block; width: 100%; height: 460px; object-fit: cover; }
+    .about-tag { position: absolute; top: 1.5rem; right: 1.5rem; background: #fde047; color: #07090f; padding: 0.45rem 1rem; border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 800; }
+    .about-body .section-sub { max-width: 100%; color: #94a3b8; font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem; }
+    .trust-items { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem; }
+    .trust-item { display: flex; align-items: flex-start; gap: 0.75rem; }
+    .ti-check { width: 20px; height: 20px; min-width: 20px; background: rgba(253,224,71,0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+    .ti-check svg { width: 11px; height: 11px; }
+    .trust-item span { font-size: 0.94rem; color: #cbd5e1; }
+
+    .cta-strip { padding: 5rem 2rem; background: linear-gradient(135deg, #fde047 0%, #f5c518 100%); }
+    .cta-strip-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .cta-strip h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 900; color: #07090f; margin-bottom: 0.6rem; }
+    .cta-strip p { font-size: 1.1rem; color: #1e293b; margin-bottom: 2rem; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-dark { display: inline-flex; align-items: center; gap: 0.5rem; background: #07090f; color: #fde047; padding: 0.95rem 2.2rem; border-radius: 5px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: all 0.2s; }
+    .btn-dark:hover { background: #111827; transform: translateY(-2px); }
+    .btn-light { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(7,9,15,0.1); color: #07090f; padding: 0.95rem 2.2rem; border-radius: 5px; border: 2px solid rgba(7,9,15,0.2); font-weight: 700; font-size: 1rem; text-decoration: none; transition: all 0.2s; }
+    .btn-light:hover { background: rgba(7,9,15,0.18); }
+
+    .contact { padding: 6rem 2rem; background: #060810; }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .cd-list { display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2rem; }
+    .cd-item { display: flex; align-items: flex-start; gap: 0.9rem; }
+    .cd-icon { width: 42px; height: 42px; min-width: 42px; background: rgba(253,224,71,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .cd-icon svg { width: 18px; height: 18px; }
+    .cd-label { font-size: 0.75rem; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem; }
+    .cd-val { font-size: 0.98rem; color: #e2e8f0; }
+    .cd-val a { color: #fde047; text-decoration: none; }
+    .cd-val a:hover { text-decoration: underline; }
+    .avail-box { background: #0e1118; border: 1px solid rgba(253,224,71,0.1); border-radius: 8px; padding: 1.25rem; }
+    .avail-box-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; }
+    .avail-box p { font-size: 0.87rem; color: #475569; line-height: 1.55; }
+
+    .form-wrap { background: #0e1118; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 2rem; }
+    .form-wrap h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 800; color: #ffffff; margin-bottom: 1.5rem; }
+    .fg { margin-bottom: 1.1rem; }
+    .fg label { display: block; font-size: 0.82rem; color: #64748b; margin-bottom: 0.45rem; font-weight: 500; }
+    .fg input, .fg textarea, .fg select { width: 100%; background: #07090f; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 0.72rem 0.9rem; color: #e2e8f0; font-size: 0.93rem; font-family: inherit; transition: border-color 0.2s; }
+    .fg input:focus, .fg textarea:focus, .fg select:focus { outline: none; border-color: rgba(253,224,71,0.5); }
+    .fg textarea { height: 100px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .btn-submit { width: 100%; background: #fde047; color: #07090f; padding: 0.88rem; border: none; border-radius: 6px; font-weight: 700; font-size: 0.98rem; cursor: pointer; font-family: inherit; transition: all 0.2s; margin-top: 0.25rem; }
+    .btn-submit:hover { background: #facc15; transform: translateY(-1px); }
+
+    footer { background: #040509; border-top: 1px solid rgba(253,224,71,0.08); padding: 2.5rem 2rem; text-align: center; }
+    .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-size: 1.25rem; font-weight: 800; color: #fde047; margin-bottom: 0.35rem; }
+    .footer-sub { font-size: 0.82rem; color: #334155; margin-bottom: 1rem; }
+    .footer-nav { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+    .footer-nav a { font-size: 0.82rem; color: #334155; text-decoration: none; }
+    .footer-nav a:hover { color: #fde047; }
+    .footer-copy { font-size: 0.78rem; color: #1e293b; }
+
+    @media (max-width: 960px) {
+      .hero-inner, .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-visual { display: none; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 580px) {
+      .services-grid, .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="preview-banner">
+  Free website preview prepared exclusively for A-1 Florida Electric Contractor by <a href="https://almadigitalservices.com">Alma Digital Services</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      A-1 Florida Electric
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Free Estimate</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span>Licensed &amp; Insured in Florida</div>
+      <h1 class="hero-headline">
+        South Florida's<br>
+        Trusted<br>
+        <span class="accent">Electricians</span>
+      </h1>
+      <p class="hero-sub">
+        From panel upgrades to emergency repairs, A-1 Florida Electric Contractor delivers fast, dependable electrical service for homeowners and businesses across the Miami area. Free estimates. No hidden fees.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+13527097997" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.46 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (352) 709-7997
+        </a>
+        <a href="#contact" class="btn-outline">Get Free Estimate</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">24/7</div><div class="stat-label">Emergency Service</div></div>
+        <div><div class="stat-num">$0</div><div class="stat-label">Estimate Fee</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label">Licensed &amp; Insured</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-frame">
+        <img
+          src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&q=80"
+          alt="Licensed electrician performing panel work in South Florida"
+          width="800"
+          height="380"
+          loading="eager"
+        >
+      </div>
+      <div class="float-badge">
+        <div class="float-badge-top">Service Area</div>
+        <div class="float-badge-main">Miami-Dade County</div>
+        <div class="float-badge-sub">Based in Hialeah Gardens, FL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">What We Do</div>
+      <h2 class="section-title">Electrical Services for<br>Home &amp; Business</h2>
+      <p class="section-sub">From routine maintenance to complex commercial installs -- every job handled by our licensed, insured team.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fde047" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="svc-name">Panel Upgrades &amp; Replacements</div>
+        <p class="svc-desc">Protect your home or business with a safe, code-compliant panel upgrade handled by licensed pros.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fde047" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="svc-name">Residential Electrical Repairs</div>
+        <p class="svc-desc">Fast, reliable fixes for outlets, circuits, switches, and everything in between.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fde047" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline stroke="#fde047" points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="svc-name">Commercial Electrical Installations</div>
+        <p class="svc-desc">Full electrical buildouts and upgrades for offices, retail spaces, and commercial properties.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fde047" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <div class="svc-name">Home Safety Inspections</div>
+        <p class="svc-desc">Know exactly where your electrical system stands before problems become emergencies.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fde047" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline stroke="#fde047" points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="svc-name">24/7 Emergency Electrical Service</div>
+        <p class="svc-desc">Day or night, we respond fast. No extra weekend or holiday fees.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fde047" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </div>
+        <div class="svc-name">Generators &amp; Backup Power Systems</div>
+        <p class="svc-desc">Stay powered through Florida's storm season with a whole-home or commercial generator.</p>
+      </div>
+
+      <div class="service-card" style="grid-column:1/-1;max-width:380px;">
+        <div class="svc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fde047" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg>
+        </div>
+        <div class="svc-name">Wiring &amp; Cabling Services</div>
+        <p class="svc-desc">New construction, rewiring, and data/low-voltage cabling done right.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-img-frame">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+          alt="A-1 Florida Electric Contractor team proudly serving Hialeah Gardens and the Miami area"
+          width="800"
+          height="460"
+          loading="lazy"
+        >
+        <div class="about-tag">Family Owned</div>
+      </div>
+      <div class="about-body">
+        <div class="section-eyebrow">About Us</div>
+        <h2 class="section-title">Hialeah Gardens'<br>Electrical Experts</h2>
+        <p class="section-sub">
+          A-1 Florida Electric Contractor is a family-owned electrical company based in Hialeah Gardens, proudly serving residential and commercial customers throughout South Florida. With a fully licensed and insured team, they bring decades of combined experience to every job.
+        </p>
+        <p class="section-sub">
+          Known for transparent pricing, free estimates, and around-the-clock availability, A-1 is the name locals trust when the job has to be done right.
+        </p>
+        <ul class="trust-items">
+          <li class="trust-item">
+            <div class="ti-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" stroke="#fde047" stroke-width="2.5"><polyline points="2 6 5 9 10 3"/></svg></div>
+            <span>Fully licensed and insured in the state of Florida</span>
+          </li>
+          <li class="trust-item">
+            <div class="ti-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" stroke="#fde047" stroke-width="2.5"><polyline points="2 6 5 9 10 3"/></svg></div>
+            <span>Free estimates -- transparent pricing, no hidden fees</span>
+          </li>
+          <li class="trust-item">
+            <div class="ti-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" stroke="#fde047" stroke-width="2.5"><polyline points="2 6 5 9 10 3"/></svg></div>
+            <span>Available 24/7 -- no extra fees on weekends or holidays</span>
+          </li>
+          <li class="trust-item">
+            <div class="ti-check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" stroke="#fde047" stroke-width="2.5"><polyline points="2 6 5 9 10 3"/></svg></div>
+            <span>Serving Hialeah Gardens, Miami, and all of Miami-Dade County</span>
+          </li>
+        </ul>
+        <a href="#contact" class="btn-primary">Get Your Free Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <h2>Get Your Free Estimate Today</h2>
+    <p>Call us or fill out the form -- we'll get back to you fast.</p>
+    <div class="cta-btns">
+      <a href="tel:+13527097997" class="btn-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.46 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (352) 709-7997
+      </a>
+      <a href="mailto:customer@a1floridaelectric.com" class="btn-light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email Us
+      </a>
+    </div>
+  </div>
+</div>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div>
+        <div class="section-eyebrow">Contact</div>
+        <h2 class="section-title">Ready to Help<br>Right Now</h2>
+        <div class="cd-list">
+          <div class="cd-item">
+            <div class="cd-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fde047" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.46 2 2 0 013.58 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 8.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="cd-label">Phone</div>
+              <div class="cd-val"><a href="tel:+13527097997">(352) 709-7997</a></div>
+            </div>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fde047" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="cd-label">Email</div>
+              <div class="cd-val"><a href="mailto:customer@a1floridaelectric.com">customer@a1floridaelectric.com</a></div>
+            </div>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fde047" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="cd-label">Location</div>
+              <div class="cd-val">Hialeah Gardens, FL -- Serving all of Miami-Dade County</div>
+            </div>
+          </div>
+        </div>
+        <div class="avail-box">
+          <div class="avail-box-title">Available 24 Hours, 7 Days a Week</div>
+          <p>Electrical emergencies don't follow business hours -- and neither do we. Call any time, day or night, with no extra fees for weekends or holidays.</p>
+        </div>
+      </div>
+      <div class="form-wrap">
+        <h3>Request a Free Estimate</h3>
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <input type="hidden" name="_replyto" value="customer@a1floridaelectric.com">
+          <div class="form-row">
+            <div class="fg">
+              <label>First Name</label>
+              <input type="text" name="first_name" placeholder="John" required>
+            </div>
+            <div class="fg">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Smith">
+            </div>
+          </div>
+          <div class="fg">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="fg">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="(305) 000-0000">
+          </div>
+          <div class="fg">
+            <label>Service Needed</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>Panel Upgrades &amp; Replacements</option>
+              <option>Residential Electrical Repairs</option>
+              <option>Commercial Electrical Installations</option>
+              <option>Home Safety Inspections</option>
+              <option>24/7 Emergency Electrical Service</option>
+              <option>Generators &amp; Backup Power Systems</option>
+              <option>Wiring &amp; Cabling Services</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Tell Us About Your Project</label>
+            <textarea name="message" placeholder="Describe what you need..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send My Free Estimate Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">A-1 Florida Electric Contractor</div>
+  <div class="footer-sub">Licensed Electricians in Hialeah Gardens, FL -- Serving All of South Florida</div>
+  <nav class="footer-nav">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+13527097997">Call Now</a>
+    <a href="mailto:customer@a1floridaelectric.com">Email Us</a>
+  </nav>
+  <div class="footer-copy">&copy; 2024 A-1 Florida Electric Contractor. All rights reserved. Hialeah Gardens, FL. Licensed &amp; Insured.</div>
+</footer>
+
+</body>
+</html>
