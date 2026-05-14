@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Ears Roofing Minnesota | Bloomington, MN Roofing Contractors</title>
+  <meta name="description" content="All Ears Roofing Minnesota serves Bloomington, MN with roof replacement, storm damage repair, gutter installation, and more. Licensed, BBB accredited, 30+ years combined experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #1a2335;
+      --navy2:  #243044;
+      --red:    #c0392b;
+      --red2:   #e74c3c;
+      --slate:  #374151;
+      --light:  #f4f5f7;
+      --white:  #ffffff;
+      --gray:   #6b7280;
+      --border: #e5e7eb;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--red);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-logo-icon svg { width: 22px; height: 22px; fill: var(--white); }
+    .nav-logo-text {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .nav-logo-text span {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: #9ca3af;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    nav .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    nav .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--red);
+      color: var(--white) !important;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--red2) !important; color: var(--white) !important; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--navy);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.22;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(26,35,53,0.96) 50%, rgba(192,57,43,0.15) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 80px 5%;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(192,57,43,0.18);
+      border: 1px solid rgba(192,57,43,0.5);
+      color: #f87171;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 30px;
+      margin-bottom: 28px;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #f87171;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.08;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 22px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--red2);
+    }
+    .hero p {
+      font-size: 1.12rem;
+      color: #d1d5db;
+      margin-bottom: 40px;
+      max-width: 580px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+      padding: 16px 34px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--red2); transform: translateY(-2px); }
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .hero-trust {
+      margin-top: 52px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #9ca3af;
+      font-size: 0.88rem;
+    }
+    .trust-item svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .trust-item strong { color: var(--white); font-weight: 600; }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--red);
+      padding: 28px 5%;
+    }
+    .stats-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    .stat-item { color: var(--white); }
+    .stat-number {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      opacity: 0.88;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* SECTION SHARED */
+    section { padding: 88px 5%; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 56px;
+    }
+
+    /* SERVICES */
+    .services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 36px 32px;
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      border-color: #e5e7eb;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+      transform: translateY(-4px);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(192,57,43,0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+    .service-icon svg { width: 26px; height: 26px; stroke: var(--red); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .service-card h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    /* ABOUT */
+    .about { background: var(--navy); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .about .section-title { color: var(--white); }
+    .about .section-tag { color: #f87171; }
+    .about-body p {
+      color: #d1d5db;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      font-size: 1.02rem;
+    }
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .highlight-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(192,57,43,0.25);
+      border-radius: 8px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .highlight-icon svg { width: 18px; height: 18px; stroke: #f87171; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .highlight-text strong {
+      display: block;
+      font-weight: 600;
+      color: var(--white);
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+    .highlight-text span {
+      font-size: 0.86rem;
+      color: #9ca3af;
+    }
+    .about-image-side { position: relative; }
+    .about-image-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+    .about-image-wrap img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      display: block;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: 28px;
+      left: 28px;
+      right: 28px;
+      background: rgba(26,35,53,0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .about-badge-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--red);
+      border-radius: 10px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-badge-icon svg { width: 22px; height: 22px; fill: var(--white); }
+    .about-badge-text strong {
+      display: block;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .about-badge-text span {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--light); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 32px 28px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+    .stars svg { width: 18px; height: 18px; fill: #f59e0b; }
+    .testimonial-card blockquote {
+      font-size: 0.96rem;
+      color: var(--slate);
+      line-height: 1.7;
+      margin-bottom: 22px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .author-info strong {
+      display: block;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--navy);
+    }
+    .author-info span {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    /* CTA */
+    .cta-section {
+      background: var(--red);
+      padding: 88px 5%;
+    }
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cta-inner .section-tag { color: rgba(255,255,255,0.7); }
+    .cta-inner h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .cta-inner p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.08rem;
+      margin-bottom: 38px;
+      line-height: 1.7;
+    }
+    .btn-white {
+      background: var(--white);
+      color: var(--red);
+      padding: 18px 42px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: inline-block;
+      transition: transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .btn-white:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+    .cta-phone {
+      margin-top: 22px;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.75);
+    }
+    .cta-phone a {
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* SERVICE AREA */
+    .service-area { background: var(--white); padding: 64px 5%; }
+    .area-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .area-inner h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.6rem;
+      color: var(--navy);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .area-inner p { color: var(--gray); margin-bottom: 28px; }
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .area-tag {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 8px 18px;
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--slate);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 56px 5% 32px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .footer-contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-contact-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+    .footer-contact-links a:hover { color: var(--white); }
+    .footer-col h4 {
+      font-family: 'Oswald', sans-serif;
+      color: var(--white);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid #1f2937;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.82rem;
+    }
+    .license-badge {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav .nav-links { display: none; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-image-side { order: -1; }
+      .about-image-wrap img { height: 300px; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .stats-inner { grid-template-columns: 1fr 1fr; }
+      .hero-trust { gap: 18px; }
+      .btn-primary, .btn-outline { width: 100%; text-align: center; }
+      .hero-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo" aria-label="All Ears Roofing Minnesota">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 10.5L12 3l9 7.5V21H3V10.5z"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        All Ears Roofing
+        <span>Bloomington, MN</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="tel:+16513647250" class="nav-cta">Call (651) 364-7250</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <img
+        src="https://images.unsplash.com/photo-1605106702842-01a887a31122?w=1600&h=900&fit=crop&q=80"
+        alt="Professional roofing contractor installing shingles on a residential home in Bloomington MN"
+        width="1600"
+        height="900"
+        loading="eager"
+      />
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Serving Bloomington &amp; Twin Cities</div>
+      <h1>Minnesota's Roofing Team That <em>Actually Listens</em></h1>
+      <p>Honest recommendations, quality workmanship, and a 5-star service pledge — for every roof in Bloomington and beyond.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Get Your Free Estimate</a>
+        <a href="tel:+16513647250" class="btn-outline">&#128222; (651) 364-7250</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span><strong>BBB Accredited</strong> Business</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/>
+          </svg>
+          <span><strong>MN Licensed</strong> — BC801022</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <span><strong>5-Star</strong> Service Pledge</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span><strong>30+ Years</strong> Combined Experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar" role="region" aria-label="Company highlights">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-number">30+</span>
+        <span class="stat-label">Years Combined Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">5&#9733;</span>
+        <span class="stat-label">Service Pledge — Every Job</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">BBB</span>
+        <span class="stat-label">Accredited Business</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">MN</span>
+        <span class="stat-label">Licensed Contractor</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <span class="section-tag">What We Do</span>
+      <h2 class="section-title">Roofing &amp; Gutter Solutions for Minnesota Homes</h2>
+      <p class="section-sub">From full roof replacements to storm damage repairs, All Ears Roofing handles every job with care, honesty, and craftsmanship that lasts.</p>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Roof Replacement</h3>
+          <p>Full replacements done right, from first shingle to final cleanup. We handle the whole job so you don't have to worry about a thing.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Roof Repair</h3>
+          <p>Stop the leak before it spreads — fast, reliable fixes for damaged or aging roofs that protect your home without delays.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"/><line x1="8" y1="16" x2="8.01" y2="16"/><line x1="8" y1="20" x2="8.01" y2="20"/><line x1="12" y1="18" x2="12.01" y2="18"/><line x1="12" y1="22" x2="12.01" y2="22"/><line x1="16" y1="16" x2="16.01" y2="16"/><line x1="16" y1="20" x2="16.01" y2="20"/></svg>
+          </div>
+          <h3>Storm Damage Repair</h3>
+          <p>Hail, wind, heavy rain — we handle the repairs and the insurance claim. Minnesota weather is tough; your roof doesn't have to take the hit alone.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Gutter Installation &amp; Repair</h3>
+          <p>Gutters that direct water away from what you've built. Professional installation and repair that protects your foundation and landscaping.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22V8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M8 5.2A10 10 0 0 1 22 12"/><path d="M2 12a10 10 0 0 1 14-9.16"/></svg>
+          </div>
+          <h3>Gutter Guards</h3>
+          <p>Set it and forget it — less cleaning, more peace of mind. Quality gutter guards that keep debris out and water flowing freely year-round.</p>
+        </div>
+
+        <div class="service-card" style="background: var(--navy); border-color: var(--navy);">
+          <div class="service-icon" style="background: rgba(192,57,43,0.3);">
+            <svg viewBox="0 0 24 24" style="stroke:#f87171;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.88 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.79 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17z"/></svg>
+          </div>
+          <h3 style="color:var(--white);">Free Estimate</h3>
+          <p style="color:#9ca3af;">No pressure, just honest advice. Get a detailed, transparent quote for any roofing or gutter project. We'll tell you exactly what you need — nothing more.</p>
+          <a href="tel:+16513647250" class="btn-primary" style="margin-top:20px;padding:12px 24px;font-size:0.92rem;">Call (651) 364-7250</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-body">
+          <span class="section-tag">About All Ears Roofing</span>
+          <h2 class="section-title">The Roofing Crew That Actually Listens</h2>
+          <p>All Ears Roofing serves Bloomington, MN and the surrounding Twin Cities area with honest, professional roofing services built on a 5-star customer service pledge.</p>
+          <p>Their team brings over 30 years of combined experience to every project — from residential roof replacements to storm damage repairs — and holds a Minnesota contractor license (BC801022). BBB accredited and known for clear communication throughout the process.</p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="highlight-text">
+                <strong>BBB Accredited Business</strong>
+                <span>Verified quality and commitment to customer satisfaction</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              </div>
+              <div class="highlight-text">
+                <strong>MN Licensed — BC801022</strong>
+                <span>Fully licensed and insured contractor in Minnesota</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="highlight-text">
+                <strong>Clear Communication — Always</strong>
+                <span>You're informed at every step, no surprises, no upsells</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="highlight-text">
+                <strong>5-Star Service Pledge</strong>
+                <span>Every customer, every project — no exceptions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image-side">
+          <div class="about-image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&q=80"
+              alt="All Ears Roofing team working on a residential roof replacement in Bloomington Minnesota"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="about-badge">
+              <div class="about-badge-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="about-badge-text">
+                <strong>Trusted in Bloomington Since Day One</strong>
+                <span>30+ years combined experience · Twin Cities' best reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-inner">
+      <span class="section-tag">What Homeowners Say</span>
+      <h2 class="section-title">Real Reviews from Real Neighbors</h2>
+      <p class="section-sub">Bloomington and Twin Cities homeowners trust All Ears Roofing because they back every job with a 5-star service commitment.</p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>"They came out the same day after the hailstorm, gave us a clear estimate, and handled everything with our insurance. No runaround, no upsells. Just honest people doing honest work."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">MK</div>
+            <div class="author-info">
+              <strong>Mike K.</strong>
+              <span>Bloomington, MN — Roof Replacement</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>"Finally, a roofing company that explains what they're doing and why. I had a small leak I'd been ignoring and they fixed it fast without trying to sell me a full replacement I didn't need."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">SR</div>
+            <div class="author-info">
+              <strong>Sarah R.</strong>
+              <span>Eden Prairie, MN — Roof Repair</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>"Gutters were a disaster after last winter. All Ears came out, cleaned everything up, installed guards, and were gone same day. Clean, professional, and reasonably priced. Would call again without hesitation."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">TJ</div>
+            <div class="author-info">
+              <strong>Tom J.</strong>
+              <span>Burnsville, MN — Gutter Installation</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="cta-inner">
+      <span class="section-tag">Ready to Protect Your Roof?</span>
+      <h2>Get Your Free Estimate — No Pressure, Just Honest Advice</h2>
+      <p>Every estimate is detailed, transparent, and obligation-free. All Ears Roofing tells you exactly what your roof needs — nothing more, nothing less.</p>
+      <a href="mailto:info@allearsroofing.com" class="btn-white">Claim Your Free Redesign</a>
+      <p class="cta-phone">Or call us directly: <a href="tel:+16513647250">(651) 364-7250</a></p>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <div class="service-area">
+    <div class="area-inner">
+      <h2>Serving Bloomington &amp; the Twin Cities</h2>
+      <p>All Ears Roofing serves homeowners across the greater Minneapolis–Saint Paul metro area.</p>
+      <div class="area-tags">
+        <span class="area-tag">Bloomington</span>
+        <span class="area-tag">Minneapolis</span>
+        <span class="area-tag">Saint Paul</span>
+        <span class="area-tag">Eden Prairie</span>
+        <span class="area-tag">Burnsville</span>
+        <span class="area-tag">Edina</span>
+        <span class="area-tag">Richfield</span>
+        <span class="area-tag">Plymouth</span>
+        <span class="area-tag">Minnetonka</span>
+        <span class="area-tag">Eagan</span>
+        <span class="area-tag">Apple Valley</span>
+        <span class="area-tag">Lakeville</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>All Ears Roofing Minnesota</h3>
+          <p>Bloomington's trusted roofing contractor — BBB accredited, MN licensed, and committed to a 5-star experience on every job.</p>
+          <div class="footer-contact-links">
+            <a href="tel:+16513647250">&#128222; (651) 364-7250</a>
+            <a href="mailto:info@allearsroofing.com">&#9993; info@allearsroofing.com</a>
+            <a href="#">&#128205; 3800 American Blvd W, Bloomington, MN 55431</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Roof Replacement</a></li>
+            <li><a href="#services">Roof Repair</a></li>
+            <li><a href="#services">Storm Damage Repair</a></li>
+            <li><a href="#services">Gutter Installation</a></li>
+            <li><a href="#services">Gutter Guards</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Free Estimate</a></li>
+            <li><a href="tel:+16513647250">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 All Ears Roofing Minnesota. All rights reserved.</span>
+        <span class="license-badge">MN License BC801022</span>
+        <span>Website preview by <strong style="color:#d1d5db;">Alma Digital Services</strong></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
