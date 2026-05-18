@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boca Electrical Service | Licensed Electricians in Boca Raton, FL</title>
+  <meta name="description" content="Boca Raton's trusted electricians since 2013. Residential & commercial repairs, panel upgrades, EV charging stations, and 24/7 emergency service. BBB Accredited. Free home safety inspection with any service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0b1a30;
+      --navy-mid: #122240;
+      --navy-light: #1a3360;
+      --blue: #1565c0;
+      --blue-bright: #1e88e5;
+      --blue-glow: #42a5f5;
+      --white: #ffffff;
+      --off-white: #f0f4f8;
+      --gray: #b0bec5;
+      --yellow: #ffd600;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 26, 48, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--blue);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      font-size: 0.65rem;
+      color: var(--blue-glow);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-phone {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-phone:hover { color: var(--blue-glow); }
+
+    .btn-nav {
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-nav:hover { background: var(--blue-bright); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      opacity: 0.22;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        rgba(11, 26, 48, 0.95) 0%,
+        rgba(18, 34, 64, 0.80) 60%,
+        rgba(21, 101, 192, 0.25) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-grid-lines {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-image:
+        linear-gradient(rgba(30, 136, 229, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 136, 229, 0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 40px 80px;
+      width: 100%;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(21, 101, 192, 0.25);
+      border: 1px solid rgba(66, 165, 245, 0.4);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--blue-glow);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue-glow);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      color: var(--white);
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--blue-glow);
+      position: relative;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--gray);
+      max-width: 620px;
+      margin-bottom: 44px;
+      line-height: 1.7;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 56px;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 24px rgba(21, 101, 192, 0.45);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-bright);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 2px solid rgba(66, 165, 245, 0.5);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--blue-glow);
+      background: rgba(66, 165, 245, 0.08);
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-top: 1px solid rgba(66, 165, 245, 0.2);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 20px 32px 20px 0;
+      border-right: 1px solid rgba(66, 165, 245, 0.15);
+      margin-right: 32px;
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+      margin-right: 0;
+    }
+
+    .trust-icon {
+      font-size: 1.6rem;
+    }
+
+    .trust-text strong {
+      display: block;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+    }
+
+    .trust-text span {
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+
+    /* ── SECTION COMMON ── */
+    .section {
+      padding: 96px 40px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue-glow);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      max-width: 48px;
+      height: 2px;
+      background: var(--blue-glow);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      color: var(--gray);
+      font-size: 1.05rem;
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 56px;
+    }
+
+    /* ── SERVICES ── */
+    .services-section { background: var(--navy-mid); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--navy);
+      border: 1px solid rgba(66, 165, 245, 0.15);
+      border-radius: 12px;
+      padding: 32px 28px;
+      transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-glow));
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(66, 165, 245, 0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(21, 101, 192, 0.25);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(21, 101, 192, 0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      border: 1px solid rgba(66, 165, 245, 0.2);
+    }
+
+    .service-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .service-card p {
+      color: var(--gray);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    /* ── ABOUT ── */
+    .about-section { background: var(--navy); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-img-wrap img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-img-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--blue);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .about-img-badge .big-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.2rem;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .about-img-badge .label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.4;
+    }
+
+    .about-content p {
+      color: var(--gray);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .credentials-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .credentials-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--off-white);
+      font-size: 0.95rem;
+    }
+
+    .cred-icon {
+      color: var(--blue-glow);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--navy-light) 100%);
+      padding: 56px 40px;
+    }
+
+    .stats-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stat-item {}
+
+    .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 2.8rem;
+      color: var(--white);
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 500;
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--navy-mid);
+      padding: 96px 40px;
+    }
+
+    .cta-box {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .cta-box p {
+      color: var(--gray);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      line-height: 1.65;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      background: var(--navy);
+      padding: 80px 40px;
+    }
+
+    .contact-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: 32px;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .contact-item-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(21, 101, 192, 0.2);
+      border: 1px solid rgba(66, 165, 245, 0.25);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text strong {
+      display: block;
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .contact-item-text a,
+    .contact-item-text span {
+      color: var(--gray);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .contact-item-text a:hover { color: var(--blue-glow); }
+
+    .contact-form-area {
+      background: var(--navy-mid);
+      border: 1px solid rgba(66, 165, 245, 0.15);
+      border-radius: 16px;
+      padding: 40px;
+    }
+
+    .contact-form-area h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+
+    .form-group { margin-bottom: 18px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray);
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--navy);
+      border: 1px solid rgba(66, 165, 245, 0.2);
+      border-radius: 8px;
+      padding: 12px 14px;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--blue-glow);
+    }
+
+    .form-group textarea { height: 110px; resize: vertical; }
+
+    .form-submit {
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover { background: var(--blue-bright); }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: #060f1e;
+      padding: 48px 40px 32px;
+      border-top: 1px solid rgba(66, 165, 245, 0.12);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand { max-width: 320px; }
+
+    .footer-brand p {
+      color: var(--gray);
+      font-size: 0.88rem;
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-links h4 {
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray);
+      margin-bottom: 14px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-links ul li a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links ul li a:hover { color: var(--blue-glow); }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin-bottom: 24px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-bottom p {
+      color: #4a5568;
+      font-size: 0.8rem;
+    }
+
+    .footer-license {
+      color: #4a5568;
+      font-size: 0.8rem;
+    }
+
+    /* ── PREVIEW BANNER ── */
+    .preview-banner {
+      background: linear-gradient(90deg, #1565c0, #0d47a1);
+      text-align: center;
+      padding: 14px 24px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--white);
+      position: sticky;
+      bottom: 0;
+      z-index: 200;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+    }
+
+    .preview-banner a {
+      color: var(--yellow);
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .navbar .btn-nav { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .section { padding: 72px 20px; }
+      .hero-content { padding: 60px 20px; }
+      .stats-strip { padding: 48px 20px; }
+      .trust-bar { flex-direction: column; }
+      .trust-item { border-right: none; margin-right: 0; padding: 12px 0; border-bottom: 1px solid rgba(66,165,245,0.12); }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">
+      <div class="brand-icon">⚡</div>
+      <div>
+        <div class="brand-name">Boca Electrical Service</div>
+        <div class="brand-sub">Licensed &amp; BBB Accredited</div>
+      </div>
+    </a>
+    <div class="navbar-right">
+      <a href="tel:+15613208539" class="nav-phone">📞 (561) 320-8539</a>
+      <a href="#contact" class="btn-nav">Free Inspection</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&h=900&fit=crop&auto=format"
+        alt="Licensed electrician performing panel upgrade in Boca Raton FL"
+        width="1600"
+        height="900"
+        loading="eager"
+      />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🏆 2025 Best Contractors Award &nbsp;·&nbsp; Boca Raton, FL</div>
+      <h1>
+        Boca Raton's Locally Owned Electricians &mdash;
+        <span>Licensed, Trusted, Available 24/7</span>
+      </h1>
+      <p class="hero-sub">
+        38+ years of combined experience serving Boca Raton, Palm Beach County, and South Florida.
+        Repairs, panel upgrades, EV charging, and same-day emergency service &mdash; all from a
+        BBB Accredited team that shows up when it counts.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">✅ Get Your Free Home Safety Inspection</a>
+        <a href="tel:+15613208539" class="btn-secondary">📞 Call (561) 320-8539</a>
+      </div>
+
+      <!-- TRUST BAR -->
+      <div class="trust-bar">
+        <div class="trust-item">
+          <div class="trust-icon">⭐</div>
+          <div class="trust-text">
+            <strong>4.9-Star Rated</strong>
+            <span>Across Google &amp; Yelp</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🏅</div>
+          <div class="trust-text">
+            <strong>BBB Accredited</strong>
+            <span>Verified Business</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🏆</div>
+          <div class="trust-text">
+            <strong>2025 Best Contractors</strong>
+            <span>Florida Guide Award</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🔧</div>
+          <div class="trust-text">
+            <strong>38+ Yrs Experience</strong>
+            <span>Combined Team Expertise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services-section">
+    <div class="section-inner">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Electrical Services You Can Count On</h2>
+      <p class="section-desc">
+        From routine repairs to complex panel work and EV charging — Boca Electrical Service
+        handles every job with licensed expertise and a satisfaction guarantee.
+      </p>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🔌</div>
+          <h3>Fast, Reliable Repairs for Any Electrical Problem</h3>
+          <p>From tripped breakers and faulty outlets to full circuit troubleshooting, Boca Electrical Service diagnoses and fixes the issue right the first time.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Modern Panels. Maximum Safety.</h3>
+          <p>Outdated panels are a fire and liability risk. We upgrade and replace electrical panels, add surge protection, and ensure your home meets current code — with copper busbar panels backed by up to a lifetime warranty.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💡</div>
+          <h3>Expert Lighting Upgrades for Every Room</h3>
+          <p>Ceiling fans, chandeliers, LED retrofits, outdoor landscape lighting, and smart controls — professionally installed so everything works perfectly and looks great.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Charge Your Electric Vehicle at Home</h3>
+          <p>We install Level 2 EV charging stations that charge faster than standard outlets — fully permitted, professionally wired, and ready to use.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🚨</div>
+          <h3>Power Out? We Respond Fast — Day or Night.</h3>
+          <p>Electrical emergencies don't wait for business hours. Boca Electrical Service provides 24/7 emergency response for power outages, panel failures, lightning strike damage, and urgent repairs across South Florida.</p>
+        </div>
+
+        <!-- Sixth card — CTA card -->
+        <div class="service-card" style="background: linear-gradient(135deg, rgba(21,101,192,0.2), rgba(18,34,64,0.8)); border-color: rgba(66,165,245,0.3); display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+          <div class="service-icon">🛡️</div>
+          <h3>Not sure what you need?</h3>
+          <p style="margin-bottom: 20px;">Get a free home safety inspection and let our team assess your electrical system — no pressure, no obligations.</p>
+          <a href="#contact" class="btn-primary" style="font-size: 0.9rem; padding: 12px 22px;">Book Free Inspection</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">13+</span>
+        <div class="stat-label">Years Serving Boca Raton</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">38+</span>
+        <div class="stat-label">Years Combined Experience</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">4.9★</span>
+        <div class="stat-label">Average Customer Rating</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">24/7</span>
+        <div class="stat-label">Emergency Response</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section about-section">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop&auto=format"
+            alt="Boca Electrical Service team of licensed electricians in South Florida"
+            width="800"
+            height="420"
+            loading="lazy"
+          />
+          <div class="about-img-badge">
+            <div class="big-num">2013</div>
+            <div class="label">Locally Founded<br />in Boca Raton</div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-label">About Us</div>
+          <h2 class="section-title" style="margin-bottom: 24px;">Family-Run. Locally Trusted. Always Licensed.</h2>
+          <p>
+            Boca Electrical Service has been keeping Boca Raton homes and businesses powered safely since 2013.
+            Locally owned and family-run, their team brings over 38 years of combined experience to every job —
+            from a quick outlet repair to a full panel replacement.
+          </p>
+          <p>
+            BBB Accredited and recognized in the 2025 Guide to Florida Best Contractors, they've built a
+            reputation across Palm Beach County for showing up on time, explaining the work in plain language,
+            and getting it done right.
+          </p>
+          <ul class="credentials-list">
+            <li>
+              <span class="cred-icon">✅</span>
+              <div>Florida State Licensed Electrical Contractor — License #EC13013640</div>
+            </li>
+            <li>
+              <span class="cred-icon">✅</span>
+              <div>BBB Accredited Business — Verified &amp; Trusted</div>
+            </li>
+            <li>
+              <span class="cred-icon">✅</span>
+              <div>2025 Florida Guide to Best Contractors Award Winner</div>
+            </li>
+            <li>
+              <span class="cred-icon">✅</span>
+              <div>Fully Insured — Every Job Permitted &amp; Inspected</div>
+            </li>
+            <li>
+              <span class="cred-icon">✅</span>
+              <div>Serving All of Palm Beach County &amp; South Florida</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="cta-box">
+      <div class="section-label" style="justify-content: center;">Limited Offer</div>
+      <h2>Get Your Free Home Safety Inspection</h2>
+      <p>
+        Let our licensed electricians check your panel, wiring, and outlets for potential hazards —
+        at no cost to you. Most homeowners have electrical issues they don't know about.
+        Find out where you stand.
+      </p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn-primary" style="font-size: 1.05rem; padding: 18px 36px;">✅ Book My Free Inspection</a>
+        <a href="tel:+15613208539" class="btn-secondary" style="font-size: 1.05rem; padding: 18px 36px;">📞 (561) 320-8539</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-text">
+              <strong>Phone</strong>
+              <a href="tel:+15613208539">(561) 320-8539</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <a href="mailto:cgarlobo5@gmail.com">cgarlobo5@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <strong>Address</strong>
+              <span>123 NW 13th St, Boca Raton, FL</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div class="contact-item-text">
+              <strong>Hours</strong>
+              <span>Mon–Fri 7am–6pm &nbsp;·&nbsp; Emergency 24/7</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🪪</div>
+            <div class="contact-item-text">
+              <strong>License</strong>
+              <span>#EC13013640 — State of Florida</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-area">
+        <h3>Request Your Free Home Safety Inspection</h3>
+        <form action="https://formspree.io/f/xojppajv" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Lou Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="phone-field">Phone Number</label>
+            <input type="tel" id="phone-field" name="phone" placeholder="(561) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="email-field">Email Address</label>
+            <input type="email" id="email-field" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>Free Home Safety Inspection</option>
+              <option>Electrical Repairs</option>
+              <option>Panel Upgrade or Replacement</option>
+              <option>Lighting &amp; Ceiling Fans</option>
+              <option>EV Charging Station</option>
+              <option>24/7 Emergency Service</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project</label>
+            <textarea id="message" name="message" placeholder="Briefly describe what you need..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send My Request →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+            <div class="brand-icon" style="width:32px; height:32px; font-size:16px;">⚡</div>
+            <div class="brand-name">Boca Electrical Service</div>
+          </div>
+          <p>Locally owned, licensed, and BBB Accredited electricians serving Boca Raton and Palm Beach County since 2013. License #EC13013640.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#contact">Electrical Repairs</a></li>
+            <li><a href="#contact">Panel Upgrades</a></li>
+            <li><a href="#contact">Lighting &amp; Fans</a></li>
+            <li><a href="#contact">EV Charging</a></li>
+            <li><a href="#contact">24/7 Emergency</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+15613208539">(561) 320-8539</a></li>
+            <li><a href="mailto:cgarlobo5@gmail.com">cgarlobo5@gmail.com</a></li>
+            <li><a href="#contact">123 NW 13th St, Boca Raton, FL</a></li>
+            <li><a href="#contact">Free Safety Inspection</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>© 2025 Boca Electrical Service. All rights reserved. | Boca Raton, FL</p>
+        <div class="footer-license">Florida License #EC13013640 &nbsp;·&nbsp; BBB Accredited &nbsp;·&nbsp; Fully Insured</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PREVIEW BANNER -->
+  <div class="preview-banner">
+    🎨 <strong>Website Preview</strong> — This is a complimentary design concept for Boca Electrical Service.
+    Interested? <a href="mailto:info@almadigitalservices.com">Contact Alma Digital Services</a> to claim it.
+  </div>
+
+</body>
+</html>
