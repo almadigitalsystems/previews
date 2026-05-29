@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Berg General Contractor LLC | Expert Electrician Your Area</title>
+<meta name="description" content="Berg General Contractor LLC — expert electrician in Your Area. Panel upgrades, EV chargers, commercial wiring, 24/7 emergency response.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;background:#0a0f1e;color:#e2e8f0}
+.banner{background:linear-gradient(90deg,#0ea5e9,#06b6d4);color:#fff;text-align:center;padding:9px;font-size:13px;font-weight:700}
+nav{background:rgba(10,15,30,.95);padding:16px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(14,165,233,.3);backdrop-filter:blur(10px)}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#fff}
+.logo span{color:#0ea5e9}
+.nav-cta{background:linear-gradient(135deg,#0ea5e9,#06b6d4);color:#fff;padding:10px 22px;font-weight:700;font-size:14px;text-decoration:none;border-radius:6px}
+.hero{min-height:88vh;padding:80px 5%;background:radial-gradient(ellipse at 70% 50%,rgba(14,165,233,.12) 0%,transparent 60%),#0a0f1e;display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.hero-content{flex:1;min-width:300px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.3);color:#0ea5e9;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:22px}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(38px,5.5vw,66px);font-weight:700;line-height:1.1;margin-bottom:18px}
+h1 span{background:linear-gradient(135deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sub{color:#94a3b8;font-size:17px;line-height:1.65;margin-bottom:28px;max-width:520px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.b1{background:linear-gradient(135deg,#0ea5e9,#06b6d4);color:#fff;padding:15px 30px;font-weight:700;font-size:15px;text-decoration:none;border-radius:8px}
+.b2{border:2px solid rgba(14,165,233,.5);color:#0ea5e9;padding:13px 28px;font-weight:700;font-size:15px;text-decoration:none;border-radius:8px}
+.side-card{flex:0 0 320px;background:rgba(14,165,233,.05);border:1px solid rgba(14,165,233,.2);border-radius:16px;padding:28px}
+.sc-title{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:#0ea5e9;margin-bottom:18px;text-transform:uppercase;letter-spacing:.5px}
+.sc-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.sc-item:last-child{border-bottom:none}
+.sc-dot{width:8px;height:8px;background:#0ea5e9;border-radius:50%;flex-shrink:0}
+.sc-text{font-size:14px;color:#cbd5e1}
+@media(max-width:768px){.side-card{display:none}}
+.strip{background:rgba(14,165,233,.06);border-top:1px solid rgba(14,165,233,.15);border-bottom:1px solid rgba(14,165,233,.15);padding:30px 5%}
+.strip-inner{display:flex;justify-content:center;gap:52px;flex-wrap:wrap}
+.sn{text-align:center}.sn-num{font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;background:linear-gradient(135deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.sn-lbl{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-top:3px}
+.svcs{padding:70px 5%;background:#0a0f1e}
+.st{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:700;margin-bottom:8px}
+.st span{background:linear-gradient(135deg,#0ea5e9,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sd{color:#64748b;margin-bottom:36px}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.sc2{background:rgba(255,255,255,.03);border:1px solid rgba(14,165,233,.15);border-radius:12px;padding:24px;transition:border-color .2s}
+.sc2:hover{border-color:rgba(14,165,233,.4)}
+.sc2-ico{font-size:26px;margin-bottom:12px}.sc2-n{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;margin-bottom:7px}.sc2-d{color:#64748b;font-size:13px;line-height:1.55}
+.trust-section{padding:50px 5%;background:rgba(14,165,233,.03);border-top:1px solid rgba(14,165,233,.1)}
+.ts-inner{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:10px;color:#cbd5e1;font-weight:600;font-size:14px}
+.ti-c{color:#0ea5e9;font-size:18px}
+.cta-wrap{background:linear-gradient(135deg,#0c2140,#0a1628);padding:64px 5%;text-align:center;border-top:1px solid rgba(14,165,233,.2)}
+.cta-wrap h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,4vw,46px);font-weight:700;margin-bottom:12px}
+.cta-wrap p{color:#94a3b8;font-size:17px;margin-bottom:26px}
+.cta-btn{background:linear-gradient(135deg,#0ea5e9,#06b6d4);color:#fff;padding:16px 40px;font-size:16px;font-weight:700;text-decoration:none;border-radius:8px;display:inline-block}
+.contact-footer{background:#060a14;padding:48px 5%;border-top:1px solid rgba(14,165,233,.15)}
+.cf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:800px}
+.cf-l{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}.cf-v{font-weight:600;color:#e2e8f0}.cf-v a{color:#0ea5e9;text-decoration:none}
+footer{background:#040810;padding:22px 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#374151}
+footer a{color:#0ea5e9;text-decoration:none}
+.hidden-img{display:none}
+</style></head><body>
+<div class="banner">Licensed Electrician | Your Area | 24/7 Emergency | Free Estimates</div>
+<nav>
+  <div class="logo">Berg<span>.Electric</span></div>
+  <a href="tel:+18885550000" class="nav-cta">Call Now</a>
+</nav>
+<img class="hidden-img" src="https://images.unsplash.com/photo-1621905251918-77a64b174e28?w=800&q=70" alt="Berg General Contractor LLC electrician service Your Area" width="800" height="533" loading="lazy">
+<section class="hero">
+  <div class="hero-content">
+    <div class="chip">⚡ Licensed Electrician · Your Area</div>
+    <h1>Expert <span>Electrical</span><br>Services, Done Right</h1>
+    <p class="sub">Berg General Contractor LLC delivers fast, professional electrical work across Your Area. From panel upgrades to full commercial installs — we do it right the first time.</p>
+    <div class="btns">
+      <a href="tel:+18885550000" class="b1">📞 Call (888) 555-0000</a>
+      <a href="mailto:stuart@hostbuildinggroup.com" class="b2">Free Estimate</a>
+    </div>
+  </div>
+  <div class="side-card">
+    <div class="sc-title">Why Berg</div>
+    <div class="sc-item"><div class="sc-dot"></div><div class="sc-text">State-licensed &amp; fully insured</div></div>
+    <div class="sc-item"><div class="sc-dot"></div><div class="sc-text">4.9 average rating across platforms</div></div>
+    <div class="sc-item"><div class="sc-dot"></div><div class="sc-text">24/7 emergency response line</div></div>
+    <div class="sc-item"><div class="sc-dot"></div><div class="sc-text">Upfront, itemized pricing</div></div>
+    <div class="sc-item"><div class="sc-dot"></div><div class="sc-text">Workmanship warranty included</div></div>
+    <div class="sc-item"><div class="sc-dot"></div><div class="sc-text">Serving Your Area &amp; surroundings</div></div>
+  </div>
+</section>
+<div class="strip">
+  <div class="strip-inner">
+    <div class="sn"><div class="sn-num">500+</div><div class="sn-lbl">Clients Served</div></div>
+    <div class="sn"><div class="sn-num">4.9★</div><div class="sn-lbl">Avg. Rating</div></div>
+    <div class="sn"><div class="sn-num">24/7</div><div class="sn-lbl">Emergency</div></div>
+    <div class="sn"><div class="sn-num">Free</div><div class="sn-lbl">Estimates</div></div>
+  </div>
+</div>
+<section class="svcs">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="st">Electrical <span>Services</span></div>
+    <p class="sd">Comprehensive electrical work for homes and businesses in Your Area</p>
+    <div class="sg">
+      <div class="sc2"><div class="sc2-ico">⚡</div><div class="sc2-n">Panel Upgrades</div><div class="sc2-d">Safe, code-compliant panel upgrades and replacements</div></div>
+      <div class="sc2"><div class="sc2-ico">🏠</div><div class="sc2-n">Residential Wiring</div><div class="sc2-d">New construction, renovations, and rewiring</div></div>
+      <div class="sc2"><div class="sc2-ico">🔧</div><div class="sc2-n">Electrical Repairs</div><div class="sc2-d">Outlet, switch, and circuit troubleshooting and repair</div></div>
+      <div class="sc2"><div class="sc2-ico">💡</div><div class="sc2-n">Lighting Installation</div><div class="sc2-d">Recessed, decorative, and security lighting</div></div>
+      <div class="sc2"><div class="sc2-ico">🚗</div><div class="sc2-n">EV Charger Install</div><div class="sc2-d">Level 2 home chargers, permitted and inspected</div></div>
+      <div class="sc2"><div class="sc2-ico">🏢</div><div class="sc2-n">Commercial Work</div><div class="sc2-d">Office, retail, and industrial electrical services</div></div>
+    </div>
+  </div>
+</section>
+<div class="trust-section">
+  <div class="ts-inner">
+    <div class="ti"><span class="ti-c">✓</span>Licensed &amp; Insured</div>
+    <div class="ti"><span class="ti-c">✓</span>Upfront Pricing</div>
+    <div class="ti"><span class="ti-c">✓</span>Satisfaction Guaranteed</div>
+    <div class="ti"><span class="ti-c">✓</span>Same-Day Available</div>
+  </div>
+</div>
+<div class="cta-wrap">
+  <h2>See Your New Website — Free</h2>
+  <p>This preview was built specifically for Berg General Contractor LLC. Claim your free redesign now.</p>
+  <a href="mailto:stuart@hostbuildinggroup.com" class="cta-btn">Claim My Free Redesign</a>
+</div>
+<section class="contact-footer">
+  <div class="cf-grid">
+    <div><div class="cf-l">Phone</div><div class="cf-v"><a href="tel:+18885550000">(888) 555-0000</a></div></div>
+    <div><div class="cf-l">Email</div><div class="cf-v"><a href="mailto:stuart@hostbuildinggroup.com">stuart@hostbuildinggroup.com</a></div></div>
+    <div><div class="cf-l">Location</div><div class="cf-v">Your Area</div></div>
+    <div><div class="cf-l">Emergency</div><div class="cf-v">Available 24/7</div></div>
+  </div>
+</section>
+<footer>
+  <div>&copy; 2024 Berg General Contractor LLC | Your Area</div>
+  <div><a href="tel:+18885550000">(888) 555-0000</a> | <a href="mailto:stuart@hostbuildinggroup.com">stuart@hostbuildinggroup.com</a></div>
+</footer>
+</body></html>
