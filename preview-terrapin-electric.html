@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Terrapin Electric | Electrician in Your Area</title>
+<meta name="description" content="Terrapin Electric - Licensed electrician in Your Area. Panel upgrades, wiring, EV chargers, 24/7 emergency. Free estimates.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;background:#07090f;color:#fff}
+.topbar{background:#ffd600;color:#07090f;text-align:center;padding:10px;font-size:14px;font-weight:700;letter-spacing:.5px}
+nav{background:#0d1117;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #ffd600;position:sticky;top:0;z-index:100}
+.logo{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;color:#ffd600;text-transform:uppercase}
+.nav-cta{background:#ffd600;color:#07090f;padding:10px 22px;font-weight:700;font-size:14px;text-decoration:none;border-radius:3px}
+.hero{min-height:85vh;background:linear-gradient(135deg,#07090f 55%,#0d1a2e);display:flex;align-items:center;padding:80px 5%;position:relative;overflow:hidden}
+.hero-img{position:absolute;right:0;top:0;width:45%;height:100%;opacity:.2;object-fit:cover}
+.badge{display:inline-block;border:1px solid #ffd600;color:#ffd600;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(44px,7vw,76px);font-weight:900;line-height:1.0;text-transform:uppercase;margin-bottom:18px}
+h1 span{color:#ffd600}
+.sub{color:#9ca3af;font-size:18px;line-height:1.6;margin-bottom:28px;max-width:500px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn1{background:#ffd600;color:#07090f;padding:15px 30px;font-weight:700;font-size:16px;text-decoration:none;border-radius:3px}
+.btn2{border:2px solid #ffd600;color:#ffd600;padding:13px 28px;font-weight:700;font-size:16px;text-decoration:none;border-radius:3px}
+.stats{background:#0d1117;padding:28px 5%;display:flex;justify-content:center;gap:50px;flex-wrap:wrap;border-top:1px solid #1f2937}
+.stat .n{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:900;color:#ffd600;text-align:center}
+.stat .l{font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;text-align:center;margin-top:3px}
+.svcs{padding:70px 5%;background:#0d1117}
+.svcs-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,46px);font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.svcs-title span{color:#ffd600}.svcs-sub{color:#6b7280;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#111827;border-left:3px solid #ffd600;padding:22px;border-radius:3px}
+.card-icon{font-size:26px;margin-bottom:10px}.card-name{font-weight:700;margin-bottom:6px}.card-desc{color:#6b7280;font-size:14px;line-height:1.55}
+.trust{background:#07090f;padding:50px 5%;text-align:center;border-top:2px solid #1f2937}
+.trust h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:900;text-transform:uppercase;margin-bottom:24px}
+.trust h2 span{color:#ffd600}
+.checks{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.check{color:#d1d5db;font-weight:600;display:flex;align-items:center;gap:8px}
+.ck{color:#ffd600;font-size:18px}
+.cta-band{background:linear-gradient(135deg,#ffd600,#f59e0b);padding:60px 5%;text-align:center}
+.cta-band h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;color:#07090f;margin-bottom:12px}
+.cta-band p{color:#07090f;opacity:.8;font-size:17px;margin-bottom:26px}
+.cta-btn{background:#07090f;color:#ffd600;padding:17px 40px;font-size:17px;font-weight:700;text-decoration:none;border-radius:3px;display:inline-block}
+.contact{background:#0d1117;padding:55px 5%}
+.contact-title{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;text-transform:uppercase;margin-bottom:26px}
+.contact-title span{color:#ffd600}
+.cinfo{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:700px}
+@media(max-width:600px){.cinfo{grid-template-columns:1fr}.btns{flex-direction:column}.hero-img{width:100%;opacity:.1}}
+.ci{display:flex;align-items:flex-start;gap:12px}.ci-icon{color:#ffd600;font-size:20px;margin-top:2px}
+.ci-lbl{font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.ci-val{font-weight:600}.ci-val a{color:#ffd600;text-decoration:none}
+footer{background:#07090f;border-top:1px solid #1f2937;padding:24px 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.ft{color:#4b5563;font-size:13px}.ft a{color:#ffd600;text-decoration:none}
+</style></head><body>
+<div class="topbar">Licensed &amp; Insured | 24/7 Emergency Service | Free Estimates</div>
+<nav><div class="logo">Terrapin Electric</div><a href="tel:+18885550000" class="nav-cta">Call Now</a></nav>
+<section class="hero">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&q=75" alt="Terrapin Electric electrician Your Area" width="900" height="600" loading="eager">
+  <div style="position:relative;z-index:1;max-width:640px">
+    <div class="badge">Certified Electrician | Your Area</div>
+    <h1>Your <span>#1 Electrician</span><br>in Your Area</h1>
+    <p class="sub">Expert electrical services for homes and businesses. Licensed, insured, and trusted by hundreds of satisfied customers across Your Area.</p>
+    <div class="btns">
+      <a href="tel:+18885550000" class="btn1">Call (888) 555-0000</a>
+      <a href="mailto:info@terrapinelectric.com" class="btn2">Free Estimate</a>
+    </div>
+  </div>
+</section>
+<div class="stats">
+  <div class="stat"><div class="n">500+</div><div class="l">Happy Clients</div></div>
+  <div class="stat"><div class="n">4.9★</div><div class="l">Avg. Rating</div></div>
+  <div class="stat"><div class="n">24/7</div><div class="l">Emergency</div></div>
+  <div class="stat"><div class="n">100%</div><div class="l">Licensed</div></div>
+</div>
+<section class="svcs">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="svcs-title">Our <span>Services</span></div>
+    <p class="svcs-sub">Complete electrical solutions for residential and commercial clients</p>
+    <div class="grid">
+      <div class="card"><div class="card-icon">⚡</div><div class="card-name">Panel Upgrades</div><div class="card-desc">Modernize your electrical panel for safety and increased capacity</div></div>
+      <div class="card"><div class="card-icon">🏠</div><div class="card-name">Residential Wiring</div><div class="card-desc">New construction, renovation, and full rewiring services</div></div>
+      <div class="card"><div class="card-icon">🔧</div><div class="card-name">Electrical Repairs</div><div class="card-desc">Fast diagnosis and repair of any electrical fault or failure</div></div>
+      <div class="card"><div class="card-icon">💡</div><div class="card-name">Lighting Installation</div><div class="card-desc">Indoor, outdoor, recessed, and landscape lighting solutions</div></div>
+      <div class="card"><div class="card-icon">🚗</div><div class="card-name">EV Charger Install</div><div class="card-desc">Level 2 home charging stations installed to code</div></div>
+      <div class="card"><div class="card-icon">🛡️</div><div class="card-name">Safety Inspections</div><div class="card-desc">Code compliance audits and electrical safety certificates</div></div>
+    </div>
+  </div>
+</section>
+<div class="trust">
+  <h2>Why Choose <span>Terrapin Electric</span></h2>
+  <div class="checks">
+    <div class="check"><span class="ck">✓</span>Licensed &amp; Certified</div>
+    <div class="check"><span class="ck">✓</span>Fully Insured</div>
+    <div class="check"><span class="ck">✓</span>Upfront Pricing</div>
+    <div class="check"><span class="ck">✓</span>Warranty on All Work</div>
+    <div class="check"><span class="ck">✓</span>Same-Day Available</div>
+  </div>
+</div>
+<div class="cta-band">
+  <h2>Claim Your Free Website Redesign</h2>
+  <p>This is a preview of what your new website could look like — at no cost.</p>
+  <a href="mailto:info@terrapinelectric.com" class="cta-btn">Get My Free Redesign</a>
+</div>
+<section class="contact">
+  <div class="contact-title">Contact <span>Terrapin Electric</span></div>
+  <div class="cinfo">
+    <div class="ci"><div class="ci-icon">📞</div><div><div class="ci-lbl">Phone</div><div class="ci-val"><a href="tel:+18885550000">(888) 555-0000</a></div></div></div>
+    <div class="ci"><div class="ci-icon">✉️</div><div><div class="ci-lbl">Email</div><div class="ci-val"><a href="mailto:info@terrapinelectric.com">info@terrapinelectric.com</a></div></div></div>
+    <div class="ci"><div class="ci-icon">📍</div><div><div class="ci-lbl">Location</div><div class="ci-val">Your Area</div></div></div>
+    <div class="ci"><div class="ci-icon">🕐</div><div><div class="ci-lbl">Hours</div><div class="ci-val">Mon–Fri 7AM–7PM | 24/7 Emergency</div></div></div>
+  </div>
+</section>
+<footer>
+  <div class="ft">&copy; 2024 Terrapin Electric | Your Area | All rights reserved</div>
+  <div class="ft"><a href="tel:+18885550000">(888) 555-0000</a> | <a href="mailto:info@terrapinelectric.com">info@terrapinelectric.com</a></div>
+</footer>
+</body></html>
