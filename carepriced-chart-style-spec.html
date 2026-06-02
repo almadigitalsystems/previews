@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carepriced — Cost Trend Chart Style Specification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8fafc;
+            color: #1a202c;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+
+        .page-container { max-width: 980px; margin: 0 auto; }
+
+        /* Header */
+        .page-header { margin-bottom: 40px; }
+        .brand-tag {
+            display: inline-block;
+            background: #2980b9;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 14px;
+        }
+        .page-header h1 { font-size: 30px; font-weight: 700; color: #1a202c; margin-bottom: 8px; }
+        .page-header p { font-size: 15px; color: #4a5568; max-width: 640px; }
+        .page-header .meta { font-size: 12px; color: #a0aec0; margin-top: 8px; }
+
+        /* Spec cards */
+        .spec-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 36px;
+            margin-bottom: 28px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .spec-card h2 {
+            font-size: 17px; font-weight: 700; color: #1a202c;
+            margin-bottom: 20px; padding-bottom: 14px;
+            border-bottom: 2px solid #edf2f7;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .section-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 26px; height: 26px; border-radius: 50%;
+            background: #2980b9; color: #fff;
+            font-size: 12px; font-weight: 700; flex-shrink: 0;
+        }
+
+        /* Chart section */
+        .chart-title-row { margin-bottom: 6px; }
+        .chart-title { font-size: 16px; font-weight: 700; color: #1a202c; }
+        .chart-subtitle { font-size: 13px; color: #718096; margin-bottom: 20px; }
+        #chart-wrap { width: 100%; overflow-x: auto; }
+        svg.main-chart { display: block; width: 100%; max-width: 860px; height: auto; }
+
+        .legend { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 16px; }
+        .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; color: #4a5568; }
+        .l-line { width: 28px; height: 0; border-top-width: 3px; border-top-style: solid; }
+        .l-dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); flex-shrink:0; }
+        .chart-source { font-size: 11px; color: #a0aec0; margin-top: 14px; }
+
+        /* Mobile preview strip */
+        .mobile-strip {
+            display: flex; gap: 24px; align-items: flex-start;
+            margin-top: 28px; padding-top: 28px;
+            border-top: 1px dashed #e2e8f0;
+        }
+        .mobile-label { font-size: 12px; font-weight: 600; color: #4a5568; margin-bottom: 8px; }
+        .mobile-frame {
+            background: #fff; border: 2px solid #cbd5e0; border-radius: 8px;
+            padding: 12px; width: 260px; flex-shrink: 0;
+        }
+        .mobile-chart-title { font-size: 11px; font-weight: 700; color: #1a202c; margin-bottom: 2px; }
+        .mobile-chart-sub { font-size: 10px; color: #718096; margin-bottom: 10px; }
+        svg.mobile-chart { display: block; width: 100%; height: auto; }
+
+        /* Color palette */
+        .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+        .swatch { display: flex; align-items: center; gap: 12px; }
+        .swatch-box { width: 40px; height: 40px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.08); flex-shrink: 0; }
+        .swatch-label { font-size: 12px; font-weight: 600; color: #2d3748; }
+        .swatch-hex { font-size: 11px; font-family: 'Courier New', monospace; color: #718096; }
+        .swatch-role { font-size: 11px; color: #a0aec0; }
+        .palette-group-title { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #a0aec0; margin-bottom: 10px; grid-column: 1/-1; margin-top: 8px; }
+
+        /* Typography */
+        .typo-table { width: 100%; border-collapse: collapse; }
+        .typo-table th { text-align: left; padding: 8px 12px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #a0aec0; background: #f7fafc; border-bottom: 2px solid #edf2f7; }
+        .typo-table td { padding: 12px; border-bottom: 1px solid #edf2f7; vertical-align: top; }
+        .typo-table td:first-child { font-size: 12px; font-weight: 600; color: #4a5568; white-space: nowrap; }
+        .typo-table td.sample-cell { font-size: 13px; color: #2d3748; }
+        .typo-table td.spec-cell { font-size: 11px; color: #718096; font-family: 'Courier New', monospace; }
+
+        /* Dimensions table */
+        .dim-table { width: 100%; border-collapse: collapse; }
+        .dim-table th { text-align: left; padding: 8px 14px; background: #f7fafc; color: #4a5568; font-size: 12px; font-weight: 600; border-bottom: 2px solid #edf2f7; }
+        .dim-table td { padding: 12px 14px; border-bottom: 1px solid #edf2f7; font-size: 13px; color: #2d3748; }
+        .dim-table td:first-child { font-weight: 600; }
+        .dim-table tr:last-child td { border-bottom: none; }
+        .bp-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; letter-spacing: 0.04em; }
+        .bp-desktop { background: #ebf5fb; color: #1a5276; }
+        .bp-tablet { background: #e9f7ef; color: #1e5631; }
+        .bp-mobile { background: #fef9e7; color: #7d6608; }
+
+        /* Chart interaction notes */
+        .notes-list { list-style: none; }
+        .notes-list li {
+            padding: 10px 14px 10px 44px; position: relative;
+            border-bottom: 1px solid #edf2f7; font-size: 13px; color: #4a5568;
+        }
+        .notes-list li:last-child { border-bottom: none; }
+        .notes-list li::before {
+            content: attr(data-icon);
+            position: absolute; left: 12px; top: 10px;
+            width: 24px; height: 24px; border-radius: 50%;
+            background: #ebf5fb; color: #2980b9;
+            font-size: 13px; display: flex; align-items: center; justify-content: center;
+        }
+
+        /* Implementation notes */
+        .impl-block { background: #f7fafc; border-left: 4px solid #2980b9; border-radius: 0 6px 6px 0; padding: 16px 20px; margin-bottom: 14px; }
+        .impl-block .impl-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #2980b9; margin-bottom: 6px; }
+        .impl-block p { font-size: 13px; color: #4a5568; }
+        code { font-family: 'Courier New', monospace; font-size: 12px; background: #edf2f7; padding: 1px 5px; border-radius: 3px; color: #2d3748; }
+
+        /* Footer */
+        .page-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #a0aec0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+        @media (max-width: 640px) {
+            body { padding: 20px 14px; }
+            .spec-card { padding: 22px; }
+            .page-header h1 { font-size: 22px; }
+            .palette-grid { grid-template-columns: 1fr 1fr; }
+            .mobile-strip { flex-direction: column; }
+            .mobile-frame { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-container">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="brand-tag">Carepriced — Design System</div>
+        <h1>Cost Trend Chart — Visual Style Specification</h1>
+        <p>Year-over-year senior care cost trend charts for state pages. Designed for trustworthiness, accessibility, and mobile readability.</p>
+        <p class="meta">ALM-15897 · Apollo Cruz (CVCO) · June 2, 2026 · For handoff to Emily Vance (CTO)</p>
+    </div>
+
+    <!-- SECTION 1: CHART MOCKUP -->
+    <div class="spec-card">
+        <h2><span class="section-num">1</span> Chart Style Mockup</h2>
+        <div class="chart-title-row">
+            <div class="chart-title">Senior Care Cost Trends in California</div>
+        </div>
+        <div class="chart-subtitle">Monthly median cost by care type, 2019–2025 · Source: Genworth Cost of Care Survey</div>
+        <div id="chart-wrap"></div>
+        <div class="legend" id="legend-desktop"></div>
+        <div class="chart-source">* Data: Genworth Cost of Care Survey 2019–2025. Monthly median costs. Shown for design reference — actual state data will be populated by content pipeline.</div>
+
+        <!-- Mobile Preview -->
+        <div class="mobile-strip">
+            <div>
+                <div class="mobile-label">Mobile Breakpoint (&lt;600px)</div>
+                <div class="mobile-frame">
+                    <div class="mobile-chart-title">Cost Trends in California</div>
+                    <div class="mobile-chart-sub">Monthly median, 2019–2025</div>
+                    <div id="mobile-chart-wrap"></div>
+                    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;" id="legend-mobile"></div>
+                </div>
+            </div>
+            <div style="flex:1;min-width:200px;">
+                <div class="mobile-label">Mobile Design Notes</div>
+                <ul style="list-style:none;margin-top:4px;">
+                    <li style="font-size:12px;color:#4a5568;margin-bottom:8px;padding-left:16px;position:relative;"><span style="position:absolute;left:0;">•</span> Chart height reduced to 220px on mobile</li>
+                    <li style="font-size:12px;color:#4a5568;margin-bottom:8px;padding-left:16px;position:relative;"><span style="position:absolute;left:0;">•</span> Y-axis shows every other tick ($4k, $6k, $8k)</li>
+                    <li style="font-size:12px;color:#4a5568;margin-bottom:8px;padding-left:16px;position:relative;"><span style="position:absolute;left:0;">•</span> X-axis shows alternating years (2019, 2021, 2023, 2025)</li>
+                    <li style="font-size:12px;color:#4a5568;margin-bottom:8px;padding-left:16px;position:relative;"><span style="position:absolute;left:0;">•</span> Legend below chart in 2-column grid</li>
+                    <li style="font-size:12px;color:#4a5568;margin-bottom:8px;padding-left:16px;position:relative;"><span style="position:absolute;left:0;">•</span> Dot radius reduced to 3px</li>
+                    <li style="font-size:12px;color:#4a5568;padding-left:16px;position:relative;"><span style="position:absolute;left:0;">•</span> Font sizes: title 13px, axis labels 9px</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2: COLOR PALETTE -->
+    <div class="spec-card">
+        <h2><span class="section-num">2</span> Color Palette Specification</h2>
+        <div class="palette-grid" id="palette-grid">
+            <div class="palette-group-title">Infrastructure</div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: TYPOGRAPHY -->
+    <div class="spec-card">
+        <h2><span class="section-num">3</span> Typography Guidance</h2>
+        <table class="typo-table">
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Live Sample</th>
+                    <th>Specification</th>
+                </tr>
+            </thead>
+            <tbody id="typo-body"></tbody>
+        </table>
+    </div>
+
+    <!-- SECTION 4: DIMENSIONS -->
+    <div class="spec-card">
+        <h2><span class="section-num">4</span> Recommended Chart Dimensions</h2>
+        <table class="dim-table">
+            <thead>
+                <tr><th>Breakpoint</th><th>Container Width</th><th>Chart Height</th><th>SVG ViewBox</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="bp-tag bp-desktop">Desktop ≥960px</span></td>
+                    <td>100% (max 860px)</td>
+                    <td>380px</td>
+                    <td><code>0 0 860 380</code></td>
+                    <td>Full legend to the right or below · All 7 year labels · All 8 Y-axis ticks</td>
+                </tr>
+                <tr>
+                    <td><span class="bp-tag bp-tablet">Tablet 600–959px</span></td>
+                    <td>100%</td>
+                    <td>300px</td>
+                    <td><code>0 0 700 300</code></td>
+                    <td>Legend below chart in 2-col grid · Reduced padding · 6 Y-axis ticks</td>
+                </tr>
+                <tr>
+                    <td><span class="bp-tag bp-mobile">Mobile &lt;600px</span></td>
+                    <td>100%</td>
+                    <td>220px</td>
+                    <td><code>0 0 420 220</code></td>
+                    <td>Alternating year labels · Reduced tick count · Dots at 3px radius · Legend 2-col below</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top:24px;">
+            <div class="impl-block">
+                <div class="impl-label">SVG Padding (all breakpoints)</div>
+                <p>Top: <code>30px</code> · Right: <code>20px</code> · Bottom: <code>55px</code> · Left: <code>75px</code> (accommodates $-amount Y-axis labels)</p>
+            </div>
+            <div class="impl-block">
+                <div class="impl-label">Aspect Ratio Recommendation</div>
+                <p>Desktop: ~2.26:1 (860×380) · Use CSS <code>aspect-ratio: 860/380</code> on the container and let the SVG scale via <code>viewBox</code> — no fixed px heights needed for responsive behavior.</p>
+            </div>
+            <div class="impl-block">
+                <div class="impl-label">Accessibility</div>
+                <p>Add <code>role="img"</code> and <code>aria-label="[State] senior care cost trend chart 2019-2025"</code> on the <code>&lt;svg&gt;</code>. Include a visually-hidden <code>&lt;table&gt;</code> summary of the data for screen readers.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 5: CHART BEHAVIOR -->
+    <div class="spec-card">
+        <h2><span class="section-num">5</span> Chart Behavior &amp; Interaction Notes</h2>
+        <ul class="notes-list">
+            <li data-icon="●"><strong>Tooltip on hover/tap:</strong> Show card with year, all care type costs for that year. Background <code>#2d3748</code>, text <code>#fff</code>, 12px Inter. Round corners 6px. Show on both desktop (mouse) and mobile (tap).</li>
+            <li data-icon="●"><strong>COVID-19 band:</strong> Subtle shaded band over 2020 column (<code>#f0f4f8</code>, 50% opacity) with a tiny "COVID-19" label above in <code>#a0aec0</code> 9px — helps users understand the 2020 flat/dip anomaly.</li>
+            <li data-icon="●"><strong>Line weight:</strong> 2.5px stroke for all lines. Dashed lines (In-Home Care: <code>6,4</code>; Nursing Home: <code>3,3</code>) to differentiate line types without relying on color alone (WCAG color-independence).</li>
+            <li data-icon="●"><strong>Data dots:</strong> 4px radius on desktop, 3px on mobile. White <code>1.5px</code> stroke ring. Filled with line color. Appear at each data point year.</li>
+            <li data-icon="●"><strong>Grid lines:</strong> Horizontal only. 1px, <code>#e8ecf0</code>. No vertical grid lines — the year tick marks on X-axis provide sufficient orientation.</li>
+            <li data-icon="●"><strong>Y-axis format:</strong> Dollar amounts formatted as <code>$Xk</code> (e.g. <code>$5k</code>, <code>$9k</code>). For values between thousands, use <code>$X.5k</code>. Align text-anchor to right, offset 10px from axis line.</li>
+            <li data-icon="●"><strong>X-axis:</strong> Year labels centered below each tick. No rotation. On mobile, show 2019, 2021, 2023, 2025 only (alternating).</li>
+            <li data-icon="●"><strong>Animation:</strong> Optional — lines can animate in left-to-right on page load using SVG <code>stroke-dashoffset</code> technique. Duration 800ms, easing ease-out. Skip for users who prefer reduced motion (<code>prefers-reduced-motion: reduce</code>).</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 6: IMPLEMENTATION NOTES FOR EMILY -->
+    <div class="spec-card">
+        <h2><span class="section-num">6</span> Implementation Notes for Emily (CTO)</h2>
+        <div class="impl-block">
+            <div class="impl-label">Recommended Library</div>
+            <p><strong>Chart.js</strong> (lightweight, ~60KB gzipped) or <strong>Recharts</strong> (React). Both support responsive containers, custom tooltips, and SVG export. Alternatively, pure D3.js for maximum control. Avoid Highcharts (paid license).</p>
+        </div>
+        <div class="impl-block">
+            <div class="impl-label">Data Structure Expected</div>
+            <p>Each state page should receive a JSON object: <code>{"years":[2019..2025], "series": [{"label":"Assisted Living","color":"#2980b9","data":[4050,4050,...]}]}</code>. Genworth data should be stored per state with annual update cadence.</p>
+        </div>
+        <div class="impl-block">
+            <div class="impl-label">Color Token Usage</div>
+            <p>Define colors as CSS custom properties on <code>:root</code>: <code>--cp-blue-primary: #2980b9</code>, <code>--cp-blue-dark: #1a5276</code>, <code>--cp-green-primary: #27ae60</code>, <code>--cp-green-dark: #1e8449</code>. This allows future brand updates in one place.</p>
+        </div>
+        <div class="impl-block">
+            <div class="impl-label">Data Source Attribution</div>
+            <p>Every chart must include: "Source: Genworth Cost of Care Survey [YEAR]" as a <code>&lt;figcaption&gt;</code> below the chart. This is both a legal attribution requirement and a trust signal for users.</p>
+        </div>
+        <div class="impl-block">
+            <div class="impl-label">Print / Export</div>
+            <p>SVG-based charts will print cleanly. Add <code>@media print</code> styles to hide tooltips and ensure chart area spans full print column width.</p>
+        </div>
+    </div>
+
+    <div class="page-footer">
+        <span>Carepriced Cost Trend Chart — Visual Specification · ALM-15897 · Apollo Cruz (CVCO)</span>
+        <span>June 2, 2026 · Alma Digital Services</span>
+    </div>
+
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// CHART DATA
+// ─────────────────────────────────────────────────────────────────────────────
+const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
+const series = [
+    { label: 'Assisted Living',  color: '#2980b9', data: [4050, 4050, 4500, 4650, 5000, 5350, 5500], dash: '' },
+    { label: 'Memory Care',      color: '#1a5276', data: [5150, 5200, 5600, 5900, 6200, 6450, 6650], dash: '' },
+    { label: 'In-Home Care',     color: '#27ae60', data: [4000, 4000, 4380, 4580, 4950, 5150, 5150], dash: '6,4' },
+    { label: 'Nursing Home',     color: '#1e8449', data: [7500, 7750, 7900, 8150, 8700, 9050, 9200], dash: '3,3' },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SVG CHART BUILDER
+// ─────────────────────────────────────────────────────────────────────────────
+function buildSVGChart(cfg) {
+    const { W, H, pad, yMin, yMax, showAllYears, dotR, labelSize, axisSize, titleColor } = cfg;
+    const chartW = W - pad.l - pad.r;
+    const chartH = H - pad.t - pad.b;
+    const yRange = yMax - yMin;
+    const xStep = chartW / (years.length - 1);
+    const xPos = i => pad.l + i * xStep;
+    const yPos = v => pad.t + chartH - ((v - yMin) / yRange * chartH);
+    const yTicks = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];
+    const yTicksShort = [4000, 6000, 8000, 10000];
+    const useTicks = cfg.shortYTicks ? yTicksShort : yTicks;
+
+    let s = `<svg class="${cfg.cls}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Senior care cost trends in California 2019-2025">`;
+    s += `<rect width="${W}" height="${H}" fill="#ffffff"/>`;
+
+    // Grid lines
+    useTicks.forEach(tick => {
+        const y = yPos(tick);
+        s += `<line x1="${pad.l}" y1="${y}" x2="${pad.l+chartW}" y2="${y}" stroke="#e8ecf0" stroke-width="1"/>`;
+    });
+
+    // COVID band
+    const covidX1 = xPos(0) + xStep * 0.5;
+    const covidX2 = xPos(1) + xStep * 0.5;
+    s += `<rect x="${covidX1}" y="${pad.t}" width="${covidX2-covidX1}" height="${chartH}" fill="#f0f4f8" opacity="0.5"/>`;
+    if (!cfg.mobile) {
+        s += `<text x="${(covidX1+covidX2)/2}" y="${pad.t+10}" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="9" fill="#b0bec5">COVID-19</text>`;
+    }
+
+    // Axes
+    s += `<line x1="${pad.l}" y1="${pad.t+chartH}" x2="${pad.l+chartW}" y2="${pad.t+chartH}" stroke="#cbd5e0" stroke-width="1.5"/>`;
+    s += `<line x1="${pad.l}" y1="${pad.t}" x2="${pad.l}" y2="${pad.t+chartH}" stroke="#cbd5e0" stroke-width="1.5"/>`;
+
+    // Y labels
+    useTicks.forEach(tick => {
+        const y = yPos(tick);
+        const label = tick >= 1000 ? `$${tick/1000}k` : `$${tick}`;
+        s += `<text x="${pad.l-8}" y="${y+4}" text-anchor="end" font-family="'Courier New',monospace,sans-serif" font-size="${axisSize}" fill="#4a5568">${label}</text>`;
+    });
+
+    // X labels
+    years.forEach((yr, i) => {
+        if (cfg.mobile && i % 2 !== 0) return; // skip odd years on mobile
+        s += `<text x="${xPos(i)}" y="${pad.t+chartH+18}" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="${axisSize}" fill="#4a5568">${yr}</text>`;
+    });
+
+    // Y axis title (desktop only)
+    if (!cfg.mobile) {
+        s += `<text transform="rotate(-90)" x="${-(pad.t+chartH/2)}" y="16" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="10" fill="#a0aec0">Monthly Cost</text>`;
+    }
+
+    // Data lines
+    series.forEach(ser => {
+        const pts = ser.data.map((v,i) => `${xPos(i)},${yPos(v)}`).join(' ');
+        const da = ser.dash ? ` stroke-dasharray="${ser.dash}"` : '';
+        s += `<polyline points="${pts}" fill="none" stroke="${ser.color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"${da}/>`;
+        ser.data.forEach((v,i) => {
+            s += `<circle cx="${xPos(i)}" cy="${yPos(v)}" r="${dotR}" fill="${ser.color}" stroke="#ffffff" stroke-width="1.5"/>`;
+        });
+    });
+
+    s += `</svg>`;
+    return s;
+}
+
+// Desktop chart
+document.getElementById('chart-wrap').innerHTML = buildSVGChart({
+    cls: 'main-chart', W: 860, H: 380,
+    pad: { t: 30, r: 20, b: 55, l: 75 },
+    yMin: 3000, yMax: 10000,
+    showAllYears: true, dotR: 4, labelSize: 11, axisSize: 11,
+    shortYTicks: false, mobile: false
+});
+
+// Mobile chart
+document.getElementById('mobile-chart-wrap').innerHTML = buildSVGChart({
+    cls: 'mobile-chart', W: 420, H: 220,
+    pad: { t: 20, r: 10, b: 40, l: 50 },
+    yMin: 3000, yMax: 10000,
+    showAllYears: false, dotR: 3, labelSize: 9, axisSize: 9,
+    shortYTicks: true, mobile: true
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// LEGENDS
+// ─────────────────────────────────────────────────────────────────────────────
+function buildLegend(containerId, small) {
+    const c = document.getElementById(containerId);
+    series.forEach(s => {
+        const item = document.createElement('div');
+        item.className = 'legend-item';
+        if (small) item.style.cssText = 'font-size:10px;gap:5px;';
+        const lineStyle = s.dash
+            ? `border-top: 3px dashed ${s.color}; background: transparent;`
+            : `background: ${s.color};`;
+        item.innerHTML = `<div class="l-line" style="${lineStyle}"></div><div class="l-dot" style="background:${s.color};"></div><span>${s.label}</span>`;
+        c.appendChild(item);
+    });
+}
+buildLegend('legend-desktop', false);
+buildLegend('legend-mobile', true);
+
+// ─────────────────────────────────────────────────────────────────────────────
+// COLOR PALETTE
+// ─────────────────────────────────────────────────────────────────────────────
+const palette = [
+    { group: 'Infrastructure', items: [
+        { label: 'Background', hex: '#FFFFFF', role: 'Chart & card background' },
+        { label: 'Grid Lines', hex: '#E8ECF0', role: 'Horizontal grid lines' },
+        { label: 'Axis Lines', hex: '#CBD5E0', role: 'X/Y axis borders' },
+        { label: 'Axis Labels', hex: '#4A5568', role: 'Tick labels, year labels' },
+        { label: 'Chart Title', hex: '#1A202C', role: 'Heading text' },
+        { label: 'Subtitle / Caption', hex: '#718096', role: 'Subtitle, source citation' },
+        { label: 'Tooltip Background', hex: '#2D3748', role: 'Hover tooltip card' },
+        { label: 'Tooltip Text', hex: '#FFFFFF', role: 'Tooltip value text' },
+        { label: 'COVID Band', hex: '#F0F4F8', role: '2020 shaded column (50% opacity)' },
+    ]},
+    { group: 'Data Lines', items: [
+        { label: 'Assisted Living', hex: '#2980B9', role: 'Primary line · Solid' },
+        { label: 'Memory Care', hex: '#1A5276', role: 'Secondary line · Solid' },
+        { label: 'In-Home Care', hex: '#27AE60', role: 'Tertiary line · Dashed 6,4' },
+        { label: 'Nursing Home', hex: '#1E8449', role: 'Quaternary line · Dashed 3,3' },
+    ]}
+];
+
+const grid = document.getElementById('palette-grid');
+palette.forEach(group => {
+    const titleEl = document.createElement('div');
+    titleEl.className = 'palette-group-title';
+    titleEl.textContent = group.group;
+    grid.appendChild(titleEl);
+    group.items.forEach(c => {
+        const div = document.createElement('div');
+        div.className = 'swatch';
+        div.innerHTML = `
+            <div class="swatch-box" style="background:${c.hex};${c.hex==='#FFFFFF'?'border:2px solid #e2e8f0;':''}"></div>
+            <div>
+                <div class="swatch-label">${c.label}</div>
+                <div class="swatch-hex">${c.hex.toLowerCase()}</div>
+                <div class="swatch-role">${c.role}</div>
+            </div>`;
+        grid.appendChild(div);
+    });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TYPOGRAPHY
+// ─────────────────────────────────────────────────────────────────────────────
+const typoRows = [
+    { name: 'Chart Title', sample: 'Senior Care Cost Trends in California', style: 'font-size:16px;font-weight:700;color:#1a202c;', spec: 'Inter · 16px · 700 · #1A202C' },
+    { name: 'Chart Subtitle', sample: 'Monthly median cost by care type, 2019–2025', style: 'font-size:13px;font-weight:400;color:#718096;', spec: 'Inter · 13px · 400 · #718096' },
+    { name: 'Y-Axis Labels', sample: '$5k  $6k  $7k', style: "font-size:11px;font-weight:400;color:#4a5568;font-family:'Courier New',monospace;", spec: "Inter (Courier New fallback for numbers) · 11px · 400 · #4A5568" },
+    { name: 'X-Axis Labels', sample: '2019  2020  2021  2022', style: 'font-size:11px;font-weight:400;color:#4a5568;', spec: 'Inter · 11px · 400 · #4A5568' },
+    { name: 'Legend Labels', sample: 'Assisted Living   Memory Care   In-Home Care', style: 'font-size:12px;font-weight:500;color:#4a5568;', spec: 'Inter · 12px · 500 · #4A5568' },
+    { name: 'Tooltip Value', sample: 'Assisted Living: $5,000/mo', style: 'font-size:12px;font-weight:600;color:#ffffff;background:#2d3748;padding:4px 8px;border-radius:4px;display:inline-block;', spec: 'Inter · 12px · 600 · #FFFFFF on #2D3748' },
+    { name: 'Source Citation', sample: 'Source: Genworth Cost of Care Survey 2025', style: 'font-size:11px;font-weight:400;color:#a0aec0;', spec: 'Inter · 11px · 400 · #A0AEC0' },
+    { name: 'Mobile Title', sample: 'Cost Trends in California', style: 'font-size:13px;font-weight:700;color:#1a202c;', spec: 'Inter · 13px · 700 · #1A202C (mobile breakpoint)' },
+    { name: 'Mobile Axis Labels', sample: '2019  2021  2023  2025', style: 'font-size:9px;font-weight:400;color:#4a5568;', spec: 'Inter · 9px · 400 · #4A5568 (mobile breakpoint)' },
+];
+
+const tbody = document.getElementById('typo-body');
+typoRows.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+        <td>${row.name}</td>
+        <td class="sample-cell"><span style="${row.style}">${row.sample}</span></td>
+        <td class="spec-cell">${row.spec}</td>`;
+    tbody.appendChild(tr);
+});
+</script>
+</body>
+</html>
