@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Craig Holdsworth Gas Services | Gas Engineer Huddersfield – CHGS</title>
+<meta name="description" content="Craig Holdsworth Gas Services – Gas Safe registered engineer in Huddersfield, West Yorkshire. Boiler repairs, central heating, landlord checks. 20+ years experience. Call 07852 860971.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;color:#111;background:#fff}
+a{text-decoration:none;color:inherit}
+/* NAV */
+nav{padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:68px;position:sticky;top:0;background:#fff;z-index:100;border-bottom:1px solid #e8e8e8}
+.nav-brand{font-size:1rem;font-weight:800;letter-spacing:-.02em;color:#111}
+.nav-brand span{color:#e85d20}
+.nav-right{display:flex;align-items:center;gap:24px}
+.nav-right a{font-size:.875rem;font-weight:500;color:#444}
+.nav-phone{background:#111;color:#fff!important;padding:10px 20px;border-radius:2px;font-weight:700!important;font-size:.875rem!important}
+/* HERO */
+.hero{padding:100px 6% 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-text .gas-safe{display:inline-flex;align-items:center;gap:8px;background:#f5f5f5;padding:8px 14px;border-radius:2px;font-size:.75rem;font-weight:700;letter-spacing:.08em;color:#333;text-transform:uppercase;margin-bottom:32px}
+.hero-text .gas-safe span{background:#e85d20;color:#fff;padding:2px 6px;border-radius:1px;font-size:.7rem}
+.hero h1{font-size:clamp(2.8rem,4.5vw,4.2rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;color:#111;margin-bottom:24px}
+.hero h1 em{color:#e85d20;font-style:normal}
+.hero p{font-size:1.1rem;color:#555;line-height:1.65;margin-bottom:36px;max-width:460px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-dark{background:#111;color:#fff;padding:16px 32px;border-radius:2px;font-weight:700;font-size:.95rem;letter-spacing:-.01em}
+.btn-orange{background:#e85d20;color:#fff;padding:16px 32px;border-radius:2px;font-weight:700;font-size:.95rem}
+.hero-img img{width:100%;height:460px;object-fit:cover;border-radius:4px}
+/* CREDENTIALS */
+.creds{background:#111;color:#fff;padding:32px 6%;display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px}
+.cred{text-align:center}
+.cred strong{display:block;font-size:2rem;font-weight:800;color:#e85d20;letter-spacing:-.02em}
+.cred span{font-size:.8rem;color:#aaa;margin-top:4px;display:block;text-transform:uppercase;letter-spacing:.08em}
+/* SERVICES */
+.services{padding:96px 6%;max-width:1100px;margin:0 auto}
+.services h2{font-size:2.4rem;font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
+.services h2 em{color:#e85d20;font-style:normal}
+.services-intro{color:#555;font-size:1rem;margin-bottom:56px;max-width:560px;line-height:1.6}
+.services-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:1px solid #e8e8e8;border-radius:4px;overflow:hidden}
+.service-item{padding:36px 28px;border-right:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8}
+.service-item:nth-child(3n){border-right:none}
+.service-num{font-size:.75rem;font-weight:700;color:#e85d20;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.service-item h3{font-size:1.1rem;font-weight:700;color:#111;margin-bottom:8px;letter-spacing:-.01em}
+.service-item p{font-size:.875rem;color:#666;line-height:1.6}
+/* WHY */
+.why{background:#f5f5f5;padding:80px 6%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
+.why-text h2{font-size:2.2rem;font-weight:800;letter-spacing:-.02em;margin-bottom:24px;line-height:1.1}
+.why-list{list-style:none;display:flex;flex-direction:column;gap:16px}
+.why-list li{display:flex;align-items:flex-start;gap:12px;font-size:.95rem;color:#333;line-height:1.5}
+.check{width:20px;height:20px;flex-shrink:0;background:#e85d20;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.why-img img{width:100%;height:360px;object-fit:cover;border-radius:4px}
+/* BOOK */
+.book{padding:96px 6%;max-width:700px;margin:0 auto;text-align:center}
+.book h2{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;margin-bottom:16px;line-height:1.1}
+.book p{color:#555;font-size:1.05rem;line-height:1.6;margin-bottom:40px}
+.book-ctas{display:flex;flex-direction:column;align-items:center;gap:16px}
+.book-phone{font-size:2rem;font-weight:800;color:#111;letter-spacing:-.03em}
+.book-phone a{color:#111}
+.btn-book{background:#e85d20;color:#fff;padding:18px 48px;border-radius:2px;font-weight:700;font-size:1.1rem;display:inline-block}
+/* FOOTER */
+footer{background:#111;color:#777;padding:48px 6%;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:16px;font-weight:700}
+footer p,footer a{font-size:.875rem;line-height:1.85;color:#777}
+footer a:hover{color:#e85d20}
+.footer-bottom{background:#000;padding:16px 6%;display:flex;justify-content:space-between;color:#444;font-size:.8rem;flex-wrap:wrap;gap:8px}
+@media(max-width:768px){
+.hero{grid-template-columns:1fr}.hero-img{display:none}
+.why{grid-template-columns:1fr}
+footer{grid-template-columns:1fr}
+.nav-right a:not(.nav-phone){display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">CHGS <span>|</span> Craig Holdsworth Gas Services</div>
+  <div class="nav-right">
+    <a href="#services">Services</a>
+    <a href="#why">About</a>
+    <a href="tel:+447852860971" class="nav-phone">07852 860971</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="gas-safe"><span>Gas Safe</span> Registered Engineer</div>
+    <h1>Get The Job Done <em>Right.</em></h1>
+    <p>Huddersfield's trusted gas engineer for boiler repairs, central heating, landlord safety checks, and gas appliance servicing. 20+ years experience including British Gas.</p>
+    <div class="hero-btns">
+      <a href="tel:+447852860971" class="btn-dark">Call 07852 860971</a>
+      <a href="mailto:craigholdsworthgasservices@gmail.com" class="btn-orange">Get a Quote</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=900&h=920&fit=crop&q=80" alt="Gas engineer Craig Holdsworth working on central heating system in Huddersfield" width="900" height="920" loading="eager">
+  </div>
+</section>
+
+<div class="creds">
+  <div class="cred"><strong>20+</strong><span>Years Experience</span></div>
+  <div class="cred"><strong>Gas Safe</strong><span>Registered</span></div>
+  <div class="cred"><strong>Mon–Sat</strong><span>8am–8pm / 8am–6pm</span></div>
+  <div class="cred"><strong>Ex British Gas</strong><span>Trained Engineer</span></div>
+</div>
+
+<section class="services" id="services">
+  <h2>What We <em>Fix &amp; Install</em></h2>
+  <p class="services-intro">From emergency boiler breakdowns to routine annual servicing, CHGS covers the full range of domestic gas work across Huddersfield and West Yorkshire.</p>
+  <div class="services-list">
+    <div class="service-item">
+      <div class="service-num">01</div>
+      <h3>Boiler Repairs &amp; Servicing</h3>
+      <p>Diagnosis, repair, and annual service for all makes and models. Keep your boiler efficient and safe.</p>
+    </div>
+    <div class="service-item">
+      <div class="service-num">02</div>
+      <h3>Gas Appliance Installation</h3>
+      <p>Safe, professional installation of gas cookers, fires, and heating appliances. Fully certified.</p>
+    </div>
+    <div class="service-item">
+      <div class="service-num">03</div>
+      <h3>Central Heating &amp; Radiators</h3>
+      <p>Central heating system repairs, radiator bleeding, leak fixes, and system balancing for even heat throughout your home.</p>
+    </div>
+    <div class="service-item">
+      <div class="service-num">04</div>
+      <h3>Landlord Gas Safety Checks</h3>
+      <p>Annual CP12 gas safety certificates for landlords. Fast turnaround, fully compliant documentation.</p>
+    </div>
+    <div class="service-item">
+      <div class="service-num">05</div>
+      <h3>Remote Heating Controls</h3>
+      <p>Smart thermostat and remote heating control installation for modern, energy-efficient home management.</p>
+    </div>
+    <div class="service-item">
+      <div class="service-num">06</div>
+      <h3>Emergency Call-Outs</h3>
+      <p>No heating or hot water? Rapid response across Huddersfield and surrounding West Yorkshire areas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-text">
+    <h2>Why Huddersfield Trusts CHGS</h2>
+    <ul class="why-list">
+      <li><span class="check"><svg width="12" height="12" viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5"/></svg></span>Gas Safe registered — you can verify online</li>
+      <li><span class="check"><svg width="12" height="12" viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5"/></svg></span>20+ years experience, including British Gas training</li>
+      <li><span class="check"><svg width="12" height="12" viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5"/></svg></span>Transparent, honest pricing — no hidden call-out fees</li>
+      <li><span class="check"><svg width="12" height="12" viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5"/></svg></span>All work fully insured and guaranteed</li>
+      <li><span class="check"><svg width="12" height="12" viewBox="0 0 12 12" fill="white"><path d="M2 6l3 3 5-5"/></svg></span>Monday to Saturday availability — no waiting weeks</li>
+    </ul>
+  </div>
+  <div class="why-img">
+    <img src="https://images.unsplash.com/photo-1599686301988-7f97f9a5b9b4?w=700&h=720&fit=crop&q=80" alt="Professional gas engineer carrying out a boiler safety check in West Yorkshire home" width="700" height="720" loading="lazy">
+  </div>
+</section>
+
+<section class="book" id="contact">
+  <h2>Book a Visit Today</h2>
+  <p>Available Monday to Friday 8am–8pm and Saturday 8am–6pm across Huddersfield, Golcar, Slaithwaite, Marsden, and greater West Yorkshire.</p>
+  <div class="book-ctas">
+    <div class="book-phone"><a href="tel:+447852860971">07852 860971</a></div>
+    <a href="mailto:craigholdsworthgasservices@gmail.com" class="btn-book">Claim Your Free Redesign</a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <h4>Craig Holdsworth Gas Services</h4>
+    <p>Golcar, Huddersfield<br>West Yorkshire, HD7 4PQ<br>Gas Safe Registered</p>
+    <p style="margin-top:16px"><a href="tel:+447852860971">07852 860971</a><br><a href="mailto:craigholdsworthgasservices@gmail.com">craigholdsworthgasservices@gmail.com</a></p>
+  </div>
+  <div>
+    <h4>Services</h4>
+    <a href="#services">Boiler Repairs</a><br>
+    <a href="#services">Gas Appliances</a><br>
+    <a href="#services">Central Heating</a><br>
+    <a href="#services">Landlord Checks</a><br>
+    <a href="#services">Emergency Call-Out</a>
+  </div>
+  <div>
+    <h4>Hours</h4>
+    <p>Mon–Fri: 8am–8pm<br>Saturday: 8am–6pm<br>Sunday: Closed</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>&copy; 2026 Craig Holdsworth Gas Services Ltd.</span>
+  <span>Gas Safe Registered | Huddersfield, West Yorkshire</span>
+</div>
+
+</body>
+</html>
