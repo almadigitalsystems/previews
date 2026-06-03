@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beto Real Estate | Roberto Montaño – Chicago, IL Real Estate Agent</title>
+<meta name="description" content="Beto Real Estate with Roberto Montaño – Chicago's trusted real estate agent serving Wrigleyville, Portage Park, Pilsen, and surrounding neighborhoods. Powered by Engel and Volkers. Call (773) 744-0238.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:#1a2744;background:#faf6f0}
+a{text-decoration:none}
+/* NAV */
+nav{background:#faf6f0;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;position:sticky;top:0;z-index:100;border-bottom:1px solid #e8ddd0}
+.nav-logo{display:flex;flex-direction:column;line-height:1.15}
+.nav-logo strong{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:#1a2744;letter-spacing:.02em}
+.nav-logo span{font-size:.68rem;color:#c9973c;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:#3d3224;font-size:.875rem;font-weight:500}
+.nav-cta{background:#1a2744;color:#fff!important;padding:10px 22px;border-radius:2px;font-weight:600!important}
+/* HERO FULL */
+.hero{display:grid;grid-template-columns:5fr 4fr;min-height:620px;align-items:stretch}
+.hero-left{padding:80px 6%;display:flex;flex-direction:column;justify-content:center}
+.hero-left .city-tag{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#c9973c;margin-bottom:24px}
+.hero-left h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.6rem);font-weight:700;color:#1a2744;line-height:1.12;margin-bottom:20px}
+.hero-left h1 em{color:#c9973c;font-style:italic}
+.hero-left .tagline{font-size:1.05rem;color:#5c5c5c;line-height:1.7;margin-bottom:36px;max-width:440px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-navy{background:#1a2744;color:#fff;padding:14px 28px;border-radius:2px;font-weight:600;font-size:.9rem}
+.btn-gold{border:2px solid #c9973c;color:#c9973c;padding:12px 28px;border-radius:2px;font-weight:600;font-size:.9rem}
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.agent-card{position:absolute;bottom:32px;left:-16px;background:#1a2744;padding:20px 24px;border-radius:0 8px 8px 0;box-shadow:8px 8px 32px rgba(0,0,0,.25)}
+.agent-card .name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#fff}
+.agent-card .title{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#c9973c;margin-top:4px}
+/* STORY */
+.story{padding:96px 5%;max-width:900px;margin:0 auto;display:grid;grid-template-columns:2fr 3fr;gap:60px;align-items:start}
+.story-label{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#c9973c;margin-bottom:16px}
+.story h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#1a2744;line-height:1.25;margin-bottom:28px}
+.story-quote{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:#3d3224;line-height:1.55;border-left:4px solid #c9973c;padding-left:24px}
+.story-text p{font-size:.975rem;color:#5c5c5c;line-height:1.8;margin-bottom:16px}
+/* SERVICES */
+.services{background:#1a2744;padding:80px 5%}
+.services-inner{max-width:1000px;margin:0 auto}
+.services h2{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:#fff;margin-bottom:8px}
+.services-intro{color:#a0aec0;font-size:.95rem;margin-bottom:48px}
+.services-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.svc{padding:32px 24px;border:1px solid rgba(201,151,60,.25);border-radius:4px;transition:border-color .2s}
+.svc:hover{border-color:#c9973c}
+.svc-icon{font-size:1.8rem;margin-bottom:16px}
+.svc h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:10px}
+.svc p{font-size:.875rem;color:#8896a8;line-height:1.65}
+/* NEIGHBORHOODS */
+.hoods{padding:80px 5%;max-width:1000px;margin:0 auto}
+.hoods h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#1a2744;margin-bottom:8px;text-align:center}
+.hoods-intro{color:#5c5c5c;font-size:.95rem;text-align:center;margin-bottom:48px}
+.hoods-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.hood{position:relative;height:240px;overflow:hidden}
+.hood img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.hood:hover img{transform:scale(1.05)}
+.hood-label{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,39,68,.85) 0%,transparent 60%);display:flex;align-items:flex-end;padding:20px}
+.hood-label span{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:#fff}
+/* TESTIMONIALS */
+.testimonials{background:#f0ebe3;padding:80px 5%}
+.testimonials h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#1a2744;text-align:center;margin-bottom:48px}
+.testi-row{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:900px;margin:0 auto}
+.testi{background:#fff;padding:32px;border-radius:4px;box-shadow:0 2px 16px rgba(26,39,68,.08)}
+.testi-stars{color:#c9973c;font-size:1.1rem;margin-bottom:14px}
+.testi p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:#3d3224;line-height:1.65;margin-bottom:18px}
+.testi strong{font-size:.825rem;font-weight:600;color:#1a2744;letter-spacing:.04em}
+/* CTA */
+.cta{background:linear-gradient(135deg,#1a2744 0%,#2a3d6a 100%);padding:96px 5%;text-align:center}
+.cta h2{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:#fff;margin-bottom:16px;line-height:1.15}
+.cta h2 em{color:#c9973c;font-style:italic}
+.cta p{color:#a0aec0;font-size:1rem;line-height:1.65;margin-bottom:40px;max-width:520px;margin-left:auto;margin-right:auto}
+.btn-cta-gold{background:#c9973c;color:#fff;padding:18px 40px;border-radius:2px;font-weight:700;font-size:1.05rem;display:inline-block}
+/* FOOTER */
+footer{background:#111928;padding:60px 5%;color:#8896a8;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+footer h4{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:#c9973c;margin-bottom:16px;letter-spacing:.04em}
+footer p,footer a{font-size:.875rem;line-height:1.85;color:#8896a8}
+footer a:hover{color:#c9973c}
+.footer-bar{background:#0a0e1a;padding:16px 5%;text-align:center;font-size:.8rem;color:#4a5568}
+@media(max-width:768px){
+.hero{grid-template-columns:1fr}.hero-right{height:320px}
+.story{grid-template-columns:1fr}
+.hoods-grid{grid-template-columns:1fr}
+.testi-row{grid-template-columns:1fr}
+footer{grid-template-columns:1fr}
+.nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <strong>Beto Real Estate</strong>
+    <span>Engel &amp; Völkers Chicago</span>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#hoods">Neighborhoods</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+17737440238" class="nav-cta">Call Beto</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="city-tag">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#c9973c" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Chicago, IL
+    </div>
+    <h1>Your Chicago Real Estate Journey Starts <em>Here.</em></h1>
+    <p class="tagline">Roberto "Beto" Montaño brings local expertise, genuine relationships, and the global reach of Engel &amp; Völkers to help you buy or sell in Chicago's most vibrant neighborhoods.</p>
+    <div class="hero-ctas">
+      <a href="tel:+17737440238" class="btn-navy">Call (773) 744-0238</a>
+      <a href="mailto:beto@callbeto.com" class="btn-gold">Free Home Valuation</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1560449017-2e70893d5c81?w=900&h=1240&fit=crop&q=80&crop=faces,center" alt="Roberto Beto Montano Chicago real estate agent Engel Volkers" width="900" height="1240" loading="eager">
+    <div class="agent-card">
+      <div class="name">Roberto "Beto" Montaño</div>
+      <div class="title">Real Estate Agent · Chicago, IL</div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div>
+    <div class="story-label">The Story</div>
+    <h2>Real Experiences from Real Clients</h2>
+    <blockquote class="story-quote">"Chicago is more than a city — it's a collection of neighborhoods, each with its own soul. I help people find the one that fits theirs."</blockquote>
+  </div>
+  <div class="story-text">
+    <p>Beto Montaño has been connecting people with Chicago homes for years. As a proud member of the Engel &amp; Völkers network — one of the world's most respected luxury real estate brands — Beto combines international reach with deeply local knowledge of Chicago's dynamic market.</p>
+    <p>Whether you're a first-time buyer navigating Portage Park, an investor eyeing opportunities in Pilsen, or a seller looking to maximize value in Wrigleyville, Beto brings a calm, strategic approach that gets results without the pressure.</p>
+    <p>Based at 2401 N. Clark Street, the Montaño Group operates at the intersection of professionalism and approachability — a combination his clients consistently point to in their reviews.</p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="services-inner">
+    <h2>How Beto Can Help</h2>
+    <p class="services-intro">From your first conversation to closing day, the Montaño Group provides comprehensive real estate services tailored to Chicago's market.</p>
+    <div class="services-list">
+      <div class="svc">
+        <div class="svc-icon">🏠</div>
+        <h3>Home Buying</h3>
+        <p>Guided search, negotiation, and closing support for buyers at every price point across Chicago's neighborhoods.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">💰</div>
+        <h3>Home Selling</h3>
+        <p>Strategic pricing, professional marketing, and negotiation to maximize your sale price in any market condition.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">📊</div>
+        <h3>Market Reports</h3>
+        <p>Detailed, neighborhood-specific market data to help you make informed decisions with confidence.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">🏙️</div>
+        <h3>Home Valuation</h3>
+        <p>Free, no-obligation home valuations using real-time Chicago market data and local sales comparables.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hoods" id="hoods">
+  <h2>Chicago Neighborhoods Beto Knows Best</h2>
+  <p class="hoods-intro">Deep expertise in Chicago's most dynamic residential neighborhoods</p>
+  <div class="hoods-grid">
+    <div class="hood">
+      <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=480&fit=crop&q=80" alt="Chicago downtown neighborhood Wrigleyville skyline" width="800" height="480" loading="lazy">
+      <div class="hood-label"><span>Wrigleyville</span></div>
+    </div>
+    <div class="hood">
+      <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&h=480&fit=crop&q=80" alt="Chicago neighborhood Portage Park residential streets" width="800" height="480" loading="lazy">
+      <div class="hood-label"><span>Portage Park</span></div>
+    </div>
+    <div class="hood">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=480&fit=crop&q=80" alt="Pilsen Chicago colorful murals and architecture" width="800" height="480" loading="lazy">
+      <div class="hood-label"><span>Pilsen</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>What Chicago Clients Say</h2>
+  <div class="testi-row">
+    <div class="testi">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Beto found us our Wrigleyville home in a market where we thought we'd never compete. His knowledge of the neighborhood and his negotiation skills were incredible."</p>
+      <strong>— Marco &amp; Daniela R., Wrigleyville</strong>
+    </div>
+    <div class="testi">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"We sold our Portage Park home in 12 days above asking. Beto's market analysis was spot-on and his communication throughout the process was outstanding."</p>
+      <strong>— The Chen Family, Portage Park</strong>
+    </div>
+  </div>
+</section>
+
+<div class="cta" id="contact">
+  <h2>Ready to Make Your Move <em>in Chicago?</em></h2>
+  <p>Whether you're buying, selling, or just exploring your options — start with a conversation. Beto offers free consultations and no-pressure home valuations across Chicago.</p>
+  <a href="mailto:beto@callbeto.com" class="btn-cta-gold">Claim Your Free Redesign</a>
+</div>
+
+<footer>
+  <div>
+    <h4>Beto Real Estate</h4>
+    <p>Montaño Group<br>2401 N. Clark Street<br>Chicago, IL 60614</p>
+    <p style="margin-top:16px"><a href="tel:+17737440238">(773) 744-0238</a><br><a href="mailto:beto@callbeto.com">beto@callbeto.com</a></p>
+    <p style="margin-top:12px;font-size:.8rem;color:#556">Powered by Engel &amp; Völkers Chicago</p>
+  </div>
+  <div>
+    <h4>Services</h4>
+    <a href="#services">Home Buying</a><br>
+    <a href="#services">Home Selling</a><br>
+    <a href="#services">Market Reports</a><br>
+    <a href="#services">Home Valuation</a>
+  </div>
+  <div>
+    <h4>Neighborhoods</h4>
+    <a href="#hoods">Wrigleyville</a><br>
+    <a href="#hoods">Portage Park</a><br>
+    <a href="#hoods">Pilsen</a><br>
+    <a href="#hoods">All Chicago</a>
+  </div>
+</footer>
+<div class="footer-bar">&copy; 2026 Beto Real Estate | Roberto Montaño | Engel &amp; Völkers Chicago</div>
+
+</body>
+</html>
