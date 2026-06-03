@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Satellite PrintLab | Custom Apparel &amp; Printing – Austin, TX</title>
+<meta name="description" content="Satellite PrintLab in Austin, TX – custom t-shirt printing, screen printing, embroidery, vinyl decals, LED signage, and graphic design. A small business that can take on the Universe. Call 512-887-8920.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#0a0814;color:#e0dff0}
+a{text-decoration:none}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,8,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(124,58,237,.3);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;letter-spacing:.02em;color:#fff}
+.nav-logo span{color:#a3e635}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:#aaa;font-size:.875rem;font-weight:500}
+.nav-cta{background:#7c3aed;color:#fff!important;padding:10px 22px;border-radius:4px;font-weight:600!important}
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:80px 5% 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(124,58,237,.25) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(163,230,53,.12) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1000px;margin:0 auto;width:100%;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,.2);border:1px solid rgba(124,58,237,.4);padding:8px 16px;border-radius:24px;font-size:.75rem;font-weight:600;color:#c4b5fd;letter-spacing:.08em;text-transform:uppercase;margin-bottom:32px}
+.hero-tag::before{content:'';width:8px;height:8px;background:#a3e635;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:900;line-height:.95;letter-spacing:-.01em;color:#fff;text-transform:uppercase;margin-bottom:8px}
+.hero h1 .accent{color:#a3e635;display:block}
+.hero h1 .accent2{color:#c4b5fd;display:block}
+.hero-sub{font-size:1.15rem;color:#aaa;line-height:1.6;margin:28px 0 40px;max-width:520px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn-purple{background:#7c3aed;color:#fff;padding:16px 32px;border-radius:4px;font-weight:600;font-size:1rem}
+.btn-lime{background:#a3e635;color:#0a0814;padding:16px 32px;border-radius:4px;font-weight:700;font-size:1rem}
+.hero-phone{color:#aaa;font-size:.9rem;margin-left:8px}
+.hero-phone a{color:#c4b5fd;font-weight:600}
+/* MARQUEE STRIP */
+.marquee-wrap{background:#7c3aed;padding:14px 0;overflow:hidden;white-space:nowrap;margin:0}
+.marquee-inner{display:inline-flex;gap:48px;animation:marquee 20s linear infinite}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee-item{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff}
+.marquee-dot{color:#a3e635}
+/* SERVICES GRID */
+.services{padding:96px 5%;max-width:1200px;margin:0 auto}
+.services h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,4vw,3.5rem);font-weight:900;text-transform:uppercase;color:#fff;line-height:1;margin-bottom:8px}
+.services h2 span{color:#a3e635}
+.services-intro{color:#888;font-size:1rem;line-height:1.6;margin-bottom:60px;max-width:540px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#1a1832}
+.svc{background:#0f0d1e;padding:40px 32px;border:1px solid rgba(124,58,237,.2);transition:all .3s}
+.svc:hover{background:#14112a;border-color:#7c3aed;transform:translateY(-4px)}
+.svc-number{font-family:'Barlow Condensed',sans-serif;font-size:3.5rem;font-weight:900;color:rgba(163,230,53,.15);line-height:1;margin-bottom:8px}
+.svc h3{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px}
+.svc p{font-size:.875rem;color:#777;line-height:1.65}
+.svc-badge{display:inline-block;background:rgba(124,58,237,.2);color:#c4b5fd;font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:12px;margin-top:14px;letter-spacing:.06em}
+/* ABOUT SECTION */
+.about{display:grid;grid-template-columns:1fr 1fr;background:#0f0d1e;border-top:1px solid rgba(124,58,237,.2);border-bottom:1px solid rgba(124,58,237,.2)}
+.about-left{padding:80px 5%;display:flex;flex-direction:column;justify-content:center}
+.about-left h2{font-family:'Barlow Condensed',sans-serif;font-size:2.8rem;font-weight:900;text-transform:uppercase;color:#fff;line-height:1.05;margin-bottom:24px}
+.about-left h2 span{color:#a3e635}
+.about-left p{color:#888;font-size:.975rem;line-height:1.75;margin-bottom:16px}
+.stat-row{display:flex;gap:32px;margin-top:32px}
+.stat strong{font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:#c4b5fd;display:block;line-height:1}
+.stat span{font-size:.8rem;color:#666;text-transform:uppercase;letter-spacing:.08em}
+.about-right{position:relative;overflow:hidden}
+.about-right img{width:100%;height:100%;object-fit:cover;min-height:480px;filter:brightness(.75) saturate(1.2)}
+/* CTA */
+.cta{padding:100px 5%;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(124,58,237,.25) 0%,transparent 70%)}
+.cta h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3rem,6vw,5rem);font-weight:900;text-transform:uppercase;color:#fff;line-height:.95;margin-bottom:20px;position:relative}
+.cta h2 span{color:#a3e635}
+.cta p{color:#888;font-size:1.05rem;margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.6;position:relative}
+.btn-cta{background:#a3e635;color:#0a0814;padding:20px 48px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem;text-transform:uppercase;letter-spacing:.04em;display:inline-block;position:relative}
+/* FOOTER */
+footer{background:#06050f;padding:60px 5%;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;border-top:1px solid rgba(124,58,237,.2)}
+footer h4{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:#a3e635;font-weight:700;margin-bottom:18px}
+footer p,footer a{font-size:.875rem;line-height:1.9;color:#666}
+footer a:hover{color:#c4b5fd}
+.footer-bar{background:#030207;padding:16px 5%;display:flex;justify-content:space-between;color:#444;font-size:.8rem;flex-wrap:wrap;gap:8px;border-top:1px solid rgba(255,255,255,.05)}
+@media(max-width:768px){
+.services-grid{grid-template-columns:1fr}.about{grid-template-columns:1fr}.about-right{height:280px}
+footer{grid-template-columns:1fr}.nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">SATELLITE <span>PRINTLAB</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Get a Quote</a>
+    <a href="tel:+15128878920" class="nav-cta">512-887-8920</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=1400&h=800&fit=crop&q=80" alt="Custom screen printing and apparel production at Satellite PrintLab Austin Texas" width="1400" height="800" loading="eager" style="display:none">
+  <div class="hero-inner">
+    <div class="hero-tag">Austin, Texas · Since 2015</div>
+    <h1>
+      The Sky Is
+      <span class="accent">No Limit</span>
+      <span class="accent2">Satellite Printlab</span>
+    </h1>
+    <p class="hero-sub">Custom t-shirts, screen printing, embroidery, vinyl decals, and LED signage — handcrafted with quality that launches your brand into orbit.</p>
+    <div class="hero-btns">
+      <a href="mailto:info@satelliteprintlab.com" class="btn-lime">Claim Your Free Redesign</a>
+      <a href="tel:+15128878920" class="btn-purple">Call 512-887-8920</a>
+      <span class="hero-phone">or email <a href="mailto:info@satelliteprintlab.com">info@satelliteprintlab.com</a></span>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span class="marquee-item">Screen Printing</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Embroidery</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Vinyl Decals</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">LED Signage</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Custom Patches</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Graphic Design</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Print on Demand</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Screen Printing</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Embroidery</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Vinyl Decals</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">LED Signage</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Custom Patches</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Graphic Design</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Print on Demand</span><span class="marquee-dot"> ✦ </span>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <h2>What We <span>Print</span></h2>
+  <p class="services-intro">From single custom shirts to large-scale brand campaigns, Satellite PrintLab delivers quality that makes your brand look like it belongs in a bigger universe.</p>
+  <div class="services-grid">
+    <div class="svc">
+      <div class="svc-number">01</div>
+      <h3>Custom Apparel &amp; T-Shirts</h3>
+      <p>Screen printed t-shirts, hoodies, hats, and more. Minimum orders start at 1 piece. We print on your blanks or source them for you.</p>
+      <span class="svc-badge">Most Popular</span>
+    </div>
+    <div class="svc">
+      <div class="svc-number">02</div>
+      <h3>Embroidery</h3>
+      <p>Professional embroidery for polos, caps, workwear, and corporate apparel. Clean, sharp, and built to last hundreds of washes.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-number">03</div>
+      <h3>Vinyl Decals &amp; Stickers</h3>
+      <p>Precision-cut vinyl for vehicles, walls, windows, and branded merchandise. Indoor and outdoor-rated materials available.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-number">04</div>
+      <h3>LED Signage</h3>
+      <p>Custom LED channel letter signs, lightbox displays, and illuminated branding for storefronts and businesses that need to stand out.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-number">05</div>
+      <h3>Custom Patches</h3>
+      <p>Embroidered, woven, and PVC patches for clubs, teams, military units, and brand collections. Any size, any shape.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-number">06</div>
+      <h3>Graphic Design</h3>
+      <p>In-house design team ready to take your idea from concept to print-ready artwork. No idea is too small or too big.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-left">
+    <h2>A Small Business That Can Take On <span>The Universe</span></h2>
+    <p>Satellite PrintLab was built on one belief: good quality is hard to come by. We're an Austin-based print shop that combines hands-on consultation, expert production, and a genuine obsession with getting every order right.</p>
+    <p>We work with local musicians, restaurants, sports teams, corporations, and everyone in between. Whatever you're trying to say with your brand — we'll help you say it loud, clear, and in full color.</p>
+    <div class="stat-row">
+      <div class="stat"><strong>1,000+</strong><span>Happy Clients</span></div>
+      <div class="stat"><strong>Austin</strong><span>Based &amp; Built</span></div>
+    </div>
+  </div>
+  <div class="about-right">
+    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=900&h=960&fit=crop&q=80" alt="Custom screen printed t-shirts and apparel at Satellite PrintLab in Austin TX" width="900" height="960" loading="lazy">
+  </div>
+</section>
+
+<div class="cta" id="contact">
+  <h2>Ready to <span>Launch?</span></h2>
+  <p>Get a quote from Satellite PrintLab. Most orders turn around in 7–10 business days. Rush options available.</p>
+  <a href="mailto:info@satelliteprintlab.com" class="btn-cta">Claim Your Free Redesign</a>
+</div>
+
+<footer>
+  <div>
+    <h4>Satellite PrintLab</h4>
+    <p>Austin, Texas<br>"A small business that can take on the Universe!"<br>Est. 2015</p>
+    <p style="margin-top:16px"><a href="tel:+15128878920">512-887-8920</a><br><a href="mailto:info@satelliteprintlab.com">info@satelliteprintlab.com</a></p>
+  </div>
+  <div>
+    <h4>Services</h4>
+    <a href="#services">Screen Printing</a><br>
+    <a href="#services">Embroidery</a><br>
+    <a href="#services">Vinyl &amp; Decals</a><br>
+    <a href="#services">LED Signage</a><br>
+    <a href="#services">Graphic Design</a>
+  </div>
+  <div>
+    <h4>Get in Touch</h4>
+    <p>Austin, TX<br><a href="tel:+15128878920">512-887-8920</a><br><a href="mailto:info@satelliteprintlab.com">info@satelliteprintlab.com</a></p>
+  </div>
+</footer>
+<div class="footer-bar">
+  <span>&copy; 2026 Satellite PrintLab. Austin, TX.</span>
+  <span>The Sky Is No Limit.</span>
+</div>
+
+</body>
+</html>
