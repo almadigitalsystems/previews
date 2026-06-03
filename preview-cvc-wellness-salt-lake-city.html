@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CVC Wellness | Chiropractic &amp; Wellness – Salt Lake City, UT</title>
+<meta name="description" content="CVC Wellness with Dr. Greg Futrell DC – chiropractic care, massage therapy, wellness assessments, and nutritional counseling in Cottonwood Heights, Salt Lake City, UT. Call (801) 872-9024.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Open Sans',sans-serif;color:#1a2e28;background:#fff}
+a{text-decoration:none}
+/* NAV */
+nav{background:#fff;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;position:sticky;top:0;z-index:100;box-shadow:0 1px 16px rgba(45,106,79,.1)}
+.nav-logo{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.1rem;color:#1a2e28;letter-spacing:-.01em}
+.nav-logo span{color:#2d6a4f}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:#334;font-size:.875rem;font-weight:500}
+.nav-cta{background:#2d6a4f;color:#fff!important;padding:10px 22px;border-radius:24px;font-weight:600!important}
+/* HERO SPLIT */
+.hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.hero-left{background:linear-gradient(135deg,#2d6a4f 0%,#1a3d2e 100%);padding:80px 6% 80px 7%;display:flex;flex-direction:column;justify-content:center}
+.hero-left .kicker{font-family:'Montserrat',sans-serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#74c89a;font-weight:600;margin-bottom:20px}
+.hero-left h1{font-family:'Montserrat',sans-serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:20px}
+.hero-left p{color:#aed9c4;font-size:1rem;line-height:1.7;margin-bottom:36px;max-width:420px}
+.hero-left-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-mint{background:#74c89a;color:#1a3d2e;padding:14px 28px;border-radius:24px;font-weight:700;font-family:'Montserrat',sans-serif;font-size:.9rem}
+.btn-outline-white{border:2px solid #74c89a;color:#74c89a;padding:12px 28px;border-radius:24px;font-weight:600;font-size:.9rem}
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-card{position:absolute;bottom:32px;right:32px;background:#fff;padding:20px 24px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.15)}
+.hero-card p{font-family:'Montserrat',sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#666;margin-bottom:6px}
+.hero-card strong{font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;color:#2d6a4f}
+/* TRUST STRIP */
+.trust-strip{background:#e8f5ef;padding:20px 5%;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:.875rem;font-weight:600;color:#2d6a4f;font-family:'Montserrat',sans-serif}
+/* SERVICES */
+.services{padding:80px 5%;max-width:1100px;margin:0 auto}
+.section-label{font-family:'Montserrat',sans-serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#2d6a4f;font-weight:700;margin-bottom:12px}
+.services h2{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:#1a2e28;margin-bottom:12px;line-height:1.2}
+.services-intro{color:#556;font-size:.975rem;line-height:1.7;margin-bottom:52px;max-width:580px}
+.services-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.svc-card{background:#f4faf7;border-radius:12px;padding:32px 28px;border:1px solid #d0ecd8;transition:transform .2s}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(45,106,79,.12)}
+.svc-icon{width:48px;height:48px;background:#2d6a4f;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.svc-card h3{font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:700;color:#1a2e28;margin-bottom:10px}
+.svc-card p{font-size:.875rem;color:#556;line-height:1.65}
+/* DR SECTION */
+.dr-section{background:linear-gradient(135deg,#1a2e28 0%,#2d4a3e 100%);padding:80px 5%;display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
+.dr-img img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:12px;border:3px solid #74c89a}
+.dr-text .section-label{color:#74c89a}
+.dr-text h2{font-family:'Montserrat',sans-serif;font-size:1.8rem;font-weight:800;color:#fff;margin-bottom:16px;line-height:1.2}
+.dr-text p{color:#aed9c4;font-size:.95rem;line-height:1.75;margin-bottom:14px}
+/* TESTIMONIALS */
+.testimonials{padding:80px 5%;background:#f4faf7}
+.testimonials h2{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:#1a2e28;text-align:center;margin-bottom:48px}
+.testi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto}
+.testi{background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.stars{color:#f4a733;font-size:1rem;margin-bottom:12px}
+.testi p{font-size:.875rem;color:#444;line-height:1.7;font-style:italic;margin-bottom:14px}
+.testi strong{font-size:.825rem;color:#2d6a4f;font-family:'Montserrat',sans-serif;font-weight:700}
+/* CTA */
+.cta{background:#2d6a4f;padding:80px 5%;text-align:center}
+.cta h2{font-family:'Montserrat',sans-serif;font-size:2.2rem;font-weight:800;color:#fff;margin-bottom:16px}
+.cta p{color:#aed9c4;font-size:1rem;margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6}
+.btn-cta-white{background:#fff;color:#2d6a4f;padding:16px 36px;border-radius:24px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;display:inline-block}
+/* FOOTER */
+footer{background:#1a2e28;padding:56px 5%;color:#aed9c4;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer h4{font-family:'Montserrat',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#74c89a;font-weight:700;margin-bottom:16px}
+footer p,footer a{font-size:.875rem;line-height:1.85;color:#aed9c4}
+footer a:hover{color:#74c89a}
+.footer-bar{background:#0f1e18;padding:14px 5%;text-align:center;font-size:.8rem;color:#556}
+@media(max-width:768px){
+.hero-split{grid-template-columns:1fr}.hero-right{height:320px}
+.testi-row{grid-template-columns:1fr}
+.dr-section{grid-template-columns:1fr}
+footer{grid-template-columns:1fr}
+.nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span>CVC</span> Wellness</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About Dr. Futrell</a>
+    <a href="#contact">Book Now</a>
+    <a href="tel:+18018729024" class="nav-cta">Call Us</a>
+  </div>
+</nav>
+
+<section class="hero-split">
+  <div class="hero-left">
+    <div class="kicker">Cottonwood Heights, Salt Lake City</div>
+    <h1>Feel Better. Move Better. Live Better.</h1>
+    <p>CVC Wellness combines chiropractic expertise, therapeutic massage, and whole-body wellness programs to help you achieve lasting relief and optimal health.</p>
+    <div class="hero-left-btns">
+      <a href="tel:+18018729024" class="btn-mint">Call (801) 872-9024</a>
+      <a href="mailto:cvcwellness@gmail.com" class="btn-outline-white">Book Online</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&h=1100&fit=crop&q=80" alt="Dr. Greg Futrell performing chiropractic adjustment at CVC Wellness in Salt Lake City UT" width="900" height="1100" loading="eager">
+    <div class="hero-card">
+      <p>Dr. Greg Futrell, DC</p>
+      <strong>Accepting New Patients</strong>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item">✓ Accepting New Patients</div>
+  <div class="trust-item">✓ Most Insurance Accepted</div>
+  <div class="trust-item">✓ Cottonwood Heights, UT</div>
+  <div class="trust-item">✓ Chiropractic &amp; Massage</div>
+</div>
+
+<section class="services" id="services">
+  <div class="section-label">What We Offer</div>
+  <h2>Whole-Body Wellness Under One Roof</h2>
+  <p class="services-intro">From spinal adjustments to nutritional counseling, CVC Wellness provides comprehensive care designed to treat the root cause — not just the symptoms.</p>
+  <div class="services-cards">
+    <div class="svc-card">
+      <div class="svc-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+      <h3>Chiropractic Care</h3>
+      <p>Precise spinal adjustments and physical examination to relieve pain, restore alignment, and improve nerve function.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4"/></svg></div>
+      <h3>Therapeutic Massage</h3>
+      <p>Licensed massage therapy to release muscle tension, improve circulation, and accelerate healing alongside chiropractic care.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg></div>
+      <h3>Biomeridian Wellness Assessment</h3>
+      <p>Advanced wellness system testing to identify nutritional deficiencies, stress markers, and organ system imbalances.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+      <h3>Nutritional Counseling</h3>
+      <p>Personalized nutrition programs to support musculoskeletal health, reduce inflammation, and optimize energy levels.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dr-section" id="about">
+  <div class="dr-img">
+    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&h=680&fit=crop&q=80" alt="Dr. Greg Futrell DC chiropractor at CVC Wellness Cottonwood Heights Salt Lake City" width="500" height="680" loading="lazy">
+  </div>
+  <div class="dr-text">
+    <div class="section-label">Your Doctor</div>
+    <h2>Meet Dr. Greg Futrell, DC</h2>
+    <p>Dr. Futrell brings years of clinical experience and genuine care for each patient who walks through the door. His approach blends traditional chiropractic adjustments with modern wellness assessments to develop truly individualized treatment plans.</p>
+    <p>Serving Cottonwood Heights, Sandy, Murray, Holladay, Taylorsville, Midvale, and communities throughout the Salt Lake Valley, Dr. Futrell believes that optimal health is within reach for every patient willing to commit to their wellness journey.</p>
+    <p style="margin-top:24px"><a href="tel:+18018729024" style="background:#74c89a;color:#1a2e28;padding:14px 28px;border-radius:24px;font-family:Montserrat,sans-serif;font-weight:700;font-size:.9rem">Schedule with Dr. Futrell</a></p>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>Real Results from Real Patients</h2>
+  <div class="testi-row">
+    <div class="testi">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Dr. Futrell eliminated my lower back pain after 3 years of suffering. His thorough assessment showed exactly what was wrong. I wish I had found CVC Wellness sooner."</p>
+      <strong>— Sarah K., Cottonwood Heights</strong>
+    </div>
+    <div class="testi">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"The Biomeridian wellness assessment was eye-opening. Dr. Futrell identified nutritional issues my regular doctor had missed for years. This practice genuinely cares."</p>
+      <strong>— Mike R., Sandy, UT</strong>
+    </div>
+    <div class="testi">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Combined chiropractic and massage in one visit — and the results speak for themselves. My posture, energy, and sleep have all improved significantly."</p>
+      <strong>— Lisa T., Murray, UT</strong>
+    </div>
+  </div>
+</section>
+
+<div class="cta" id="contact">
+  <h2>Start Your Wellness Journey Today</h2>
+  <p>CVC Wellness is currently accepting new patients in Cottonwood Heights and the greater Salt Lake Valley. Book your first consultation and take the first step toward lasting health.</p>
+  <a href="mailto:cvcwellness@gmail.com" class="btn-cta-white">Claim Your Free Redesign</a>
+</div>
+
+<footer>
+  <div>
+    <h4>CVC Wellness</h4>
+    <p>7050 S. Highland Dr., Suite 140<br>Cottonwood Heights, UT 84121<br>Salt Lake City Area</p>
+    <p style="margin-top:16px"><a href="tel:+18018729024">(801) 872-9024</a><br><a href="mailto:cvcwellness@gmail.com">cvcwellness@gmail.com</a></p>
+  </div>
+  <div>
+    <h4>Services</h4>
+    <a href="#services">Chiropractic Care</a><br>
+    <a href="#services">Massage Therapy</a><br>
+    <a href="#services">Wellness Assessment</a><br>
+    <a href="#services">Nutritional Counseling</a>
+  </div>
+  <div>
+    <h4>Service Area</h4>
+    <p>Cottonwood Heights<br>Sandy<br>Murray<br>Holladay<br>Midvale<br>Salt Lake City, UT</p>
+  </div>
+</footer>
+<div class="footer-bar">&copy; 2026 CVC Wellness | Dr. Greg Futrell, DC | Cottonwood Heights, Utah</div>
+
+</body>
+</html>
